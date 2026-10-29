@@ -401,10 +401,18 @@ du projet quifaitlaloi :
   `NODE_VERSION=22`, image de build v3 ;
 - domaine `lvnd.technoperchoir.fr` (choix K) déclaré sur le projet.
 
-Reste un geste de Max, le jeton de wrangler n'ayant pas de droit sur le DNS :
-l'enregistrement `CNAME lvnd → lvnd.pages.dev` (proxifié) dans la zone
-`technoperchoir.fr`. Dans le tableau de bord : Workers & Pages, `lvnd`,
-Custom domains, « Activate domain » le crée.
+Restent deux gestes de Max :
+
+1. Donner accès au dépôt à l'application GitHub de Cloudflare, installée
+   pour une sélection de dépôts (quifaitlaloi, prenoms) : sur GitHub,
+   Settings, Applications, « Cloudflare Workers and Pages », Configure,
+   Repository access, ajouter `leurs-voix-nos-droits`. Sans cela, aucun
+   push ne déclenche de build (le premier déploiement a été lancé à la
+   main, par l'API).
+2. L'enregistrement `CNAME lvnd → lvnd.pages.dev` (proxifié) dans la zone
+   `technoperchoir.fr`, le jeton de wrangler n'ayant pas de droit sur le
+   DNS. Dans le tableau de bord : Workers & Pages, `lvnd`, Custom domains,
+   « Activate domain » le crée.
 
 Chaque push sur `main` reconstruit le site, donc chaque « Publier » de
 l'admin : en quelques minutes, sans passer par la machine de Max.

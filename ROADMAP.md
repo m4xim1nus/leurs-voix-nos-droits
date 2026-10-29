@@ -157,8 +157,11 @@ Décisions de Max (29/10/2026) :
   publication de l'admin la faisait échouer (scores versionnés périmés).
 - ✅ Cloudflare Pages : projet `lvnd` relié au dépôt, production sur
   `main`, aperçus de `etape-4`. Domaine `lvnd.technoperchoir.fr` déclaré.
-- ⏳ Geste de Max : CNAME `lvnd` dans la zone `technoperchoir.fr`
-  (`docs/CONCEPTION.md`, mise en service), puis recette sur téléphone.
+- ✅ En ligne sur `lvnd.pages.dev` (déploiement lancé à la main).
+- ⏳ Gestes de Max (`docs/CONCEPTION.md`, mise en service) : accès de
+  l'application GitHub de Cloudflare au dépôt (sans lui, ni « Publier » ni
+  aucun push ne redéploie), CNAME `lvnd` dans la zone `technoperchoir.fr`,
+  puis recette sur téléphone.
 - ⏳ Livrable : site en ligne, tag `v1.0.0`, `CHANGELOG.md`.
 
 ## Qualification par lots (en continu, en parallèle de l'étape 4)
