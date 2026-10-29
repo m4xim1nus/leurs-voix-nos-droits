@@ -151,6 +151,11 @@
   <a class="bouton secondaire" href="/cartes/deputes/{d.slug}.png" download="{d.slug}.png"
     >Télécharger l’image</a
   >
+  {#if data.lignee && data.global}
+    <a class="petit" href="/comparer?a=d:{d.slug}&b=g:{data.lignee.slug}"
+      >Comparer avec son groupe</a
+    >
+  {/if}
   {#if d.courriel}<span class="discret petit">{d.courriel}</span>{/if}
 </p>
 

@@ -10,6 +10,7 @@
     { href: '/droits', libelle: 'Droits' },
     { href: '/textes', libelle: 'Textes' },
     { href: '/groupes', libelle: 'Groupes' },
+    { href: '/comparer', libelle: 'Comparer' },
     { href: '/methodologie', libelle: 'Méthodologie' },
     { href: '/donnees', libelle: 'Données' }
   ];
