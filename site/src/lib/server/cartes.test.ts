@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { extremes, png, svgCarte } from './cartes';
+import { extremes, lignes, png, svgCarte, svgPortrait } from './cartes';
 
 describe('cartes partageables', () => {
   const carte = {
@@ -38,5 +38,17 @@ describe('cartes partageables', () => {
       ])
     ).toBeNull();
     expect(svgCarte({ ...carte, extremes: e })).toContain('Le plus favorable');
+  });
+
+  it('coupe les titres longs et rend le format portrait en 1080 × 1350', () => {
+    expect(lignes('Libertés, Indépendants, Outre-mer et Territoires', 20)).toEqual([
+      'Libertés,',
+      'Indépendants,',
+      'Outre-mer et',
+      'Territoires'
+    ]);
+    const p = png(svgPortrait(carte));
+    const vue = new DataView(p.buffer, p.byteOffset);
+    expect([vue.getUint32(16), vue.getUint32(20)]).toEqual([1080, 1350]);
   });
 });
