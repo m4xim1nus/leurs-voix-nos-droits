@@ -63,7 +63,8 @@ def _etat(cible: Path) -> tuple[Path, Path]:
     return cible.with_name(cible.name + ".part"), cible.with_name(cible.name + ".part.json")
 
 
-def telecharger(client: httpx.Client, url: str, cible: Path, patience: int = 3600) -> str | None:
+def telecharger(client: httpx.Client, url: str, cible: Path, patience: int = 3600,
+                connu: dict | None = None) -> str | None:
     """Télécharge `url` dans `cible` et renvoie son `Last-Modified`.
 
     Le serveur de l'AN (derrière un CDN) coupe souvent la connexion au milieu des gros dumps
@@ -82,6 +83,11 @@ def telecharger(client: httpx.Client, url: str, cible: Path, patience: int = 360
     modifie = h.headers.get("last-modified")
     taille = int(h.headers["content-length"]) if "content-length" in h.headers else None
     attendu = {"url": url, "last_modified": modifie, "taille": taille}
+    # Archive déjà là et inchangée (même date, même taille que dans le manifeste) : rien à faire.
+    if (connu and modifie and cible.exists() and connu.get("last_modified") == modifie
+            and cible.stat().st_size == taille == connu.get("taille")):
+        print("  inchangé depuis le dernier téléchargement", file=sys.stderr)
+        return modifie
     if part.exists() and etat.exists() and json.loads(etat.read_text()) == attendu and modifie and taille:
         recu = part.stat().st_size
         print(f"  reprise à {recu:,} / {taille:,} o", file=sys.stderr)
@@ -145,13 +151,17 @@ def download(raw: Path, cles: list[str] | None = None) -> None:
             dossier.mkdir(parents=True, exist_ok=True)
             cible = dossier / src["url"].rsplit("/", 1)[1]
             print(f"{cle} : téléchargement de {src['url']}", file=sys.stderr)
-            modifie = telecharger(client, src["url"], cible)
-            if src.get("zip", True):
+            avant = manifeste.get(cle)
+            modifie = telecharger(client, src["url"], cible, connu=avant)
+            inchange = bool(avant) and avant.get("last_modified") == modifie and avant.get("taille") == cible.stat().st_size
+            if src.get("zip", True) and not (inchange and extraits(raw, cle).exists()):
                 x = extraits(raw, cle)
                 if x.exists():
                     shutil.rmtree(x)
                 with zipfile.ZipFile(cible) as z:
                     z.extractall(x)
+            if inchange:
+                continue
             manifeste[cle] = {
                 "url": src["url"],
                 "last_modified": modifie,

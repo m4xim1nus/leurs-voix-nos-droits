@@ -92,3 +92,18 @@ def test_abandon_sans_progres(tmp_path, monkeypatch):
     with httpx.Client(transport=transport) as c, pytest.raises(SystemExit, match="aucun octet"):
         sources.telecharger(c, "https://an/a.zip", tmp_path / "a.zip", patience=3600)
     assert sources._etat(tmp_path / "a.zip")[0].stat().st_size == 100  # gardé pour la reprise
+
+
+def test_archive_inchangee_non_retelechargee(tmp_path):
+    cible = tmp_path / "a.zip"
+    cible.write_bytes(b"x" * 10)
+    appels = []
+
+    def serveur(req):
+        appels.append(req.method)
+        return httpx.Response(200, headers={"last-modified": "Fri, 28 Jun 2024", "content-length": "10"})
+
+    with httpx.Client(transport=httpx.MockTransport(serveur)) as client:
+        connu = {"last_modified": "Fri, 28 Jun 2024", "taille": 10}
+        assert sources.telecharger(client, "https://an/a.zip", cible, connu=connu) == "Fri, 28 Jun 2024"
+    assert appels == ["HEAD"]

@@ -1,0 +1,96 @@
+# Mise à jour hebdomadaire de l'open data AN (décision de Max du 29/10/2026) : téléchargement,
+# build, contrôles, puis commit de data/export/ si tout passe, ce qui redéploie le site public.
+# Enfin, catalogue de l'admin mis à jour dans D1 (sync incrémental), si le jeton Cloudflare est
+# configuré (secrets CLOUDFLARE_API_TOKEN et CLOUDFLARE_ACCOUNT_ID, docs/CONCEPTION.md).
+#
+# Les archives téléchargées sont gardées en cache d'une semaine à l'autre, partielles comprises :
+# un dump coupé par le serveur de l'AN reprend la semaine suivante. Rien n'est commité si une
+# étape échoue.
+
+name: Données AN
+
+on:
+  schedule:
+    - cron: '0 4 * * 1' # lundi, 4 h UTC
+  workflow_dispatch:
+
+concurrency:
+  group: donnees
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  donnees:
+    name: Téléchargement, build et publication des données
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          cache-dependency-glob: pipeline/uv.lock
+
+      - name: Archives des semaines précédentes
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/raw/**/*.zip
+            data/raw/**/*.part
+            data/raw/**/*.part.json
+            data/raw/manifeste.json
+          key: raw-${{ github.run_id }}
+          restore-keys: raw-
+
+      - name: Téléchargement (lvnd download)
+        working-directory: pipeline
+        run: uv run --no-dev lvnd download
+
+      - name: Archives gardées pour la semaine suivante, même partielles
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            data/raw/**/*.zip
+            data/raw/**/*.part
+            data/raw/**/*.part.json
+            data/raw/manifeste.json
+          key: raw-${{ github.run_id }}
+
+      - name: Build et contrôles (lvnd build, lvnd check)
+        working-directory: pipeline
+        run: |
+          uv run --no-dev lvnd build
+          uv run --no-dev lvnd check
+
+      - name: Commit des données
+        run: |
+          git add data/export
+          if git diff --cached --quiet; then
+            echo "Aucune donnée nouvelle."
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -q -m "Données AN du $(date -u +%d/%m/%Y)"
+          git pull -q --rebase origin main
+          git push -q origin HEAD:main
+
+      - uses: actions/setup-node@v5
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: admin/package-lock.json
+
+      - name: Catalogue de l'admin (lvnd sync-admin, incrémental)
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        run: |
+          (cd admin && npm ci --no-audit --no-fund)
+          cd pipeline && uv run --no-dev lvnd sync-admin --remote
