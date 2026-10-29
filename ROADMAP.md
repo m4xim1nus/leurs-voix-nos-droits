@@ -165,10 +165,13 @@ Procédure : `docs/QUALIFICATION.md`. Claude prépare, Max arbitre dans le
 chat puis publie depuis l'admin.
 
 - ✅ Lot 1 (21 textes, 29/10/2026).
-- ⏳ **Lot de tri** : parmi les 235 candidats par mots-clés, proposer
-  « garder » ou « écarter » (faux positifs de `mots_cles.yaml`). Max
-  valide en bloc. On en attend 60 à 100 textes à qualifier.
-- ⏳ Lots suivants, d'une vingtaine de textes chacun, jusqu'au seuil de
+- ✅ Lot de tri (29/10/2026) : sur 209 candidats, 144 écartés (texte
+  d'organisation, hors grille, sans vote, décisif unanime, résolution,
+  convention, corps électoral de Nouvelle-Calédonie) et 51 à qualifier
+  (liste A et accès aux soins, `source/relecture-tri.md`). 14 n'ont pas
+  encore de décisif. Soins palliatifs, décisif à 491-0, est écarté par la
+  nouvelle règle 9. Règles 2, 8 et 9 complétées.
+- ⏳ Lots suivants (lot 2 : à prendre dans la liste A du tri), d'une vingtaine de textes chacun, jusqu'au seuil de
   la v1, puis au fil de l'eau.
 - ⏳ Les deux textes passés au 49.3 sans vote final (retraites 2023,
   PLF 2026) attendent la règle du décisif en cas de 49.3 (`BACKLOG.md`).

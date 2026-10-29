@@ -62,6 +62,8 @@ def similarite(a: str | None, b: str | None) -> float:
 # Objet d'un scrutin, d'après son intitulé normalisé (AN : « l'ensemble du
 # projet… » ; Sénat : « sur l'ensemble du projet… »). Ordre significatif.
 OBJETS = [
+    # « l'ensemble de la deuxième partie du projet de loi de financement… » : une partie, pas le texte
+    ("partie", r"l ensemble de la (premiere|deuxieme|troisieme|quatrieme) partie"),
     ("ensemble", r"l ensemble"),
     ("ensemble", r"(le projet|la proposition) de loi"),  # texte à article unique voté d'un bloc
     ("article_unique", r"l article unique"),

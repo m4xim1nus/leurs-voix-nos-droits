@@ -223,6 +223,10 @@ export function valider(
         err.push(`${s.id} : scrutin absent du dossier ${t.dossier_an}`);
         continue;
       }
+      if (s.role === 'decisif' && (info.pour === 0 || info.contre === 0))
+        err.push(
+          `${s.id} : décisif unanime (${info.pour}-${info.contre}), texte à écarter (règle 9)`
+        );
       if (s.role === 'amendement' && s.pour !== 'a-trancher') {
         if (info.objet === 'suppression_article_unique')
           err.push(`${s.id} : suppression d'un article unique, pas un amendement clé (règle 11)`);

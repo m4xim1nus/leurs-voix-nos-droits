@@ -43,3 +43,5 @@ File d'attente brute, non ordonnée. Une ligne par item :
 - [ ] Français de l'étranger : la recherche par code postal ne les couvre pas ; lien vers les 11 circonscriptions en attendant la table pays → circonscription (claude, 2026-10-29)
 - [ ] `lvnd annuaire` : repli sur la table MI 2017 pour les communes sans électeurs en 2024 (8 couples code postal × commune sans circonscription) (claude, 2026-10-29)
 - [ ] Site : page « Comparer deux députés » ou deux groupes (claude, 2026-10-29)
+- [creuser] Grille v1 : droits civiques et politiques (droit de vote, corps électoral de Nouvelle-Calédonie : 3 textes écartés au lot de tri faute de droit dans la grille v0) (claude, 2026-10-29)
+- [→Étape 4] Fiche groupe et fiche député : « a aussi voté N textes adoptés sans opposition (liste) », depuis les décisifs sans voix contre (règle 9). C'est ainsi que l'affichage tient compte des textes unanimes, exclus des scores (claude, 2026-10-29)
