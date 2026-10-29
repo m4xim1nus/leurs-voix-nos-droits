@@ -152,11 +152,13 @@ Décisions de Max (29/10/2026) :
 - ✅ Choix I (score toujours affiché, avec son nombre de textes), J
   (participation : scrutins comptés pendant le mandat) et K
   (`lvnd.technoperchoir.fr`) validés par Max.
-- ⏳ Mise en service Cloudflare Pages (gestes de Max, `docs/CONCEPTION.md`)
-  et recette sur téléphone réel.
-- ⏳ À la fusion dans `main` : `lvnd build` doit appeler `lvnd scores` en
-  fin de course (sinon il efface `participation.csv` et
-  `scores_*_textes.csv`) ; ajouter les commandes du site à `CLAUDE.md`.
+- ✅ Fusion dans `main` (29/10/2026). `lvnd build` appelle désormais
+  `lvnd scores`, et la CI recalcule les scores avant les tests : la
+  publication de l'admin la faisait échouer (scores versionnés périmés).
+- ✅ Cloudflare Pages : projet `lvnd` relié au dépôt, production sur
+  `main`, aperçus de `etape-4`. Domaine `lvnd.technoperchoir.fr` déclaré.
+- ⏳ Geste de Max : CNAME `lvnd` dans la zone `technoperchoir.fr`
+  (`docs/CONCEPTION.md`, mise en service), puis recette sur téléphone.
 - ⏳ Livrable : site en ligne, tag `v1.0.0`, `CHANGELOG.md`.
 
 ## Qualification par lots (en continu, en parallèle de l'étape 4)
@@ -198,8 +200,11 @@ Règles :
   conflit, on garde les deux.
 - La session « site » ne touche ni à D1 ni à `source/`, sauf pour lire
   `source/CADRAGE.md` (lien symbolique dans le worktree).
-- Fusion de `etape-4` dans `main` : au livrable de l'étape 4, après
-  relecture par Max.
+- Fusion de `etape-4` dans `main` : par avance rapide
+  (`git merge origin/main`, tests, puis `git push origin etape-4:main`),
+  après relecture par Max. Première fusion le 29/10/2026. Cloudflare Pages
+  construit un aperçu de chaque push sur `etape-4`, et la production à
+  chaque push sur `main` (dont chaque « Publier » de l'admin).
 
 ## Après la v1
 

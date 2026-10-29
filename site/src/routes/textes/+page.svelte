@@ -61,18 +61,35 @@
 
 {#if data.ecartes.length}
   <h2>Textes examinés et écartés</h2>
-  <p>Ces textes ont été examinés, mais pas qualifiés. Le motif est donné pour chacun.</p>
-  <ul>
-    {#each data.ecartes as e (e.dossier_an)}
-      <li>
-        {#if e.url_an}<a href={e.url_an} rel="external">{e.titre}</a>{:else}{e.titre}{/if}
-        <span class="discret">: {e.motif}</span>
-      </li>
-    {/each}
-  </ul>
+  <p>
+    Ces textes ont été examinés, mais pas qualifiés : textes organisationnels, résolutions,
+    conventions internationales, vote décisif sans opposition, ou droit hors de la grille. Le motif
+    est donné pour chacun (règles 8 et 9).
+  </p>
+  <details>
+    <summary>{pluriel(data.ecartes.length, 'texte écarté', 'textes écartés')}</summary>
+    <ul class="ecartes">
+      {#each data.ecartes as e (e.dossier_an)}
+        <li>
+          {#if e.url_an}<a href={e.url_an} rel="external">{e.titre}</a>{:else}{e.titre}{/if}
+          <span class="discret petit">{e.motif}</span>
+        </li>
+      {/each}
+    </ul>
+  </details>
 {/if}
 
 <style>
+  summary {
+    cursor: pointer;
+    font-weight: 650;
+  }
+  .ecartes li {
+    margin-bottom: 0.6rem;
+  }
+  .ecartes span {
+    display: block;
+  }
   .filtres {
     display: flex;
     flex-wrap: wrap;

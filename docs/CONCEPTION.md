@@ -390,14 +390,24 @@ attendant la table pays → circonscription (`BACKLOG.md`).
   Un test du site vérifie que les votes favorables relus vote par vote sur
   une fiche redonnent ceux de `scores_deputes.csv`.
 
-### Mise en service (gestes de Max)
+### Mise en service
 
-1. Cloudflare Pages, « Connect to Git » sur
-   `m4xim1nus/leurs-voix-nos-droits`, branche de production `main`.
-   Commande de build `bash build.sh`, dossier de sortie `site/build`,
-   variable `NODE_VERSION=22`.
-2. Domaine personnalisé : `lvnd.technoperchoir.fr` (choix K), sur la zone
-   `technoperchoir.fr`.
+Faite le 29/10/2026 par l'API Cloudflare (jeton de wrangler), sur le modèle
+du projet quifaitlaloi :
+
+- projet Pages `lvnd` (`lvnd.pages.dev`) relié à
+  `m4xim1nus/leurs-voix-nos-droits` ; production sur `main`, aperçus pour
+  la seule branche `etape-4` ; build `bash build.sh`, sortie `site/build`,
+  `NODE_VERSION=22`, image de build v3 ;
+- domaine `lvnd.technoperchoir.fr` (choix K) déclaré sur le projet.
+
+Reste un geste de Max, le jeton de wrangler n'ayant pas de droit sur le DNS :
+l'enregistrement `CNAME lvnd → lvnd.pages.dev` (proxifié) dans la zone
+`technoperchoir.fr`. Dans le tableau de bord : Workers & Pages, `lvnd`,
+Custom domains, « Activate domain » le crée.
+
+Chaque push sur `main` reconstruit le site, donc chaque « Publier » de
+l'admin : en quelques minutes, sans passer par la machine de Max.
 
 ### Choix
 
