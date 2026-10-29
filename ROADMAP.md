@@ -109,77 +109,25 @@ Cloudflare Access (code par courriel). Publication par commit de
   (19 qualifiés, 2 écartés) ; avec les six témoins, 25 textes qualifiés.
   Règles 10 et 11 complétées à cette occasion.
 
-## Étape 4 : site public v1 ← *en cours*
+## Étape 4 : site public v1 ✅ (2026-10-29, tag `v1.0.0`)
 
-But : mise en ligne publique.
+En ligne sur `lvnd.technoperchoir.fr` (Cloudflare Pages, production sur
+`main` : chaque « Publier » de l'admin redéploie le site). Ouvert avec
+96 textes qualifiés (seuil du choix H). Conception et choix G à K :
+`docs/CONCEPTION.md` ; contenu de la version : `CHANGELOG.md`.
 
-- Conception d'abord (`docs/CONCEPTION.md`) : récit, pages, direction
-  visuelle inspirée de Bon Pote sans copie, cartes partageables.
-- Pages (SvelteKit adapter-static + d3) :
-  - accueil ;
-  - une page par droit ;
-  - fiche texte (avec ses scrutins) ;
-  - fiche député ;
-  - recherche par nom ou code postal ;
-  - groupes ;
-  - méthodologie ;
-  - données téléchargeables.
-- Fiche député : interpellation par `mailto:`.
-- `build.sh`, CI de tests, Cloudflare Pages relié au dépôt, sous-domaine
-  `technoperchoir.fr`. Recette sur téléphone.
-- **Livrable** : site en ligne, tag `v1.0.0`, `CHANGELOG.md` créé.
-
-Décisions de Max (29/10/2026) :
-
-- ✅ Transparence (choix G) : la page Méthodologie dit que les
-  qualifications sont préparées avec un assistant IA et validées par une
-  personne. C'est écrit sur le site.
-- ✅ Seuil de la v1 (choix H) : au moins une cinquantaine de textes
-  qualifiés ; Max fixera le chiffre selon la vitesse de la qualification.
-  D'ici là, bandeau « Site en préparation » (`site/src/lib/site.ts`,
-  `OUVERT`).
-
-État au 29/10/2026 (branche `etape-4`) :
-
-- ✅ `lvnd scores` (choix F1) : scores recalculés depuis `data/export/` et
-  `editorial.json` en ≈ 1 s, identiques à l'octet près à ceux de
-  `lvnd build`. Ajoute la participation (règle 17) et les scores par
-  texte.
-- ✅ `lvnd annuaire` : code postal → circonscription (6 326 codes, repris
-  du spike) et courriels des députés, dans `data/annuaire/`.
-- ✅ Conception (`docs/CONCEPTION.md`, Site public).
-- ✅ Site (`site/`) : accueil et recherche (code postal, nom), droits,
-  textes, fiche texte, fiche député (« Lui écrire »), circonscriptions,
-  groupes, méthodologie, données, cartes PNG partageables. 1 464 pages.
-- ✅ `build.sh` et CI (tests et build du site).
-- ✅ Choix I (score toujours affiché, avec son nombre de textes), J
-  (participation : scrutins comptés pendant le mandat) et K
-  (`lvnd.technoperchoir.fr`) validés par Max.
-- ✅ Fusion dans `main` (29/10/2026). `lvnd build` appelle désormais
-  `lvnd scores`, et la CI recalcule les scores avant les tests : la
-  publication de l'admin la faisait échouer (scores versionnés périmés).
-- ✅ Cloudflare Pages : projet `lvnd` relié au dépôt, production sur
-  `main`, aperçus de `etape-4`. Domaine `lvnd.technoperchoir.fr` déclaré.
-- ✅ En ligne sur `lvnd.technoperchoir.fr`. L'app GitHub de Cloudflare a
-  accès au dépôt : chaque push sur `main`, donc chaque « Publier »,
-  redéploie le site (vérifié le 29/10/2026).
-- ✅ Recette sur téléphone par Max (29/10/2026).
-- ✅ Backlog du site traité (29/10/2026) : textes adoptés sans opposition
-  sur les fiches, page Comparer, fiche député allégée, typographie,
-  interface sans numéros de règles, droits extrêmes sur les cartes.
-- ✅ Arbitrages de Max du 29/10/2026, mis en œuvre : grille v1 (droits
-  civiques), texte adopté par 49.3 (qualifié, non compté, rôle
-  `censure`), contestation par courriel, Action hebdomadaire des données,
-  `sync-admin` incrémental, diff publié/brouillon et alertes de sync dans
-  l'admin, cartes au format portrait, écriture inclusive.
-- ⏳ Gestes de Max : redéployer l'admin (`cd admin && npm run deploy`)
-  pour le rôle `censure` et la grille v1 ; donner l'adresse des
-  contestations (`CONTESTATION`, `site/src/lib/site.ts`) ; ajouter les
-  secrets `CLOUDFLARE_API_TOKEN` et `CLOUDFLARE_ACCOUNT_ID` au dépôt pour
-  que l'Action mette aussi l'admin à jour.
-- ⏳ Ouverture de la v1 au seuil de la décision H : `OUVERT = true` dans
-  `site/src/lib/site.ts`, tag `v1.0.0`, `CHANGELOG.md`.
-- ⏳ Livrable : site en ligne, tag `v1.0.0`, `CHANGELOG.md`.
+- `lvnd scores` (scores recalculés en ≈ 1 s, identiques à l'octet près à
+  ceux de `lvnd build`) et `lvnd annuaire` (code postal → circonscription,
+  courriels des député·es).
+- Site SvelteKit adapter-static + d3 : accueil et recherche, droits,
+  textes, fiches texte et député·e, circonscriptions, groupes, Comparer,
+  méthodologie, données, cartes PNG partageables. Recette sur téléphone
+  par Max.
+- `build.sh`, CI des tests, Action hebdomadaire des données (qui met aussi
+  l'admin à jour).
+- Transparence (choix G) : la méthodologie dit que les qualifications sont
+  préparées avec un assistant IA et validées par une personne.
+  Contestation d'une qualification par courriel.
 
 ## Qualification par lots (en continu, en parallèle de l'étape 4)
 
@@ -243,6 +191,11 @@ chat puis publie depuis l'admin.
   dans aucun score).
 
 ## Travail en parallèle (deux sessions Claude Code)
+
+Mode arrêté à la v1 (29/10/2026) : la branche `etape-4` est fusionnée
+et le worktree `~/dev/leurs-voix-nos-droits-site` supprimé. Tout se fait
+sur `main`. Les règles ci-dessous servent de modèle si un cycle rouvre
+une session parallèle.
 
 Deux copies de travail du même dépôt, pour que deux sessions ne modifient
 jamais les mêmes fichiers non commités :

@@ -41,12 +41,8 @@
 <section>
   <h2>Les groupes de l’Assemblée</h2>
   <p>
-    Part des votes favorables aux droits sur les {pluriel(
-      data.n_textes,
-      'texte qualifié',
-      'textes qualifiés'
-    )}, au sens du droit principal de chaque texte. Législature en cours (XVIIe, depuis juillet
-    2024).
+    Part des votes favorables aux droits sur les textes qualifiés de la législature, au sens du
+    droit principal de chaque texte. Législature en cours (XVIIe, depuis juillet 2024).
   </p>
   <Regle lignes={lignes(17)} />
   <details>

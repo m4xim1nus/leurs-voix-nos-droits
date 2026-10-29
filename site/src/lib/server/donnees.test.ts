@@ -12,12 +12,13 @@ describe('données du site', () => {
     expect(Object.keys(DROITS).sort()).toEqual(d.droits.map((x) => x.code).sort());
   });
 
-  it('retrouve chaque scrutin retenu et un seul décisif par texte', () => {
+  it('retrouve chaque scrutin retenu et un seul décisif par texte (aucun après un 49.3)', () => {
     for (const t of d.textes) {
+      const par493 = t.scrutins.some((s) => s.role === 'censure');
       expect(
         t.scrutins.filter((s) => s.role === 'decisif'),
         t.id
-      ).toHaveLength(1);
+      ).toHaveLength(par493 ? 0 : 1);
       for (const s of t.scrutins) expect(s.numero, s.id).toBeGreaterThan(0);
     }
   });

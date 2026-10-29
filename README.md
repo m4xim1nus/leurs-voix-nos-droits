@@ -9,7 +9,9 @@ Chaque texte retenu est qualifié à la main : droits touchés, sens
 avec les votes des groupes et des députés de l'Assemblée nationale
 depuis 2022. La méthodologie et les données sont publiques.
 
-**État** : cadrage, voir [`ROADMAP.md`](ROADMAP.md).
+**État** : v1.0.0 en ligne sur [lvnd.technoperchoir.fr](https://lvnd.technoperchoir.fr)
+(Assemblée nationale, XVIe et XVIIe législatures). Voir
+[`CHANGELOG.md`](CHANGELOG.md) et [`ROADMAP.md`](ROADMAP.md).
 
 ## Sources
 

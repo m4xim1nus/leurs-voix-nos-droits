@@ -16,9 +16,9 @@ const RACINE = new URL('../../../', import.meta.url);
 const brut = readFileSync(new URL('data/editorial.json', RACINE), 'utf8');
 const editorial: Editorial = JSON.parse(brut);
 
-// Grille v0 (pipeline/referentiels/droits.yaml), codes seulement.
+// Grille v1 (pipeline/referentiels/droits.yaml), codes seulement.
 const GRILLE: Grille = {
-  version: 0,
+  version: 1,
   droits: [
     'libertes',
     'police-justice',
@@ -30,7 +30,8 @@ const GRILLE: Grille = {
     'logement',
     'travail-protection-sociale',
     'environnement',
-    'sante'
+    'sante',
+    'citoyennete'
   ].map((code) => ({ code, libelle: code })),
   etiquettes: ['outre-mer', 'regime-exception'].map((code) => ({ code, libelle: code })),
   sens: []

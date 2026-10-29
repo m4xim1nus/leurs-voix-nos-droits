@@ -124,13 +124,11 @@ rien publié, il est généré depuis `temoins.yaml` (`lvnd editorial`).
   se ferme.
 - `BACKLOG.md` est la file brute, une ligne par item. Tout retour capté
   en session y va d'abord.
-- **Deux sessions peuvent tourner en parallèle** : qualification et
-  données sur `main` dans ce dossier, site public sur `etape-4` dans le
-  worktree `~/dev/leurs-voix-nos-droits-site`. Périmètres et règles de
-  commit : `ROADMAP.md`, section « Travail en parallèle ». En début de
-  session : `git pull`, car l'admin commite sur `main` à chaque
-  publication.
-- `CHANGELOG.md` sera créé au premier tag (`v1.0.0`).
+- On travaille sur `main`. En début de session : `git pull`, car l'admin
+  commite sur `main` à chaque publication. Le travail en deux sessions
+  parallèles (worktree et branche dédiés) s'est arrêté à la v1 ; ses
+  règles restent dans `ROADMAP.md`, section « Travail en parallèle ».
+- `CHANGELOG.md` : une entrée par tag `v*`.
 
 ## Commandes
 

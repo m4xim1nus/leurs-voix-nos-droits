@@ -74,12 +74,14 @@
       sien ; celui du texte est celui de son droit principal. Exemple : la loi immigration de 2024 restreint
       les droits des personnes étrangères et étend ceux de l’enfant. Le sens se lit par rapport au droit
       applicable au jour du vote, jurisprudence comprise : une loi qui plafonne ce que les tribunaux accordaient
-      déjà restreint le droit. Dans un texte dont les mesures vont en sens opposés pour un même droit,
-      ce droit prend le sens des mesures que les sources citent le plus souvent, et la mesure de sens
-      opposé s’affiche en point de vigilance. Une mesure sur le corps électoral se lit, pour les droits
-      civiques, sur le droit de vote des personnes qu’elle ajoute à la liste ou en retire ; quand une
-      source y voit une atteinte aux droits d’un peuple autochtone, le texte reçoit aussi le droit à l’égalité
-      et à la non-discrimination, au sens « restreint ». Les deux lectures sont alors comptées.
+      déjà restreint le droit, tout comme une loi qui rétablit une règle que le Conseil constitutionnel
+      avait abrogée, même assortie de la garantie qu’il exigeait. Dans un texte dont les mesures vont
+      en sens opposés pour un même droit, ce droit prend le sens des mesures que les sources citent le
+      plus souvent, et la mesure de sens opposé s’affiche en point de vigilance. Une mesure sur le corps
+      électoral se lit, pour les droits civiques, sur le droit de vote des personnes qu’elle ajoute à
+      la liste ou en retire ; quand une source y voit une atteinte aux droits d’un peuple autochtone,
+      le texte reçoit aussi le droit à l’égalité et à la non-discrimination, au sens « restreint ». Les
+      deux lectures sont alors comptées.
     </li>
     <li value="5" id="regle-5">
       <strong>Points de vigilance.</strong> Les critiques sourcées sur la mise en œuvre ou sur l’insuffisance
@@ -111,7 +113,8 @@
       ne contient plus aucune mesure (ses articles ont été supprimés). Les motions de censure
       spontanées (article 49, alinéa 2) ne sont pas qualifiées non plus : elles ne portent sur aucun
       texte. Les lois de finances de fin de gestion, qui ne font qu’ouvrir et annuler les crédits de
-      l’année, ne le sont pas non plus. Les textes examinés puis écartés sont
+      l’année, ne le sont pas non plus ; les lois de finances initiales et rectificatives se
+      qualifient comme les autres textes. Les textes examinés puis écartés sont
       <a href="/textes">publiés avec leur motif</a>.
     </li>
   </ol>
@@ -159,16 +162,19 @@
       <strong>Motions de rejet : affichées, pas comptées.</strong> Une motion peut être votée pour des
       raisons tactiques. Sur la loi immigration, la motion de rejet a été adoptée avec les voix de groupes
       qui ont ensuite voté le texte. La compter comme une opposition au texte les créditerait d’un vote
-      favorable aux droits.
+      favorable aux droits. Une motion déposée et adoptée par les soutiens du texte, pour l’envoyer directement
+      en commission mixte paritaire, s’affiche dans ce sens : la voter, c’est soutenir le texte.
     </li>
     <li value="11" id="regle-11">
       <strong>Amendements clés.</strong> Seuls comptent les amendements qui suppriment ou rétablissent
       un article portant une mesure mise en cause par une source. Leur sens se fixe d’après le contenu
       de l’article, pas d’après la nature de l’amendement : supprimer un article qui ajoute une garantie
-      va contre les droits. Un seul scrutin par article (celui qui en a fixé le sort), et une seule lecture
-      : la dernière où des suppressions ont été mises aux voix. Ne comptent pas : la suppression de l’article
-      unique d’un texte (elle double le vote décisif), ou de l’article qui est le seul du texte au vote
-      décisif, et un scrutin sans aucune voix d’un côté (il ne départage personne).
+      va contre les droits. Un article dont le sens n’est pas univoque n’est pas retenu, y compris quand
+      les sources ne s’accordent pas sur ce sens. Un seul scrutin par article (celui qui en a fixé le
+      sort), et une seule lecture : la dernière où des suppressions ont été mises aux voix. Ne comptent
+      pas : la suppression de l’article unique d’un texte (elle double le vote décisif), ou de l’article
+      qui est le seul du texte au vote décisif, et un scrutin sans aucune voix d’un côté (il ne départage
+      personne).
     </li>
   </ol>
 </section>

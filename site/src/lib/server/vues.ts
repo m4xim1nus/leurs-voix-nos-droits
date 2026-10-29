@@ -87,7 +87,6 @@ export function entree(d: Donnees, dep: Depute): EntreeIndex {
 export function vueAccueil() {
   const d = donnees();
   return {
-    n_textes: d.textes.length,
     groupes: { 17: scoresGroupes(d, 17, 'global'), 16: scoresGroupes(d, 16, 'global') },
     droits: d.droits.map((dr) => ({
       ...dr,
