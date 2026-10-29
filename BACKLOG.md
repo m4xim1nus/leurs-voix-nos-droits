@@ -46,3 +46,5 @@ File d'attente brute, non ordonnée. Une ligne par item :
 - [creuser] Grille v1 : droits civiques et politiques (droit de vote, corps électoral de Nouvelle-Calédonie : 3 textes écartés au lot de tri faute de droit dans la grille v0) (claude, 2026-10-29)
 - [→Étape 4] Fiche groupe et fiche député : « a aussi voté N textes adoptés sans opposition (liste) », depuis les décisifs sans voix contre (règle 9). C'est ainsi que l'affichage tient compte des textes unanimes, exclus des scores (claude, 2026-10-29)
 - [ ] Fiche député : 180 ko de HTML à 24 textes (≈ 350 ko attendus à 50) ; sortir les scrutins non comptés de la page, ou les charger à la demande (claude, 2026-10-29)
+- [ ] Rattachement scrutin → dossier : V4239 (amendement du Gouvernement au PLF 2026, 21/11/2025) est rattaché à la simplification de l'urbanisme (DLR5L17N51852) (claude, 2026-10-29)
+- [ ] `lvnd check` : alerte quand un texte qualifié reçoit un vote sur l'ensemble postérieur à son décisif (texte en navette, règle 9) (claude, 2026-10-29)

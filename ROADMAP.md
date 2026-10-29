@@ -176,8 +176,14 @@ chat puis publie depuis l'admin.
   (liste A et accès aux soins, `source/relecture-tri.md`). 14 n'ont pas
   encore de décisif. Soins palliatifs, décisif à 491-0, est écarté par la
   nouvelle règle 9. Règles 2, 8 et 9 complétées.
-- ⏳ Lots suivants (lot 2 : à prendre dans la liste A du tri), d'une vingtaine de textes chacun, jusqu'au seuil de
-  la v1, puis au fil de l'eau.
+- ⏳ Lot 2 (23 textes, 29/10/2026) : 17 à qualifier, 6 écarts proposés,
+  chargés « à relire » dans l'admin. En attente des arbitrages de Max
+  (fiche `source/relecture-lot2.md`, questions Q1 à Q5 sur les règles 7, 8
+  et 14 et les textes en navette).
+- ⏳ Lots suivants, d'une vingtaine de textes chacun, jusqu'au seuil de la
+  v1, puis au fil de l'eau. Reste de la liste A : 28 textes, dont les
+  « faible ». Le droit au logement manque de candidats : chercher hors de la
+  liste A.
 - ⏳ Les deux textes passés au 49.3 sans vote final (retraites 2023,
   PLF 2026) attendent la règle du décisif en cas de 49.3 (`BACKLOG.md`).
 
