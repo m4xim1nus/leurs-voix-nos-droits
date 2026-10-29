@@ -401,7 +401,7 @@ du projet quifaitlaloi :
   `NODE_VERSION=22`, image de build v3 ;
 - domaine `lvnd.technoperchoir.fr` (choix K) déclaré sur le projet.
 
-Restent deux gestes de Max :
+Deux gestes de Max, faits le 29/10/2026 :
 
 1. Donner accès au dépôt à l'application GitHub de Cloudflare, installée
    pour une sélection de dépôts (quifaitlaloi, prenoms) : sur GitHub,

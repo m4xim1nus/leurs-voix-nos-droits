@@ -157,11 +157,12 @@ Décisions de Max (29/10/2026) :
   publication de l'admin la faisait échouer (scores versionnés périmés).
 - ✅ Cloudflare Pages : projet `lvnd` relié au dépôt, production sur
   `main`, aperçus de `etape-4`. Domaine `lvnd.technoperchoir.fr` déclaré.
-- ✅ En ligne sur `lvnd.pages.dev` (déploiement lancé à la main).
-- ⏳ Gestes de Max (`docs/CONCEPTION.md`, mise en service) : accès de
-  l'application GitHub de Cloudflare au dépôt (sans lui, ni « Publier » ni
-  aucun push ne redéploie), CNAME `lvnd` dans la zone `technoperchoir.fr`,
-  puis recette sur téléphone.
+- ✅ En ligne sur `lvnd.technoperchoir.fr`. L'app GitHub de Cloudflare a
+  accès au dépôt : chaque push sur `main`, donc chaque « Publier »,
+  redéploie le site (vérifié le 29/10/2026).
+- ⏳ Recette sur téléphone par Max.
+- ⏳ Ouverture de la v1 au seuil de la décision H : `OUVERT = true` dans
+  `site/src/lib/site.ts`, tag `v1.0.0`, `CHANGELOG.md`.
 - ⏳ Livrable : site en ligne, tag `v1.0.0`, `CHANGELOG.md`.
 
 ## Qualification par lots (en continu, en parallèle de l'étape 4)
