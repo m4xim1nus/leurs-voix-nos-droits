@@ -1,237 +1,35 @@
 # Roadmap
 
-Projet solo, sans calendrier engageant. Quatre étapes jusqu'à la v1, puis
-des cycles courts. Chaque étape se termine par un **livrable relu par
-Max** avant de passer à la suivante. Les idées non planifiées vont dans
-`BACKLOG.md`.
+Projet sans calendrier engageant. Ce fichier est le **plan opérationnel** :
+il porte le cycle en cours, et seulement lui. Ce qui est livré est dans
+`CHANGELOG.md`, les cycles à venir et les idées dans `BACKLOG.md`. Règles
+de tenue : `CLAUDE.md`, section « Suivi ».
 
-## Étape 0 : cadrage ✅ (2026-10-29)
+## Cycle en cours : Reliquat XVIe
 
-Cadrage privé et recherches dans `source/CADRAGE.md` (leurs-votes.fr,
-découpage thématique de référence, textes candidats, direction visuelle).
-Décisions dans `CLAUDE.md` : dépôt public, admin tout Cloudflare (D1 +
-Access, publication par commit), périmètre AN XVIe-XVIIe. Squelette du
-dépôt.
+But : finir l'étape 2 de la v1, c'est-à-dire avoir les amendements de la
+XVIe et mesurer leur rattachement comme pour la XVIIe. Items `[→Reliquat
+XVIe]` de `BACKLOG.md`.
 
-## Étape 1 : spike sources et grille ✅ (2026-10-29)
+Déjà fait dans ce cycle : `lvnd download` garde chaque octet reçu,
+demande des plages de 256 Kio et reprend un fichier partiel d'un lancement
+à l'autre.
 
-Verdict **GO** : l'open data AN suffit pour la v1 (`docs/SOURCES.md`).
+1. ⏳ **Dump `an_amendements_16`** (363 Mo, figé le 28/06/2024). Bloqué à
+   94,1 Mo : depuis le 29/10/2026 vers 18 h, le serveur de l'AN ne sert
+   plus aucune plage au-delà d'environ 1 Mo. Relance :
+   `cd pipeline && uv run lvnd download an_amendements_16 >> ../data/raw/download_16.log 2>&1`.
+   Le dump est complet quand `an_amendements_16` figure dans
+   `data/raw/manifeste.json`.
+2. ⏳ Puis `lvnd build` et `lvnd check` (aujourd'hui en échec sur cette
+   seule ligne), et mesure du rattachement des scrutins sur amendement de
+   la XVIe dans `docs/SOURCES.md`, avec la note sur le service par
+   intermittence du serveur.
+3. ⏳ **Action hebdomadaire « Données AN »** (`.github/workflows/donnees.yml`) :
+   son seul lancement (29/10/2026, manuel) a échoué au téléchargement, pour
+   la même raison. Tant qu'elle échoue, elle ne met à jour ni les données
+   ni l'admin. Prochain lancement : lundi, 4 h UTC.
+4. ⏳ Relecture des scores des six textes témoins avec Max (livrable de
+   l'étape 2).
 
-- 1,97 M votes nominatifs (XVIe + XVIIe). Décision : tout versionner en CSV
-  par législature et par mois ; `data/lvnd.sqlite` n'est pas versionné.
-- Sur la XVIIe, 99,9 % des scrutins sur amendement sont rattachés à leur
-  amendement, avec dossier, auteur et groupe.
-- Les ventilations sont identiques à celles de leurs-votes.fr (22 531
-  paires scrutin × groupe) et concordent avec datan.fr sur un échantillon.
-- Code postal → circonscription : pas de table officielle directe. On la
-  construit à partir de La Poste et du ministère de l'Intérieur ; 71 % des
-  électeurs ont un député unique par code postal.
-- PISTE : non. Décisions du Conseil constitutionnel et liens JO viennent
-  des dossiers AN.
-- Grille v0 et règles de qualification validées par Max
-  (`pipeline/referentiels/droits.yaml`, `docs/METHODO.md`). Six textes
-  témoins qualifiés et sourcés (`pipeline/referentiels/temoins.yaml`).
-
-## Étape 2 : pipeline et méthode v0 ← *en cours (reste : XVIe)*
-
-But : une base fiable des textes, scrutins et votes, et des règles de
-calcul arrêtées.
-
-- Package `lvnd` (`download` → `build` → `check`), qui écrit
-  `data/lvnd.sqlite` (local) et `data/export/`, dont les votes nominatifs
-  dans `votes/<législature>/<AAAA-MM>.csv`. `download` existe déjà, avec
-  reprise automatique sur coupure.
-- Reprendre de quifaitlaloi le parsing des scrutins, des dossiers et de
-  l'AMO, ainsi que la correction des ventilations `PO0`. Porter dans le
-  package le rattachement des amendements (`explo/rattachement_amendements.py`)
-  et le **mesurer sur la XVIe**. Le dump de la XVIe n'a pas pu être
-  téléchargé au spike : le serveur de l'AN coupait sans cesse.
-- **Catalogue des candidats** : présélection des textes et scrutins par
-  mots-clés (`referentiels/mots_cles.yaml`). Elle sert d'aide au tri dans
-  l'admin, jamais de qualification automatique.
-- **Scores** calculés depuis une qualification (`temoins.yaml` en
-  attendant l'admin) : par député, par groupe et par droit. Les règles de
-  `docs/METHODO.md` s'appliquent : scrutin décisif et amendements clés
-  comptés, motions affichées.
-- **Méthode v0** dans `docs/METHODO.md`, chaque règle **tranchée par
-  Max** :
-  - abstention et absences ;
-  - pondération (un texte à vingt amendements ne doit pas écraser les
-    autres) ;
-  - votes du député quand il change de groupe ;
-  - choix et sens des amendements clés des six textes témoins.
-- **Livrable** : `docs/METHODO.md` v0, les scores des six textes témoins
-  relus avec Max, `lvnd check` vert.
-
-État au 29/10/2026 :
-
-- ✅ `lvnd build` (≈ 25 s) et `lvnd check`. Exports dans `data/export/`
-  (41 Mo, dont 26 Mo de votes en 44 fichiers mensuels).
-- ✅ Correction `PO0`, amendements identiques, lignées de groupes
-  (`referentiels/groupes.yaml`).
-- ✅ Rattachement scrutin → dossier : 99,9 % en XVIIe. Pour les six
-  témoins, le décisif proposé est bien celui de la qualification.
-- ✅ Catalogue : 479 textes, dont 235 candidats par mots-clés
-  (`mots_cles.yaml` en brouillon).
-- ✅ Règles de calcul 14 à 19 validées, y compris absences, droits
-  secondaires, score de groupe, cohésion et lignée UDR → UDDPLR.
-- ✅ Amendements clés du narcotrafic (9) et de la justice des mineurs (4).
-- ⏳ Dump des amendements de la XVIe : téléchargement par plages, lancé en
-  processus détaché (journal : `data/raw/download_16.log`). Il est fini
-  quand `an_amendements_16` figure dans `data/raw/manifeste.json`. Le
-  29/10, le serveur de l'AN ne servait plus les plages de 1 Mio.
-  `download` garde désormais chaque octet reçu, demande des plages de
-  256 Kio et reprend un fichier partiel d'un lancement à l'autre. Ensuite :
-  `lvnd build`, `lvnd check`, mesure du rattachement XVIe dans
-  `docs/SOURCES.md`.
-- ✅ Rattachement des votes de CMP de la XVIe dont le dossier ne donne que
-  l'acte de décision, sans séance (industrie verte, LOPMI, fin de gestion
-  2023). `lvnd check` vérifie que tout vote sur l'ensemble a un dossier.
-- ✅ Amendements clés de Kasbarian-Bergé (4, en 2e lecture). La règle 11
-  est complétée : dernière lecture de l'AN où des suppressions ont été
-  votées, et une source « cite » une mesure quand elle la met en cause.
-- ⏳ Relecture des scores des six témoins avec Max.
-
-## Étape 3 : admin en ligne ✅ (2026-10-29)
-
-Admin SvelteKit + D1 sur `lvnd-admin.technoperchoir.fr`, derrière
-Cloudflare Access (code par courriel). Publication par commit de
-`data/editorial.json` via l'API GitHub. Conception et choix A à F validés :
-`docs/CONCEPTION.md` ; mise en service : `admin/README.md`.
-
-- `lvnd sync-admin` : catalogue vers D1 (`--brouillons`, `--valider` pour
-  les lots de qualification).
-- Contrôles identiques dans l'admin et `lvnd check`, tests croisés
-  (sérialisation à l'octet près, scores de groupe, arrondi).
-- Garde-fou : aucune source du commanditaire, liste privée de termes qui
-  bloque la publication.
-- Lot 1 : 21 textes préparés par Claude, relus et validés par Max
-  (19 qualifiés, 2 écartés) ; avec les six témoins, 25 textes qualifiés.
-  Règles 10 et 11 complétées à cette occasion.
-
-## Étape 4 : site public v1 ✅ (2026-10-29, tag `v1.0.0`)
-
-En ligne sur `lvnd.technoperchoir.fr` (Cloudflare Pages, production sur
-`main` : chaque « Publier » de l'admin redéploie le site). Ouvert avec
-96 textes qualifiés (seuil du choix H). Conception et choix G à K :
-`docs/CONCEPTION.md` ; contenu de la version : `CHANGELOG.md`.
-
-- `lvnd scores` (scores recalculés en ≈ 1 s, identiques à l'octet près à
-  ceux de `lvnd build`) et `lvnd annuaire` (code postal → circonscription,
-  courriels des député·es).
-- Site SvelteKit adapter-static + d3 : accueil et recherche, droits,
-  textes, fiches texte et député·e, circonscriptions, groupes, Comparer,
-  méthodologie, données, cartes PNG partageables. Recette sur téléphone
-  par Max.
-- `build.sh`, CI des tests, Action hebdomadaire des données (qui met aussi
-  l'admin à jour).
-- Transparence (choix G) : la méthodologie dit que les qualifications sont
-  préparées avec un assistant IA et validées par une personne.
-  Contestation d'une qualification par courriel.
-
-## Qualification par lots (en continu, en parallèle de l'étape 4)
-
-Procédure : `docs/QUALIFICATION.md`. Claude prépare, Max arbitre dans le
-chat puis publie depuis l'admin.
-
-- ✅ Lot 1 (21 textes, 29/10/2026).
-- ✅ Lot de tri (29/10/2026) : sur 209 candidats, 144 écartés (texte
-  d'organisation, hors grille, sans vote, décisif unanime, résolution,
-  convention, corps électoral de Nouvelle-Calédonie) et 51 à qualifier
-  (liste A et accès aux soins, `source/relecture-tri.md`). 14 n'ont pas
-  encore de décisif. Soins palliatifs, décisif à 491-0, est écarté par la
-  nouvelle règle 9. Règles 2, 8 et 9 complétées.
-- ✅ Lot 2 (23 textes, 29/10/2026) : 17 validés, 6 écartés (fiche
-  `source/relecture-lot2.md`). Règle 7 complétée (syndicats et instances
-  du droit, avis du Conseil d'État ; pas de vigilance exigée sans critique
-  admise), règle 8 (texte vidé avant le décisif), limite de la règle 14
-  écrite.
-- ✅ Lot 3 (21 textes, 29/10/2026) : 15 validés, 6 écartés (fiche
-  `source/relecture-lot3.md`), dont 5 textes hors liste A que les
-  mots-clés n'avaient pas repérés (logement, libertés). Règle 2 (choix
-  d'une source d'énergie hors grille), règle 7 (instances consultatives
-  indépendantes, syndicats de salariés ; pas la Cour des comptes), règle 9
-  (article unique sans vote sur l'ensemble).
-- ✅ Lot 4 (22 textes, 29/10/2026) : 14 validés, 8 écartés (fiche
-  `source/relecture-lot4.md`), dont dix textes hors liste A (LOPMI,
-  fraudes, simplification, industrie verte, urgence agricole…). Règle 4
-  (texte composite ; sens lu au jour du vote, jurisprudence comprise),
-  règle 7 (fédérations syndicales, ANSES, source sur la mesure), règle 9
-  (article unique supprimé par amendement : premier texte `etrangers`
-  depuis le témoin, délit de séjour irrégulier).
-- ✅ Tri complémentaire (229 textes que les mots-clés n'avaient pas
-  repérés, fiche `source/relecture-tri2.md`) : 176 écartés, dont les 18
-  motions de censure spontanées (règle 8) ; 38 à qualifier (vivier du
-  lot 5) ; 34 en attente. Deux questions suspendues par la grille v1 et la
-  règle du 49.3 (lois de finances, vote des détenus), tranchées au lot 5.
-- ✅ Lot 5 (20 textes et 3 écarts de lois de fin de gestion, 29/10/2026) :
-  16 validés, 7 écartés (fiche `source/relecture-lot5.md`). Premiers
-  textes `citoyennete` (grille v1), dont la Nouvelle-Calédonie, requalifiée
-  avec trois écarts devenus qualifiables par la règle 9 ; retraites 2023
-  et PLF 2026 qualifiés sans score (49.3). Règles 2 (périmètre de
-  `citoyennete`), 3 (personnes détenues), 4 (corps électoral et peuple
-  autochtone), 8 (lois de fin de gestion), 11 (article seul au décisif).
-  `sync-admin --remplacer` pour requalifier un texte publié. Couverture :
-  `citoyennete` 4, `discriminations` 5, `vie-privee` 7 ; `libertes`
-  toujours 5.
-- ✅ Lot 6 (24 textes et une requalification, 29/10/2026) : 10 validés,
-  15 écartés (fiche `source/relecture-lot6.md`). Dernier lot du vivier du
-  tri 2 : les deux lois de finances rectificatives de 2022 (la première
-  qualifiée, `libertes` restreint, fin de la redevance ; la seconde
-  écartée) ; peine obligatoire d'inéligibilité requalifiée `citoyennete`
-  restreint. Règles 4 (loi qui rétablit une règle abrogée par le Conseil
-  constitutionnel) et 11 (article dont les sources ne s'accordent pas sur
-  le sens). Couverture : 96 textes qualifiés ; `libertes` 7,
-  `environnement` 15, `sante` 8, `police-justice` 10, `citoyennete` 5.
-- Vivier de la v1 épuisé. Après la v1 (BACKLOG) : les lois de finances
-  adoptées par 49.3 sans vote final (6 textes, comptés dans aucun score),
-  les textes de la liste C quand ils auront un vote final, et le cycle de la
-  XVe ouvert par les textes `libertes`. Toujours aucun candidat `etrangers`
-  avec vote sur l'ensemble (le PLF 2026, qualifié `etrangers`, ne compte
-  dans aucun score).
-
-## Travail en parallèle (deux sessions Claude Code)
-
-Mode arrêté à la v1 (29/10/2026) : la branche `etape-4` est fusionnée
-et le worktree `~/dev/leurs-voix-nos-droits-site` supprimé. Tout se fait
-sur `main`. Les règles ci-dessous servent de modèle si un cycle rouvre
-une session parallèle.
-
-Deux copies de travail du même dépôt, pour que deux sessions ne modifient
-jamais les mêmes fichiers non commités :
-
-| Session | Dossier | Branche | Périmètre |
-|---|---|---|---|
-| Qualification et données | `~/dev/leurs-voix-nos-droits` | `main` | lots de qualification (`source/`, D1), fin de l'étape 2 (dump XVIe, `lvnd build/check`), `pipeline/` hors `lvnd scores`, `docs/METHODO.md`, `docs/SOURCES.md`, `docs/QUALIFICATION.md` |
-| Site public (étape 4) | `~/dev/leurs-voix-nos-droits-site` (`git worktree`) | `etape-4` | `site/`, `build.sh`, `lvnd scores`, section « Site public » de `docs/CONCEPTION.md`, CI du site |
-
-Règles :
-
-- Au début de chaque session : `git pull` (sur `main`), ou `git fetch &&
-  git merge origin/main` (sur `etape-4`). L'admin commite sur `main` à
-  chaque publication.
-- Chaque session commite seulement les fichiers de son périmètre, en les
-  nommant (`git add <chemins>`, jamais `git add -A`), puis pousse.
-- `ROADMAP.md` : chacune met à jour sa propre section. `BACKLOG.md` :
-  on ajoute des lignes à la fin, sans réécrire les autres ; en cas de
-  conflit, on garde les deux.
-- La session « site » ne touche ni à D1 ni à `source/`, sauf pour lire
-  `source/CADRAGE.md` (lien symbolique dans le worktree).
-- Fusion de `etape-4` dans `main` : par avance rapide
-  (`git merge origin/main`, tests, puis `git push origin etape-4:main`),
-  après relecture par Max. Première fusion le 29/10/2026. Cloudflare Pages
-  construit un aperçu de chaque push sur `etape-4`, et la production à
-  chaque push sur `main` (dont chaque « Publier » de l'admin).
-
-## Après la v1
-
-Un cycle à la fois, nommé au moment de l'ouvrir. Pistes :
-
-- **Sénat** : scrutins publics des sénateurs (Dosleg, déjà maîtrisé dans
-  quifaitlaloi).
-- **XVe** : 2017-2022 (sécurité globale, séparatisme, état d'urgence
-  sanitaire).
-- **Textes en cours** : suivi des textes avant leur adoption, et
-  interpellation au bon moment.
-- **Passation** : réécriture éditoriale, domaine définitif, comptes
-  d'édition, transfert du compte Cloudflare et du dépôt.
+Prochain cycle : à choisir parmi les cycles candidats de `BACKLOG.md`.

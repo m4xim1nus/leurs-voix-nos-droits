@@ -34,11 +34,11 @@ data/editorial.json ─(amorçage)─▶ D1 : qualifications, révisions
 - **Catalogue** : `lvnd sync-admin` lit `data/export/` (et non la base
   locale), puis remplace dans D1 les textes, les scrutins rattachés à un
   dossier, les groupes et la grille des droits. Le catalogue est
-  versionné, donc une GitHub Action pourra un jour lancer ce sync sans
-  dump (`BACKLOG.md`, mise à jour automatique). Le premier sync a écrit
-  40 800 lignes, index compris. Un sync suivant, qui efface puis réécrit,
-  en écrit environ le double : un seul par jour sous la limite gratuite de
-  D1 (100 000), en attendant un sync incrémental (`BACKLOG.md`).
+  versionné : l'Action hebdomadaire des données lance ce sync sans dump
+  (`.github/workflows/donnees.yml`). Le premier sync a écrit 40 800
+  lignes, index compris. Le sync est depuis incrémental : il n'écrit que
+  ce qui a changé, loin de la limite gratuite de D1 (100 000 écritures
+  par jour).
   Les positions de groupe sont rangées en JSON dans la ligne du scrutin :
   155 000 lignes de moins.
 - **Qualifications** : une ligne par texte, avec un document JSON au

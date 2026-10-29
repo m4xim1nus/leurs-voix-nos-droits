@@ -47,6 +47,38 @@ nationale, XVIe et XVIIe législatures (depuis juin 2022).
   sur `main` (chaque publication de l'admin redéploie le site), CI des
   tests, Action hebdomadaire de mise à jour des données.
 
+### Déroulé
+
+Quatre étapes et six lots de qualification, du 29/10/2026. Chaque règle
+de méthode a été validée par Max (`docs/METHODO.md` date chacune).
+
+- **Étape 0, cadrage** : dépôt public, admin tout Cloudflare (D1 et
+  Access, publication par commit), périmètre AN XVIe-XVIIe.
+- **Étape 1, spike** : verdict GO, l'open data de l'AN suffit
+  (`docs/SOURCES.md`). Ventilations identiques à celles de leurs-votes.fr
+  (22 531 paires scrutin × groupe), concordantes avec datan.fr sur un
+  échantillon. Pas de table officielle code postal → circonscription :
+  71 % des électeurs ont un député unique par code postal. PISTE écarté
+  (Conseil constitutionnel et JO viennent des dossiers AN). Grille v0,
+  règles 1 à 13, six textes témoins.
+- **Étape 2, pipeline et méthode** : `lvnd build` (≈ 25 s) et
+  `lvnd check`, rattachement scrutin → dossier à 99,9 % en XVIIe (votes de
+  CMP de la XVIe compris), catalogue de 479 textes. Règles de calcul 14 à
+  19, amendements clés du narcotrafic, de la justice des mineurs et de
+  Kasbarian-Bergé. Reste le dump des amendements de la XVIe (limites
+  ci-dessous).
+- **Étape 3, admin** : `lvnd-admin.technoperchoir.fr`, choix A à F
+  (`docs/CONCEPTION.md`), tests croisés pipeline/admin (sérialisation à
+  l'octet près, scores, arrondi).
+- **Étape 4, site** : choix G à K (transparence sur l'IA, seuil
+  d'ouverture, score toujours affiché avec son nombre de textes,
+  participation, domaine), recette sur téléphone, grille v1
+  (`citoyennete`), règle du 49.3, écriture inclusive.
+- **Qualification** (`docs/QUALIFICATION.md` : Claude prépare, Max
+  arbitre et publie) : lot 1 (19 qualifiés), deux tris des candidats
+  (144 puis 176 écartés, dont les motions de censure spontanées), lots 2 à
+  6 (17, 15, 14, 16 et 10 validés). Le vivier de la v1 est épuisé.
+
 ### Limites connues
 
 - **Étape 2 encore ouverte** : le dump des amendements de la XVIe

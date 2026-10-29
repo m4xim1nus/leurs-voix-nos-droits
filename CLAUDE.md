@@ -119,16 +119,29 @@ rien publié, il est généré depuis `temoins.yaml` (`lvnd editorial`).
 
 ## Suivi
 
-- `ROADMAP.md` contient les étapes jusqu'à la v1, puis les cycles. Le
-  détail se limite à l'étape en cours ; on le met à jour quand une étape
-  se ferme.
-- `BACKLOG.md` est la file brute, une ligne par item. Tout retour capté
-  en session y va d'abord.
-- On travaille sur `main`. En début de session : `git pull`, car l'admin
-  commite sur `main` à chaque publication. Le travail en deux sessions
-  parallèles (worktree et branche dédiés) s'est arrêté à la v1 ; ses
-  règles restent dans `ROADMAP.md`, section « Travail en parallèle ».
-- `CHANGELOG.md` : une entrée par tag `v*`.
+Trois fichiers se partagent le suivi, sans recouvrement :
+
+| Fichier | Rôle | Quand l'éditer |
+|---|---|---|
+| `ROADMAP.md` | Le **cycle en cours**, et lui seul : but, items détaillés, et ce qui est déjà fait *dans ce cycle*. Rien des cycles passés. | Pendant le cycle, et à chaque rotation. |
+| `BACKLOG.md` | Les **cycles candidats**, les idées à trier ou à creuser, les tâches **refusées**. Rien de livré. Une ligne par item, `- [TAG] description (origine, date)`. | En cours de session : tout retour capté y va d'abord (fin de « À trier »). Tri en lot au début d'un cycle. |
+| `CHANGELOG.md` | L'**historique** : ce qui a été livré, version par version (Keep a Changelog). | À chaque tag `v*`, et seulement là. |
+
+Les cycles portent un nom court (Reliquat XVIe, Sénat, Passation…), jamais
+un numéro de version ; la version se choisit au tag, d'après ce qui a été
+livré.
+
+**Rotation d'un cycle** (quand Max dit de le fermer) :
+
+1. Écrire l'entrée de `CHANGELOG.md` (version, date, ce qui a été livré,
+   limites connues), puis poser le tag.
+2. Retirer de `BACKLOG.md` les items livrés par le cycle.
+3. Remplacer le contenu de `ROADMAP.md` par le cycle suivant, choisi par
+   Max parmi les cycles candidats, détaillé depuis ses items `[→Nom]`.
+
+On travaille sur `main`. En début de session : `git pull`, car l'admin
+commite sur `main` à chaque publication. On commite en nommant les
+fichiers (`git add <chemins>`, jamais `git add -A`).
 
 ## Commandes
 
