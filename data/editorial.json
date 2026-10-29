@@ -1654,6 +1654,63 @@
       ]
     },
     {
+      "id": "engrillagement-2023",
+      "dossier_an": "DLR5L15N43849",
+      "legislature": 15,
+      "titre": "Loi visant à limiter l'engrillagement des espaces naturels et à protéger la propriété privée",
+      "resume": "La loi impose que les clôtures implantées dans les zones naturelles ou forestières permettent en tout temps la libre circulation des animaux sauvages : posées 30 centimètres au-dessus du sol, hautes de 1,20 mètre au plus, ni vulnérantes ni pièges, en matériaux naturels ou traditionnels. Les clôtures existantes doivent être mises en conformité avant le 1er janvier 2027, sauf celles construites plus de trente ans avant la loi, et la loi prévoit des exceptions (habitations dans un rayon de 150 mètres, parcelles agricoles, élevages, régénération forestière, sécurité publique, notamment). Elle encadre la chasse dans les enclos, ouvre l'accès des agents chargés des contrôles et des agents de développement des fédérations de chasseurs aux enclos, et crée une contravention pour la pénétration sans autorisation dans une propriété privée rurale ou forestière.",
+      "droits": [
+        {
+          "code": "environnement",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "cc-2024-1109"
+          ],
+          "justification": "Le texte limite les clôtures étanches en milieu naturel pour rétablir la circulation de la faune sauvage. Le Conseil constitutionnel constate qu'en adoptant ces règles le législateur a voulu « prévenir les risques sanitaires liés au cloisonnement des populations animales, [...] remédier à la fragmentation de leurs habitats et [...] préserver la biodiversité », et qu'il a ainsi poursuivi « l'objectif de valeur constitutionnelle de protection de l'environnement »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Le texte limite le droit de se clore, que le Conseil constitutionnel rattache au droit de propriété. La propriété n'est pas un droit de la grille (règle 2) : elle figure ici pour information.",
+          "sources": [
+            "cc-2024-1109"
+          ]
+        },
+        {
+          "texte": "Le texte ouvre aux agents chargés des contrôles l'accès aux enclos à tout moment. Le Conseil constitutionnel l'a validé sous réserve : ces agents ne peuvent entrer sans l'accord de l'occupant dans un enclos « susceptible de constituer un domicile ».",
+          "sources": [
+            "cc-2024-1109"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de contrôle avant promulgation. Saisi d'une question prioritaire de constitutionnalité, le Conseil a déclaré conformes les règles applicables aux clôtures, leur mise en conformité et l'accès des agents aux enclos (décision 2024-1109 QPC du 18 octobre 2024), avec une réserve : les agents ne peuvent accéder sans l'accord de l'occupant à un enclos susceptible de constituer un domicile. Les griefs tirés du droit de propriété, de l'égalité et de la vie privée sont écartés.",
+      "note": "Proposition de loi déposée au Sénat sous la XVe législature (Jean-Noël Cardoux), adoptée par l'Assemblée en 1re lecture le 6 octobre 2022, puis, sans modification du texte du Sénat, en 2e lecture le 25 janvier 2023, ce qui vaut adoption définitive. Ce dernier vote de l'Assemblée sur l'ensemble est le scrutin décisif (règle 9) ; le vote de 1re lecture est affiché, pas compté. Aucun amendement clé : aucune suppression d'article n'a été mise aux voix, à aucune lecture (règle 11). Les votes sur les articles 1er et 2 (1re lecture) ne sont pas retenus. Aucune motion de rejet. Les propriétaires et chasseurs qui contestent le texte l'ont fait devant le juge, mais aucune critique du droit étendu n'a été trouvée parmi les sources admises (règle 7).",
+      "sources": {
+        "cc-2024-1109": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2024-1109 QPC du 18 octobre 2024, Groupement forestier Forêt de Teillay et autres (règles relatives à l'implantation de clôtures dans les espaces naturels)",
+          "date": "2024-10-18",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2024/20241109QPC.htm"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V891",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 2e lecture, adoption définitive (98-2)"
+        },
+        {
+          "id": "VTANR5L16V228",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (90-0)"
+        }
+      ]
+    },
+    {
       "id": "execution-peines-ferme-2025",
       "dossier_an": "DLR5L17N50631",
       "legislature": 17,
@@ -1941,6 +1998,65 @@
       ]
     },
     {
+      "id": "financement-audiovisuel-public-lo-2024",
+      "dossier_an": "DLR5L17N50168",
+      "legislature": 17,
+      "titre": "Loi organique portant réforme du financement de l'audiovisuel public",
+      "resume": "Proposition de loi organique d'origine sénatoriale, adoptée par le Sénat le 23 octobre 2024, puis sans modification par l'Assemblée le 20 novembre 2024 : loi organique n° 2024-1177 du 13 décembre 2024. Son article unique modifie la loi organique relative aux lois de finances (LOLF). Il permet d'affecter directement un montant déterminé d'une imposition aux organismes de l'audiovisuel public (France Télévisions, Radio France, France Médias Monde, Arte-France, TV5 Monde, INA). Le financement par une fraction de la TVA, mis en place en 2022 à la place de la redevance, devait prendre fin le 31 décembre 2024, faute de base dans la LOLF. Ce texte le rend durable. Le montant reste fixé chaque année par la loi de finances.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "cc-2024-873",
+            "rsf-2024-10-22",
+            "rsf-2022-07-28"
+          ],
+          "justification": "Sans ce texte, l'audiovisuel public aurait été financé à partir de 2025 par des crédits du budget de l'État. Le Conseil constitutionnel rappelle que « la garantie des ressources du secteur de l'audiovisuel public constitue un élément de son indépendance, laquelle concourt à la mise en œuvre de la liberté de communication ». Pour Reporters sans frontières, le texte « se soustrait aux risques d'un financement via des crédits budgétaires alloués par l'État ». En 2022, RSF jugeait déjà qu'une taxe affectée préserve « l'indépendance des chaînes publiques »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Pour Reporters sans frontières, le texte « ne remplit pas pleinement les conditions de garanties d'indépendance de l'audiovisuel public » : le montant affecté « serait rediscuté chaque année » dans la loi de finances, sans perspective pluriannuelle. RSF demande un mécanisme « durable, stable et prévisible ».",
+          "sources": [
+            "rsf-2024-10-22"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2024-873 DC du 12 décembre 2024, conformité totale (saisine obligatoire d'une loi organique). Le Conseil juge qu'aucun principe constitutionnel n'interdit d'affecter le produit d'une imposition à une personne chargée d'une mission de service public. Il était donc loisible au législateur organique de permettre cette affectation à l'audiovisuel public, « à raison des missions de service public qui leur sont confiées ».",
+      "note": "Scrutin décisif : le vote sur l'ensemble du 20 novembre 2024 (V451, 119-6), seul vote de l'Assemblée sur l'ensemble, qui vaut adoption définitive du texte du Sénat (règle 9). Aucun amendement clé (règle 11) : les cinq amendements mis aux voix (une rédaction globale de l'article et quatre articles additionnels, tous rejetés) ne suppriment ni ne rétablissent aucun article.",
+      "sources": {
+        "cc-2024-873": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2024-873 DC",
+          "date": "2024-12-12",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2024/2024873DC.htm"
+        },
+        "rsf-2022-07-28": {
+          "auteur": "Reporters sans frontières",
+          "titre": "Financement de l'audiovisuel public en France : la majorité parlementaire doit mettre fin à une logique de bricolage",
+          "date": "2022-07-28",
+          "url": "https://rsf.org/fr/financement-de-l-audiovisuel-public-en-france-la-majorit%C3%A9-parlementaire-doit-mettre-fin-%C3%A0-une"
+        },
+        "rsf-2024-10-22": {
+          "auteur": "Reporters sans frontières",
+          "titre": "Financement de l'audiovisuel public en France : RSF déplore une discussion législative dictée par l'urgence",
+          "date": "2024-10-22",
+          "url": "https://rsf.org/fr/financement-de-l-audiovisuel-public-en-france-rsf-d%C3%A9plore-une-discussion-l%C3%A9gislative-dict%C3%A9e-par-l"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V451",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, adoption définitive (119-6)"
+        }
+      ]
+    },
+    {
       "id": "fraudes-sociales-fiscales-2026",
       "dossier_an": "DLR5L17N52985",
       "legislature": 17,
@@ -2200,6 +2316,58 @@
           "role": "motion",
           "pour": "contre-texte",
           "objet": "motion de rejet préalable, 1re lecture (43-86)"
+        }
+      ]
+    },
+    {
+      "id": "ineligibilite-violences-aggravees-2023",
+      "dossier_an": "DLR5L16N47056",
+      "legislature": 16,
+      "titre": "Proposition de loi visant à étendre le champ d'application de la peine complémentaire obligatoire d'inéligibilité aux cas de condamnation pour des violences aggravées",
+      "resume": "Proposition de loi du groupe Renaissance (Aurore Bergé), examinée le 7 mars 2023 et rejetée. Depuis 2017, le juge pénal doit prononcer une peine d'inéligibilité contre l'auteur d'un crime ou de certains délits, sauf à l'écarter par une décision spécialement motivée (article 131-26-2 du code pénal). Le texte ajoutait à cette liste les violences aggravées n'ayant entraîné aucune incapacité de travail ou une incapacité de huit jours au plus (article 222-13). Ce sont 23 circonstances aggravantes, dont les violences sur conjoint, sur mineur, racistes ou sexistes. Un amendement adopté y ajoutait la diffusion d'images pédopornographiques. L'Assemblée a rejeté l'article unique, et donc le texte (113-140).",
+      "droits": [
+        {
+          "code": "citoyennete",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cc-2017-752-dc",
+            "cc-2025-1129-qpc"
+          ],
+          "justification": "Le texte étend à de nouveaux délits une peine d'inéligibilité que le juge doit prononcer, sauf décision spécialement motivée. Il étend donc les cas où une personne condamnée perd son droit d'être élue. Le Conseil constitutionnel rappelle que le législateur « ne saurait priver un citoyen du droit d'éligibilité dont il jouit en vertu de l'article 6 de la Déclaration de 1789 que dans la mesure nécessaire » au respect de l'égalité devant le suffrage et à la liberté de l'électeur. En 2017, il a validé cette peine obligatoire, sous réserve, pour les crimes et pour des délits « d'une particulière gravité » ou touchant à la probité. Il a censuré son extension à certains délits de presse."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Le Conseil constitutionnel juge qu'en instituant cette peine obligatoire, le législateur a entendu « renforcer l'exigence de probité et d'exemplarité des élus et la confiance des électeurs dans leurs représentants ». Il l'a validée parce que le juge doit la prononcer expressément, en module la durée et peut l'écarter.",
+          "sources": [
+            "cc-2017-752-dc"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision sur ce texte, qui n'a pas été adopté. Sur la mesure qu'il étendait, la décision 2017-752 DC du 8 septembre 2017 juge conforme la peine complémentaire obligatoire d'inéligibilité de l'article 131-26-2 du code pénal. Elle pose une réserve : cette peine n'emporte pas de plein droit l'interdiction d'exercer une fonction publique pour les délits. Elle censure l'inéligibilité obligatoire pour certains délits de presse, atteinte disproportionnée à la liberté d'expression.",
+      "note": "Scrutin décisif : le vote sur l'article unique (07/03/2023, V1128, 113-140), rejeté. Le texte n'a pas fait l'objet d'un vote sur l'ensemble : le rejet de l'article unique emporte celui du texte, et ce vote tient lieu de scrutin décisif (règle 9). Voter pour, c'est voter pour le texte. Ni motion de rejet ni amendement clé : les deux amendements mis aux voix (réécriture de l'article, V1126 ; ajout de la pédopornographie, V1127) ne sont pas des suppressions. Le texte avait été écarté au lot 3, hors de la grille v0. La grille v1 couvre l'éligibilité (règle 2).",
+      "sources": {
+        "cc-2017-752-dc": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2017-752 DC du 8 septembre 2017 (loi pour la confiance dans la vie politique)",
+          "date": "2017-09-08",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2017/2017752DC.htm"
+        },
+        "cc-2025-1129-qpc": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2025-1129 QPC du 28 mars 2025 (démission d'office d'un conseiller municipal condamné à une peine d'inéligibilité assortie de l'exécution provisoire)",
+          "date": "2025-03-28",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2025/20251129QPC.htm"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V1128",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "article unique, valant vote sur l'ensemble, 1re lecture, rejeté (113-140)"
         }
       ]
     },
@@ -2922,6 +3090,104 @@
       ]
     },
     {
+      "id": "lfr-2022-08",
+      "dossier_an": "DLR5L16N45943",
+      "legislature": 16,
+      "titre": "Loi de finances rectificative pour 2022",
+      "resume": "Projet de loi du Gouvernement, adopté en août 2022 avec la loi portant mesures d'urgence pour la protection du pouvoir d'achat : loi n° 2022-1157 du 16 août 2022. Il supprime la contribution à l'audiovisuel public (redevance) dès 2022. À la place, l'audiovisuel public reçoit une fraction de la TVA, d'un montant fixé chaque année par la loi de finances, jusqu'au 31 décembre 2024. Le Gouvernement proposait des crédits du budget de l'État ; les députés ont choisi la TVA. Le texte permet aussi aux salariés du privé, à leur demande et avec l'accord de l'employeur, de convertir leurs jours de RTT en salaire majoré, exonéré d'impôt et de cotisations, et relève à 7 500 € le plafond de défiscalisation des heures supplémentaires pour 2022. Il ouvre les crédits du bouclier tarifaire sur l'énergie et de la remise sur les carburants, de la hausse de 3,5 % du point d'indice et de l'aide exceptionnelle de rentrée, ainsi que des crédits pour l'accueil des réfugiés d'Ukraine.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "rsf-2022-07-28",
+            "cgt-spectacle-2022-08-09",
+            "cc-2022-842"
+          ],
+          "justification": "Le texte supprime la redevance, ressource propre de l'audiovisuel public. Pour le Conseil constitutionnel, en supprimant la contribution, ces dispositions « sont susceptibles d'affecter la garantie des ressources du secteur de l'audiovisuel public qui constitue un élément de son indépendance, laquelle concourt à la mise en œuvre de la liberté de communication ». Il ne les valide que sous réserve. Pour Reporters sans frontières, « supprimer la principale source de financement des médias publics sans proposer une solution digne de leur rôle dans notre démocratie relève d'une logique de bricolage » ; l'enjeu est « l'indépendance et le pluralisme de l'information ». La CGT Spectacle y voit « une loi qui porte manifestement atteinte au principe constitutionnel de devoir assurer la sécurité du financement de l'audiovisuel public et donc à son indépendance »."
+        },
+        {
+          "code": "travail-protection-sociale",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cgt-2022-07-25"
+          ],
+          "justification": "Le texte permet de convertir des jours de repos acquis au titre de la réduction du temps de travail en salaire, par dérogation au code du travail et aux accords collectifs. Pour la CGT, ce « rachat de JRTT » remet au goût du jour « travailler plus pour gagner plus », « un leurre dont le seul but est de faire travailler plus longtemps »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Reporters sans frontières jugeait le choix des députés (une fraction de TVA) préférable au projet du Gouvernement (des crédits du budget de l'État) : la taxe affectée isole « les ressources allouées à l'audiovisuel public du budget de l'État », ce qui préserve « l'indépendance des chaînes publiques ». Elle la jugeait toutefois « transitoire, donc insuffisante », faute de pouvoir durer au-delà de 2024.",
+          "sources": [
+            "rsf-2022-07-28"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2022-842 DC du 12 août 2022, conformité avec réserves. Le Conseil écarte le grief d'insincérité et juge que le rachat de jours de RTT (article 5) a sa place en loi de finances. Il juge conforme la suppression de la contribution à l'audiovisuel public (article 6). Il émet une réserve : dans les lois de finances pour 2023 et 2024, puis après le 31 décembre 2024, le législateur devra fixer les recettes de l'audiovisuel public de façon qu'il puisse exercer ses missions de service public. Il écarte aussi le principe fondamental, invoqué par les députés requérants, d'un financement par une redevance. Il ne s'est prononcé sur aucune autre disposition.",
+      "note": "Texte composite (règle 4). Le droit principal est celui de la mesure que les sources admises citent le plus, la suppression de la redevance (`libertes`, indépendance et pluralisme de l'audiovisuel public). La conversion des jours de RTT en salaire est retenue en secondaire. Le scrutin décisif est le vote sur le texte de la CMP, le 4 août 2022, dernier vote de l'Assemblée sur l'ensemble (règle 9). Le vote de 1re lecture et la motion de rejet préalable sont affichés, pas comptés (règle 10). Un amendement clé : la 1re lecture est la seule lecture de l'Assemblée où des suppressions ont été mises aux voix (règle 11). L'amendement de suppression de l'article premier (V92), qui supprimait la redevance, est retenu : voter pour, c'est maintenir la redevance, donc voter contre le texte. Le vote sur l'article premier lui-même (V101) est affiché, pas compté. La conversion des jours de RTT a été insérée par un amendement portant article additionnel (V85, 154-55), qui n'est ni une suppression ni un rétablissement. L'autre amendement de suppression mis aux voix (article 4, ratification d'un décret sur la rémunération de services rendus, V116) porte sur une mesure qu'aucune source ne met en cause.",
+      "sources": {
+        "cc-2022-842": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2022-842 DC",
+          "date": "2022-08-12",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2022/2022842DC.htm"
+        },
+        "cgt-2022-07-25": {
+          "auteur": "CGT",
+          "titre": "L'augmentation des salaires, c'est bon pour le pouvoir d'achat (communiqué)",
+          "date": "2022-07-25",
+          "url": "https://www.fnte.cgt.fr/sites/default/files/2022-07/2022%2007%2026%20-%20CONFEDERATION%20-%20COMMUNIQUE%20DE%20PRESSE%20-%20POUVOIR%20D%27ACHAT.pdf"
+        },
+        "cgt-spectacle-2022-08-09": {
+          "auteur": "CGT Spectacle (FNSAC-CGT)",
+          "titre": "La redevance est supprimée mais rien n'est réglé… (communiqué)",
+          "date": "2022-08-09",
+          "url": "https://snjcgt.fr/2022/08/09/la-redevance-est-supprimee-mais-rien-nest-regle/"
+        },
+        "rsf-2022-07-28": {
+          "auteur": "Reporters sans frontières",
+          "titre": "Financement de l'audiovisuel public en France : la majorité parlementaire doit mettre fin à une logique de bricolage",
+          "date": "2022-07-28",
+          "url": "https://rsf.org/fr/financement-de-l-audiovisuel-public-en-france-la-majorit%C3%A9-parlementaire-doit-mettre-fin-%C3%A0-une"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V191",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (292-120)"
+        },
+        {
+          "id": "VTANR5L16V180",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (293-146)"
+        },
+        {
+          "id": "VTANR5L16V190",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (75-254)"
+        },
+        {
+          "id": "VTANR5L16V101",
+          "role": "article",
+          "pour": "texte",
+          "objet": "article premier (suppression de la contribution à l'audiovisuel public), 1re lecture (170-57)"
+        },
+        {
+          "id": "VTANR5L16V92",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article premier (maintien de la contribution à l'audiovisuel public), 1re lecture, rejetée (63-156)"
+        }
+      ]
+    },
+    {
       "id": "loi-orientation-agricole-2025",
       "dossier_an": "DLR5L16N49726",
       "legislature": 16,
@@ -3469,6 +3735,76 @@
       ]
     },
     {
+      "id": "montagne-vivante-2026",
+      "dossier_an": "DLR5L17N54006",
+      "legislature": 17,
+      "titre": "Loi pour une montagne vivante et souveraine",
+      "resume": "La loi adapte aux zones de montagne plusieurs politiques publiques : seuils d'ouverture et de fermeture de classes, accès aux soins dans le projet régional de santé, commission « montagne » dans les intercommunalités, bornes de recharge, abattoirs et services vétérinaires. Elle assigne à l'État une politique de stockage de l'eau pour des usages qu'elle énumère, du pastoralisme à la neige de culture. En urbanisme, elle assouplit le principe de continuité de l'urbanisation en montagne (continuité avec tout groupe de constructions, prise en compte des coupures physiques). Elle permet au schéma de cohérence territoriale d'écarter la loi Littoral dans des secteurs des communes de montagne riveraines d'un lac de plus de 1 000 hectares, hors de la bande des cent mètres. Elle autorise la reconstruction de chalets d'alpage en ruine et reporte de 2027 à 2030, en Corse, l'interdiction d'étendre l'urbanisation dans les communes sans document d'urbanisme.",
+      "droits": [
+        {
+          "code": "environnement",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "fne-cc-2026-912",
+            "cc-2026-912"
+          ],
+          "justification": "Le texte allège deux protections des espaces de montagne et de bord de lac. Dans les communes de montagne riveraines d'un grand lac, le schéma de cohérence territoriale peut désormais écarter la loi Littoral dans certains secteurs. France Nature Environnement juge ces garanties « insuffisantes pour prévenir des atteintes substantielles au droit à un environnement équilibré » : le choix des secteurs n'obéit à aucune règle de préservation des espaces naturels, agricoles et forestiers. L'association critique aussi la continuité de l'urbanisation admise avec des « groupes de constructions » de toute nature. Le Conseil constitutionnel constate que ces règles de continuité, « qui étendent les possibilités d'urbanisation dans les zones de montagne, sont susceptibles de porter atteinte à l'environnement », avant de les juger justifiées par un motif d'intérêt général."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Le Conseil constitutionnel a validé les deux mesures. La dérogation à la loi Littoral est limitée à des secteurs fixés par le schéma de cohérence territoriale, hors de la bande des cent mètres, et ces secteurs restent soumis aux règles de protection de la montagne. Les coupures physiques ne permettent de construire qu'à proximité de l'urbanisation existante, au-delà d'une coupure « de faible importance ».",
+          "sources": [
+            "cc-2026-912"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2026-912 DC du 14 août 2026, conformité sans réserve. Saisi par des députés, le Conseil a validé la politique de stockage de l'eau (article 5), l'assouplissement de la continuité de l'urbanisation en montagne (article 7), la dérogation à la loi Littoral dans les communes de montagne riveraines d'un grand lac (article 8) et la procédure d'adoption du report en Corse (article 10). Il relève que l'article 7 est « susceptible de porter atteinte à l'environnement », mais le juge justifié et encadré. Il ne s'est pas prononcé sur les autres dispositions.",
+      "note": "Le scrutin décisif est le vote du texte de la CMP le 20 juillet 2026, dernier vote de l'Assemblée sur l'ensemble (règle 9). La 1re lecture (13 mai 2026) est la seule lecture de l'Assemblée où des suppressions ont été mises aux voix (règle 11). Aucun amendement clé. La suppression de l'article 6 (V6605, 15-42) visait la continuité de l'urbanisation, mais dans une rédaction antérieure : l'article ne portait alors que sur les coupures physiques, et la continuité avec tout groupe de constructions, critiquée par France Nature Environnement, n'a été ajoutée qu'au Sénat. Le Conseil constitutionnel décrit la mesure pour la valider, ce qui ne suffit pas. Écartées faute de source admise qui mette en cause la mesure : les suppressions de l'article 4 (stockage de l'eau, V6586) et de l'article 6 bis (chalets d'alpage, V6620). Écartée aussi la suppression de l'article 7 bis (abattoirs, V6629), absent du texte soumis au scrutin décisif. La dérogation à la loi Littoral, introduite au Sénat, n'a fait l'objet d'aucun vote de suppression à l'Assemblée. Les deux motions de rejet sont affichées, pas comptées (règle 10).",
+      "sources": {
+        "cc-2026-912": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2026-912 DC du 14 août 2026, loi pour une montagne vivante et souveraine",
+          "date": "2026-08-14",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2026/2026912DC.htm"
+        },
+        "fne-cc-2026-912": {
+          "auteur": "France Nature Environnement",
+          "titre": "Contribution extérieure relative à la loi pour une montagne vivante et souveraine (décision n° 2026-912 DC)",
+          "date": "2026-07-27",
+          "url": "https://www.conseil-constitutionnel.fr/sites/default/files/as/root/bank_mm/decisions/2026912dc/2026912dc_contrib.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V8421",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (376-92)"
+        },
+        {
+          "id": "VTANR5L17V6645",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (42-11)"
+        },
+        {
+          "id": "VTANR5L17V6573",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture, rejetée (17-79)"
+        },
+        {
+          "id": "VTANR5L17V8420",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, texte de la CMP, rejetée (42-198)"
+        }
+      ]
+    },
+    {
       "id": "moratoire-megabassines-ppl-2023",
       "dossier_an": "DLR5L16N48755",
       "legislature": 16,
@@ -3517,6 +3853,51 @@
           "role": "decisif",
           "pour": "contre-texte",
           "objet": "suppression de l'article unique, valant rejet du texte, 1re lecture, adoptée, puis texte retiré (156-104)"
+        }
+      ]
+    },
+    {
+      "id": "mortalite-infantile-ppl-2025",
+      "dossier_an": "DLR5L17N51849",
+      "legislature": 17,
+      "titre": "Proposition de loi visant à lutter contre la mortalité infantile (non promulguée)",
+      "resume": "Proposition de loi du groupe LIOT (Paul-André Colombani), adoptée en 1re lecture par l'Assemblée nationale le 15 mai 2025 et transmise au Sénat. Elle crée un registre national des naissances dans le système national des données de santé. Pendant trois ans, aucune autorisation d'activité d'obstétrique ne peut être retirée ou remise en cause, « sauf en cas de danger pour la sécurité des patients », le temps que les agences régionales de santé dressent un état des lieux des maternités pratiquant moins de mille accouchements par an. Les établissements autorisés en gynécologie-obstétrique doivent garantir une formation continue aux gestes d'urgence obstétrique, suivie aussi par les sages-femmes libérales. Le texte demande enfin plusieurs rapports au Gouvernement, dont un sur la mortalité infantile outre-mer.",
+      "droits": [
+        {
+          "code": "sante",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cngof-2025-05",
+            "societes-savantes-2025-06"
+          ],
+          "justification": "Les sociétés savantes de la périnatalité jugent que le moratoire sur les fermetures de maternités, mesure centrale du texte, dégrade la sécurité des femmes et des nouveau-nés. Pour le Collège national des gynécologues et obstétriciens français (CNGOF), maintenir « coûte que coûte » toutes les maternités « participe […] à la poursuite de la dégradation de la qualité des soins ». Sept sociétés et collèges de périnatalité dénoncent ensuite un moratoire « qui ne peut qu'aggraver la mortalité infantile », imposé « y compris » dans des maternités où la sécurité des femmes et des nouveau-nés « n'est pas assurée »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "Pas de décision : texte non adopté définitivement.",
+      "note": "Le scrutin décisif est le vote sur l'ensemble en 1re lecture, le 15 mai 2025 (V1723), seul vote de l'AN sur l'ensemble (règle 9). Le sens retenu est celui du moratoire, la mesure que les sources admises citent (règle 4, texte composite). Le registre des naissances et la formation aux urgences obstétricales n'ont été commentés par aucune source admise. Aucun amendement clé (règle 11) : aucun article n'a fait l'objet d'un amendement de suppression ou de rétablissement mis aux voix. Le moratoire, supprimé en commission, a été réintroduit par un amendement qui réécrivait une partie de l'article 2 (V1719), et non l'article entier. Les votes sur les articles 1er et 3 (V1718, V1722) ne sont pas des amendements. Aucune source admise trouvée qui soutienne le moratoire au nom de l'accès aux soins.",
+      "sources": {
+        "cngof-2025-05": {
+          "auteur": "Collège national des gynécologues et obstétriciens français (CNGOF)",
+          "titre": "Communiqué de presse - Projet de loi Colombani",
+          "date": "2025-05-19",
+          "url": "https://cngof.fr/app/uploads/2025/11/25-05-19-CommuniqueCC8120CNGOF-Colombani.pdf"
+        },
+        "societes-savantes-2025-06": {
+          "auteur": "Société française de médecine périnatale (SFMP) et CNGOF, avec le CARO, la FFRSP, la SFAR, la SFN et la SFP",
+          "titre": "Indignés par le vote d'un moratoire qui ne peut qu'aggraver la mortalité infantile, nous appelons le Sénat à amender le texte des députés (communiqué de presse collectif)",
+          "date": "2025-06-17",
+          "url": "https://cngof.fr/app/uploads/2025/06/25-06-17CPSocietessavantes_Moratoire-compresse.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V1723",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (97-4)"
         }
       ]
     },
@@ -3942,6 +4323,95 @@
           "role": "decisif",
           "pour": "texte",
           "objet": "ensemble, 2e lecture, adoption définitive (206-181)"
+        }
+      ]
+    },
+    {
+      "id": "partage-valeur-2023",
+      "dossier_an": "DLR5L16N47979",
+      "legislature": 16,
+      "titre": "Loi portant transposition de l'accord national interprofessionnel relatif au partage de la valeur au sein de l'entreprise",
+      "resume": "Projet de loi du Gouvernement qui transpose l'accord national interprofessionnel (ANI) du 10 février 2023, signé par la CFDT, FO, la CFE-CGC et la CFTC, mais pas par la CGT. Il oblige à titre expérimental, pour cinq ans, les entreprises d'au moins onze salariés qui réalisent un bénéfice d'au moins 1 % de leur chiffre d'affaires pendant trois ans à mettre en place un dispositif de partage de la valeur (participation, intéressement, abondement d'un plan d'épargne salariale ou prime de partage de la valeur), pour les exercices ouverts après le 31 décembre 2024. Il facilite la participation dans les entreprises de moins de cinquante salariés, impose de négocier sur le partage d'une augmentation exceptionnelle du bénéfice, permet de verser deux primes de partage de la valeur par an et en prolonge jusqu'à fin 2026 l'exonération fiscale dans les petites entreprises. Il crée une prime de partage de la valorisation de l'entreprise, développe l'actionnariat salarié et impose aux branches de réexaminer leurs classifications au regard de l'égalité professionnelle entre les femmes et les hommes.",
+      "droits": [
+        {
+          "code": "travail-protection-sociale",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "cfdt-2023-12-01",
+            "fo-2023-02-22",
+            "ce-avis-407057"
+          ],
+          "justification": "Le texte crée pour les salariés des petites et moyennes entreprises un accès aux dispositifs de partage de la valeur, jusque-là facultatifs sous cinquante salariés. La CFDT, signataire, y voit « une avancée notable notamment pour les salariés des petites et moyennes entreprises qui bénéficient aujourd'hui très peu de ces dispositifs ». FO, signataire de l'accord, considère qu'il « comporte quelques avancées, notamment, au bénéfice des salariés des petites et moyennes entreprises (moins de 50 salariés) ». Le Conseil d'État relève que, « afin de protéger les droits des salariés », une entreprise qui applique déjà un régime de participation ne peut basculer vers le régime dérogatoire que par accord d'entreprise."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "La CGT, qui n'a pas signé l'accord, juge que le texte, « comme l'accord interprofessionnel », « fait la part belle à l'épargne salariale (intéressement, participation, etc.) et à la prime dite de « partage de la valeur » (PPV) : des dispositifs aléatoires, conjoncturels, qui ne financent pas la Sécurité sociale et ne créent pas de droits à la retraite ». Elle demande à la place des hausses générales de salaire.",
+          "sources": [
+            "cgt-2023-06-29"
+          ]
+        },
+        {
+          "texte": "FO, signataire, rappelle qu'« en aucun cas les dispositifs dits de partage de la valeur (participation, intéressement, prime de partage de la valeur, etc.) ne doivent se substituer aux augmentations salariales ».",
+          "sources": [
+            "fo-2023-02-22"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Scrutin décisif : le vote de l'AN sur le texte de la CMP, le 22/11/2023, dernier vote sur l'ensemble (règle 9). Le vote de 1re lecture et les deux motions de rejet préalable sont affichés sans être comptés (règle 10). Le Conseil constitutionnel n'a pas été saisi. La 1re lecture est la seule lecture de l'AN où des suppressions ont été mises aux voix (règle 11). Aucun amendement clé. La suppression de l'article 6 (deux primes de partage de la valeur par an, exonération fiscale prolongée jusqu'à fin 2026), rejetée (V2073, 25-98), n'est pas retenue : les sources admises ne s'accordent pas sur le sens de ces primes pour les salariés (la CGT les met en cause, la CFDT et FO soutiennent le partage de la valeur), et un article au sens non univoque n'est pas un amendement clé (règle 11). Les votes sur les articles eux-mêmes ne sont pas retenus.",
+      "sources": {
+        "ce-avis-407057": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 407.057 sur le projet de loi portant transposition de l'accord national interprofessionnel relatif au partage de la valeur au sein de l'entreprise",
+          "date": "2023-05-17",
+          "url": "https://www.assemblee-nationale.fr/dyn/16/textes/l16b1272_avis-conseil-etat"
+        },
+        "cfdt-2023-12-01": {
+          "auteur": "CFDT",
+          "titre": "Loi de transposition de l'accord du partage de la valeur : le vrai travail commence maintenant ! (communiqué)",
+          "date": "2023-12-01",
+          "url": "https://www.cfdt.fr/sinformer/communiques-de-presse/loi-de-transposition-de-laccord-du-partage-de-la-valeur-le-vrai-travail-commence-maintenant"
+        },
+        "cgt-2023-06-29": {
+          "auteur": "CGT",
+          "titre": "Pour « partager la valeur », il faut des hausses générales de salaire (communiqué)",
+          "date": "2023-06-29",
+          "url": "https://www.cgt.fr/comm-de-presse/pour-partager-la-valeur-il-faut-des-hausses-generales-de-salaire"
+        },
+        "fo-2023-02-22": {
+          "auteur": "Force ouvrière (FO)",
+          "titre": "FO signe le projet d'ANI du 10 février 2023 sur le partage de la valeur (communiqué)",
+          "date": "2023-02-22",
+          "url": "https://www.force-ouvriere.fr/fo-signe-le-projet-d-ani-du-10-fevrier-2023-sur-le-partage-de-la"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V3009",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (158-36)"
+        },
+        {
+          "id": "VTANR5L16V2112",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (112-27)"
+        },
+        {
+          "id": "VTANR5L16V2001",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (32-74)"
+        },
+        {
+          "id": "VTANR5L16V3008",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (43-103)"
         }
       ]
     },
@@ -4392,6 +4862,63 @@
       ]
     },
     {
+      "id": "plui-bas-chablais-2023",
+      "dossier_an": "DLR5L16N46409",
+      "legislature": 16,
+      "titre": "Loi visant à régulariser le plan local d'urbanisme intercommunal de la communauté de communes du Bas-Chablais",
+      "resume": "La loi tient en un article. Elle fait prévaloir la mise en compatibilité des plans locaux d'urbanisme de plusieurs communes de Haute-Savoie, prévue par le décret du 24 décembre 2019 qui déclare d'utilité publique la liaison autoroutière entre Machilly et Thonon-les-Bains (A412), sur les dispositions contraires du plan local d'urbanisme intercommunal du Bas-Chablais. Ce plan, approuvé le 25 février 2020, ne tenait pas compte du projet. La loi lève ainsi un obstacle à la poursuite des travaux sans passer par une procédure de révision ou de mise en compatibilité du plan intercommunal.",
+      "droits": [
+        {
+          "code": "environnement",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "fne-cc-2023-852"
+          ],
+          "justification": "La loi intègre le tracé autoroutier au plan intercommunal sans la procédure ordinaire, qui comporte une enquête publique ou une mise à disposition du public. En 2021, l'autorité environnementale avait soumis à évaluation environnementale la modification du plan qui devait intégrer ce tracé. France Nature Environnement et FNE Haute-Savoie relèvent que la loi « écarte toute évaluation environnementale » du plan et prive le public de la faculté de présenter des observations. Selon elles, le législateur a ainsi « méconnu le principe de participation du public » de l'article 7 de la Charte de l'environnement."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Le Conseil constitutionnel a écarté ce grief. Selon lui, la loi n'a « ni pour objet ni pour effet de dispenser les travaux » de l'autoroute « du respect des règles et prescriptions protectrices de l'environnement » auxquelles ils sont soumis. Elle ne valide pas non plus le décret de 2019 et ne s'applique pas rétroactivement.",
+          "sources": [
+            "cc-2023-852"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2023-852 DC du 20 juillet 2023, conformité sans réserve. Le Conseil juge que la loi ne valide pas le décret du 24 décembre 2019 et ne modifie rien rétroactivement : le grief tiré des conditions des validations législatives est inopérant. Il écarte les griefs tirés de la Charte de l'environnement (articles 1er et 6), les travaux restant soumis aux règles de protection de l'environnement, ainsi que celui tiré de la libre administration des collectivités territoriales.",
+      "note": "Le texte, d'origine sénatoriale, a été adopté par le Sénat puis par l'Assemblée sans modification le 14 juin 2023. Le vote de l'Assemblée sur l'ensemble, en 1re lecture, est donc le scrutin décisif (règle 9). Aucun amendement n'a été mis aux voix : aucun amendement clé. La motion de rejet préalable est affichée, pas comptée (règle 10). Aucune critique du sens retenu n'a été trouvée parmi les sources admises en dehors de la décision du Conseil constitutionnel, affichée en vigilance.",
+      "sources": {
+        "cc-2023-852": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2023-852 DC du 20 juillet 2023, loi visant à régulariser le plan local d'urbanisme intercommunal de la communauté de communes du Bas-Chablais",
+          "date": "2023-07-20",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2023/2023852DC.htm"
+        },
+        "fne-cc-2023-852": {
+          "auteur": "France Nature Environnement et FNE Haute-Savoie",
+          "titre": "Observations sur la saisine n° 2023-852 DC « Loi visant à régulariser le plan local d'urbanisme intercommunal de la communauté de communes du Bas-Chablais » (contribution extérieure)",
+          "date": "2023-07-17",
+          "url": "https://www.conseil-constitutionnel.fr/sites/default/files/as/root/bank_mm/decisions/2023852dc/2023852dc_contributions.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V1811",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, adoption définitive (149-50)"
+        },
+        {
+          "id": "VTANR5L16V1810",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture, rejetée (52-126)"
+        }
+      ]
+    },
+    {
       "id": "pouvoir-achat-2022",
       "dossier_an": "DLR5L16N45942",
       "legislature": 16,
@@ -4706,6 +5233,57 @@
       ]
     },
     {
+      "id": "purge-nullites-2024",
+      "dossier_an": "DLR5L16N50082",
+      "legislature": 16,
+      "titre": "Loi visant à sécuriser le mécanisme de purge des nullités",
+      "resume": "Proposition de loi sénatoriale (François-Noël Buffet, Philippe Bonnecarrère), adoptée par le Sénat le 17 octobre 2024, puis sans modification par l'Assemblée le 20 novembre 2024 : loi n° 2024-1061 du 26 novembre 2024. En fin d'instruction, la décision de renvoi devant la juridiction de jugement « purge » la procédure : on ne peut plus y soulever les nullités antérieures. Le texte ajoute une exception pour les nullités que les parties n'auraient pu connaître, devant le tribunal de police, le tribunal correctionnel, la cour d'assises et la cour criminelle départementale. En matière correctionnelle, il rétablit aussi la purge, abrogée le 1er octobre 2024 par le Conseil constitutionnel, avec cette exception. Il prive enfin de l'exception propre à l'ordonnance rendue sans respecter l'article 175 la partie dont la négligence ou la manœuvre a causé le défaut.",
+      "droits": [
+        {
+          "code": "police-justice",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cc-2023-1062-qpc"
+          ],
+          "justification": "Au jour du vote, la purge des nullités devant le tribunal correctionnel était abrogée depuis le 1er octobre 2024 : le Conseil constitutionnel avait jugé qu'elle méconnaissait « le droit à un recours juridictionnel effectif et les droits de la défense », faute d'exception pour les nullités inconnues avant la clôture de l'instruction. Le prévenu renvoyé devant ce tribunal pouvait donc y soulever toute nullité. Le texte rétablit la purge, avec cette exception, et prive d'une autre exception la partie dont la manœuvre ou la négligence a causé le défaut. Comme une loi qui met le code en conformité avec la jurisprudence en plafonnant ce qu'elle accordait (règle 4), il restreint les garanties de la défense en matière correctionnelle, de loin la plus fréquente."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "En matière criminelle et contraventionnelle, où la purge s'appliquait sans exception au jour du vote, le texte ajoute l'exception pour les nullités que les parties n'auraient pu connaître. Le Conseil constitutionnel a jugé, neuf jours après le vote, que l'absence de cette exception devant la cour d'assises méconnaissait les droits de la défense.",
+          "sources": [
+            "cc-2024-1114-qpc"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Le Conseil constitutionnel n'a pas été saisi de cette loi. Deux décisions portent sur la mesure. La décision 2023-1062 QPC du 28 septembre 2023 censure la purge des nullités devant le tribunal correctionnel, faute d'exception pour les nullités inconnues avant la clôture de l'instruction, et reporte l'abrogation au 1er octobre 2024. La décision 2024-1114 QPC du 29 novembre 2024 censure pour le même motif l'article 181 du code de procédure pénale (cour d'assises), dans sa rédaction antérieure à la loi.",
+      "note": "Scrutin décisif : le vote sur l'ensemble du 20/11/2024 (V452, 57-7), seul vote de l'Assemblée sur ce texte, qui l'a adopté conforme. Le dossier date de la XVIe législature, le vote de la XVIIe. Ni motion de rejet ni amendement clé : aucun amendement n'a été mis aux voix par scrutin public. Le texte touche les garanties de la défense dans deux sens. Il ajoute partout l'exception aux nullités inconnues. En matière correctionnelle, il rétablit la purge et pose une condition (ni manœuvre ni négligence) à une autre exception. Le sens se lit par rapport au droit applicable au jour du vote, jurisprudence comprise (règle 4) : la purge correctionnelle était alors abrogée par le Conseil constitutionnel, et la rétablir restreint les garanties de la défense, comme une loi qui plafonne ce que la jurisprudence accordait. L'exception ajoutée en matière criminelle et contraventionnelle figure en vigilance.",
+      "sources": {
+        "cc-2023-1062-qpc": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2023-1062 QPC du 28 septembre 2023 (purge des nullités en matière correctionnelle)",
+          "date": "2023-09-28",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2023/20231062QPC.htm"
+        },
+        "cc-2024-1114-qpc": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2024-1114 QPC du 29 novembre 2024 (purge des nullités devant la cour d'assises)",
+          "date": "2024-11-29",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2024/20241114QPC.htm"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V452",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, adoption sans modification du texte du Sénat (57-7)"
+        }
+      ]
+    },
+    {
       "id": "rapports-locatifs-2025",
       "dossier_an": "DLR5L17N53069",
       "legislature": 17,
@@ -4758,6 +5336,68 @@
           "role": "decisif",
           "pour": "texte",
           "objet": "ensemble, 1re lecture (105-56)"
+        }
+      ]
+    },
+    {
+      "id": "ratios-soignants-2025",
+      "dossier_an": "DLR5L16N46650",
+      "legislature": 17,
+      "titre": "Loi relative à l'instauration d'un nombre minimum de soignants par patient hospitalisé",
+      "resume": "Proposition de loi sénatoriale (Bernard Jomier, groupe socialiste), adoptée par le Sénat en 2023, puis par l'Assemblée nationale sans modification le 23 janvier 2025 (loi n° 2025-74 du 29 janvier 2025). Pour chaque spécialité et type d'activité de soins hospitaliers, un ratio minimal de soignants par lit ouvert, ou par nombre de passages en ambulatoire, est fixé par décret pris après avis de la Haute Autorité de santé, pour cinq ans au plus, « en vue de garantir la qualité des soins et des conditions d'exercice ». Dans les établissements du service public hospitalier, l'organisation des soins est soumise aux commissions médicales et de soins infirmiers, et le chef d'établissement informe l'agence régionale de santé quand une unité ne peut respecter les ratios plus de trois jours. Les ratios entrent en vigueur le 1er janvier 2027.",
+      "droits": [
+        {
+          "code": "sante",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "snpi-2025-05",
+            "snpi-2026-01"
+          ],
+          "justification": "Le texte fait d'un effectif minimal de soignants une condition de la qualité et de la sécurité des soins hospitaliers. Le Syndicat national des professionnels infirmiers (SNPI CFE-CGC) y voit une loi qui « fait entrer la dotation en soignants dans le champ des exigences de sécurité sanitaire » et rappelle que la surcharge des infirmières « condamne les patients à des séjours prolongés, des complications évitables et parfois, à la mort »."
+        },
+        {
+          "code": "travail-protection-sociale",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "snpi-2025-05"
+          ],
+          "justification": "Le ratio vise aussi les « conditions d'exercice » des soignants (art. L. 6124-3 du code de la santé publique). Pour le SNPI, la loi doit « améliorer la sécurité des soins et les conditions de travail des soignants »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Le SNPI dénonçait en mai 2025 une loi restée « lettre morte » : quatre mois après sa promulgation, la Haute Autorité de santé, chargée de préparer les ratios, « n'a toujours pas été saisie par le ministère de la Santé ». En janvier 2026, il prévenait que « les ratios ne peuvent être imposés de manière descendante sans perdre leur efficacité ».",
+          "sources": [
+            "snpi-2025-05",
+            "snpi-2026-01"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Aucune décision du Conseil constitutionnel trouvée sur cette loi.",
+      "note": "Proposition de loi déposée au Sénat sous la XVIe législature et votée par l'Assemblée sous la XVIIe. Le scrutin décisif est le vote sur l'ensemble du 23 janvier 2025 (V600), dernier et seul vote de l'Assemblée sur le texte, qui vaut adoption définitive (règle 9). Le vote sur l'article unique (V599) double ce scrutin et n'est pas retenu. Aucun amendement clé (règle 11) : les deux amendements mis aux voix (V597, V598) modifiaient l'article unique sans le supprimer, et la suppression d'un article unique doublerait de toute façon le décisif. Aucune critique du droit étendu trouvée parmi les sources admises.",
+      "sources": {
+        "snpi-2025-05": {
+          "auteur": "Syndicat national des professionnels infirmiers (SNPI CFE-CGC)",
+          "titre": "Ratios infirmiers : quatre mois après le vote, l'État freine l'application d'une loi vitale",
+          "date": "2025-05-21",
+          "url": "https://www.syndicat-infirmier.com/Ratios-infirmiers-quatre-mois-apres-le-vote-l-Etat-freine-l-application-d-une.html"
+        },
+        "snpi-2026-01": {
+          "auteur": "Syndicat national des professionnels infirmiers (SNPI CFE-CGC)",
+          "titre": "Mise en œuvre des ratios soignants par lit ouvert : contribution du SNPI",
+          "date": "2026-01-11",
+          "url": "https://www.syndicat-infirmier.com/Mise-en-oeuvre-des-ratios-soignants-par-lit-ouvert-contribution-du-SNPI.html"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V600",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture à l'AN, adoption définitive sans modification (138-3)"
         }
       ]
     },
@@ -6718,6 +7358,12 @@
       "motif": "Adopté sans aucune voix contre au scrutin décisif (114 pour, 0 contre) : ce vote ne départage aucun député."
     },
     {
+      "dossier_an": "DLR5L16N46185",
+      "legislature": 16,
+      "titre": "Proposition de loi relative à la charge fiscale de la pension alimentaire (non promulguée)",
+      "motif": "Déduction des pensions alimentaires reçues pour un enfant mineur du revenu fiscal de référence. Aucune source admise (règle 7) ne s'est prononcée sur le texte."
+    },
+    {
       "dossier_an": "DLR5L16N46187",
       "legislature": 16,
       "titre": "Lutte contre les abus et les fraudes au compte personnel de formation",
@@ -6826,6 +7472,12 @@
       "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit (règle 8)."
     },
     {
+      "dossier_an": "DLR5L16N46617",
+      "legislature": 16,
+      "titre": "Loi de finances rectificative pour 2022 (loi n° 2022-1499 du 1er décembre 2022)",
+      "motif": "Aucune source admise ne met une mesure de ce texte en cause ou en relation avec un droit de la grille (règles 7 et 8). Cette loi de finances rectificative de fin d'année ouvre et annule des crédits (chèque énergie exceptionnel, remise sur les carburants, énergie des universités, apprentissage) et porte quelques dispositions fiscales."
+    },
+    {
       "dossier_an": "DLR5L16N46645",
       "legislature": 16,
       "titre": "Moratoire sur l'exploitation minière des fonds marins",
@@ -6880,6 +7532,12 @@
       "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
     },
     {
+      "dossier_an": "DLR5L16N46767",
+      "legislature": 16,
+      "titre": "Loi visant à faciliter la mobilité internationale des alternants, pour un « Erasmus de l'apprentissage »",
+      "motif": "Règles de la mobilité à l'étranger des apprentis et des alternants. Aucune source admise (règle 7) ne s'est prononcée sur le texte."
+    },
+    {
       "dossier_an": "DLR5L16N46780",
       "legislature": 16,
       "titre": "Revivifier la représentation politique",
@@ -6896,6 +7554,12 @@
       "legislature": 16,
       "titre": "Approbation du premier amendement et du protocole à la convention d'Espoo",
       "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille."
+    },
+    {
+      "dossier_an": "DLR5L16N46858",
+      "legislature": 16,
+      "titre": "Proposition de loi visant à assurer un repas à un euro pour tous les étudiants",
+      "motif": "Aucune source admise ne met ce texte en relation avec un droit de la grille (règle 7). Il plafonnait à un euro, pour tous les étudiants, le prix de deux repas par jour dans les sites des Crous. Ni le Défenseur des droits, ni la CNCDH, ni les syndicats de l'enseignement ne l'ont analysé ; les seules réactions trouvées viennent de syndicats étudiants, qui ne figurent pas parmi les sources admises."
     },
     {
       "dossier_an": "DLR5L16N46864",
@@ -6940,10 +7604,22 @@
       "motif": "Adopté sans aucune voix contre au scrutin décisif (293 pour, 0 contre) : ce vote ne départage aucun député (règle 9)."
     },
     {
+      "dossier_an": "DLR5L16N46965",
+      "legislature": 16,
+      "titre": "Loi portant fusion des filières à responsabilité élargie des producteurs d'emballages ménagers et des producteurs de papier",
+      "motif": "Aucune source admise (règle 7) ne met en cause une mesure du texte au regard d'un droit de la grille. La loi fusionne deux filières de financement de la gestion des déchets et fixe les primes accordées aux producteurs qui diffusent une information sur le tri. Les critiques trouvées viennent d'associations de collectivités et portent sur le financement du service public des déchets."
+    },
+    {
       "dossier_an": "DLR5L16N46988",
       "legislature": 16,
       "titre": "Ratification de la résolution A.1152 (32) relative aux amendements à la Convention du 6 mars 1948 portant création de l’Organisation maritime internationale",
       "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L16N47006",
+      "legislature": 16,
+      "titre": "Loi visant à renforcer la prévention et la lutte contre l'intensification et l'extension du risque incendie",
+      "motif": "Aucune source admise (règle 7) ne met en cause une mesure de la loi au regard d'un droit de la grille. La loi organise la prévention des feux de forêt et de végétation : stratégie nationale, obligations légales de débroussaillement étendues aux territoires à risque, sanctions. Le seul avis trouvé, celui du Conseil national de la protection de la nature (2024), porte sur l'arrêté d'application."
     },
     {
       "dossier_an": "DLR5L16N47015",
@@ -6988,12 +7664,6 @@
       "motif": "Adopté sans aucune voix contre au scrutin décisif (195 pour, 0 contre) : ce vote ne départage aucun député."
     },
     {
-      "dossier_an": "DLR5L16N47056",
-      "legislature": 16,
-      "titre": "Proposition de loi visant à étendre le champ d'application de la peine complémentaire obligatoire d'inéligibilité aux cas de condamnation pour des violences aggravées (rejetée)",
-      "motif": "Hors grille (règle 2) : le texte porte sur l'éligibilité et la probité des élus, donc sur des droits civiques et politiques qui ne sont pas dans la grille v0. Aucune source admise ne s'est prononcée sur lui (règle 7)."
-    },
-    {
       "dossier_an": "DLR5L16N47073",
       "legislature": 16,
       "titre": "Faciliter le passage et l’obtention de l’examen du permis de conduire",
@@ -7034,6 +7704,12 @@
       "legislature": 16,
       "titre": "Mieux indemniser les dégâts sur les biens immobiliers causés par le retrait-gonflement de l’argile",
       "motif": "Indemnisation des dégâts dus au retrait-gonflement de l'argile : régime des catastrophes naturelles et assurance, hors de la grille des droits (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L16N47218",
+      "legislature": 16,
+      "titre": "Proposition de loi visant à mieux manger en soutenant les Français face à l'inflation et en favorisant l'accès à une alimentation saine",
+      "motif": "Aucune source admise ne met ce texte en relation avec un droit de la grille (règle 7). Au vote final, il ne contenait plus la prime alimentaire mensuelle de sa version initiale, mais un programme de l'État contre la précarité alimentaire, un encadrement des prix de certains produits alimentaires et des demandes de rapport. L'accès à l'alimentation et le contrôle des prix ne figurent pas, en tant que tels, dans la grille des droits."
     },
     {
       "dossier_an": "DLR5L16N47246",
@@ -7282,6 +7958,12 @@
       "motif": "Reconstruction des bâtiments dégradés lors des violences urbaines de 2023 : dérogations d'urbanisme et de procédure, hors de la grille des droits."
     },
     {
+      "dossier_an": "DLR5L16N48414",
+      "legislature": 16,
+      "titre": "Loi visant à adapter le droit de la responsabilité civile aux enjeux actuels",
+      "motif": "Aucune source admise ne met ce texte en relation avec un droit de la grille (règle 7). Il inscrit dans le code civil la responsabilité pour trouble anormal de voisinage, jusque-là jurisprudentielle, et son exception pour les activités antérieures à l'installation du voisin. C'est un litige de droit civil entre voisins."
+    },
+    {
       "dossier_an": "DLR5L16N48422",
       "legislature": 16,
       "titre": "Soutenir l’engagement bénévole et simplifier la vie associative",
@@ -7340,6 +8022,12 @@
       "legislature": 16,
       "titre": "Mesures d’urgence pour adapter les dispositions du code de commerce relatives aux négociations commerciales dans la grande distribution",
       "motif": "Négociations commerciales dans la grande distribution : droit commercial, hors de la grille des droits (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L16N48696",
+      "legislature": 16,
+      "titre": "Loi relative à l'ouverture à la concurrence du réseau de bus francilien de la RATP",
+      "motif": "Aucune source admise ne permet de fixer le sens de cette loi (règle 7). Elle aménage le transfert des salariés de la RATP lors de l'ouverture à la concurrence des bus franciliens, prévue par la loi d'orientation des mobilités de 2019. La seule analyse trouvée, d'une fédération syndicale, porte sur son décret d'application et y voit des mesures de sens opposé."
     },
     {
       "dossier_an": "DLR5L16N48701",
@@ -7786,6 +8474,12 @@
       "motif": "Résolution sur la situation des femmes en Iran : politique étrangère, hors de la grille des droits."
     },
     {
+      "dossier_an": "DLR5L17N50604",
+      "legislature": 17,
+      "titre": "Proposition de loi visant à la création d'un centre hospitalier universitaire en Corse (non promulguée)",
+      "motif": "Obligation d'un centre hospitalier universitaire dans chaque région, d'ici 2030. Aucune source admise (règle 7) ne s'est prononcée sur le texte."
+    },
+    {
       "dossier_an": "DLR5L17N50627",
       "legislature": 17,
       "titre": "Lutter contre la pédocriminalité",
@@ -7828,6 +8522,12 @@
       "motif": "Délais de réparation et pénalités des ascensoristes, stock de pièces, contrôle technique, répertoire des ascenseurs et assurance des accidents d'ascenseur : obligations techniques et contractuelles. Aucune source admise (règle 7) ne relie ces mesures à un droit de la grille, ni ne les met en cause."
     },
     {
+      "dossier_an": "DLR5L17N50778",
+      "legislature": 17,
+      "titre": "Proposition de loi visant à rendre accessible à tous les étudiants le repas à 1 euro",
+      "motif": "Aucune source admise ne met ce texte en relation avec un droit de la grille (règle 7). Il plafonnait à un euro, pour tous les étudiants, le prix de l'offre de restauration à tarif modéré des Crous. Ni le Défenseur des droits, ni la CNCDH, ni les syndicats de l'enseignement ne l'ont analysé ; les seules réactions trouvées viennent de syndicats étudiants, qui ne figurent pas parmi les sources admises."
+    },
+    {
       "dossier_an": "DLR5L17N50779",
       "legislature": 17,
       "titre": "Prendre des mesures d’urgence contre la vie chère et réguler la concentration des acteurs économiques dans les territoires d’outre-mer",
@@ -7850,6 +8550,12 @@
       "legislature": 17,
       "titre": "Proposition de loi relative à la restitution d'un bien culturel à la République de Côte d'Ivoire",
       "motif": "Adopté sans aucune voix contre au scrutin décisif (111 pour, 0 contre) : ce vote ne départage aucun député (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L17N50911",
+      "legislature": 17,
+      "titre": "Proposition de loi visant à restreindre la vente de protoxyde d'azote aux professionnels et à renforcer les actions de prévention des consommations détournées",
+      "motif": "Aucune source admise ne met ce texte en relation avec un droit de la grille (règle 7). Il interdit la vente et l'importation de protoxyde d'azote aux particuliers, sauf pour certains professionnels, et organise une veille sanitaire et des actions de prévention."
     },
     {
       "dossier_an": "DLR5L17N50915",
@@ -8446,6 +9152,12 @@
       "motif": "Loi de finances de fin de gestion : elle ne fait qu'ouvrir et annuler les crédits de l'année, sans disposition fiscale ni autre mesure touchant un droit de la grille (règle 8)."
     },
     {
+      "dossier_an": "DLR5L17N53159",
+      "legislature": 17,
+      "titre": "Proposition de loi visant à améliorer les moyens d'action de l'Agence de gestion et de recouvrement des avoirs saisis et confisqués et à faciliter l'exercice des missions d'expert judiciaire",
+      "motif": "Aucune source admise ne s'est prononcée sur ce texte ni sur ses mesures (règle 7). Il porte sur la gestion des biens saisis et l'exécution des peines de confiscation, et sur le paiement des experts de justice. Le Conseil constitutionnel a examiné la vente avant jugement des biens saisis au regard du droit de propriété, qui n'est pas dans la grille (règle 2)."
+    },
+    {
       "dossier_an": "DLR5L17N53171",
       "legislature": 17,
       "titre": "Expérimentation pour l’instauration d’un enseignement d’éducation à l’alimentation à l’école",
@@ -8528,6 +9240,12 @@
       "legislature": 17,
       "titre": "Motion de censure déposée en application de l'article 49, alinéa 2, de la Constitution par Mme Marine Le Pen et 57 de ses collègues",
       "motif": "Motion de censure de l'article 49, alinéa 2 : elle ne porte sur aucun texte, et seules les voix pour la censure y sont décomptées (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N53530",
+      "legislature": 17,
+      "titre": "Loi visant à relancer les investissements dans le secteur de l'hydroélectricité pour contribuer à la transition énergétique",
+      "motif": "Le texte change le régime juridique de l'hydroélectricité : les concessions de plus de 4 500 kilowatts sont résiliées et remplacées par un droit réel et une autorisation, et une partie des capacités d'EDF est ouverte à ses concurrents. C'est un choix d'organisation du secteur de l'énergie, hors de la grille (règle 2). Aucune source admise ne met en cause une garantie des personnes (information, participation du public, protection des milieux) dans ce texte."
     },
     {
       "dossier_an": "DLR5L17N53600",
@@ -8636,6 +9354,12 @@
       "legislature": 17,
       "titre": "Protéger les enfants et lutter contre les violences en milieu scolaire",
       "motif": "Adopté sans aucune voix contre au scrutin décisif (187 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N54229",
+      "legislature": 17,
+      "titre": "Proposition de loi visant à réformer les bourses sur critères sociaux et à lutter contre la précarité étudiante (non promulguée)",
+      "motif": "Revalorisation annuelle et versement sur douze mois des bourses de l'enseignement supérieur. Aucune source admise (règle 7) ne s'est prononcée sur le texte."
     },
     {
       "dossier_an": "DLR5L17N54373",
