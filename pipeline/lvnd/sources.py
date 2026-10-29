@@ -55,59 +55,82 @@ def lire_manifeste(raw: Path) -> dict:
     return json.loads(p.read_text()) if p.exists() else {}
 
 
-BLOC = 1 << 20
+BLOC = 1 << 18  # 256 Kio : au-delà, le serveur de l'AN coupe presque chaque requête par plage
+
+
+def _etat(cible: Path) -> tuple[Path, Path]:
+    """Fichier partiel et son état (`Last-Modified`, taille), qui permettent de reprendre d'un lancement à l'autre."""
+    return cible.with_name(cible.name + ".part"), cible.with_name(cible.name + ".part.json")
 
 
 def telecharger(client: httpx.Client, url: str, cible: Path, patience: int = 3600) -> str | None:
     """Télécharge `url` dans `cible` et renvoie son `Last-Modified`.
 
     Le serveur de l'AN (derrière un CDN) coupe souvent la connexion au milieu des gros dumps
-    (amendements, ~350 Mo), et une reprise d'un seul tenant (`Range: bytes=N-`) peut ensuite
-    renvoyer `206` sans aucun octet, plusieurs fois de suite. On télécharge donc d'abord d'un seul
-    flux, puis, en cas de coupure, par blocs de 1 Mio redemandés jusqu'à ce que le serveur les
-    serve. On abandonne après `patience` secondes sans progrès. `If-Range` garantit que le fichier
-    n'a pas changé entre-temps.
+    (amendements, ~350 Mo). Une requête par plage peut ensuite renvoyer `206` sans aucun octet, ou
+    s'interrompre en cours de route, plusieurs heures durant. On télécharge donc d'abord d'un seul
+    flux, puis, en cas de coupure, par plages de 256 Kio redemandées jusqu'à ce que le serveur les
+    serve. Chaque octet reçu est gardé, même si la plage s'interrompt. Le fichier partiel
+    (`<cible>.part`) survit à l'arrêt du processus : un nouveau lancement reprend là où le
+    précédent s'est arrêté, si le fichier distant n'a pas changé (même `Last-Modified`, même
+    taille). On abandonne après `patience` secondes sans aucun octet reçu. `If-Range` garantit que
+    le fichier n'a pas changé entre-temps.
     """
-    cible.unlink(missing_ok=True)
-    modifie, taille = None, None
-    try:
-        with client.stream("GET", url) as r:
-            r.raise_for_status()
-            modifie = r.headers.get("last-modified")
-            taille = int(r.headers["content-length"]) if "content-length" in r.headers else None
-            with cible.open("wb") as f:
-                for bloc in r.iter_bytes(BLOC):
-                    f.write(bloc)
-    except httpx.TransportError as e:
-        if taille is None or modifie is None:
-            raise
-        print(f"  coupure à {cible.stat().st_size:,} o ({type(e).__name__}) : suite par blocs", file=sys.stderr)
-    recu = cible.stat().st_size
-    if taille is None or recu == taille:
-        return modifie
-    progres, attente, palier = time.monotonic(), 5, recu
-    with cible.open("ab") as f:
-        while recu < taille:
-            try:
-                r = client.get(url, headers={"Range": f"bytes={recu}-{min(recu + BLOC, taille) - 1}",
-                                             "If-Range": modifie})
-                if r.status_code == 200:
-                    raise SystemExit(f"{url} a changé pendant le téléchargement : relancer")
+    part, etat = _etat(cible)
+    h = client.head(url)
+    h.raise_for_status()
+    modifie = h.headers.get("last-modified")
+    taille = int(h.headers["content-length"]) if "content-length" in h.headers else None
+    attendu = {"url": url, "last_modified": modifie, "taille": taille}
+    if part.exists() and etat.exists() and json.loads(etat.read_text()) == attendu and modifie and taille:
+        recu = part.stat().st_size
+        print(f"  reprise à {recu:,} / {taille:,} o", file=sys.stderr)
+    else:
+        part.unlink(missing_ok=True)
+        etat.write_text(json.dumps(attendu))
+        recu = 0
+        try:
+            with client.stream("GET", url) as r, part.open("wb") as f:
                 r.raise_for_status()
-                if r.content:
-                    f.write(r.content)
-                    recu += len(r.content)
-                    progres, attente = time.monotonic(), 5
-                    if recu - palier >= 20 * BLOC or recu == taille:
-                        print(f"  {recu:,} / {taille:,} o", file=sys.stderr)
-                        palier = recu
-                    continue
-            except httpx.TransportError:
+                for morceau in r.iter_bytes():  # sans tampon : une coupure ne perd rien
+                    f.write(morceau)
+        except httpx.TransportError as e:
+            if taille is None or modifie is None:
+                raise
+            print(f"  coupure à {part.stat().st_size:,} o ({type(e).__name__}) : suite par plages", file=sys.stderr)
+        recu = part.stat().st_size
+    progres, attente, palier = time.monotonic(), 5, recu
+    with part.open("ab") as f:
+        while taille is not None and recu < taille:
+            fin = min(recu + BLOC, taille) - 1
+            try:
+                with client.stream("GET", url, headers={"Range": f"bytes={recu}-{fin}", "If-Range": modifie}) as r:
+                    if r.status_code == 200:
+                        raise SystemExit(f"{url} a changé pendant le téléchargement : relancer")
+                    r.raise_for_status()
+                    if not r.headers.get("content-range", "").startswith(f"bytes {recu}-"):
+                        raise httpx.RemoteProtocolError(f"plage inattendue : {r.headers.get('content-range')}")
+                    for morceau in r.iter_bytes():
+                        f.write(morceau)
+                        f.flush()
+                        recu += len(morceau)
+                        progres, attente = time.monotonic(), 5
+            except (httpx.TransportError, httpx.HTTPStatusError):
                 pass
+            if recu - palier >= 20 * BLOC or recu == taille:
+                print(f"  {recu:,} / {taille:,} o", file=sys.stderr)
+                palier = recu
+            if recu >= taille:
+                break
             if time.monotonic() - progres > patience:
                 raise SystemExit(f"{url} : aucun octet reçu depuis {patience} s, arrêt à {recu:,} / {taille:,} o")
-            time.sleep(attente)
-            attente = min(2 * attente, 120)
+            if time.monotonic() - progres > 1:
+                time.sleep(attente)
+                attente = min(2 * attente, 120)
+    if taille is not None and part.stat().st_size != taille:
+        raise SystemExit(f"{url} : taille {part.stat().st_size:,} o, attendu {taille:,} o")
+    part.replace(cible)
+    etat.unlink(missing_ok=True)
     return modifie
 
 
