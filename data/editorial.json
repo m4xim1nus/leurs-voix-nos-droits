@@ -81,6 +81,51 @@
       ]
     },
     {
+      "id": "accueils-physiques-ppl-2023",
+      "dossier_an": "DLR5L16N48763",
+      "legislature": 16,
+      "titre": "Proposition de loi tendant à la réouverture des accueils physiques dans les services publics",
+      "resume": "Proposition de loi du groupe LFI (Danièle Obono), adoptée en 1re lecture le 30 novembre 2023 et transmise au Sénat, qui ne l'a pas examinée. Elle inscrit dans le code des relations entre le public et l'administration que « nul ne peut se voir contraint à recourir à des procédures dématérialisées ». L'administration doit maintenir plusieurs modalités d'accès, pour qu'aucune démarche ne soit accessible uniquement en ligne, permettre de demander un traitement par courrier et garantir le droit d'être reçu par une personne. Le texte demande aussi un rapport sur l'effet de la dématérialisation sur les délais du Trésor public et des bureaux de poste.",
+      "droits": [
+        {
+          "code": "discriminations",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "ddd-dematerialisation-2022",
+            "ddd-fiche-reforme-10"
+          ],
+          "justification": "Le texte reprend presque mot pour mot la première recommandation du Défenseur des droits : « préserver plusieurs modalités d'accès aux services publics pour qu'aucune démarche administrative ne soit accessible uniquement par voie dématérialisée ». Pour la Défenseure des droits, les démarches imposées en ligne « caractérisent une rupture de l'égalité devant le service public » pour les 13 millions de personnes en difficulté avec le numérique, notamment des personnes âgées ou en situation de handicap, et « le maintien de l'accueil physique dans les services publics doit rester le principe »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "Pas de décision : texte non adopté définitivement.",
+      "note": "L'AN n'a examiné le texte qu'une fois. Le scrutin décisif est le vote sur l'ensemble en 1re lecture, le 30 novembre 2023, seul vote de l'AN sur l'ensemble (règle 9). Le Sénat, saisi le 1er décembre 2023, ne l'a pas examiné. Aucune motion de rejet. Aucun amendement clé : aucun amendement de suppression n'a été mis aux voix, et les votes sur les articles 1er et 2 doublent le scrutin décisif (règle 9). Le texte étend un droit : aucune critique trouvée parmi les sources admises (règle 7).",
+      "sources": {
+        "ddd-dematerialisation-2022": {
+          "auteur": "Défenseur des droits",
+          "titre": "Dématérialisation des services publics : trois ans après, où en est-on ? (rapport)",
+          "date": "2022-02",
+          "url": "https://www.defenseurdesdroits.fr/sites/default/files/2023-07/ddd_rapport_dematerialisation-2022_20220307.pdf"
+        },
+        "ddd-fiche-reforme-10": {
+          "auteur": "Défenseur des droits",
+          "titre": "Fiche réforme n° 10 : la dématérialisation",
+          "date": "2023-07",
+          "url": "https://www.defenseurdesdroits.fr/sites/default/files/2023-12/fiches-reformes_010.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V3115",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (122-29)"
+        }
+      ]
+    },
+    {
       "id": "aide-a-mourir",
       "dossier_an": "DLR5L17N51670",
       "legislature": 17,
@@ -376,6 +421,69 @@
           "role": "motion",
           "pour": "contre-texte",
           "objet": "motion de rejet préalable, CMP (121-188)"
+        }
+      ]
+    },
+    {
+      "id": "bien-vieillir-2024",
+      "dossier_an": "DLR5L16N46868",
+      "legislature": 16,
+      "titre": "Loi portant mesures pour bâtir la société du bien vieillir et de l'autonomie",
+      "resume": "Proposition de loi de députés de la majorité présidentielle, adoptée en mars 2024 après accord en CMP. Elle crée une conférence nationale de l'autonomie et un service public départemental de l'autonomie. Elle renforce la lutte contre les maltraitances des personnes vulnérables : cellule de recueil des signalements pilotée par l'agence régionale de santé, base légale du numéro national 3977. Elle garantit aux résidents des établissements pour personnes âgées ou handicapées le droit de recevoir chaque jour des visites, que le directeur ne peut refuser que pour un motif d'ordre public ou de santé, et aux personnes en fin de vie celui de recevoir leurs proches, même en crise sanitaire. Elle crée une carte professionnelle des intervenants à domicile et encadre l'accueil des animaux domestiques en établissement.",
+      "droits": [
+        {
+          "code": "discriminations",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "ddd-24-02"
+          ],
+          "justification": "Le texte renforce les garanties des personnes âgées et des personnes handicapées accompagnées ou accueillies en établissement, en particulier contre la maltraitance. La Défenseure des droits « salue les propositions de mesures relatives à la promotion de la bientraitance et à la lutte contre la maltraitance » et se réjouit que plusieurs de ses recommandations y figurent. Elle rappelle que les personnes âgées en perte d'autonomie « peuvent se prévaloir de la protection » de la Convention des Nations unies relative aux droits des personnes handicapées."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "La Défenseure des droits juge que les mesures contre la maltraitance « ne semblent pas suffisantes pour atteindre cet objectif » et « risquent d'être inefficaces en l'absence de sensibilisation et de formation des professionnels ». Elle prévient qu'elles ne produiront pas leurs effets « si elles ne s'accompagnent pas des moyens suffisants », et regrette que la proposition ait été « construite par petites touches » et aborde la situation des majeurs protégés « de manière parcellaire ».",
+          "sources": [
+            "ddd-24-02"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision : la loi n'a pas été déférée au Conseil constitutionnel.",
+      "note": "Le scrutin décisif est le vote sur le texte de la CMP, le 19 mars 2024, dernier vote de l'AN sur l'ensemble (règle 9). Le Sénat l'a ensuite adopté définitivement. Le vote de 1re lecture (23 novembre 2023) est affiché sans être compté, comme les deux motions de rejet préalable (règle 10). La 1re lecture est la seule lecture de l'AN où des suppressions ont été mises aux voix (règle 11). Elles portaient sur l'article 1er (conférence nationale de l'autonomie), les articles 5 quater et 5 quinquies (protection juridique des majeurs) et l'article 9 (obligation alimentaire des petits-enfants). Aucune n'est un amendement clé : aucune source admise ne met ces mesures en cause. La critique de la Défenseure des droits sur la protection des majeurs vise l'ensemble du texte, pas un article.",
+      "sources": {
+        "ddd-24-02": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis 24-02 sur la proposition de loi n° 193, adoptée par l'Assemblée nationale, portant mesures pour bâtir la société du bien-vieillir en France",
+          "date": "2024-01-29",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=22035"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V3550",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (177-51)"
+        },
+        {
+          "id": "VTANR5L16V3045",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (116-31)"
+        },
+        {
+          "id": "VTANR5L16V1411",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (141-166)"
+        },
+        {
+          "id": "VTANR5L16V3549",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (104-184)"
         }
       ]
     },
@@ -680,6 +788,168 @@
           "role": "decisif",
           "pour": "texte",
           "objet": "ensemble, texte de la CMP (175-23)"
+        }
+      ]
+    },
+    {
+      "id": "corps-electoral-nc-degel-2024",
+      "dossier_an": "DLR5L16N49373",
+      "legislature": 16,
+      "titre": "Projet de loi constitutionnelle portant modification du corps électoral pour les élections au congrès et aux assemblées de province de la Nouvelle-Calédonie",
+      "resume": "Le texte « dégèle » le corps électoral des élections provinciales de Nouvelle-Calédonie. Depuis la révision constitutionnelle de 2007, seuls peuvent voter à ces élections les électeurs établis sur le territoire avant novembre 1998 et leurs descendants, ce qui en exclut près d'un électeur inscrit sur cinq. Le texte ouvre ce scrutin à tous les électeurs inscrits sur la liste générale qui sont nés en Nouvelle-Calédonie ou y sont domiciliés depuis au moins dix ans. Il prévoit que la réforme n'entre pas en vigueur, ou devient caduque, si un accord sur l'avenir institutionnel est conclu entre les partenaires de l'accord de Nouméa. Adopté dans les mêmes termes par le Sénat (2 avril 2024) et l'Assemblée (14 mai 2024), il n'a jamais été soumis au Congrès du Parlement. Le vote à l'Assemblée a coïncidé avec le début des violences de mai 2024. Le texte a été suspendu le 12 juin 2024, puis abandonné à l'automne.",
+      "droits": [
+        {
+          "code": "citoyennete",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "ce-407958"
+          ],
+          "justification": "Le texte rend le droit de vote aux élections provinciales à des électeurs qui en étaient exclus. Selon le Conseil d'État, la part des électeurs de la liste générale « privés du droit de vote pour l'élection des assemblées de province et du congrès » est passée de 7,46 % en 1999 à 19,28 % en 2023, et l'écart « ne pourrait que s'accentuer avec le temps ». Le corps électoral restreint « dérogeait significativement » aux principes d'égalité et d'universalité du suffrage. Les règles en vigueur présentent même, selon lui, « un risque nouveau d'entrer en contradiction » avec ces principes et avec les engagements internationaux de la France. La réforme « n'appel[le] pas de réserves »."
+        },
+        {
+          "code": "discriminations",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "onu-rs-2024-08",
+            "cerd-declaration-3-2026",
+            "cncdh-a-2026-1"
+          ],
+          "justification": "Les instances de l'ONU y voient une atteinte aux droits du peuple kanak, peuple autochtone. Quatre rapporteurs spéciaux, dont celui sur les droits des peuples autochtones et celui sur le racisme, estiment que ce texte « démantèle l'un des piliers de l'accord de Nouméa ». Selon eux, il a été préparé sans le consentement préalable, libre et éclairé du peuple kanak et porte gravement atteinte à ses droits et au processus de décolonisation. Ils demandent son abrogation complète. Le Comité pour l'élimination de la discrimination raciale relève que le projet a été élaboré sans le consentement du peuple kanak et pourrait porter atteinte à son « expression politique ». La CNCDH situe la crise de 2024 dans « une remise en cause du processus d'autodétermination »."
+        }
+      ],
+      "etiquettes": [
+        "outre-mer"
+      ],
+      "vigilance": [
+        {
+          "texte": "Le Comité des droits de l'homme de l'ONU « accueill[e] avec satisfaction » l'abandon du texte, au titre du droit de participer aux affaires publiques. La CNCDH recommande de recueillir le consentement libre et éclairé de la population kanak avant toute décision sur son avenir politique.",
+          "sources": [
+            "ccpr-fra-co-6",
+            "cncdh-a-2026-1"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision : la révision constitutionnelle n'a jamais été soumise au Congrès du Parlement.",
+      "note": "Révision de la Constitution, adoptée d'abord par le Sénat. L'Assemblée l'a votée sans modification en 1re lecture : ce vote sur l'ensemble est le scrutin décisif (règle 9), même si le Congrès n'a jamais été réuni. Le sens est lu par rapport au droit en vigueur au jour du vote, le corps électoral « gelé » depuis 2007 (règle 4). Le droit de vote est jugé étendu, puisque le texte l'ouvre à des électeurs qui en étaient privés. Les instances de l'ONU et la CNCDH y voient une atteinte aux droits du peuple kanak, peuple autochtone : le texte reçoit donc aussi le droit « discriminations », au sens restreint (règle 4). Les deux lectures sont comptées, chacune pour son droit. Amendement clé : la suppression de l'article 1er, qui porte l'ouverture du corps électoral mise en cause par les rapporteurs de l'ONU (règle 11). La suppression de l'article 2, qui règle l'entrée en vigueur et la caducité en cas d'accord, n'est pas retenue : le sens de cet article n'est pas univoque. Les autres amendements mis aux voix modifiaient l'article 2 sans le supprimer.",
+      "sources": {
+        "ccpr-fra-co-6": {
+          "auteur": "Comité des droits de l'homme de l'ONU",
+          "titre": "Observations finales concernant le sixième rapport périodique de la France (CCPR/C/FRA/CO/6)",
+          "date": "2024-11-04",
+          "url": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2FFRA%2FCO%2F6&Lang=fr"
+        },
+        "ce-407958": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 407958 sur un projet de loi constitutionnelle portant modification du corps électoral pour les élections au congrès et aux assemblées de province de la Nouvelle-Calédonie",
+          "date": "2024-01-25",
+          "url": "https://www.conseil-etat.fr/avis-consultatifs/derniers-avis-rendus/au-gouvernement/avis-sur-un-projet-de-loi-constitutionnelle-portant-modification-du-corps-electoral-pour-les-elections-au-congres-et-aux-assemblees-de-province-de"
+        },
+        "cerd-declaration-3-2026": {
+          "auteur": "Comité pour l'élimination de la discrimination raciale (ONU)",
+          "titre": "Déclaration 3 (2026), France - Territoire non autonome de la Nouvelle-Calédonie (procédure d'alerte précoce et d'action urgente)",
+          "date": "2026-04-30",
+          "url": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCERD%2FSWA%2FFRA%2F11508&Lang=en"
+        },
+        "cncdh-a-2026-1": {
+          "auteur": "CNCDH",
+          "titre": "Avis « Nouvelle-Calédonie et droits fondamentaux : une analyse de la crise de 2024 » (A-2026-1)",
+          "date": "2026-01-29",
+          "url": "https://www.cncdh.fr/sites/default/files/2026-01/Projet%20avis%20Nouvelle-Cale%CC%81donie-AP-29.01.2026-vfinale.pdf"
+        },
+        "onu-rs-2024-08": {
+          "auteur": "Rapporteurs spéciaux de l'ONU (droits des peuples autochtones ; liberté de réunion pacifique et d'association ; racisme ; liberté d'opinion et d'expression)",
+          "titre": "France: UN experts alarmed by situation of Kanak Indigenous Peoples in the Non-Self-Governing Territory of New Caledonia (communiqué)",
+          "date": "2024-08-20",
+          "url": "https://www.ohchr.org/en/press-releases/2024/08/france-un-experts-alarmed-situation-kanak-indigenous-peoples-non-self"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V3725",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel, adoption sans modification du texte du Sénat (351-153)"
+        },
+        {
+          "id": "VTANR5L16V3717",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (79-174)"
+        },
+        {
+          "id": "VTANR5L16V3718",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "amendements de suppression de l'article 1er (ouverture du corps électoral), 1re lecture (50-102)"
+        }
+      ]
+    },
+    {
+      "id": "corps-electoral-nc-natifs-2026",
+      "dossier_an": "DLR5L17N52104",
+      "legislature": 17,
+      "titre": "Loi organique portant régularisation des natifs dans le corps électoral pour les élections au congrès et aux assemblées de province de Nouvelle-Calédonie",
+      "resume": "La loi ajoute au corps électoral des élections provinciales de Nouvelle-Calédonie les personnes nées sur le territoire et inscrites sur la liste électorale générale. Elles sont inscrites d'office sur la liste électorale spéciale. Selon le Gouvernement, environ 10 500 natifs étaient jusque-là exclus de ce scrutin. Le reste du corps électoral « gelé » depuis 2007 n'est pas modifié. Il s'agit d'une proposition de loi organique sénatoriale, adoptée sans modification par l'Assemblée le 20 mai 2026, peu après le rejet de la révision constitutionnelle issue de l'accord de Bougival.",
+      "droits": [
+        {
+          "code": "citoyennete",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "cc-2026-905",
+            "cc-2025-1163-qpc",
+            "ce-407958"
+          ],
+          "justification": "La loi rend le droit de vote aux élections provinciales à des électeurs nés sur le territoire qui en étaient privés. Le Conseil constitutionnel relève qu'elle vise à « atténuer […] l'ampleur qu'ont prise, avec l'écoulement du temps, les dérogations aux principes d'universalité et d'égalité du suffrage ». Huit mois plus tôt, il avait jugé que le gel du corps électoral « procède d'une dérogation aux principes d'égalité et d'universalité du suffrage ». En 2024, le Conseil d'État estimait que les règles en vigueur présentaient « un risque nouveau d'entrer en contradiction » avec ces principes, à propos d'une réforme qui ouvrait déjà ce scrutin aux natifs."
+        }
+      ],
+      "etiquettes": [
+        "outre-mer"
+      ],
+      "vigilance": [
+        {
+          "texte": "Le Comité de l'ONU pour l'élimination de la discrimination raciale demande que toute mesure relative à la décolonisation de la Nouvelle-Calédonie soit précédée de consultations du peuple kanak, en vue d'obtenir son consentement libre, préalable et éclairé. Après le rejet de la réforme constitutionnelle, il s'inquiète que le processus relève désormais « exclusivement de la compétence du Parlement français ».",
+          "sources": [
+            "cerd-declaration-3-2026"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2026-905 DC du 28 mai 2026 : conforme, sans réserve. Le Conseil constitutionnel juge que l'ajout des natifs au corps électoral, « sans remettre en cause son caractère restreint », ne méconnaît pas les orientations de l'accord de Nouméa.",
+      "note": "Proposition de loi organique déposée au Sénat, qui l'a adoptée en premier. L'Assemblée l'a votée sans modification en 1re lecture : ce vote sur l'ensemble est le scrutin décisif (règle 9). Le sens est lu par rapport au droit en vigueur au jour du vote, le corps électoral « gelé » depuis 2007 et jugé conforme par le Conseil constitutionnel en 2025 (règle 4). Les critiques de l'ONU portent sur la procédure (consentement du peuple kanak) et sur l'ensemble des réformes du corps électoral, pas sur les seuls natifs : elles sont affichées en vigilance. Aucun amendement clé (règle 11). La suppression de l'article 1er (V6748) visait bien la mesure, mais aucune source admise ne met en cause l'inscription des natifs en particulier. L'amendement du Gouvernement qui ajoutait les conjoints d'électeurs (V6751, rejeté 163-164) créait un article nouveau : ce n'est ni une suppression ni un rétablissement. Aucune motion de rejet n'a été mise aux voix.",
+      "sources": {
+        "cc-2025-1163-qpc": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2025-1163/1167 QPC du 19 septembre 2025 (corps électoral pour les élections au congrès et aux assemblées de province)",
+          "date": "2025-09-19",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2025/20251163_1167QPC.htm"
+        },
+        "cc-2026-905": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2026-905 DC du 28 mai 2026 (loi organique portant régularisation des natifs dans le corps électoral)",
+          "date": "2026-05-28",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2026/2026905DC.htm"
+        },
+        "ce-407958": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 407958 sur un projet de loi constitutionnelle portant modification du corps électoral pour les élections au congrès et aux assemblées de province de la Nouvelle-Calédonie",
+          "date": "2024-01-25",
+          "url": "https://www.conseil-etat.fr/avis-consultatifs/derniers-avis-rendus/au-gouvernement/avis-sur-un-projet-de-loi-constitutionnelle-portant-modification-du-corps-electoral-pour-les-elections-au-congres-et-aux-assemblees-de-province-de"
+        },
+        "cerd-declaration-3-2026": {
+          "auteur": "Comité pour l'élimination de la discrimination raciale (ONU)",
+          "titre": "Déclaration 3 (2026), France - Territoire non autonome de la Nouvelle-Calédonie (procédure d'alerte précoce et d'action urgente)",
+          "date": "2026-04-30",
+          "url": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCERD%2FSWA%2FFRA%2F11508&Lang=en"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V6753",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel, adoption sans modification du texte du Sénat (386-127)"
         }
       ]
     },
@@ -1082,6 +1352,83 @@
       ]
     },
     {
+      "id": "drones-epandage-2025",
+      "dossier_an": "DLR5L17N50636",
+      "legislature": 17,
+      "titre": "Loi visant à améliorer le traitement des maladies affectant les cultures végétales à l'aide d'aéronefs télépilotés",
+      "resume": "La loi maintient l'interdiction de la pulvérisation aérienne des pesticides, mais y ouvre deux exceptions pour les drones. Elle autorise l'épandage par drone de produits de biocontrôle, de produits utilisables en agriculture biologique et de produits à faible risque sur les parcelles en pente de 20 % ou plus, les bananeraies et les vignes mères de porte-greffes. Elle permet aussi des essais de trois ans au plus sur d'autres parcelles et cultures, évalués par l'ANSES. Les cultures pour lesquelles les essais montrent des « avantages manifestes » peuvent ensuite être ajoutées par arrêté.",
+      "droits": [
+        {
+          "code": "environnement",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "gf-li-67",
+            "anses-2022-ast-0026"
+          ],
+          "justification": "Le texte crée des exceptions à l'interdiction de la pulvérisation aérienne des pesticides, en vigueur depuis la fin de l'expérimentation de la loi EGalim (2021). Générations Futures « s'oppose fermement » au texte. Elle rappelle que l'ANSES, sur les essais menés de 2019 à 2021, conclut à la nécessité de disposer de plus de données. L'ANSES relève que, sur vigne artificielle et bananeraie, les valeurs de dérive aérienne mesurées avec un drone sont « 4 à 10 fois supérieures » à celles du matériel terrestre. Elle ajoute que les données ne permettent pas « de dégager des conclusions générales robustes »."
+        },
+        {
+          "code": "sante",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "anses-2022-ast-0026",
+            "gf-2026-05"
+          ],
+          "justification": "En bananeraie, l'ANSES a mesuré une contamination plus forte avec un drone qu'avec un atomiseur à dos sur des mannequins placés à 3, 5 et 10 mètres de la parcelle. Elle demande de répéter les essais sur l'exposition des riverains. Générations Futures juge les textes d'application, qui ne retiennent qu'une distance de 10 mètres, comme « une prise de risque inacceptable pour la santé des riverains »."
+        }
+      ],
+      "etiquettes": [
+        "outre-mer"
+      ],
+      "vigilance": [
+        {
+          "texte": "L'ANSES relève aussi des bénéfices possibles. Avec un drone, l'exposition des opérateurs est « très inférieure » à celle d'un chenillard en vigne en forte pente. Le traitement par drone apparaît comme « une solution intéressante » dans certaines conditions, dont les très fortes pentes. En 2026, sur les produits que la loi permet d'épandre, l'Agence juge que les conditions d'utilisation retenues par arrêté « sont de nature à diminuer l'exposition et donc les risques pour la santé humaine et l'environnement ». Elle ne peut toutefois émettre d'avis quantifié, faute de données.",
+          "sources": [
+            "anses-2022-ast-0026",
+            "anses-2026-sa-0052"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision : le Conseil constitutionnel n'a pas été saisi de cette loi.",
+      "note": "Le texte a été adopté par l'Assemblée en 1re lecture le 27 janvier 2025, puis par le Sénat sans modification le 9 avril 2025. Le vote de l'Assemblée sur l'ensemble est donc le scrutin décisif (règle 9). L'examen, commencé le 2 décembre 2024, avait été interrompu par la censure du Gouvernement. Aucun amendement clé. La suppression de l'article 1er, rejetée (V489), n'est pas retenue : l'article 2, simple gage financier, a été supprimé ensuite (V616), si bien que l'article 1er est le seul du texte au scrutin décisif. Sa suppression double donc le décisif (règle 11). Le vote sur l'article 1er (V613) n'est pas un amendement : non retenu. Les amendements qui ont abaissé le seuil de pente de 30 à 20 % (V492) et supprimé l'interdiction des drones à moins de 250 mètres des habitations (V493) et dans les espaces naturels protégés (V495) ne suppriment pas un article : non retenus (règle 11). Aucune motion de rejet.",
+      "sources": {
+        "anses-2022-ast-0026": {
+          "auteur": "ANSES",
+          "titre": "Note d'appui scientifique et technique relative à l'expérimentation de l'utilisation de drones pour la pulvérisation de produits phytopharmaceutiques (demande n° 2022-AST-0026)",
+          "date": "2022-07-01",
+          "url": "https://www.anses.fr/fr/system/files/PHYTO2022AST0026.pdf"
+        },
+        "anses-2026-sa-0052": {
+          "auteur": "ANSES",
+          "titre": "Avis relatif à l'évaluation de certains produits phytopharmaceutiques en vue de leur approbation pour une application par drone (saisine n° 2026-SA-0052)",
+          "date": "2026-04-30",
+          "url": "https://www.anses.fr/system/files/PHYTO-2026-SA-0052.pdf"
+        },
+        "gf-2026-05": {
+          "auteur": "Générations Futures",
+          "titre": "Épandage de pesticides par drone : Générations Futures dénonce des projets de textes qui ignorent les mises en garde de l'Anses",
+          "date": "2026-05-05",
+          "url": "https://www.generations-futures.fr/actualites/consultation-drone-pesticides/"
+        },
+        "gf-li-67": {
+          "auteur": "Générations Futures",
+          "titre": "Lettre d'information n° 67 : « À l'Assemblée nationale : une nouvelle proposition de loi pour autoriser la pulvérisation de pesticides par drones »",
+          "date": "2024-12",
+          "url": "https://generations-futures.fr/wp-content/uploads/2024/12/li-n67.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V617",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (81-32)"
+        }
+      ]
+    },
+    {
       "id": "duplomb-2025",
       "dossier_an": "DLR5L17N50819",
       "legislature": 17,
@@ -1157,6 +1504,73 @@
           "role": "motion",
           "pour": "contre-texte",
           "objet": "motion de rejet préalable, CMP (158-264)"
+        }
+      ]
+    },
+    {
+      "id": "ecriture-inclusive-ppl-2023",
+      "dossier_an": "DLR5L16N47051",
+      "legislature": 16,
+      "titre": "Proposition de loi portant interdiction de l'écriture dite « inclusive » dans les éditions, productions et publications scolaires et universitaires ainsi que dans les actes civils, administratifs et commerciaux",
+      "resume": "Proposition de loi du groupe RN (Roger Chudeau), examinée le 12 octobre 2023 et non adoptée. Son article unique interdisait l'écriture dite « inclusive » dans les écrits scolaires et universitaires : manuels, devoirs, mémoires et thèses. Il visait trois formes : la double flexion (« les inspectrices et les inspecteurs »), le point médian et le terme épicène. Il rendait nuls de plein droit les actes d'état civil, les actes administratifs et les contrats qui en contiennent un seul signe. L'Assemblée a supprimé l'article unique (127-83), puis l'auteur a retiré le texte.",
+      "droits": [
+        {
+          "code": "femmes-lgbti",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "hce-guide-2022",
+            "fsu-2021-05"
+          ],
+          "justification": "Le texte interdit les trois procédés que le Haut Conseil à l'égalité entre les femmes et les hommes recommande pour que les femmes soient « inclu·es dans l'ensemble des signaux de communication » : la double flexion, le point médian et les termes épicènes. Pour le HCE, le masculin dit générique « conduit à des représentations mentales biaisées, favorables aux hommes ». La FSU, contre une interdiction déjà limitée à l'enseignement, voit dans l'écriture inclusive « une des réponses » à « l'invisibilisation des femmes, y compris dans la langue », qui « participe de l'évolution vers plus d'égalité entre les femmes et les hommes »."
+        },
+        {
+          "code": "discriminations",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "cncph-2019"
+          ],
+          "justification": "Le Conseil national consultatif des personnes handicapées estime que le point médian « met en difficultés nos concitoyens dyslexiques, dyspraxiques, déficients visuels et les utilisateurs de la synthèse vocale ». Selon lui, son usage dans les documents officiels va « à l'encontre du principe de l'accessibilité universelle ». L'interdiction du point médian répond à cette critique."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "La FSU conteste l'argument de l'accessibilité. Elle « dénonce l'instrumentalisation indigne de supposés problèmes d'apprentissage induits par l'utilisation du point médian pour des élèves porteurs de handicaps ».",
+          "sources": [
+            "fsu-2021-05"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Le texte n'a pas fait l'objet d'un vote sur l'ensemble. Le 12/10/2023, l'Assemblée a adopté les amendements de suppression de l'article unique (V2758, 127-83), puis l'auteur a retiré la proposition. Le vote qui a fixé le sort de l'article unique tient lieu de scrutin décisif (règle 9). Il porte sur la suppression de l'article : voter pour, c'est voter contre le texte. Aucun amendement clé ni aucune motion de rejet : c'est le seul scrutin public du dossier. Au jour du vote, deux circulaires écartaient déjà le point médian : celle du Premier ministre du 21 novembre 2017 pour les textes publiés au Journal officiel, et celle du ministre de l'Éducation nationale du 5 mai 2021 pour l'enseignement. Le texte allait plus loin : une loi, l'université, les écrits des élèves et des étudiants, la double flexion et les épicènes, et la nullité des actes. Les sources portent sur la mesure (le guide du HCE, la circulaire de 2021 pour la FSU, les documents officiels pour le CNCPH) et non sur ce texte.",
+      "sources": {
+        "cncph-2019": {
+          "auteur": "Conseil national consultatif des personnes handicapées",
+          "titre": "Motion relative à l'écriture inclusive",
+          "date": "2019-04",
+          "url": "https://info.gouv.fr/upload/media/organization/0001/01/sites_default_files_contenu_piece-jointe_2019_04_motion_relative_a_lecriture_inclusive.pdf"
+        },
+        "fsu-2021-05": {
+          "auteur": "FSU",
+          "titre": "Écriture inclusive, injonction et écran de fumée (communiqué)",
+          "date": "2021-05-07",
+          "url": "https://fsu-snuipp.fr/actualites/posts/ecriture-inclusive-injonction-et-ecran-de-fumee"
+        },
+        "hce-guide-2022": {
+          "auteur": "Haut Conseil à l'égalité entre les femmes et les hommes",
+          "titre": "Pour une communication publique sans stéréotypes de sexe, guide pratique, version actualisée 2022",
+          "date": "2022-09-29",
+          "url": "https://www.haut-conseil-egalite.gouv.fr/sites/hce/files/files-spip/pdf/guide_egacom_sans_stereotypes-2022-versionpublique-min.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V2758",
+          "role": "decisif",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article unique, valant rejet du texte, 1re lecture, adoptée, puis texte retiré (127-83)"
         }
       ]
     },
@@ -1293,6 +1707,58 @@
           "role": "amendement",
           "pour": "contre-texte",
           "objet": "suppression de l'article 1er, peines d'un mois ou moins, fin du « dernier recours » et de l'aménagement obligatoire (44-72)"
+        }
+      ]
+    },
+    {
+      "id": "execution-provisoire-ineligibilite-ppl-2025",
+      "dossier_an": "DLR5L17N52087",
+      "legislature": 17,
+      "titre": "Proposition de loi visant à protéger l'effectivité du droit fondamental d'éligibilité",
+      "resume": "Proposition de loi du groupe UDR (Éric Ciotti), examinée le 26 juin 2025 et non adoptée. Son article unique interdisait au juge pénal d'ordonner l'exécution provisoire des peines d'interdiction du droit de vote et d'inéligibilité. Ces peines n'auraient donc pris effet qu'une fois la condamnation définitive, après l'appel et le pourvoi. Rejeté par la commission des lois, le texte a vu son article unique supprimé en séance (185-120), puis son auteur l'a retiré.",
+      "droits": [
+        {
+          "code": "citoyennete",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "cc-2025-1129-qpc"
+          ],
+          "justification": "Le texte supprime une possibilité de priver une personne de son droit d'éligibilité, et de son droit de vote, avant une condamnation définitive. Le Conseil constitutionnel juge que l'exécution provisoire d'une peine d'inéligibilité porte atteinte au « droit d'éligibilité garanti par l'article 6 de la Déclaration de 1789 ». Il ne l'admet que si le juge en apprécie, au cas par cas, le caractère proportionné au regard du mandat en cours et de « la préservation de la liberté de l'électeur ». Le texte retirait cette possibilité au juge."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Anticor défend l'exécution provisoire de la peine d'inéligibilité : elle « prévient le risque de récidive en excluant temporairement de la vie publique les élus condamnés », et la peine est prononcée après un débat contradictoire « qui assure le respect des droits de la défense ». Le Conseil constitutionnel y voit une mesure qui renforce « l'exigence de probité et d'exemplarité des élus et la confiance des électeurs dans leurs représentants ».",
+          "sources": [
+            "anticor-2025-03",
+            "cc-2025-1129-qpc"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision sur ce texte, qui n'a pas été adopté. Sur la mesure elle-même, la décision 2025-1129 QPC du 28 mars 2025 juge conforme la démission d'office d'un conseiller municipal condamné à une peine d'inéligibilité avec exécution provisoire. Elle pose une réserve : le juge pénal doit apprécier le caractère proportionné de l'atteinte portée au mandat en cours et à la liberté de l'électeur.",
+      "note": "Le texte n'a pas fait l'objet d'un vote sur l'ensemble. Le 26/06/2025, l'Assemblée a adopté les amendements de suppression de l'article unique (V2708, 185-120), puis l'auteur a retiré la proposition. Ce scrutin tient lieu de scrutin décisif (règle 9) : voter pour, c'est voter contre le texte. L'amendement adopté juste avant (V2707, 141-136) n'est pas retenu : il n'insérait qu'un intitulé de chapitre (« Création d'une justice de classe »), sans portée normative. Une fois l'article unique supprimé, le texte ne contenait plus aucune mesure. Ni motion de rejet ni amendement clé : ce sont les deux seuls scrutins publics du dossier.",
+      "sources": {
+        "anticor-2025-03": {
+          "auteur": "Anticor",
+          "titre": "Anticor seule à défendre l'application immédiate de la peine d'inéligibilité devant le Conseil constitutionnel (communiqué)",
+          "date": "2025-03-11",
+          "url": "https://archives.anticor.org/wp-content/uploads/2025/06/CP-ANTICOR-SEULE-A-DEFENDRE-LAPPLICATION-IMMEDIATE-DE-LA-PEINE-DINELIGIBILITE.pdf"
+        },
+        "cc-2025-1129-qpc": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2025-1129 QPC du 28 mars 2025 (démission d'office d'un conseiller municipal condamné à une peine d'inéligibilité assortie de l'exécution provisoire)",
+          "date": "2025-03-28",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2025/20251129QPC.htm"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V2708",
+          "role": "decisif",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article unique, valant rejet du texte, 1re lecture, adoptée, puis texte retiré (185-120)"
         }
       ]
     },
@@ -2748,6 +3214,63 @@
       ]
     },
     {
+      "id": "lpm-2023",
+      "dossier_an": "DLR5L16N47509",
+      "legislature": 16,
+      "titre": "Loi relative à la programmation militaire pour les années 2024 à 2030 et portant diverses dispositions intéressant la défense",
+      "resume": "Programme les moyens des armées pour 2024-2030 et réforme plusieurs régimes de défense : réserve opérationnelle, réquisitions, stocks stratégiques, contre-ingérence, neutralisation des drones. Son chapitre sur la sécurité des systèmes d'information étend les pouvoirs de l'Agence nationale de la sécurité des systèmes d'information (ANSSI). Celle-ci peut désormais recueillir des données sur les réseaux des opérateurs, des hébergeurs et des centres de données, au-delà des seules données techniques. Elle peut aussi faire bloquer ou rediriger des noms de domaine et obtenir des données des fournisseurs de résolution de noms de domaine (DNS). Les éditeurs de logiciels doivent enfin lui notifier leurs vulnérabilités significatives.",
+      "droits": [
+        {
+          "code": "vie-privee",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "arcep-2023-0542",
+            "cnil-2024-025"
+          ],
+          "justification": "Le recueil de données par l'ANSSI s'étend à « l'intégralité d'un trafic réseau » et à des copies de serveurs, et non plus aux seules données techniques. Pour l'Arcep, ce recueil présente « un risque accru quant au respect des libertés publiques ». L'Arcep préférait un cadre expérimental et jugeait « dommageable » la fin de l'assermentation des agents, que la loi a maintenue. Pour la CNIL, le dispositif « est susceptible de porter une atteinte particulièrement importante à la vie privée des individus »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "Décision 2023-854 DC du 28 juillet 2023, partiellement conforme, sur saisine de soixante députés limitée à la procédure d'adoption des articles 17, 22 et 45. Onze articles sont censurés comme cavaliers législatifs (articles 14, 17, 20, 36, 45, 46, 48, 50, 52, 59 et 69), sans examen de leur contenu. L'article 22 est validé sur la procédure. Le Conseil ne s'est pas prononcé sur les autres dispositions, dont celles relatives à l'ANSSI.",
+      "note": "Scrutin décisif : l'ensemble du texte de la CMP, adopté par l'AN le 12/07/2023 (V2256, 244-37). Le Sénat a adopté définitivement le même texte le 13/07/2023. Le vote de 1re lecture (V1778) est affiché, pas compté. Aucun amendement clé : la 1re lecture est la seule où des amendements ont été mis aux voix, et aucune suppression des articles relatifs à l'ANSSI (articles 32 à 35) n'y a fait l'objet d'un scrutin public. La seule suppression votée par scrutin public (V1768, article 35 bis, 67-29) visait l'hébergement des données des opérateurs d'importance vitale chez des prestataires de cloud européens, une mesure qu'aucune source ne met en cause. Motion de rejet préalable affichée, pas comptée.",
+      "sources": {
+        "arcep-2023-0542": {
+          "auteur": "Arcep",
+          "titre": "Avis n° 2023-0542 du 9 mars 2023 sur des dispositions relatives à la sécurité des systèmes d'information dans le cadre du projet de loi relatif à la programmation militaire pour les années 2024-2030",
+          "date": "2023-03-09",
+          "url": "https://www.arcep.fr/uploads/tx_gsavis/23-0542.pdf"
+        },
+        "cnil-2024-025": {
+          "auteur": "CNIL",
+          "titre": "Délibération n° 2024-025 du 7 mars 2024 portant avis sur un projet de décret pris pour l'application des articles L. 2321-2-1 à L. 2321-4-1 du code de la défense et des articles L. 33-14 et L. 36-14 du code des postes et des communications électroniques",
+          "date": "2024-03-07",
+          "url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000049537289"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V2256",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (244-37)"
+        },
+        {
+          "id": "VTANR5L16V1778",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (408-87)"
+        },
+        {
+          "id": "VTANR5L16V1589",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (27-158)"
+        }
+      ]
+    },
+    {
       "id": "meubles-tourisme-2024",
       "dossier_an": "DLR5L16N47722",
       "legislature": 16,
@@ -2942,6 +3465,58 @@
           "role": "motion",
           "pour": "contre-texte",
           "objet": "motion de rejet préalable, 1re lecture (25-109)"
+        }
+      ]
+    },
+    {
+      "id": "moratoire-megabassines-ppl-2023",
+      "dossier_an": "DLR5L16N48755",
+      "legislature": 16,
+      "titre": "Proposition de loi visant à instaurer un moratoire sur le déploiement des méga-bassines",
+      "resume": "Proposition de loi du groupe LFI (Clémence Guetté), examinée le 30 novembre 2023 et non adoptée. Son article unique suspend pour dix ans la délivrance des autorisations de construire des « méga-bassines » au titre de la loi sur l'eau, y compris pour les projets en cours d'instruction. Ces réserves de substitution sont remplies l'hiver par pompage dans les nappes et les rivières, pour l'irrigation d'été. L'Assemblée a supprimé l'article unique (156-104), puis l'auteure a retiré le texte.",
+      "droits": [
+        {
+          "code": "environnement",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "onu-al-fra-5-2023",
+            "ufc-2023-03",
+            "cnpn-2023-05"
+          ],
+          "justification": "Le texte suspend la construction de réserves dont des sources admises dénoncent l'effet sur l'eau et les milieux. Six rapporteurs spéciaux de l'ONU, dont ceux sur l'environnement et sur l'eau, se disent « profondément préoccupés par la poursuite du développement des projets de méga-bassines en France ». Ils y voient « un exemple de mauvaise adaptation au changement climatique ». Pour l'UFC-Que Choisir, ces projets « vont à contresens de la préservation de la ressource aquatique » et ont « des impacts non négligeables sur la biodiversité ». Le Conseil national de la protection de la nature (CNPN) relève, sur la réserve de Sainte-Soline, des impacts sur une espèce d'oiseau protégée. Il craint que ces réserves ne favorisent des productions « très consommatrices en eau et peu compatibles avec la faune sauvage »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "Pas de décision : texte non adopté.",
+      "note": "Le texte n'a pas fait l'objet d'un vote sur l'ensemble. Le 30/11/2023, l'Assemblée a adopté les amendements de suppression de l'article unique (V3102, 156-104), puis l'auteure a retiré la proposition (article 84, alinéa 2, du règlement). Ce scrutin tient lieu de décisif (règle 9). Il porte sur la suppression de l'article : voter pour, c'est voter contre le texte. Aucun amendement clé ni aucune motion de rejet : c'est le seul scrutin public du dossier. Aucune critique du droit étendu n'a été trouvée parmi les sources admises.",
+      "sources": {
+        "cnpn-2023-05": {
+          "auteur": "Conseil national de la protection de la nature",
+          "titre": "Délibération n° 2023-05 : autosaisine relative à la nécessité de l'évaluation des impacts de l'aménagement de la retenue de substitution de Sainte-Soline sur la population reproductrice de l'Outarde canepetière et la faune protégée de la plaine poitevine",
+          "date": "2023-04-18",
+          "url": "https://www.avis-biodiversite.developpement-durable.gouv.fr/IMG/pdf/2023-05_autosaisine_retenue-substitution_cnpn_du_18_04_2023_vf.pdf"
+        },
+        "onu-al-fra-5-2023": {
+          "auteur": "Rapporteurs spéciaux de l'ONU (alimentation, changements climatiques, environnement, réunion pacifique et association, défenseurs des droits humains, eau potable et assainissement)",
+          "titre": "Communication au Gouvernement français sur les méga-bassines (AL FRA 5/2023)",
+          "date": "2023-05-18",
+          "url": "https://spcommreports.ohchr.org/TMResultsBase/DownLoadPublicCommunicationFile?gId=28077"
+        },
+        "ufc-2023-03": {
+          "auteur": "UFC-Que Choisir",
+          "titre": "Eau : les basses représailles de l'État (billet du président)",
+          "date": "2023-03-22",
+          "url": "https://www.quechoisir.org/billet-du-president-eaules-basses-represailles-de-l-etat-n106686"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V3102",
+          "role": "decisif",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article unique, valant rejet du texte, 1re lecture, adoptée, puis texte retiré (156-104)"
         }
       ]
     },
@@ -3288,6 +3863,44 @@
       ]
     },
     {
+      "id": "offre-locative-dpe-ppl-2024",
+      "dossier_an": "DLR5L17N50434",
+      "legislature": 17,
+      "titre": "Proposition de loi visant à réduire les contraintes énergétiques pesant sur l'offre locative et à juguler leurs effets sur la crise du logement",
+      "resume": "Proposition de loi du groupe RN (Frédéric Falcon), examinée le 31 octobre 2024 et non adoptée. Son article unique abroge l'article 160 de la loi Climat et résilience de 2021. Cet article fixe le calendrier de « décence énergétique » des logements loués : les logements classés G au diagnostic de performance énergétique (DPE) cessent d'être décents en 2025, puis les F en 2028 et les E en 2034, et le locataire peut en exiger la mise aux normes. Il prévoit aussi que l'impossibilité de faire les travaux n'empêche pas le juge de réduire le loyer. L'Assemblée a supprimé l'article unique (169-132), puis le rapporteur a retiré le texte.",
+      "droits": [
+        {
+          "code": "logement",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "fondation-logement-2025"
+          ],
+          "justification": "Le texte supprime le calendrier qui rend progressivement indécents, donc à rénover, les logements loués les plus énergivores. Pour la Fondation pour le logement des défavorisés (ex-Fondation Abbé Pierre), cette obligation ne fait pas sortir les passoires thermiques du marché locatif, mais elle donne un appui à leurs locataires : « au moins auront-ils la loi de leur côté » pour demander à leur bailleur des travaux ou une baisse de loyer. Elle note que, « grâce à la perspective de ces obligations », l'intérêt des bailleurs pour la rénovation « semble se renforcer ». Le texte revient aussi sur la règle selon laquelle l'impossibilité de faire les travaux n'empêche pas le juge de réduire le loyer."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "Pas de décision : texte non adopté.",
+      "note": "Le texte n'a pas fait l'objet d'un vote sur l'ensemble. Le 31 octobre 2024, l'Assemblée a adopté les amendements de suppression de l'article unique (V219, 169-132), puis le rapporteur a retiré la proposition. Le vote qui a fixé le sort de l'article unique tient lieu de scrutin décisif (règle 9). Il porte sur la suppression de l'article : voter pour, c'est voter contre le texte. C'est le seul scrutin public du dossier : aucune motion de rejet, aucun amendement clé. Le sens se lit par rapport au droit applicable au jour du vote (règle 4), qui comprenait le calendrier de la loi Climat et résilience, déjà promulguée.",
+      "sources": {
+        "fondation-logement-2025": {
+          "auteur": "Fondation pour le logement des défavorisés (ex-Fondation Abbé Pierre)",
+          "titre": "L'état du mal-logement en France 2025, 30e rapport annuel",
+          "date": "2025-02-03",
+          "url": "https://www.fondationpourlelogement.fr/wp-content/uploads/2025/06/30e-rapport-sur-letat-du-mal-logement-en-france-2025.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V219",
+          "role": "decisif",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article unique, valant rejet du texte, 1re lecture, adoptée, puis texte retiré (169-132)"
+        }
+      ]
+    },
+    {
       "id": "parite-bloc-communal-2025",
       "dossier_an": "DLR5L15N43846",
       "legislature": 15,
@@ -3506,6 +4119,130 @@
       ]
     },
     {
+      "id": "plf-2026",
+      "dossier_an": "DLR5L17N52428",
+      "legislature": 17,
+      "titre": "Loi de finances pour 2026",
+      "resume": "La loi fixe le budget de l'État pour 2026. Parmi ses mesures qui touchent les personnes, elle réserve les aides personnelles au logement, pour les étudiants étrangers hors Union européenne, à ceux qui remplissent les conditions d'une bourse sur critères sociaux. Elle relève les taxes dues pour un premier titre de séjour et pour le visa de régularisation (de 200 à 300 euros) et le droit de timbre de la naturalisation (de 55 à 255 euros), et crée une taxe de 100 euros sur les autorisations provisoires de séjour. Elle institue une contribution de 50 euros pour l'aide juridique en matière civile et prud'homale, met en principe les frais de justice pénale à la charge des personnes condamnées et plafonne les frais de procédure que la Cour nationale du droit d'asile peut mettre à la charge de l'OFPRA. Le gel des aides au logement prévu par le projet initial a été abandonné. Le Gouvernement a fait adopter le texte sans vote, par l'article 49, alinéa 3, de la Constitution.",
+      "droits": [
+        {
+          "code": "etrangers",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cimade-2025-10-20",
+            "fpl-2025-10-21",
+            "snesup-2026-04-21",
+            "cc-2026-901"
+          ],
+          "justification": "Les mesures du texte que les sources mettent en cause visent les personnes étrangères. La loi prive des aides au logement les étudiants étrangers hors Union européenne qui ne remplissent pas les conditions d'une bourse sur critères sociaux : selon la Fondation pour le logement des défavorisés, cette mesure « discriminante et injuste » institue « une forme de préférence nationale dans l'accès aux aides au logement ». Pour le SNESUP-FSU, elle « s'attaque frontalement à une population étudiante déjà particulièrement vulnérable ». La loi relève aussi les taxes liées au séjour et à la naturalisation. La Cimade, le Gisti, l'ADDE et le Syndicat des avocats de France y voient « autant d'obstacles financiers imposés à des personnes qui n'ont évidemment pas d'autre choix que de s'y soumettre ». Le Conseil constitutionnel a validé l'exclusion des aides au logement sous une réserve : les critères d'attribution des bourses devront respecter les « exigences constitutionnelles découlant des dixième et onzième alinéas du Préambule de la Constitution de 1946 »."
+        },
+        {
+          "code": "logement",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "fpl-2025-10-21",
+            "fpl-2026-02-03"
+          ],
+          "justification": "Pour la Fondation pour le logement des défavorisés, la suppression des aides au logement des étudiants étrangers non boursiers constitue « une attaque grave au droit au logement ». Elle rappelle que le Gouvernement a renoncé au gel des aides au logement mais « a conservé la suppression des APL des étudiants étrangers extra-communautaires non-boursiers »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Le Conseil constitutionnel a validé la hausse des taxes de séjour et de naturalisation : le législateur a maintenu les exemptions prévues pour les personnes vulnérables, prévu un montant minoré et laissé à 200 euros la taxe de renouvellement d'un titre, si bien qu'il a « pris en compte les facultés contributives des personnes ». Il a aussi jugé que l'exclusion des aides au logement poursuivait un objectif d'intérêt général, la maîtrise de la dépense.",
+          "sources": [
+            "cc-2026-901"
+          ]
+        },
+        {
+          "texte": "Le projet initial prévoyait aussi de geler les aides au logement de tous les allocataires. Le Gouvernement y a renoncé en janvier 2026, avant l'adoption définitive.",
+          "sources": [
+            "fpl-2026-02-03"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2026-901 DC du 19 février 2026, non-conformité partielle. Huit séries de dispositions sont censurées, presque toutes comme cavaliers budgétaires, sans examen de leur contenu, dont la réforme de la réduction de loyer de solidarité (paragraphes I à III de l'article 180). Deux réserves d'interprétation : le juge qui condamne doit apprécier si les frais de justice mis à la charge de la personne condamnée sont proportionnés à sa situation économique (article 144) ; le pouvoir réglementaire doit fixer les critères des bourses, qui conditionnent désormais les aides au logement des étudiants étrangers hors Union européenne, dans le respect des dixième et onzième alinéas du Préambule de 1946 (article 179). Sont déclarés conformes la hausse des taxes de séjour et du droit de timbre de la naturalisation et la contribution de 50 euros pour l'aide juridique (article 128), ainsi que le plafonnement des frais de procédure devant la Cour nationale du droit d'asile (article 188). Le grief tiré de l'insincérité de la loi et les griefs de procédure sont écartés.",
+      "note": "Texte composite, adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score. Le droit principal est celui des mesures que les sources admises mettent le plus en cause, la suppression des aides au logement des étudiants étrangers non boursiers et la hausse des taxes de séjour, qui ne visent que des étrangers (règles 3 et 4). En 1re lecture, l'Assemblée a rejeté la première partie le 21 novembre 2025 (1-404), sans voter sur l'ensemble. Ce vote porte sur une partie du texte et non sur l'ensemble : il n'est pas retenu (règle 9). En nouvelle lecture, le Gouvernement a engagé sa responsabilité sur la première partie, puis sur la seconde partie et l'ensemble. En lecture définitive, il l'a engagée sur l'ensemble. Les six motions de censure qui ont suivi, des 23 et 27 janvier et du 2 février 2026, sont affichées groupe par groupe (rôle censure). Quatre sont rattachées dans les données de l'Assemblée aux dossiers d'engagement de responsabilité. La motion de rejet préalable de 1re lecture est affichée, pas comptée (règle 10). Aucun amendement clé (règle 11). La nouvelle lecture est la dernière lecture où des suppressions ont été mises aux voix. Elle s'est interrompue à l'article 24 bis, et ses suppressions ne portent que sur des impôts, des dotations aux collectivités ou l'article liminaire. Les articles qui portaient les mesures mises en cause n'y ont pas été mis aux voix.",
+      "sources": {
+        "cc-2026-901": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2026-901 DC",
+          "date": "2026-02-19",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2026/2026901DC.htm"
+        },
+        "cimade-2025-10-20": {
+          "auteur": "La Cimade, Gisti, Avocats pour la défense des droits des étrangers (ADDE), Syndicat des avocat·es de France",
+          "titre": "Hausse des droits de timbre : un nouveau pas vers la précarisation des personnes étrangères (communiqué commun)",
+          "date": "2025-10-20",
+          "url": "https://www.lacimade.org/presse/hausse-des-droits-de-timbre-un-nouveau-pas-vers-la-precarisation-des-personnes-etrangeres/"
+        },
+        "fpl-2025-10-21": {
+          "auteur": "Fondation pour le logement des défavorisés",
+          "titre": "Non à la suppression des APL des étudiants étrangers ! (communiqué)",
+          "date": "2025-10-21",
+          "url": "https://www.fondationpourlelogement.fr/non-a-la-suppression-des-apl-des-etudiants-etrangers/"
+        },
+        "fpl-2026-02-03": {
+          "auteur": "Fondation pour le logement des défavorisés",
+          "titre": "L'état du mal-logement en France 2026, quatrième cahier : Une année de reculs entre austérité et stigmatisation",
+          "date": "2026-02-03",
+          "url": "https://www.fondationpourlelogement.fr/reml-2026-cahier-4-une-annee-de-reculs-entre-austerite-et-stigmatisation/"
+        },
+        "snesup-2026-04-21": {
+          "auteur": "SNESUP-FSU",
+          "titre": "Frais différenciés pour les étudiant·es extracommunautaires : mercantilisme, pilotage centralisé des formations, tri sélectif et préférence nationale à l'assaut de l'ESR (communiqué)",
+          "date": "2026-04-21",
+          "url": "https://www.snesup.fr/sites/default/files/2026-04/20260421-cp-snesup-fu-extracommunautaires_0.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V5154",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la première partie, nouvelle lecture, de Mme Panot, Mme Chatelain, M. Peu et 108 députés, 23 janvier 2026, rejetée, 288 voix requises (269-0)"
+        },
+        {
+          "id": "VTANR5L17V5155",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la première partie, nouvelle lecture, de Mme Le Pen, M. Ciotti et 102 députés, 23 janvier 2026, rejetée (142-0)"
+        },
+        {
+          "id": "VTANR5L17V5193",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la seconde partie et l'ensemble, nouvelle lecture, de Mme Chatelain, Mme Panot, M. Peu et 110 députés, 27 janvier 2026, rejetée, 289 voix requises (267-0)"
+        },
+        {
+          "id": "VTANR5L17V5194",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la seconde partie et l'ensemble, nouvelle lecture, de Mme Le Pen, M. Ciotti et 102 députés, 27 janvier 2026, rejetée (140-0)"
+        },
+        {
+          "id": "VTANR5L17V5284",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur l'ensemble, lecture définitive, de M. Peu, Mme Panot, Mme Chatelain et 110 députés, 2 février 2026, rejetée, 289 voix requises (260-0)"
+        },
+        {
+          "id": "VTANR5L17V5285",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur l'ensemble, lecture définitive, de Mme Le Pen, M. Ciotti et 104 députés, 2 février 2026, rejetée (135-0)"
+        },
+        {
+          "id": "VTANR5L17V3062",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (60-258)"
+        }
+      ]
+    },
+    {
       "id": "plfss-2026",
       "dossier_an": "DLR5L17N52922",
       "legislature": 17,
@@ -3651,6 +4388,97 @@
           "role": "amendement",
           "pour": "contre-texte",
           "objet": "suppression de l'article 44 (gel des pensions et des prestations en 2026), nouvelle lecture, adoptée (197-84)"
+        }
+      ]
+    },
+    {
+      "id": "pouvoir-achat-2022",
+      "dossier_an": "DLR5L16N45942",
+      "legislature": 16,
+      "titre": "Loi portant mesures d'urgence pour la protection du pouvoir d'achat",
+      "resume": "Projet de loi du Gouvernement, adopté en août 2022 face à l'inflation. Il revalorise de 4 % les pensions, les minima sociaux et d'autres prestations, de 3,5 % les aides au logement, et plafonne à 3,5 % la hausse annuelle de l'indice de référence des loyers. Il calcule l'allocation aux adultes handicapés (AAH) sans tenir compte des revenus du conjoint, au plus tard le 1er octobre 2023 (déconjugalisation), les allocataires gardant l'ancien calcul s'il leur est plus favorable. Il pérennise une prime de partage de la valeur exonérée de cotisations et facilite la résiliation des contrats. En cas de menace sur l'approvisionnement énergétique, il permet d'installer un terminal méthanier flottant au Havre avec des dérogations au code de l'environnement et de rehausser le plafond d'émissions des centrales électriques à combustibles fossiles.",
+      "droits": [
+        {
+          "code": "discriminations",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "cncdh-a-2021-10",
+            "fo-2022-07-21"
+          ],
+          "justification": "Le texte calcule l'AAH sans tenir compte des revenus du conjoint. La CNCDH appelait à « déconjugaliser l'Allocation adulte handicapé au plus vite » : le calcul conjugalisé « ne respecte pas les droits fondamentaux des personnes handicapées » et « porte gravement atteinte aux droits des femmes handicapées, majorant pour elles les risques d'abus conjugaux ». FO y voit « une grande avancée », qui répond à « un juste droit à la dignité et à l'autonomie des personnes en situation de handicap »."
+        },
+        {
+          "code": "environnement",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cc-2022-843"
+          ],
+          "justification": "Le texte prévoit des « dérogations procédurales, notamment au code de l'environnement », pour installer un terminal méthanier flottant au Havre, et permet de rehausser le plafond d'émissions de gaz à effet de serre des centrales électriques à combustibles fossiles. Le Conseil constitutionnel juge que les dispositions permettant ce rehaussement « portent atteinte à l'environnement » et que le terminal est « susceptible de porter atteinte à l'environnement ». Il limite les deux mesures au cas d'une « menace grave » sur la sécurité d'approvisionnement."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "FO juge trop tardive l'entrée en vigueur de la déconjugalisation, au plus tard le 1er octobre 2023 : les personnes concernées « resteront encore trop longtemps sous la dépendance financière de leur conjoint ou conjointe ». Elle relève aussi, d'après la Drees, que « près de 44 000 couples pourraient être laissés pour compte » par une déconjugalisation « sèche », risque que le dispositif transitoire du texte vise à couvrir.",
+          "sources": [
+            "fo-2022-07-21"
+          ]
+        },
+        {
+          "texte": "Pour la CGT, le texte ne prévoit « rien pour l'augmentation générale des salaires », et ses « nouvelles exonérations de cotisations sociales » vont « aggraver l'affaiblissement des comptes sociaux ». La prime de partage de la valeur est à ses yeux « un outil supplémentaire à disposition du patronat pour éviter les augmentations générales et pérennes des salaires ».",
+          "sources": [
+            "cgt-2022-07-25"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2022-843 DC du 12 août 2022, non-conformité partielle avec réserves. Censure de l'article 46 (rapport sur l'usage des huiles alimentaires usagées comme carburant) comme cavalier législatif. Réserves : le terminal méthanier flottant (articles 29 et 30) et le rehaussement du plafond d'émissions des centrales à combustibles fossiles (article 36) ne peuvent s'appliquer qu'en cas de « menace grave » sur la sécurité d'approvisionnement, en vertu de l'article 1er de la Charte de l'environnement. Les dispositions sur l'accès régulé à l'électricité nucléaire historique (articles 39 à 41) sont conformes. La déconjugalisation de l'AAH et les mesures sur les loyers n'étaient pas contestées.",
+      "note": "Texte composite (règle 4) : ses mesures touchent plusieurs droits, dans des sens différents. La déconjugalisation de l'AAH étend des droits ; le terminal méthanier et le rehaussement du plafond d'émissions portent atteinte à l'environnement selon le Conseil constitutionnel. Le droit principal retenu est celui de la mesure que les sources admises citent le plus, la déconjugalisation de l'AAH (`discriminations`, handicap). Le scrutin décisif est le vote sur le texte de la CMP, le 3 août 2022, dernier vote de l'AN sur l'ensemble (règle 9). Le vote de 1re lecture est affiché sans être compté, comme la motion de rejet préalable (règle 10). Aucun amendement clé. La 1re lecture est la seule lecture de l'AN où des suppressions ont été mises aux voix (règle 11). Elles portaient sur le terminal méthanier (articles 13 et 14 du projet), les centrales à charbon (articles 15 et 16) et l'accès régulé à l'électricité nucléaire historique (article 19). Sur ces mesures, la seule source admise trouvée est le Conseil constitutionnel, qui les valide sous réserve, ce qui ne suffit pas (règle 11). La déconjugalisation a été insérée par un amendement adopté en 1re lecture (428-1), qui n'est ni une suppression ni un rétablissement d'article.",
+      "sources": {
+        "cc-2022-843": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2022-843 DC",
+          "date": "2022-08-12",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2022/2022843DC.htm"
+        },
+        "cgt-2022-07-25": {
+          "auteur": "CGT",
+          "titre": "L'augmentation des salaires, c'est bon pour le pouvoir d'achat (communiqué)",
+          "date": "2022-07-25",
+          "url": "https://www.fnte.cgt.fr/sites/default/files/2022-07/2022%2007%2026%20-%20CONFEDERATION%20-%20COMMUNIQUE%20DE%20PRESSE%20-%20POUVOIR%20D%27ACHAT.pdf"
+        },
+        "cncdh-a-2021-10": {
+          "auteur": "CNCDH",
+          "titre": "Avis sur la déconjugalisation de l'allocation adulte handicapé (A-2021-10)",
+          "date": "2021-09-30",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-11/A%20-%202021%20-%2010%20-%20D%C3%A9conjugalisation%20AAH%2C%20sept%202021.pdf"
+        },
+        "fo-2022-07-21": {
+          "auteur": "CGT-Force ouvrière",
+          "titre": "Déconjugalisation de l'AAH : des paroles aux actes mais des ombres au tableau ! (communiqué)",
+          "date": "2022-07-21",
+          "url": "https://hebdo.force-ouvriere.fr/IMG/pdf/cp_-_fo_-_deconjugalisation_de_l_aah_des_paroles_aux_actes_mais_des_ombres_au_tableau.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V186",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (395-112)"
+        },
+        {
+          "id": "VTANR5L16V81",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (341-116)"
+        },
+        {
+          "id": "VTANR5L16V185",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (76-290)"
         }
       ]
     },
@@ -4393,6 +5221,101 @@
           "role": "amendement",
           "pour": "contre-texte",
           "objet": "suppression de l'article 8 bis, placements successifs en rétention (53-98)"
+        }
+      ]
+    },
+    {
+      "id": "retraites-2023",
+      "dossier_an": "DLR5L16N47066",
+      "legislature": 16,
+      "titre": "Loi de financement rectificative de la sécurité sociale pour 2023",
+      "resume": "La loi réforme les retraites. Elle reporte progressivement l'âge légal de départ de 62 à 64 ans, à raison de trois mois par génération à partir des assurés nés le 1er septembre 1961, et accélère le relèvement de la durée d'assurance requise pour une pension à taux plein (172 trimestres dès la génération 1965). Elle ferme plusieurs régimes spéciaux aux nouveaux embauchés et aménage les départs anticipés (carrières longues, incapacité, handicap). Le Gouvernement l'a fait adopter à l'Assemblée sans vote, par l'article 49, alinéa 3, de la Constitution.",
+      "droits": [
+        {
+          "code": "travail-protection-sociale",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cfdt-2023-03-17",
+            "cgt-2023-03-16",
+            "fo-2023-04-17"
+          ],
+          "justification": "Le texte reporte l'âge légal de départ à 64 ans et accélère l'allongement de la durée de cotisation exigée pour une retraite sans décote. La CGT y voit des « mesures extrêmement régressives » et un « projet de loi brutal, injuste ». La CFDT, qui s'oppose au projet, relève que « seuls les travailleurs et travailleuses sont mis à contribution, les plus gros efforts pesant sur les épaules de ceux et celles qui ont commencé à travailler tôt, qui exercent des métiers pénibles ». Après la promulgation, FO appelle encore à poursuivre les grèves « pour obtenir le retrait de cette réforme »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Le Conseil constitutionnel a validé le report de l'âge légal et l'accélération de la durée d'assurance. Il juge que le législateur a voulu « assurer l'équilibre financier du système de retraite par répartition » et relève qu'il a « maintenu ou étendu des possibilités de retraite anticipée » (carrières longues, incapacité, handicap). Il écarte le grief tiré du droit à la sécurité matérielle des « vieux travailleurs » (Préambule de 1946) et celui tiré de l'égalité entre les femmes et les hommes.",
+          "sources": [
+            "cc-2023-849"
+          ]
+        },
+        {
+          "texte": "La CFDT reconnaît que la concertation a fait « émerger des sujets importants : la situation des femmes, le minimum de pension, les carrières longues, la pénibilité ou encore l'emploi des seniors », mais en juge le bilan « insuffisant ».",
+          "sources": [
+            "cfdt-2023-03-17"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2023-849 DC du 14 avril 2023, non-conformité partielle. Six séries de dispositions sont censurées comme cavaliers sociaux, sans examen de leur contenu : l'index de l'emploi des seniors (article 2), le contrat de fin de carrière (article 3), l'organisation du recouvrement des cotisations (article 6), la prise en compte des services accomplis comme contractuel en catégorie active (6° du III et XXVIII de l'article 10), le suivi médical des salariés exposés à des risques professionnels (7° du A du III de l'article 17) et l'information des assurés (article 27). Le report de l'âge légal à 64 ans et l'accélération de la durée d'assurance sont déclarés conformes, sans réserve. Les griefs de procédure (recours à une loi de financement rectificative, délais de l'article 47-1, recours à l'article 49, alinéa 3, clarté et sincérité des débats) sont écartés.",
+      "note": "Texte adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score. En 1re lecture, l'Assemblée n'a pas achevé l'examen du texte, qui est parti au Sénat sans vote sur l'ensemble. Le Gouvernement a engagé sa responsabilité sur le texte de la CMP le 16 mars 2023. Les deux motions de censure du 20 mars 2023 sont affichées groupe par groupe (rôle censure) : la motion transpartisane a recueilli 278 voix, à neuf voix de la majorité requise (287). La motion de rejet préalable et la motion référendaire de 1re lecture sont affichées, pas comptées (règle 10). La 1re lecture est la seule lecture de l'Assemblée où des suppressions ont été mises aux voix (règle 11). Elle s'est arrêtée à l'article 2 : l'article 7, qui portait le report de l'âge légal, n'a jamais été mis aux voix. Un amendement clé est retenu, pour mémoire puisqu'il n'est pas compté : la suppression de l'article 1er, qui ferme plusieurs régimes spéciaux aux nouveaux embauchés, mesure mise en cause par la CGT. Ne sont pas retenus la suppression de l'article liminaire, qui ne porte que sur des prévisions de comptes, et le rejet de l'article 2 (index des seniors), qui est un vote sur un article et non un amendement de suppression.",
+      "sources": {
+        "cc-2023-849": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2023-849 DC",
+          "date": "2023-04-14",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2023/2023849DC.htm"
+        },
+        "cfdt-2023-03-17": {
+          "auteur": "CFDT",
+          "titre": "Déclaration du Bureau national de la CFDT : la CFDT demande solennellement au Gouvernement de retirer son projet de réforme des retraites",
+          "date": "2023-03-17",
+          "url": "https://www.cfdt.fr/upload/docs/application/pdf/2023-03/declaration_du_bn_de_la_cfdt.pdf"
+        },
+        "cgt-2023-03-16": {
+          "auteur": "CGT",
+          "titre": "Projet de loi réforme des retraites : un rejet massif dans la rue et à l'Assemblée s'impose ! (communiqué)",
+          "date": "2023-03-16",
+          "url": "https://www.snjcgt.fr/wp-content/uploads/sites/11/2023/03/CGT-Rejet-massif-16-mars-2023.pdf"
+        },
+        "fo-2023-04-17": {
+          "auteur": "CGT-Force ouvrière",
+          "titre": "Poursuivre les grèves et les mobilisations pour le retrait de la réforme des retraites ! (communiqué)",
+          "date": "2023-04-17",
+          "url": "https://www.force-ouvriere.fr/IMG/pdf/cp_-_fo_-_poursuivre_les_greves_et_les_mobilisations_pour_le_retrait_de_la_reforme_des_retraites_.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V1240",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) de M. Pancher et 90 députés, 20 mars 2023, rejetée, 287 voix requises (278-0)"
+        },
+        {
+          "id": "VTANR5L16V1241",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) de Mme Le Pen et 87 députés, 20 mars 2023, rejetée (94-0)"
+        },
+        {
+          "id": "VTANR5L16V908",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (243-292)"
+        },
+        {
+          "id": "VTANR5L16V909",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion référendaire, 1re lecture (101-272)"
+        },
+        {
+          "id": "VTANR5L16V913",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 1er (fermeture de régimes spéciaux aux nouveaux embauchés), 1re lecture, rejetée (127-253)"
         }
       ]
     },
@@ -5527,6 +6450,186 @@
           "objet": "ensemble, 1re lecture (137-20)"
         }
       ]
+    },
+    {
+      "id": "visite-parlementaires-essms-ppl-2023",
+      "dossier_an": "DLR5L16N46778",
+      "legislature": 16,
+      "titre": "Proposition de loi visant à étendre le droit de visite des parlementaires et parlementaires européens élus en France aux établissements sociaux et médico-sociaux",
+      "resume": "Proposition de loi du groupe RN (Laure Lavalette), examinée le 12 janvier 2023 et rejetée. Son article unique autorisait les députés, les sénateurs et les députés européens élus en France à visiter « à tout moment et sans préavis » tous les établissements sociaux et médico-sociaux. Sont notamment visés ceux de l'aide sociale à l'enfance, les Ehpad, les établissements pour personnes handicapées, les centres d'hébergement et les centres d'accueil pour demandeurs d'asile. Les parlementaires pouvaient se faire accompagner de journalistes. L'Assemblée a supprimé l'article unique (100-90), et le texte a été rejeté.",
+      "droits": [
+        {
+          "code": "enfants",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "ddd-2025-005"
+          ],
+          "justification": "Le texte ouvre aux parlementaires un contrôle sans préavis des lieux d'accueil de la protection de l'enfance, comme il en existe déjà pour les prisons, les centres de rétention et les centres éducatifs fermés. Pour la Défenseure des droits, le contrôle des établissements de protection de l'enfance « s'inscrit dans une politique globale de lutte contre la maltraitance institutionnelle ». Elle juge ce contrôle insuffisant et recommande des « contrôles inopinés dans les structures d'accueil collectif »."
+        },
+        {
+          "code": "sante",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "cglpl-2012"
+          ],
+          "justification": "Le texte ouvre aussi aux visites les établissements pour personnes âgées dépendantes (Ehpad). Le Contrôleur général des lieux de privation de liberté y voit un « risque d'atteinte aux droits des personnes âgées hébergées » et relève qu'« aucun instrument de constat sur place n'existe ». Selon lui, les « possibilités de contrôle » suffisent « à modifier les pratiques »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "",
+      "note": "Le texte n'a pas fait l'objet d'un vote sur l'ensemble. Le 12/01/2023, l'Assemblée a adopté les amendements de suppression de l'article unique (V829, 100-90), et la présidente a constaté que la proposition était rejetée. Le vote qui a fixé le sort de l'article unique tient lieu de scrutin décisif (règle 9). Il porte sur la suppression de l'article : voter pour, c'est voter contre le texte. Aucun amendement clé ni aucune motion de rejet : c'est le seul scrutin public du dossier. Les sources portent sur la mesure (le contrôle sans préavis de ces établissements par un tiers) et non sur ce texte. Le texte étend un droit, et aucune critique n'a été trouvée parmi les sources admises.",
+      "sources": {
+        "cglpl-2012": {
+          "auteur": "Contrôleur général des lieux de privation de liberté",
+          "titre": "Rapport d'activité 2012 (chapitre 1 : la question des établissements d'hébergement pour personnes âgées dépendantes)",
+          "date": "2013-02-25",
+          "url": "https://www.vie-publique.fr/files/rapport/pdf/134000232.pdf"
+        },
+        "ddd-2025-005": {
+          "auteur": "Défenseur des droits",
+          "titre": "Décision-cadre n° 2025-005 du 28 janvier 2025 relative à la protection de l'enfance",
+          "date": "2025-01-28",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=22543"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V829",
+          "role": "decisif",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article unique, valant rejet du texte, 1re lecture, adoptée (100-90)"
+        }
+      ]
+    },
+    {
+      "id": "vote-correspondance-detenus-2025",
+      "dossier_an": "DLR5L17N51052",
+      "legislature": 17,
+      "titre": "Loi relative au droit de vote par correspondance des personnes détenues",
+      "resume": "Proposition de loi sénatoriale (Laure Darcos), adoptée conforme par l'Assemblée. Les personnes détenues ne peuvent plus voter par correspondance qu'à l'élection présidentielle, aux élections européennes et aux référendums. Pour les élections municipales, départementales, régionales et législatives, il leur reste le vote par procuration ou, pour les condamnés, une permission de sortir. Le texte ouvre aussi l'inscription dans la commune d'un descendant. Applicable à partir des municipales de 2026.",
+      "droits": [
+        {
+          "code": "citoyennete",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "oip-2025-05",
+            "cc-2025-889"
+          ],
+          "justification": "Le texte retire aux personnes détenues la modalité de vote qu'elles utilisent le plus pour les élections locales et législatives : « aux élections législatives de 2024, 90% des personnes détenues ayant voté ont voté par correspondance » (OIP). L'OIP y voit une « régression démocratique ». Le Conseil constitutionnel constate que ces dispositions « restreignent, par rapport au droit en vigueur, les modalités » d'exercice du droit de vote des détenus aux élections législatives et municipales, sans « les priver de ce droit »."
+        },
+        {
+          "code": "police-justice",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "oip-2025-05"
+          ],
+          "justification": "La mesure ne vise que les personnes détenues. L'OIP relève que le vote par procuration est difficile en détention, où « les courriers peuvent être lus et les communications téléphoniques écoutées », et que les permissions de sortir sont fermées aux prévenus et « très rarement accordées »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Le texte ouvre aussi aux personnes détenues l'inscription sur la liste électorale de la commune d'un descendant, ce qui facilite le vote par procuration (Conseil constitutionnel, § 16).",
+          "sources": [
+            "cc-2025-889"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2025-889 DC du 17 juillet 2025 : conforme. Saisi par 60 députés, le Conseil juge que la loi restreint les modalités de vote des détenus sans les priver du droit de vote, puisque la procuration et la permission de sortir demeurent. Il écarte les griefs tirés de l'universalité du suffrage, de l'égalité devant le suffrage, du secret du vote et de la dignité.",
+      "note": "Scrutin décisif : le vote sur l'ensemble en 1re lecture (04/06/2025), seule lecture à l'Assemblée, qui a adopté le texte du Sénat sans modification. Aucun amendement clé. La commission des lois avait supprimé l'article 1er, qui porte la mesure, et ajouté cinq articles. En séance, l'Assemblée a rétabli l'article 1er puis supprimé les articles 2 à 6 : l'article 1er est le seul du texte au scrutin décisif, et son rétablissement double le décisif (règle 11). Les suppressions des articles 2 à 6 ne sont pas retenues non plus. L'article 2 (bureau de vote dans chaque établissement, permission de sortir pour voter) n'est mis en cause par aucune source admise, et les articles 3 à 6 ne demandaient que des rapports. Les sous-amendements et les réécritures rejetées de l'article 1er ne sont pas des suppressions. La motion de rejet préalable est affichée, pas comptée.",
+      "sources": {
+        "cc-2025-889": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2025-889 DC du 17 juillet 2025 (loi relative au droit de vote par correspondance des personnes détenues)",
+          "date": "2025-07-17",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2025/2025889DC.htm"
+        },
+        "oip-2025-05": {
+          "auteur": "Observatoire international des prisons, section française",
+          "titre": "Note à destination des commissionnaires aux lois de l'Assemblée nationale portant sur la PPL relative au droit de vote par correspondance des personnes détenues",
+          "date": "2025-05-23",
+          "url": "https://oip.org/wp-content/uploads/2025/05/oip-sf-mai-2025-note-sur-la-ppl-droit-de-vote-par-correspondance-des-personnes-detenues.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V2244",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, adoption conforme (109-60)"
+        },
+        {
+          "id": "VTANR5L17V2221",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (70-83)"
+        }
+      ]
+    },
+    {
+      "id": "vsa-commerces-2026",
+      "dossier_an": "DLR5L17N51720",
+      "legislature": 17,
+      "titre": "Proposition de loi visant à encadrer l'utilisation par les commerçants d'outils d'analyse vidéo automatique pour lutter contre le vol",
+      "resume": "Proposition de loi de Paul Midy, non adoptée définitivement. Elle autorise, à titre expérimental jusqu'au 31 décembre 2027 et à la seule fin de prévenir le vol, le traitement algorithmique des images de vidéoprotection dans les commerces de détail, grandes surfaces et centres commerciaux particulièrement exposés. Le traitement détecte en temps réel des « événements prédéterminés » et les signale. La biométrie et la reconnaissance faciale sont exclues. Chaque dispositif est autorisé par le préfet, sous le contrôle de la CNIL. Le texte initial inscrivait un dispositif pérenne dans le code de la sécurité intérieure. Transmis au Sénat le 16 février 2026, il n'y a pas été examiné.",
+      "droits": [
+        {
+          "code": "vie-privee",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "lqdn-2026-01",
+            "cnil-2022-07",
+            "lqdn-2024-07"
+          ],
+          "justification": "Le texte rend légal, à titre expérimental, l'analyse algorithmique des images des clients des magasins pour y détecter des comportements de vol, ce que le droit en vigueur ne permettait pas. Pour la CNIL, ces dispositifs ne sont pas « une simple évolution technologique » de la vidéo, mais « une modification de leur nature », avec un « risque d'analyse généralisée des personnes ». La Quadrature du Net y voit la légalisation de la vidéosurveillance algorithmique dans les magasins, jusqu'ici illégale."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [],
+      "conseil_constitutionnel": "Pas de décision : texte non adopté définitivement.",
+      "note": "Texte non adopté définitivement : adopté en 1re lecture par l'Assemblée le 16 février 2026, transmis au Sénat, qui ne l'a pas examiné. Le scrutin décisif est le seul vote de l'Assemblée sur l'ensemble, en 1re lecture (V5427, 60-13, règle 9). On qualifie le texte adopté ce jour-là (T.A. n° 239). Le vote sur l'article unique (V5424) double le décisif : il n'est pas retenu. Aucun amendement clé : la seule suppression mise aux voix (V5287, amendement n° 1 et identiques) vise l'article unique et double donc le scrutin décisif (règle 11). Les autres amendements soumis à scrutin public réécrivent l'article sans le supprimer. Motion de rejet préalable affichée, pas comptée.",
+      "sources": {
+        "cnil-2022-07": {
+          "auteur": "CNIL",
+          "titre": "Caméras dites « intelligentes » ou « augmentées » dans les espaces publics : position sur les conditions de déploiement",
+          "date": "2022-07-19",
+          "url": "https://www.cnil.fr/sites/cnil/files/atoms/files/cameras-intelligentes-augmentees_position_cnil.pdf"
+        },
+        "lqdn-2024-07": {
+          "auteur": "La Quadrature du Net",
+          "titre": "Veesion et surveillance en supermarchés : vraie illégalité, faux algorithmes ?",
+          "date": "2024-07-18",
+          "url": "https://www.laquadrature.net/2024/07/18/veesion-et-surveillance-en-supermarches-vraie-illegalite-faux-algorithmes/"
+        },
+        "lqdn-2026-01": {
+          "auteur": "La Quadrature du Net",
+          "titre": "Censure et surveillance : surchauffe au Parlement",
+          "date": "2026-01-30",
+          "url": "https://www.laquadrature.net/2026/01/30/censure-et-surveillance-surchauffe-au-parlement/"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V5427",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (60-13)"
+        },
+        {
+          "id": "VTANR5L17V5286",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (24-62)"
+        }
+      ]
     }
   ],
   "ecartes": [
@@ -5629,8 +6732,8 @@
     {
       "dossier_an": "DLR5L16N46249",
       "legislature": 16,
-      "titre": "Instituer dans les écoles et collèges publics le port d’une tenue uniforme aux couleurs de l’établissement scolaire",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+      "titre": "Proposition de loi visant à instituer dans les écoles et collèges publics le port d'une tenue uniforme aux couleurs de l'établissement scolaire",
+      "motif": "Aucune source admise ne met ce texte en relation avec un droit de la grille (règle 7). Il rendait obligatoire une tenue uniforme dans les écoles et collèges publics. Ni le Défenseur des droits, ni la CNCDH, ni les syndicats de l'enseignement ne l'ont analysé sous l'angle des droits des élèves."
     },
     {
       "dossier_an": "DLR5L16N46270",
@@ -5777,12 +6880,6 @@
       "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
     },
     {
-      "dossier_an": "DLR5L16N46778",
-      "legislature": 16,
-      "titre": "Etendre le droit de visite des parlementaires et parlementaires européens élus en France aux établissements sociaux et médico sociaux",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
-    },
-    {
       "dossier_an": "DLR5L16N46780",
       "legislature": 16,
       "titre": "Revivifier la représentation politique",
@@ -5889,12 +6986,6 @@
       "legislature": 16,
       "titre": "Garantir le respect du droit à l'image des enfants",
       "motif": "Adopté sans aucune voix contre au scrutin décisif (195 pour, 0 contre) : ce vote ne départage aucun député."
-    },
-    {
-      "dossier_an": "DLR5L16N47051",
-      "legislature": 16,
-      "titre": "Interdiction de l’écriture dite « inclusive » dans les éditions, productions et publications scolaires et universitaires ainsi que dans les actes civils, administratifs et commerciaux",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
     },
     {
       "dossier_an": "DLR5L16N47056",
@@ -6305,6 +7396,12 @@
       "motif": "Adopté sans aucune voix contre au scrutin décisif (47 pour, 0 contre) : ce vote ne départage aucun député (règle 9)."
     },
     {
+      "dossier_an": "DLR5L16N48839",
+      "legislature": 16,
+      "titre": "Projet de loi de finances de fin de gestion pour 2023",
+      "motif": "Loi de finances de fin de gestion : elle ne fait qu'ouvrir et annuler les crédits de l'année, sans disposition fiscale ni autre mesure touchant un droit de la grille (règle 8)."
+    },
+    {
       "dossier_an": "DLR5L16N48925",
       "legislature": 16,
       "titre": "Prolonger en 2024 l'utilisation des titres-restaurant pour des achats de produits alimentaires non directement consommables",
@@ -6419,6 +7516,12 @@
       "motif": "Adopté sans aucune voix contre au scrutin décisif (109 pour, 0 contre) : ce vote ne départage aucun député (règle 9)."
     },
     {
+      "dossier_an": "DLR5L16N49283",
+      "legislature": 16,
+      "titre": "Proposition de loi organique visant à renforcer l'ancrage territorial des parlementaires",
+      "motif": "Cumul d'un mandat parlementaire et d'une fonction exécutive locale : une règle d'incompatibilité, qui organise l'exercice des mandats et ne touche ni le droit de vote ni l'éligibilité (règles 2 et 8). Aucune source admise ne l'analyse sous l'angle des droits des personnes."
+    },
+    {
       "dossier_an": "DLR5L16N49296",
       "legislature": 16,
       "titre": "Compléter les dispositions applicables au Haut Conseil de stabilité financière",
@@ -6453,12 +7556,6 @@
       "legislature": 16,
       "titre": "Réduire l’impact environnemental de l’industrie textile",
       "motif": "Adopté sans aucune voix contre au scrutin décisif (338 pour, 0 contre) : ce vote ne départage aucun député."
-    },
-    {
-      "dossier_an": "DLR5L16N49373",
-      "legislature": 16,
-      "titre": "Projet de loi constitutionnelle portant modification du corps électoral pour les élections au congrès et aux assemblées de province de la Nouvelle-Calédonie",
-      "motif": "Corps électoral de Nouvelle-Calédonie : le droit de vote et le droit à l'autodétermination ne figurent pas dans la grille des droits v0."
     },
     {
       "dossier_an": "DLR5L16N49374",
@@ -6707,6 +7804,12 @@
       "motif": "Adopté sans aucune voix contre au scrutin décisif (127 pour, 0 contre) : ce vote ne départage aucun député."
     },
     {
+      "dossier_an": "DLR5L17N50692",
+      "legislature": 17,
+      "titre": "Loi visant à réformer le mode d'élection des membres du Conseil de Paris et des conseils municipaux de Lyon et Marseille",
+      "motif": "Mode de scrutin des conseils municipaux de Paris, Lyon et Marseille. Le droit « citoyenneté » couvre qui peut voter et être élu, et les conditions d'exercice du vote ; le mode de scrutin relève de l'organisation des pouvoirs publics (règles 2 et 8)."
+    },
+    {
       "dossier_an": "DLR5L17N50715",
       "legislature": 17,
       "titre": "Loi contre toutes les fraudes aux aides publiques",
@@ -6735,6 +7838,12 @@
       "legislature": 17,
       "titre": "Prolonger la dérogation d’usage des titres restaurant pour tout produit alimentaire",
       "motif": "Adopté sans aucune voix contre au scrutin décisif (75 pour, 0 contre) : ce vote ne départage aucun député (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L17N50838",
+      "legislature": 17,
+      "titre": "Projet de loi de finances de fin de gestion pour 2024",
+      "motif": "Loi de finances de fin de gestion : elle ne fait qu'ouvrir et annuler les crédits de l'année, sans disposition fiscale ni autre mesure touchant un droit de la grille (règle 8)."
     },
     {
       "dossier_an": "DLR5L17N50882",
@@ -7133,12 +8242,6 @@
       "motif": "Adopté sans aucune voix contre au scrutin décisif (197 pour, 0 contre) : ce vote ne départage aucun député (règle 9)."
     },
     {
-      "dossier_an": "DLR5L17N52104",
-      "legislature": 17,
-      "titre": "Proposition de loi organique portant actualisation du corps électoral pour les élections au congrès et aux assemblées de province de la Nouvelle-Calédonie",
-      "motif": "Corps électoral de Nouvelle-Calédonie : le droit de vote et le droit à l'autodétermination ne figurent pas dans la grille des droits v0."
-    },
-    {
       "dossier_an": "DLR5L17N52132",
       "legislature": 17,
       "titre": "Inscrire la mouvance des frères musulmans sur la liste européenne des organisations terroristes",
@@ -7292,7 +8395,7 @@
       "dossier_an": "DLR5L17N52984",
       "legislature": 17,
       "titre": "Projet de loi constitutionnelle relatif à la Nouvelle-Calédonie",
-      "motif": "Corps électoral de Nouvelle-Calédonie : le droit de vote et le droit à l'autodétermination ne figurent pas dans la grille des droits v0."
+      "motif": "Rejeté par l'Assemblée sans vote sur l'ensemble, par l'adoption d'une motion de rejet préalable (190-107) : aucun scrutin ne tient lieu de décisif (règle 9), et les motions ne sont pas comptées (règle 10). Écarté d'abord comme hors grille v0 (corps électoral de Nouvelle-Calédonie), il relèverait aujourd'hui du droit « citoyenneté » de la grille v1."
     },
     {
       "dossier_an": "DLR5L17N53005",
@@ -7335,6 +8438,12 @@
       "legislature": 17,
       "titre": "Projet de loi autorisant l’approbation de la convention d’extradition entre le Gouvernement de la République française et le Gouvernement de la République de Colombie",
       "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N53135",
+      "legislature": 17,
+      "titre": "Projet de loi de finances de fin de gestion pour 2025",
+      "motif": "Loi de finances de fin de gestion : elle ne fait qu'ouvrir et annuler les crédits de l'année, sans disposition fiscale ni autre mesure touchant un droit de la grille (règle 8)."
     },
     {
       "dossier_an": "DLR5L17N53171",
