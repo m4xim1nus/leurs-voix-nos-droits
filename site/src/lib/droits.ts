@@ -4,6 +4,8 @@
 
 import type { Sens } from './types';
 
+type DroitSens = { code: string; sens: Sens };
+
 interface Affichage {
   /** Nom court, pour les listes et les tableaux. */
   court: string;
@@ -45,3 +47,20 @@ export const court = (code: string) => DROITS[code]?.court ?? code;
 /** « Le texte restreint la vie privée. » */
 export const phrase = (code: string, sens: Sens) =>
   `${sens === 'etend' ? 'étend' : 'restreint'} ${DROITS[code]?.objet ?? code}`;
+
+/**
+ * Un texte vu sous l'angle d'un droit : son sens pour ce droit, et s'il contredit celui du droit
+ * principal. Le score d'un texte et le sens favorable de ses scrutins suivent le droit principal ;
+ * pour un droit de sens contraire, chaque vote favorable devient défavorable (règle 15).
+ */
+export function sousAngle(
+  texte: { principal: DroitSens; droits: DroitSens[] },
+  code: string | null
+): DroitSens & { inverse: boolean } {
+  const d = (code && texte.droits.find((x) => x.code === code)) || texte.principal;
+  return { code: d.code, sens: d.sens, inverse: d.sens !== texte.principal.sens };
+}
+
+/** Score d'un texte (0 à 100) sous l'angle d'un droit de sens contraire au principal. */
+export const scoreSousAngle = (score: number | null, inverse: boolean) =>
+  score === null || !inverse ? score : 100 - score;

@@ -1,18 +1,22 @@
-<!-- Un texte qualifié dans une liste : titre, date du vote décisif, droit principal et son sens. -->
+<!--
+  Un texte qualifié dans une liste : titre, date du vote décisif, droit principal et son sens, ou
+  ceux du droit `droit` quand la liste est filtrée sur un droit.
+-->
 <script lang="ts">
-  import { court, phrase } from '$lib/droits';
+  import { court, phrase, sousAngle } from '$lib/droits';
   import { date, legislature } from '$lib/format';
   import type { TexteCourt } from '$lib/server/vues';
 
-  let { texte }: { texte: TexteCourt } = $props();
+  let { texte, droit = null }: { texte: TexteCourt; droit?: string | null } = $props();
+  const vu = $derived(sousAngle(texte, droit));
 </script>
 
 <a class="texte" href="/textes/{texte.id}">
   <span class="titre">{texte.titre}</span>
   <span class="meta">
-    <span class="sens {texte.principal.sens}">
-      {texte.principal.sens === 'etend' ? '▲' : '▼'}
-      <span>{court(texte.principal.code)}</span></span
+    <span class="sens {vu.sens}">
+      {vu.sens === 'etend' ? '▲' : '▼'}
+      <span>{court(vu.code)}</span></span
     >
     <span class="discret"
       >{texte.sans_vote
@@ -20,9 +24,7 @@
         : `voté le ${date(texte.date)}`}, {legislature(texte.legislature)} législature</span
     >
   </span>
-  <span class="visuellement-cache"
-    >Le texte {phrase(texte.principal.code, texte.principal.sens)}.</span
-  >
+  <span class="visuellement-cache">Le texte {phrase(vu.code, vu.sens)}.</span>
 </a>
 
 <style>

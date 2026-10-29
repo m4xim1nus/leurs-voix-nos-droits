@@ -1,6 +1,6 @@
 <script lang="ts">
   import Regle from '$lib/components/Regle.svelte';
-  import { court, phrase } from '$lib/droits';
+  import { court, phrase, scoreSousAngle, sousAngle } from '$lib/droits';
   import {
     circonscription,
     date,
@@ -19,11 +19,12 @@
   const nom = $derived(`${d.prenom} ${d.nom}`);
   const elle = $derived(d.civ === 'Mme');
 
-  function lecture(v: VoteDepute): { texte: string; classe: string } {
+  /** `inverse` : texte vu sous l'angle d'un droit de sens contraire à son droit principal. */
+  function lecture(v: VoteDepute, inverse: boolean): { texte: string; classe: string } {
     const s = v.scrutin;
     if (!s.compte) return { texte: 'non compté', classe: 'discret' };
     if (v.position === 'pour' || v.position === 'contre')
-      return v.position === s.favorable
+      return (v.position === s.favorable) !== inverse
         ? { texte: 'favorable aux droits', classe: 'favorable' }
         : { texte: 'défavorable aux droits', classe: 'defavorable' };
     return { texte: 'hors calcul', classe: 'discret' };
@@ -35,6 +36,16 @@
           `Bonjour ${d.civ === 'Mme' ? 'Madame la Députée' : 'Monsieur le Député'},\n\nJ’ai consulté vos votes sur les textes qui touchent aux droits et libertés :\n${URL_SITE}/deputes/${d.slug}\n\n`
         )}`
       : null
+  );
+
+  // Un clic sur un droit de la règle ne garde que ses textes, vus sous l'angle de ce droit.
+  let filtre = $state<string | null>(null);
+  const textes = $derived(
+    data.textes.flatMap((t) => {
+      if (filtre && !t.texte.droits.some((x) => x.code === filtre)) return [];
+      const vu = sousAngle(t.texte, filtre);
+      return [{ ...t, vu, score: scoreSousAngle(t.score?.score ?? null, vu.inverse) }];
+    })
   );
 </script>
 
@@ -51,8 +62,8 @@
   <meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
-{#snippet vote(v: VoteDepute)}
-  {@const l = lecture(v)}
+{#snippet vote(v: VoteDepute, inverse: boolean)}
+  {@const l = lecture(v, inverse)}
   <li>
     <span class="objet"
       ><a href={v.scrutin.url} rel="external">{v.scrutin.objet}</a>
@@ -165,8 +176,11 @@
 {#if data.droits.length}
   <section>
     <h2>Droit par droit</h2>
+    <p class="petit discret">Choisissez un droit pour n’afficher que ses textes.</p>
     <Regle
       legende={false}
+      choisie={filtre}
+      onchoisir={(c) => (filtre = filtre === c ? null : c)}
       lignes={data.droits.map((x) => ({
         cle: x.droit.code,
         libelle: x.droit.court,
@@ -186,17 +200,26 @@
       droits. Absent, non-votant ou abstentionniste : son vote n’entre pas dans le score. Les
       motions et les autres lectures sont sur la fiche de chaque texte.
     </p>
-    {#each data.textes as t (t.texte.id)}
+    {#if filtre}
+      <p class="filtre" role="status">
+        <span
+          >{pluriel(textes.length, 'texte touche', 'textes touchent')} à
+          <strong>{court(filtre)}</strong>, avec la lecture de chaque vote pour ce droit.</span
+        >
+        <button type="button" onclick={() => (filtre = null)}>Tous les textes</button>
+        <a href="/droits/{filtre}">{court(filtre)} : tous les groupes</a>
+      </p>
+    {/if}
+    {#each textes as t (t.texte.id)}
       <article class="texte">
         <h3><a href="/textes/{t.texte.id}">{t.texte.titre}</a></h3>
         <p class="petit">
-          Le texte {phrase(t.texte.principal.code, t.texte.principal.sens)}.
-          {#if t.score?.score !== null && t.score?.score !== undefined}Sur ce texte : <strong
-              >{pourcent(t.score.score)}</strong
-            > de votes favorables aux droits.{/if}
+          Le texte {phrase(t.vu.code, t.vu.sens)}.
+          {#if t.score !== null}Sur ce texte : <strong>{pourcent(t.score)}</strong> de votes
+            favorables {filtre ? 'à ce droit' : 'aux droits'}.{/if}
         </p>
         <ul class="votes">
-          {#each t.votes as v (v.scrutin.id)}{@render vote(v)}{/each}
+          {#each t.votes as v (v.scrutin.id)}{@render vote(v, t.vu.inverse)}{/each}
         </ul>
         {#if t.autres}
           <p class="petit discret">
@@ -339,6 +362,26 @@
   .lecture.favorable,
   .lecture.defavorable {
     font-weight: 650;
+  }
+  .filtre {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.3rem 1rem;
+    max-width: none;
+    padding: 0.6rem 0.8rem;
+    background: var(--plan);
+    border-radius: 3px;
+  }
+  .filtre button {
+    font: inherit;
+    font-weight: 650;
+    color: var(--encre);
+    background: var(--papier);
+    border: 1.5px solid var(--encre);
+    border-radius: 3px;
+    padding: 0.1rem 0.6rem;
+    cursor: pointer;
   }
   details summary {
     cursor: pointer;

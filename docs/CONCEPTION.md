@@ -253,7 +253,7 @@ vie privée », avec la source à côté, jamais « texte liberticide ».
 ### Parcours
 
 1. **Mon député** (parcours principal). Code postal ou nom sur l'accueil,
-   puis la fiche du député : score global et par droit, participation,
+   puis la fiche du député : score global et par droit (un clic sur un droit filtre ses votes), participation,
    puis ses votes texte par texte, chacun à côté de la position de son
    groupe. Bouton « Lui écrire » (`mailto:`).
 2. **Un droit**. Depuis l'accueil, l'un des onze droits : les textes qui
@@ -274,11 +274,11 @@ vie privée », avec la source à côté, jamais « texte liberticide ».
 | Droit | `/droits/<code>` | libellé, textes (principal ou secondaire, sens), scores des groupes par législature |
 | Textes | `/textes` | textes qualifiés (filtres : droit, sens, législature), textes écartés et leur motif |
 | Fiche texte | `/textes/<id>` | droits, sens, justification et sources ; vigilance ; Conseil constitutionnel ; scrutins et positions de groupe ; score de chaque groupe sur ce texte ; liens AN et Légifrance |
-| Fiche député | `/deputes/<slug>` | circonscription, groupes successifs, score global et par droit, participation, abstentions, votes sur chaque scrutin compté (les autres sont sur la fiche texte), textes adoptés sans opposition, « Lui écrire », carte partageable |
+| Fiche député | `/deputes/<slug>` | circonscription, groupes successifs, score global et par droit (un clic sur un droit filtre ses votes), participation, abstentions, votes sur chaque scrutin compté (les autres sont sur la fiche texte), textes adoptés sans opposition, « Lui écrire », carte partageable |
 | Circonscription | `/circonscriptions/<dép>-<num>` | député en cours, ou « siège vacant », et ses prédécesseurs depuis 2022 |
 | Groupes | `/groupes` | par législature : tableau groupe × droit, effectifs |
-| Fiche groupe | `/groupes/<sigle>-<législature>` | score global, par droit et par texte, textes adoptés sans opposition, membres et leur score |
-| Comparer | `/comparer?a=…&b=…` | deux députés, deux groupes, ou un député et son groupe : score, droit par droit, textes où ils s'écartent le plus |
+| Fiche groupe | `/groupes/<sigle>-<législature>` | score global, par droit et par texte (un clic sur un droit filtre ses textes), textes adoptés sans opposition, membres et leur score |
+| Comparer | `/comparer?a=…&b=…` | deux députés, deux groupes, ou un député et son groupe : score, droit par droit, textes où ils s'écartent le plus ; deux règles par ligne (le premier en haut, curseur plein ; le second en bas, curseur creux), bandeau fixe qui les rappelle au défilement |
 | Méthodologie | `/methodologie` | grille, règles 1 à 19, préparation des qualifications, code postal, sources |
 | Données | `/donnees` | `editorial.json`, exports CSV, votes nominatifs, licence |
 
@@ -296,7 +296,10 @@ codes postaux, découpée par département.
 
 - **Scores** : `build.sh` lance d'abord `lvnd scores` (choix F1). Le site
   n'en recalcule aucun : il affiche `scores_*.csv` et
-  `participation.csv`. Une publication depuis l'admin met donc le site à
+  `participation.csv`. Seule dérivation : une liste filtrée sur un droit
+  montre un texte sous l'angle de ce droit ; si son sens y est contraire
+  à celui du droit principal, le score du texte devient 100 − score
+  (règle 15, chaque vote favorable devenant défavorable). Une publication depuis l'admin met donc le site à
   jour sans la machine de Max.
 - **Positions de groupe** : `positions_groupes.csv` (règle 12), telles
   quelles.

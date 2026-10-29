@@ -1,6 +1,7 @@
 <script lang="ts">
   import Regle from '$lib/components/Regle.svelte';
   import TexteLigne from '$lib/components/TexteLigne.svelte';
+  import { court, scoreSousAngle, sousAngle } from '$lib/droits';
   import { date, legislature, pluriel, POSITION_GROUPE, pourcent } from '$lib/format';
   import { NOM, URL_SITE } from '$lib/site';
 
@@ -8,6 +9,15 @@
   const g = $derived(data.groupe);
   const actuels = $derived(data.membres.filter((m) => m.dans_le_groupe));
   const anciens = $derived(data.membres.filter((m) => !m.dans_le_groupe));
+
+  // Un clic sur un droit de la règle ne garde que ses textes, vus sous l'angle de ce droit.
+  let filtre = $state<string | null>(null);
+  const textes = $derived(
+    data.textes.flatMap((t) => {
+      if (filtre && !t.texte.droits.some((x) => x.code === filtre)) return [];
+      return [{ ...t, score: scoreSousAngle(t.score.score, sousAngle(t.texte, filtre).inverse) }];
+    })
+  );
 </script>
 
 <svelte:head>
@@ -39,8 +49,11 @@
     hors calcul).
   </p>
   <h2>Droit par droit</h2>
+  <p class="petit discret">Choisissez un droit pour n’afficher que ses textes.</p>
   <Regle
     legende={false}
+    choisie={filtre}
+    onchoisir={(c) => (filtre = filtre === c ? null : c)}
     lignes={data.droits.map((x) => ({
       cle: x.droit.code,
       libelle: x.droit.court,
@@ -50,10 +63,23 @@
     }))}
   />
   <h2>Texte par texte</h2>
+  {#if filtre}
+    <p class="filtre" role="status">
+      <span
+        >{pluriel(textes.length, 'texte touche', 'textes touchent')} à
+        <strong>{court(filtre)}</strong>.</span
+      >
+      <button type="button" onclick={() => (filtre = null)}>Tous les textes</button>
+      <a href="/droits/{filtre}">{court(filtre)} : tous les groupes</a>
+    </p>
+  {/if}
   <ul class="textes">
-    {#each data.textes as t (t.texte.id)}
+    {#each textes as t (t.texte.id)}
       <li>
-        <span class="chiffre score">{pourcent(t.score.score)}</span><TexteLigne texte={t.texte} />
+        <span class="chiffre score">{pourcent(t.score)}</span><TexteLigne
+          texte={t.texte}
+          droit={filtre}
+        />
       </li>
     {/each}
   </ul>
@@ -134,6 +160,26 @@
   }
   .score {
     font-size: 1.5rem;
+  }
+  .filtre {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.3rem 1rem;
+    max-width: none;
+    padding: 0.6rem 0.8rem;
+    background: var(--plan);
+    border-radius: 3px;
+  }
+  .filtre button {
+    font: inherit;
+    font-weight: 650;
+    color: var(--encre);
+    background: var(--papier);
+    border: 1.5px solid var(--encre);
+    border-radius: 3px;
+    padding: 0.1rem 0.6rem;
+    cursor: pointer;
   }
   summary {
     cursor: pointer;
