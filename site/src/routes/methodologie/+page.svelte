@@ -68,7 +68,11 @@
     <li value="4" id="regle-4">
       <strong>Sens droit par droit.</strong> Il n’y a pas de sens « mixte ». Chaque droit touché a le
       sien ; celui du texte est celui de son droit principal. Exemple : la loi immigration de 2024 restreint
-      les droits des personnes étrangères et étend ceux de l’enfant.
+      les droits des personnes étrangères et étend ceux de l’enfant. Le sens se lit par rapport au droit
+      applicable au jour du vote, jurisprudence comprise : une loi qui plafonne ce que les tribunaux accordaient
+      déjà restreint le droit. Dans un texte dont les mesures vont en sens opposés pour un même droit,
+      ce droit prend le sens des mesures que les sources citent le plus souvent, et la mesure de sens
+      opposé s’affiche en point de vigilance.
     </li>
     <li value="5" id="regle-5">
       <strong>Points de vigilance.</strong> Les critiques sourcées sur la mise en œuvre ou sur l’insuffisance
@@ -81,22 +85,25 @@
     <li value="7" id="regle-7">
       <strong>Sources.</strong> Commission nationale consultative des droits de l’homme (CNCDH), Défenseur
       des droits, Conseil constitutionnel, CNIL, Contrôleur général des lieux de privation de liberté
-      et autres instances consultatives indépendantes qui rendent des avis publics, rapporteurs et comités
-      de l’ONU, ONG ; pour la santé, ordres professionnels et sociétés savantes ; organisations professionnelles
-      et syndicales du droit, de la santé et de l’enseignement (Conseil national des barreaux, syndicats
-      d’avocats et de magistrats…) ; organisations syndicales représentatives de salariés ; avis du Conseil
-      d’État sur un projet ou une proposition de loi. Les rapports parlementaires et les positions du
-      Gouvernement ou des groupes ne sont pas des sources : ils sont parties au débat. La Cour des comptes
-      non plus : elle évalue la dépense publique, pas les droits. Quand un texte étend un droit contesté,
-      au moins une source critique figure en vigilance. Si aucune source admise ne le conteste, la qualification
+      et autres instances consultatives indépendantes qui rendent des avis publics, ANSES pour la santé
+      et l’environnement, rapporteurs et comités de l’ONU, ONG ; pour la santé, ordres professionnels
+      et sociétés savantes ; organisations professionnelles et syndicales du droit, de la santé et de
+      l’enseignement (Conseil national des barreaux, syndicats d’avocats et de magistrats…) ; organisations
+      syndicales représentatives de salariés et leurs fédérations professionnelles ; avis du Conseil d’État
+      sur un projet ou une proposition de loi. Les rapports parlementaires et les positions du Gouvernement
+      ou des groupes ne sont pas des sources : ils sont parties au débat. La Cour des comptes non plus :
+      elle évalue la dépense publique, pas les droits. Une source peut porter sur la mesure plutôt que
+      sur le texte, même si elle lui est antérieure. Quand un texte étend un droit contesté, au moins
+      une source critique figure en vigilance. Si aucune source admise ne le conteste, la qualification
       le dit.
     </li>
     <li value="8" id="regle-8">
       <strong>Textes purement organisationnels.</strong> Ils ne sont pas qualifiés, pas plus que les
       résolutions, qui expriment un avis de l’Assemblée sans changer aucune règle, ni les lois qui
       autorisent la ratification d’une convention internationale, ni un texte qui, au vote décisif,
-      ne contient plus aucune mesure (ses articles ont été supprimés). Les textes examinés puis
-      écartés sont <a href="/textes">publiés avec leur motif</a>.
+      ne contient plus aucune mesure (ses articles ont été supprimés). Les motions de censure
+      spontanées (article 49, alinéa 2) ne sont pas qualifiées non plus : elles ne portent sur aucun
+      texte. Les textes examinés puis écartés sont <a href="/textes">publiés avec leur motif</a>.
     </li>
   </ol>
 </section>
@@ -133,9 +140,11 @@
       texte dont le vote décisif n’a recueilli aucune voix d’un des deux côtés n’est pas qualifié : ce
       vote ne départage personne, et le compter rapprocherait tous les scores de 100 %. Un texte à article
       unique sans vote sur l’ensemble (article rejeté, puis texte tombé ou retiré) : le vote sur l’article
-      tient lieu de vote décisif. Un texte adopté par le 49.3, sans vote final : il est qualifié, mais
-      ne compte dans aucun score, car le scrutin sur une motion de censure n’enregistre que les voix pour
-      la censure. Ses motions de censure s’affichent, groupe par groupe.
+      tient lieu de vote décisif. De même quand l’amendement qui supprime l’article unique est adopté
+      et que le texte n’est plus voté : voter pour, c’est alors voter contre le texte. Un texte adopté
+      par le 49.3, sans vote final : il est qualifié, mais ne compte dans aucun score, car le scrutin
+      sur une motion de censure n’enregistre que les voix pour la censure. Ses motions de censure s’affichent,
+      groupe par groupe.
     </li>
     <li value="10" id="regle-10">
       <strong>Motions de rejet : affichées, pas comptées.</strong> Une motion peut être votée pour des
