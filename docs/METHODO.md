@@ -15,7 +15,11 @@ même jour : le choix d'une source d'énergie hors grille (règle 2), les
 instances consultatives indépendantes et les syndicats de salariés parmi
 les sources (règle 7), l'article unique sans vote sur l'ensemble (règle 9).
 Toujours le 29/10/2026 : la grille v1 (droits civiques et politiques) et
-le texte adopté par 49.3 sans vote final (règle 9).
+le texte adopté par 49.3 sans vote final (règle 9). Puis, au lot 4 et au tri
+complémentaire, le même jour : le sens d'un texte composite et la date de
+référence du sens (règle 4), les fédérations syndicales, l'ANSES et la
+source qui porte sur la mesure (règle 7), les motions de censure
+spontanées (règle 8), l'article unique supprimé par amendement (règle 9).
 
 ## Grille des droits
 
@@ -54,6 +58,16 @@ Nouvelle-Calédonie).
    ou `restreint`). Il n'y a pas de sens « mixte » global : le sens
    affiché pour le texte est celui de son droit principal. Exemple,
    l'immigration : `etrangers` restreint, `enfants` étend.
+   Le sens se lit par rapport au **droit applicable au jour du vote,
+   jurisprudence comprise** : une loi qui met le code du travail en
+   conformité avec la Cour de cassation, en plafonnant ce que la
+   jurisprudence accordait déjà, restreint le droit (congés payés pendant
+   la maladie, 2024).
+   Dans un **texte composite** dont les mesures vont en sens opposés pour
+   un même droit, le sens de ce droit est celui des mesures que les sources
+   admises citent le plus souvent. La mesure de sens opposé s'affiche en
+   vigilance (PLFSS 2026 : arrêts de travail limités, `restreint` ;
+   suspension de la réforme des retraites, en vigilance).
 5. **Points de vigilance.** Les critiques sourcées portant sur la mise en
    œuvre ou sur l'insuffisance des garanties s'affichent à côté du
    jugement, sans le modifier (aide à mourir).
@@ -66,7 +80,7 @@ Nouvelle-Calédonie).
      créées par la loi ou le règlement qui rendent des avis publics (Haut
      Conseil à l'égalité, Commission nationale du débat public, Haut Comité
      pour le logement des personnes défavorisées, Autorité
-     environnementale…) ;
+     environnementale…), et, pour la santé et l'environnement, l'ANSES ;
    - rapporteurs et comités de l'ONU ;
    - ONG ;
    - pour la santé, ordres professionnels et sociétés savantes ;
@@ -74,13 +88,19 @@ Nouvelle-Calédonie).
      de l'enseignement (Conseil national des barreaux, Syndicat des avocats
      de France, Syndicat de la magistrature…) ;
    - organisations syndicales représentatives de salariés (CGT, CFDT, FO,
-     CFE-CGC, CFTC, UNSA, FSU, Solidaires) ;
+     CFE-CGC, CFTC, UNSA, FSU, Solidaires), y compris leurs fédérations
+     professionnelles, qui parlent en leur nom dans une branche ou une
+     fonction publique ; pas les syndicats ou sections d'entreprise ;
    - avis du Conseil d'État sur un projet ou une proposition de loi.
 
    Ne sont pas des sources les rapports parlementaires ni les positions du
    Gouvernement ou des groupes, qui sont parties au débat. La Cour des
    comptes non plus : elle évalue la dépense et l'efficacité des
    politiques publiques, pas les droits.
+
+   Une source peut porter sur la **mesure** plutôt que sur le texte, même si
+   elle lui est antérieure : il suffit qu'elle se prononce sur la mesure que
+   le texte inscrit (avis de l'ANSES sur le plafond de cadmium).
 
    Quand un texte étend un droit contesté, au moins une source critique
    figure en vigilance. Si aucune source admise ne conteste le droit
@@ -94,7 +114,10 @@ Nouvelle-Calédonie).
    vote ne porte sur aucune mesure de droit interne. N'est pas qualifié
    enfin un texte qui, au scrutin décisif, ne contient plus aucune mesure
    normative : ses articles ont été supprimés et il ne reste que des
-   demandes de rapport ou un gage.
+   demandes de rapport ou un gage. Ne sont pas qualifiées, enfin, les
+   **motions de censure spontanées** (article 49, alinéa 2) : elles ne
+   portent sur aucun texte, et seules les voix pour la censure y sont
+   décomptées.
 
 ## Scrutins retenus
 
@@ -104,7 +127,10 @@ Nouvelle-Calédonie).
    justice des mineurs). Les autres lectures sont affichées, pas comptées.
    Quand un texte à **article unique** n'a pas de vote sur l'ensemble
    (article rejeté, puis texte tombé ou retiré), le vote sur l'article
-   unique tient lieu de scrutin décisif. Dans le cas habituel (article
+   unique tient lieu de scrutin décisif. De même, quand l'amendement qui
+   **supprime l'article unique** est adopté et que le texte n'est plus voté,
+   ce scrutin tient lieu de décisif : voter pour, c'est voter contre le
+   texte (délit de séjour irrégulier, 2025). Dans le cas habituel (article
    adopté, puis vote sur l'ensemble), le vote sur l'article double le
    décisif et n'est pas retenu.
    Un texte dont le scrutin décisif n'a **aucune voix d'un des deux côtés**

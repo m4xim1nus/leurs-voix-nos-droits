@@ -1,7 +1,7 @@
 # Qualification par lots
 
 Procédure suivie pour qualifier les textes au-delà des six témoins.
-Elle a servi au lot 1 (21 textes, 29/10/2026). Les règles de fond sont
+Elle a servi aux lots 1 à 4 et aux deux lots de tri (29/10/2026). Les règles de fond sont
 celles de `docs/METHODO.md`. Le circuit est celui de l'admin
 (`docs/CONCEPTION.md`) : D1 sert de brouillon, la publication vaut commit.
 
@@ -66,19 +66,29 @@ travail doit être factuel, sourcé, vérifiable, et signaler franchement les po
 ### À lire d'abord (lecture seule, ne modifie aucun fichier du dépôt)
 
 - `docs/METHODO.md` : règles 1 à 13 (qualification et scrutins) — **à appliquer strictement**,
-  en particulier : 1 (point de vue des personnes), 2 (périmètre ; propriété et ordre public hors
-  grille), 3 (recouvrements), 4 (sens droit par droit, un droit principal), 5 (vigilance), 6
-  (on qualifie le texte soumis au scrutin décisif), 7 (sources admises, dont les syndicats et
-  ordres du droit, de la santé et de l'enseignement et les avis du Conseil d'État ; **jamais** un
-  rapport parlementaire ni la position du Gouvernement ou d'un groupe ; si le texte **étend** un
-  droit contesté, au moins une source critique en vigilance, et sinon la note dit « aucune critique
-  trouvée parmi les sources admises »), 8 (non qualifiés → « écarté » : texte purement
-  organisationnel, résolution, convention internationale, texte vidé de toute mesure normative
-  au scrutin décisif), 9 (décisif = dernier vote de l'AN sur l'ensemble ; décisif sans aucune voix
-  d'un côté → écarté), 10 (motions affichées, pas comptées), 11 (amendements clés : seulement suppression ou rétablissement d'un
-  article dont la mesure est **mise en cause** par une source ; **une seule lecture : la dernière
-  lecture de l'AN où des suppressions ont été mises aux voix** ; un seul scrutin par article ; le
-  sens se lit sur le contenu de l'article).
+  en particulier : 1 (point de vue des personnes), 2 (périmètre ; propriété, ordre public et choix
+  d'une source d'énergie hors grille ; droits civiques dans `citoyennete`, grille v1), 3
+  (recouvrements), 4 (sens droit par droit, un droit principal ; sens lu par rapport au droit
+  applicable au jour du vote, jurisprudence comprise ; texte composite : sens des mesures que les
+  sources citent le plus, la mesure opposée en vigilance), 5 (vigilance), 6 (on qualifie le texte
+  soumis au scrutin décisif), 7 (sources admises, dont les instances consultatives indépendantes,
+  l'ANSES, les syndicats représentatifs de salariés et leurs fédérations, les syndicats et ordres
+  du droit, de la santé et de l'enseignement, les avis du Conseil d'État ; une source peut porter
+  sur la mesure plutôt que sur le texte ; **jamais** un rapport parlementaire, la Cour des comptes
+  ni la position du Gouvernement ou d'un groupe ; si le texte **étend** un droit contesté, au
+  moins une source critique en vigilance, et sinon la note dit « aucune critique trouvée parmi les
+  sources admises »), 8 (non qualifiés → « écarté » : texte purement organisationnel, résolution,
+  convention internationale, motion de censure spontanée, texte vidé de toute mesure normative au
+  scrutin décisif), 9 (décisif = dernier vote de l'AN sur l'ensemble ; à défaut, pour un article
+  unique, le vote sur l'article ou l'amendement adopté qui le supprime, voter pour allant alors
+  contre le texte ; décisif sans aucune voix d'un côté → écarté ; texte adopté par 49.3 sans vote
+  final : qualifié, compté dans aucun score, motions de censure en rôle `censure`), 10 (motions
+  affichées, pas comptées), 11 (amendements clés : seulement suppression ou rétablissement d'un
+  article dont la mesure est **mise en cause** par une source — une source favorable, une critique
+  d'insuffisance ou une décision qui valide la mesure ne suffisent pas ; article mixte, au sens non
+  univoque → non retenu ; **une seule lecture : la dernière lecture de l'AN où des suppressions
+  ont été mises aux voix** ; un seul scrutin par article ; le sens se lit sur le contenu de
+  l'article).
 - `pipeline/referentiels/droits.yaml` : la grille (codes de droits et d'étiquettes autorisés).
 - `pipeline/referentiels/temoins.yaml` : **six exemples validés** — imite leur niveau d'exigence,
   leur ton et leur format.
@@ -147,6 +157,9 @@ Règles de format :
 - Retiens : le décisif (en principe `decisif_propose` ; vérifie la règle 9), les autres votes sur
   l'ensemble (`ensemble`), les motions de rejet (`motion`), et les amendements clés de la règle 11
   (0 si aucun ne remplit les conditions — c'est fréquent ; dis pourquoi dans `note`).
+- Texte adopté par 49.3 sans vote final (règle 9) : pas de décisif ; retiens les motions de
+  censure votées sur ce texte (`role: censure, pour: contre-texte`), même rattachées à un autre
+  dossier du catalogue.
 - Chaque droit a au moins une source ; toute clé citée est définie ; un seul droit principal.
 - Texte non adopté ou sans scrutin décisif clair : applique la règle 9 et signale-le.
 

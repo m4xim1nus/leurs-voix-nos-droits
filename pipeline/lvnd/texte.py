@@ -72,6 +72,8 @@ OBJETS = [
     ("partie", r"la (premiere|deuxieme|troisieme|quatrieme) partie"),
     # amendement(s) de suppression de l'article unique : s'il est adopté, le texte est rejeté
     ("suppression_article_unique", r"(l |les )?amendements? .{0,200}de suppression de l article unique"),
+    # « l'amendement de suppression n° 2 de M. X et les amendements identiques suivants à l'article unique »
+    ("suppression_article_unique", r"(l |les )?amendements? de suppression .{0,200}a l article unique"),
     # vote unique (art. 44, al. 3) : « sur les articles 9 à 20 et sur l'ensemble du texte… »
     ("ensemble", r"(l |les )?articles? .{0,60}et sur l ensemble"),
     ("amendement", r"(l |le |les )?(sous )?amendements?"),

@@ -204,16 +204,18 @@ chat puis publie depuis l'admin.
   d'une source d'énergie hors grille), règle 7 (instances consultatives
   indépendantes, syndicats de salariés ; pas la Cour des comptes), règle 9
   (article unique sans vote sur l'ensemble).
-- ⏳ Lot 4 (22 textes, 29/10/2026) : préparé, « à relire » dans l'admin
-  (fiche `source/relecture-lot4.md`). Fin de la liste A, plus dix textes
-  hors liste A (LOPMI, fraudes, simplification, industrie verte, urgence
-  agricole…). Cinq questions à trancher, dont le décisif d'un article
-  unique supprimé par amendement (délit de séjour irrégulier, seul
-  candidat `etrangers`) et les fédérations syndicales (règle 7).
-- ⏳ Tri complémentaire (229 textes que les mots-clés n'avaient pas
-  repérés, fiche `source/relecture-tri2.md`) : 35 à qualifier (vivier du
-  lot 5), 160 écarts « à relire » dans l'admin, 34 en attente. Quatre
-  questions, dont les motions de censure et les lois de finances.
+- ✅ Lot 4 (22 textes, 29/10/2026) : 14 validés, 8 écartés (fiche
+  `source/relecture-lot4.md`), dont dix textes hors liste A (LOPMI,
+  fraudes, simplification, industrie verte, urgence agricole…). Règle 4
+  (texte composite ; sens lu au jour du vote, jurisprudence comprise),
+  règle 7 (fédérations syndicales, ANSES, source sur la mesure), règle 9
+  (article unique supprimé par amendement : premier texte `etrangers`
+  depuis le témoin, délit de séjour irrégulier).
+- ✅ Tri complémentaire (229 textes que les mots-clés n'avaient pas
+  repérés, fiche `source/relecture-tri2.md`) : 176 écartés, dont les 18
+  motions de censure spontanées (règle 8) ; 38 à qualifier (vivier du
+  lot 5) ; 34 en attente. Deux questions suspendues par la grille v1 et la
+  règle du 49.3 (lois de finances, vote des détenus).
 - ⏳ Lots suivants, d'une vingtaine de textes chacun, jusqu'au seuil de la
   v1, puis au fil de l'eau. Toujours aucun candidat `etrangers` avec vote
   sur l'ensemble.

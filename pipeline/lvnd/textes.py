@@ -146,6 +146,14 @@ def _initiative(d: dict) -> str:
     return "inconnue"
 
 
+def _decisif(ss: list[dict], ensembles: list[dict]) -> str | None:
+    """Dernier vote sur l'ensemble ; à défaut, la suppression adoptée de l'article unique (règle 9)."""
+    if ensembles:
+        return ensembles[-1]["id"]
+    suppr = [s for s in ss if s["objet"] == "suppression_article_unique" and s["sort"] == "adopte"]
+    return suppr[-1]["id"] if suppr else None
+
+
 def catalogue(dossiers: dict[str, dict], scrutins: list[dict], liens: dict[str, dict]) -> list[dict]:
     """Une ligne par dossier ayant au moins un scrutin public à l'AN dans le périmètre."""
     par_dossier: dict[str, list[dict]] = defaultdict(list)
@@ -184,7 +192,7 @@ def catalogue(dossiers: dict[str, dict], scrutins: list[dict], liens: dict[str, 
             "n_scrutins": len(ss),
             "n_amendements": sum(s["objet"] in ("amendement", "suppression_article_unique") for s in ss),
             "n_ensemble": len(ensembles),
-            "decisif_propose": ensembles[-1]["id"] if ensembles else None,
+            "decisif_propose": _decisif(ss, ensembles),
             "premier_scrutin": ss[0]["date"],
             "dernier_scrutin": ss[-1]["date"],
         })
