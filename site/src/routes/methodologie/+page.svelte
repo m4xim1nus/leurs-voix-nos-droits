@@ -53,6 +53,8 @@
       <strong>Périmètre.</strong> La grille suit les droits des personnes face à la puissance publique
       et aux plus forts. La propriété et l’ordre public sont des objectifs que la loi concilie avec ces
       droits : ils n’entrent pas dans la grille. Quand un texte les étend, c’est signalé en point de vigilance.
+      L’accès aux soins entre dans le droit à la santé (installation des médecins, accès direct aux professionnels).
+      Les droits civiques et politiques (droit de vote, corps électoral) ne sont pas encore dans la grille.
     </li>
     <li value="3">
       <strong>Recouvrements.</strong> Justice des mineurs : droits de l’enfant en principal, police et
@@ -80,8 +82,10 @@
       Quand un texte étend un droit contesté, au moins une source critique figure en vigilance.
     </li>
     <li value="8">
-      <strong>Textes purement organisationnels.</strong> Ils ne sont pas qualifiés. Les textes
-      examinés puis écartés sont <a href="/textes">publiés avec leur motif</a>.
+      <strong>Textes purement organisationnels.</strong> Ils ne sont pas qualifiés, pas plus que les
+      résolutions, qui expriment un avis de l’Assemblée sans changer aucune règle, ni les lois qui
+      autorisent la ratification d’une convention internationale. Les textes examinés puis écartés
+      sont <a href="/textes">publiés avec leur motif</a>.
     </li>
   </ol>
 </section>
@@ -114,7 +118,9 @@
     <li value="9">
       <strong>Vote décisif.</strong> Le dernier vote de l’Assemblée sur l’ensemble du texte : lecture
       définitive, texte de la commission mixte paritaire, ou dernière lecture à l’Assemblée quand le texte
-      est adopté définitivement au Sénat. Les votes des autres lectures sont affichés, pas comptés.
+      est adopté définitivement au Sénat. Les votes des autres lectures sont affichés, pas comptés. Un
+      texte dont le vote décisif n’a recueilli aucune voix d’un des deux côtés n’est pas qualifié : ce
+      vote ne départage personne, et le compter rapprocherait tous les scores de 100 %.
     </li>
     <li value="10">
       <strong>Motions de rejet : affichées, pas comptées.</strong> Une motion peut être votée pour des
