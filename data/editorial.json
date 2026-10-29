@@ -96,6 +96,246 @@
       ]
     },
     {
+      "id": "antisemitisme-enseignement-superieur",
+      "dossier_an": "DLR5L17N50724",
+      "legislature": 17,
+      "titre": "Loi relative à la lutte contre l'antisémitisme dans l'enseignement supérieur",
+      "resume": "Crée dans chaque établissement d'enseignement supérieur une mission « égalité et diversité », avec un référent et un dispositif de signalement des faits d'antisémitisme, de racisme et de discrimination, et impose une formation à la lutte contre ces faits. Réforme la procédure disciplinaire des étudiants : liste de fautes élargie, y compris hors de l'établissement, interdiction d'accès à titre conservatoire, section disciplinaire régionale présidée par un magistrat administratif, information des victimes sur les suites données.",
+      "droits": [
+        {
+          "code": "discriminations",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "cncdh-rapport-2025",
+            "cc-2025-890"
+          ],
+          "justification": "Mission « égalité et diversité », référent et signalement anonyme dans chaque établissement, formation obligatoire, information des victimes sur les poursuites disciplinaires : mesures qui rejoignent les constats de la CNCDH sur la sous-déclaration ; loi validée sans réserve."
+        },
+        {
+          "code": "libertes",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "lapeyre-2026",
+            "snesup-2025"
+          ],
+          "justification": "Fautes disciplinaires élargies à des notions jugées floues (« atteinte à l'ordre ou au bon fonctionnement ») et aux faits commis hors de l'établissement, interdiction d'accès conservatoire : risque pour l'expression des étudiants et les libertés académiques selon la doctrine et le SNESUP-FSU. Le Conseil constitutionnel juge ces dispositions suffisamment précises."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Garanties disciplinaires des étudiants : section régionale saisie par le seul président d'établissement, garanties de procédure moins formalisées qu'au pénal, risque de cumul avec des poursuites pénales.",
+          "sources": [
+            "lapeyre-2026"
+          ]
+        },
+        {
+          "texte": "Missions et référents créés sans moyens dédiés, selon des élus du SNESUP-FSU au Cneser.",
+          "sources": [
+            "snesup-2025"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2025-890 DC du 29 juillet 2025, saisie par des députés (première signataire : Mathilde Panot). Le dernier alinéa de l'article L. 811-5-1 (section disciplinaire commune) et le I de l'article L. 811-6 (liste des fautes disciplinaires) du code de l'éducation sont déclarés conformes, sans réserve : ces dispositions sont « suffisamment précises pour garantir contre le risque d'arbitraire ». Aucune autre disposition n'a été examinée d'office.",
+      "note": "Adoption définitive le 2 juillet 2025 : le scrutin décisif est le vote de l'AN sur le texte de la CMP (règle 9). Amendement clé (1re lecture, seule lecture de l'AN où des suppressions et des rétablissements ont été votés, règle 11) : rétablissement de l'article 3, supprimé en commission, dont les mesures disciplinaires sont mises en cause par la doctrine (Revue des droits de l'homme) et par le SNESUP-FSU. L'article figure dans la loi : voter pour va dans le sens du texte. Les sept sous-amendements à cet amendement (V1586 à V1592) ne sont pas comptés, puisqu'on garde un seul scrutin par article. Écartés : les suppressions des articles 5, 6 et 7 (V1598, V1599, V1600), qui demandaient des rapports au Gouvernement et qu'aucune source ne met en cause, ainsi que les autres amendements (V1571 à V1584, V1594, V1595, V1597), qui ne suppriment ni ne rétablissent un article. Les votes sur les articles 1er, 2 et 4 ne sont pas retenus.",
+      "sources": {
+        "cc-2025-890": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2025-890 DC",
+          "date": "2025-07-29",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2025/2025890DC.htm"
+        },
+        "cncdh-rapport-2025": {
+          "auteur": "CNCDH",
+          "titre": "La lutte contre le racisme, l'antisémitisme et la xénophobie, année 2024 (rapport 2025), encadré « Rapport de la mission d'information du Sénat sur l'antisémitisme dans l'enseignement supérieur, audition et position de la CNCDH », p. 107-108",
+          "date": "2025-06-18",
+          "url": "https://www.cncdh.fr/sites/default/files/2025-06/CNCDH_Rapport_2025_Annee-2024_Racisme_PDFAccess.pdf"
+        },
+        "lapeyre-2026": {
+          "auteur": "Alizé Lapeyre, La Revue des droits de l'homme (Actualités Droits-Libertés)",
+          "titre": "Lutte contre l'antisémitisme dans l'enseignement supérieur et la recherche : vers une répression des libertés académiques ?",
+          "date": "2026-04-28",
+          "url": "https://journals.openedition.org/revdh/25877"
+        },
+        "snesup-2025": {
+          "auteur": "SNESUP-FSU (M. Artaud, O. Garet, C. Voilliot, élus au Cneser)",
+          "titre": "Les décrets d'application de la loi contre l'antisémitisme soumis pour avis au Cneser, Le SNESUP n° 738, p. 7",
+          "date": "2025-12",
+          "url": "https://www.snesup.fr/sites/default/files/2025-11/actu_loiantisem_snesup_ndeg738p7.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V2880",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP, scrutin solennel (366-88)"
+        },
+        {
+          "id": "VTANR5L17V1601",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (131-28)"
+        },
+        {
+          "id": "VTANR5L17V2879",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (46-179)"
+        },
+        {
+          "id": "VTANR5L17V1593",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 3, procédure disciplinaire (fautes élargies, section régionale, interdiction d'accès, information des victimes), adopté (124-55)"
+        }
+      ]
+    },
+    {
+      "id": "assurance-chomage-2022",
+      "dossier_an": "DLR5L16N46266",
+      "legislature": 16,
+      "titre": "Loi portant mesures d'urgence relatives au fonctionnement du marché du travail en vue du plein emploi",
+      "resume": "Le texte prolonge par décret les règles de l'assurance chômage jusqu'à fin 2023. Il permet de moduler la durée d'indemnisation selon la conjoncture et prive d'allocation le demandeur qui refuse deux CDI en un an. Il présume démissionnaire le salarié qui abandonne son poste, ce qui le prive d'allocation. Il ouvre aussi la VAE aux proches aidants.",
+      "droits": [
+        {
+          "code": "travail-protection-sociale",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cescr-2023",
+            "cc-2022-844"
+          ],
+          "justification": "Le Comité DESC de l'ONU s'inquiète d'une réforme qui « prévoit un durcissement des règles d'indemnisation, y compris la réduction du temps d'indemnisation ». Selon le Conseil constitutionnel, la présomption de démission peut « priver le salarié concerné de son droit à l'allocation », même s'il la valide."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "Décision 2022-844 DC du 15 décembre 2022 : conformité, sans réserve, des dispositions contestées (prolongation par décret, refus de deux CDI, présomption de démission, réforme de la validation des acquis de l'expérience). Sur l'abandon de poste, le Conseil admet une atteinte possible au droit d'obtenir un emploi. Il la juge encadrée : la présomption ne joue qu'en cas d'abandon volontaire, après mise en demeure, et le salarié peut la renverser.",
+      "note": "Une seule lecture à l'AN avant la CMP. Aucun amendement clé. Le seul amendement de suppression mis aux voix (V193, article 1er, 156-166) visait la prolongation par décret des règles en vigueur : aucune source admise ne met en cause cette mesure en tant que telle. La modulation selon la conjoncture et le refus de deux CDI, que vise le Comité DESC, ont été ajoutés au Sénat, sans scrutin de suppression à l'AN. La présomption de démission vient d'un amendement adopté en 1re lecture (V209, 219-68). Ce n'est ni une suppression ni un rétablissement d'article : il n'est pas compté (règle 11).",
+      "sources": {
+        "cc-2022-844": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2022-844 DC",
+          "date": "2022-12-15",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2022/2022844DC.htm"
+        },
+        "cescr-2023": {
+          "auteur": "Comité des droits économiques, sociaux et culturels (ONU)",
+          "titre": "Observations finales concernant le cinquième rapport périodique de la France (E/C.12/FRA/CO/5), § 30-31",
+          "date": "2023-10-30",
+          "url": "https://digitallibrary.un.org/record/4032988/files/E_C.12_FRA_CO_5-FR.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V567",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (210-140)"
+        },
+        {
+          "id": "VTANR5L16V236",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (303-249)"
+        },
+        {
+          "id": "VTANR5L16V192",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (146-211)"
+        },
+        {
+          "id": "VTANR5L16V566",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (121-188)"
+        }
+      ]
+    },
+    {
+      "id": "duplomb-2025",
+      "dossier_an": "DLR5L17N50819",
+      "legislature": 17,
+      "titre": "Loi visant à lever les contraintes à l'exercice du métier d'agriculteur",
+      "resume": "Le texte assouplit l'encadrement du conseil sur les pesticides. Il permet de déroger par décret à l'interdiction des néonicotinoïdes (acétamipride), relève les seuils de procédure des élevages classés et présume d'intérêt général majeur certains ouvrages agricoles de stockage d'eau (« mégabassines »). L'Assemblée n'a examiné aucun article : sa majorité a adopté sa propre motion de rejet pour passer directement en CMP.",
+      "droits": [
+        {
+          "code": "environnement",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cc-2025-891"
+          ],
+          "justification": "La dérogation aux néonicotinoïdes « a privé de garanties légales le droit de vivre dans un environnement équilibré et respectueux de la santé » (Conseil constitutionnel, censure). Le stockage d'eau présumé d'intérêt général majeur n'est validé que sous réserve : aucun prélèvement dans les nappes inertielles."
+        },
+        {
+          "code": "sante",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cnom-2025-07",
+            "ligue-cancer-2025-08"
+          ],
+          "justification": "Réintroduction possible de l'acétamipride. L'Ordre des médecins juge que « le doute n'est pas raisonnable » face aux risques de « troubles neuro-développementaux, cancers pédiatriques, maladies chroniques »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "La disposition la plus contestée, la dérogation aux néonicotinoïdes, a été censurée : elle ne figure pas dans la loi promulguée. On qualifie toutefois le texte voté le 8 juillet 2025, qui la contenait (règle 6).",
+          "sources": [
+            "cc-2025-891"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2025-891 DC du 7 août 2025, non-conformité partielle avec réserves. Censure de la dérogation par décret à l'interdiction des néonicotinoïdes (article 2) et de l'article 8, un cavalier. Le stockage d'eau présumé d'intérêt général majeur (article 5) est validé sous deux réserves : aucun prélèvement dans les nappes inertielles, et une présomption qui reste contestable. Le conseil phytosanitaire et les règles des élevages classés sont validés. Le grief tiré de la motion de rejet est écarté.",
+      "note": "Trois scrutins seulement. Le Sénat a adopté le texte de la CMP le 2 juillet 2025 et l'Assemblée l'a adopté le 8 juillet 2025 : ce dernier vote est donc le scrutin décisif (règle 9). En 1re lecture, le rapporteur et quatre présidents de groupe favorables au texte ont déposé une motion de rejet préalable. Elle a été adoptée (274-121) pour écarter environ 3 500 amendements et provoquer une CMP. Le Conseil constitutionnel relève que son vote était souhaité « non pas pour marquer une opposition de fond au texte, mais en vue d'accélérer sa procédure d'adoption » (§ 9). Voter pour cette motion allait donc dans le sens du texte. Comme toute motion, elle est affichée sans être comptée (règle 10). Aucun article ni amendement n'a été mis aux voix à l'Assemblée : il n'y a donc aucun amendement clé (règle 11).",
+      "sources": {
+        "cc-2025-891": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2025-891 DC",
+          "date": "2025-08-07",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2025/2025891DC.htm"
+        },
+        "cnom-2025-07": {
+          "auteur": "Conseil national de l'Ordre des médecins",
+          "titre": "Santé environnementale",
+          "date": "2025-07-30",
+          "url": "https://www.conseil-national.medecin.fr/publications/communiques-presse/sante-environnementale"
+        },
+        "ligue-cancer-2025-08": {
+          "auteur": "Ligue contre le cancer",
+          "titre": "Censure partielle de la loi Duplomb : pour la Ligue contre le cancer, le signe que « la santé publique ne peut pas faire l'économie d'un débat éclairé par la science »",
+          "date": "2025-08-07",
+          "url": "https://www.ligue-cancer.net/sites/default/files/presse/PLAIDOYER_PPL-Duplomb-CC_REACT_mep.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V2957",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (316-223)"
+        },
+        {
+          "id": "VTANR5L17V2105",
+          "role": "motion",
+          "pour": "texte",
+          "objet": "motion de rejet préalable adoptée, 1re lecture, déposée par les soutiens du texte (274-121)"
+        },
+        {
+          "id": "VTANR5L17V2956",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (158-264)"
+        }
+      ]
+    },
+    {
       "id": "immigration-2024",
       "dossier_an": "DLR5L16N47118",
       "legislature": 16,
@@ -172,6 +412,76 @@
           "role": "motion",
           "pour": "contre-texte",
           "objet": "motion de rejet préalable, CMP (155-384)"
+        }
+      ]
+    },
+    {
+      "id": "ingerences-etrangeres-2024",
+      "dossier_an": "DLR5L16N49386",
+      "legislature": 16,
+      "titre": "Loi visant à prévenir les ingérences étrangères en France",
+      "resume": "Crée auprès de la HATVP un répertoire des personnes qui exercent une influence pour le compte d'un mandant étranger. Il oblige certains organismes (think tanks, établissements culturels) à déclarer leurs financements étrangers. Il étend jusqu'au 30 juin 2028, à titre expérimental, la technique de l'algorithme (« boîtes noires ») du terrorisme aux ingérences étrangères et à la défense nationale. Il crée enfin un gel des avoirs pour actes d'ingérence et une circonstance aggravante générale pour les infractions commises au profit d'une puissance étrangère, qui ouvre les procédures de la criminalité organisée.",
+      "droits": [
+        {
+          "code": "vie-privee",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "lqdn-2024-06"
+          ],
+          "justification": "Extension à de nouvelles finalités des « boîtes noires », sondes qui surveillent les réseaux de télécommunication : La Quadrature du Net y voit un élargissement de cette « surveillance de masse », « avec des champs mal définis » (« l'indépendance nationale », « les intérêts majeurs de la politique étrangère »)."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [],
+      "conseil_constitutionnel": "Aucun examen au fond. La saisine des députés LFI, déposée le 10 juin 2024, a été déclarée irrecevable (2024-870 DC du 10 juillet 2024) : la dissolution de la veille avait mis fin à leur mandat. Une nouvelle saisine a aussi été déclarée irrecevable (2024-871 DC du 24 juillet 2024).",
+      "note": "Scrutin décisif : l'ensemble du texte de la CMP, le 5 juin 2024. C'est le dernier vote de l'AN, qui a adopté le texte définitivement. Il n'y a eu qu'une lecture à l'AN, et aucun amendement de suppression ou de rétablissement n'y a fait l'objet d'un scrutin public. Il y a donc 0 amendement clé. Les amendements de suppression de l'article sur l'algorithme (article 3 de la proposition, article 6 de la loi) n'ont pas fait l'objet d'un scrutin public. Les scrutins sur l'article 3 (amendements Iordanoff et Pic) le modifient sans le supprimer. Le vote sur l'article 3 lui-même (106-7) est affiché, pas compté. Les libertés (déclaration des financements étrangers des associations) et les garanties pénales (circonstance aggravante ouvrant les techniques spéciales d'enquête) ne sont pas retenues : aucune source admise ne met ces mesures en cause.",
+      "sources": {
+        "cc-2024-870": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2024-870 DC (irrecevabilité)",
+          "date": "2024-07-10",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2024/2024870DC.htm"
+        },
+        "cc-2024-871": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2024-871 DC (irrecevabilité)",
+          "date": "2024-07-24",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2024/2024871DC.htm"
+        },
+        "lqdn-2024-06": {
+          "auteur": "La Quadrature du Net",
+          "titre": "QSPTAG #309 — 7 juin 2024 (rubrique « Loi contre les ingérences étrangères »)",
+          "date": "2024-06-07",
+          "url": "https://www.laquadrature.net/2024/06/07/qsptag-309-7-juin-2024/"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V4051",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (138-10)"
+        },
+        {
+          "id": "VTANR5L16V3587",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (171-25)"
+        },
+        {
+          "id": "VTANR5L16V3567",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (34-182)"
+        },
+        {
+          "id": "VTANR5L16V4050",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (21-101)"
         }
       ]
     },
@@ -279,6 +589,217 @@
           "role": "motion",
           "pour": "contre-texte",
           "objet": "motion de rejet préalable, CMP (60-232)"
+        }
+      ]
+    },
+    {
+      "id": "jo-2030",
+      "dossier_an": "DLR5L17N52100",
+      "legislature": 17,
+      "titre": "Loi relative à l'organisation des jeux Olympiques et Paralympiques de 2030",
+      "resume": "Organise les Jeux d'hiver de 2030 par des dérogations en matière d'urbanisme, d'environnement, de publicité, d'expropriation et de repos dominical. Son volet sécurité reconduit jusqu'au 31 décembre 2027 l'expérimentation de vidéosurveillance algorithmique de la loi JO 2024. Il crée une interdiction administrative de paraître lors des grands événements, permet aux agents privés d'inspecter les véhicules, étend les enquêtes administratives aux intérimaires des transports et permet d'interdire préventivement à un pilote de décoller.",
+      "droits": [
+        {
+          "code": "vie-privee",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-a-2025-9",
+            "lqdn-2025-07"
+          ],
+          "justification": "Reconduction de la vidéosurveillance algorithmique, « technologie particulièrement intrusive » que la CNCDH invite à ne pas prolonger, alors que l'évaluation n'a pas montré de « contribution significative à la sécurité des JOP »."
+        },
+        {
+          "code": "police-justice",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-a-2025-9",
+            "cc-2026-902"
+          ],
+          "justification": "Nouvelle interdiction de paraître proche des MICAS, sur des motifs allégés : la CNCDH y voit des « risques d'arbitraire accrus » et le Conseil constitutionnel l'encadre par deux réserves. S'y ajoute l'inspection des véhicules par des agents privés, dont la CNCDH recommande de ne pas adopter le principe."
+        },
+        {
+          "code": "libertes",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-a-2025-9"
+          ],
+          "justification": "La CNCDH rappelle « les risques de la VSA pour les libertés publiques » et la vocation de l'espace public à permettre « l'exercice des libertés »."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [],
+      "conseil_constitutionnel": "Décision 2026-902 DC du 19 mars 2026, conformité sous deux réserves, sans censure. Les deux réserves portent sur l'interdiction de paraître (article 46) : il faut tenir compte des mesures antérieures, et la durée cumulée avec certaines MICAS ne peut dépasser douze mois. Sont validés : la reconduction de la VSA jusqu'au 31/12/2027 (article 47), l'inspection des véhicules par des agents privés (article 43), l'interdiction de décoller (article 44), les enquêtes administratives (article 45) et les dérogations d'environnement, d'urbanisme, de propriété et de repos dominical.",
+      "note": "Scrutin décisif : l'ensemble du texte de la CMP, le 3 février 2026, dernier vote de l'AN. Il n'y a eu qu'une lecture à l'AN : les amendements clés sont de 1re lecture (règle 11). Trois suppressions sont retenues, sur des articles du volet sécurité mis en cause par la CNCDH (et La Quadrature du Net pour la VSA). Article 31 (agents privés, article 43 de la loi). Article 34 (interdiction de paraître, article 46 de la loi). Article 35 (VSA, article 47 de la loi). Tous restreignent des droits : voter leur suppression va contre le texte. Sont écartées, faute de source admise qui mette la mesure en cause, les suppressions de l'article 33 (enquêtes administratives étendues aux intérimaires des transports, V4787, 19-140), de l'article 32 (interdiction de décoller), de l'article 1er (organisateurs), de l'article 3 (publicité), des articles 12 à 16 (participation du public, urbanisme, expropriation, occupation de terrains), de l'article 18 bis (artificialisation des sols ; suppression adoptée) et de l'article 19 (logement des jeunes travailleurs).",
+      "sources": {
+        "cc-2026-902": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2026-902 DC",
+          "date": "2026-03-19",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2026/2026902DC.htm"
+        },
+        "cncdh-a-2025-9": {
+          "auteur": "CNCDH",
+          "titre": "Avis « Les libertés à l'épreuve des grands événements – l'expérience des jeux olympiques et paralympiques » (A-2025-9)",
+          "date": "2025-10-14",
+          "url": "https://www.cncdh.fr/sites/default/files/2025-10/A%20-%202025%20-%209%20-%20CNCDH%20-%20Avis%20Libert%C3%A9s%20Grands%20%C3%A9v%C3%A9nements%2C%20oct%202025_0.pdf"
+        },
+        "lqdn-2025-07": {
+          "auteur": "La Quadrature du Net",
+          "titre": "Jeux Olympiques 2030 : vous reprendriez bien un peu de VSA ?",
+          "date": "2025-07-28",
+          "url": "https://www.laquadrature.net/2025/07/28/jeux-olympiques-2030-vous-reprendriez-bien-un-peu-de-vsa/"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V5296",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP, scrutin solennel (390-99)"
+        },
+        {
+          "id": "VTANR5L17V4963",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (403-99)"
+        },
+        {
+          "id": "VTANR5L17V4756",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (30-99)"
+        },
+        {
+          "id": "VTANR5L17V5295",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (48-195)"
+        },
+        {
+          "id": "VTANR5L17V4777",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 31, inspection des véhicules par des agents privés (30-72)"
+        },
+        {
+          "id": "VTANR5L17V4789",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 34, interdiction administrative de paraître (49-115)"
+        },
+        {
+          "id": "VTANR5L17V4800",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 35, reconduction de la vidéosurveillance algorithmique (38-80)"
+        }
+      ]
+    },
+    {
+      "id": "justice-criminelle-2026",
+      "dossier_an": "DLR5L17N53940",
+      "legislature": 17,
+      "titre": "Loi sur la justice criminelle et le respect des victimes",
+      "resume": "Réforme du jugement des crimes pour réduire les délais : « plaider-coupable » criminel (procédure de jugement des crimes reconnus), cours criminelles départementales étendues aux récidivistes et recomposées, appel limité à la peine, délai de nullité raccourci, maintien en détention provisoire malgré un débat non tenu à temps, généalogie génétique et fichier des empreintes génétiques étendu, mesures d'information des victimes.",
+      "droits": [
+        {
+          "code": "police-justice",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-26-03",
+            "cncdh-a-2026-5"
+          ],
+          "justification": "Procédure négociée qui écarte ou raccourcit le procès, compétence des cours criminelles sans jury étendue, délai pour soulever les nullités réduit, maintien en détention provisoire en cas de défaillance de la juridiction : le texte « soulève des difficultés au regard du principe de l'équité du procès » (Défenseure des droits)."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-a-2026-5",
+            "cc-2026-909"
+          ],
+          "justification": "Généalogie génétique via des bases privées, censurée pour atteinte disproportionnée à la vie privée, et extension de la liste des infractions inscrites au fichier national des empreintes génétiques, dont la CNCDH demande la suppression."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "Décision 2026-909 DC du 23 juillet 2026, non-conformité partielle avec réserves. Censures : généalogie génétique et comparaison avec des bases génétiques étrangères (art. 5, I et II, et une partie du III), atteinte disproportionnée à la vie privée et incompétence négative ; statut de psychologue de police judiciaire (art. 8), faute de garantir le contradictoire ; art. 12, III par voie de conséquence. Réserves sur la liste des témoins arrêtée en réunion préparatoire (art. 3) et sur la visioconférence des magistrats de Saint-Pierre-et-Miquelon (art. 4). Validés : compétence et composition des cours criminelles départementales, appel limité à la peine sans jury, délai de nullité ramené à quatre mois, maintien en détention (art. 148 et 803-11 du code de procédure pénale).",
+      "note": "Scrutin décisif : texte de la CMP, dernier vote de l'AN sur l'ensemble (08/07/2026) ; l'adoption définitive a eu lieu au Sénat le 09/07/2026. Amendements clés de 1re lecture, seule lecture de l'AN où des suppressions ont été mises aux voix (règle 11). La séance a examiné le texte du Sénat (la commission des lois de l'AN n'a pas adopté de texte). Mesures et sources : art. 1er (procédure de jugement des crimes reconnus) : Défenseure des droits, CNCDH ; art. 2 (cours criminelles départementales, détention provisoire jusqu'à 18 mois) : Défenseure des droits, CNCDH ; art. 6 (psychologues de police judiciaire) : censure du Conseil constitutionnel ; art. 7 (délai de nullité) : CNCDH ; art. 9 (maintien en détention provisoire) : Défenseure des droits, CNCDH. Écartés, faute de source qui les mette en cause : suppressions des articles 2 bis (visioconférence à Saint-Pierre-et-Miquelon), 5 (renvoi sur l'action civile), 8 (adoptée, 52-42 ; chambre de l'instruction), 10 (adoptée, 49-10 ; occultation des noms des magistrats), 11 et 12 (application). L'article 3 (généalogie génétique, fichier génétique) n'a fait l'objet d'aucun amendement de suppression mis aux voix.",
+      "sources": {
+        "cc-2026-909": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2026-909 DC",
+          "date": "2026-07-23",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2026/2026909DC.htm"
+        },
+        "cncdh-a-2026-5": {
+          "auteur": "CNCDH",
+          "titre": "Avis relatif au projet de loi sur la justice criminelle et le respect des victimes tel qu'adopté par le Sénat le 14 avril 2026 (A-2026-5)",
+          "date": "2026-05-28",
+          "url": "https://www.cncdh.fr/sites/default/files/2026-06/26.05.28%20Avis%20relatif%20au%20projet%20de%20loi%20sur%20la%20justice%20criminelle%20et%20le%20respect%20des%20victimes%20tel%20quadopt%C3%A9%20par%20le%20S%C3%A9nat%20le%2014%20avril%202026_2.pdf"
+        },
+        "ddd-26-03": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis 26-03 sur le projet de loi sur la justice criminelle et le respect des victimes",
+          "date": "2026-04-02",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=23163"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V8042",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP, scrutin solennel (283-156)"
+        },
+        {
+          "id": "VTANR5L17V7980",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (357-177)"
+        },
+        {
+          "id": "VTANR5L17V8040",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (53-128)"
+        },
+        {
+          "id": "VTANR5L17V7896",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 1er, procédure de jugement des crimes reconnus (50-112)"
+        },
+        {
+          "id": "VTANR5L17V7903",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 2, cours criminelles départementales et détention provisoire allongée (42-73)"
+        },
+        {
+          "id": "VTANR5L17V7946",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 6, psychologues de police judiciaire (21-39)"
+        },
+        {
+          "id": "VTANR5L17V7951",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 7, délai de nullité raccourci (45-69)"
+        },
+        {
+          "id": "VTANR5L17V7958",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 9, maintien en détention provisoire malgré un débat non tenu (39-68)"
         }
       ]
     },
@@ -398,8 +919,7 @@
           "sources": [
             "ddd-23-01",
             "fondation-logement-2023",
-            "cncdh-lettre-2023-03",
-            "contribution-2023-853"
+            "cncdh-lettre-2023-03"
           ],
           "justification": "Atteintes au domicile des occupants et des locataires en impayé « ni nécessaires ni proportionnées » (Défenseure des droits)."
         },
@@ -430,7 +950,7 @@
         }
       ],
       "conseil_constitutionnel": "Censure de l'article 7 (exonération de responsabilité du propriétaire), réserve sur la notion de domicile ; nouveau délit et procédure administrative d'expulsion validés.",
-      "note": "Amendements clés de 2e lecture, dernière lecture de l'AN où des suppressions ont été votées (règle 11). Mesures visées et sources : article 1er A, délit d'occupation et amende de 7 500 € (CNCDH, Fondation pour le logement) ; article 1er B, délais du juge supprimés (contribution extérieure) ; article 4, clause résolutoire et délais conditionnés (Fondation, contribution extérieure) ; article 5, délais raccourcis (Défenseure des droits, CNCDH, Fondation). Les suppressions de 1re lecture ne sont pas comptées.",
+      "note": "Amendements clés de 2e lecture, dernière lecture de l'AN où des suppressions ont été votées (règle 11). Mesures visées et sources : article 1er A, délit d'occupation et amende de 7 500 € (CNCDH, Fondation pour le logement) ; article 4, clause résolutoire et délais conditionnés (Fondation pour le logement) ; article 5, délais raccourcis (Défenseure des droits, CNCDH, Fondation). Les suppressions de 1re lecture ne sont pas comptées.",
       "sources": {
         "cc-2023-853": {
           "auteur": "Conseil constitutionnel",
@@ -443,12 +963,6 @@
           "titre": "Lettre du président à l'Assemblée nationale concernant la PPL",
           "date": "2023-03-17",
           "url": "https://www.cncdh.fr/publications/lettre-du-president-lassemblee-nationale-concernant-la-ppl-visant-proteger-les"
-        },
-        "contribution-2023-853": {
-          "auteur": "Collectif de 35 associations et syndicats",
-          "titre": "Contribution extérieure collective, affaire n° 2023-853 DC",
-          "date": "2023-07-07",
-          "url": "https://www.fondationpourlelogement.fr/wp-content/uploads/2025/06/contribution_exterieure_signee-pdf.pdf"
         },
         "ddd-23-01": {
           "auteur": "Défenseur des droits",
@@ -495,12 +1009,6 @@
           "objet": "suppression de l'article 1er A, délit d'occupation et amende des locataires maintenus (18-91)"
         },
         {
-          "id": "VTANR5L16V1327",
-          "role": "amendement",
-          "pour": "contre-texte",
-          "objet": "suppression de l'article 1er B, fin des délais du juge pour les occupants entrés par manœuvres (16-82)"
-        },
-        {
           "id": "VTANR5L16V1333",
           "role": "amendement",
           "pour": "contre-texte",
@@ -511,6 +1019,235 @@
           "role": "amendement",
           "pour": "contre-texte",
           "objet": "suppression de l'article 5, délais de procédure et de maintien raccourcis (18-69)"
+        }
+      ]
+    },
+    {
+      "id": "lopj-2023",
+      "dossier_an": "DLR5L16N47779",
+      "legislature": 16,
+      "titre": "Loi d'orientation et de programmation du ministère de la justice 2023-2027",
+      "resume": "Loi de programmation des moyens de la justice (rapport annexé), qui porte aussi des mesures de procédure pénale : activation à distance des appareils connectés (géolocalisation, captation de sons et d'images), perquisitions de nuit, téléconsultation médicale et interprète à distance en garde à vue, transfert de compétences du juge des libertés et de la détention, déjudiciarisation des saisies sur salaire.",
+      "droits": [
+        {
+          "code": "vie-privee",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-23-04",
+            "lqdn-2023-07",
+            "cc-2023-855"
+          ],
+          "justification": "Activation à distance des appareils connectés pour géolocaliser (validée) ou capter sons et images, censurée pour « une atteinte particulièrement importante au droit au respect de la vie privée » ; perquisitions de nuit (réserve), mesures « attentatoires au droit à la vie privée et au principe d'inviolabilité du domicile » selon la Défenseure des droits."
+        },
+        {
+          "code": "police-justice",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-23-04"
+          ],
+          "justification": "Téléconsultation médicale et interprète à distance en garde à vue, contentieux de l'enfermement des étrangers et des soins sans consentement confié à un magistrat non spécialisé : la Défenseure des droits s'en inquiète."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Saisie sur salaire sans contrôle préalable du juge, ce qui prive le débiteur d'une « garantie protectrice » (Défenseure des droits) ; mesure validée sous réserve par le Conseil constitutionnel.",
+          "sources": [
+            "ddd-23-04"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2023-855 DC du 16 novembre 2023, non-conformité partielle avec réserves. Censure au fond de l'activation à distance des appareils pour capter sons et images (art. 6, I, 46° et 47°) ; géolocalisation à distance validée. Six dispositions censurées comme cavaliers (art. 4, 5, 8, 10, 20 et 49, IV). Réserves sur les perquisitions de nuit, l'incarcération provisoire avant assignation à résidence sous surveillance électronique, la visioconférence outre-mer, l'interprète à distance et la saisie des rémunérations. Téléconsultation en garde à vue validée.",
+      "note": "Texte de programmation : on ne qualifie que ses mesures normatives que des sources mettent en cause (activation à distance, perquisitions de nuit, garde à vue, juge des libertés et de la détention). Le rapport annexé et les dispositions d'organisation ne sont pas qualifiés. Scrutin décisif : texte de la CMP, dernier vote de l'AN sur l'ensemble (10/10/2023). Amendement clé de 1re lecture (règle 11) : suppression de l'article 15 (contentieux de l'enfermement confié à un magistrat non spécialisé, mis en cause par la Défenseure des droits). L'article 3, qui porte l'activation à distance, les perquisitions de nuit et la garde à vue, n'a fait l'objet d'aucun amendement de suppression de l'article mis aux voix. Il a été adopté par un vote sur l'article (VTANR5L16V2141, 80-24), non compté. L'article 17 (saisies sur salaire) a été rejeté par un vote sur l'article (VTANR5L16V2216, 54-56), non compté, puis rétabli en CMP. Écartés, faute de source qui les mette en cause : suppressions des articles 1er (rapport annexé), 2 (habilitation à recodifier la procédure pénale), 6 et 7 (tribunal des activités économiques), 8 bis et 8 ter (prud'hommes), 11 (attachés de justice : la Défenseure s'inquiète de la qualité de la justice, pas d'un droit des personnes).",
+      "sources": {
+        "cc-2023-855": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2023-855 DC",
+          "date": "2023-11-16",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2023/2023855DC.htm"
+        },
+        "ddd-23-04": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis 23-04 sur le projet de loi d'orientation et de programmation du ministère de la justice 2023-2027",
+          "date": "2023-06-09",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=21673"
+        },
+        "lqdn-2023-07": {
+          "auteur": "La Quadrature du Net",
+          "titre": "L'Assemblée adopte l'activation à distance des appareils électroniques",
+          "date": "2023-07-25",
+          "url": "https://www.laquadrature.net/2023/07/25/lassemblee-adopte-lactivation-a-distance-des-appareils-electroniques/"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V2719",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (260-58)"
+        },
+        {
+          "id": "VTANR5L16V2356",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (388-111)"
+        },
+        {
+          "id": "VTANR5L16V2119",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (23-97)"
+        },
+        {
+          "id": "VTANR5L16V2718",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (39-197)"
+        },
+        {
+          "id": "VTANR5L16V2212",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 15, contentieux de l'enfermement confié à un magistrat non spécialisé (21-50)"
+        }
+      ]
+    },
+    {
+      "id": "meubles-tourisme-2024",
+      "dossier_an": "DLR5L16N47722",
+      "legislature": 16,
+      "titre": "Loi visant à renforcer les outils de régulation des meublés de tourisme à l'échelle locale",
+      "resume": "Le texte rend obligatoire l'enregistrement de tout meublé de tourisme. Il soumet ces logements, à terme, aux mêmes exigences de performance énergétique que les locations classiques. Les communes peuvent fixer des quotas et abaisser à 90 jours la location de la résidence principale. L'avantage fiscal des meublés de tourisme est réduit.",
+      "droits": [
+        {
+          "code": "logement",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "fondation-logement-reml-2025"
+          ],
+          "justification": "Selon la Fondation pour le logement des défavorisés, la concurrence des meublés touristiques est l'une des principales causes de la raréfaction des locations ; la loi, « principale avancée législative de l'année », donne aux communes « des outils pour mieux réguler ces locations »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "La Fondation regrette que la réforme fiscale « plus structurelle », qui encouragerait la location longue durée, « se fait encore attendre ».",
+          "sources": [
+            "fondation-logement-reml-2025"
+          ]
+        },
+        {
+          "texte": "Le texte restreint les prérogatives des propriétaires loueurs (droit de propriété, liberté d'entreprendre), que la grille ne suit pas (règle 2).",
+          "sources": []
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Adoption définitive par l'AN le 7 novembre 2024 (texte de CMP), après le Sénat le 5 novembre : ce dernier vote est le scrutin décisif (règle 9). Il a eu lieu sous la XVIIe législature, alors que le dossier a été ouvert sous la XVIe. Le Conseil constitutionnel n'a pas été saisi. Aucun amendement clé : les suppressions mises aux voix en 1re lecture (articles 1er A, 1er, 1er bis, 3 et 4) visent des articles qui étendent le droit au logement, et aucune source admise ne met ces mesures en cause. Une source les approuve, ce qui ne remplit pas la condition de la règle 11.",
+      "sources": {
+        "fondation-logement-reml-2025": {
+          "auteur": "Fondation pour le logement des défavorisés",
+          "titre": "L'état du mal-logement en France 2025 (30e rapport), cahier 3 : « Une année d'attentisme et de renoncements »",
+          "date": "2025-02-04",
+          "url": "https://www.fondationpourlelogement.fr/wp-content/uploads/2025/06/reml-2025-cahier-3-une-annee-dattentisme-et-de-renoncements.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V289",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (168-54)"
+        },
+        {
+          "id": "VTANR5L16V3261",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (100-25)"
+        }
+      ]
+    },
+    {
+      "id": "mineurs-reseaux-sociaux-2026",
+      "dossier_an": "DLR5L17N53187",
+      "legislature": 17,
+      "titre": "Loi visant à protéger les mineurs des risques auxquels les expose l'utilisation des réseaux sociaux",
+      "resume": "Le texte voté interdit aux mineurs de moins de quinze ans l'accès aux réseaux sociaux en ligne, sauf aux encyclopédies, aux répertoires éducatifs et aux plateformes de logiciel libre (article 1er). L'interdiction impose à chacun, même majeur, de prouver son âge. Le Conseil constitutionnel a censuré l'article 1er en entier. Le reste de la loi a été promulgué (loi 2026-813).",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cc-2026-911",
+            "lqdn-2026-07"
+          ],
+          "justification": "L'interdiction générale prive les moins de quinze ans de la liberté d'accéder à de nombreux services de communication en ligne : atteinte « qui n'est pas adaptée, nécessaire et proportionnée » à la liberté d'expression (Conseil constitutionnel)."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cc-2026-911",
+            "lqdn-2026-05"
+          ],
+          "justification": "Toute personne, même majeure, devrait prouver son âge, sans garanties légales. Derrière cette vérification « se cache en fait un contrôle d'identité » (La Quadrature du Net)."
+        },
+        {
+          "code": "enfants",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "cc-2026-911"
+          ],
+          "justification": "Le législateur entend protéger les plus jeunes de l'addiction, de l'isolement et de l'exposition à la pornographie, au harcèlement ou à la fraude, et met ainsi en œuvre « l'exigence constitutionnelle de protection de l'intérêt supérieur de l'enfant » (Conseil constitutionnel, § 10)."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "Décision 2026-911 DC du 14 août 2026, non-conformité partielle. L'article 1er (interdiction des réseaux sociaux aux moins de quinze ans) est censuré en entier. L'interdiction est générale, sans égard aux risques propres à chaque service ni à la situation du mineur, et sans possibilité pour les parents de la lever : l'atteinte à la liberté d'expression et de communication n'est pas proportionnée. Faute de fixer les conditions de la preuve de l'âge, la loi ne garantit pas non plus la vie privée. Les autres articles n'ont pas été examinés.",
+      "note": "Scrutin décisif : l'ensemble du texte de la CMP, le 21 juillet 2026, jour de l'adoption définitive par les deux assemblées. On qualifie le texte voté (règle 6), qui contenait l'article 1er, censuré depuis. Il n'y a eu qu'une lecture à l'AN : 0 amendement clé. Les scrutins de suppression ou de rétablissement de 1re lecture portent sur des articles qu'aucune source ne met en cause : propagande suicidaire (article 2), message sanitaire (article 3), éducation au numérique (article 4), prévention (article 4 bis), téléphone portable au lycée (article 6). Aucun amendement de suppression de l'article 1er n'a été mis aux voix par scrutin public. Le vote sur l'article 1er (116-23) est affiché, pas compté.",
+      "sources": {
+        "cc-2026-911": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2026-911 DC",
+          "date": "2026-08-14",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2026/2026911DC.htm"
+        },
+        "lqdn-2026-05": {
+          "auteur": "La Quadrature du Net",
+          "titre": "Derrière la vérification d'âge sur les réseaux sociaux, la généralisation du contrôle d'identité en ligne",
+          "date": "2026-05-21",
+          "url": "https://www.laquadrature.net/2026/05/21/derriere-la-verification-dage-sur-les-reseaux-sociaux-la-generalisation-du-controle-didentite-en-ligne/"
+        },
+        "lqdn-2026-07": {
+          "auteur": "La Quadrature du Net",
+          "titre": "Le Parlement vote l'interdiction des réseaux sociaux aux jeunes de moins de 15 ans (mis à jour le 17 août 2026)",
+          "date": "2026-07-22",
+          "url": "https://www.laquadrature.net/2026/07/22/le-parlement-vote-linterdiction-des-reseaux-sociaux-aux-jeunes-de-moins-de-15-ans/"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V8431",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP, scrutin solennel (279-81)"
+        },
+        {
+          "id": "VTANR5L17V5192",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (130-21)"
+        },
+        {
+          "id": "VTANR5L17V5156",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (25-109)"
         }
       ]
     },
@@ -666,7 +1403,1894 @@
           "objet": "rétablissement de l'article 8 ter, accès aux messageries chiffrées (24-119)"
         }
       ]
+    },
+    {
+      "id": "nationalite-mayotte-2025",
+      "dossier_an": "DLR5L17N51039",
+      "legislature": 17,
+      "titre": "Loi visant à renforcer les conditions d'accès à la nationalité française à Mayotte",
+      "resume": "Pour qu'un enfant né à Mayotte de parents étrangers puisse acquérir la nationalité française à raison de sa naissance et de sa résidence, les deux parents (et non plus un seul) doivent avoir résidé régulièrement en France depuis plus d'un an (et non plus trois mois) à la naissance ; la mention de cette résidence sur l'acte de naissance exige un titre de séjour et un passeport biométrique.",
+      "droits": [
+        {
+          "code": "etrangers",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-25-04"
+          ],
+          "justification": "Durcit le régime dérogatoire d'accès à la nationalité propre à Mayotte ; la Défenseure des droits y voit une discrimination (art. 14 CEDH combiné à l'art. 8) et recommande l'alignement sur le droit commun."
+        },
+        {
+          "code": "enfants",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-25-04"
+          ],
+          "justification": "L'enfant est traité « uniquement comme le descendant » de parents dont la situation administrative décide de son accès à la nationalité : contraire à l'intérêt supérieur de l'enfant (art. 3-1 CIDE) selon la Défenseure des droits."
+        }
+      ],
+      "etiquettes": [
+        "outre-mer"
+      ],
+      "vigilance": [],
+      "conseil_constitutionnel": "Décision 2025-881 DC du 7 mai 2025 : conforme, sous une réserve. Les conditions plus restrictives propres à Mayotte sont jugées justifiées par les « caractéristiques et contraintes particulières » de l'archipel. Réserve : l'exigence d'un passeport biométrique ne fait pas obstacle à la production d'un autre document d'identité.",
+      "note": "Scrutin décisif : vote de l'AN sur le texte de la CMP (8 avril 2025), dernier vote de l'AN sur l'ensemble (règle 9). Amendement clé : la suppression de l'article unique en 1re lecture, seule lecture de l'AN où des suppressions ont été mises aux voix (règle 11) ; l'article unique porte toute la mesure mise en cause par la Défenseure des droits. Les autres amendements de 1re lecture (rédactions globales, modifications, titre) ne sont pas des suppressions ou des rétablissements et ne sont pas retenus. La suppression de l'article unique (V695) n'est pas comptée : elle double le scrutin décisif (règle 11).",
+      "sources": {
+        "cc-2025-881": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2025-881 DC",
+          "date": "2025-05-07",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2025/2025881DC.htm"
+        },
+        "ddd-25-04": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis 25-04 relatif à la proposition de loi visant à renforcer les conditions d'accès à la nationalité française à Mayotte",
+          "date": "2025-03-14",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=22615"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V1308",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (339-174)"
+        },
+        {
+          "id": "VTANR5L17V738",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (162-93)"
+        },
+        {
+          "id": "VTANR5L17V1307",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (105-185)"
+        }
+      ]
+    },
+    {
+      "id": "plein-emploi-2023",
+      "dossier_an": "DLR5L16N48163",
+      "legislature": 16,
+      "titre": "Loi pour le plein emploi",
+      "resume": "Le texte crée France Travail et le « réseau pour l'emploi ». Il inscrit automatiquement les allocataires du RSA et leur conjoint comme demandeurs d'emploi. Il impose un contrat d'engagement prévoyant en principe au moins quinze heures d'activité par semaine, et crée une sanction de « suspension-remobilisation » du RSA. Il étend aussi des droits de salarié aux travailleurs handicapés en ESAT.",
+      "droits": [
+        {
+          "code": "travail-protection-sociale",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-23-05",
+            "cncdh-d-2024-7"
+          ],
+          "justification": "Le renforcement des obligations des allocataires du RSA « porte des atteintes disproportionnées ou discriminatoires » à leurs droits (Défenseure des droits). La CNCDH dénonce un dispositif qui « subordonne le versement d'un revenu minimum de subsistance à la réalisation d'une contrepartie »."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cc-2023-858",
+            "ddd-23-05",
+            "cncdh-d-2024-7"
+          ],
+          "justification": "Partage de données, y compris médicales, au sein du réseau pour l'emploi : censuré pour « atteinte disproportionnée au droit au respect de la vie privée ». L'inscription forcée du conjoint est une « ingérence » dans la vie privée (Défenseure des droits)."
+        },
+        {
+          "code": "discriminations",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "ddd-23-05"
+          ],
+          "justification": "Nouveaux droits pour les travailleurs handicapés en ESAT (expression collective, droit de grève, adhésion syndicale, complémentaire santé…), et levée des freins à l'emploi des personnes handicapées, « un progrès notable » selon la Défenseure des droits."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "Décision 2023-858 DC du 14 décembre 2023, non-conformité partielle avec réserves. Le partage des données personnelles au sein du réseau pour l'emploi est censuré pour atteinte disproportionnée à la vie privée. L'obligation de quinze heures est validée sous réserve : la durée doit être adaptée à la situation personnelle et familiale et ne peut dépasser la durée légale du travail. Les décrets sur les sanctions devront respecter la proportionnalité. L'inscription automatique du conjoint et la suspension du RSA sont validées.",
+      "note": "Une seule lecture à l'AN avant la CMP : la 1re lecture est donc la dernière où des suppressions ont été mises aux voix (règle 11). Quatre amendements clés : les suppressions des articles 1er (inscription automatique), 2 (contrat d'engagement, quinze heures) et 3 (suspension du RSA), que critiquent la Défenseure des droits et la CNCDH, et de l'article 4 (réseau pour l'emploi, dont le partage de données censuré par le Conseil constitutionnel). Chaque article restreint les droits : voter sa suppression va contre le texte. Écartées, faute de source qui en met la mesure en cause : la suppression de l'article 6 (organismes de « remobilisation », V2608), celle de l'article 10 (gouvernance de l'accueil du jeune enfant, adoptée, V2624) et celle de l'article 11 (ordonnance outre-mer, V2627). Les votes sur les articles eux-mêmes (V2545, V2569, V2591, V2603) ne sont pas retenus.",
+      "sources": {
+        "cc-2023-858": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2023-858 DC",
+          "date": "2023-12-14",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2023/2023858DC.htm"
+        },
+        "cncdh-d-2024-7": {
+          "auteur": "CNCDH",
+          "titre": "Déclaration « Loi pour le plein emploi : l'obligation d'heures d'activité en contrepartie du RSA porte atteinte aux droits humains » (D-2024-7)",
+          "date": "2024-12-19",
+          "url": "https://www.cncdh.fr/sites/default/files/2024-12/D%20-%202024%20-%207%20-%20D%C3%A9claration%20Loi%20Plein%20Emploi%20RSA%20Conditionn%C3%A9_0.pdf"
+        },
+        "ddd-23-05": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis 23-05 du 6 juillet 2023 relatif au projet de loi pour le plein emploi",
+          "date": "2023-07-06",
+          "url": "https://juridique.defenseurdesdroits.fr/index.php?lvl=notice_display&id=47832"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V2965",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (190-147)"
+        },
+        {
+          "id": "VTANR5L16V2717",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (310-251)"
+        },
+        {
+          "id": "VTANR5L16V2520",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (62-148)"
+        },
+        {
+          "id": "VTANR5L16V2964",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (73-163)"
+        },
+        {
+          "id": "VTANR5L16V2521",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 1er, inscription automatique des allocataires du RSA et de leur conjoint (41-62)"
+        },
+        {
+          "id": "VTANR5L16V2547",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 2, contrat d'engagement et quinze heures d'activité (45-89)"
+        },
+        {
+          "id": "VTANR5L16V2571",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 3, suspension-remobilisation du RSA (17-51)"
+        },
+        {
+          "id": "VTANR5L16V2592",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 4, réseau pour l'emploi et partage de données (25-35)"
+        }
+      ]
+    },
+    {
+      "id": "presomption-legitime-defense",
+      "dossier_an": "DLR5L17N51037",
+      "legislature": 17,
+      "titre": "Proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre, dans l'exercice de leurs fonctions (non promulguée)",
+      "resume": "Le texte adopté par l'AN présume qu'un policier ou un gendarme qui fait usage de son arme a agi dans un des cas autorisés par l'article L. 435-1 du code de la sécurité intérieure, avec absolue nécessité et stricte proportionnalité, sauf preuve contraire. Il supprime aussi la condition de port de l'uniforme pour tirer afin d'empêcher la réitération d'un meurtre. Adopté en 1re lecture par l'AN le 7 juillet 2026, en attente au Sénat.",
+      "droits": [
+        {
+          "code": "police-justice",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-lettre-2026-06",
+            "ddd-26-05"
+          ],
+          "justification": "Présomption fondée sur la qualité de l'auteur du tir et non sur les circonstances : elle alourdit la charge des victimes et de leurs familles pour la renverser et risque d'affaiblir le contrôle du juge ; la CNCDH y voit de « graves risques d'atteinte au droit à la vie et à l'intégrité physique des personnes »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "",
+      "note": "Texte non promulgué : adopté en 1re lecture par l'AN le 07/07/2026, transmis au Sénat, sans suite connue au 29/10/2026. Scrutin décisif (règle 9) : le dernier vote de l'AN sur l'ensemble, soit la 1re lecture. Il sera remplacé si l'AN revote le texte. On qualifie le texte voté (règle 6) : l'article unique réécrit par l'amendement du Gouvernement n° 39 (présomption d'usage légitime de l'arme dans le code de la sécurité intérieure), et non la rédaction initiale (présomption de légitime défense dans le code pénal). Amendement clé (règle 11) : suppression de l'article unique (22/01/2026), avant sa réécriture ; la mesure visée, la présomption de légitime défense, est mise en cause par la Défenseure des droits et la CNCDH. Écartés : les sous-amendements et amendements portant sur l'article ou le titre, qui ne sont ni des suppressions ni des rétablissements, dont l'amendement du Gouvernement n° 39 (V5147, adopté 103-74). La suppression de l'article unique (V5127) n'est pas comptée : elle double le scrutin décisif (règle 11).",
+      "sources": {
+        "cncdh-lettre-2026-06": {
+          "auteur": "CNCDH",
+          "titre": "Lettre du président aux députés sur la proposition de loi visant à reconnaître une présomption de légitime défense pour les forces de l'ordre",
+          "date": "2026-06-29",
+          "url": "https://www.cncdh.fr/sites/default/files/2026-06/2026.06.29-CNCDH%20-%20Lettre%20PPL%20pr%C3%A9omption%20de%20l%C3%A9gitime%20d%C3%A9fense%20pour%20les%20forces%20de%20l%27ordre_1.pdf"
+        },
+        "ddd-26-05": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis 26-05 sur la proposition de loi n° 691 visant à reconnaître une présomption de légitime défense pour les forces de l'ordre",
+          "date": "2026-06-26",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=23281"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V7987",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (313-199)"
+        }
+      ]
+    },
+    {
+      "id": "refondation-mayotte-2025",
+      "dossier_an": "DLR5L17N51985",
+      "legislature": 17,
+      "titre": "Loi de programmation pour la refondation de Mayotte",
+      "resume": "Loi de programmation après le cyclone Chido (investissements 2025-2031, convergence sociale par ordonnances, SMIC porté à 87,5 % de celui de la métropole, organisation institutionnelle) qui durcit aussi le droit des étrangers propre à Mayotte : titres de séjour familiaux, reconnaissances de paternité, placement des familles avec enfants, retrait du titre des parents, transferts d'argent. Elle permet aussi au préfet, jusqu'en 2034, de faire évacuer et démolir l'habitat informel sans proposer de relogement.",
+      "droits": [
+        {
+          "code": "etrangers",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-25-07",
+            "collectif-2025-07"
+          ],
+          "justification": "Restreint le séjour pour motif familial, durcit la lutte contre les reconnaissances de paternité, permet de retirer le titre des parents et conditionne les transferts d'argent à la régularité du séjour ; la Défenseure des droits demande l'abandon ou le retrait de la plupart de ces mesures."
+        },
+        {
+          "code": "enfants",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-25-07",
+            "collectif-2025-07"
+          ],
+          "justification": "Revient, à Mayotte, sur l'interdiction de retenir des mineurs prévue pour 2027 : placement des familles dans des « lieux spécialement adaptés ». La Défenseure des droits y voit une façon de « persister dans une violation des droits des enfants »."
+        },
+        {
+          "code": "logement",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-25-07",
+            "collectif-2025-07",
+            "cc-2025-894"
+          ],
+          "justification": "Jusqu'en 2034, le préfet peut faire évacuer et démolir l'habitat informel sans proposer de relogement ; la Défenseure des droits juge ce « recul des droits fondamentaux » inédit. Le Conseil limite la dérogation aux cas d'impossibilité matérielle liée au cyclone."
+        },
+        {
+          "code": "travail-protection-sociale",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "cc-2025-894"
+          ],
+          "justification": "SMIC net de Mayotte relevé de 85 % à 87,5 % de celui de la métropole au 1er janvier 2026 ; habilitation à aligner par ordonnances la sécurité sociale de Mayotte sur le droit commun."
+        }
+      ],
+      "etiquettes": [
+        "outre-mer"
+      ],
+      "vigilance": [
+        {
+          "texte": "Convergence sociale jugée trop lente (« repoussée à 2031 ») ; l'aide médicale de l'État et le droit au logement opposable restent absents à Mayotte.",
+          "sources": [
+            "collectif-2025-07"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2025-894 DC du 7 août 2025 : aucune censure, plusieurs réserves. Sur les titres de séjour (article 5), le visa de long séjour à caractère familial doit être délivré quand les conditions sont remplies. Sur l'habitat informel (article 18), la dérogation au relogement n'est admise qu'en cas d'impossibilité matérielle établie par l'administration et due au cyclone. Sur les visites de lieux pour saisir des armes (article 19), il faut des raisons sérieuses de penser qu'une personne présente menace l'ordre public. Le placement des familles avec mineurs, le retrait du titre des parents et le contrôle des transferts d'argent sont validés.",
+      "note": "Scrutin décisif : vote de l'AN sur le texte de la CMP (9 juillet 2025), dernier vote de l'AN sur l'ensemble (règle 9). Amendements clés (1re lecture, seule lecture de l'AN, règle 11) : suppressions ou rétablissements d'articles dont la mesure est mise en cause par la Défenseure des droits (avis 25-07). Numéros du texte de l'AN (numéro de la loi entre parenthèses) : article 2 (5), titres de séjour ; article 3 (9), reconnaissances centralisées à Mamoudzou ; article 5 (11), amende portée à 75 000 € ; article 7 (14), placement des familles avec mineurs, rétabli par le Gouvernement ; article 8 (15), retrait du titre des parents, rétabli ; article 8 bis (16), information des caisses sociales par le préfet ; article 9 (17), transferts d'argent, rétabli. Sans scrutin de suppression ou de rétablissement : article 2 ter (regroupement familial), article 4 (sursis à l'enregistrement), article 10 (habitat informel, seul le vote sur l'article, V2705, 58-35). Écartés, hors grille ou sans source : article 2 bis A (fin des titres de séjour territorialisés, V2661), article 19 (expropriations, V2745), article 22 (zone franche, V2654), article 11 (visites et saisies d'armes, rétablissement rejeté, V2690 à V2692).",
+      "sources": {
+        "cc-2025-894": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2025-894 DC",
+          "date": "2025-08-07",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2025/2025894DC.htm"
+        },
+        "collectif-2025-07": {
+          "auteur": "Collectif de 12 associations et ONG (dont La Cimade, Human Rights Watch, UNICEF France)",
+          "titre": "Mayotte : une loi de refondation sans ambition ni justice sociale",
+          "date": "2025-07-02",
+          "url": "https://www.secours-catholique.org/sites/default/files/03-Documents/Mayotte%20une%20loi%20de%20refondation%20sans%20ambition%20ni%20justice%20sociale.pdf"
+        },
+        "ddd-25-07": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis 25-07 relatif au projet de loi de programmation pour la refondation de Mayotte",
+          "date": "2025-06-06",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=22762"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V2975",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (354-111)"
+        },
+        {
+          "id": "VTANR5L17V2874",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (367-109)"
+        },
+        {
+          "id": "VTANR5L17V2635",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 2, titres de séjour pour motif familial (30-65)"
+        },
+        {
+          "id": "VTANR5L17V2669",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 3, reconnaissances de paternité centralisées à Mamoudzou (47-94)"
+        },
+        {
+          "id": "VTANR5L17V2671",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 5, amende portée à 75 000 € (58-91)"
+        },
+        {
+          "id": "VTANR5L17V2678",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 7, placement des familles avec mineurs, adopté (83-74)"
+        },
+        {
+          "id": "VTANR5L17V2683",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 8, retrait du titre de séjour des parents, adopté (95-62)"
+        },
+        {
+          "id": "VTANR5L17V2686",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 8 bis, information des organismes sociaux par le préfet (53-78)"
+        },
+        {
+          "id": "VTANR5L17V2689",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 9, transferts d'argent conditionnés à la régularité du séjour, adopté (103-38)"
+        }
+      ]
+    },
+    {
+      "id": "retention-2025",
+      "dossier_an": "DLR5L17N51429",
+      "legislature": 17,
+      "titre": "Loi visant à faciliter le maintien en rétention des personnes condamnées pour des faits d'une particulière gravité et présentant de forts risques de récidive",
+      "resume": "Le texte voté porte jusqu'à 210 jours la rétention administrative de nouvelles catégories d'étrangers (condamnés pour des faits graves, frappés d'une interdiction du territoire ou jugés très dangereux pour l'ordre public), rend suspensif l'appel du préfet contre une remise en liberté, autorise le relevé d'empreintes sous contrainte, assouplit la prolongation à 90 jours et permet de placer en rétention un demandeur d'asile menaçant l'ordre public.",
+      "droits": [
+        {
+          "code": "etrangers",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-lettre-2025-06",
+            "cc-2025-895",
+            "cimade-2025-08"
+          ],
+          "justification": "Allonge la privation de liberté des étrangers en rétention : un texte « inutile », « dangereux » et « indigne » selon la CNCDH ; l'allongement à 210 jours et l'appel suspensif ont été censurés."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [],
+      "conseil_constitutionnel": "Décision 2025-895 DC du 7 août 2025 : partiellement conforme. Censure de l'article 1er (rétention jusqu'à 210 jours, conciliation jugée déséquilibrée), de l'article 2 (appel suspensif, atteinte excessive à la liberté individuelle) et, par voie de conséquence, du 3° de l'article 4. Réserves sur la prolongation à 90 jours (le juge doit pouvoir y mettre fin à tout moment) et sur la rétention des demandeurs d'asile (menace réelle, actuelle et suffisamment grave, ou risque de fuite établi). Relevé d'empreintes sous contrainte validé.",
+      "note": "Scrutin décisif : 1re lecture à l'AN (8 juillet 2025), dernier vote de l'AN sur l'ensemble ; l'adoption définitive a eu lieu au Sénat en 2e lecture (règle 9). Amendements clés (1re lecture, seule lecture à l'AN, règle 11) : suppression de l'article 1er (210 jours, mis en cause par la CNCDH et censuré) et de l'article 2 (appel suspensif, censuré). Écartés faute de source qui mette la mesure en cause : V2885 (article 2 bis, empreintes sous contrainte, validé par le Conseil), V2888 (article 3, prolongations), V2893 (article 4, calcul des délais) ; V2892 (suppression de l'article 3 ter, surveillance électronique, adoptée 110-15) n'est pas cité par une source.",
+      "sources": {
+        "cc-2025-895": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2025-895 DC",
+          "date": "2025-08-07",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2025/2025895DC.htm"
+        },
+        "cimade-2025-08": {
+          "auteur": "La Cimade",
+          "titre": "Rétention administrative : le Conseil constitutionnel censure une dérive sécuritaire et confirme les limites de l'enfermement",
+          "date": "2025-08-08",
+          "url": "https://www.lacimade.org/retention-administrative-le-conseil-constitutionnel-censure-une-derive-securitaire-et-confirme-les-limites-de-lenfermement/"
+        },
+        "cncdh-lettre-2025-06": {
+          "auteur": "CNCDH",
+          "titre": "Lettre du président aux députés sur la proposition de loi visant à faciliter le maintien en rétention",
+          "date": "2025-06-26",
+          "url": "https://www.cncdh.fr/sites/default/files/2025-06/Lettre%20PSDT%20PPL%20r%C3%A9tention%20adm%2027.06.25.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V2958",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (303-168)"
+        },
+        {
+          "id": "VTANR5L17V2877",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (44-173)"
+        },
+        {
+          "id": "VTANR5L17V2878",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 1er, rétention jusqu'à 210 jours (37-75)"
+        },
+        {
+          "id": "VTANR5L17V2883",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 2, appel suspensif du préfet (45-84)"
+        }
+      ]
+    },
+    {
+      "id": "retention-attentats-2026",
+      "dossier_an": "DLR5L17N53284",
+      "legislature": 17,
+      "titre": "Loi visant à renforcer la sécurité, la rétention administrative et la prévention des risques d'attentat",
+      "resume": "Le préfet peut enjoindre un examen psychiatrique à une personne jugée menaçante en raison de son adhésion à des thèses terroristes (visite domiciliaire et admission en soins sans consentement si elle refuse). Le texte crée une rétention de sûreté pour certains condamnés terroristes, prolonge l'effet des mesures individuelles de surveillance annulées en première instance et restreint le changement de nom et de prénom. Pour les étrangers, il porte la rétention administrative à 210 jours pour de nouvelles catégories et permet des placements successifs.",
+      "droits": [
+        {
+          "code": "police-justice",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "tdf-2026-04",
+            "cc-2026-906"
+          ],
+          "justification": "Rétention de sûreté terroriste après la peine, injonction préfectorale d'examen psychiatrique, maintien des mesures de surveillance annulées : une loi qui « étend et crée des mesures administratives de privation de liberté » selon l'association Toutes des Femmes ; le Conseil pose des réserves (pas d'application rétroactive de la rétention de sûreté, motivation de l'injonction psychiatrique)."
+        },
+        {
+          "code": "etrangers",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cimade-2026-07",
+            "cc-2026-906"
+          ],
+          "justification": "Rétention jusqu'à 210 jours pour de nouvelles catégories d'étrangers et placements successifs : jusqu'à 540 jours cumulés selon La Cimade et les associations présentes en rétention."
+        },
+        {
+          "code": "sante",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "usp-2026-06",
+            "cle-autistes-2026-04"
+          ],
+          "justification": "Examen psychiatrique ordonné par le préfet, admission en soins sans consentement en cas de refus : les psychiatres dénoncent une psychiatrie mise au service de la sécurité."
+        },
+        {
+          "code": "femmes-lgbti",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "tdf-2026-04",
+            "cle-autistes-2026-04"
+          ],
+          "justification": "Restreint le changement de prénom selon l'acte de naissance et les antécédents judiciaires : « d'importantes restrictions sur le changement de prénom » pour les personnes trans (Toutes des Femmes) ; celles nées à l'étranger seraient condamnées « à vivre indéfiniment avec une identité administrative qui n'est pas en adéquation avec leur identité de genre » (CLE Autistes)."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [],
+      "conseil_constitutionnel": "Décision 2026-906 DC du 23 juillet 2026 : aucune censure, plusieurs réserves. Injonction d'examen psychiatrique : le préfet doit motiver précisément sa décision, et l'avis du psychiatre doit être écrit et motivé. Rétention de sûreté terroriste : inapplicable aux personnes condamnées avant la loi, ou après pour des faits antérieurs. Information du préfet sur les soins psychiatriques : ni avis ni certificats médicaux. Rétention de 210 jours, placements successifs (360 jours cumulés, 540 dans certains cas) et changement de nom : validés.",
+      "note": "Scrutin décisif : vote de l'AN sur le texte de la CMP (16 juin 2026), dernier vote de l'AN sur l'ensemble ; le Sénat avait voté le texte de la CMP la veille (règle 9). Amendements clés (1re lecture, seule lecture de l'AN où des suppressions ont été votées, règle 11) : articles du texte de l'AN dont la mesure est mise en cause par une source. Article 1er, injonction psychiatrique (USP, CLE Autistes, réserve du Conseil constitutionnel) ; article 2, rétention de sûreté (réserve du Conseil constitutionnel) ; article 6, changement de nom et de prénom (CLE Autistes, Toutes des Femmes) ; article 8, rétention de 210 jours étendue aux personnes jugées très dangereuses pour l'ordre public (La Cimade). L'article 8 a été vidé de sa portée par l'amendement écologiste 173 (84-77), puis réécrit en seconde délibération (V6317) : ce scrutin a fixé son sort. Article 8 bis, placements successifs (La Cimade) : suppression rejetée, puis article rejeté (V6281, 45-91) et rétabli par le Sénat. Écartés faute de source : article 3 (V6213), article 4 (V6217, information du préfet), article 5 (V6225, MICAS), article 7 (V6243, 210 jours pour les condamnés terroristes). Les deux amendements du Gouvernement sur le texte de la CMP (V7403, V7404) ne sont pas des suppressions.",
+      "sources": {
+        "cc-2026-906": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2026-906 DC",
+          "date": "2026-07-23",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2026/2026906DC.htm"
+        },
+        "cimade-2026-07": {
+          "auteur": "La Cimade",
+          "titre": "Le Conseil constitutionnel entérine l'allongement de la durée maximale de rétention à 210 jours : une loi aussi inefficace que dangereuse pour les personnes enfermées",
+          "date": "2026-07-29",
+          "url": "https://www.lacimade.org/presse/le-conseil-constitutionnel-enterine-lallongement-de-la-duree-maximale-de-retention-a-210-jours-une-loi-aussi-inefficace-que-dangereuse-pour-les-personnes-enfermees/"
+        },
+        "cle-autistes-2026-04": {
+          "auteur": "CLE Autistes",
+          "titre": "Loi Rodwell : une attaque directe envers les droits des personnes trans et des personnes psychiatrisées (communiqué)",
+          "date": "2026-04-13",
+          "url": "https://asso.cle-autistes.fr/loi-rodwell-une-attaque-directe-envers-les-droits-des-personnes-trans-et-des-personnes-psychiatrisees/"
+        },
+        "tdf-2026-04": {
+          "auteur": "Toutes des Femmes",
+          "titre": "Loi Rodwell : depuis 2017, jamais le gouvernement n'avait soutenu au parlement un tel recul des droits des personnes trans",
+          "date": "2026-04-08",
+          "url": "https://toutesdesfemmes.fr/2026/04/loi-rodwell-depuis-2017-jamais-le-gouvernement-navait-soutenu-au-parlement-un-tel-recul-des-droits-des-personnes-trans/"
+        },
+        "usp-2026-06": {
+          "auteur": "Union syndicale de la psychiatrie",
+          "titre": "Pas d'utilisation politicienne de la psychiatrie !",
+          "date": "2026-06-05",
+          "url": "https://www.uspsy.fr/wp-content/uploads/2026/06/Communique-de-lUSP_Pas-dutilisation-politicienne-de-la-psychiatrie_5-juin-2026.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V7405",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (345-177)"
+        },
+        {
+          "id": "VTANR5L17V6318",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (345-177)"
+        },
+        {
+          "id": "VTANR5L17V6181",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (55-134)"
+        },
+        {
+          "id": "VTANR5L17V7402",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (89-231)"
+        },
+        {
+          "id": "VTANR5L17V6185",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 1er, injonction d'examen psychiatrique (65-78)"
+        },
+        {
+          "id": "VTANR5L17V6201",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 2, rétention de sûreté terroriste (48-67)"
+        },
+        {
+          "id": "VTANR5L17V6230",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 6, changement de nom et de prénom (48-67)"
+        },
+        {
+          "id": "VTANR5L17V6317",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "réécriture de l'article 8 en seconde délibération, rétention de 210 jours étendue, adoptée (161-67)"
+        },
+        {
+          "id": "VTANR5L17V6270",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 8 bis, placements successifs en rétention (53-98)"
+        }
+      ]
+    },
+    {
+      "id": "ripost-2026",
+      "dossier_an": "DLR5L17N53980",
+      "legislature": 17,
+      "titre": "Loi visant à offrir des réponses immédiates aux phénomènes troublant l'ordre public, la sécurité et la tranquillité de nos concitoyens (« RIPOST »)",
+      "resume": "Projet de loi « fourre-tout » de sécurité du quotidien : nouveaux délits et amendes forfaitaires délictuelles (rave-parties, rodéos, mortiers d'artifice, protoxyde d'azote), expulsions administratives étendues, contrôles et fouilles en zone douanière, pseudonymisation des enquêteurs, prolongation de la vidéosurveillance algorithmique jusqu'en 2030, lecture automatisée des plaques, drones en urgence, suppression de l'enregistrement vidéo des cellules de garde à vue.",
+      "droits": [
+        {
+          "code": "police-justice",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-26-04",
+            "cc-2026-915"
+          ],
+          "justification": "Extension de l'amende forfaitaire délictuelle, qui « restreint l'accès au service public de la justice » (Défenseure des droits), contrôles et fouilles en zone douanière sans réquisition du parquet, pseudonymisation des enquêteurs et fin des permissions de sortir en quartier de criminalité organisée (deux mesures censurées), fin de l'enregistrement vidéo des cellules de garde à vue."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-26-04",
+            "lqdn-2026-09"
+          ],
+          "justification": "Vidéosurveillance algorithmique prolongée jusqu'en 2030 et étendue, lecture automatisée des plaques étendue, drones en procédure d'urgence, caméras individuelles et embarquées ; la Défenseure des droits alerte sur un « risque de normalisation de la surveillance algorithmique »."
+        },
+        {
+          "code": "libertes",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-26-04",
+            "lqdn-2026-09"
+          ],
+          "justification": "Délit de participation à un rassemblement festif non déclaré ou interdit, jugé disproportionné au regard de la liberté de réunion (art. 11 CEDH) par la Défenseure des droits ; effet dissuasif de la vidéosurveillance algorithmique sur la liberté de réunion."
+        },
+        {
+          "code": "logement",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-26-04",
+            "cc-2026-915"
+          ],
+          "justification": "Expulsion administrative sans juge étendue aux locaux professionnels et aux meublés de tourisme (réserve du Conseil constitutionnel), expulsions des gens du voyage facilitées ; la Défenseure des droits recommande le retrait ou la suppression de ces dispositions."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "Risque d'arbitraire et de discrimination dans les contrôles d'identité et fouilles en zone douanière, réalisés sans contrôle préalable de l'autorité judiciaire.",
+          "sources": [
+            "ddd-26-04"
+          ]
+        },
+        {
+          "texte": "Le texte étend la protection de l'ordre public et de la propriété (meublés de tourisme, locaux professionnels, terrains), que la grille ne suit pas (docs/METHODO.md, règle 2).",
+          "sources": []
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2026-915 DC du 14 août 2026, non-conformité partielle avec réserves. Censures au fond : fermeture administrative des commerces d'articles pyrotechniques (art. 1er, I), une amende forfaitaire délictuelle (art. 1er, III), deux dispositions sur les véhicules (art. 7), extension des délits de maintien dans le domicile d'autrui (art. 14, II), interdiction des permissions de sortir en quartier de lutte contre la criminalité organisée (art. 39, 4°), pseudonymisation des enquêteurs (art. 46, I), caméras individuelles des agents des gestionnaires routiers (art. 47, II). Cinq articles censurés comme cavaliers (10, 18, 26, 41, 65). Réserves sur la location de matériel de sonorisation (art. 3), l'interdiction de paraître lors des manifestations sportives (art. 12), l'expulsion administrative des locaux professionnels (art. 14), les drones en urgence (art. 42) et la vidéosurveillance algorithmique (art. 50). Validés notamment : délits d'organisation et de participation aux rassemblements festifs, contrôles en zone douanière (art. 35), lecture des plaques (art. 44 et 45), fin de l'enregistrement en cellule de garde à vue (art. 54).",
+      "note": "Scrutin décisif : texte de la CMP, dernier vote de l'AN sur l'ensemble (21/07/2026). Amendements clés de 1re lecture, seule lecture de l'AN où des suppressions et rétablissements ont été mis aux voix (règle 11) ; numéros d'articles du texte examiné en séance (texte du Sénat, dont la commission des lois de l'AN avait supprimé de nombreux articles, rétablis en séance par le Gouvernement). Un scrutin par article : l'amendement adopté, sinon le dernier mis aux voix. Mesures et sources : art. 2, 3, 5 septies, 6 et 7 (amende forfaitaire, délit de participation aux rave-parties) : Défenseure des droits ; art. 4 (interdictions de stade), 5 (expulsions), 5 nonies et 5 undecies (gens du voyage), 12 (aménagements de peine), 16 (pseudonymisation), 19 (VSA), 20 (agents privés), 22 (enregistrement en garde à vue) : Défenseure des droits ; art. 9 (zone douanière) : Défenseure des droits et La Quadrature du Net ; art. 14 (drones), 15 et 15 bis (lecture des plaques), 17 (caméras douanes et gestionnaires routiers) : La Quadrature du Net, et Conseil constitutionnel pour l'art. 17. Écartés, faute de source qui les mette en cause : suppressions des articles 2 ter, 3 quater, 3 quinquies, 4 bis A, 5 ter, 5 quater, 5 nonies A, 6 bis, 6 ter, 6 quater, 10, 11, 11 ter, 13, 13 bis ; rétablissements des articles 1er (pas de scrutin public sur l'amendement adopté), 2 bis, 3 bis, 4 bis, 5 bis, 5 sexies, 5 decies, 5 quaterdecies, 5 quindecies, 7 bis, 14 bis (caméras frontales des trains, décrites sans être mises en cause), 18, 18 bis, 20 bis, 23, 24 ; les 78 sous-amendements. V8200 (article 22, 0-46) n'est pas compté : un amendement clé doit avoir au moins un vote de chaque côté (règle 11).",
+      "sources": {
+        "cc-2026-915": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2026-915 DC",
+          "date": "2026-08-14",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2026/2026915DC.htm"
+        },
+        "ddd-26-04": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis 26-04 sur le projet de loi visant à offrir des réponses immédiates aux phénomènes troublant l'ordre public, la sécurité et la tranquillité de nos concitoyens",
+          "date": "2026-06-16",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=23255"
+        },
+        "lqdn-2026-09": {
+          "auteur": "La Quadrature du Net",
+          "titre": "Loi RIPOST adoptée : faisons le bilan",
+          "date": "2026-09-09",
+          "url": "https://www.laquadrature.net/2026/09/09/loi-ripost-adoptee-faisons-le-bilan/"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V8433",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP, scrutin solennel (351-179)"
+        },
+        {
+          "id": "VTANR5L17V8279",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (366-182)"
+        },
+        {
+          "id": "VTANR5L17V7988",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (72-203)"
+        },
+        {
+          "id": "VTANR5L17V8432",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (85-207)"
+        },
+        {
+          "id": "VTANR5L17V8037",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 2, délit de participation aux rave-parties et amende forfaitaire, adopté (142-80)"
+        },
+        {
+          "id": "VTANR5L17V8048",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 3, rodéos motorisés et amende forfaitaire (16-47)"
+        },
+        {
+          "id": "VTANR5L17V8104",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 4, interdictions administratives de stade allongées (19-68)"
+        },
+        {
+          "id": "VTANR5L17V8119",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 5, expulsion administrative étendue (31-70)"
+        },
+        {
+          "id": "VTANR5L17V8210",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 5 septies, amende forfaitaire pour installation illicite relevée (28-35)"
+        },
+        {
+          "id": "VTANR5L17V8219",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 5 nonies, branchements des gens du voyage assimilés à une atteinte à la salubrité (27-32)"
+        },
+        {
+          "id": "VTANR5L17V8224",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 5 undecies, mise en demeure des gens du voyage étendue (25-32)"
+        },
+        {
+          "id": "VTANR5L17V8131",
+          "role": "amendement",
+          "pour": "a-trancher",
+          "objet": "rétablissement de l'article 6, amende forfaitaire pour usage de stupéfiants relevée (22-30)"
+        },
+        {
+          "id": "VTANR5L17V8135",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 7, protoxyde d'azote et amende forfaitaire (24-51)"
+        },
+        {
+          "id": "VTANR5L17V8167",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 9, contrôles et fouilles en zone douanière (12-23)"
+        },
+        {
+          "id": "VTANR5L17V8250",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 12, aménagements de peine et permissions de sortir supprimés (21-30)"
+        },
+        {
+          "id": "VTANR5L17V8187",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 14, drones en procédure d'urgence, adopté (35-17)"
+        },
+        {
+          "id": "VTANR5L17V8190",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 15, lecture automatisée des plaques étendue, adopté (39-22)"
+        },
+        {
+          "id": "VTANR5L17V8192",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 15 bis, traitement expérimental des données de plaques, adopté (34-20)"
+        },
+        {
+          "id": "VTANR5L17V8261",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 16, pseudonymisation des enquêteurs, adopté (33-22)"
+        },
+        {
+          "id": "VTANR5L17V8263",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 17, caméras individuelles des douanes et des gestionnaires routiers, adopté (29-23)"
+        },
+        {
+          "id": "VTANR5L17V8194",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 19, vidéosurveillance algorithmique jusqu'en 2030, adopté (42-23)"
+        },
+        {
+          "id": "VTANR5L17V8196",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 20, inspection des véhicules par les agents privés, adopté (39-22)"
+        }
+      ]
+    },
+    {
+      "id": "sren-2024",
+      "dossier_an": "DLR5L16N47884",
+      "legislature": 16,
+      "titre": "Loi visant à sécuriser et à réguler l'espace numérique",
+      "resume": "Texte « fourre-tout » sur le numérique. Il confie à l'Arcom un référentiel de vérification de l'âge pour les sites pornographiques et un pouvoir de blocage et de déréférencement sans juge préalable, crée une peine complémentaire de suspension des comptes de réseaux sociaux, impose aux navigateurs un filtre « anti-arnaque » qui bloque les adresses notifiées par la police, et crée un délit d'outrage en ligne, censuré par le Conseil constitutionnel. Il régule aussi l'informatique en nuage et les jeux à objets numériques monétisables.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "lqdn-2023-09-12",
+            "lqdn-2023-10-05",
+            "cc-2024-866"
+          ],
+          "justification": "Blocage administratif des sites, filtre des navigateurs et suspension de comptes : une « censure autoritaire et extra-judiciaire » selon La Quadrature du Net. Le délit d'outrage en ligne, présent dans le texte voté, a été censuré pour atteinte à la liberté d'expression."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "lqdn-2023-09-12"
+          ],
+          "justification": "L'obligation de justifier de son âge « passe nécessairement par une mise à mal de l'anonymat en ligne » (La Quadrature du Net)."
+        },
+        {
+          "code": "enfants",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "cc-2024-866"
+          ],
+          "justification": "Le blocage des sites pornographiques accessibles aux mineurs met en œuvre « l'exigence constitutionnelle de protection de l'intérêt supérieur de l'enfant » (Conseil constitutionnel, § 23)."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "Décision 2024-866 DC du 17 mai 2024, partiellement conforme. Le délit d'outrage en ligne (article 19) est censuré au fond, pour une atteinte à la liberté d'expression « qui n'est pas nécessaire, adaptée et proportionnée ». Quatre articles (10, 11, 18 et 58) sont censurés comme cavaliers, dont l'objectif d'identité numérique pour tous en 2027 (article 10). Le référentiel de vérification de l'âge et le blocage administratif sont validés. Deux réserves : pas de reconnaissance faciale dans les travaux de recherche du service de l'État (article 42), pas de sanction pour des faits antérieurs à l'entrée en vigueur (article 64).",
+      "note": "Scrutin décisif : l'ensemble du texte de la CMP, le 10 avril 2024. C'est le dernier vote de l'AN, et l'adoption est définitive à cette date. Il n'y a eu qu'une lecture à l'AN : les amendements clés sont de 1re lecture (règle 11). Trois sont retenus. Article 1er : référentiel de vérification de l'âge (La Quadrature du Net, qui demande le rejet des articles 1er et 2). Article 5 : suspension des comptes (La Quadrature du Net). Article 5 bis : délit d'outrage en ligne. Sa suppression a été adoptée, mais l'article a été rétabli en CMP, est devenu l'article 19 de la loi et a été censuré par le Conseil constitutionnel. Les trois articles restreignent des droits : voter leur suppression va contre le texte. Six scrutins sont écartés. Article 4 (Arcom et médias visés par des sanctions européennes) : aucune source ne met la mesure en cause. Articles 4 B et 10 bis A : rétablissements de mesures protectrices ou techniques que personne ne met en cause. Articles 15 et 15 bis (jeux à objets numériques) : hors grille. Le filtre « anti-arnaque » (article 6) n'a fait l'objet d'aucun scrutin public de suppression.",
+      "sources": {
+        "cc-2024-866": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2024-866 DC",
+          "date": "2024-05-17",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2024/2024866DC.htm"
+        },
+        "lqdn-2023-09-12": {
+          "auteur": "La Quadrature du Net",
+          "titre": "Projet de loi SREN : le gouvernement sourd à la réalité d'internet",
+          "date": "2023-09-12",
+          "url": "https://www.laquadrature.net/2023/09/12/projet-de-loi-sren-le-gouvernement-sourd-a-la-realite-dinternet/"
+        },
+        "lqdn-2023-10-05": {
+          "auteur": "La Quadrature du Net",
+          "titre": "Projet de loi SREN et filtre « anti-arnaque » : les navigateurs comme auxiliaires de police",
+          "date": "2023-10-05",
+          "url": "https://www.laquadrature.net/2023/10/05/projet-de-loi-sren-et-filtre-anti-arnaque-les-navigateurs-comme-auxiliaires-de-police/"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V3668",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (134-75)"
+        },
+        {
+          "id": "VTANR5L16V2796",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (360-77)"
+        },
+        {
+          "id": "VTANR5L16V2644",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (32-172)"
+        },
+        {
+          "id": "VTANR5L16V3667",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (97-163)"
+        },
+        {
+          "id": "VTANR5L16V2645",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 1er, référentiel de vérification de l'âge (21-89)"
+        },
+        {
+          "id": "VTANR5L16V2712",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 5, peine de suspension des comptes en ligne (37-70)"
+        },
+        {
+          "id": "VTANR5L16V2730",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 5 bis, délit d'outrage en ligne, adoptée (138-72)"
+        }
+      ]
+    },
+    {
+      "id": "surete-transports-2025",
+      "dossier_an": "DLR5L16N49176",
+      "legislature": 16,
+      "titre": "Loi relative au renforcement de la sûreté dans les transports",
+      "resume": "Élargit les pouvoirs des agents de sûreté de la SNCF et de la RATP (palpations sans arrêté préfectoral, refus d'accès et éviction des gares, interventions sur la voie publique), crée une peine d'interdiction de paraître dans les transports et de nouveaux délits, expérimente la captation sonore dans les bus et les caméras individuelles des conducteurs.",
+      "droits": [
+        {
+          "code": "police-justice",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cc-2025-878"
+          ],
+          "justification": "Palpations par des agents de sûreté sur de simples « éléments objectifs », refus d'accès et éviction des gares, pouvoir de contrainte des agents privés : des prérogatives de police confiées à des agents qui ne sont pas des forces de l'ordre. Le Conseil constitutionnel censure le pouvoir de contrainte, une mesure qui « relève, par nature, de la seule compétence des autorités de police », et encadre les refus d'accès par une réserve."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "lqdn-2024-05",
+            "cc-2025-878"
+          ],
+          "justification": "Captation du son dans les véhicules, caméras individuelles des conducteurs, caméras embarquées des bus scolaires à Mayotte (censurées pour atteinte à la vie privée), traitement de données sensibles par les services de sûreté."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "Les refus d'accès aux gares décidés par les agents ne peuvent reposer que sur des critères excluant toute discrimination (réserve du Conseil constitutionnel).",
+          "sources": [
+            "cc-2025-878"
+          ]
+        },
+        {
+          "texte": "Le Gouvernement a fait adopter en 1re lecture la prolongation de la vidéosurveillance algorithmique jusqu'en mars 2027, censurée comme cavalier.",
+          "sources": [
+            "lqdn-2025-03",
+            "cc-2025-878"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2025-878 DC du 24 avril 2025, non-conformité partielle avec réserves. Censures au fond : pouvoir des agents privés de contraindre une personne à quitter les lieux (art. 4, 2°), caméras embarquées des transports scolaires à Mayotte (art. 13). Quatre articles censurés comme cavaliers, dont le pistolet à impulsion électrique des agents de la SNCF (art. 5) et la prolongation de la vidéosurveillance algorithmique jusqu'au 1er mars 2027 (art. 15). Réserves sur les interventions sur la voie publique, l'éviction des gares (critères excluant toute discrimination) et les caméras frontales. Validés : palpations et fouilles par les agents de la SNCF et de la RATP (art. 1er), caméras individuelles des conducteurs (art. 11), captation sonore (art. 16).",
+      "note": "Scrutin décisif : texte de la CMP, dernier vote de l'AN sur l'ensemble (18/03/2025). Amendements clés de 1re lecture, seule lecture de l'AN (règle 11). Numéros d'articles du texte du Sénat examiné en séance. Un amendement clé : le rétablissement de l'article 11 (captation sonore), mesure mise en cause par La Quadrature du Net. Écartés faute de source admise qui mette la mesure en cause : V744 (suppression de l'article 1er, palpations et fouilles, validées sans réserve par le Conseil constitutionnel) ; V776 et V775 (rétablissement de l'article 13, interdiction de paraître, que le Conseil n'a pas examinée) ; V781 (rétablissement de l'article 16, transmission des procès-verbaux au parquet, 85-85). V773, amendement du Gouvernement prolongeant la vidéosurveillance algorithmique (86-37), crée un article additionnel et n'est ni une suppression ni un rétablissement. La commission avait supprimé la vidéosurveillance algorithmique en différé (art. 9), qui n'a pas été rétablie.",
+      "sources": {
+        "cc-2025-878": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2025-878 DC",
+          "date": "2025-04-24",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2025/2025878DC.htm"
+        },
+        "lqdn-2024-05": {
+          "auteur": "La Quadrature du Net",
+          "titre": "VSA : l'Assemblée discute déjà son extension aux transports",
+          "date": "2024-05-14",
+          "url": "https://www.laquadrature.net/2024/05/14/vsa-lassemblee-discute-deja-son-extension-aux-transports/"
+        },
+        "lqdn-2025-03": {
+          "auteur": "La Quadrature du Net",
+          "titre": "Expérimentation VSA : le gouvernement sur le point d'obtenir trois ans de rab",
+          "date": "2025-03-05",
+          "url": "https://www.laquadrature.net/2025/03/05/experimentation-vsa-le-gouvernement-sur-le-point-dobtenir-trois-ans-de-rab/"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V1041",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP, scrutin solennel (303-135)"
+        },
+        {
+          "id": "VTANR5L17V788",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (139-59)"
+        },
+        {
+          "id": "VTANR5L17V743",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (20-131)"
+        },
+        {
+          "id": "VTANR5L17V1040",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (51-172)"
+        },
+        {
+          "id": "VTANR5L17V774",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 11, captation sonore dans les bus et autocars, adopté (109-23)"
+        }
+      ]
     }
   ],
-  "ecartes": []
+  "ecartes": [
+    {
+      "dossier_an": "DLR5L15N44670",
+      "legislature": 15,
+      "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de l’État du Qatar établissant un partenariat relatif à la sécurité de la Coupe du Monde de football de 2022",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille."
+    },
+    {
+      "dossier_an": "DLR5L15N44752",
+      "legislature": 15,
+      "titre": "Projet de loi ratifiant l’ordonnance n° 2021-1605 du 8 décembre 2021 étendant et adaptant à la fonction publique des communes de Polynésie française certaines dispositions statutaires relatives à la fonction publique territoriale",
+      "motif": "Ratification d'ordonnance de portée technique, sans mesure touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L16N46127",
+      "legislature": 16,
+      "titre": "Proposition de loi portant réparation des personnes condamnées pour homosexualité entre 1945 et 1982",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (114 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N46205",
+      "legislature": 16,
+      "titre": "Convention d’entraide judiciaire en matière pénale entre le Gouvernement de la République française et le Gouvernement de la République du Sénégal, et de la convention d’extradition entre le Gouvernement de la République du Sénégal",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille."
+    },
+    {
+      "dossier_an": "DLR5L16N46249",
+      "legislature": 16,
+      "titre": "Instituer dans les écoles et collèges publics le port d’une tenue uniforme aux couleurs de l’établissement scolaire",
+      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L16N46270",
+      "legislature": 16,
+      "titre": "Proposition de loi créant une aide universelle d'urgence pour les victimes de violences conjugales",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (120 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N46374",
+      "legislature": 16,
+      "titre": "Proposition de loi visant à permettre une gestion différenciée de la compétence \"Eau et Assainissement\"",
+      "motif": "Gestion des compétences « eau » et « assainissement » des collectivités : hors de la grille des droits. Aucun vote sur l'ensemble."
+    },
+    {
+      "dossier_an": "DLR5L16N46428",
+      "legislature": 16,
+      "titre": "Réintégrer le personnel des établissements de santé et de secours non-vacciné grâce à un protocole sanitaire renforcé",
+      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L16N46471",
+      "legislature": 16,
+      "titre": "Création d’une juridiction spécialisée dans l'expulsion des étrangers délinquants",
+      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L16N46472",
+      "legislature": 16,
+      "titre": "Calculer la retraite de base des non-salariés agricoles en fonction de leurs seules vingt-cinq meilleures années de revenus",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (238 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N46473",
+      "legislature": 16,
+      "titre": "Assouplir les conditions d’expulsion des étrangers constituant une menace grave pour l’ordre public",
+      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L16N46485",
+      "legislature": 16,
+      "titre": "Encadrement des centres de santé",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (82 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N46778",
+      "legislature": 16,
+      "titre": "Etendre le droit de visite des parlementaires et parlementaires européens élus en France aux établissements sociaux et médico sociaux",
+      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L16N46825",
+      "legislature": 16,
+      "titre": "Approbation du premier amendement et du protocole à la convention d'Espoo",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille."
+    },
+    {
+      "dossier_an": "DLR5L16N46864",
+      "legislature": 16,
+      "titre": "Mieux protéger et accompagner les enfants victimes et co-victimes de violences intrafamiliales",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (180 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N46900",
+      "legislature": 16,
+      "titre": "Le coût de la vie dans les départements et régions d’Outre-mer",
+      "motif": "Résolution sur le coût de la vie outre-mer : hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L16N47015",
+      "legislature": 16,
+      "titre": "Favoriser l’accompagnement psychologique des femmes victimes de fausse couche",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (50 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N47026",
+      "legislature": 16,
+      "titre": "Renforcer la protection des mineurs et l’honorabilité dans le sport",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (207 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N47035",
+      "legislature": 16,
+      "titre": "Instaurer une majorité numérique et à lutter contre la haine en ligne",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (191 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N47036",
+      "legislature": 16,
+      "titre": "Mieux lutter contre la récidive",
+      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L16N47046",
+      "legislature": 16,
+      "titre": "Prévention de l'exposition excessive des enfants aux écrans",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (145 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N47047",
+      "legislature": 16,
+      "titre": "Garantir le respect du droit à l'image des enfants",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (195 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N47051",
+      "legislature": 16,
+      "titre": "Interdiction de l’écriture dite « inclusive » dans les éditions, productions et publications scolaires et universitaires ainsi que dans les actes civils, administratifs et commerciaux",
+      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L16N47074",
+      "legislature": 16,
+      "titre": "Lutte contre les arnaques et les dérives des influenceurs sur les réseaux sociaux",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (194 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N47089",
+      "legislature": 16,
+      "titre": "Lutter contre le dumping social sur le Transmanche",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (150 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N47271",
+      "legislature": 16,
+      "titre": "Accords entre la France et le Sénégal du 7 septembre 2021 et entre la France et le Sri Lanka du 23 février 2022",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille."
+    },
+    {
+      "dossier_an": "DLR5L16N47508",
+      "legislature": 16,
+      "titre": "Appeler la France et l’Union européenne à inscrire le groupe militaire privé Wagner sur la liste des organisations terroristes",
+      "motif": "Résolution de politique étrangère (groupe Wagner) : hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L16N47510",
+      "legislature": 16,
+      "titre": "Enquête sur la structuration, le financement, l’organisation des groupuscules et la conduite des manifestations illicites violentes entre le 16 mars 2023 et le 4 avril 2023",
+      "motif": "Résolution créant une commission d'enquête : elle n'édicte aucune règle (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L16N47515",
+      "legislature": 16,
+      "titre": "Assurer la pérennité des établissements de spectacles cinématographiques et l'accès au cinéma dans les outre-mer",
+      "motif": "Exploitation des salles de cinéma outre-mer : hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L16N47586",
+      "legislature": 16,
+      "titre": "Reconnaître le bénévolat de sécurité civile",
+      "motif": "Reconnaissance du bénévolat de sécurité civile (pompiers volontaires, secouristes) : hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L16N47615",
+      "legislature": 16,
+      "titre": "Projet de loi  ratifiant les ordonnances relatives à la partie législative du livre VII du code monétaire et financier et portant diverses dispositions relatives à l’outre-mer",
+      "motif": "Ratification d'ordonnance de portée technique, sans mesure touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L16N47622",
+      "legislature": 16,
+      "titre": "Renforcer le principe de la continuité territoriale en Outre-Mer",
+      "motif": "Continuité territoriale outre-mer (aides au transport) : hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L16N47669",
+      "legislature": 16,
+      "titre": "Création d’une commission d’enquête sur le modèle économique des entreprises de crèches et la qualité de l’accueil des jeunes enfants au sein de leurs établissements",
+      "motif": "Résolution créant une commission d'enquête : elle n'édicte aucune règle (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L16N47719",
+      "legislature": 16,
+      "titre": "Approbation des conventions entre la France et le Danemark et entre la France et la Grèce pour l’élimination de la double imposition en matière d’impôts sur le revenu et la prévention de l’évasion et de la fraude fiscales",
+      "motif": "Conventions fiscales contre la double imposition : hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L16N47806",
+      "legislature": 16,
+      "titre": "Soutenir les femmes qui souffrent d'endométriose",
+      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L16N47915",
+      "legislature": 16,
+      "titre": "Un cap au bénéfice des écoles nationales supérieures d’architecture",
+      "motif": "Résolution sur les écoles d'architecture : hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L16N47955",
+      "legislature": 16,
+      "titre": "Le dérapage du coût pour l’État de la couverture santé des étrangers en situation irrégulière et des demandeurs d’asile provenant de pays d’origine sûrs et au nombre d’étrangers en situation irrégulière",
+      "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit."
+    },
+    {
+      "dossier_an": "DLR5L16N47978",
+      "legislature": 16,
+      "titre": "Approbation des comptes de la sécurité sociale pour l'année 2022",
+      "motif": "Approbation des comptes de la sécurité sociale : texte comptable, sans mesure touchant un droit (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L16N48018",
+      "legislature": 16,
+      "titre": "Proposition de loi renforçant la sécurité des élus locaux et la protection des maires",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (96 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N48040",
+      "legislature": 16,
+      "titre": "Ratification du Traité d’entraide judiciaire en matière pénale entre la République française et la République du Kazakhstan",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille."
+    },
+    {
+      "dossier_an": "DLR5L16N48135",
+      "legislature": 16,
+      "titre": "Souveraineté de la France, nationalité, immigration et asile",
+      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L16N48348",
+      "legislature": 16,
+      "titre": "Proposition de loi visant la prise en charge par l’État de l’accompagnement humain des élèves en situation de handicap sur le temps méridien",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (86 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N48392",
+      "legislature": 16,
+      "titre": "Projet de loi relatif à l’accélération de la reconstruction et de la réfection des bâtiments dégradés ou détruits au cours des violences urbaines survenues du 27 juin au 5 juillet 2023",
+      "motif": "Reconstruction des bâtiments dégradés lors des violences urbaines de 2023 : dérogations d'urbanisme et de procédure, hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L16N48484",
+      "legislature": 16,
+      "titre": "Proposition de loi visant à supprimer ou à suspendre les allocations familiales pour les parents d’enfants criminels ou délinquants",
+      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L16N48586",
+      "legislature": 16,
+      "titre": "Pérenniser les jardins d’enfants gérés par une collectivité publique ou bénéficiant de financements publics",
+      "motif": "Statut des jardins d'enfants au regard de l'instruction obligatoire : texte d'organisation de l'accueil des enfants (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L16N48597",
+      "legislature": 16,
+      "titre": "Proposition de loi tendant à tenir compte de la capacité contributive des collectivités territoriales dans l'attribution des subventions et dotations destinées aux investissements relatifs à la transition écologique des bâtiments scolaires",
+      "motif": "Critères d'attribution des subventions aux collectivités : finances locales, hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L16N48646",
+      "legislature": 16,
+      "titre": "Renforcer la réponse pénale contre les infractions à caractère raciste ou antisémite",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (107 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N48718",
+      "legislature": 16,
+      "titre": "Création d’une commission d’enquête sur la gestion par l’État des risques naturels majeurs dans les territoires transocéaniques de France, dits d’Outre-mer",
+      "motif": "Résolution créant une commission d'enquête : elle n'édicte aucune règle (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L16N48739",
+      "legislature": 16,
+      "titre": "Création d'un homicide routier et visant à lutter contre la violence routière",
+      "motif": "Création de l'homicide routier : requalification d'infractions existantes, sans mesure touchant un droit de la grille."
+    },
+    {
+      "dossier_an": "DLR5L16N48758",
+      "legislature": 16,
+      "titre": "Améliorer l'accès aux soins par la territorialisation et la formation",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (68 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N48777",
+      "legislature": 16,
+      "titre": "Rendre effectifs les soins palliatifs sur tout le territoire national",
+      "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit."
+    },
+    {
+      "dossier_an": "DLR5L16N48973",
+      "legislature": 16,
+      "titre": "Projet de loi ratifiant l’ordonnance n° 2023-285 du 19 avril 2023 portant extension et adaptation à la Polynésie française, à la Nouvelle-Calédonie et aux îles Wallis et Futuna de diverses dispositions législatives relatives à la santé",
+      "motif": "Ratification d'ordonnance de portée technique, sans mesure touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L16N49004",
+      "legislature": 16,
+      "titre": "Adapter et mutualiser nos politiques publiques au changement climatique, notamment à destination des villes côtières et insulaires",
+      "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit."
+    },
+    {
+      "dossier_an": "DLR5L16N49023",
+      "legislature": 16,
+      "titre": "Assurer une justice patrimoniale au sein de la famille",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (80 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N49096",
+      "legislature": 16,
+      "titre": "Accélération et à la simplification de la rénovation de l'habitat dégradé et des grandes opérations d'aménagement",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (171 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N49103",
+      "legislature": 16,
+      "titre": "Usage de la langue française aux Jeux Olympiques et paralympiques de Paris en 2024",
+      "motif": "Résolution sur l'usage du français aux Jeux olympiques : hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L16N49107",
+      "legislature": 16,
+      "titre": "Faciliter la transformation des bureaux en logements",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (214 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N49175",
+      "legislature": 16,
+      "titre": "Accentuer les efforts pour favoriser l’accès de tous au logement",
+      "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit."
+    },
+    {
+      "dossier_an": "DLR5L16N49261",
+      "legislature": 16,
+      "titre": "Lutte contre les pénuries de médicaments",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (110 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N49320",
+      "legislature": 16,
+      "titre": "Projet de loi ratifiant l'ordonnance n° 2023-389 du 24 mai 2023 modifiant les dispositions du code général de la propriété des personnes publiques relatives à la Polynésie française",
+      "motif": "Ratification d'ordonnance de portée technique, sans mesure touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L16N49363",
+      "legislature": 16,
+      "titre": "Garantir le versement des pensions alimentaires aux enfants majeurs",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (102 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N49364",
+      "legislature": 16,
+      "titre": "Réduire l’impact environnemental de l’industrie textile",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (338 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N49373",
+      "legislature": 16,
+      "titre": "Projet de loi constitutionnelle portant modification du corps électoral pour les élections au congrès et aux assemblées de province de la Nouvelle-Calédonie",
+      "motif": "Corps électoral de Nouvelle-Calédonie : le droit de vote et le droit à l'autodétermination ne figurent pas dans la grille des droits v0."
+    },
+    {
+      "dossier_an": "DLR5L16N49374",
+      "legislature": 16,
+      "titre": "Projet de loi organique portant report du renouvellement général des membres du congrès et des assemblées de province de la Nouvelle-Calédonie",
+      "motif": "Report des élections provinciales de Nouvelle-Calédonie : texte de calendrier électoral (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L16N49457",
+      "legislature": 16,
+      "titre": "Garantir un revenu digne aux agriculteurs et accompagner la transition agricole",
+      "motif": "Revenu des agriculteurs et prix planchers : politique agricole, hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L16N49575",
+      "legislature": 16,
+      "titre": "Déclaration du Gouvernement relative au débat sur l'accord de sécurité franco-ukrainien et la situation en Ukraine, suivie d'un débat et d'un vote",
+      "motif": "Déclaration du Gouvernement sur l'Ukraine : hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L16N49616",
+      "legislature": 16,
+      "titre": "Situation des mineurs dans les industries du cinéma, du spectacle vivant et de la mode",
+      "motif": "Résolution créant une commission d'enquête : elle n'édicte aucune règle (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L16N49623",
+      "legislature": 16,
+      "titre": "Proposition de loi visant à poursuivre la dématérialisation de l'état civil du ministère de l'Europe et des affaires étrangères",
+      "motif": "Dématérialisation de l'état civil tenu par le ministère des affaires étrangères : texte d'organisation administrative (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L16N49740",
+      "legislature": 16,
+      "titre": "Indécence du logement social dans les départements et régions d'outre-mer",
+      "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit."
+    },
+    {
+      "dossier_an": "DLR5L16N49744",
+      "legislature": 16,
+      "titre": "Accompagnement des malades et fin de vie",
+      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen a été interrompu par la dissolution du 9 juin 2024 (règle 9). Le texte a été repris sous la XVIIe législature (aide à mourir)."
+    },
+    {
+      "dossier_an": "DLR5L16N49799",
+      "legislature": 16,
+      "titre": "Meilleure réussite scolaire des jeunes ultramarins grâce à l'apprentissage des langues régionales",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (82 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N49801",
+      "legislature": 16,
+      "titre": "Prise en charge intégrale des soins liés au traitement du cancer du sein par l'assurance maladie",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (141 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L16N49927",
+      "legislature": 16,
+      "titre": "Proposition de loi visant à assouplir la gestion des compétences « eau » et « assainissement »",
+      "motif": "Gestion des compétences « eau » et « assainissement » des collectivités : hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L16N50115",
+      "legislature": 16,
+      "titre": "Projet de loi autorisant la ratification de la convention n°155  sur la sécurité et la santé des travailleurs, 1981",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille."
+    },
+    {
+      "dossier_an": "DLR5L17N50173",
+      "legislature": 17,
+      "titre": "Approbation des comptes de la sécurité sociale pour l'année 2023",
+      "motif": "Approbation des comptes de la sécurité sociale : texte comptable, sans mesure touchant un droit (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N50275",
+      "legislature": 17,
+      "titre": "Violences commises dans les secteurs du cinéma, de l’audiovisuel, du spectacle vivant, de la mode et de la publicité",
+      "motif": "Résolution créant une commission d'enquête : elle n'édicte aucune règle (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N50356",
+      "legislature": 17,
+      "titre": "Les manquements des politiques publiques de protection de l'enfance",
+      "motif": "Résolution créant une commission d'enquête : elle n'édicte aucune règle (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N50444",
+      "legislature": 17,
+      "titre": "Optimiser la protection et l'accompagnement des parents d'enfants atteints de cancers, de maladies graves et de handicaps",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (212 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N50450",
+      "legislature": 17,
+      "titre": "Proposition de loi organique visant à reporter le renouvellement général des membres du congrès et des assemblées de province de la Nouvelle-Calédonie",
+      "motif": "Report des élections provinciales de Nouvelle-Calédonie : texte de calendrier électoral (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N50476",
+      "legislature": 17,
+      "titre": "Adoption et mise en œuvre d’exigences à l’importation pour le respect de normes de production équivalentes aux normes de production essentielles, en matière de santé, d’environnement, de biodiversité et de bien-être animal applicables dans l’Union européenne",
+      "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit."
+    },
+    {
+      "dossier_an": "DLR5L17N50548",
+      "legislature": 17,
+      "titre": "Proposition de loi relative au déclassement de restes humains kali'nas et à leur remise à la collectivité de Guyane à des fins funéraires",
+      "motif": "Restitution de restes humains kali'nas à la Guyane : hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L17N50579",
+      "legislature": 17,
+      "titre": "Proposition de loi organique visant à harmoniser le mode de scrutin aux élections municipales afin de garantir la vitalité démocratique, la cohésion municipale et la parité",
+      "motif": "Loi organique jumelle de la loi sur la parité municipale (2025-444), qui seule porte la mesure (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N50590",
+      "legislature": 17,
+      "titre": "Condamner l'oppression et la terreur imposées aux femmes iraniennes, et à réaffirmer leur liberté absolue",
+      "motif": "Résolution sur la situation des femmes en Iran : politique étrangère, hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L17N50686",
+      "legislature": 17,
+      "titre": "Renforcer le parcours inclusif des élèves en situation de handicap",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (108 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N50689",
+      "legislature": 17,
+      "titre": "Protéger les personnes engagées dans un projet parental des discriminations au travail",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (127 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N50775",
+      "legislature": 17,
+      "titre": "Mesures d’urgence pour protéger nos enfants accueillis en crèches privées à but lucratif",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (82 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N50779",
+      "legislature": 17,
+      "titre": "Prendre des mesures d’urgence contre la vie chère et réguler la concentration des acteurs économiques dans les territoires d’outre-mer",
+      "motif": "Vie chère et concentration économique outre-mer : droit de la concurrence, hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L17N50915",
+      "legislature": 17,
+      "titre": "Exercice de la démocratie agricole",
+      "motif": "Élections aux chambres d'agriculture : texte d'organisation professionnelle (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N51051",
+      "legislature": 17,
+      "titre": "Étendre les compétences du Parquet européen aux infractions à l’environnement",
+      "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit."
+    },
+    {
+      "dossier_an": "DLR5L17N51078",
+      "legislature": 17,
+      "titre": "Proposition de loi organique fixant le statut du procureur national anti-stupéfiants",
+      "motif": "Loi organique jumelle de la loi narcotrafic (statut du procureur national anti-stupéfiants), l'exemple même de la règle 8."
+    },
+    {
+      "dossier_an": "DLR5L17N51115",
+      "legislature": 17,
+      "titre": "Proposition de loi expérimentant l’encadrement des loyers et améliorant l’habitat dans les outre-mer",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (169 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N51173",
+      "legislature": 17,
+      "titre": "Proposition de loi organique tendant à modifier le II de l’article 43 de la loi organique n° 2004-192 du 27 février 2004 portant statut d’autonomie de la Polynésie française",
+      "motif": "Texte d'organisation administrative d'une collectivité d'outre-mer, sans mesure touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N51222",
+      "legislature": 17,
+      "titre": "Loi d'urgence pour Mayotte",
+      "motif": "Texte de reconstruction après le cyclone Chido : coordination de la reconstruction, dérogations d'urbanisme et de commande publique, mesures fiscales et sociales temporaires. Aucune source admise (règle 7) ne met en cause une de ses mesures au regard d'un droit de la grille. Il n'a pas été déféré au Conseil constitutionnel."
+    },
+    {
+      "dossier_an": "DLR5L17N51279",
+      "legislature": 17,
+      "titre": "Les effets psychologiques de TikTok sur les mineurs",
+      "motif": "Résolution créant une commission d'enquête : elle n'édicte aucune règle (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N51328",
+      "legislature": 17,
+      "titre": "Instaurer un dispositif de sanction contraventionnelle pour prévenir le développement des vignes non cultivées qui représentent une menace sanitaire pour l’ensemble du vignoble français",
+      "motif": "Sanction des vignes non cultivées (risque phytosanitaire) : hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L17N51346",
+      "legislature": 17,
+      "titre": "Création du cadre d'emploi des personnels de santé des services d’incendie et de secours",
+      "motif": "Cadre d'emploi des personnels de santé des services d'incendie et de secours : statut de la fonction publique (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N51351",
+      "legislature": 17,
+      "titre": "Proposition de loi visant à reconnaître le préjudice subi par les personnes condamnées sur le fondement de la législation pénalisant l’avortement, et par toutes les femmes, avant la loi n° 75-17 du 17 janvier 1975 relative à l’interruption volontaire de la grossesse",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (93 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N51362",
+      "legislature": 17,
+      "titre": "Projet de loi autorisant la ratification de la résolution LP.3(4) portant amendement de l’article 6 du Protocole de Londres de 1996 à la Convention de 1972 sur la prévention de la pollution des mers résultant de l’immersion de déchets et autres matières",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille."
+    },
+    {
+      "dossier_an": "DLR5L17N51480",
+      "legislature": 17,
+      "titre": "Mettre fin à la culpabilisation des victimes de violences physiques et sexuelles",
+      "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit."
+    },
+    {
+      "dossier_an": "DLR5L17N51485",
+      "legislature": 17,
+      "titre": "Proposition de loi visant à convertir des centrales à charbon vers des combustibles moins émetteurs en dioxyde de carbone pour permettre une transition écologique plus juste socialement",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (145 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N51518",
+      "legislature": 17,
+      "titre": "Valoriser la réserve communale de sécurité civile",
+      "motif": "Réserve communale de sécurité civile : hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L17N51615",
+      "legislature": 17,
+      "titre": "Mise en œuvre du Protocole de l’Organisation Mondiale de la Santé pour « lutter contre le commerce illicite de tabac »",
+      "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit."
+    },
+    {
+      "dossier_an": "DLR5L17N51619",
+      "legislature": 17,
+      "titre": "Les dysfonctionnements obstruant l’accès à une justice adaptée aux besoins des justiciables ultramarins",
+      "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit."
+    },
+    {
+      "dossier_an": "DLR5L17N51655",
+      "legislature": 17,
+      "titre": "L’intérêt des enfants",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (35 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N51672",
+      "legislature": 17,
+      "titre": "Loi visant à garantir l'égal accès de tous à l'accompagnement et aux soins palliatifs",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (491 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N51845",
+      "legislature": 17,
+      "titre": "Réparer les préjudices causés par la transplantation de mineurs de La Réunion en France hexagonale de 1962 à 1984",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (72 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N51962",
+      "legislature": 17,
+      "titre": "Exercer l’accès à l’emploi, pérenniser et étendre progressivement l’expérimentation Territoires zéro chômeur longue durée comme solution de retour à l’emploi pour les personnes privées durablement d’emploi",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (96 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N51981",
+      "legislature": 17,
+      "titre": "Renforcer la solidarité envers les retraités pauvres",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (165 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N51982",
+      "legislature": 17,
+      "titre": "Plusieurs mesures de justice pour limiter les frais bancaires",
+      "motif": "Frais bancaires : protection des consommateurs, hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L17N51984",
+      "legislature": 17,
+      "titre": "Département-Région de Mayotte",
+      "motif": "Loi organique jumelle de la loi de refondation de Mayotte, qui porte les mesures qualifiées (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N51986",
+      "legislature": 17,
+      "titre": "Projet de loi relatif au transfert à l’Etat des personnels enseignants de l’enseignement du premier degré dans les îles Wallis et Futuna",
+      "motif": "Texte d'organisation administrative d'une collectivité d'outre-mer, sans mesure touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N51999",
+      "legislature": 17,
+      "titre": "Abroger la loi n° 2023-270 du 14 avril 2023 de financement rectificative de la sécurité sociale pour 2023 dite réforme des retraites",
+      "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit."
+    },
+    {
+      "dossier_an": "DLR5L17N52104",
+      "legislature": 17,
+      "titre": "Proposition de loi organique portant actualisation du corps électoral pour les élections au congrès et aux assemblées de province de la Nouvelle-Calédonie",
+      "motif": "Corps électoral de Nouvelle-Calédonie : le droit de vote et le droit à l'autodétermination ne figurent pas dans la grille des droits v0."
+    },
+    {
+      "dossier_an": "DLR5L17N52132",
+      "legislature": 17,
+      "titre": "Inscrire la mouvance des frères musulmans sur la liste européenne des organisations terroristes",
+      "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit."
+    },
+    {
+      "dossier_an": "DLR5L17N52133",
+      "legislature": 17,
+      "titre": "Approbation des comptes de la sécurité sociale de l'année 2024",
+      "motif": "Approbation des comptes de la sécurité sociale : texte comptable, sans mesure touchant un droit (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N52655",
+      "legislature": 17,
+      "titre": "Proposition de loi organique visant à reporter le renouvellement général des membres du congrès et des assemblées de province de la Nouvelle-Calédonie pour permettre la mise en oeuvre de l'accord du 12 juillet 2025",
+      "motif": "Report des élections provinciales de Nouvelle-Calédonie : texte de calendrier électoral (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N52743",
+      "legislature": 17,
+      "titre": "Garantir l’information et la protection effective des victimes de violences sexuelles lors de la libération de leur agresseur",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (146 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N52744",
+      "legislature": 17,
+      "titre": "Garantir la gratuité des parkings des hôpitaux publics pour les patients, les visiteurs et les personnels sur leur temps de travail",
+      "motif": "Gratuité du stationnement dans les hôpitaux publics : hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L17N52776",
+      "legislature": 17,
+      "titre": "Gratuité des parkings d'hôpitaux publics",
+      "motif": "Gratuité du stationnement dans les hôpitaux publics : hors de la grille des droits. Aucun vote sur l'ensemble."
+    },
+    {
+      "dossier_an": "DLR5L17N52781",
+      "legislature": 17,
+      "titre": "Assurer le droit de chaque enfant à disposer d’un avocat dans le cadre d’une mesure d’assistance éducative et de protection de l’enfance",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (292 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N52924",
+      "legislature": 17,
+      "titre": "Mettre en place un programme de soutien à l’innovation thérapeutique contre les cancers, les maladies rares et les maladies orphelines de l’enfant",
+      "motif": "Soutien à l'innovation thérapeutique contre les cancers de l'enfant : financement de la recherche, sans mesure touchant l'accès aux soins ou un autre droit de la grille."
+    },
+    {
+      "dossier_an": "DLR5L17N52976",
+      "legislature": 17,
+      "titre": "L'établissement de l’égalité d’accès au service public postal en outre-mer",
+      "motif": "Service postal outre-mer : hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L17N52984",
+      "legislature": 17,
+      "titre": "Projet de loi constitutionnelle relatif à la Nouvelle-Calédonie",
+      "motif": "Corps électoral de Nouvelle-Calédonie : le droit de vote et le droit à l'autodétermination ne figurent pas dans la grille des droits v0."
+    },
+    {
+      "dossier_an": "DLR5L17N53005",
+      "legislature": 17,
+      "titre": "Le traitement judiciaire des violences sexuelles incestueuses parentales commises contre les enfants et la situation des parents protecteurs, notamment des mères protectrices",
+      "motif": "Résolution créant une commission d'enquête : elle n'édicte aucune règle (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N53014",
+      "legislature": 17,
+      "titre": "Réaffirmer l’ambition climatique de la France au niveau européen",
+      "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit."
+    },
+    {
+      "dossier_an": "DLR5L17N53053",
+      "legislature": 17,
+      "titre": "Protéger la santé mentale des agricultrices et des agriculteurs",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (76 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N53058",
+      "legislature": 17,
+      "titre": "Prendre des mesures d’urgence contre la vie chère en outre-mer dans le secteur des services",
+      "motif": "Vie chère outre-mer dans le secteur des services : droit de la concurrence, hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L17N53067",
+      "legislature": 17,
+      "titre": "Reconnaître une politique nationale d’adaptation au changement climatique et à adapter les mécanismes d’assurance",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (70 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N53171",
+      "legislature": 17,
+      "titre": "Expérimentation pour l’instauration d’un enseignement d’éducation à l’alimentation à l’école",
+      "motif": "Expérimentation d'un enseignement d'éducation à l'alimentation : contenu des programmes scolaires, hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L17N53276",
+      "legislature": 17,
+      "titre": "Reconnaître les victimes de l'exposition aux essais nucléaires français et améliorer leur indemnisation",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (69 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N53357",
+      "legislature": 17,
+      "titre": "Proposition de loi visant à étendre à toutes les communes la compensation financière prévue pour les communes de plus de 3 500 habitants pour l’exercice de l’ensemble des compétences du service public de la petite enfance",
+      "motif": "Compensation financière versée aux communes : finances locales, hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L17N53378",
+      "legislature": 17,
+      "titre": "Libération des prisonniers arméniens détenus par l’Azerbaïdjan",
+      "motif": "Résolution sur les prisonniers arméniens en Azerbaïdjan : politique étrangère, hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L17N53426",
+      "legislature": 17,
+      "titre": "Accélérer la prévention cardio-neuro-vasculaire et anticiper un risque sanitaire et social majeur",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (462 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N53427",
+      "legislature": 17,
+      "titre": "Améliorer la protection des personnes ciblées par les réseaux de criminalité organisée",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (123 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N53600",
+      "legislature": 17,
+      "titre": "Projet de loi portant habilitation de l’assemblée de Martinique à fixer elle-même des règles applicables sur son territoire en application de l’article 73 de la Constitution en matière d’énergie, d’eau et d’assainissement",
+      "motif": "Texte d'organisation administrative d'une collectivité d'outre-mer, sans mesure touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N53715",
+      "legislature": 17,
+      "titre": "Renforcer la place des agriculteurs dans l’aménagement du territoire et à sécuriser l’exercice des activités agricoles face au changement climatique",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (122 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N53717",
+      "legislature": 17,
+      "titre": "Interdire les sucres ajoutés dans les aliments destinés aux nourrissons et aux enfants en bas âge",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (49 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N53775",
+      "legislature": 17,
+      "titre": "Encadrer les regroupements pédagogiques intercommunaux afin de garantir l’égalité d’accès à l’école en milieu rural",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (132 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N53886",
+      "legislature": 17,
+      "titre": "Proposition de loi visant à assouplir la procédure d'autorisation des établissements et services médico-sociaux à caractère expérimental",
+      "motif": "Autorisation des établissements médico-sociaux expérimentaux : procédure administrative (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N54083",
+      "legislature": 17,
+      "titre": "Loi actualisant la programmation militaire pour les années 2024 à 2030 et portant diverses dispositions intéressant la défense",
+      "motif": "Loi de programmation des moyens des armées, assortie de mesures touchant des droits de la grille (état d'alerte de sécurité nationale, algorithmes de renseignement). Aucune source admise (règle 7) ne met en cause les mesures du texte : le Conseil constitutionnel les a validées sans réserve."
+    },
+    {
+      "dossier_an": "DLR5L17N54096",
+      "legislature": 17,
+      "titre": "Proposition de loi relative à l’expérimentation d’une gouvernance territoriale unifiée pour le centre de ressources, d’expertise et de performance sportive (CREPS) de Vichy",
+      "motif": "Gouvernance d'un centre de ressources sportives (CREPS) : texte d'organisation (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N54227",
+      "legislature": 17,
+      "titre": "Protéger les enfants et lutter contre les violences en milieu scolaire",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (187 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N54373",
+      "legislature": 17,
+      "titre": "Projet de loi portant approbation des comptes de la sécurité sociale de l’année 2025",
+      "motif": "Approbation des comptes de la sécurité sociale : texte comptable, sans mesure touchant un droit (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N54776",
+      "legislature": 17,
+      "titre": "Apporter une réponse intégrale au phénomène des violences sexuelles et sexistes contre les femmes et les enfants",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (503 pour, 0 contre) : ce vote ne départage aucun député."
+    },
+    {
+      "dossier_an": "DLR5L17N54777",
+      "legislature": 17,
+      "titre": "Adapter l'autorité judiciaire à la lutte contre les violences sexuelles et intrafamiliales",
+      "motif": "Loi organique jumelle de la loi intégrale contre les violences sexuelles et sexistes (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N54841",
+      "legislature": 17,
+      "titre": "Mobiliser la commande publique au service de l’emploi, de la production et de l’innovation en France",
+      "motif": "Résolution sur la commande publique : politique économique, hors de la grille des droits."
+    },
+    {
+      "dossier_an": "DLR5L17N54844",
+      "legislature": 17,
+      "titre": "Garantir un accès continu à l’eau potable dans les territoires ultramarins",
+      "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit."
+    }
+  ]
 }
