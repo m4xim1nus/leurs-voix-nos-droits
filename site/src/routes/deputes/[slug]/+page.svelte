@@ -239,7 +239,7 @@
   }
   .chiffre-cle {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     flex-wrap: wrap;
     gap: 0 1.25rem;
     margin-top: 1.5rem;

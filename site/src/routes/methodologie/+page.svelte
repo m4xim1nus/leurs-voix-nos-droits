@@ -12,13 +12,13 @@
   <title>Méthodologie, {NOM}</title>
   <meta
     name="description"
-    content="Comment les textes sont qualifiés et comment les scores sont calculés : des règles fixes et publiques."
+    content="Comment les textes sont qualifiés et comment les scores sont calculés : des règles fixes et publiques."
   />
 </svelte:head>
 
 <h1>Méthodologie</h1>
 <p class="chapo">
-  Le site mesure une chose : quand un député vote sur un texte qui touche aux droits et libertés,
+  Le site mesure une chose : quand un député vote sur un texte qui touche aux droits et libertés,
   vote-t-il dans le sens de ces droits ? Pour y répondre sans jugement au cas par cas, il applique
   des règles fixes, numérotées ci-dessous. Elles valent pour tous les textes et tous les députés.
 </p>
@@ -39,7 +39,7 @@
   <h2>Qualifier un texte</h2>
   <p>
     Chaque texte retenu reçoit un <strong>droit principal</strong> et, souvent, des droits
-    secondaires, pris dans une grille de <a href="/droits">onze droits</a>. Pour chacun, un sens :
+    secondaires, pris dans une grille de <a href="/droits">onze droits</a>. Pour chacun, un sens :
     le texte <strong>étend</strong> ce droit, ou il le <strong>restreint</strong>. Chaque jugement
     cite au moins une source publique, affichée à côté de lui.
   </p>
@@ -52,17 +52,17 @@
     <li value="2">
       <strong>Périmètre.</strong> La grille suit les droits des personnes face à la puissance publique
       et aux plus forts. La propriété et l’ordre public sont des objectifs que la loi concilie avec ces
-      droits : ils n’entrent pas dans la grille. Quand un texte les étend, c’est signalé en point de vigilance.
+      droits : ils n’entrent pas dans la grille. Quand un texte les étend, c’est signalé en point de vigilance.
     </li>
     <li value="3">
-      <strong>Recouvrements.</strong> Justice des mineurs : droits de l’enfant en principal, police et
-      justice en secondaire. Technique de surveillance : vie privée en principal, libertés publiques seulement
-      si une source le relève. Mesure qui ne vise que des étrangers : droits des personnes étrangères
+      <strong>Recouvrements.</strong> Justice des mineurs : droits de l’enfant en principal, police et
+      justice en secondaire. Technique de surveillance : vie privée en principal, libertés publiques seulement
+      si une source le relève. Mesure qui ne vise que des étrangers : droits des personnes étrangères
       en principal.
     </li>
     <li value="4">
       <strong>Sens droit par droit.</strong> Il n’y a pas de sens « mixte ». Chaque droit touché a le
-      sien ; celui du texte est celui de son droit principal. Exemple : la loi immigration de 2024 restreint
+      sien ; celui du texte est celui de son droit principal. Exemple : la loi immigration de 2024 restreint
       les droits des personnes étrangères et étend ceux de l’enfant.
     </li>
     <li value="5">
@@ -97,7 +97,7 @@
   <p>
     Une personne relit ensuite chaque proposition, la corrige au besoin et la valide. <strong
       >Aucune qualification n’est publiée sans cette validation humaine.</strong
-    > Les choix de méthode, eux, ne sont jamais délégués : la grille, les règles de calcul et le sens
+    > Les choix de méthode, eux, ne sont jamais délégués : la grille, les règles de calcul et le sens
     de chaque scrutin compté sont arrêtés par une personne et publiés ici.
   </p>
   <p>
@@ -112,12 +112,12 @@
   <h2>Les scrutins retenus</h2>
   <ol class="regles">
     <li value="9">
-      <strong>Vote décisif.</strong> Le dernier vote de l’Assemblée sur l’ensemble du texte : lecture
+      <strong>Vote décisif.</strong> Le dernier vote de l’Assemblée sur l’ensemble du texte : lecture
       définitive, texte de la commission mixte paritaire, ou dernière lecture à l’Assemblée quand le texte
       est adopté définitivement au Sénat. Les votes des autres lectures sont affichés, pas comptés.
     </li>
     <li value="10">
-      <strong>Motions de rejet : affichées, pas comptées.</strong> Une motion peut être votée pour des
+      <strong>Motions de rejet : affichées, pas comptées.</strong> Une motion peut être votée pour des
       raisons tactiques. Sur la loi immigration, la motion de rejet a été adoptée avec les voix de groupes
       qui ont ensuite voté le texte. La compter comme une opposition au texte les créditerait d’un vote
       favorable aux droits.
@@ -125,9 +125,9 @@
     <li value="11">
       <strong>Amendements clés.</strong> Seuls comptent les amendements qui suppriment ou rétablissent
       un article portant une mesure mise en cause par une source. Leur sens se fixe d’après le contenu
-      de l’article, pas d’après la nature de l’amendement : supprimer un article qui ajoute une garantie
+      de l’article, pas d’après la nature de l’amendement : supprimer un article qui ajoute une garantie
       va contre les droits. Un seul scrutin par article (celui qui en a fixé le sort), et une seule lecture
-      : la dernière où des suppressions ont été mises aux voix. Ne comptent pas : la suppression de l’article
+      : la dernière où des suppressions ont été mises aux voix. Ne comptent pas : la suppression de l’article
       unique d’un texte (elle double le vote décisif) et un scrutin sans aucune voix d’un côté (il ne
       départage personne).
     </li>
@@ -142,11 +142,11 @@
       de la majorité de ses membres qui ont voté pour ou contre. Si les abstentions dépassent à la fois
       les pour et les contre, le groupe est « majoritairement abstentionniste ». À égalité, il est « partagé
       ». La cohésion est la part des votants du groupe (pour, contre et abstention) qui ont voté comme
-      lui. Exemple : 10 pour, 2 contre et 8 abstentions donnent « pour », avec une cohésion de 50 %.
+      lui. Exemple : 10 pour, 2 contre et 8 abstentions donnent « pour », avec une cohésion de 50 %.
     </li>
     <li value="13">
       <strong>Mises au point.</strong> Un député qui déclare après coup qu’il voulait voter autrement
-      ne change pas le résultat officiel : sa déclaration n’est pas comptée.
+      ne change pas le résultat officiel : sa déclaration n’est pas comptée.
     </li>
   </ol>
 </section>
@@ -156,7 +156,7 @@
   <ol class="regles">
     <li value="14">
       <strong>Vote favorable aux droits.</strong> Sur chaque scrutin compté, voter pour est favorable
-      ou défavorable selon deux sens : celui du texte (il étend ou restreint le droit) et celui du scrutin
+      ou défavorable selon deux sens : celui du texte (il étend ou restreint le droit) et celui du scrutin
       (voter pour soutient le texte, ou s’y oppose). Sur un texte qui restreint un droit, voter contre
       le texte est favorable, et voter la suppression d’un de ses articles restrictifs aussi.
     </li>
@@ -167,11 +167,11 @@
       sens.
     </li>
     <li value="16">
-      <strong>Abstention : hors calcul.</strong> Elle n’entre pas dans le score et s’affiche à côté. Elle
+      <strong>Abstention : hors calcul.</strong> Elle n’entre pas dans le score et s’affiche à côté. Elle
       n’est donc jamais comptée comme un vote contre.
     </li>
     <li value="17">
-      <strong>Absences : hors calcul.</strong> Un député absent, ou présent sans voter (c’est souvent
+      <strong>Absences : hors calcul.</strong> Un député absent, ou présent sans voter (c’est souvent
       la présidence de séance), n’a pas de vote sur ce scrutin. Sa participation s’affiche à côté du score
       : la part des scrutins comptés, tenus pendant son mandat, où il a voté pour, contre ou s’est abstenu.
     </li>
@@ -195,7 +195,7 @@
 <section id="donnees">
   <h2>Les données</h2>
   <p>
-    Les votes viennent uniquement de l’open data officiel de l’Assemblée nationale : scrutins, votes
+    Les votes viennent uniquement de l’open data officiel de l’Assemblée nationale : scrutins, votes
     nominatifs, dossiers législatifs, députés et groupes. D’autres sites (datan.fr, leurs-votes.fr)
     servent à vérifier les décomptes, jamais de source. Le périmètre couvre les XVIe et XVIIe
     législatures, depuis juin 2022.
@@ -205,7 +205,7 @@
     Le site joint la base officielle des codes postaux (La Poste), qui donne les communes de chaque code,
     aux résultats des législatives de 2024 par bureau de vote (ministère de l’Intérieur), qui donnent
     la circonscription de chaque commune. Les communes sont ramenées au code officiel géographique en
-    vigueur (Insee). Le découpage légal, lui, est fixé par le code électoral : ces résultats n’en sont
+    vigueur (Insee). Le découpage légal, lui, est fixé par le code électoral : ces résultats n’en sont
     qu’un reflet fidèle. Quand une commune est partagée entre plusieurs circonscriptions, le site affiche
     tous les députés possibles.
   </p>
@@ -219,11 +219,11 @@
   <h2>Les limites</h2>
   <ul>
     <li>
-      Un score ne dit que ce qu’il mesure : des votes en séance, sur les textes qualifiés. Il ne dit
+      Un score ne dit que ce qu’il mesure : des votes en séance, sur les textes qualifiés. Il ne dit
       rien du travail en commission, des amendements déposés ni des prises de parole.
     </li>
     <li>
-      Avec peu de textes, un score sur un droit repose sur peu de votes : le nombre de textes est
+      Avec peu de textes, un score sur un droit repose sur peu de votes : le nombre de textes est
       toujours affiché à côté.
     </li>
     <li>
@@ -248,6 +248,7 @@
   }
   .regles li {
     margin-bottom: 0.8rem;
+    padding-left: 0.3rem;
   }
   .regles li::marker {
     font-family: var(--titre);

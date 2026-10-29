@@ -38,3 +38,8 @@ File d'attente brute, non ordonnée. Une ligne par item :
 - [ ] `sync-admin` incrémental (n'écrire que les lignes changées) : un sync complet écrit ~80 000 lignes, près de la limite gratuite de D1 (100 000/jour) (claude, 2026-10-29)
 - [ ] Catalogue : saisines du Conseil constitutionnel déclarées irrecevables absentes (ingérences étrangères : 2024-870 DC et 2024-871 DC, après la dissolution) ; vérifier aussi « Non conforme » affiché pour une non-conformité partielle (2026-911 DC) (claude, 2026-10-29)
 - [ ] Texte dont le dossier est en XVIe mais tous les votes en XVIIe (sûreté dans les transports, meublés de tourisme) : quelle législature afficher ? (claude, 2026-10-29)
+- [ ] Espaces insécables avant « : », « ; », « ? » dans tout le site (fait dans la méthodologie seulement) (claude, 2026-10-29)
+- [ ] Cartes partageables : ajouter les droits les plus et les moins favorables quand il y aura assez de textes ; format 4:5 pour les réseaux (claude, 2026-10-29)
+- [ ] Français de l'étranger : la recherche par code postal ne les couvre pas ; lien vers les 11 circonscriptions en attendant la table pays → circonscription (claude, 2026-10-29)
+- [ ] `lvnd annuaire` : repli sur la table MI 2017 pour les communes sans électeurs en 2024 (8 couples code postal × commune sans circonscription) (claude, 2026-10-29)
+- [ ] Site : page « Comparer deux députés » ou deux groupes (claude, 2026-10-29)

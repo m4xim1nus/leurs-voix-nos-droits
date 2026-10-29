@@ -126,18 +126,38 @@ But : mise en ligne publique.
   `technoperchoir.fr`. Recette sur téléphone.
 - **Livrable** : site en ligne, tag `v1.0.0`, `CHANGELOG.md` créé.
 
-À faire en premier, et choix en attente de Max :
+Décisions de Max (29/10/2026) :
 
-- `lvnd scores` (choix F1 de `docs/CONCEPTION.md`) : scores recalculés
-  depuis `data/export/` et `editorial.json`, exécutés par `build.sh`.
-  Une publication depuis l'admin met ainsi le site à jour sans passer par
-  la machine de Max.
-- ⏳ Transparence : la page Méthodologie dit-elle que les qualifications
-  sont préparées avec un assistant IA et validées par une personne ?
-  Recommandation : oui.
-- ⏳ Seuil de la v1 : combien de textes qualifiés pour ouvrir le site ?
-  Recommandation : une cinquantaine, qui couvrent les onze droits de la
-  grille.
+- ✅ Transparence (choix G) : la page Méthodologie dit que les
+  qualifications sont préparées avec un assistant IA et validées par une
+  personne. C'est écrit sur le site.
+- ✅ Seuil de la v1 (choix H) : au moins une cinquantaine de textes
+  qualifiés ; Max fixera le chiffre selon la vitesse de la qualification.
+  D'ici là, bandeau « Site en préparation » (`site/src/lib/site.ts`,
+  `OUVERT`).
+
+État au 29/10/2026 (branche `etape-4`) :
+
+- ✅ `lvnd scores` (choix F1) : scores recalculés depuis `data/export/` et
+  `editorial.json` en ≈ 1 s, identiques à l'octet près à ceux de
+  `lvnd build`. Ajoute la participation (règle 17) et les scores par
+  texte.
+- ✅ `lvnd annuaire` : code postal → circonscription (6 326 codes, repris
+  du spike) et courriels des députés, dans `data/annuaire/`.
+- ✅ Conception (`docs/CONCEPTION.md`, Site public).
+- ✅ Site (`site/`) : accueil et recherche (code postal, nom), droits,
+  textes, fiche texte, fiche député (« Lui écrire »), circonscriptions,
+  groupes, méthodologie, données, cartes PNG partageables. 1 464 pages.
+- ✅ `build.sh` et CI (tests et build du site).
+- ⏳ Choix I (seuil d'affichage d'un score), J (définition de la
+  participation) et K (sous-domaine) : recommandations dans
+  `docs/CONCEPTION.md`.
+- ⏳ Mise en service Cloudflare Pages (gestes de Max, `docs/CONCEPTION.md`)
+  et recette sur téléphone réel.
+- ⏳ À la fusion dans `main` : `lvnd build` doit appeler `lvnd scores` en
+  fin de course (sinon il efface `participation.csv` et
+  `scores_*_textes.csv`) ; ajouter les commandes du site à `CLAUDE.md`.
+- ⏳ Livrable : site en ligne, tag `v1.0.0`, `CHANGELOG.md`.
 
 ## Qualification par lots (en continu, en parallèle de l'étape 4)
 

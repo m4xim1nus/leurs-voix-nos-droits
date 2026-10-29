@@ -272,7 +272,7 @@ vie privée », avec la source à côté, jamais « texte liberticide ».
 | Fiche député | `/deputes/<slug>` | circonscription, groupes successifs, score global et par droit, participation, abstentions, votes sur chaque scrutin compté, « Lui écrire », carte partageable |
 | Circonscription | `/circonscriptions/<dép>-<num>` | député en cours, ou « siège vacant », et ses prédécesseurs depuis 2022 |
 | Groupes | `/groupes` | par législature : tableau groupe × droit, effectifs |
-| Fiche groupe | `/groupes/<sigle>-<législature>` | score global et par droit, cohésion moyenne, membres et leur score |
+| Fiche groupe | `/groupes/<sigle>-<législature>` | score global, par droit et par texte, membres et leur score |
 | Méthodologie | `/methodologie` | grille, règles 1 à 19, préparation des qualifications, code postal, sources |
 | Données | `/donnees` | `editorial.json`, exports CSV, votes nominatifs, licence |
 
@@ -325,10 +325,11 @@ ni la mise en page.
 - **Registre** : l'affiche et la pancarte de manifestation, plus que le
   journal. Des titres en grotesque étroite très grasse, en minuscules,
   serrés ; tout le reste sobre.
-- **Polices** (libres, hébergées par le site) : Archivo, police variable
-  à axe de chasse, étroite et grasse pour les titres et les chiffres
-  clés, normale pour l'interface ; Atkinson Hyperlegible Next pour le
-  texte courant, dessinée pour la lisibilité.
+- **Police** (libre, hébergée par le site) : Archivo seule, police
+  variable à axe de chasse. Étroite et très grasse pour les titres et les
+  chiffres clés, chasse normale pour le texte. Atkinson Hyperlegible Next,
+  d'abord prévue pour le texte, a été écartée : son zéro barré gêne dans
+  les dates (« 2Ø22 »).
 - **Palette** : papier blanc pur (`#ffffff`), encre presque noire bleutée
   (`#15171c`), gris ardoise (`#5b606b`) et filets (`#dcdee3`). Deux
   couleurs de données seulement, jamais employées en décor : **bleu
@@ -351,8 +352,11 @@ Une image PNG par député et par groupe, au format 1200 × 630 (aperçu de
 lien, `og:image`) : nom, groupe, circonscription, score global sur la
 règle graduée, trois droits les plus et les moins favorables, nombre de
 textes, adresse de la fiche. Générées au build (SVG rendu en PNG par
-`@resvg/resvg-js`, polices embarquées), sans service tiers. La fiche
-propose « Télécharger l'image ».
+`@resvg/resvg-js`), sans service tiers. resvg ne lit ni le WOFF2 ni les
+axes variables : deux instances statiques d'Archivo en TTF sont rangées
+dans `site/scripts/polices/`. La fiche propose « Télécharger l'image ».
+Les droits les plus et les moins favorables, prévus sur la carte, n'y
+figurent pas encore : avec six textes, ils diraient peu.
 
 ### Code postal
 
@@ -378,7 +382,13 @@ attendant la table pays → circonscription (`BACKLOG.md`).
 - Accessibilité : contraste AA, focus visible, tableaux de données en vrai
   `<table>`, chaque graphique doublé d'un texte.
 - `build.sh` : `lvnd scores`, puis `npm ci && npm run build` dans
-  `site/`. La CI lance les tests du site et un build complet.
+  `site/` (≈ 45 s en local, ≈ 4 000 fichiers dont 860 cartes, sous la limite de 20 000
+  de Pages). Il installe uv s'il manque (`pip install --user uv`). La CI
+  lance les tests du site et un build complet.
+- Les scores par texte (fiche texte, fiche député) viennent aussi de
+  `lvnd scores` (`scores_groupes_textes.csv`, `scores_deputes_textes.csv`).
+  Un test du site vérifie que les votes favorables relus vote par vote sur
+  une fiche redonnent ceux de `scores_deputes.csv`.
 
 ### Mise en service (gestes de Max)
 
