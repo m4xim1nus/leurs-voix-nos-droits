@@ -26,6 +26,8 @@ File d'attente brute, non ordonnée. Une ligne par item :
 - [creuser] Recherche par code postal, communes coupées (14 % des électeurs) : A afficher les N députés possibles, B choisir la commune déléguée ou l'arrondissement, C saisir son adresse (table d'adresses Insee en statique, 490 Mo brut) ; cf. `docs/SOURCES.md` (claude, 2026-10-29)
 - [creuser] Texte adopté au 49.3 sans vote final à l'AN : quel scrutin décisif (motion de censure miroir, comme quifaitlaloi, ou dernier vote sur l'ensemble d'une lecture antérieure) ? La règle 9 ne couvre pas ce cas (claude, 2026-10-29)
 - [ ] Relire `mots_cles.yaml` (brouillon) : motifs larges, sources de faux positifs (« eau », « soins », « violences », « justice ») (claude, 2026-10-29)
+- [ ] Faux négatifs des mots-clés : des textes jamais repérés touchent la grille (dérives sectaires 2024, LOPMI 2023, douane 2023, fraudes sociales et fiscales 2026, ordonnances de protection, rapports locatifs 2025, bouclier loyer 2023). Faire un tri complémentaire des ~230 textes législatifs non repérés (claude, 2026-10-29)
+- [ ] Candidat `etrangers` en attente d'un vote final : mariages simulés ou arrangés (DLR5L16N49075, examen inachevé le 25/06/2026, 35 amendements votés) (claude, 2026-10-29)
 - [ ] `data/lvnd.sqlite` pèse 193 Mo (votes en identifiants texte) : identifiants entiers si la taille gêne (claude, 2026-10-29)
 - [ ] Admin : afficher le diff entre la version publiée et le brouillon d'un texte (les révisions sont déjà gardées) (claude, 2026-10-29)
 - [ ] Admin : alerte quand `sync-admin` fait disparaître un scrutin retenu dans une qualification (scrutin renuméroté ou rattaché ailleurs) (claude, 2026-10-29)
@@ -41,3 +43,4 @@ File d'attente brute, non ordonnée. Une ligne par item :
 - [ ] Passation : revoir deux qualifications tranchées par défaut, où le choix du droit principal inverse les groupes favorables et défavorables : antisemitisme-enseignement-superieur (discriminations étend contre libertes restreint) et abrogation-obligation-vaccinale-2023 (travail-protection-sociale étend, retenu, contre sante restreint) (claude, 2026-10-29)
 - [ ] Avant la passation, une fois tout qualifié : réécrire pour le public les notes de méthode et les motifs d'écart des qualifications, qui citent les règles par leur numéro (≈ 60 notes, ≈ 50 motifs). Le site les replie déjà sous « Comment ce texte a été qualifié », numéros liés à la méthodologie (user:moi, 2026-10-29)
 - [ ] Cartes partageables au format 4:5 pour les réseaux sociaux (claude, 2026-10-29)
+- [ ] Pipeline : étape vide pour certains scrutins (V6283, rejet de l'article unique en 1re lecture de l'avenant chômage, DLR5L17N53981) (claude, 2026-10-29)

@@ -68,10 +68,14 @@ travail doit être factuel, sourcé, vérifiable, et signaler franchement les po
 - `docs/METHODO.md` : règles 1 à 13 (qualification et scrutins) — **à appliquer strictement**,
   en particulier : 1 (point de vue des personnes), 2 (périmètre ; propriété et ordre public hors
   grille), 3 (recouvrements), 4 (sens droit par droit, un droit principal), 5 (vigilance), 6
-  (on qualifie le texte soumis au scrutin décisif), 7 (sources admises ; si le texte **étend** son
-  droit principal, au moins une source critique en vigilance), 8 (texte purement organisationnel
-  : non qualifié → « écarté »), 9 (décisif = dernier vote de l'AN sur l'ensemble), 10 (motions
-  affichées, pas comptées), 11 (amendements clés : seulement suppression ou rétablissement d'un
+  (on qualifie le texte soumis au scrutin décisif), 7 (sources admises, dont les syndicats et
+  ordres du droit, de la santé et de l'enseignement et les avis du Conseil d'État ; **jamais** un
+  rapport parlementaire ni la position du Gouvernement ou d'un groupe ; si le texte **étend** un
+  droit contesté, au moins une source critique en vigilance, et sinon la note dit « aucune critique
+  trouvée parmi les sources admises »), 8 (non qualifiés → « écarté » : texte purement
+  organisationnel, résolution, convention internationale, texte vidé de toute mesure normative
+  au scrutin décisif), 9 (décisif = dernier vote de l'AN sur l'ensemble ; décisif sans aucune voix
+  d'un côté → écarté), 10 (motions affichées, pas comptées), 11 (amendements clés : seulement suppression ou rétablissement d'un
   article dont la mesure est **mise en cause** par une source ; **une seule lecture : la dernière
   lecture de l'AN où des suppressions ont été mises aux voix** ; un seul scrutin par article ; le
   sens se lit sur le contenu de l'article).
