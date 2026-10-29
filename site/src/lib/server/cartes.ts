@@ -36,6 +36,8 @@ export interface Carte {
   nTextes: number;
   /** Repères sur la règle : l'entité elle-même d'abord, puis éventuellement son groupe. */
   reperes: Repere[];
+  /** Droits le plus et le moins favorables, s'ils diffèrent. */
+  extremes?: { haut: Repere; bas: Repere } | null;
   chemin: string;
 }
 
@@ -82,6 +84,16 @@ function regle(reperes: Repere[], y: number): string {
 const largeurScore = (texte: string, taille: number) =>
   taille * [...texte].reduce((n, c) => n + (c === '%' ? 0.66 : c === ' ' ? 0.2 : 0.5), 0);
 
+const ligneExtreme = (titre: string, r: Repere, x: number, y: number) =>
+  ligne(
+    /^\d+ droits$/.test(r.libelle) ? titre.replace(/^Le (\w+) (\w+)$/, 'Les $1 $2s') : titre,
+    r,
+    x,
+    y
+  );
+const ligne = (titre: string, r: Repere, x: number, y: number) =>
+  `<text x="${x}" y="${y}" font-size="23" font-weight="500" fill="${ARDOISE}">${titre} : <tspan fill="${ENCRE}">${echapper(r.libelle)}, ${pourcent(r.score).replace('\u202f', ' ')}</tspan></text>`;
+
 export function svgCarte(c: Carte): string {
   const taille = c.titre.length > 26 ? 60 : 84;
   const chiffre = c.score === null ? '' : pourcent(c.score).replace('\u202f', ' ');
@@ -90,8 +102,8 @@ export function svgCarte(c: Carte): string {
     c.score === null
       ? `<text x="${MARGE}" y="380" font-size="44" font-weight="500" fill="${ENCRE}">Aucun vote compté</text>`
       : `<text x="${MARGE}" y="410" font-weight="800" font-stretch="condensed" font-size="160" fill="${ENCRE}">${chiffre}</text>
-  <text x="${xd}" y="356" font-size="30" font-weight="500" fill="${ENCRE}">de votes favorables aux droits</text>
-  <text x="${xd}" y="398" font-size="30" font-weight="500" fill="${ARDOISE}">sur ${pluriel(c.nTextes, 'texte qualifié', 'textes qualifiés')}</text>`;
+  <text x="${xd}" y="${c.extremes ? 316 : 356}" font-size="30" font-weight="500" fill="${ENCRE}">de votes favorables aux droits</text>
+  <text x="${xd}" y="${c.extremes ? 354 : 398}" font-size="30" font-weight="500" fill="${ARDOISE}">sur ${pluriel(c.nTextes, 'texte qualifié', 'textes qualifiés')}</text>${c.extremes ? ligneExtreme('Le plus favorable', c.extremes.haut, xd, 398) + ligneExtreme('Le moins favorable', c.extremes.bas, xd, 430) : ''}`;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${L}" height="${H}" viewBox="0 0 ${L} ${H}" font-family="Archivo">
   <rect width="${L}" height="${H}" fill="#ffffff"/>
   <rect width="${L}" height="14" fill="${ENCRE}"/>
@@ -111,4 +123,21 @@ export function png(svg: string): Uint8Array {
   })
     .render()
     .asPng();
+}
+
+/**
+ * Droits le plus et le moins favorables parmi ceux qui ont un score ; à égalité, leur nombre
+ * (« 4 droits ») plutôt qu'un nom pris au hasard. null si tous les scores sont égaux.
+ */
+export function extremes(droits: { libelle: string; score: number | null }[]) {
+  const notes = droits.filter((d): d is { libelle: string; score: number } => d.score !== null);
+  if (notes.length < 2) return null;
+  const max = Math.max(...notes.map((d) => d.score));
+  const min = Math.min(...notes.map((d) => d.score));
+  if (max === min) return null;
+  const repere = (score: number): Repere => {
+    const ex = notes.filter((d) => d.score === score);
+    return { libelle: ex.length === 1 ? ex[0].libelle : `${ex.length} droits`, score, couleur: '' };
+  };
+  return { haut: repere(max), bas: repere(min) };
 }

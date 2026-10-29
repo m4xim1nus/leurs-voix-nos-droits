@@ -1,6 +1,6 @@
 // Carte partageable d'un groupe (lib/server/cartes.ts).
 import { legislature } from '$lib/format';
-import { png, svgCarte } from '$lib/server/cartes';
+import { extremes, png, svgCarte } from '$lib/server/cartes';
 import { donnees } from '$lib/server/donnees';
 import { vueGroupe } from '$lib/server/vues';
 
@@ -15,6 +15,7 @@ export const GET = ({ params }) => {
     sousTitre: `Groupe ${g.sigle}, ${legislature(g.legislature)} législature`,
     score: v.global?.score ?? null,
     nTextes: v.global?.n_textes ?? 0,
+    extremes: extremes(v.droits.map((x) => ({ libelle: x.droit.court, score: x.score.score }))),
     reperes:
       v.global?.score != null
         ? [{ libelle: g.sigle, couleur: g.couleur, score: v.global.score }]

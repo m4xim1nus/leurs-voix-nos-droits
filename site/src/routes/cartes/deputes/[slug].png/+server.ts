@@ -1,6 +1,6 @@
 // Carte partageable d'un député (lib/server/cartes.ts).
 import { circonscription, depute } from '$lib/format';
-import { png, svgCarte } from '$lib/server/cartes';
+import { extremes, png, svgCarte } from '$lib/server/cartes';
 import { donnees } from '$lib/server/donnees';
 import { vueDepute } from '$lib/server/vues';
 
@@ -35,6 +35,7 @@ export const GET = ({ params }) => {
     score: v.global?.score ?? null,
     nTextes: v.global?.n_textes ?? 0,
     reperes,
+    extremes: extremes(v.droits.map((x) => ({ libelle: x.droit.court, score: x.score.score }))),
     chemin: `/deputes/${d.slug}`
   });
   return new Response(Buffer.from(png(svg)), { headers: { 'content-type': 'image/png' } });

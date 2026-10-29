@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { png, svgCarte } from './cartes';
+import { extremes, png, svgCarte } from './cartes';
 
 describe('cartes partageables', () => {
   const carte = {
@@ -22,5 +22,21 @@ describe('cartes partageables', () => {
     expect([...p.slice(1, 4)].map((c) => String.fromCharCode(c)).join('')).toBe('PNG');
     const vue = new DataView(p.buffer, p.byteOffset);
     expect([vue.getUint32(16), vue.getUint32(20)]).toEqual([1200, 630]);
+  });
+
+  it('retient les droits extrêmes, sauf égalité', () => {
+    const e = extremes([
+      { libelle: 'Vie privée', score: 10 },
+      { libelle: 'Logement', score: null },
+      { libelle: 'Égalité', score: 90 }
+    ]);
+    expect([e?.haut.libelle, e?.bas.libelle]).toEqual(['Égalité', 'Vie privée']);
+    expect(
+      extremes([
+        { libelle: 'A', score: 0 },
+        { libelle: 'B', score: 0 }
+      ])
+    ).toBeNull();
+    expect(svgCarte({ ...carte, extremes: e })).toContain('Le plus favorable');
   });
 });
