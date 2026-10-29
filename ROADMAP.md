@@ -145,9 +145,12 @@ Procédure : `docs/QUALIFICATION.md`. Claude prépare, Max arbitre dans le
 chat puis publie depuis l'admin.
 
 - ✅ Lot 1 (21 textes, 29/10/2026).
-- ⏳ **Lot de tri** : parmi les 235 candidats par mots-clés, proposer
-  « garder » ou « écarter » (faux positifs de `mots_cles.yaml`). Max
-  valide en bloc. On en attend 60 à 100 textes à qualifier.
+- ⏳ **Lot de tri**, préparé le 29/10/2026, en attente des réponses de Max.
+  Sur les 209 candidats restants : 48 à qualifier, 72 écarts sûrs
+  chargés dans l'admin (« à relire »), 14 sans décisif à ce jour, et 75
+  qui dépendent de cinq questions transversales (décisif unanime,
+  résolutions, conventions, offre de soins, corps électoral de
+  Nouvelle-Calédonie).
 - ⏳ Lots suivants, d'une vingtaine de textes chacun, jusqu'au seuil de
   la v1, puis au fil de l'eau.
 - ⏳ Les deux textes passés au 49.3 sans vote final (retraites 2023,
