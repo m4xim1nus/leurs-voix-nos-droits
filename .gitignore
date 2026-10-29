@@ -1,0 +1,26 @@
+# Python (pipeline/)
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Node / SvelteKit (site/, admin/)
+node_modules/
+.svelte-kit/
+build/
+dist/
+
+# Dumps open data téléchargés (cache local, régénérable)
+data/raw/
+
+# Cadrage privé et identifiants (PISTE…) : jamais versionnés
+source/
+.env
+.env.*
+
+# Divers
+.DS_Store
+*.log
+
+# Obsidian
+.obsidian/

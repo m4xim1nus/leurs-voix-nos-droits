@@ -1,0 +1,33 @@
+[project]
+name = "lvnd"
+version = "0.0.0"
+description = "Pipeline Leurs voix, nos droits : open data AN/Sénat + qualification éditoriale → SQLite + JSON du site"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+    "httpx>=0.28",
+    "polars>=1.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+lvnd = "lvnd.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["lvnd"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "donnees: tests sur la base produite (data/lvnd.sqlite), sautés si elle est absente",
+]
+addopts = "-ra"
