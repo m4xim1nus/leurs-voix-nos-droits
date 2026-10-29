@@ -170,7 +170,7 @@
       Constitution) : il a été adopté sans vote final de l’Assemblée, faute de motion de censure
       adoptée. Il est qualifié comme les autres, mais il ne compte dans aucun score : le scrutin sur
       une motion de censure n’enregistre que les voix pour la censure, et ne dit donc rien des
-      députés qui ne l’ont pas votée. Les motions de censure s’affichent ci-dessous, groupe par
+      député·es qui ne l’ont pas votée. Les motions de censure s’affichent ci-dessous, groupe par
       groupe.
     </p>
   </section>

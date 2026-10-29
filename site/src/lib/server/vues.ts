@@ -157,7 +157,7 @@ function groupeDuJour(dep: Depute, date: string): GroupeCourt | null {
 export function vueDepute(slug: string) {
   const d = donnees();
   const dep = d.deputes.find((x) => x.slug === slug);
-  if (!dep) error(404, 'Député inconnu');
+  if (!dep) error(404, 'Député·e inconnu·e');
   const textes = d.textes.flatMap((t) => {
     // Seuls les scrutins comptés : les autres (motions, autres lectures) sont sur la fiche texte.
     const enCours = t.scrutins.filter((s) => enMandat(dep, s.date));

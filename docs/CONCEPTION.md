@@ -1,7 +1,7 @@
 # Conception
 
 Conception de l'admin (étape 3), puis du site public (étape 4).
-Les choix A à F de l'admin et G à K du site ont été validés par Max le
+Les choix A à F de l'admin et G à M du site ont été validés par Max le
 29/10/2026 : à chaque fois l'option recommandée (✅). Les autres options
 sont gardées pour mémoire.
 
@@ -241,7 +241,12 @@ personnes : il montre des votes, la qualification de chaque texte et ses
 sources. Chaque chiffre mène, en un ou deux clics, au scrutin officiel
 qui le fonde.
 
-Ton : factuel, phrases courtes, vocabulaire courant. On écrit « vote
+Ton : factuel, phrases courtes, vocabulaire courant. Écriture inclusive
+(demande de Max du 29/10/2026) : point médian pour les mentions génériques
+(« votre député·e », « les député·es »), genre de la civilité publiée par
+l'AN quand on parle d'une personne (« Députée depuis… »), tournure
+épicène quand elle est plus simple (« Vous vivez hors de France »). Les
+noms officiels restent tels quels (« Français établis hors de France »). On écrit « vote
 favorable aux droits », jamais « bon vote » ; « le texte restreint la
 vie privée », avec la source à côté, jamais « texte liberticide ».
 
@@ -475,3 +480,29 @@ proposée, codée dans `lvnd scores` :
 - K1 (**retenu**) : `lvnd.technoperchoir.fr`, court et cohérent avec
   l'admin (`lvnd-admin.technoperchoir.fr`).
 - K2 : `droits.technoperchoir.fr`, plus parlant pour le public.
+
+
+**L. Contestation d'une qualification** ✅ L1 (validé par Max le 29/10/2026)
+
+- L1 (**retenu**) : un lien « Contester cette qualification » sur chaque
+  fiche texte, qui ouvre un courriel prérempli (titre, adresse de la
+  fiche) vers une adresse dédiée. Rien à héberger, aucune donnée
+  personnelle stockée. L'adresse se règle dans `site/src/lib/site.ts`
+  (`CONTESTATION`) ; vide, le lien est masqué.
+- L2 : formulaire stocké dans D1, lu dans l'admin (Turnstile contre le
+  spam, mention RGPD). À reprendre à la passation.
+- L3 : issue GitHub préremplie (exige un compte GitHub).
+
+**M. Mise à jour des données AN** ✅ M1 (validé par Max le 29/10/2026)
+
+- M1 (**retenu**) : Action GitHub hebdomadaire
+  (`.github/workflows/donnees.yml`, lundi 4 h UTC, ou à la main) :
+  `lvnd download` (archives en cache d'une semaine à l'autre, partielles
+  comprises), `lvnd build`, `lvnd check`, commit de `data/export/` si tout
+  passe (le site se redéploie), puis `lvnd sync-admin --remote`, devenu
+  incrémental (quelques centaines de lignes écrites au lieu de 80 000).
+  Cette dernière étape exige deux secrets GitHub : `CLOUDFLARE_API_TOKEN`
+  (jeton « D1 : Edit » du compte) et `CLOUDFLARE_ACCOUNT_ID`. Sans eux,
+  elle est sautée.
+- M2 : à la main, d'après une procédure.
+- M3 : Action sans l'admin.

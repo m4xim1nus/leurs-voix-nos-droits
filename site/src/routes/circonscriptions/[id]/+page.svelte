@@ -10,10 +10,10 @@
 
 <h1>{titre}</h1>
 {#if !data.actuel}
-  <p class="chapo">Siège vacant : aucun député n’y siège aujourd’hui.</p>
+  <p class="chapo">Siège vacant : aucun·e député·e n’y siège aujourd’hui.</p>
 {/if}
 
-<h2>Députés depuis 2022</h2>
+<h2>Député·es depuis 2022</h2>
 <ul class="mandats">
   {#each data.mandats as m, i (i)}
     <li class:actuel={m === data.actuel}>

@@ -167,6 +167,16 @@ Décisions de Max (29/10/2026) :
 - ✅ Backlog du site traité (29/10/2026) : textes adoptés sans opposition
   sur les fiches, page Comparer, fiche député allégée, typographie,
   interface sans numéros de règles, droits extrêmes sur les cartes.
+- ✅ Arbitrages de Max du 29/10/2026, mis en œuvre : grille v1 (droits
+  civiques), texte adopté par 49.3 (qualifié, non compté, rôle
+  `censure`), contestation par courriel, Action hebdomadaire des données,
+  `sync-admin` incrémental, diff publié/brouillon et alertes de sync dans
+  l'admin, cartes au format portrait, écriture inclusive.
+- ⏳ Gestes de Max : redéployer l'admin (`cd admin && npm run deploy`)
+  pour le rôle `censure` et la grille v1 ; donner l'adresse des
+  contestations (`CONTESTATION`, `site/src/lib/site.ts`) ; ajouter les
+  secrets `CLOUDFLARE_API_TOKEN` et `CLOUDFLARE_ACCOUNT_ID` au dépôt pour
+  que l'Action mette aussi l'admin à jour.
 - ⏳ Ouverture de la v1 au seuil de la décision H : `OUVERT = true` dans
   `site/src/lib/site.ts`, tag `v1.0.0`, `CHANGELOG.md`.
 - ⏳ Livrable : site en ligne, tag `v1.0.0`, `CHANGELOG.md`.

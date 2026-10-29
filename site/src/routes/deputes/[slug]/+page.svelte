@@ -215,8 +215,8 @@
     <h2>Textes adoptés sans opposition</h2>
     <p>
       Ces textes, examinés pour le site, ont été adoptés sans aucune voix contre. Ce vote ne
-      distingue aucun député des autres : ils ne sont ni qualifiés ni comptés dans le score. Sur ces {data
-        .unanimes.length} textes,
+      distingue aucun·e député·e des autres : ils ne sont ni qualifiés ni comptés dans le score. Sur
+      ces {data.unanimes.length} textes,
       {elle ? 'elle' : 'il'} a voté pour
       {data.unanimes.filter((u) => u.position === 'pour').length} fois.
     </p>
@@ -262,7 +262,7 @@
         </li>
       {/each}
     </ul>
-    <p class="petit discret">Chaque vote compte pour le groupe où siégeait le député ce jour-là.</p>
+    <p class="petit discret">Chaque vote compte pour le groupe où siégeait l’élu·e ce jour-là.</p>
   </section>
 {/if}
 

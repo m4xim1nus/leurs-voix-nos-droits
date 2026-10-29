@@ -12,17 +12,17 @@
     'scrutins.csv': 'tous les scrutins publics, rattachés à leur dossier',
     'positions_groupes.csv': 'décompte et position de chaque groupe sur chaque scrutin',
     'amendements.csv': 'amendements mis aux voix : auteur, article, sort',
-    'deputes.csv': 'députés ayant siégé depuis 2022',
-    'mandats.csv': 'mandats de député : circonscription, dates',
-    'appartenances.csv': 'appartenance des députés aux groupes, avec les dates',
+    'deputes.csv': 'député·es ayant siégé depuis 2022',
+    'mandats.csv': 'mandats de député·e : circonscription, dates',
+    'appartenances.csv': 'appartenance des député·es aux groupes, avec les dates',
     'groupes.csv': 'groupes politiques, couleur officielle et lignée',
     'mises_au_point.csv': 'mises au point de vote (affichées, pas comptées)',
     'scores_scrutins.csv': 'scrutins comptés : poids et vote favorable aux droits, droit par droit',
-    'scores_deputes.csv': 'score de chaque député, par droit',
+    'scores_deputes.csv': 'score de chaque député·e, par droit',
     'scores_groupes.csv': 'score de chaque groupe, par droit',
-    'scores_deputes_textes.csv': 'score de chaque député, par texte',
+    'scores_deputes_textes.csv': 'score de chaque député·e, par texte',
     'scores_groupes_textes.csv': 'score de chaque groupe, par texte',
-    'participation.csv': 'participation de chaque député aux scrutins comptés'
+    'participation.csv': 'participation de chaque député·e aux scrutins comptés'
   };
 </script>
 
@@ -66,8 +66,8 @@
 
 <h2>Votes nominatifs</h2>
 <p>
-  Tous les votes de chaque député, un fichier par mois : colonnes <code>scrutin</code> (numéro dans
-  la législature), <code>acteur</code> (identifiant AN sans le préfixe <code>PA</code>) et
+  Tous les votes de chaque député·e, un fichier par mois : colonnes <code>scrutin</code> (numéro
+  dans la législature), <code>acteur</code> (identifiant AN sans le préfixe <code>PA</code>) et
   <code>position</code> (P pour, C contre, A abstention, N non-votant).
 </p>
 <details>
@@ -91,7 +91,7 @@
 </ul>
 <p class="petit">
   Code postal → commune → circonscription, avec la part des inscrits de la commune dans chaque
-  circonscription ; courriel public de chaque député. Méthode : <a href="/methodologie#donnees"
+  circonscription ; courriel public de chaque député·e. Méthode : <a href="/methodologie#donnees"
     >méthodologie</a
   >.
 </p>

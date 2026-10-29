@@ -72,7 +72,7 @@
       try {
         index ??= await json<EntreeIndex[]>('/recherche/deputes.json');
       } catch {
-        resultat = { type: 'erreur', message: 'La liste des députés n’a pas pu être chargée.' };
+        resultat = { type: 'erreur', message: 'La liste des député·es n’a pas pu être chargée.' };
         return;
       }
       const mots = normaliser(q).split(' ');
@@ -82,7 +82,7 @@
         .slice(0, 12);
       resultat = liste.length
         ? { type: 'noms', liste }
-        : { type: 'erreur', message: `Aucun député ne s’appelle « ${q} » depuis 2022.` };
+        : { type: 'erreur', message: `Aucun·e député·e ne s’appelle « ${q} » depuis 2022.` };
     } else {
       resultat = { type: 'vide' };
     }
@@ -116,7 +116,7 @@
     chercher();
   }}
 >
-  <label for="recherche-{grand ? 'accueil' : 'page'}">Code postal ou nom du député</label>
+  <label for="recherche-{grand ? 'accueil' : 'page'}">Code postal ou nom de votre député·e</label>
   <div class="champ">
     <input
       id="recherche-{grand ? 'accueil' : 'page'}"
@@ -130,9 +130,7 @@
   </div>
 </form>
 <p class="etranger petit discret">
-  Français établis hors de France : <a href="/circonscriptions#etranger"
-    >vos onze circonscriptions</a
-  >.
+  Vous vivez hors de France : <a href="/circonscriptions#etranger">vos onze circonscriptions</a>.
 </p>
 
 <div class="resultats" aria-live="polite">
@@ -149,7 +147,8 @@
   {:else if resultat.type === 'cp'}
     {#if resultat.circos.length > 1}
       <p>
-        Le code postal {resultat.cp} couvre {resultat.circos.length} circonscriptions. Votre député dépend
+        Le code postal {resultat.cp} couvre {resultat.circos.length} circonscriptions. Votre député·e
+        dépend
         {new Set(resultat.circos.flatMap((c) => c.communes)).size === 1
           ? 'de votre adresse'
           : 'de votre commune, voire de votre adresse'}.
@@ -177,8 +176,8 @@
 </div>
 <noscript
   ><p class="petit">
-    La recherche demande JavaScript. Les députés sont aussi listés par <a href="/circonscriptions"
-      >circonscription</a
+    La recherche demande JavaScript. Les député·es sont aussi listé·es par <a
+      href="/circonscriptions">circonscription</a
     >.
   </p></noscript
 >

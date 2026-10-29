@@ -80,7 +80,7 @@
   <title>Comparer, {NOM}</title>
   <meta
     name="description"
-    content="Comparer les votes de deux députés ou de deux groupes sur les droits et libertés."
+    content="Comparer les votes de deux député·es ou de deux groupes sur les droits et libertés."
   />
 </svelte:head>
 
@@ -94,7 +94,8 @@
 
 <h1>Comparer</h1>
 <p class="chapo">
-  Deux députés, deux groupes, ou un député et son groupe : leurs votes sur les droits, côte à côte.
+  Deux député·es, deux groupes, ou un·e député·e et son groupe : leurs votes sur les droits, côte à
+  côte.
 </p>
 
 {#if erreur}

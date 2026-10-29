@@ -18,9 +18,10 @@
 
 <h1>Méthodologie</h1>
 <p class="chapo">
-  Le site mesure une chose : quand un député vote sur un texte qui touche aux droits et libertés,
-  vote-t-il dans le sens de ces droits ? Pour y répondre sans jugement au cas par cas, il applique
-  des règles fixes, numérotées ci-dessous. Elles valent pour tous les textes et tous les députés.
+  Le site mesure une chose : quand un·e député·e vote sur un texte qui touche aux droits et
+  libertés, vote-t-il dans le sens de ces droits ? Pour y répondre sans jugement au cas par cas, il
+  applique des règles fixes, numérotées ci-dessous. Elles valent pour tous les textes et tous les
+  député·es.
 </p>
 
 <nav aria-label="Sommaire" class="sommaire">
@@ -165,7 +166,7 @@
       lui. Exemple : 10 pour, 2 contre et 8 abstentions donnent « pour », avec une cohésion de 50 %.
     </li>
     <li value="13" id="regle-13">
-      <strong>Mises au point.</strong> Un député qui déclare après coup qu’il voulait voter autrement
+      <strong>Mises au point.</strong> Un·e député·e qui déclare après coup avoir voulu voter autrement
       ne change pas le résultat officiel : sa déclaration n’est pas comptée.
     </li>
   </ol>
@@ -193,9 +194,10 @@
       n’est donc jamais comptée comme un vote contre.
     </li>
     <li value="17" id="regle-17">
-      <strong>Absences : hors calcul.</strong> Un député absent, ou présent sans voter (c’est souvent
-      la présidence de séance), n’a pas de vote sur ce scrutin. Sa participation s’affiche à côté du score
-      : la part des scrutins comptés, tenus pendant son mandat, où il a voté pour, contre ou s’est abstenu.
+      <strong>Absences : hors calcul.</strong> Un·e député·e absent·e, ou présent·e sans voter (c’est
+      souvent la présidence de séance), n’a pas de vote sur ce scrutin. Sa participation s’affiche à côté
+      du score : la part des scrutins comptés, tenus pendant son mandat, où il a voté pour, contre ou
+      s’est abstenu.
     </li>
     <li value="18" id="regle-18">
       <strong>Chaque texte pèse autant.</strong> Le vote décisif vaut la moitié du texte, les amendements
@@ -203,8 +205,8 @@
       vote décisif. Un texte à neuf amendements clés n’écrase donc pas les autres.
     </li>
     <li value="19" id="regle-19">
-      <strong>Changement de groupe.</strong> Chaque vote compte pour le groupe où siégeait le député ce
-      jour-là, d’après le décompte officiel de l’Assemblée. La fiche d’un député réunit tous ses votes.
+      <strong>Changement de groupe.</strong> Chaque vote compte pour le groupe où siégeait l’élu·e ce
+      jour-là, d’après le décompte officiel de l’Assemblée. La fiche d’un·e député·e réunit tous ses votes.
       Un groupe qui change de nom reste un seul groupe, sous son nom le plus récent. Le score d’un groupe
       réunit les votes de ses membres, pas ses positions.
     </li>
@@ -218,9 +220,9 @@
   <h2>Les données</h2>
   <p>
     Les votes viennent uniquement de l’open data officiel de l’Assemblée nationale : scrutins, votes
-    nominatifs, dossiers législatifs, députés et groupes. D’autres sites (datan.fr, leurs-votes.fr)
-    servent à vérifier les décomptes, jamais de source. Le périmètre couvre les XVIe et XVIIe
-    législatures, depuis juin 2022.
+    nominatifs, dossiers législatifs, député·es et groupes. D’autres sites (datan.fr,
+    leurs-votes.fr) servent à vérifier les décomptes, jamais de source. Le périmètre couvre les XVIe
+    et XVIIe législatures, depuis juin 2022.
   </p>
   <p>
     <strong>Code postal.</strong> Il n’existe pas de table officielle qui relie un code postal à une circonscription.
@@ -229,7 +231,7 @@
     la circonscription de chaque commune. Les communes sont ramenées au code officiel géographique en
     vigueur (Insee). Le découpage légal, lui, est fixé par le code électoral : ces résultats n’en sont
     qu’un reflet fidèle. Quand une commune est partagée entre plusieurs circonscriptions, le site affiche
-    tous les députés possibles.
+    tous les député·es possibles.
   </p>
   <p>
     Tout est <a href="/donnees">téléchargeable</a> : qualifications, scores, votes nominatifs.
@@ -249,9 +251,9 @@
       toujours affiché à côté.
     </li>
     <li>
-      Les amendements se votent souvent en séance ordinaire, où peu de députés sont présents. La
+      Les amendements se votent souvent en séance ordinaire, où peu de député·es sont présent·es. La
       participation aux scrutins comptés est donc souvent basse, sans que cela dise tout de
-      l’assiduité d’un député.
+      l’assiduité d’un·e député·e.
     </li>
     <li>
       Le Sénat et la législature 2017-2022 ne sont pas encore couverts. Ils le seront dans des
