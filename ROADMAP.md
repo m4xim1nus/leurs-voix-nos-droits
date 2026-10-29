@@ -149,9 +149,9 @@ Décisions de Max (29/10/2026) :
   textes, fiche texte, fiche député (« Lui écrire »), circonscriptions,
   groupes, méthodologie, données, cartes PNG partageables. 1 464 pages.
 - ✅ `build.sh` et CI (tests et build du site).
-- ⏳ Choix I (seuil d'affichage d'un score), J (définition de la
-  participation) et K (sous-domaine) : recommandations dans
-  `docs/CONCEPTION.md`.
+- ✅ Choix I (score toujours affiché, avec son nombre de textes), J
+  (participation : scrutins comptés pendant le mandat) et K
+  (`lvnd.technoperchoir.fr`) validés par Max.
 - ⏳ Mise en service Cloudflare Pages (gestes de Max, `docs/CONCEPTION.md`)
   et recette sur téléphone réel.
 - ⏳ À la fusion dans `main` : `lvnd build` doit appeler `lvnd scores` en

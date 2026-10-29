@@ -158,3 +158,6 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
     }
     (export / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1, default=str) + "\n")
     _log(f"   {sqlite} ({sqlite.stat().st_size / 1e6:.1f} Mo), {export}/ ({n} fichiers de votes)")
+    # Fichiers propres à `lvnd scores` (participation, scores par texte) : build.sh les recalcule
+    # aussi, mais l'export versionné doit les contenir.
+    scores.ecrire(export, scores.depuis_export(export, qualif))

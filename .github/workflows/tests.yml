@@ -31,6 +31,12 @@ jobs:
             admin/package-lock.json
             site/package-lock.json
 
+      # Une publication depuis l'admin ne change que data/editorial.json : on recalcule les scores
+      # versionnés (comme build.sh) pour que les tests comparent des fichiers à jour.
+      - name: Scores (lvnd scores)
+        working-directory: pipeline
+        run: uv run --quiet lvnd scores
+
       - name: Tests pipeline (les tests `donnees` exigent la base locale, sautés en CI)
         working-directory: pipeline
         run: uv run --quiet pytest -q

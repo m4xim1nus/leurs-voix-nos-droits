@@ -1,9 +1,9 @@
 # Conception
 
 Conception de l'admin (étape 3), puis du site public (étape 4).
-Les choix A à F de l'admin ont été validés par Max le 29/10/2026 : à
-chaque fois l'option recommandée (✅). Les autres options sont gardées
-pour mémoire. Ceux du site (G à K) suivent la même règle.
+Les choix A à F de l'admin et G à K du site ont été validés par Max le
+29/10/2026 : à chaque fois l'option recommandée (✅). Les autres options
+sont gardées pour mémoire.
 
 ## Admin
 
@@ -392,12 +392,11 @@ attendant la table pays → circonscription (`BACKLOG.md`).
 
 ### Mise en service (gestes de Max)
 
-1. Choisir le sous-domaine (choix K).
-2. Cloudflare Pages, « Connect to Git » sur
+1. Cloudflare Pages, « Connect to Git » sur
    `m4xim1nus/leurs-voix-nos-droits`, branche de production `main`.
    Commande de build `bash build.sh`, dossier de sortie `site/build`,
    variable `NODE_VERSION=22`.
-3. Domaine personnalisé : le sous-domaine choisi, sur la zone
+2. Domaine personnalisé : `lvnd.technoperchoir.fr` (choix K), sur la zone
    `technoperchoir.fr`.
 
 ### Choix
@@ -418,21 +417,21 @@ G1 (validé par Max le 29/10/2026)
   fixera le chiffre exact selon la vitesse de la qualification. D'ici là,
   le site tourne avec le bandeau « en construction ».
 
-**I. Seuil d'affichage d'un score** ⏳
+**I. Seuil d'affichage d'un score** ✅ I1 (validé par Max le 29/10/2026)
 
 Avec peu de textes, un score sur un droit repose sur un ou deux votes.
 
-- I1 (**recommandé**) : toujours afficher le score, avec son nombre de
+- I1 (**retenu**) : toujours afficher le score, avec son nombre de
   textes. Une règle fixe et simple, sans score caché.
 - I2 : ne pas afficher un score fondé sur un seul texte (« un seul texte,
   voir le vote »).
 
-**J. Participation** ⏳
+**J. Participation** ✅ J1 (validé par Max le 29/10/2026)
 
 Règle 17 : le taux de participation s'affiche à côté du score. Définition
 proposée, codée dans `lvnd scores` :
 
-- J1 (**recommandé**) : part des scrutins comptés, tenus pendant le
+- J1 (**retenu**) : part des scrutins comptés, tenus pendant le
   mandat du député, où il a voté pour, contre ou s'est abstenu.
   Non-votant ou absent : il n'y a pas pris part. Chaque scrutin pèse 1.
   Sur les six témoins, la médiane est de 33 % : les amendements se votent
@@ -440,8 +439,8 @@ proposée, codée dans `lvnd scores` :
 - J2 : les décisifs seulement. Le taux serait plus haut et plus parlant,
   mais il dirait moins sur les amendements clés comptés dans le score.
 
-**K. Sous-domaine** ⏳
+**K. Sous-domaine** ✅ K1 (validé par Max le 29/10/2026)
 
-- K1 (**recommandé**) : `lvnd.technoperchoir.fr`, court et cohérent avec
+- K1 (**retenu**) : `lvnd.technoperchoir.fr`, court et cohérent avec
   l'admin (`lvnd-admin.technoperchoir.fr`).
 - K2 : `droits.technoperchoir.fr`, plus parlant pour le public.
