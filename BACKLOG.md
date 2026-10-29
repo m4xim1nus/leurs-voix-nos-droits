@@ -39,3 +39,4 @@ File d'attente brute, non ordonnée. Une ligne par item :
 - [ ] Catalogue : saisines du Conseil constitutionnel déclarées irrecevables absentes (ingérences étrangères : 2024-870 DC et 2024-871 DC, après la dissolution) ; vérifier aussi « Non conforme » affiché pour une non-conformité partielle (2026-911 DC) (claude, 2026-10-29)
 - [ ] Texte dont le dossier est en XVIe mais tous les votes en XVIIe (sûreté dans les transports, meublés de tourisme) : quelle législature afficher ? (claude, 2026-10-29)
 - [creuser] Grille v1 : droits civiques et politiques (droit de vote, corps électoral de Nouvelle-Calédonie : 3 textes écartés au lot de tri faute de droit dans la grille v0) (claude, 2026-10-29)
+- [→Étape 4] Fiche groupe et fiche député : « a aussi voté N textes adoptés sans opposition (liste) », depuis les décisifs sans voix contre (règle 9). C'est ainsi que l'affichage tient compte des textes unanimes, exclus des scores (claude, 2026-10-29)
