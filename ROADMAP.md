@@ -84,6 +84,9 @@ calcul arrêtées.
   256 Kio et reprend un fichier partiel d'un lancement à l'autre. Ensuite :
   `lvnd build`, `lvnd check`, mesure du rattachement XVIe dans
   `docs/SOURCES.md`.
+- ✅ Rattachement des votes de CMP de la XVIe dont le dossier ne donne que
+  l'acte de décision, sans séance (industrie verte, LOPMI, fin de gestion
+  2023). `lvnd check` vérifie que tout vote sur l'ensemble a un dossier.
 - ✅ Amendements clés de Kasbarian-Bergé (4, en 2e lecture). La règle 11
   est complétée : dernière lecture de l'AN où des suppressions ont été
   votées, et une source « cite » une mesure quand elle la met en cause.
@@ -191,11 +194,19 @@ chat puis publie depuis l'admin.
   d'une source d'énergie hors grille), règle 7 (instances consultatives
   indépendantes, syndicats de salariés ; pas la Cour des comptes), règle 9
   (article unique sans vote sur l'ensemble).
+- ⏳ Lot 4 (22 textes, 29/10/2026) : préparé, « à relire » dans l'admin
+  (fiche `source/relecture-lot4.md`). Fin de la liste A, plus dix textes
+  hors liste A (LOPMI, fraudes, simplification, industrie verte, urgence
+  agricole…). Cinq questions à trancher, dont le décisif d'un article
+  unique supprimé par amendement (délit de séjour irrégulier, seul
+  candidat `etrangers`) et les fédérations syndicales (règle 7).
+- ⏳ Tri complémentaire (229 textes que les mots-clés n'avaient pas
+  repérés, fiche `source/relecture-tri2.md`) : 35 à qualifier (vivier du
+  lot 5), 160 écarts « à relire » dans l'admin, 34 en attente. Quatre
+  questions, dont les motions de censure et les lois de finances.
 - ⏳ Lots suivants, d'une vingtaine de textes chacun, jusqu'au seuil de la
-  v1, puis au fil de l'eau. Reste de la liste A : 12 textes, dont 5
-  « faible », le PLFSS 2026 et trois textes d'adaptation au droit de l'UE.
-  Ensuite, tri complémentaire des textes que les mots-clés ont ratés
-  (`BACKLOG.md`). Aucun candidat `etrangers` avec vote final pour l'instant.
+  v1, puis au fil de l'eau. Toujours aucun candidat `etrangers` avec vote
+  sur l'ensemble.
 - ⏳ Les deux textes passés au 49.3 sans vote final (retraites 2023,
   PLF 2026) attendent la règle du décisif en cas de 49.3 (`BACKLOG.md`).
 

@@ -64,16 +64,24 @@ class Index:
         self.par_jour: dict[str, set[str]] = defaultdict(set)
         self.vote_refs: dict[str, str] = {}
         self.etape: dict[tuple[str, str], str] = {}  # (dossier, séance) → étape (AN1, CMP…)
+        self.etape_jour: dict[tuple[str, str], str] = {}  # (dossier, jour) → étape, à défaut de séance
         for uid, d in dossiers.items():
             for e in an.enfants(d):
                 for a in an.parcourir(e):
                     c = a["codeActe"]
                     for r in an.vote_refs(a):
                         self.vote_refs.setdefault(r, uid)
-                    if "-DEBATS-" in c and "-SN-" not in c and not c.startswith("SN") and a.get("reunionRef"):
+                    if "-DEBATS-" not in c or "-SN-" in c or c.startswith("SN"):
+                        continue
+                    if a.get("reunionRef"):
                         self.par_seance[a["reunionRef"]].add(uid)
-                        self.par_jour[_date(a)].add(uid)
                         self.etape[(uid, a["reunionRef"])] = e["codeActe"]
+                    elif not c.endswith("-DEC"):
+                        continue
+                    # XVIe : des lectures de CMP n'ont que l'acte de décision, sans séance (industrie verte, LOPMI)
+                    if jour := _date(a):
+                        self.par_jour[jour].add(uid)
+                        self.etape_jour.setdefault((uid, jour), e["codeActe"])
 
 
 def rattacher(scrutins: list[dict], dossiers: dict[str, dict], titres: dict[str, set[str]],
@@ -112,7 +120,8 @@ def rattacher(scrutins: list[dict], dossiers: dict[str, dict], titres: dict[str,
         elif u := par_titre(s, idx.par_jour.get(s["date"], set())):
             uid, how = u, "jour"
         if uid:
-            out[s["id"]] = {"dossier_id": uid, "etape": idx.etape.get((uid, s["seance"])), "rattachement": how}
+            etape = idx.etape.get((uid, s["seance"])) or idx.etape_jour.get((uid, s["date"]))
+            out[s["id"]] = {"dossier_id": uid, "etape": etape, "rattachement": how}
     return out
 
 
