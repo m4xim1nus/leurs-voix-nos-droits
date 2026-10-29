@@ -74,6 +74,12 @@ témoins. En cas d'écart avec ce fichier, il prime.
   exprimés**, toujours affichée avec sa cohésion (règle de quifaitlaloi).
 - Une abstention n'est **jamais** comptée comme un vote contre en
   silence. Son traitement suit la règle publiée.
+- **Sources** : aucune publication du commanditaire n'est citée, ni seule
+  ni cosignée (communiqué collectif, tribune, collectif dont il est
+  membre). Décision de Max du 29/10/2026, à revoir à la passation. Les
+  noms à exclure sont dans `source/CADRAGE.md` et
+  `source/termes_interdits.txt` ; `lvnd check` et l'admin (secret
+  `TERMES_INTERDITS`) refusent toute qualification qui les contient.
 - Site public : **ton factuel**, méthodologie auditable, lisible par un
   non-spécialiste. Direction visuelle inspirée de Bon Pote **sans copie**
   (palette, polices et mise en page propres).

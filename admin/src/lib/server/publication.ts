@@ -30,7 +30,23 @@ export interface Preparation {
 
 const PUBLIABLES = new Set(['valide', 'ecarte']);
 
-export async function preparer(base: D1Database, g: Grille): Promise<Preparation> {
+/** Termes de la liste privée (secret TERMES_INTERDITS, un par ligne) présents dans `texte`. */
+export function termesInterdits(texte: string, liste: string | undefined): string[] {
+  const termes = (liste ?? '')
+    .split('\n')
+    .map((t) => t.trim())
+    .filter((t) => t && !t.startsWith('#'));
+  const echapper = (t: string) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return termes.filter((t) =>
+    new RegExp(`(?<![\\p{L}\\p{N}_])${echapper(t)}(?![\\p{L}\\p{N}_])`, 'iu').test(texte)
+  );
+}
+
+export async function preparer(
+  base: D1Database,
+  g: Grille,
+  interdits?: string
+): Promise<Preparation> {
   const lignes = await db.qualifications(base);
   const valides = lignes.filter((l) => l.statut === 'valide');
   const infos = db.infos(
@@ -82,6 +98,14 @@ export async function preparer(base: D1Database, g: Grille): Promise<Preparation
       ecartes
     )
   );
+  // Un terme interdit (CLAUDE.md, règles dures) bloque la publication : on signale le texte fautif.
+  for (const t of textes) {
+    if (!PUBLIABLES.has(t.statut)) continue;
+    const l = lignes.find((x) => x.dossier_an === t.dossier_an)!;
+    const trouves = termesInterdits(compact(l.doc) + (l.motif_ecart ?? ''), interdits);
+    if (trouves.length)
+      t.erreurs.push(`terme interdit dans la qualification : ${trouves.join(', ')}`);
+  }
   const bloquant = textes.some((t) => PUBLIABLES.has(t.statut) && t.erreurs.length);
   return { textes, bloquant, contenu, lignes };
 }
@@ -122,9 +146,10 @@ export async function publier(
   g: Grille,
   cfg: ConfigGitHub,
   auteur: string,
-  f: typeof fetch = fetch
+  f: typeof fetch = fetch,
+  interdits?: string
 ): Promise<Resultat> {
-  const prep = await preparer(base, g);
+  const prep = await preparer(base, g, interdits);
   if (prep.bloquant) throw new Error('des textes à publier ont des erreurs bloquantes');
   const distant = await lireFichier(cfg, f);
   const msg = message(prep.textes);

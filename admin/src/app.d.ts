@@ -9,6 +9,8 @@ declare global {
       env: {
         DB: D1Database;
         GITHUB_TOKEN?: string;
+        /** Termes jamais publiés, un par ligne (secret ; CLAUDE.md, règles dures). */
+        TERMES_INTERDITS?: string;
         GITHUB_REPO: string;
         GITHUB_BRANCH: string;
         EDITORIAL_CHEMIN: string;

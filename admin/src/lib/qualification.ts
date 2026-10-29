@@ -145,6 +145,9 @@ export interface InfoScrutin {
   dossier_id: string;
   etape: string | null;
   division: string | null;
+  objet?: string | null;
+  pour?: number;
+  contre?: number;
 }
 
 /** Erreurs bloquantes et avertissements d'une qualification (docs/CONCEPTION.md, contrôles). */
@@ -220,10 +223,18 @@ export function valider(
         err.push(`${s.id} : scrutin absent du dossier ${t.dossier_an}`);
         continue;
       }
-      if (s.role === 'amendement' && s.pour !== 'a-trancher' && info.division) {
-        const cle = `${info.etape}|${info.division}`;
-        if (!parArticle.has(cle)) parArticle.set(cle, { division: info.division, ids: [] });
-        parArticle.get(cle)!.ids.push(s.id);
+      if (s.role === 'amendement' && s.pour !== 'a-trancher') {
+        if (info.objet === 'suppression_article_unique')
+          err.push(`${s.id} : suppression d'un article unique, pas un amendement clé (règle 11)`);
+        if (info.pour === 0 || info.contre === 0)
+          err.push(
+            `${s.id} : amendement unanime (${info.pour}-${info.contre}), pas un amendement clé (règle 11)`
+          );
+        if (info.division) {
+          const cle = `${info.etape}|${info.division}`;
+          if (!parArticle.has(cle)) parArticle.set(cle, { division: info.division, ids: [] });
+          parArticle.get(cle)!.ids.push(s.id);
+        }
       }
     }
     for (const cle of [...parArticle.keys()].sort(parCle)) {

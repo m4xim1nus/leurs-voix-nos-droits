@@ -6,7 +6,7 @@ import { message, preparer, publier } from '$lib/server/publication';
 
 export const load: PageServerLoad = async ({ platform }) => {
   const env = platform!.env;
-  const prep = await preparer(env.DB, await db.grille(env.DB));
+  const prep = await preparer(env.DB, await db.grille(env.DB), env.TERMES_INTERDITS);
   return {
     textes: prep.textes,
     bloquant: prep.bloquant,
@@ -34,7 +34,9 @@ export const actions: Actions = {
           branche: env.GITHUB_BRANCH,
           chemin: env.EDITORIAL_CHEMIN
         },
-        locals.email
+        locals.email,
+        fetch,
+        env.TERMES_INTERDITS
       );
       return { ok: true, commit: r.commit };
     } catch (e) {

@@ -92,3 +92,25 @@ def test_brouillons_charges_a_relire_sans_ecraser(tmp_path):
     assert "relecture" not in json.loads(lignes[0]["doc"])
     sql = sync_admin.script(tmp_path, None, lignes, avec_catalogue=False)
     assert "DELETE FROM" not in sql and "INSERT OR IGNORE INTO qualifications" in sql
+
+
+def test_amendement_unanime_ou_article_unique_refuse():
+    infos = {"D": {"dossier_id": "DLR5L17N1", "etape": "AN1", "division": None, "objet": "ensemble", "pour": 10, "contre": 5},
+             "U": {"dossier_id": "DLR5L17N1", "etape": "AN1", "division": "Article 2", "objet": "amendement", "pour": 0, "contre": 46},
+             "S": {"dossier_id": "DLR5L17N1", "etape": "AN1", "division": None, "objet": "suppression_article_unique",
+                   "pour": 65, "contre": 95}}
+    sc = [{"id": "D", "role": "decisif", "pour": "texte"}, {"id": "U", "role": "amendement", "pour": "texte"},
+          {"id": "S", "role": "amendement", "pour": "contre-texte"}]
+    err, _ = editorial.valider(_texte(scrutins=sc), infos)
+    assert "U : amendement unanime (0-46), pas un amendement clé (règle 11)" in err
+    assert "S : suppression d'un article unique, pas un amendement clé (règle 11)" in err
+
+
+def test_termes_interdits(tmp_path):
+    from lvnd import check
+    liste = tmp_path / "t.txt"
+    liste.write_text("# commentaire\nABC\nAssociation Exemple\n")
+    assert check.termes_interdits("Source : abc, avis", liste) == ["ABC"]
+    assert check.termes_interdits("ABCD et xabc ne comptent pas", liste) == []
+    assert check.termes_interdits("l'association exemple a dit", liste) == ["Association Exemple"]
+    assert check.termes_interdits("rien", tmp_path / "absent.txt") == []

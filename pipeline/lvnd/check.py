@@ -4,6 +4,7 @@ Un invariant ou un texte témoin en échec fait échouer `lvnd check`. Les ligne
 sans faire échouer.
 """
 
+import re
 import sqlite3
 from pathlib import Path
 
@@ -76,12 +77,28 @@ def _temoins(con, controle, out) -> None:
             out.append(f"info {n} : sens à trancher pour {', '.join(attente)}")
 
 
+TERMES_INTERDITS = Path(__file__).resolve().parents[2] / "source/termes_interdits.txt"
+
+
+def termes_interdits(texte: str, chemin: Path = TERMES_INTERDITS) -> list[str]:
+    """Termes de la liste privée (source/, non versionné) présents dans `texte` (CLAUDE.md, règles dures)."""
+    if not chemin.exists():
+        return []
+    termes = [t.strip() for t in chemin.read_text().splitlines() if t.strip() and not t.startswith("#")]
+    return [t for t in termes if re.search(rf"(?<!\w){re.escape(t)}(?!\w)", texte, re.IGNORECASE)]
+
+
 def _qualifications(con, controle, out) -> None:
     """Chaque qualification publiée passe les contrôles de l'admin (editorial.valider)."""
     doc = editorial.charger()
-    infos = {sid: {"dossier_id": d, "etape": e, "division": div} for sid, d, e, div in _q(
-        con, "select s.id, s.dossier_id, s.etape, a.division from scrutins s "
-             "left join amendements a on a.id = s.amendement_id")}
+    if TERMES_INTERDITS.exists():
+        trouves = termes_interdits(editorial.serialiser(doc))
+        controle("aucun terme interdit dans les qualifications (source/termes_interdits.txt)", not trouves,
+                 f"{len(trouves)} terme(s) trouvé(s)")
+    infos = {sid: {"dossier_id": d, "etape": e, "division": div, "objet": o, "pour": p, "contre": c}
+             for sid, d, e, div, o, p, c in _q(
+                 con, "select s.id, s.dossier_id, s.etape, a.division, s.objet, s.pour, s.contre from scrutins s "
+                      "left join amendements a on a.id = s.amendement_id")}
     for t in doc["textes"]:
         err, avert = editorial.valider(t, infos)
         controle(f"{t['id']} : qualification valide", not err, " ; ".join(err))

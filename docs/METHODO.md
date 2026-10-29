@@ -6,7 +6,9 @@ le 29/10/2026, à la fin du spike de l'étape 1. Les règles de calcul (14 à
 19) l'ont été le même jour, à l'étape 2, sur simulation des six textes
 témoins (`pipeline/referentiels/temoins.yaml`).
 Le choix de la lecture et la notion de source qui « cite » une mesure (règle
-11) l'ont été le même jour, sur le cas de Kasbarian-Bergé.
+11) l'ont été le même jour, sur le cas de Kasbarian-Bergé, puis les
+exclusions de la règle 11 et les motions « inversées » (règle 10), à la
+relecture des vingt et un premiers textes.
 
 ## Grille des droits
 
@@ -61,6 +63,9 @@ Grille v0 : `pipeline/referentiels/droits.yaml`. Onze droits et deux
     voix du RN (87-0) et de LR (40-2). Ces deux groupes ont ensuite voté le
     texte de CMP (88-0 et 62-0). Compter « pour la motion » comme une
     opposition au texte les créditerait d'un vote favorable aux droits.
+    Une motion déposée et adoptée par les soutiens du texte, pour
+    l'envoyer directement en CMP (Duplomb), s'affiche dans ce sens :
+    voter pour, c'est soutenir le texte.
 11. **Amendements clés** : seuls entrent en compte les amendements de
     suppression ou de rétablissement d'un article qui porte une mesure
     citée par une source. Max fixe le sens de chacun, d'après le contenu de
@@ -75,9 +80,11 @@ Grille v0 : `pipeline/referentiels/droits.yaml`. Onze droits et deux
     scrutin décisif (règle 6) : la 1re lecture pour le narcotrafic et la
     justice des mineurs, la 2e pour Kasbarian-Bergé. Une source
     « cite » une mesure quand elle la met en cause. Une décision du Conseil
-    constitutionnel qui la décrit pour la valider ne suffit pas. Selon les
-    textes, on compte de 0 (immigration, aide à mourir) à 9 amendements
-    clés (narcotrafic).
+    constitutionnel qui la décrit pour la valider ne suffit pas. Ne sont
+    pas des amendements clés : la suppression d'un article unique, qui
+    double le scrutin décisif, et un scrutin unanime (aucun vote d'un des
+    deux côtés), qui ne départage personne. Selon les textes, on compte
+    de 0 (immigration, aide à mourir) à 17 amendements clés (RIPOST).
 
 ## Positions de groupe
 

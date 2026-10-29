@@ -120,6 +120,59 @@ describe('qualification', () => {
     );
   });
 
+  it("refuse un amendement clé unanime ou la suppression d'un article unique (règle 11)", () => {
+    const infos = new Map([
+      [
+        'D',
+        {
+          dossier_id: 'DLR5L17N1',
+          etape: 'AN1',
+          division: null,
+          objet: 'ensemble',
+          pour: 10,
+          contre: 5
+        }
+      ],
+      [
+        'U',
+        {
+          dossier_id: 'DLR5L17N1',
+          etape: 'AN1',
+          division: 'Article 2',
+          objet: 'amendement',
+          pour: 0,
+          contre: 46
+        }
+      ],
+      [
+        'S',
+        {
+          dossier_id: 'DLR5L17N1',
+          etape: 'AN1',
+          division: null,
+          objet: 'suppression_article_unique',
+          pour: 65,
+          contre: 95
+        }
+      ]
+    ]);
+    const { erreurs } = valider(
+      texte({
+        scrutins: [
+          { id: 'D', role: 'decisif', pour: 'texte', objet: '' },
+          { id: 'U', role: 'amendement', pour: 'texte', objet: '' },
+          { id: 'S', role: 'amendement', pour: 'contre-texte', objet: '' }
+        ]
+      }),
+      GRILLE,
+      infos
+    );
+    expect(erreurs).toContain('U : amendement unanime (0-46), pas un amendement clé (règle 11)');
+    expect(erreurs).toContain(
+      "S : suppression d'un article unique, pas un amendement clé (règle 11)"
+    );
+  });
+
   it('garde les espaces insécables', () => {
     expect(texte({ conseil_constitutionnel: ' a :  b\n c ' }).conseil_constitutionnel).toBe(
       'a : b c'

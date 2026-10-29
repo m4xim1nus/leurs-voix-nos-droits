@@ -85,7 +85,14 @@ export function infos(scrutins: ScrutinCatalogue[]): Map<string, InfoScrutin> {
   return new Map(
     scrutins.map((s) => [
       s.id,
-      { dossier_id: s.texte_id, etape: s.etape, division: s.amendement_division }
+      {
+        dossier_id: s.texte_id,
+        etape: s.etape,
+        division: s.amendement_division,
+        objet: s.objet,
+        pour: s.pour,
+        contre: s.contre
+      }
     ])
   );
 }
