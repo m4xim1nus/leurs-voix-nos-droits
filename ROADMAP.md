@@ -226,10 +226,21 @@ chat puis publie depuis l'admin.
   `sync-admin --remplacer` pour requalifier un texte publié. Couverture :
   `citoyennete` 4, `discriminations` 5, `vie-privee` 7 ; `libertes`
   toujours 5.
-- ⏳ Lots suivants, d'une vingtaine de textes chacun, jusqu'au seuil de la
-  v1, puis au fil de l'eau. Toujours aucun candidat `etrangers` avec vote
-  sur l'ensemble (le PLF 2026, qualifié `etrangers`, ne compte dans aucun
-  score).
+- ✅ Lot 6 (24 textes et une requalification, 29/10/2026) : 10 validés,
+  15 écartés (fiche `source/relecture-lot6.md`). Dernier lot du vivier du
+  tri 2 : les deux lois de finances rectificatives de 2022 (la première
+  qualifiée, `libertes` restreint, fin de la redevance ; la seconde
+  écartée) ; peine obligatoire d'inéligibilité requalifiée `citoyennete`
+  restreint. Règles 4 (loi qui rétablit une règle abrogée par le Conseil
+  constitutionnel) et 11 (article dont les sources ne s'accordent pas sur
+  le sens). Couverture : 96 textes qualifiés ; `libertes` 7,
+  `environnement` 15, `sante` 8, `police-justice` 10, `citoyennete` 5.
+- Vivier de la v1 épuisé. Après la v1 (BACKLOG) : les lois de finances
+  adoptées par 49.3 sans vote final (6 textes, comptés dans aucun score),
+  les textes de la liste C quand ils auront un vote final, et le cycle de la
+  XVe ouvert par les textes `libertes`. Toujours aucun candidat `etrangers`
+  avec vote sur l'ensemble (le PLF 2026, qualifié `etrangers`, ne compte
+  dans aucun score).
 
 ## Travail en parallèle (deux sessions Claude Code)
 

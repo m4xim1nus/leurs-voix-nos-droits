@@ -24,7 +24,9 @@ Au lot 5, toujours le 29/10/2026 : le périmètre de `citoyennete` (règle 2),
 les mesures qui ne visent que des personnes détenues (règle 3), le corps
 électoral et les droits d'un peuple autochtone (règle 4), les lois de
 finances de fin de gestion (règle 8), l'article devenu seul au scrutin
-décisif (règle 11).
+décisif (règle 11). Au lot 6, le même jour : la loi qui rétablit une règle
+abrogée par le Conseil constitutionnel (règle 4), l'article dont les
+sources ne s'accordent pas sur le sens (règle 11).
 
 ## Grille des droits
 
@@ -75,7 +77,10 @@ Nouvelle-Calédonie).
    jurisprudence comprise** : une loi qui met le code du travail en
    conformité avec la Cour de cassation, en plafonnant ce que la
    jurisprudence accordait déjà, restreint le droit (congés payés pendant
-   la maladie, 2024).
+   la maladie, 2024). De même, une loi qui rétablit une règle que le
+   Conseil constitutionnel avait abrogée, en l'assortissant de la garantie
+   qu'il exigeait, restreint le droit par rapport au jour du vote (purge
+   des nullités en matière correctionnelle, 2024).
    Dans un **texte composite** dont les mesures vont en sens opposés pour
    un même droit, le sens de ce droit est celui des mesures que les sources
    admises citent le plus souvent. La mesure de sens opposé s'affiche en
@@ -177,7 +182,10 @@ Nouvelle-Calédonie).
 11. **Amendements clés** : seuls entrent en compte les amendements de
     suppression ou de rétablissement d'un article qui porte une mesure
     citée par une source. Max fixe le sens de chacun, d'après le contenu de
-    l'article et non d'après la nature de l'amendement. Sur la justice des
+    l'article et non d'après la nature de l'amendement. Un article dont le
+    sens n'est pas univoque n'est pas retenu, y compris quand les sources
+    admises ne s'accordent pas sur ce sens (primes de partage de la valeur,
+    2023 : mises en cause par la CGT, soutenues par la CFDT et FO). Sur la justice des
     mineurs, le RN propose de supprimer l'article 7, qui ajoute une
     garantie (rapport éducatif avant toute détention provisoire). Voter
     cette suppression va donc dans le sens du texte. **Un seul scrutin par

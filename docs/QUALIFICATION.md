@@ -1,7 +1,7 @@
 # Qualification par lots
 
 Procédure suivie pour qualifier les textes au-delà des six témoins.
-Elle a servi aux lots 1 à 5 et aux deux lots de tri (29/10/2026). Les règles de fond sont
+Elle a servi aux lots 1 à 6 et aux deux lots de tri (29/10/2026). Les règles de fond sont
 celles de `docs/METHODO.md`. Le circuit est celui de l'admin
 (`docs/CONCEPTION.md`) : D1 sert de brouillon, la publication vaut commit.
 
@@ -79,7 +79,8 @@ travail doit être factuel, sourcé, vérifiable, et signaler franchement les po
   secondaire), 4 (sens droit par droit, un droit principal ; corps électoral : `citoyennete` selon
   le droit de vote des personnes, `discriminations` restreint si une source y voit une atteinte aux
   droits d'un peuple autochtone ; sens lu par rapport au droit
-  applicable au jour du vote, jurisprudence comprise ; texte composite : sens des mesures que les
+  applicable au jour du vote, jurisprudence comprise (rétablir une règle abrogée par le Conseil
+  constitutionnel restreint) ; texte composite : sens des mesures que les
   sources citent le plus, la mesure opposée en vigilance), 5 (vigilance), 6 (on qualifie le texte
   soumis au scrutin décisif), 7 (sources admises, dont les instances consultatives indépendantes,
   l'ANSES, les syndicats représentatifs de salariés et leurs fédérations, les syndicats et ordres
@@ -96,7 +97,7 @@ travail doit être factuel, sourcé, vérifiable, et signaler franchement les po
   affichées, pas comptées), 11 (amendements clés : seulement suppression ou rétablissement d'un
   article dont la mesure est **mise en cause** par une source — une source favorable, une critique
   d'insuffisance ou une décision qui valide la mesure ne suffisent pas ; article mixte, au sens non
-  univoque → non retenu ; **une seule lecture : la dernière lecture de l'AN où des suppressions
+  univoque, ou dont les sources ne s'accordent pas sur le sens → non retenu ; **une seule lecture : la dernière lecture de l'AN où des suppressions
   ont été mises aux voix** ; un seul scrutin par article ; l'article qui est le seul du texte au
   décisif compte comme un article unique ; le sens se lit sur le contenu de
   l'article).
