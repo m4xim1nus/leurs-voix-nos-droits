@@ -146,6 +146,8 @@ def valider(t: dict, scrutins_dossier: dict[str, dict] | None = None) -> tuple[l
             err.append(f"source {k} : URL manquante")
         if not s.get("auteur") or not s.get("titre"):
             err.append(f"source {k} : auteur ou titre manquant")
+        if not re.fullmatch(r"\d{4}(-\d{2}(-\d{2})?)?", str(s.get("date") or "")):
+            err.append(f"source {k} : date attendue au format AAAA-MM-JJ (ou AAAA-MM)")
     for k in sorted(set(sources) - citees):
         avert.append(f"source {k} définie mais citée nulle part")
 

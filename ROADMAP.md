@@ -125,9 +125,11 @@ passer par la machine de Max.
 - ✅ Tests croisés pipeline ↔ admin : sérialisation d'`editorial.json` à
   l'octet près, scores de groupe identiques.
 - ✅ Choix A à F de `docs/CONCEPTION.md` validés par Max.
-- ⏳ Mise en service par Max (D1, jeton GitHub, Access, domaine) :
-  `admin/README.md`. Le dépôt n'a pas encore de remote GitHub.
-- ⏳ Vingtaine de textes qualifiés par Max.
+- ✅ Mise en service : dépôt public sur GitHub, D1 en ligne, admin sur
+  `lvnd-admin.technoperchoir.fr` derrière Cloudflare Access (code par
+  courriel), publication testée.
+- ⏳ Vingtaine de textes : brouillons préparés par Claude (recherche et
+  sources), chargés « à relire », validés un par un par Max.
 
 ## Étape 4 : site public v1
 

@@ -185,6 +185,8 @@ export function valider(
   for (const [k, s] of Object.entries(sources)) {
     if (!(s.url ?? '').startsWith('http')) err.push(`source ${k} : URL manquante`);
     if (!s.auteur || !s.titre) err.push(`source ${k} : auteur ou titre manquant`);
+    if (!/^\d{4}(-\d{2}(-\d{2})?)?$/.test(String(s.date ?? '')))
+      err.push(`source ${k} : date attendue au format AAAA-MM-JJ (ou AAAA-MM)`);
   }
   for (const k of Object.keys(sources)
     .filter((k) => !citees.has(k))

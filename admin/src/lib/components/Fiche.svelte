@@ -378,7 +378,16 @@
               >
               <td><input type="text" bind:value={s.auteur} size="16" /></td>
               <td><input type="text" bind:value={s.titre} /></td>
-              <td><input type="date" bind:value={s.date} /></td>
+              <td>
+                <input
+                  type="text"
+                  bind:value={s.date}
+                  placeholder="AAAA-MM-JJ"
+                  pattern={'\\d{4}(-\\d{2}(-\\d{2})?)?'}
+                  title="AAAA-MM-JJ, ou AAAA-MM si le document n'est daté qu'au mois"
+                  size="10"
+                />
+              </td>
               <td><input type="url" bind:value={s.url} /></td>
               <td
                 ><button type="button" class="lien" onclick={() => retirerSource(i)}>retirer</button
