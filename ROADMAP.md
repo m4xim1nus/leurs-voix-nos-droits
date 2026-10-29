@@ -13,53 +13,53 @@ Décisions dans `CLAUDE.md` : dépôt public, admin tout Cloudflare (D1 +
 Access, publication par commit), périmètre AN XVIe-XVIIe. Squelette du
 dépôt.
 
-## Étape 1 : spike sources et grille ← *en cours*
+## Étape 1 : spike sources et grille ✅ (2026-10-29)
 
-But : vérifier que les données suivent et que la grille tient sur des cas
-réels. C'est le **go/no-go**. Scripts jetables dans `pipeline/explo/`.
+Verdict **GO** : l'open data AN suffit pour la v1 (`docs/SOURCES.md`).
 
-- **Données AN** : reprendre le téléchargement de quifaitlaloi (scrutins,
-  dossiers, acteurs et organes, XVIe et XVIIe). Mesurer le volume des
-  votes nominatifs (≈ 1,37 M lignes pour la XVIIe), puis trancher : tout
-  versionner sous forme compacte, ou seulement les scrutins candidats. Le
-  critère : qualifier un nouveau scrutin dans l'admin ne doit pas exiger
-  de relancer le pipeline.
-- **Rattachement** : vérifier que chaque amendement mis aux voix se
-  rattache à son dossier, avec son auteur et son groupe.
-- **Code postal → circonscription** : trouver la table officielle
-  (communes ↔ circonscriptions législatives) et repérer les communes à
-  cheval sur plusieurs circonscriptions.
-- **PISTE** : créer l'application, obtenir les clés et tester un appel.
-  Verdict : l'API apporte-t-elle quelque chose (lien JO, décisions du
-  Conseil constitutionnel), oui ou non ?
-- **Grille v0** : valider avec Max les dix droits de `source/CADRAGE.md`
-  §3. Les qualifier à la main sur **six textes témoins** (JO 2024,
-  immigration 2024, Kasbarian-Bergé, narcotrafic, justice des mineurs,
-  aide à mourir), dans un simple YAML. Pour chacun : droits touchés,
-  sens, sources, puis scrutins retenus (ensemble, motion de censure,
-  amendements clés) avec le sens d'un vote « pour ».
-- **Contrôle croisé** : positions de groupe comparées à datan.fr et au
-  `dataset.json` public de leurs-votes.fr sur les scrutins communs.
-- **Livrable** : `docs/SOURCES.md`, la grille v0 validée
-  (`pipeline/referentiels/droits.yaml`), les six textes témoins qualifiés
-  et un verdict go/no-go.
+- 1,97 M votes nominatifs (XVIe + XVIIe). Décision : tout versionner en CSV
+  par législature et par mois ; `data/lvnd.sqlite` n'est pas versionné.
+- Sur la XVIIe, 99,9 % des scrutins sur amendement sont rattachés à leur
+  amendement, avec dossier, auteur et groupe.
+- Les ventilations sont identiques à celles de leurs-votes.fr (22 531
+  paires scrutin × groupe) et concordent avec datan.fr sur un échantillon.
+- Code postal → circonscription : pas de table officielle directe. On la
+  construit à partir de La Poste et du ministère de l'Intérieur ; 71 % des
+  électeurs ont un député unique par code postal.
+- PISTE : non. Décisions du Conseil constitutionnel et liens JO viennent
+  des dossiers AN.
+- Grille v0 et règles de qualification validées par Max
+  (`pipeline/referentiels/droits.yaml`, `docs/METHODO.md`). Six textes
+  témoins qualifiés et sourcés (`pipeline/referentiels/temoins.yaml`).
 
-## Étape 2 : pipeline et méthode v0
+## Étape 2 : pipeline et méthode v0 ← *en cours*
 
 But : une base fiable des textes, scrutins et votes, et des règles de
 calcul arrêtées.
 
 - Package `lvnd` (`download` → `build` → `check`), qui écrit
-  `data/lvnd.sqlite` et `data/export/`.
+  `data/lvnd.sqlite` (local) et `data/export/`, dont les votes nominatifs
+  dans `votes/<législature>/<AAAA-MM>.csv`. `download` existe déjà, avec
+  reprise automatique sur coupure.
+- Reprendre de quifaitlaloi le parsing des scrutins, des dossiers et de
+  l'AMO, ainsi que la correction des ventilations `PO0`. Porter dans le
+  package le rattachement des amendements (`explo/rattachement_amendements.py`)
+  et le **mesurer sur la XVIe**. Le dump de la XVIe n'a pas pu être
+  téléchargé au spike : le serveur de l'AN coupait sans cesse.
 - **Catalogue des candidats** : présélection des textes et scrutins par
   mots-clés (`referentiels/mots_cles.yaml`). Elle sert d'aide au tri dans
   l'admin, jamais de qualification automatique.
-- **Scores** calculés depuis une qualification (le YAML de l'étape 1 en
-  attendant l'admin) : par député, par groupe et par droit.
+- **Scores** calculés depuis une qualification (`temoins.yaml` en
+  attendant l'admin) : par député, par groupe et par droit. Les règles de
+  `docs/METHODO.md` s'appliquent : scrutin décisif et amendements clés
+  comptés, motions affichées.
 - **Méthode v0** dans `docs/METHODO.md`, chaque règle **tranchée par
-  Max** : abstention, absences, pondération (un texte à vingt amendements
-  ne doit pas écraser les autres), votes du député quand il change de
-  groupe.
+  Max** :
+  - abstention et absences ;
+  - pondération (un texte à vingt amendements ne doit pas écraser les
+    autres) ;
+  - votes du député quand il change de groupe ;
+  - choix et sens des amendements clés des six textes témoins.
 - **Livrable** : `docs/METHODO.md` v0, les scores des six textes témoins
   relus avec Max, `lvnd check` vert.
 

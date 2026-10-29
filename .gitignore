@@ -13,6 +13,9 @@ dist/
 # Dumps open data téléchargés (cache local, régénérable)
 data/raw/
 
+# Base SQLite : régénérée en local depuis les dumps (docs/SOURCES.md)
+data/lvnd.sqlite
+
 # Cadrage privé et identifiants (PISTE…) : jamais versionnés
 source/
 .env

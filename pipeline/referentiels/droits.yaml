@@ -1,0 +1,46 @@
+# Grille des droits, v0 validée par Max le 29/10/2026 (règles : docs/METHODO.md).
+#
+# Chaque texte qualifié reçoit un droit principal et des droits secondaires,
+# avec pour chacun un sens : `etend` ou `restreint`. Le sens se lit toujours
+# du point de vue des droits des personnes concernées, jamais des
+# prérogatives de l'État. Les étiquettes sont transversales : elles servent
+# au filtrage, sans sens.
+
+statut: valide
+version: 0
+
+droits:
+  - code: libertes
+    libelle: "Libertés publiques : expression, conscience, manifestation, association, culte"
+  - code: police-justice
+    libelle: "Garanties face à la police et à la justice pénale, droits de la défense, droits des personnes détenues"
+  - code: vie-privee
+    libelle: "Vie privée et surveillance"
+  - code: etrangers
+    libelle: "Droits des personnes étrangères, asile"
+  - code: discriminations
+    libelle: "Égalité, racisme, antisémitisme, discriminations (dont handicap)"
+  - code: femmes-lgbti
+    libelle: "Droits des femmes, égalité de genre, LGBTI"
+  - code: enfants
+    libelle: "Droits de l'enfant, justice des mineurs, éducation"
+  - code: logement
+    libelle: "Droit au logement"
+  - code: travail-protection-sociale
+    libelle: "Droits au travail et à la protection sociale"
+  - code: environnement
+    libelle: "Droit à un environnement sain"
+  - code: sante
+    libelle: "Santé, fin de vie, bioéthique"
+
+etiquettes:
+  - code: outre-mer
+    libelle: "Outre-mer"
+  - code: regime-exception
+    libelle: "Régimes d'exception : états d'urgence, dispositifs temporaires ou expérimentaux, extension du droit antiterroriste"
+
+sens:
+  - code: etend
+    libelle: "étend les droits"
+  - code: restreint
+    libelle: "restreint les droits"

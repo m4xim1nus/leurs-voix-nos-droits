@@ -23,3 +23,8 @@ File d'attente brute, non ordonnée. Une ligne par item :
 - [ ] Formulaire de contestation d'une qualification, sans service tiers (leurs-votes.fr passe par Tally) (claude, 2026-10-29)
 - [ ] Comparateur de deux groupes sur un droit (« là où ils s'opposent ») (claude, 2026-10-29)
 - [ ] Eurodéputés (HowTheyVote.eu) : hors périmètre national, à garder en tête (claude, 2026-10-29)
+- [→Étape 2] Ventilations sans organe (`PO0`, 4 scrutins du 02/12/2024) : reprendre la correction de quifaitlaloi par les mandats des votants (claude, 2026-10-29)
+- [→Étape 2] Scrutin sur « l'amendement n° X et les amendements identiques suivants » : rattacher aussi les auteurs des identiques (`discussionIdentique`) (claude, 2026-10-29)
+- [→Étape 2] Table pays → circonscription des Français de l'étranger (code électoral, art. L. 330-1) à saisir en référentiel (claude, 2026-10-29)
+- [→Étape 4] État « siège vacant » sur la fiche circonscription (3 sièges sans mandat en cours au 28/10/2026) (claude, 2026-10-29)
+- [creuser] Recherche par code postal, communes coupées (14 % des électeurs) : A afficher les N députés possibles, B choisir la commune déléguée ou l'arrondissement, C saisir son adresse (table d'adresses Insee en statique, 490 Mo brut) ; cf. `docs/SOURCES.md` (claude, 2026-10-29)

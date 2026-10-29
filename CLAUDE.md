@@ -86,8 +86,9 @@ témoins. En cas d'écart avec ce fichier, il prime.
 ```
 source/              cadrage privé + identifiants (non versionné)
 data/raw/            dumps téléchargés (cache local, non versionné)
-data/lvnd.sqlite     base open data (versionnée ; volume à trancher au spike)
-data/export/         JSON + CSV pour le site, l'admin et le téléchargement (versionnés)
+data/lvnd.sqlite     base open data (régénérée en local, non versionnée)
+data/export/         JSON + CSV pour le site, l'admin et le téléchargement (versionnés),
+                     dont tous les votes nominatifs : votes/<législature>/<AAAA-MM>.csv
 data/editorial.json  qualifications publiées, écrit par l'admin (versionné)
 docs/SOURCES.md      fiche des sources (étape 1)
 docs/METHODO.md      grille des droits et règles de calcul, base de la page Méthodologie

@@ -1,0 +1,266 @@
+# Textes témoins, qualification v0 (étape 1), validée par Max le 29/10/2026.
+#
+# Pour chaque texte :
+#   droits     : un droit principal et des secondaires, avec leur sens
+#                (`etend` / `restreint`, cf. droits.yaml) et les sources qui
+#                fondent ce jugement (clés de `sources`).
+#   vigilance  : critiques sourcées affichées à côté du jugement, sans le
+#                modifier.
+#   scrutins   : scrutins AN retenus. `pour` donne le sens d'un vote « pour » :
+#                  texte        → voter pour, c'est soutenir le texte ;
+#                  contre-texte → voter pour, c'est s'y opposer (motion de
+#                                 rejet, amendement de suppression) ;
+#                  a-trancher   → sens à fixer par Max (amendements candidats).
+#                `role` : decisif (dernier vote de l'AN sur l'ensemble),
+#                ensemble (autres lectures), motion, article, amendement.
+#                Seuls comptent le scrutin décisif et les amendements clés ;
+#                motions et autres lectures sont affichées, pas comptées
+#                (docs/METHODO.md). La pondération relève de l'étape 2.
+#
+# On qualifie le texte soumis au scrutin décisif (c'est le vote du député qui
+# est mesuré) ; la décision du Conseil constitutionnel est affichée à côté.
+# Les identifiants AN, numéros de loi, NOR et décisions du Conseil
+# constitutionnel ont été recoupés avec les dossiers AN (open data).
+
+statut: valide
+
+textes:
+
+  - id: jo-2024
+    titre: "Loi relative aux jeux Olympiques et Paralympiques de 2024"
+    legislature: 16
+    dossier_an: DLR5L16N46918
+    loi: { numero: "2023-380", date: 2023-05-19, nor: SPOX2233026L,
+           url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000047561974" }
+    conseil_constitutionnel:
+      decision: "2023-850 DC"
+      date: 2023-05-17
+      sens: partiellement conforme
+      url: "https://www.conseil-constitutionnel.fr/decision/2023/2023850DC.htm"
+      resume: >-
+        Censure de l'article 7 de la loi (cavalier). Vidéosurveillance
+        algorithmique (article 10 de la loi) validée sous réserve.
+    droits:
+      - { code: vie-privee, role: principal, sens: restreint, sources: [cnil-2022-118, amnesty-jo-2023],
+          justification: "Première autorisation du traitement algorithmique des images de vidéoprotection dans l'espace public, un « tournant » selon la CNIL." }
+      - { code: libertes, role: secondaire, sens: restreint, sources: [cncdh-a-2024-5],
+          justification: "La CNCDH relève un effet dissuasif sur la liberté de manifester." }
+      - { code: police-justice, role: secondaire, sens: restreint, sources: [cc-2023-850],
+          justification: "Nouveaux délits dans les enceintes sportives, interdiction de stade étendue." }
+    etiquettes: [regime-exception]  # expérimentation liée à un événement
+    sources:
+      cnil-2022-118: { auteur: CNIL, titre: "Délibération n° 2022-118 du 8 décembre 2022 (avis sur le projet de loi)", date: 2023-01-04,
+                       url: "https://www.cnil.fr/fr/jeux-olympiques-et-paralympiques-2024-la-cnil-publie-son-avis-sur-le-projet-de-loi" }
+      cncdh-a-2024-5: { auteur: CNCDH, titre: "Avis sur la surveillance de l'espace public (A-2024-5)", date: 2024-06-20,
+                        url: "https://www.cncdh.fr/sites/default/files/2024-06/A%20-%202024%20-%205%20-%20CNCDH%20-%20Avis%20Surveillance%20de%20l%27espace%20public%2C%20juin%202024_0.pdf" }
+      amnesty-jo-2023: { auteur: Amnesty International France, titre: "Projet de loi JO 2024 : vers une normalisation des technologies de surveillance intrusives ?", date: 2023-01-23,
+                         url: "https://www.amnesty.fr/actualites/projet-de-loi-jo-2024-technologies-de-surveillance-intelligence-artificielle/" }
+      cc-2023-850: { auteur: Conseil constitutionnel, titre: "Décision n° 2023-850 DC", date: 2023-05-17,
+                     url: "https://www.conseil-constitutionnel.fr/decision/2023/2023850DC.htm" }
+    scrutins:
+      - { id: VTANR5L16V1409, role: decisif, pour: texte, objet: "ensemble, texte de la CMP (244-57)" }
+      - { id: VTANR5L16V1305, role: ensemble, pour: texte, objet: "ensemble, 1re lecture, scrutin solennel (400-93)" }
+      - { id: VTANR5L16V1274, role: article, pour: texte, objet: "article 7 du projet (vidéosurveillance algorithmique), 1re lecture (59-14)" }
+      - { id: VTANR5L16V1263, role: amendement, pour: contre-texte, objet: "amendements de suppression de l'article 7 (26-90)" }
+      - { id: VTANR5L16V1242, role: motion, pour: contre-texte, objet: "motion de rejet préalable, 1re lecture (43-144)" }
+      - { id: VTANR5L16V1408, role: motion, pour: contre-texte, objet: "motion de rejet préalable, CMP (60-232)" }
+
+  - id: immigration-2024
+    titre: "Loi pour contrôler l'immigration, améliorer l'intégration"
+    legislature: 16
+    dossier_an: DLR5L16N47118
+    loi: { numero: "2024-42", date: 2024-01-26, nor: IOMV2236472L,
+           url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000049040245" }
+    conseil_constitutionnel:
+      decision: "2023-863 DC"
+      date: 2024-01-25
+      sens: partiellement conforme
+      url: "https://www.conseil-constitutionnel.fr/decision/2024/2023863DC.htm"
+      resume: >-
+        32 articles censurés comme cavaliers (dont l'accès aux prestations
+        sociales), 3 en partie au fond (quotas, relevé d'empreintes sous
+        contrainte), 2 réserves.
+    droits:
+      - { code: etrangers, role: principal, sens: restreint, sources: [ddd-23-02, cncdh-lettre-2023-11],
+          justification: "Le texte « multiplie les dispositifs de sanction et les mesures coercitives » (Défenseure des droits) ; la CNCDH appelle à ne pas le voter." }
+      - { code: enfants, role: secondaire, sens: etend, sources: [cncdh-a-2024-7],
+          justification: "Interdiction de la rétention des mineurs, saluée par la CNCDH (§ 84), reportée à 2027 à Mayotte." }
+    etiquettes: [outre-mer]
+    sources:
+      ddd-23-02: { auteur: Défenseur des droits, titre: "Avis 23-02 relatif au projet de loi pour contrôler l'immigration, améliorer l'intégration", date: 2023-02-23,
+                   url: "https://juridique.defenseurdesdroits.fr/index.php?lvl=notice_display&id=46811" }
+      cncdh-lettre-2023-11: { auteur: CNCDH, titre: "Lettre du président aux députés sur le projet de loi", date: 2023-11-28,
+                              url: "https://www.cncdh.fr/sites/default/files/2023-11/Lettre%20PDT%20CNCDH%20PJL%20Immigration%2C%20nov%202023.pdf" }
+      cncdh-a-2024-7: { auteur: CNCDH, titre: "Avis sur la loi du 26 janvier 2024 (A-2024-7)", date: 2024-09-26,
+                        url: "https://www.cncdh.fr/sites/default/files/2024-10/A%20-%202024%20-%207%20-%20CNCDH%20-%20Avis%20Loi%20Immigration%2C%20sept%202024.pdf" }
+      cimade-2024: { auteur: La Cimade, titre: "Décryptage de la loi asile et immigration du 26 janvier 2024", date: 2024-02-12,
+                     url: "https://www.lacimade.org/wp-content/uploads/2024/02/Decryptage-Cimade-Loi-asile-et-immigration-du-26-janvier-2024-Document-definitif.pdf" }
+    scrutins:
+      - { id: VTANR5L16V3213, role: decisif, pour: texte, objet: "ensemble, texte de la CMP, scrutin solennel (349-186)" }
+      # Motion écologiste adoptée 270-265 avec les voix du RN (87-0) et de LR (40-2), qui votent
+      # ensuite le texte de CMP. « Pour la motion » ne vaut pas soutien aux droits : c'est pourquoi
+      # les motions sont affichées sans être comptées.
+      - { id: VTANR5L16V3203, role: motion, pour: contre-texte, objet: "motion de rejet préalable adoptée, 1re lecture (270-265)" }
+      - { id: VTANR5L16V3212, role: motion, pour: contre-texte, objet: "motion de rejet préalable, CMP (155-384)" }
+
+  - id: kasbarian-berge
+    titre: "Loi visant à protéger les logements contre l'occupation illicite (Kasbarian-Bergé)"
+    legislature: 16
+    dossier_an: DLR5L16N46484
+    loi: { numero: "2023-668", date: 2023-07-27, nor: JUSX2234714L,
+           url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000047897040" }
+    conseil_constitutionnel:
+      decision: "2023-853 DC"
+      date: 2023-07-26
+      sens: partiellement conforme
+      url: "https://www.conseil-constitutionnel.fr/decision/2023/2023853DC.htm"
+      resume: >-
+        Censure de l'article 7 (exonération de responsabilité du propriétaire),
+        réserve sur la notion de domicile ; nouveau délit et procédure
+        administrative d'expulsion validés.
+    droits:
+      - { code: logement, role: principal, sens: restreint, sources: [ddd-23-01, fondation-logement-2023],
+          justification: "Atteintes au domicile des occupants et des locataires en impayé « ni nécessaires ni proportionnées » (Défenseure des droits)." }
+      - { code: police-justice, role: secondaire, sens: restreint, sources: [cc-2023-853],
+          justification: "Nouveau délit, peines triplées, procédure administrative d'expulsion étendue." }
+      - { code: vie-privee, role: secondaire, sens: restreint, sources: [ddd-23-01],
+          justification: "Droit au respect du domicile (art. 8 CEDH)." }
+    vigilance:
+      - "Le texte étend la protection du droit de propriété, que la grille ne suit pas (docs/METHODO.md, droits concurrents)."
+    sources:
+      ddd-23-01: { auteur: Défenseur des droits, titre: "Avis 23-01 sur la proposition de loi", date: 2023-01-23,
+                   url: "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=21552" }
+      cncdh-lettre-2023-03: { auteur: CNCDH, titre: "Lettre du président à l'Assemblée nationale concernant la PPL", date: 2023-03-22,
+                              url: "https://www.cncdh.fr/publications/lettre-du-president-lassemblee-nationale-concernant-la-ppl-visant-proteger-les" }
+      fondation-logement-2023: { auteur: Fondation pour le logement des défavorisés, titre: "Loi Kasbarian-Bergé : la Constitution, dernier refuge des personnes sans domicile et mal logées", date: 2023-07-07,
+                                 url: "https://www.fondationpourlelogement.fr/loi-kasbarian-berge-la-constitution-dernier-refuge-des-personnes-sans-domicile-et-mal-logees/" }
+      cc-2023-853: { auteur: Conseil constitutionnel, titre: "Décision n° 2023-853 DC", date: 2023-07-26,
+                     url: "https://www.conseil-constitutionnel.fr/decision/2023/2023853DC.htm" }
+    scrutins:
+      # Adoption définitive au Sénat (14/06/2023) : le dernier vote de l'AN est la 2e lecture.
+      - { id: VTANR5L16V1361, role: decisif, pour: texte, objet: "ensemble, 2e lecture, scrutin solennel (385-147)" }
+      - { id: VTANR5L16V663, role: ensemble, pour: texte, objet: "ensemble, 1re lecture (40-13)" }
+      - { id: VTANR5L16V635, role: motion, pour: contre-texte, objet: "motion de rejet préalable, 1re lecture (43-150)" }
+      - { id: VTANR5L16V1316, role: motion, pour: contre-texte, objet: "motion de rejet préalable, 2e lecture (60-121)" }
+      # Candidats « amendement clé » : suppressions d'articles. Contenu des articles à vérifier.
+      - { id: VTANR5L16V636, role: amendement, pour: a-trancher, objet: "suppression de l'article 4, 1re lecture (36-139)" }
+      - { id: VTANR5L16V1317, role: amendement, pour: a-trancher, objet: "suppression de l'article 1er A, 2e lecture (18-91)" }
+
+  - id: narcotrafic
+    titre: "Loi visant à sortir la France du piège du narcotrafic"
+    legislature: 17
+    dossier_an: DLR5L17N50169
+    loi: { numero: "2025-532", date: 2025-06-13, nor: JUSX2430702L,
+           url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000051734851" }
+    conseil_constitutionnel:
+      decision: "2025-885 DC"
+      date: 2025-06-12
+      sens: partiellement conforme
+      url: "https://www.conseil-constitutionnel.fr/decision/2025/2025885DC.htm"
+      resume: >-
+        6 articles censurés en tout ou partie (dont l'accès du renseignement
+        aux fichiers fiscaux, l'extension des « boîtes noires », une partie
+        du « dossier coffre »), nombreuses réserves.
+    # Loi organique jumelle (statut du procureur anti-criminalité organisée, LO 2025-531,
+    # dossier DLR5L17N51078, CC 2025-884 DC conforme) : purement organisationnelle,
+    # non qualifiée.
+    droits:
+      - { code: police-justice, role: principal, sens: restreint, sources: [ddd-25-03, cncdh-d-2025-3],
+          justification: "Dossier coffre, garde à vue de 120 h, détention provisoire allongée, quartiers de lutte contre la criminalité organisée : risques pour le procès équitable et de traitement inhumain (Défenseure des droits)." }
+      - { code: vie-privee, role: secondaire, sens: restreint, sources: [cncdh-d-2025-3, cc-2025-885],
+          justification: "Activation à distance des appareils, surveillance algorithmique étendue (en partie censurée)." }
+      - { code: logement, role: secondaire, sens: restreint, sources: [cncdh-d-2025-3],
+          justification: "Nouveau motif d'expulsion locative, « atteinte disproportionnée au droit au logement » (CNCDH)." }
+      - { code: libertes, role: secondaire, sens: restreint, sources: [cc-2025-885],
+          justification: "Fermeture administrative de lieux, y compris associatifs et de culte (réserve du Conseil constitutionnel)." }
+    etiquettes: [regime-exception]  # régime « inspiré de la lutte contre le terrorisme » (CNCDH)
+    sources:
+      ddd-25-03: { auteur: Défenseur des droits, titre: "Avis 25-03 sur la proposition de loi", date: 2025-03-13,
+                   url: "https://www.defenseurdesdroits.fr/avis-sur-la-proposition-de-loi-visant-sortir-la-france-du-piege-du-narcotrafic-838" }
+      cncdh-d-2025-3: { auteur: CNCDH, titre: "Déclaration relative à la proposition de loi (D-2025-3)", date: 2025-03-18,
+                        url: "https://www.cncdh.fr/sites/default/files/2025-03/D%20-%202025%20-%203%20-%20D%C3%A9claration%20PPL%20narcotrafic%2C%20mars%202025.pdf" }
+      lqdn-2025-06: { auteur: La Quadrature du Net, titre: "La loi Narcotrafic devant le Conseil constitutionnel", date: 2025-06-09,
+                      url: "https://www.laquadrature.net/2025/06/09/la-loi-narcotrafic-devant-le-conseil-constitutionnel/" }
+      cc-2025-885: { auteur: Conseil constitutionnel, titre: "Décision n° 2025-885 DC", date: 2025-06-12,
+                     url: "https://www.conseil-constitutionnel.fr/decision/2025/2025885DC.htm" }
+    scrutins:
+      # Adoption définitive par l'AN le 29/04/2025.
+      - { id: VTANR5L17V1473, role: decisif, pour: texte, objet: "ensemble, texte de la CMP, scrutin solennel (396-68)" }
+      - { id: VTANR5L17V1194, role: ensemble, pour: texte, objet: "ensemble, 1re lecture, scrutin solennel (436-75)" }
+      - { id: VTANR5L17V1471, role: motion, pour: contre-texte, objet: "motion de rejet préalable, CMP (39-231)" }
+      # 119 scrutins sur amendement, dont une vingtaine de suppressions d'article : choix à faire
+      # (explo/temoins_scrutins.py et explo/rattachement_amendements.py pour la liste).
+
+  - id: justice-mineurs
+    titre: "Loi visant à renforcer l'autorité de la justice à l'égard des mineurs délinquants et de leurs parents"
+    legislature: 17
+    dossier_an: DLR5L17N50690
+    loi: { numero: "2025-568", date: 2025-06-23, nor: JUSX2501970L,
+           url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000051782996" }
+    conseil_constitutionnel:
+      decision: "2025-886 DC"
+      date: 2025-06-19
+      sens: partiellement conforme
+      url: "https://www.conseil-constitutionnel.fr/decision/2025/2025886DC.htm"
+      resume: >-
+        6 articles censurés en tout ou partie, dont 5 au nom du principe
+        fondamental de la justice des mineurs (comparution immédiate dès
+        16 ans, excuse de minorité, détention provisoire…).
+    droits:
+      - { code: enfants, role: principal, sens: restreint, sources: [ddd-24-07, cc-2025-886],
+          justification: "Rapprochement du traitement pénal des mineurs de celui des majeurs, contraire à la CIDE selon la Défenseure des droits ; cinq articles censurés sur ce fondement." }
+      - { code: police-justice, role: secondaire, sens: restreint, sources: [cc-2025-886],
+          justification: "Comparution immédiate, détention provisoire, rétention (censurées) ; peine aggravée pour les parents (validée)." }
+    sources:
+      ddd-24-07: { auteur: Défenseur des droits, titre: "Avis 24-07 sur la proposition de loi", date: 2024-11-21,
+                   url: "https://www.defenseurdesdroits.fr/avis-sur-la-proposition-de-loi-visant-restaurer-lautorite-de-la-justice-legard-des-mineurs-753" }
+      cncdh-cp-2025-03: { auteur: CNCDH, titre: "Justice pénale des mineurs : les droits fondamentaux et l'intérêt supérieur de l'enfant sont une fois encore les grands oubliés", date: 2025-03-17,
+                          url: "https://www.cncdh.fr/sites/default/files/2025-03/17.03.25%20CNCDH%20CP%20PPL%20Justice%20des%20mineurs_0.pdf" }
+      cc-2025-886: { auteur: Conseil constitutionnel, titre: "Décision n° 2025-886 DC", date: 2025-06-19,
+                     url: "https://www.conseil-constitutionnel.fr/decision/2025/2025886DC.htm" }
+    scrutins:
+      # Adoption définitive au Sénat (19/05/2025) : le dernier vote de l'AN est celui sur la CMP.
+      - { id: VTANR5L17V1624, role: decisif, pour: texte, objet: "ensemble, texte de la CMP, scrutin solennel (341-187)" }
+      - { id: VTANR5L17V805, role: ensemble, pour: texte, objet: "ensemble, 1re lecture (125-58)" }
+      - { id: VTANR5L17V792, role: motion, pour: contre-texte, objet: "motion de rejet préalable, 1re lecture (96-202)" }
+      - { id: VTANR5L17V1623, role: motion, pour: contre-texte, objet: "motion de rejet préalable, CMP (103-176)" }
+      # Candidats « amendement clé » (1re lecture) : rétablissement des articles 4 et 5, supprimés en
+      # commission, et suppression de l'article 7. Contenu des articles à vérifier.
+      - { id: VTANR5L17V794, role: amendement, pour: a-trancher, objet: "rétablissement de l'article 4 (66-26)" }
+      - { id: VTANR5L17V797, role: amendement, pour: a-trancher, objet: "rétablissement de l'article 5 (82-34)" }
+      - { id: VTANR5L17V798, role: amendement, pour: a-trancher, objet: "suppression de l'article 7 (32-85)" }
+
+  - id: aide-a-mourir
+    titre: "Loi relative au droit à l'aide à mourir"
+    legislature: 17
+    dossier_an: DLR5L17N51670
+    loi: { numero: "2026-794", date: 2026-08-18, nor: SFHX2515569L,
+           url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054706877" }
+    conseil_constitutionnel:
+      decision: "2026-910 DC"
+      date: 2026-08-14
+      sens: conforme
+      url: "https://www.conseil-constitutionnel.fr/decision/2026/2026910DC.htm"
+      resume: "Aucune censure, trois réserves (majeurs protégés, pharmaciens, établissements privés)."
+    droits:
+      - { code: sante, role: principal, sens: etend, sources: [cc-2026-910, admd-2026-02],
+          justification: "Crée un droit d'accès à l'aide à mourir sous cinq conditions cumulatives, validé sans censure." }
+    vigilance:
+      - { texte: "Accès effectif aux soins palliatifs non garanti au préalable, notions jugées imprécises.", sources: [cnom-2025-11, sfap-2026-08] }
+      - { texte: "Risque pour les personnes handicapées selon le Comité des droits des personnes handicapées de l'ONU (lettre de juin 2025, texte officiel non vérifié) ; le monde du handicap est divisé.", sources: [] }
+    sources:
+      cc-2026-910: { auteur: Conseil constitutionnel, titre: "Décision n° 2026-910 DC", date: 2026-08-14,
+                     url: "https://www.conseil-constitutionnel.fr/decision/2026/2026910DC.htm" }
+      admd-2026-02: { auteur: ADMD, titre: "Aide à mourir : une nouvelle avancée, mais un chemin encore long pour en faire une réalité pour tous", date: 2026-02-25,
+                      url: "https://www.admd.org/sites/default/files/2026-02/CP%20-%20Vote%202nd%20Lecture%20-%2025%2003%2026.pdf" }
+      cnom-2025-11: { auteur: Conseil national de l'Ordre des médecins, titre: "Le médecin dans l'accompagnement des souffrances et de la fin de vie", date: 2025-11-05,
+                      url: "https://www.conseil-national.medecin.fr/publications/communiques-presse/medecin-laccompagnement-souffrances-fin-vie" }
+      sfap-2026-08: { auteur: SFAP, titre: "« Aide à mourir » : le Conseil constitutionnel valide la loi au prix de trois réserves", date: 2026-08-14,
+                      url: "https://www.sfap.org/app/uploads/2026/08/CP-SFAP-CC-1408.pdf" }
+    scrutins:
+      - { id: VTANR5L17V8280, role: decisif, pour: texte, objet: "ensemble, lecture définitive, scrutin solennel (291-241)" }
+      - { id: VTANR5L17V7894, role: ensemble, pour: texte, objet: "ensemble, nouvelle lecture, scrutin solennel (295-232)" }
+      - { id: VTANR5L17V5729, role: ensemble, pour: texte, objet: "ensemble, 2e lecture, scrutin solennel (299-226)" }
+      - { id: VTANR5L17V2107, role: ensemble, pour: texte, objet: "ensemble, 1re lecture, scrutin solennel (305-199)" }
+      - { id: VTANR5L17V7432, role: motion, pour: contre-texte, objet: "motion de rejet préalable, nouvelle lecture (91-139)" }
+      # 866 scrutins sur amendement : aucun retenu en v0.
