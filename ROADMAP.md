@@ -215,12 +215,21 @@ chat puis publie depuis l'admin.
   repérés, fiche `source/relecture-tri2.md`) : 176 écartés, dont les 18
   motions de censure spontanées (règle 8) ; 38 à qualifier (vivier du
   lot 5) ; 34 en attente. Deux questions suspendues par la grille v1 et la
-  règle du 49.3 (lois de finances, vote des détenus).
+  règle du 49.3 (lois de finances, vote des détenus), tranchées au lot 5.
+- ✅ Lot 5 (20 textes et 3 écarts de lois de fin de gestion, 29/10/2026) :
+  16 validés, 7 écartés (fiche `source/relecture-lot5.md`). Premiers
+  textes `citoyennete` (grille v1), dont la Nouvelle-Calédonie, requalifiée
+  avec trois écarts devenus qualifiables par la règle 9 ; retraites 2023
+  et PLF 2026 qualifiés sans score (49.3). Règles 2 (périmètre de
+  `citoyennete`), 3 (personnes détenues), 4 (corps électoral et peuple
+  autochtone), 8 (lois de fin de gestion), 11 (article seul au décisif).
+  `sync-admin --remplacer` pour requalifier un texte publié. Couverture :
+  `citoyennete` 4, `discriminations` 5, `vie-privee` 7 ; `libertes`
+  toujours 5.
 - ⏳ Lots suivants, d'une vingtaine de textes chacun, jusqu'au seuil de la
   v1, puis au fil de l'eau. Toujours aucun candidat `etrangers` avec vote
-  sur l'ensemble.
-- ⏳ Les deux textes passés au 49.3 sans vote final (retraites 2023,
-  PLF 2026) attendent la règle du décisif en cas de 49.3 (`BACKLOG.md`).
+  sur l'ensemble (le PLF 2026, qualifié `etrangers`, ne compte dans aucun
+  score).
 
 ## Travail en parallèle (deux sessions Claude Code)
 

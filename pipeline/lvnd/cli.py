@@ -44,6 +44,9 @@ def main(argv=None) -> int:
     s.add_argument("--valider", metavar="COMMENTAIRE",
                    help="avec --brouillons : écrit ces qualifications au statut validé (ou écarté), sur décision "
                         "explicite de Max ; COMMENTAIRE va dans la révision")
+    s.add_argument("--remplacer", metavar="COMMENTAIRE",
+                   help="avec --brouillons : remplace les qualifications existantes (requalification) et les "
+                        "repasse à relire ; COMMENTAIRE va dans la révision")
     s.add_argument("--complet", action="store_true",
                    help="efface et réécrit tout le catalogue (≈ 80 000 lignes écrites) au lieu des seules différences")
     s.add_argument("--simuler", action="store_true",
@@ -85,7 +88,7 @@ def main(argv=None) -> int:
     elif args.commande == "sync-admin":
         from . import sync_admin
         sync_admin.sync(args.export, ADMIN, args.cible, args.editorial, args.sortie, args.brouillons, args.valider,
-                        args.complet, args.simuler)
+                        args.complet, args.simuler, args.remplacer)
     return 0
 
 

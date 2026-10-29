@@ -96,6 +96,15 @@ def test_brouillons_charges_a_relire_sans_ecraser(tmp_path):
     assert "DELETE FROM" not in sql and "INSERT OR IGNORE INTO qualifications" in sql
 
 
+def test_remplacements_repassent_a_relire(tmp_path):
+    (tmp_path / "a.yaml").write_text(
+        "id: essai\ndossier_an: DLR5L17N1\nlegislature: 17\ntitre: Loi\nstatut: a-relire\n"
+        "droits: []\nscrutins: []\n")
+    sql = sync_admin.remplacements(sync_admin.brouillons(tmp_path), "requalification, lot 5")
+    assert len(sql) == 2 and "ON CONFLICT (dossier_an) DO UPDATE" in sql[0] and "'a-relire'" in sql[0]
+    assert "publie_empreinte" not in sql[0] and "'requalification, lot 5'" in sql[1]
+
+
 def test_amendement_unanime_ou_article_unique_refuse():
     infos = {"D": {"dossier_id": "DLR5L17N1", "etape": "AN1", "division": None, "objet": "ensemble", "pour": 10, "contre": 5},
              "U": {"dossier_id": "DLR5L17N1", "etape": "AN1", "division": "Article 2", "objet": "amendement", "pour": 0, "contre": 46},

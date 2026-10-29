@@ -1,7 +1,7 @@
 # Qualification par lots
 
 Procédure suivie pour qualifier les textes au-delà des six témoins.
-Elle a servi aux lots 1 à 4 et aux deux lots de tri (29/10/2026). Les règles de fond sont
+Elle a servi aux lots 1 à 5 et aux deux lots de tri (29/10/2026). Les règles de fond sont
 celles de `docs/METHODO.md`. Le circuit est celui de l'admin
 (`docs/CONCEPTION.md`) : D1 sert de brouillon, la publication vaut commit.
 
@@ -36,6 +36,12 @@ celles de `docs/METHODO.md`. Le circuit est celui de l'admin
    `cd pipeline && uv run lvnd sync-admin --remote --brouillons ../source/brouillons-lotN`
    (puis `--local`). Cette commande ne réécrit pas le catalogue et
    n'écrase rien. Une proposition d'écart arrive elle aussi « à relire ».
+   Pour **requalifier** un texte déjà validé ou écarté (règle nouvelle),
+   ses brouillons vont dans un dossier à part, chargé avec
+   `--brouillons ../source/brouillons-lotN-requalif --remplacer "requalification, lot N"`.
+   Le texte repasse « à relire » et l'admin montre l'écart avec la
+   version publiée. Une publication faite avant sa validation le retire du
+   site (l'admin l'annonce comme « retiré »).
 5. **Fiche de relecture** : `source/relecture-lotN.md` (non versionnée,
    elle peut nommer le commanditaire). En tête : un tableau récapitulatif
    et les questions transversales, avec une recommandation chacune.
@@ -67,8 +73,12 @@ travail doit être factuel, sourcé, vérifiable, et signaler franchement les po
 
 - `docs/METHODO.md` : règles 1 à 13 (qualification et scrutins) — **à appliquer strictement**,
   en particulier : 1 (point de vue des personnes), 2 (périmètre ; propriété, ordre public et choix
-  d'une source d'énergie hors grille ; droits civiques dans `citoyennete`, grille v1), 3
-  (recouvrements), 4 (sens droit par droit, un droit principal ; sens lu par rapport au droit
+  d'une source d'énergie hors grille ; droits civiques dans `citoyennete`, grille v1 : qui vote et
+  qui est élu, conditions du vote, mais ni le mode de scrutin ni le régime des mandats), 3
+  (recouvrements ; mesure qui ne vise que des détenus → droit en cause principal, `police-justice`
+  secondaire), 4 (sens droit par droit, un droit principal ; corps électoral : `citoyennete` selon
+  le droit de vote des personnes, `discriminations` restreint si une source y voit une atteinte aux
+  droits d'un peuple autochtone ; sens lu par rapport au droit
   applicable au jour du vote, jurisprudence comprise ; texte composite : sens des mesures que les
   sources citent le plus, la mesure opposée en vigilance), 5 (vigilance), 6 (on qualifie le texte
   soumis au scrutin décisif), 7 (sources admises, dont les instances consultatives indépendantes,
@@ -78,7 +88,7 @@ travail doit être factuel, sourcé, vérifiable, et signaler franchement les po
   ni la position du Gouvernement ou d'un groupe ; si le texte **étend** un droit contesté, au
   moins une source critique en vigilance, et sinon la note dit « aucune critique trouvée parmi les
   sources admises »), 8 (non qualifiés → « écarté » : texte purement organisationnel, résolution,
-  convention internationale, motion de censure spontanée, texte vidé de toute mesure normative au
+  convention internationale, motion de censure spontanée, loi de finances de fin de gestion, texte vidé de toute mesure normative au
   scrutin décisif), 9 (décisif = dernier vote de l'AN sur l'ensemble ; à défaut, pour un article
   unique, le vote sur l'article ou l'amendement adopté qui le supprime, voter pour allant alors
   contre le texte ; décisif sans aucune voix d'un côté → écarté ; texte adopté par 49.3 sans vote
@@ -87,7 +97,8 @@ travail doit être factuel, sourcé, vérifiable, et signaler franchement les po
   article dont la mesure est **mise en cause** par une source — une source favorable, une critique
   d'insuffisance ou une décision qui valide la mesure ne suffisent pas ; article mixte, au sens non
   univoque → non retenu ; **une seule lecture : la dernière lecture de l'AN où des suppressions
-  ont été mises aux voix** ; un seul scrutin par article ; le sens se lit sur le contenu de
+  ont été mises aux voix** ; un seul scrutin par article ; l'article qui est le seul du texte au
+  décisif compte comme un article unique ; le sens se lit sur le contenu de
   l'article).
 - `pipeline/referentiels/droits.yaml` : la grille (codes de droits et d'étiquettes autorisés).
 - `pipeline/referentiels/temoins.yaml` : **six exemples validés** — imite leur niveau d'exigence,
@@ -117,7 +128,10 @@ travail doit être factuel, sourcé, vérifiable, et signaler franchement les po
   reprend un texte cosigné, ne la cite pas. En revanche, une décision de
   justice qui nomme seulement l'organisation comme partie, ou un document
   qui emploie un sigle homonyme, n'est pas une publication de celle-ci :
-  cite-le, sans jamais écrire le nom (`lvnd check` le refuserait).
+  cite-le, sans jamais écrire le nom (`lvnd check` le refuserait). De même,
+  le document d'une source admise qui nomme l'organisation (partie à un
+  recours, constat cité en note) reste citable, pourvu que le passage cité
+  n'en reprenne rien ; signale-le dans les points d'attention.
 - Des sources de bords différents sont bienvenues ; si une source institutionnelle soutient le
   texte ou en relativise la portée, mentionne-le dans les points d'attention.
 

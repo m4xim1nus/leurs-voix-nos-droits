@@ -205,6 +205,23 @@ def validations(dossier: Path, commentaire: str) -> list[str]:
     return out
 
 
+def remplacements(lignes: list[dict], commentaire: str) -> list[str]:
+    """Requalification : les brouillons (`brouillons()`) remplacent la qualification existante et la
+    repassent « à relire », avec une révision. `publie_empreinte` est gardée : l'admin montre l'écart avec
+    la version publiée, qui reste en ligne jusqu'à la prochaine publication (le texte y figure alors
+    comme « retiré » tant qu'il n'est pas revalidé)."""
+    out = []
+    for l in lignes:
+        valeurs = [l["dossier_an"], l["statut"], l["doc"], l["motif_ecart"], l["modifie_par"], l["modifie_le"]]
+        out.append("INSERT INTO qualifications (dossier_an, statut, doc, motif_ecart, modifie_par, modifie_le) "
+                   f"VALUES ({', '.join(sql_valeur(x) for x in valeurs)}) ON CONFLICT (dossier_an) DO UPDATE SET "
+                   "statut = excluded.statut, doc = excluded.doc, motif_ecart = excluded.motif_ecart, "
+                   "modifie_par = excluded.modifie_par, modifie_le = excluded.modifie_le;")
+        out.append("INSERT INTO revisions (dossier_an, statut, doc, motif_ecart, auteur, date, commentaire) VALUES "
+                   f"({', '.join(sql_valeur(x) for x in [*valeurs, commentaire])});")
+    return out
+
+
 def _qualifs(lignes: list[dict], auteur: str, commentaire: str) -> list[str]:
     """Ajoute des qualifications absentes de D1 (jamais d'écrasement) et leur révision d'origine."""
     cols = ("dossier_an", "statut", "doc", "motif_ecart", "modifie_par", "modifie_le", "publie_empreinte")
@@ -301,8 +318,10 @@ def script(export: Path, editorial_doc: dict | None = None, brouillons_lignes: l
 
 def sync(export: Path, admin: Path, cible: str, avec_editorial: bool, sortie: Path | None,
          dossier_brouillons: Path | None = None, valider: str | None = None, complet: bool = False,
-         simuler: bool = False) -> None:
+         simuler: bool = False, remplacer: str | None = None) -> None:
     doc = editorial.charger() if avec_editorial else None
+    if remplacer is not None and (not dossier_brouillons or valider is not None):
+        raise SystemExit("--remplacer s'utilise avec --brouillons DOSSIER, sans --valider")
     if cible != "sql" and not complet and valider is None and dossier_brouillons is None:
         cat = catalogue(export)
         instructions, compte = difference(cat, lire_d1(admin, cible))
@@ -321,6 +340,9 @@ def sync(export: Path, admin: Path, cible: str, avec_editorial: bool, sortie: Pa
             raise SystemExit("--valider s'utilise avec --brouillons DOSSIER")
         sql = "\n".join(["-- Généré par `lvnd sync-admin --valider` : ne pas éditer.",
                          *validations(dossier_brouillons, valider)]) + "\n"
+    elif remplacer is not None:
+        sql = "\n".join(["-- Généré par `lvnd sync-admin --remplacer` : ne pas éditer.",
+                         *remplacements(brouillons(dossier_brouillons), remplacer)]) + "\n"
     else:
         # `--brouillons` seul n'ajoute que les brouillons, sans réécrire le catalogue (économie de lignes D1)
         lignes = brouillons(dossier_brouillons) if dossier_brouillons else None

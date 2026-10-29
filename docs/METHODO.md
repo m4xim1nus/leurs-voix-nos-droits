@@ -20,6 +20,11 @@ complémentaire, le même jour : le sens d'un texte composite et la date de
 référence du sens (règle 4), les fédérations syndicales, l'ANSES et la
 source qui porte sur la mesure (règle 7), les motions de censure
 spontanées (règle 8), l'article unique supprimé par amendement (règle 9).
+Au lot 5, toujours le 29/10/2026 : le périmètre de `citoyennete` (règle 2),
+les mesures qui ne visent que des personnes détenues (règle 3), le corps
+électoral et les droits d'un peuple autochtone (règle 4), les lois de
+finances de fin de gestion (règle 8), l'article devenu seul au scrutin
+décisif (règle 11).
 
 ## Grille des droits
 
@@ -42,7 +47,12 @@ Nouvelle-Calédonie).
    accès direct aux professionnels). Le financement de la recherche n'y
    entre pas. Les droits civiques et politiques (droit de vote, corps
    électoral de Nouvelle-Calédonie), hors de la grille v0, entrent dans la
-   v1 (`citoyennete`). Le
+   v1 (`citoyennete`). Ce droit couvre qui peut voter et être élu, et les
+   conditions d'exercice du vote (inscription, procuration, vote par
+   correspondance). Le **mode de scrutin** et le **régime des mandats**
+   (cumul, incompatibilités) relèvent de l'organisation des pouvoirs
+   publics : ils n'entrent pas dans la grille (Paris, Lyon et Marseille,
+   2025). Le
    **choix d'une source d'énergie** (nucléaire, renouvelables) n'est pas
    un droit de la grille : le droit `environnement` se juge sur les
    garanties des personnes (information, participation du public,
@@ -53,7 +63,10 @@ Nouvelle-Calédonie).
      secondaire ;
    - technique de surveillance → `vie-privee` principal, `libertes`
      seulement si une source le relève ;
-   - mesure qui ne vise que des étrangers → `etrangers` principal.
+   - mesure qui ne vise que des étrangers → `etrangers` principal ;
+   - mesure qui ne vise que des personnes détenues → le droit en cause
+     principal, `police-justice` secondaire (vote par correspondance des
+     détenus, 2025 : `citoyennete` principal).
 4. **Sens droit par droit.** Chaque droit touché reçoit son sens (`etend`
    ou `restreint`). Il n'y a pas de sens « mixte » global : le sens
    affiché pour le texte est celui de son droit principal. Exemple,
@@ -68,6 +81,12 @@ Nouvelle-Calédonie).
    admises citent le plus souvent. La mesure de sens opposé s'affiche en
    vigilance (PLFSS 2026 : arrêts de travail limités, `restreint` ;
    suspension de la réforme des retraites, en vigilance).
+   Le sens d'une mesure sur le **corps électoral** se lit, pour
+   `citoyennete`, sur le droit de vote des personnes qu'elle ajoute à la
+   liste ou en retire. Quand une source admise y voit une atteinte aux
+   droits d'un peuple autochtone, le texte reçoit aussi `discriminations`
+   en secondaire, au sens `restreint`. Les deux lectures sont alors
+   comptées, chacune pour son droit (Nouvelle-Calédonie, 2024).
 5. **Points de vigilance.** Les critiques sourcées portant sur la mise en
    œuvre ou sur l'insuffisance des garanties s'affichent à côté du
    jugement, sans le modifier (aide à mourir).
@@ -117,7 +136,11 @@ Nouvelle-Calédonie).
    demandes de rapport ou un gage. Ne sont pas qualifiées, enfin, les
    **motions de censure spontanées** (article 49, alinéa 2) : elles ne
    portent sur aucun texte, et seules les voix pour la censure y sont
-   décomptées.
+   décomptées. Ne sont pas qualifiées non plus les **lois de finances de
+   fin de gestion** : depuis la réforme de 2021 de la loi organique
+   relative aux lois de finances, elles ne font qu'ouvrir et annuler les
+   crédits de l'année, sans disposition fiscale. Les lois de finances
+   initiales et rectificatives se qualifient comme les autres textes.
 
 ## Scrutins retenus
 
@@ -168,7 +191,10 @@ Nouvelle-Calédonie).
     constitutionnel qui la décrit pour la valider ne suffit pas. Ne sont
     pas des amendements clés : la suppression d'un article unique, qui
     double le scrutin décisif, et un scrutin unanime (aucun vote d'un des
-    deux côtés), qui ne départage personne. Selon les textes, on compte
+    deux côtés), qui ne départage personne. Un article qui est le seul
+    du texte au scrutin décisif est traité comme un article unique : sa
+    suppression ou son rétablissement double le décisif (épandage par
+    drones, 2025 : l'article 2, simple gage, a été supprimé). Selon les textes, on compte
     de 0 (immigration, aide à mourir) à 17 amendements clés (RIPOST).
 
 ## Positions de groupe

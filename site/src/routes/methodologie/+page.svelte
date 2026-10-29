@@ -57,13 +57,17 @@
       L’accès aux soins entre dans le droit à la santé (installation des médecins, accès direct aux professionnels).
       Le choix d’une source d’énergie (nucléaire, renouvelables) n’est pas un droit de la grille : le
       droit à un environnement sain se juge sur les garanties des personnes (information, participation
-      du public, protection des milieux).
+      du public, protection des milieux). Les droits civiques couvrent qui peut voter et être élu, et
+      les conditions d’exercice du vote (inscription, procuration, vote par correspondance) ; le mode
+      de scrutin et le régime des mandats (cumul, incompatibilités) relèvent de l’organisation des pouvoirs
+      publics et n’entrent pas dans la grille.
     </li>
     <li value="3" id="regle-3">
       <strong>Recouvrements.</strong> Justice des mineurs : droits de l’enfant en principal, police et
       justice en secondaire. Technique de surveillance : vie privée en principal, libertés publiques seulement
       si une source le relève. Mesure qui ne vise que des étrangers : droits des personnes étrangères
-      en principal.
+      en principal. Mesure qui ne vise que des personnes détenues : le droit en cause en principal (le
+      droit de vote, par exemple), police et justice en secondaire.
     </li>
     <li value="4" id="regle-4">
       <strong>Sens droit par droit.</strong> Il n’y a pas de sens « mixte ». Chaque droit touché a le
@@ -72,7 +76,10 @@
       applicable au jour du vote, jurisprudence comprise : une loi qui plafonne ce que les tribunaux accordaient
       déjà restreint le droit. Dans un texte dont les mesures vont en sens opposés pour un même droit,
       ce droit prend le sens des mesures que les sources citent le plus souvent, et la mesure de sens
-      opposé s’affiche en point de vigilance.
+      opposé s’affiche en point de vigilance. Une mesure sur le corps électoral se lit, pour les droits
+      civiques, sur le droit de vote des personnes qu’elle ajoute à la liste ou en retire ; quand une
+      source y voit une atteinte aux droits d’un peuple autochtone, le texte reçoit aussi le droit à l’égalité
+      et à la non-discrimination, au sens « restreint ». Les deux lectures sont alors comptées.
     </li>
     <li value="5" id="regle-5">
       <strong>Points de vigilance.</strong> Les critiques sourcées sur la mise en œuvre ou sur l’insuffisance
@@ -103,7 +110,9 @@
       autorisent la ratification d’une convention internationale, ni un texte qui, au vote décisif,
       ne contient plus aucune mesure (ses articles ont été supprimés). Les motions de censure
       spontanées (article 49, alinéa 2) ne sont pas qualifiées non plus : elles ne portent sur aucun
-      texte. Les textes examinés puis écartés sont <a href="/textes">publiés avec leur motif</a>.
+      texte. Les lois de finances de fin de gestion, qui ne font qu’ouvrir et annuler les crédits de
+      l’année, ne le sont pas non plus. Les textes examinés puis écartés sont
+      <a href="/textes">publiés avec leur motif</a>.
     </li>
   </ol>
 </section>
@@ -158,8 +167,8 @@
       de l’article, pas d’après la nature de l’amendement : supprimer un article qui ajoute une garantie
       va contre les droits. Un seul scrutin par article (celui qui en a fixé le sort), et une seule lecture
       : la dernière où des suppressions ont été mises aux voix. Ne comptent pas : la suppression de l’article
-      unique d’un texte (elle double le vote décisif) et un scrutin sans aucune voix d’un côté (il ne
-      départage personne).
+      unique d’un texte (elle double le vote décisif), ou de l’article qui est le seul du texte au vote
+      décisif, et un scrutin sans aucune voix d’un côté (il ne départage personne).
     </li>
   </ol>
 </section>
