@@ -160,7 +160,10 @@ Décisions de Max (29/10/2026) :
 - ✅ En ligne sur `lvnd.technoperchoir.fr`. L'app GitHub de Cloudflare a
   accès au dépôt : chaque push sur `main`, donc chaque « Publier »,
   redéploie le site (vérifié le 29/10/2026).
-- ⏳ Recette sur téléphone par Max.
+- ✅ Recette sur téléphone par Max (29/10/2026).
+- ✅ Backlog du site traité (29/10/2026) : textes adoptés sans opposition
+  sur les fiches, page Comparer, fiche député allégée, typographie,
+  interface sans numéros de règles, droits extrêmes sur les cartes.
 - ⏳ Ouverture de la v1 au seuil de la décision H : `OUVERT = true` dans
   `site/src/lib/site.ts`, tag `v1.0.0`, `CHANGELOG.md`.
 - ⏳ Livrable : site en ligne, tag `v1.0.0`, `CHANGELOG.md`.

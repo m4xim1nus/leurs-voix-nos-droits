@@ -269,10 +269,11 @@ vie privée », avec la source à côté, jamais « texte liberticide ».
 | Droit | `/droits/<code>` | libellé, textes (principal ou secondaire, sens), scores des groupes par législature |
 | Textes | `/textes` | textes qualifiés (filtres : droit, sens, législature), textes écartés et leur motif |
 | Fiche texte | `/textes/<id>` | droits, sens, justification et sources ; vigilance ; Conseil constitutionnel ; scrutins et positions de groupe ; score de chaque groupe sur ce texte ; liens AN et Légifrance |
-| Fiche député | `/deputes/<slug>` | circonscription, groupes successifs, score global et par droit, participation, abstentions, votes sur chaque scrutin compté, « Lui écrire », carte partageable |
+| Fiche député | `/deputes/<slug>` | circonscription, groupes successifs, score global et par droit, participation, abstentions, votes sur chaque scrutin compté (les autres sont sur la fiche texte), textes adoptés sans opposition, « Lui écrire », carte partageable |
 | Circonscription | `/circonscriptions/<dép>-<num>` | député en cours, ou « siège vacant », et ses prédécesseurs depuis 2022 |
 | Groupes | `/groupes` | par législature : tableau groupe × droit, effectifs |
-| Fiche groupe | `/groupes/<sigle>-<législature>` | score global, par droit et par texte, membres et leur score |
+| Fiche groupe | `/groupes/<sigle>-<législature>` | score global, par droit et par texte, textes adoptés sans opposition, membres et leur score |
+| Comparer | `/comparer?a=…&b=…` | deux députés, deux groupes, ou un député et son groupe : score, droit par droit, textes où ils s'écartent le plus |
 | Méthodologie | `/methodologie` | grille, règles 1 à 19, préparation des qualifications, code postal, sources |
 | Données | `/donnees` | `editorial.json`, exports CSV, votes nominatifs, licence |
 
@@ -315,6 +316,18 @@ codes postaux, découpée par département.
   rangés à part, avec leur raison (règles 9 et 10).
 - Le site affiche un bandeau tant que la v1 n'est pas ouverte : « Site en
   construction, N textes qualifiés ».
+- Les textes écartés parce que leur décisif n'a eu aucune voix contre
+  (règle 9) s'affichent sur les fiches député et groupe, avec le vote de
+  chacun, hors des scores. Le site les reconnaît à leur motif, écrit par
+  l'admin sur un modèle fixe (« Adopté sans aucune voix contre au scrutin
+  décisif… »).
+- L'interface ne cite pas les règles par leur numéro : elle dit la règle
+  en clair. Les numéros restent sur la page Méthodologie, ancrés
+  (`#regle-11`). Les notes de méthode des qualifications, qui les citent,
+  sont repliées sous « Comment ce texte a été qualifié », chaque numéro
+  lié à sa règle.
+- Typographie : espaces insécables avant « : ; ! ? » et dans les
+  guillemets, posées aussi à l'affichage des textes saisis dans l'admin.
 
 ### Direction visuelle
 
@@ -355,8 +368,8 @@ textes, adresse de la fiche. Générées au build (SVG rendu en PNG par
 `@resvg/resvg-js`), sans service tiers. resvg ne lit ni le WOFF2 ni les
 axes variables : deux instances statiques d'Archivo en TTF sont rangées
 dans `site/scripts/polices/`. La fiche propose « Télécharger l'image ».
-Les droits les plus et les moins favorables, prévus sur la carte, n'y
-figurent pas encore : avec six textes, ils diraient peu.
+La carte donne aussi le droit le plus et le moins favorable ; à égalité,
+leur nombre (« 4 droits ») plutôt qu'un nom pris au hasard.
 
 ### Code postal
 
