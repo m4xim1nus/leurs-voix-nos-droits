@@ -4,7 +4,7 @@
   import Ventilations from '$lib/components/Ventilations.svelte';
   import { court, ETIQUETTES, phrase } from '$lib/droits';
   import { date, entier, legislature, POSITION, ROLE, sensDuPour } from '$lib/format';
-  import { NOM } from '$lib/site';
+  import { CONTESTATION, NOM, URL_SITE } from '$lib/site';
   import type { ScrutinRetenu } from '$lib/types';
 
   let { data } = $props();
@@ -138,6 +138,17 @@
         {#if t.cc_url}<a href={t.cc_url} rel="external">Décision n° {t.cc_decision}</a
           >{:else}Décision n° {t.cc_decision}{/if}.
       {/if}
+    </p>
+  {/if}
+  {#if CONTESTATION}
+    <p class="petit">
+      <a
+        href="mailto:{CONTESTATION}?subject={encodeURIComponent(
+          `Contestation : ${t.titre}`
+        )}&body={encodeURIComponent(
+          `Qualification contestée : ${URL_SITE}/textes/${t.id}\n\nCe que je conteste, et pourquoi (une source publique aide à trancher) :\n\n`
+        )}">Contester cette qualification</a
+      >. Chaque contestation est lue, et la qualification corrigée si elle est fondée.
     </p>
   {/if}
   {#if t.note}

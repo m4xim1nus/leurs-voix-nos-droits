@@ -303,6 +303,8 @@ function charger(): Donnees {
       principal: t.droits.find((d) => d.role === 'principal')!,
       scrutins: retenus,
       date: decisif?.date ?? censures.sort().at(-1)!,
+      // Législature du vote décisif : un dossier déposé en XVIe peut n'avoir été voté qu'en XVIIe.
+      legislature: decisif?.legislature ?? t.legislature,
       sans_vote: !decisif,
       loi: txt(cat?.loi),
       date_loi: txt(cat?.date_loi),

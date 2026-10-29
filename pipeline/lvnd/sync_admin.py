@@ -268,6 +268,21 @@ def difference(cat: dict[str, list[dict]], present: dict[str, dict[str, str]]) -
     return out, compte
 
 
+def alertes(cat: dict[str, list[dict]], qualifs: list[tuple[str, str]]) -> list[str]:
+    """Scrutins retenus dans une qualification de D1 qui disparaissent du catalogue ou changent de
+    dossier (renumérotés ou rattachés ailleurs) : la qualification est à revoir dans l'admin."""
+    scrutins = {r["id"]: r for r in cat["scrutins"]}
+    out = []
+    for dossier, doc in qualifs:
+        for s in json.loads(doc).get("scrutins", []):
+            r = scrutins.get(s["id"])
+            if r is None:
+                out.append(f"{dossier} : scrutin retenu {s['id']} absent du nouveau catalogue")
+            elif s.get("role") != "censure" and r["texte_id"] != dossier:
+                out.append(f"{dossier} : scrutin retenu {s['id']} rattaché désormais à {r['texte_id'] or 'aucun dossier'}")
+    return out
+
+
 def script(export: Path, editorial_doc: dict | None = None, brouillons_lignes: list[dict] | None = None,
            avec_catalogue: bool = True) -> str:
     out = ["-- Généré par `lvnd sync-admin` : ne pas éditer."]
@@ -289,7 +304,11 @@ def sync(export: Path, admin: Path, cible: str, avec_editorial: bool, sortie: Pa
          simuler: bool = False) -> None:
     doc = editorial.charger() if avec_editorial else None
     if cible != "sql" and not complet and valider is None and dossier_brouillons is None:
-        instructions, compte = difference(catalogue(export), lire_d1(admin, cible))
+        cat = catalogue(export)
+        instructions, compte = difference(cat, lire_d1(admin, cible))
+        for a in alertes(cat, [(q["dossier_an"], q["doc"]) for q in
+                               _requete(admin, cible, "SELECT dossier_an, doc FROM qualifications")]):
+            print(f"ALERTE {a}", file=sys.stderr)
         print("Sync incrémental : " + ", ".join(f"{t} {c['ecrites']} écrites, {c['effacees']} effacées"
                                                 for t, c in compte.items()), file=sys.stderr)
         if doc is not None:

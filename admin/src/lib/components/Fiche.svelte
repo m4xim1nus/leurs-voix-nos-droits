@@ -670,6 +670,21 @@
         Dernier enregistrement : {data.qualif.modifie_par}, {dateHeure(data.qualif.modifie_le)}.
         {#if data.qualif.publie_empreinte}Publié au moins une fois.{:else}Jamais publié.{/if}
       </p>
+      {#if data.publie}
+        {#if data.publie.changements.length}
+          <details open>
+            <summary>
+              Changements depuis la version publiée ({dateHeure(data.publie.date)}) :
+              {data.publie.changements.length}
+            </summary>
+            <ul>
+              {#each data.publie.changements as c (c)}<li>{c}</li>{/each}
+            </ul>
+          </details>
+        {:else}
+          <p class="discret">Identique à la version publiée ({dateHeure(data.publie.date)}).</p>
+        {/if}
+      {/if}
     {/if}
   </section>
 </form>

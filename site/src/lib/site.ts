@@ -9,3 +9,9 @@ export const DEPOT = 'https://github.com/m4xim1nus/leurs-voix-nos-droits';
  * Max). Tant que c'est faux, un bandeau dit que le site est en préparation.
  */
 export const OUVERT = false;
+
+/**
+ * Adresse qui reçoit les contestations d'une qualification (lien sur chaque fiche texte, choix de
+ * Max du 29/10/2026 : un courriel, sans formulaire hébergé). Vide : le lien est masqué.
+ */
+export const CONTESTATION = '';

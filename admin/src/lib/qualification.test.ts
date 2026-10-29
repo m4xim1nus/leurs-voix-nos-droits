@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import {
   compact,
+  differences,
   documentEditorial,
   empreinte,
   normaliser,
@@ -249,5 +250,20 @@ describe('qualification', () => {
     expect(
       valider(texte({ scrutins: [{ ...censure[0], id: 'X' }] }), GRILLE, infos as never).erreurs
     ).toEqual(['X : pas une motion de censure']);
+  });
+});
+
+describe('differences', () => {
+  it('liste les changements depuis la version publiée', () => {
+    const avant = texte();
+    const apres = texte({
+      droits: [{ ...avant.droits[0], sens: 'etend' }],
+      scrutins: [...avant.scrutins, { id: 'A', role: 'amendement', pour: 'a-trancher', objet: 'x' }]
+    });
+    expect(differences(avant, apres)).toEqual([
+      `droit ${avant.droits[0].code} : restreint → etend`,
+      'scrutin A retenu (amendement, a-trancher)'
+    ]);
+    expect(differences(avant, avant)).toEqual([]);
   });
 });

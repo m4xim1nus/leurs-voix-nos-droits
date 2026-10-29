@@ -164,3 +164,13 @@ def test_sync_incremental_n_ecrit_que_les_differences():
     assert "DELETE FROM textes WHERE id IN ('T3');" in sql
     assert any("INSERT OR REPLACE INTO textes" in i and "'T2'" in i and "'T1'" not in i for i in sql)
     assert any("'sync'" in i for i in sql)  # date du sync toujours écrite
+
+
+def test_sync_alerte_scrutin_retenu_disparu_ou_deplace():
+    cat = {"scrutins": [{"id": "V1", "texte_id": "D1"}, {"id": "V2", "texte_id": "D2"}, {"id": "C", "texte_id": ""}]}
+    doc = json.dumps({"scrutins": [{"id": "V1", "role": "decisif"}, {"id": "V2", "role": "amendement"},
+                                   {"id": "V3", "role": "amendement"}, {"id": "C", "role": "censure"}]})
+    assert sync_admin.alertes(cat, [("D1", doc)]) == [
+        "D1 : scrutin retenu V2 rattaché désormais à D2",
+        "D1 : scrutin retenu V3 absent du nouveau catalogue",
+    ]

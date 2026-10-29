@@ -304,3 +304,49 @@ export async function empreinte(
   const h = await crypto.subtle.digest('SHA-256', octets);
   return [...new Uint8Array(h)].map((b) => b.toString(16).padStart(2, '0')).join('');
 }
+
+/**
+ * Changements d'une qualification, champ par champ, de `avant` (version publiée) à `apres`
+ * (version enregistrée), en phrases courtes pour la fiche de l'admin.
+ */
+export function differences(avant: Qualification, apres: Qualification): string[] {
+  const a = normaliser(avant);
+  const b = normaliser(apres);
+  const out: string[] = [];
+  const egal = (x: unknown, y: unknown) => JSON.stringify(x) === JSON.stringify(y);
+  for (const k of ['titre', 'resume', 'conseil_constitutionnel', 'note'] as const)
+    if (a[k] !== b[k]) out.push(`${k} modifié`);
+  if (!egal(a.etiquettes, b.etiquettes))
+    out.push(
+      `étiquettes : ${a.etiquettes.join(', ') || 'aucune'} → ${b.etiquettes.join(', ') || 'aucune'}`
+    );
+  const droitsA = new Map(a.droits.map((d) => [d.code, d]));
+  const droitsB = new Map(b.droits.map((d) => [d.code, d]));
+  for (const [code, d] of droitsB) {
+    const v = droitsA.get(code);
+    if (!v) out.push(`droit ${code} ajouté (${d.role}, ${d.sens})`);
+    else {
+      if (v.role !== d.role) out.push(`droit ${code} : ${v.role} → ${d.role}`);
+      if (v.sens !== d.sens) out.push(`droit ${code} : ${v.sens} → ${d.sens}`);
+      if (!egal(v.sources, d.sources)) out.push(`droit ${code} : sources modifiées`);
+      if (v.justification !== d.justification) out.push(`droit ${code} : justification modifiée`);
+    }
+  }
+  for (const code of droitsA.keys()) if (!droitsB.has(code)) out.push(`droit ${code} retiré`);
+  if (!egal(a.vigilance, b.vigilance)) out.push('points de vigilance modifiés');
+  for (const k of Object.keys(b.sources))
+    if (!(k in a.sources)) out.push(`source ${k} ajoutée`);
+    else if (!egal(a.sources[k], b.sources[k])) out.push(`source ${k} modifiée`);
+  for (const k of Object.keys(a.sources)) if (!(k in b.sources)) out.push(`source ${k} retirée`);
+  const scrA = new Map(a.scrutins.map((s) => [s.id, s]));
+  const scrB = new Map(b.scrutins.map((s) => [s.id, s]));
+  for (const [id, s] of scrB) {
+    const v = scrA.get(id);
+    if (!v) out.push(`scrutin ${id} retenu (${s.role}, ${s.pour})`);
+    else if (v.role !== s.role || v.pour !== s.pour)
+      out.push(`scrutin ${id} : ${v.role}, ${v.pour} → ${s.role}, ${s.pour}`);
+    else if (v.objet !== s.objet) out.push(`scrutin ${id} : objet modifié`);
+  }
+  for (const id of scrA.keys()) if (!scrB.has(id)) out.push(`scrutin ${id} retiré`);
+  return out;
+}

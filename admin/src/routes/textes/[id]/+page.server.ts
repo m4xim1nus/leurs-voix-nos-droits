@@ -1,7 +1,15 @@
 import { error, fail } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 import * as db from '$lib/server/db';
-import { normaliser, nouvelle, STATUTS, valider } from '$lib/qualification';
+import {
+  compact,
+  differences,
+  empreinte,
+  normaliser,
+  nouvelle,
+  STATUTS,
+  valider
+} from '$lib/qualification';
 import type { Qualification, Source, Statut } from '$lib/types';
 
 const plusJours = (date: string, n: number) =>
@@ -33,8 +41,19 @@ export const load: PageServerLoad = async ({ params, platform }) => {
   bibliotheque.sort((a, b) => a.cle.localeCompare(b.cle));
   const ids = new Set(duDossier.map((s) => s.id));
   const scrutins = [...duDossier, ...censures.filter((s) => !ids.has(s.id))];
+  // Version publiée : la révision dont l'empreinte est celle de la dernière publication.
+  let publie: { date: string; changements: string[] } | null = null;
+  if (qualif?.publie_empreinte)
+    for (const r of revisions) {
+      const doc = JSON.parse(r.doc) as Qualification;
+      if ((await empreinte(compact(doc), r.statut, r.motif_ecart)) === qualif.publie_empreinte) {
+        publie = { date: r.date, changements: differences(doc, qualif.doc) };
+        break;
+      }
+    }
   return {
     texte,
+    publie,
     scrutins,
     groupes,
     grille,
