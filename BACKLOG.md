@@ -43,3 +43,5 @@ File d'attente brute, non ordonnée. Une ligne par item :
 - [creuser] Règle 7 : admettre les syndicats nationaux membres de Solidaires, qui y tiennent lieu de fédérations (SNJ) ? Retiré de la loi organique sur l'audiovisuel public au lot 6, à trancher à la passation (claude, 2026-10-29)
 - [ ] AGRASC (DLR5L17N53159, écarté au lot 6) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart (claude, 2026-10-29)
 - [ ] Passation : ajouter aux qualifications sensibles à revoir la purge des nullités (`restreint` par la règle 4 : seul LFI compté favorable) et la mortalité infantile (`sante` restreint sur les sociétés savantes : seuls 4 EPR comptés favorables) (claude, 2026-10-29)
+- [ ] Passation : tutoriel de l'admin pour les futur·es rédacteur·ices (connexion par Access, qualifier un texte, contrôles, brouillon et publication) (user:moi, 2026-10-29)
+- [ ] Présentation du projet et des choix de méthode retenus : page « bento » ou PDF (user:moi, 2026-10-29)

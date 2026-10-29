@@ -208,10 +208,11 @@
       le juge insuffisant est compté défavorable, comme celui qui s’y oppose sur le fond.
     </li>
     <li value="15" id="regle-15">
-      <strong>Score.</strong> La part des votes favorables parmi les votes comptés, de 0 à 100 %, pondérée
-      selon la règle 18. Le score d’ensemble prend le sens du droit principal de chaque texte. Le score
-      d’un droit compte les textes où il est principal et ceux où il est secondaire, chacun avec son propre
-      sens.
+      <strong>Score.</strong> La part des votes favorables parmi les votes comptés, de 0 à 100 %,
+      pondérée pour que <a href="#regle-18">chaque texte pèse autant</a>, quel que soit son nombre
+      de scrutins comptés. Le score d’ensemble prend le sens du droit principal de chaque texte. Le
+      score d’un droit compte les textes où il est principal et ceux où il est secondaire, chacun
+      avec son propre sens.
     </li>
     <li value="16" id="regle-16">
       <strong>Abstention : hors calcul.</strong> Elle n’entre pas dans le score et s’affiche à côté. Elle
