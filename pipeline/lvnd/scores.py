@@ -1,4 +1,4 @@
-"""Scores calculés depuis une qualification (referentiels/temoins.yaml en attendant l'admin).
+"""Scores calculés depuis une qualification (data/editorial.json, ou referentiels/temoins.yaml).
 
 Pour chaque scrutin compté et chaque droit touché par le texte, un vote est *favorable aux
 droits* ou *défavorable* :
@@ -10,9 +10,19 @@ droits* ou *défavorable* :
 Le score d'un député (ou d'un groupe) sur un droit est la part pondérée de ses votes favorables
 parmi ses votes comptés, de 0 à 100. Les règles de calcul (docs/METHODO.md, règles 14 à 19) sont
 rassemblées dans `REGLES` : valeurs validées par Max le 29/10/2026. Les autres options restent disponibles pour simuler une variante.
+
+`lvnd scores` (`depuis_export`) refait ce calcul sans dump, depuis data/export/ et
+data/editorial.json (docs/CONCEPTION.md, choix F1) : les députés depuis les votes nominatifs
+versionnés, les groupes depuis les ventilations officielles, comme l'aperçu de l'admin. Le
+score d'un groupe agrège les votes de ses membres, ce que la ventilation donne directement.
+build.sh l'exécute avant le build du site : une publication depuis l'admin met le site à jour.
 """
 
+import json
 from collections import defaultdict
+from pathlib import Path
+
+import polars as pl
 
 from .referentiels import lignee
 
@@ -89,23 +99,23 @@ def _valeur(position: str, favorable: str, regles: dict) -> float | None:
 
 
 def _agreger(lignes: list[tuple], cle) -> list[dict]:
-    """lignes : (entité, droit, texte, poids, valeur, position)."""
+    """lignes : (entité, droit, texte, poids, valeur, position, nombre de votes identiques)."""
     acc: dict[tuple, dict] = defaultdict(lambda: {"num": 0.0, "den": 0.0, "textes": set(), "pour_droits": 0,
                                                   "contre_droits": 0, "abstentions": 0, "non_votants": 0})
-    for ent, droit, texte, poids, valeur, position in lignes:
+    for ent, droit, texte, poids, valeur, position, n in lignes:
         a = acc[(ent, droit)]
         a["textes"].add(texte)
         if valeur is not None:
-            a["num"] += poids * valeur
-            a["den"] += poids
+            a["num"] += n * poids * valeur
+            a["den"] += n * poids
         if position == "abstention":
-            a["abstentions"] += 1
+            a["abstentions"] += n
         elif position == "non_votant":
-            a["non_votants"] += 1
+            a["non_votants"] += n
         elif valeur == 1.0:
-            a["pour_droits"] += 1
+            a["pour_droits"] += n
         elif valeur == 0.0:
-            a["contre_droits"] += 1
+            a["contre_droits"] += n
     return [{cle: ent, "droit": droit, "n_textes": len(a["textes"]), "votes_favorables": a["pour_droits"],
              "votes_defavorables": a["contre_droits"], "abstentions": a["abstentions"],
              "non_votants": a["non_votants"],
@@ -113,7 +123,14 @@ def _agreger(lignes: list[tuple], cle) -> list[dict]:
             for (ent, droit), a in sorted(acc.items())]
 
 
-def calculer(temoins: dict, votes: list[dict], regles: dict | None = None) -> dict[str, list[dict]]:
+def calculer(temoins: dict, votes: list[dict], regles: dict | None = None,
+             ventilations: list[dict] | None = None) -> dict[str, list[dict]]:
+    """Scores des scrutins comptés, des députés et des groupes.
+
+    `votes` : votes nominatifs (scrutin_id, acteur_id, position, et groupe_id sans `ventilations`).
+    `ventilations` : décompte par groupe et par scrutin (scrutin_id, groupe_id, pour, contre,
+    abstention, non_votants) ; s'il est donné, les scores de groupe en viennent.
+    """
     regles = {**REGLES, **(regles or {})}
     comptes = scrutins_comptes(temoins, regles)
     par_scrutin: dict[str, list[dict]] = defaultdict(list)
@@ -125,10 +142,87 @@ def calculer(temoins: dict, votes: list[dict], regles: dict | None = None) -> di
             if c["favorable"] is None:
                 continue
             val = _valeur(v["position"], c["favorable"], regles)
-            lignes_dep.append((v["acteur_id"], c["droit"], c["texte_id"], c["poids"], val, v["position"]))
-            lignes_grp.append((lignee(v["groupe_id"]), c["droit"], c["texte_id"], c["poids"], val, v["position"]))
+            lignes_dep.append((v["acteur_id"], c["droit"], c["texte_id"], c["poids"], val, v["position"], 1))
+            if ventilations is None:
+                lignes_grp.append((lignee(v["groupe_id"]), c["droit"], c["texte_id"], c["poids"], val,
+                                   v["position"], 1))
+    for g in ventilations or ():
+        for c in par_scrutin.get(g["scrutin_id"], ()):
+            if c["favorable"] is None:
+                continue
+            for position in ("pour", "contre", "abstention", "non_votant"):
+                n = g["non_votants" if position == "non_votant" else position]
+                if n:
+                    lignes_grp.append((lignee(g["groupe_id"]), c["droit"], c["texte_id"], c["poids"],
+                                       _valeur(position, c["favorable"], regles), position, n))
     return {
         "scores_scrutins": comptes,
         "scores_deputes": _agreger(lignes_dep, "acteur_id"),
         "scores_groupes": _agreger(lignes_grp, "lignee"),
     }
+
+
+# --- lvnd scores : depuis data/export/ (sans dump) -----------------------------------------------
+
+FICHIERS = ("scores_scrutins", "scores_deputes", "scores_groupes", "participation")
+
+
+def _votes_export(export: Path, scrutins: pl.DataFrame) -> pl.DataFrame:
+    """Votes nominatifs versionnés (votes/<législature>/<AAAA-MM>.csv) des scrutins donnés."""
+    codes = {v: k for k, v in json.loads((export / "meta.json").read_text())["votes_codes"].items()}
+    parts = []
+    for (leg, mois), s in scrutins.group_by("legislature", pl.col("date").str.slice(0, 7), maintain_order=True):
+        v = pl.read_csv(export / "votes" / str(leg) / f"{mois}.csv", schema_overrides={"position": pl.String})
+        parts.append(v.join(s.select("id", pl.col("numero").alias("scrutin")), on="scrutin"))
+    if not parts:
+        return pl.DataFrame(schema={"scrutin_id": pl.String, "acteur_id": pl.String, "position": pl.String})
+    return pl.concat(parts).select(
+        pl.col("id").alias("scrutin_id"),
+        pl.format("PA{}", pl.col("acteur")).alias("acteur_id"),
+        pl.col("position").replace_strict({c: p for p, c in codes.items()}),
+    )
+
+
+def participation(comptes: list[dict], scrutins: pl.DataFrame, votes: pl.DataFrame,
+                  mandats: pl.DataFrame) -> list[dict]:
+    """Taux de participation de chaque député aux scrutins comptés tenus pendant ses mandats (règle 17).
+
+    Il prend part au vote quand il vote pour, contre ou s'abstient. Absent ou non-votant, il n'y
+    prend pas part.
+    """
+    ids = sorted({c["scrutin_id"] for c in comptes if c["favorable"] is not None})
+    s = scrutins.filter(pl.col("id").is_in(ids)).select("id", "legislature", "date")
+    en_mandat = (mandats.select("acteur_id", "legislature", "debut", "fin")
+                 .join(s, on="legislature")
+                 .filter((pl.col("date") >= pl.col("debut"))
+                         & (pl.col("fin").is_null() | (pl.col("date") <= pl.col("fin"))))
+                 .select("acteur_id", pl.col("id").alias("scrutin_id")).unique())
+    par_depute = (en_mandat.join(votes, on=["acteur_id", "scrutin_id"], how="left")
+                  .group_by("acteur_id")
+                  .agg(pl.len().alias("scrutins"),
+                       pl.col("position").is_in(["pour", "contre", "abstention"]).sum().alias("votes"),
+                       (pl.col("position") == "non_votant").sum().alias("non_votants"))
+                  .sort("acteur_id"))
+    return [{**r, "taux": round(100 * r["votes"] / r["scrutins"], 1)} for r in par_depute.iter_rows(named=True)]
+
+
+def depuis_export(export: Path, qualif: dict) -> dict[str, list[dict]]:
+    """Scores et participation depuis data/export/ et une qualification, sans dump."""
+    ids = {s["id"] for t in qualif["textes"] for s in t["scrutins"]}
+    scrutins = pl.read_csv(export / "scrutins.csv", infer_schema=False).with_columns(
+        pl.col("legislature", "numero").cast(pl.Int64))
+    utiles = scrutins.filter(pl.col("id").is_in(ids))
+    votes = _votes_export(export, utiles)
+    ventil = (pl.read_csv(export / "positions_groupes.csv", infer_schema=False)
+              .filter(pl.col("scrutin_id").is_in(ids))
+              .with_columns(pl.col("pour", "contre", "abstention", "non_votants").cast(pl.Int64)))
+    sc = calculer(qualif, votes.to_dicts(), ventilations=ventil.to_dicts())
+    mandats = pl.read_csv(export / "mandats.csv", infer_schema=False).with_columns(pl.col("legislature").cast(pl.Int64))
+    sc["participation"] = participation(sc["scores_scrutins"], scrutins, votes, mandats)
+    return sc
+
+
+def ecrire(export: Path, sc: dict[str, list[dict]]) -> None:
+    """Écrit les scores dans data/export/, au format de `lvnd build`."""
+    for nom in FICHIERS:
+        pl.DataFrame(sc[nom], infer_schema_length=None).write_csv(export / f"{nom}.csv")

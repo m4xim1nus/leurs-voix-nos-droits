@@ -1,4 +1,4 @@
-"""Ligne de commande : lvnd download | build | check | editorial | sync-admin."""
+"""Ligne de commande : lvnd download | build | check | editorial | scores | sync-admin."""
 
 import argparse
 import sys
@@ -25,6 +25,8 @@ def main(argv=None) -> int:
     c.add_argument("--sqlite", type=Path, default=SQLITE)
     e = sub.add_parser("editorial", help="écrit data/editorial.json depuis referentiels/temoins.yaml (amorçage)")
     e.add_argument("--force", action="store_true", help="écrase un editorial.json existant")
+    sc = sub.add_parser("scores", help="recalcule les scores depuis data/export/ et data/editorial.json (sans dump)")
+    sc.add_argument("--export", type=Path, default=EXPORT)
     s = sub.add_parser("sync-admin", help="pousse le catalogue (data/export/) dans la base D1 de l'admin")
     cible = s.add_mutually_exclusive_group(required=True)
     cible.add_argument("--local", dest="cible", action="store_const", const="local", help="D1 locale (wrangler dev)")
@@ -61,6 +63,14 @@ def main(argv=None) -> int:
             return 1
         editorial.CHEMIN.write_text(editorial.serialiser(editorial.depuis_temoins(referentiels.temoins())))
         print(editorial.CHEMIN, file=sys.stderr)
+    elif args.commande == "scores":
+        from . import editorial, scores
+        qualif = editorial.charger()
+        sc = scores.depuis_export(args.export, qualif)
+        scores.ecrire(args.export, sc)
+        print(f"{len(qualif['textes'])} textes qualifiés, {len(sc['scores_scrutins'])} lignes de scrutins comptés, "
+              f"{len(sc['scores_deputes'])} scores de députés, {len(sc['scores_groupes'])} de groupes, "
+              f"{len(sc['participation'])} taux de participation", file=sys.stderr)
     elif args.commande == "sync-admin":
         from . import sync_admin
         sync_admin.sync(args.export, ADMIN, args.cible, args.editorial, args.sortie, args.brouillons, args.valider)
