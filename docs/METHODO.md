@@ -10,7 +10,10 @@ Le choix de la lecture et la notion de source qui « cite » une mesure (règle
 exclusions de la règle 11 et les motions « inversées » (règle 10), à la
 relecture des vingt et un premiers textes. L'accès aux soins (règle 2), les
 résolutions et les conventions (règle 8) et le décisif unanime (règle 9)
-l'ont été au lot de tri des candidats, toujours le 29/10/2026.
+l'ont été au lot de tri des candidats, toujours le 29/10/2026. Au lot 3, le
+même jour : le choix d'une source d'énergie hors grille (règle 2), les
+instances consultatives indépendantes et les syndicats de salariés parmi
+les sources (règle 7), l'article unique sans vote sur l'ensemble (règle 9).
 
 ## Grille des droits
 
@@ -29,7 +32,12 @@ Grille v0 : `pipeline/referentiels/droits.yaml`. Onze droits et deux
    soins** entre dans `sante` (régulation de l'installation des médecins,
    accès direct aux professionnels). Le financement de la recherche n'y
    entre pas. Les droits civiques et politiques (droit de vote, corps
-   électoral de Nouvelle-Calédonie) ne sont pas dans la grille v0.
+   électoral de Nouvelle-Calédonie) ne sont pas dans la grille v0. Le
+   **choix d'une source d'énergie** (nucléaire, renouvelables) n'est pas
+   un droit de la grille : le droit `environnement` se juge sur les
+   garanties des personnes (information, participation du public,
+   protection des milieux). Les deux lois d'accélération de 2023, qui
+   allègent les mêmes garanties, sont donc qualifiées dans le même sens.
 3. **Recouvrements**, tranchés par une règle fixe :
    - justice des mineurs → `enfants` principal, `police-justice`
      secondaire ;
@@ -48,17 +56,25 @@ Grille v0 : `pipeline/referentiels/droits.yaml`. Onze droits et deux
    constitutionnel s'affiche à côté (« 32 articles censurés »).
 7. **Sources.** Chaque qualification cite au moins une source publique :
    - CNCDH, Défenseur des droits, Conseil constitutionnel ;
-   - CNIL, CGLPL ;
+   - CNIL, CGLPL, et les autres instances consultatives indépendantes
+     créées par la loi ou le règlement qui rendent des avis publics (Haut
+     Conseil à l'égalité, Commission nationale du débat public, Haut Comité
+     pour le logement des personnes défavorisées, Autorité
+     environnementale…) ;
    - rapporteurs et comités de l'ONU ;
    - ONG ;
    - pour la santé, ordres professionnels et sociétés savantes ;
    - organisations professionnelles et syndicales du droit, de la santé et
      de l'enseignement (Conseil national des barreaux, Syndicat des avocats
      de France, Syndicat de la magistrature…) ;
+   - organisations syndicales représentatives de salariés (CGT, CFDT, FO,
+     CFE-CGC, CFTC, UNSA, FSU, Solidaires) ;
    - avis du Conseil d'État sur un projet ou une proposition de loi.
 
    Ne sont pas des sources les rapports parlementaires ni les positions du
-   Gouvernement ou des groupes, qui sont parties au débat.
+   Gouvernement ou des groupes, qui sont parties au débat. La Cour des
+   comptes non plus : elle évalue la dépense et l'efficacité des
+   politiques publiques, pas les droits.
 
    Quand un texte étend un droit contesté, au moins une source critique
    figure en vigilance. Si aucune source admise ne conteste le droit
@@ -80,6 +96,11 @@ Grille v0 : `pipeline/referentiels/droits.yaml`. Onze droits et deux
    C'est la lecture définitive, le texte de CMP, ou la dernière lecture à
    l'AN quand l'adoption définitive a lieu au Sénat (Kasbarian-Bergé,
    justice des mineurs). Les autres lectures sont affichées, pas comptées.
+   Quand un texte à **article unique** n'a pas de vote sur l'ensemble
+   (article rejeté, puis texte tombé ou retiré), le vote sur l'article
+   unique tient lieu de scrutin décisif. Dans le cas habituel (article
+   adopté, puis vote sur l'ensemble), le vote sur l'article double le
+   décisif et n'est pas retenu.
    Un texte dont le scrutin décisif n'a **aucune voix d'un des deux côtés**
    (loi intégrale contre les violences sexuelles et sexistes, 503-0) n'est
    pas qualifié : ce vote ne départage personne, et le compter rapprocherait

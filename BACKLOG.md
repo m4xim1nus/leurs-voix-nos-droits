@@ -44,3 +44,5 @@ File d'attente brute, non ordonnée. Une ligne par item :
 - [ ] Avant la passation, une fois tout qualifié : réécrire pour le public les notes de méthode et les motifs d'écart des qualifications, qui citent les règles par leur numéro (≈ 60 notes, ≈ 50 motifs). Le site les replie déjà sous « Comment ce texte a été qualifié », numéros liés à la méthodologie (user:moi, 2026-10-29)
 - [ ] Cartes partageables au format 4:5 pour les réseaux sociaux (claude, 2026-10-29)
 - [ ] Pipeline : étape vide pour certains scrutins (V6283, rejet de l'article unique en 1re lecture de l'avenant chômage, DLR5L17N53981) (claude, 2026-10-29)
+- [ ] Passation : ajouter aux qualifications politiquement sensibles à revoir (avec antisemitisme-enseignement-superieur et abrogation-obligation-vaccinale-2023) energies-renouvelables-2023 et nucleaire-acceleration-2023, toutes deux `environnement` restreint par la règle 2 (choix d'énergie hors grille) : sur les renouvelables, RN, LR, LFI et GDR, qui ont voté contre, sont comptés favorables (user:moi, 2026-10-29)
+- [→Étape 4] Page méthodologie du site : reporter les règles 2, 7 et 9 complétées au lot 3 (`docs/METHODO.md`) (claude, 2026-10-29)

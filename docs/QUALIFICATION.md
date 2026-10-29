@@ -104,7 +104,10 @@ travail doit être factuel, sourcé, vérifiable, et signaler franchement les po
 - **Aucune publication du commanditaire**, ni seule ni cosignée (communiqué
   collectif, tribune, collectif dont il est membre) : liste privée dans
   `source/termes_interdits.txt` (CLAUDE.md, règles dures). Si une analyse
-  reprend un texte cosigné, ne la cite pas.
+  reprend un texte cosigné, ne la cite pas. En revanche, une décision de
+  justice qui nomme seulement l'organisation comme partie, ou un document
+  qui emploie un sigle homonyme, n'est pas une publication de celle-ci :
+  cite-le, sans jamais écrire le nom (`lvnd check` le refuserait).
 - Des sources de bords différents sont bienvenues ; si une source institutionnelle soutient le
   texte ou en relativise la portée, mentionne-le dans les points d'attention.
 

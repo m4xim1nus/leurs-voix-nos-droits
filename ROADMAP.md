@@ -185,10 +185,17 @@ chat puis publie depuis l'admin.
   du droit, avis du Conseil d'État ; pas de vigilance exigée sans critique
   admise), règle 8 (texte vidé avant le décisif), limite de la règle 14
   écrite.
+- ✅ Lot 3 (21 textes, 29/10/2026) : 15 validés, 6 écartés (fiche
+  `source/relecture-lot3.md`), dont 5 textes hors liste A que les
+  mots-clés n'avaient pas repérés (logement, libertés). Règle 2 (choix
+  d'une source d'énergie hors grille), règle 7 (instances consultatives
+  indépendantes, syndicats de salariés ; pas la Cour des comptes), règle 9
+  (article unique sans vote sur l'ensemble).
 - ⏳ Lots suivants, d'une vingtaine de textes chacun, jusqu'au seuil de la
-  v1, puis au fil de l'eau. Reste de la liste A : 28 textes, dont les
-  « faible ». Le droit au logement manque de candidats : chercher hors de la
-  liste A.
+  v1, puis au fil de l'eau. Reste de la liste A : 12 textes, dont 5
+  « faible », le PLFSS 2026 et trois textes d'adaptation au droit de l'UE.
+  Ensuite, tri complémentaire des textes que les mots-clés ont ratés
+  (`BACKLOG.md`). Aucun candidat `etrangers` avec vote final pour l'instant.
 - ⏳ Les deux textes passés au 49.3 sans vote final (retraites 2023,
   PLF 2026) attendent la règle du décisif en cas de 49.3 (`BACKLOG.md`).
 
