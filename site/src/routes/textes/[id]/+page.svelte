@@ -22,13 +22,15 @@
       );
 
   const pourquoi = (s: ScrutinRetenu) =>
-    s.role === 'motion'
-      ? 'Motion : affichée, pas comptée. Une motion peut se voter pour des raisons tactiques.'
-      : s.role === 'ensemble'
-        ? 'Autre lecture : affichée, pas comptée. Seul le dernier vote de l’Assemblée sur l’ensemble compte.'
-        : s.pour === 'a-trancher'
-          ? 'Sens à trancher : pas compté.'
-          : 'Affiché, pas compté.';
+    s.role === 'censure'
+      ? `Motion de censure : affichée, pas comptée. Ce scrutin n’enregistre que les voix pour la censure ; il ne dit rien de ceux qui ne l’ont pas votée.`
+      : s.role === 'motion'
+        ? 'Motion : affichée, pas comptée. Une motion peut se voter pour des raisons tactiques.'
+        : s.role === 'ensemble'
+          ? 'Autre lecture : affichée, pas comptée. Seul le dernier vote de l’Assemblée sur l’ensemble compte.'
+          : s.pour === 'a-trancher'
+            ? 'Sens à trancher : pas compté.'
+            : 'Affiché, pas compté.';
 </script>
 
 <svelte:head>
@@ -50,8 +52,13 @@
     </p>
     <h3>{s.objet}</h3>
     <p class="petit">
-      {date(s.date)}. {s.sort === 'adopte' ? 'Adopté' : 'Rejeté'} par {s.decompte.pour} voix pour,
-      {s.decompte.contre} contre et {s.decompte.abstention} abstentions.
+      {#if s.role === 'censure'}
+        {date(s.date)}. {s.sort === 'adopte' ? 'Adoptée' : 'Rejetée'} : {s.decompte.pour} voix pour la
+        censure{s.decompte.requis ? `, sur ${s.decompte.requis} requises` : ''}.
+      {:else}
+        {date(s.date)}. {s.sort === 'adopte' ? 'Adopté' : 'Rejeté'} par {s.decompte.pour} voix pour,
+        {s.decompte.contre} contre et {s.decompte.abstention} abstentions.
+      {/if}
       <a href={s.url} rel="external">Scrutin n° {s.numero} sur le site de l’AN</a>.
     </p>
     {#if s.amendement}
@@ -69,7 +76,11 @@
     </p>
     <details open={ouvert}>
       <summary>Position des groupes</summary>
-      <Ventilations ventilations={s.ventilations} favorable={s.compte ? s.favorable : null} />
+      <Ventilations
+        ventilations={s.ventilations}
+        favorable={s.compte ? s.favorable : null}
+        censure={s.role === 'censure'}
+      />
     </details>
   </article>
 {/snippet}
@@ -77,7 +88,9 @@
 <p class="discret"><a href="/textes">Textes</a></p>
 <h1 class="titre">{t.titre}</h1>
 <p class="discret">
-  {legislature(t.legislature)} législature. Vote décisif le {date(t.date)}.
+  {legislature(t.legislature)} législature. {t.sans_vote
+    ? 'Adopté par le 49.3, sans vote final de l’Assemblée.'
+    : `Vote décisif le ${date(t.date)}.`}
   {#if t.loi}{`Loi n° ${t.loi}${t.date_loi ? ` du ${date(t.date_loi)}` : ''}.`}{/if}
   {#if t.url_an}<a href={t.url_an} rel="external">Dossier à l’Assemblée</a>.{/if}
   {#if t.url_loi}<a href={t.url_loi} rel="external">Texte sur Légifrance</a>.{/if}
@@ -138,37 +151,55 @@
   {/if}
 </section>
 
-<section>
-  <h2>Comment votent les groupes sur ce texte</h2>
-  <p>
-    Part des votes favorables aux droits (au sens du droit principal : le texte {phrase(
-      t.principal.code,
-      t.principal.sens
-    )}) sur {comptes.length === 1 ? 'le vote décisif' : `les ${comptes.length} scrutins comptés`}.
-  </p>
-  <Regle
-    lignes={data.groupes.map((g) => ({
-      cle: g.groupe.id,
-      libelle: g.groupe.sigle,
-      couleur: g.groupe.couleur,
-      href: `/groupes/${g.groupe.slug}`,
-      score: g.score.score
-    }))}
-  />
-</section>
+{#if t.sans_vote}
+  <section>
+    <h2>Un texte adopté sans vote</h2>
+    <p>
+      Le Gouvernement a engagé sa responsabilité sur ce texte (article 49, alinéa 3, de la
+      Constitution) : il a été adopté sans vote final de l’Assemblée, faute de motion de censure
+      adoptée. Il est qualifié comme les autres, mais il ne compte dans aucun score : le scrutin sur
+      une motion de censure n’enregistre que les voix pour la censure, et ne dit donc rien des
+      députés qui ne l’ont pas votée. Les motions de censure s’affichent ci-dessous, groupe par
+      groupe.
+    </p>
+  </section>
+{:else}
+  <section>
+    <h2>Comment votent les groupes sur ce texte</h2>
+    <p>
+      Part des votes favorables aux droits (au sens du droit principal : le texte {phrase(
+        t.principal.code,
+        t.principal.sens
+      )}) sur {comptes.length === 1 ? 'le vote décisif' : `les ${comptes.length} scrutins comptés`}.
+    </p>
+    <Regle
+      lignes={data.groupes.map((g) => ({
+        cle: g.groupe.id,
+        libelle: g.groupe.sigle,
+        couleur: g.groupe.couleur,
+        href: `/groupes/${g.groupe.slug}`,
+        score: g.score.score
+      }))}
+    />
+  </section>
+{/if}
 
 <section>
-  <h2>Les scrutins comptés</h2>
-  <p>
-    Le vote décisif {comptes.length > 1
-      ? 'pèse la moitié du texte, les amendements clés se partagent l’autre moitié'
-      : 'pèse tout le texte'}. Chaque texte pèse autant dans le score.
-  </p>
-  {#each comptes as s (s.id)}{@render scrutin(s, s.role === 'decisif')}{/each}
+  {#if comptes.length}
+    <h2>Les scrutins comptés</h2>
+    <p>
+      Le vote décisif {comptes.length > 1
+        ? 'pèse la moitié du texte, les amendements clés se partagent l’autre moitié'
+        : 'pèse tout le texte'}. Chaque texte pèse autant dans le score.
+    </p>
+    {#each comptes as s (s.id)}{@render scrutin(s, s.role === 'decisif')}{/each}
+  {/if}
 
   {#if affiches.length}
-    <h2 id="autres-scrutins">Les autres scrutins, affichés</h2>
-    {#each affiches as s (s.id)}{@render scrutin(s, false)}{/each}
+    <h2 id="autres-scrutins">
+      {comptes.length ? 'Les autres scrutins, affichés' : 'Les scrutins, affichés'}
+    </h2>
+    {#each affiches as s (s.id)}{@render scrutin(s, s.role === 'censure')}{/each}
   {/if}
 </section>
 

@@ -2,7 +2,7 @@
 
 export type Sens = 'etend' | 'restreint';
 export type RoleDroit = 'principal' | 'secondaire';
-export type RoleScrutin = 'decisif' | 'ensemble' | 'motion' | 'article' | 'amendement';
+export type RoleScrutin = 'decisif' | 'ensemble' | 'motion' | 'article' | 'amendement' | 'censure';
 export type Pour = 'texte' | 'contre-texte' | 'a-trancher';
 export type Position = 'pour' | 'contre' | 'abstention' | 'non_votant';
 export type PositionGroupe = 'pour' | 'contre' | 'abstention' | 'partage' | 'absent';
@@ -85,7 +85,7 @@ export interface ScrutinRetenu {
   objet: string;
   date: string;
   sort: 'adopte' | 'rejete';
-  decompte: { pour: number; contre: number; abstention: number };
+  decompte: { pour: number; contre: number; abstention: number; requis: number | null };
   /** Compté dans les scores (décisif ou amendement clé, sens fixé). */
   compte: boolean;
   poids: number;
@@ -110,7 +110,10 @@ export interface Texte {
   note: string;
   sources: Record<string, Source>;
   scrutins: ScrutinRetenu[];
+  /** Date du vote décisif, ou de la dernière motion de censure (texte adopté par 49.3). */
   date: string;
+  /** Adopté par 49.3 sans vote final : qualifié, compté dans aucun score (règle 9). */
+  sans_vote: boolean;
   loi: string | null;
   date_loi: string | null;
   url_an: string | null;

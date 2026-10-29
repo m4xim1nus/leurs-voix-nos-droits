@@ -66,6 +66,21 @@ export async function scrutinsDuTexte(db: D1Database, id: string): Promise<Scrut
   return results.map(decoder);
 }
 
+/** Motions de censure votées entre deux dates (texte adopté par 49.3 sans vote final, règle 9). */
+export async function censures(
+  db: D1Database,
+  debut: string,
+  fin: string
+): Promise<ScrutinCatalogue[]> {
+  const { results } = await db
+    .prepare(
+      "SELECT * FROM scrutins WHERE objet = 'motion_censure' AND date BETWEEN ? AND ? ORDER BY date DESC, numero DESC"
+    )
+    .bind(debut, fin)
+    .all<LigneScrutin>();
+  return results.map(decoder);
+}
+
 /** Scrutins par identifiant, par paquets (limite de D1 sur les paramètres). */
 export async function scrutins(db: D1Database, ids: string[]): Promise<ScrutinCatalogue[]> {
   const out: ScrutinCatalogue[] = [];

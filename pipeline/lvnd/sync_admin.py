@@ -5,9 +5,11 @@ dump. Le script SQL remplace le catalogue (textes, scrutins rattachés, groupes,
 touche jamais aux tables éditoriales, sauf `--editorial`, qui y ajoute les qualifications
 publiées absentes de D1 (amorçage, ou reconstruction de D1 depuis git) sans écraser un brouillon.
 
-Le script est exécuté par `wrangler d1 execute` depuis `admin/`. Le premier sync écrit 40 800 lignes
-(index compris), un sync suivant environ le double (effacement puis réécriture) : un seul par jour
-sous la limite gratuite de D1 (100 000 lignes écrites).
+Le script est exécuté par `wrangler d1 execute` depuis `admin/`. Par défaut, le sync est
+**incrémental** : il lit le catalogue présent dans D1 (les lectures sont presque gratuites), le
+compare à l'export, et n'écrit que les lignes ajoutées, modifiées ou disparues. Une semaine de
+nouveaux scrutins écrit quelques centaines de lignes. `--complet` efface et réécrit tout (environ
+80 000 lignes écrites, index compris, près de la limite gratuite de D1 : 100 000 par jour).
 """
 
 import hashlib
@@ -91,13 +93,16 @@ def catalogue(export: Path) -> dict[str, list[dict]]:
 
     scrutins = []
     for r in _lire(export, "scrutins").iter_rows(named=True):
-        if r["dossier_id"] not in ids:
+        # Les motions de censure vont toutes dans D1 (rattachement vide si leur dossier n'est pas au
+        # catalogue) : la fiche d'un texte adopté par 49.3 propose celles qui suivent ses derniers votes.
+        censure = r["objet"] == "motion_censure"
+        if r["dossier_id"] not in ids and not censure:
             continue
         a = amdts.get(r["amendement_id"] or "", {})
         scrutins.append({
             **{k: r[k] for k in ("id", "legislature", "numero", "date", "type_vote", "titre", "objet", "sort", "pour",
                                  "contre", "abstention", "non_votants", "amendement_id")},
-            "texte_id": r["dossier_id"],
+            "texte_id": r["dossier_id"] if r["dossier_id"] in ids else "",
             "etape": _vide(r["etape"]),
             "amendement_numero": _vide(str(a.get("numero") or "")),
             "amendement_division": _vide(a.get("division") or ""),
@@ -211,6 +216,58 @@ def _qualifs(lignes: list[dict], auteur: str, commentaire: str) -> list[str]:
     return out
 
 
+TABLES = {"textes": ("id", COLONNES_TEXTES), "scrutins": ("id", COLONNES_SCRUTINS),
+          "groupes": ("id", COLONNES_GROUPES), "catalogue_meta": ("cle", ("cle", "valeur"))}
+PAGE = 4000  # lignes lues par requête dans D1
+
+
+def _requete(admin: Path, cible: str, sql: str) -> list[dict]:
+    cmd = ["npx", "wrangler", "d1", "execute", BASE, f"--{cible}", "--json", f"--command={sql}"]
+    sortie = subprocess.run(cmd, cwd=admin, check=True, capture_output=True, text=True).stdout
+    return json.loads(sortie)[0]["results"]
+
+
+def lire_d1(admin: Path, cible: str) -> dict[str, dict[str, str]]:
+    """Catalogue présent dans D1 : table → clé → ligne sérialisée (comme dans un INSERT)."""
+    out = {}
+    for table, (cle, cols) in TABLES.items():
+        lignes, page = [], 0
+        while True:
+            lot = _requete(admin, cible, f"SELECT {', '.join(cols)} FROM {table} ORDER BY {cle} "
+                                         f"LIMIT {PAGE} OFFSET {page * PAGE}")
+            lignes += lot
+            if len(lot) < PAGE:
+                break
+            page += 1
+        out[table] = {str(r[cle]): _ligne(r, cols) for r in lignes}
+    return out
+
+
+def _ligne(r: dict, cols: tuple[str, ...]) -> str:
+    # Les nombres entiers relus de D1 en flottants (1.0) s'écrivent comme à l'insertion (1).
+    def norme(v):
+        return int(v) if isinstance(v, float) and v.is_integer() else v
+    return ", ".join(sql_valeur(norme(r.get(c))) for c in cols)
+
+
+def difference(cat: dict[str, list[dict]], present: dict[str, dict[str, str]]) -> tuple[list[str], dict]:
+    """Instructions qui amènent D1 de `present` au catalogue `cat`, et le décompte des lignes touchées."""
+    out, compte = [], {}
+    for table, (cle, cols) in TABLES.items():
+        voulu = {str(r[cle]): r for r in cat[table]}
+        avant = present.get(table, {})
+        changees = [r for k, r in voulu.items() if avant.get(k) != _ligne(r, cols) and k != "sync"]
+        disparues = sorted(set(avant) - set(voulu))
+        for i in range(0, len(disparues), LOT):
+            ids = ", ".join(sql_valeur(k) for k in disparues[i:i + LOT])
+            out.append(f"DELETE FROM {table} WHERE {cle} IN ({ids});")
+        out += inserts(table, cols, changees, "INSERT OR REPLACE")
+        compte[table] = {"ecrites": len(changees), "effacees": len(disparues)}
+    sync = [r for r in cat["catalogue_meta"] if r["cle"] == "sync"]
+    out += inserts("catalogue_meta", ("cle", "valeur"), sync, "INSERT OR REPLACE")
+    return out, compte
+
+
 def script(export: Path, editorial_doc: dict | None = None, brouillons_lignes: list[dict] | None = None,
            avec_catalogue: bool = True) -> str:
     out = ["-- Généré par `lvnd sync-admin` : ne pas éditer."]
@@ -228,9 +285,19 @@ def script(export: Path, editorial_doc: dict | None = None, brouillons_lignes: l
 
 
 def sync(export: Path, admin: Path, cible: str, avec_editorial: bool, sortie: Path | None,
-         dossier_brouillons: Path | None = None, valider: str | None = None) -> None:
+         dossier_brouillons: Path | None = None, valider: str | None = None, complet: bool = False,
+         simuler: bool = False) -> None:
     doc = editorial.charger() if avec_editorial else None
-    if valider is not None:
+    if cible != "sql" and not complet and valider is None and dossier_brouillons is None:
+        instructions, compte = difference(catalogue(export), lire_d1(admin, cible))
+        print("Sync incrémental : " + ", ".join(f"{t} {c['ecrites']} écrites, {c['effacees']} effacées"
+                                                for t, c in compte.items()), file=sys.stderr)
+        if doc is not None:
+            instructions += _qualifs(qualifications(doc), "editorial.json", "import editorial.json")
+        sql = "\n".join(["-- Généré par `lvnd sync-admin` (incrémental) : ne pas éditer.", *instructions]) + "\n"
+        if simuler:
+            return
+    elif valider is not None:
         if not dossier_brouillons:
             raise SystemExit("--valider s'utilise avec --brouillons DOSSIER")
         sql = "\n".join(["-- Généré par `lvnd sync-admin --valider` : ne pas éditer.",

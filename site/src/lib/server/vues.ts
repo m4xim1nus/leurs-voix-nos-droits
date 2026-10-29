@@ -24,6 +24,7 @@ export interface TexteCourt {
   droits: { code: string; role: string; sens: Sens }[];
   etiquettes: string[];
   n_comptes: number;
+  sans_vote: boolean;
 }
 
 export const court = (t: Texte): TexteCourt => ({
@@ -34,7 +35,8 @@ export const court = (t: Texte): TexteCourt => ({
   principal: { code: t.principal.code, sens: t.principal.sens },
   droits: t.droits.map((d) => ({ code: d.code, role: d.role, sens: d.sens })),
   etiquettes: t.etiquettes,
-  n_comptes: t.scrutins.filter((s) => s.compte).length
+  n_comptes: t.scrutins.filter((s) => s.compte).length,
+  sans_vote: t.sans_vote
 });
 
 export interface ScoreGroupe {

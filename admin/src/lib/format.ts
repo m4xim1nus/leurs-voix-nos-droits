@@ -14,7 +14,8 @@ export const LIBELLES_ROLE: Record<string, string> = {
   ensemble: 'ensemble (autre lecture)',
   motion: 'motion',
   article: 'article',
-  amendement: 'amendement clé'
+  amendement: 'amendement clé',
+  censure: 'motion de censure (49.3)'
 };
 
 export const LIBELLES_POUR: Record<string, string> = {

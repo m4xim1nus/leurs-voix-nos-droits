@@ -245,7 +245,7 @@ function charger(): Donnees {
       .map((c) => [`${c.texte_id}\t${c.scrutin_id}`, c])
   );
 
-  const ORDRE = ['decisif', 'amendement', 'ensemble', 'article', 'motion'];
+  const ORDRE = ['decisif', 'amendement', 'censure', 'ensemble', 'article', 'motion'];
   const textes: Texte[] = editorial.textes.map((t: Texte) => {
     const cat = catalogue.get(t.dossier_an);
     const retenus: ScrutinRetenu[] = t.scrutins.map((r) => {
@@ -265,7 +265,8 @@ function charger(): Donnees {
         decompte: {
           pour: Number(s.pour),
           contre: Number(s.contre),
-          abstention: Number(s.abstention)
+          abstention: Number(s.abstention),
+          requis: num(s.requis)
         },
         compte: c !== undefined && c.favorable !== '',
         poids: c ? Number(c.poids) : 0,
@@ -286,7 +287,8 @@ function charger(): Donnees {
     retenus.sort(
       (a, b) => ORDRE.indexOf(a.role) - ORDRE.indexOf(b.role) || a.date.localeCompare(b.date)
     );
-    const decisif = retenus.find((s) => s.role === 'decisif')!;
+    const decisif = retenus.find((s) => s.role === 'decisif');
+    const censures = retenus.filter((s) => s.role === 'censure').map((s) => s.date);
     return {
       ...t,
       titre: typo(t.titre),
@@ -300,7 +302,8 @@ function charger(): Donnees {
       ),
       principal: t.droits.find((d) => d.role === 'principal')!,
       scrutins: retenus,
-      date: decisif.date,
+      date: decisif?.date ?? censures.sort().at(-1)!,
+      sans_vote: !decisif,
       loi: txt(cat?.loi),
       date_loi: txt(cat?.date_loi),
       url_an: txt(cat?.url_an),

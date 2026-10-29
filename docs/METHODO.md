@@ -14,11 +14,16 @@ l'ont été au lot de tri des candidats, toujours le 29/10/2026. Au lot 3, le
 même jour : le choix d'une source d'énergie hors grille (règle 2), les
 instances consultatives indépendantes et les syndicats de salariés parmi
 les sources (règle 7), l'article unique sans vote sur l'ensemble (règle 9).
+Toujours le 29/10/2026 : la grille v1 (droits civiques et politiques) et
+le texte adopté par 49.3 sans vote final (règle 9).
 
 ## Grille des droits
 
-Grille v0 : `pipeline/referentiels/droits.yaml`. Onze droits et deux
-étiquettes transversales (`outre-mer`, `regime-exception`).
+Grille v1 : `pipeline/referentiels/droits.yaml`. Douze droits et deux
+étiquettes transversales (`outre-mer`, `regime-exception`). La v1 ajoute à
+la v0 les **droits civiques et politiques** (`citoyennete` : droit de vote,
+élections, citoyenneté), d'abord hors grille (corps électoral de
+Nouvelle-Calédonie).
 
 1. **Point de vue.** Le sens se lit toujours du point de vue des droits des
    personnes concernées, jamais des prérogatives de l'État. Un texte qui
@@ -32,7 +37,8 @@ Grille v0 : `pipeline/referentiels/droits.yaml`. Onze droits et deux
    soins** entre dans `sante` (régulation de l'installation des médecins,
    accès direct aux professionnels). Le financement de la recherche n'y
    entre pas. Les droits civiques et politiques (droit de vote, corps
-   électoral de Nouvelle-Calédonie) ne sont pas dans la grille v0. Le
+   électoral de Nouvelle-Calédonie), hors de la grille v0, entrent dans la
+   v1 (`citoyennete`). Le
    **choix d'une source d'énergie** (nucléaire, renouvelables) n'est pas
    un droit de la grille : le droit `environnement` se juge sur les
    garanties des personnes (information, participation du public,
@@ -106,6 +112,11 @@ Grille v0 : `pipeline/referentiels/droits.yaml`. Onze droits et deux
    pas qualifié : ce vote ne départage personne, et le compter rapprocherait
    tous les scores de 100. Une voix suffit pour qu'il départage (même seuil
    que pour les amendements, règle 11).
+   Un texte **adopté par le 49.3 sans vote final** à l'AN (retraites 2023,
+   PLF 2026) est qualifié, mais **compté dans aucun score**, amendements
+   clés compris. Ses motions de censure s'affichent groupe par groupe
+   (rôle `censure`) : un scrutin de censure n'enregistre que les voix pour
+   la censure, et ne dit donc rien de ceux qui ne l'ont pas votée.
 10. **Motions de rejet préalable : affichées, pas comptées.** Sur
     l'immigration, la motion écologiste a été adoptée (270-265) avec les
     voix du RN (87-0) et de LR (40-2). Ces deux groupes ont ensuite voté le

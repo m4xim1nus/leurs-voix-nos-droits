@@ -39,7 +39,7 @@
   <h2>Qualifier un texte</h2>
   <p>
     Chaque texte retenu reçoit un <strong>droit principal</strong> et, souvent, des droits
-    secondaires, pris dans une grille de <a href="/droits">onze droits</a>. Pour chacun, un sens :
+    secondaires, pris dans une grille de <a href="/droits">douze droits</a>. Pour chacun, un sens :
     le texte <strong>étend</strong> ce droit, ou il le <strong>restreint</strong>. Chaque jugement
     cite au moins une source publique, affichée à côté de lui.
   </p>
@@ -54,7 +54,9 @@
       et aux plus forts. La propriété et l’ordre public sont des objectifs que la loi concilie avec ces
       droits : ils n’entrent pas dans la grille. Quand un texte les étend, c’est signalé en point de vigilance.
       L’accès aux soins entre dans le droit à la santé (installation des médecins, accès direct aux professionnels).
-      Les droits civiques et politiques (droit de vote, corps électoral) ne sont pas encore dans la grille.
+      Le choix d’une source d’énergie (nucléaire, renouvelables) n’est pas un droit de la grille : le
+      droit à un environnement sain se juge sur les garanties des personnes (information, participation
+      du public, protection des milieux).
     </li>
     <li value="3" id="regle-3">
       <strong>Recouvrements.</strong> Justice des mineurs : droits de l’enfant en principal, police et
@@ -77,13 +79,15 @@
     </li>
     <li value="7" id="regle-7">
       <strong>Sources.</strong> Commission nationale consultative des droits de l’homme (CNCDH), Défenseur
-      des droits, Conseil constitutionnel, CNIL, Contrôleur général des lieux de privation de liberté,
-      rapporteurs et comités de l’ONU, ONG ; pour la santé, ordres professionnels et sociétés savantes ;
-      organisations professionnelles et syndicales du droit, de la santé et de l’enseignement (Conseil
-      national des barreaux, syndicats d’avocats et de magistrats…) ; avis du Conseil d’État sur un projet
-      ou une proposition de loi. Les rapports parlementaires et les positions du Gouvernement ou des groupes
-      ne sont pas des sources : ils sont parties au débat. Quand un texte étend un droit contesté, au
-      moins une source critique figure en vigilance. Si aucune source admise ne le conteste, la qualification
+      des droits, Conseil constitutionnel, CNIL, Contrôleur général des lieux de privation de liberté
+      et autres instances consultatives indépendantes qui rendent des avis publics, rapporteurs et comités
+      de l’ONU, ONG ; pour la santé, ordres professionnels et sociétés savantes ; organisations professionnelles
+      et syndicales du droit, de la santé et de l’enseignement (Conseil national des barreaux, syndicats
+      d’avocats et de magistrats…) ; organisations syndicales représentatives de salariés ; avis du Conseil
+      d’État sur un projet ou une proposition de loi. Les rapports parlementaires et les positions du
+      Gouvernement ou des groupes ne sont pas des sources : ils sont parties au débat. La Cour des comptes
+      non plus : elle évalue la dépense publique, pas les droits. Quand un texte étend un droit contesté,
+      au moins une source critique figure en vigilance. Si aucune source admise ne le conteste, la qualification
       le dit.
     </li>
     <li value="8" id="regle-8">
@@ -126,7 +130,11 @@
       définitive, texte de la commission mixte paritaire, ou dernière lecture à l’Assemblée quand le texte
       est adopté définitivement au Sénat. Les votes des autres lectures sont affichés, pas comptés. Un
       texte dont le vote décisif n’a recueilli aucune voix d’un des deux côtés n’est pas qualifié : ce
-      vote ne départage personne, et le compter rapprocherait tous les scores de 100 %.
+      vote ne départage personne, et le compter rapprocherait tous les scores de 100 %. Un texte à article
+      unique sans vote sur l’ensemble (article rejeté, puis texte tombé ou retiré) : le vote sur l’article
+      tient lieu de vote décisif. Un texte adopté par le 49.3, sans vote final : il est qualifié, mais
+      ne compte dans aucun score, car le scrutin sur une motion de censure n’enregistre que les voix pour
+      la censure. Ses motions de censure s’affichent, groupe par groupe.
     </li>
     <li value="10" id="regle-10">
       <strong>Motions de rejet : affichées, pas comptées.</strong> Une motion peut être votée pour des

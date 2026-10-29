@@ -178,7 +178,11 @@
     // Sens par défaut : le texte lui-même va « dans le sens du texte », une motion contre lui ;
     // le sens d'un amendement clé est toujours fixé à la main (règle 11).
     const pour: Pour =
-      role === 'motion' ? 'contre-texte' : role === 'amendement' ? 'a-trancher' : 'texte';
+      role === 'motion' || role === 'censure'
+        ? 'contre-texte'
+        : role === 'amendement'
+          ? 'a-trancher'
+          : 'texte';
     doc.scrutins.push({ id: s.id, role, pour, objet: objetPropose(s) });
     doc.scrutins.sort(
       (a, b) =>

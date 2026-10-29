@@ -41,7 +41,7 @@ def test_erreurs_bloquantes():
     err, _ = editorial.valider(_texte(droits=[{"code": "inconnu", "role": "principal", "sens": "etend", "sources": []}]))
     assert {"droit inconnu : inconnu", "inconnu : aucune source"} <= set(err)
     err, _ = editorial.valider(_texte(scrutins=[]))
-    assert "il faut exactement un scrutin décisif" in err
+    assert "il faut exactement un scrutin décisif (ou, pour un texte adopté par 49.3 sans vote final, au moins une motion de censure)" in err
     err, _ = editorial.valider(_texte(sources={}))
     assert "source citée mais non définie : s1" in err
 
@@ -136,3 +136,31 @@ def test_validations(tmp_path):
     (tmp_path / "c.yaml").write_text(yaml.safe_dump({**t, "dossier_an": "X", "droits": []}))
     with pytest.raises(SystemExit, match="droit principal"):
         sync_admin.validations(tmp_path, "x")
+
+
+def test_texte_adopte_par_49_3():
+    # Pas de décisif, mais des motions de censure : valide (règle 9), même hors du dossier.
+    censure = [{"id": "C", "role": "censure", "pour": "contre-texte", "objet": "motion de censure"}]
+    assert editorial.valider(_texte(scrutins=censure))[0] == []
+    infos = {"C": {"dossier_id": None, "objet": "motion_censure"}, "X": {"dossier_id": "DLR5L17N1", "objet": "ensemble"}}
+    assert editorial.valider(_texte(scrutins=censure), infos)[0] == []
+    autre = [{"id": "X", "role": "censure", "pour": "contre-texte"}]
+    assert editorial.valider(_texte(scrutins=autre), infos)[0] == ["X : pas une motion de censure"]
+    err, _ = editorial.valider(_texte(scrutins=[{"id": "A", "role": "amendement", "pour": "texte"}]))
+    assert "il faut exactement un scrutin décisif (ou, pour un texte adopté par 49.3 sans vote final, au moins une motion de censure)" in err
+
+
+def test_sync_incremental_n_ecrit_que_les_differences():
+    cat = {"textes": [{"id": "T1", "legislature": 17, "titre": "A"}, {"id": "T2", "legislature": 17, "titre": "B"}],
+           "scrutins": [], "groupes": [],
+           "catalogue_meta": [{"cle": "grille", "valeur": "{}"}, {"cle": "sync", "valeur": '"2026"'}]}
+    cols = sync_admin.COLONNES_TEXTES
+    present = {"textes": {"T1": sync_admin._ligne({"id": "T1", "legislature": 17.0, "titre": "A"}, cols),
+                          "T3": "x"},
+               "catalogue_meta": {"grille": sync_admin._ligne({"cle": "grille", "valeur": "{}"}, ("cle", "valeur"))}}
+    sql, compte = sync_admin.difference(cat, present)
+    assert compte["textes"] == {"ecrites": 1, "effacees": 1}  # T2 ajouté, T3 effacé, T1 inchangé
+    assert compte["catalogue_meta"] == {"ecrites": 0, "effacees": 0}
+    assert "DELETE FROM textes WHERE id IN ('T3');" in sql
+    assert any("INSERT OR REPLACE INTO textes" in i and "'T2'" in i and "'T1'" not in i for i in sql)
+    assert any("'sync'" in i for i in sql)  # date du sync toujours écrite

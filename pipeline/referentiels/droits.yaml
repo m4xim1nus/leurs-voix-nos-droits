@@ -1,4 +1,5 @@
-# Grille des droits, v0 validée par Max le 29/10/2026 (règles : docs/METHODO.md).
+# Grille des droits (règles : docs/METHODO.md). v0 validée par Max le 29/10/2026 ; v1, le même
+# jour : ajout des droits civiques et politiques (`citoyennete`).
 #
 # Chaque texte qualifié reçoit un droit principal et des droits secondaires,
 # avec pour chacun un sens : `etend` ou `restreint`. Le sens se lit toujours
@@ -7,7 +8,7 @@
 # au filtrage, sans sens.
 
 statut: valide
-version: 0
+version: 1
 
 droits:
   - code: libertes
@@ -32,6 +33,8 @@ droits:
     libelle: "Droit à un environnement sain"
   - code: sante
     libelle: "Santé, fin de vie, bioéthique"
+  - code: citoyennete
+    libelle: "Droits civiques et politiques : droit de vote, élections, citoyenneté"
 
 etiquettes:
   - code: outre-mer

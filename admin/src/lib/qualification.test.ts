@@ -88,7 +88,7 @@ describe('qualification', () => {
       ).erreurs
     ).toEqual(expect.arrayContaining(['droit inconnu : inconnu', 'inconnu : aucune source']));
     expect(valider(texte({ scrutins: [] }), GRILLE).erreurs).toContain(
-      'il faut exactement un scrutin décisif'
+      'il faut exactement un scrutin décisif (ou, pour un texte adopté par 49.3 sans vote final, au moins une motion de censure)'
     );
     expect(valider(texte({ sources: {} }), GRILLE).erreurs).toContain(
       'source citée mais non définie : s1'
@@ -215,5 +215,39 @@ describe('qualification', () => {
     expect(slug("Loi visant à protéger les logements contre l'occupation illicite")).toBe(
       'proteger-logements-contre-occupation-illicite'
     );
+  });
+
+  it('accepte un texte adopté par 49.3 : motions de censure sans décisif (règle 9)', () => {
+    const censure = [
+      { id: 'C', role: 'censure' as const, pour: 'contre-texte' as const, objet: 'censure' }
+    ];
+    const infos = new Map([
+      [
+        'C',
+        {
+          dossier_id: null,
+          etape: null,
+          division: null,
+          objet: 'motion_censure',
+          pour: 1,
+          contre: 0
+        }
+      ],
+      [
+        'X',
+        {
+          dossier_id: 'DLR5L17N1',
+          etape: null,
+          division: null,
+          objet: 'ensemble',
+          pour: 1,
+          contre: 1
+        }
+      ]
+    ]);
+    expect(valider(texte({ scrutins: censure }), GRILLE, infos as never).erreurs).toEqual([]);
+    expect(
+      valider(texte({ scrutins: [{ ...censure[0], id: 'X' }] }), GRILLE, infos as never).erreurs
+    ).toEqual(['X : pas une motion de censure']);
   });
 });

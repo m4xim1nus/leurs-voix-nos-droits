@@ -37,6 +37,7 @@ export function scrutinsComptes(textes: Qualification[]): Compte[] {
       (s) => COMPTES.includes(s.role) && (s.pour === 'texte' || s.pour === 'contre-texte')
     );
     const decisif = comptes.filter((s) => s.role === 'decisif');
+    if (!decisif.length) continue; // adopté par 49.3 sans vote final : compté nulle part (règle 9)
     const amdts = comptes.filter((s) => s.role === 'amendement');
     const principal = t.droits.find((d) => d.role === 'principal');
     for (const s of [...decisif, ...amdts]) {

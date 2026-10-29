@@ -16,7 +16,15 @@ import type {
 export const FORMAT = 1;
 export const ROLES_DROIT = ['principal', 'secondaire'] as const;
 export const SENS = ['etend', 'restreint'] as const;
-export const ROLES_SCRUTIN = ['decisif', 'ensemble', 'motion', 'article', 'amendement'] as const;
+// `censure` : motion de censure sur un texte adopté par 49.3 sans vote final (règle 9), affichée seulement.
+export const ROLES_SCRUTIN = [
+  'decisif',
+  'ensemble',
+  'motion',
+  'article',
+  'amendement',
+  'censure'
+] as const;
 export const POUR = ['texte', 'contre-texte', 'a-trancher'] as const;
 export const STATUTS: Statut[] = ['brouillon', 'a-relire', 'valide', 'ecarte'];
 
@@ -197,8 +205,11 @@ export function valider(
     avert.push(`source ${k} définie mais citée nulle part`);
 
   const scrutins = t.scrutins ?? [];
-  if (scrutins.filter((s) => s.role === 'decisif').length !== 1)
-    err.push('il faut exactement un scrutin décisif');
+  const nDecisifs = scrutins.filter((s) => s.role === 'decisif').length;
+  if (nDecisifs > 1 || (nDecisifs === 0 && !scrutins.some((s) => s.role === 'censure')))
+    err.push(
+      'il faut exactement un scrutin décisif (ou, pour un texte adopté par 49.3 sans vote final, au moins une motion de censure)'
+    );
   const ids = scrutins.map((s) => s.id);
   for (const i of [...new Set(ids.filter((i, n) => ids.indexOf(i) !== n))].sort(parCle))
     err.push(`scrutin en double : ${i}`);
@@ -219,6 +230,11 @@ export function valider(
     const parArticle = new Map<string, { division: string; ids: string[] }>();
     for (const s of scrutins) {
       const info = scrutinsDossier.get(s.id);
+      if (s.role === 'censure') {
+        // Une motion de censure n'est pas toujours rattachée au dossier du texte.
+        if (info?.objet !== 'motion_censure') err.push(`${s.id} : pas une motion de censure`);
+        continue;
+      }
       if (!info || info.dossier_id !== t.dossier_an) {
         err.push(`${s.id} : scrutin absent du dossier ${t.dossier_an}`);
         continue;

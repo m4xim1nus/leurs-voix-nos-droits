@@ -22,7 +22,8 @@ CHEMIN = Path(__file__).resolve().parents[2] / "data/editorial.json"
 
 ROLES_DROIT = ("principal", "secondaire")
 SENS = ("etend", "restreint")
-ROLES_SCRUTIN = ("decisif", "ensemble", "motion", "article", "amendement")
+# `censure` : motion de censure sur un texte adopté par 49.3 sans vote final (règle 9), affichée seulement.
+ROLES_SCRUTIN = ("decisif", "ensemble", "motion", "article", "amendement", "censure")
 POUR = ("texte", "contre-texte", "a-trancher")
 
 # Ordre des clés dans le fichier (le même dans l'admin).
@@ -153,8 +154,10 @@ def valider(t: dict, scrutins_dossier: dict[str, dict] | None = None) -> tuple[l
         avert.append(f"source {k} définie mais citée nulle part")
 
     scrutins = t.get("scrutins") or []
-    if sum(s.get("role") == "decisif" for s in scrutins) != 1:
-        err.append("il faut exactement un scrutin décisif")
+    n_decisifs = sum(s.get("role") == "decisif" for s in scrutins)
+    if n_decisifs > 1 or (n_decisifs == 0 and not any(s.get("role") == "censure" for s in scrutins)):
+        err.append("il faut exactement un scrutin décisif (ou, pour un texte adopté par 49.3 sans vote final, "
+                    "au moins une motion de censure)")
     ids = [s.get("id") for s in scrutins]
     for i in sorted({i for i in ids if ids.count(i) > 1}):
         err.append(f"scrutin en double : {i}")
@@ -173,6 +176,11 @@ def valider(t: dict, scrutins_dossier: dict[str, dict] | None = None) -> tuple[l
         par_article: dict[tuple, list[str]] = {}
         for s in scrutins:
             info = scrutins_dossier.get(s.get("id"))
+            if s.get("role") == "censure":
+                # Une motion de censure n'est pas toujours rattachée au dossier du texte.
+                if info is None or info.get("objet") != "motion_censure":
+                    err.append(f"{s.get('id')} : pas une motion de censure")
+                continue
             if info is None or info.get("dossier_id") != t.get("dossier_an"):
                 err.append(f"{s.get('id')} : scrutin absent du dossier {t.get('dossier_an')}")
                 continue

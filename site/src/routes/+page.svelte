@@ -2,7 +2,7 @@
   import Recherche from '$lib/components/Recherche.svelte';
   import Regle from '$lib/components/Regle.svelte';
   import TexteLigne from '$lib/components/TexteLigne.svelte';
-  import { pluriel } from '$lib/format';
+  import { enLettres, pluriel } from '$lib/format';
   import { NOM } from '$lib/site';
 
   let { data } = $props();
@@ -57,7 +57,7 @@
 </section>
 
 <section>
-  <h2>Onze droits</h2>
+  <h2>{enLettres(data.droits.length)} droits</h2>
   <ul class="droits">
     {#each data.droits as d (d.code)}
       <li>

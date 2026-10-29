@@ -55,7 +55,8 @@ export const ROLE: Record<RoleScrutin, string> = {
   ensemble: 'Autre vote sur l’ensemble',
   motion: 'Motion',
   article: 'Vote sur un article',
-  amendement: 'Amendement clé'
+  amendement: 'Amendement clé',
+  censure: 'Motion de censure (49.3)'
 };
 
 /** Ce que veut dire « voter pour » sur ce scrutin (règle 14). */
@@ -93,3 +94,25 @@ export function typo(t: string): string {
     .replace(/« /g, '« ')
     .replace(/ »/g, ' »');
 }
+
+/** Petits nombres en toutes lettres, pour les titres (« Douze droits »). */
+export const enLettres = (n: number) =>
+  [
+    'Zéro',
+    'Un',
+    'Deux',
+    'Trois',
+    'Quatre',
+    'Cinq',
+    'Six',
+    'Sept',
+    'Huit',
+    'Neuf',
+    'Dix',
+    'Onze',
+    'Douze',
+    'Treize',
+    'Quatorze',
+    'Quinze',
+    'Seize'
+  ][n] ?? String(n);

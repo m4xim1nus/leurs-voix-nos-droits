@@ -1,4 +1,4 @@
-// Libellés d'affichage des onze droits de la grille v0 (pipeline/referentiels/droits.yaml).
+// Libellés d'affichage des douze droits de la grille v1 (pipeline/referentiels/droits.yaml).
 // La grille fait foi : ces libellés ne font que la dire en langage courant, et un test vérifie
 // qu'ils couvrent exactement ses codes.
 
@@ -31,7 +31,8 @@ export const DROITS: Record<string, Affichage> = {
     objet: 'les droits au travail et à la protection sociale'
   },
   environnement: { court: 'Environnement', objet: 'le droit à un environnement sain' },
-  sante: { court: 'Santé et fin de vie', objet: 'les droits en matière de santé et de fin de vie' }
+  sante: { court: 'Santé et fin de vie', objet: 'les droits en matière de santé et de fin de vie' },
+  citoyennete: { court: 'Droits civiques', objet: 'les droits civiques et politiques' }
 };
 
 export const ETIQUETTES: Record<string, string> = {

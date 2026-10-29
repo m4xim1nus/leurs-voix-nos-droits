@@ -15,7 +15,9 @@
       <span>{court(texte.principal.code)}</span></span
     >
     <span class="discret"
-      >voté le {date(texte.date)}, {legislature(texte.legislature)} législature</span
+      >{texte.sans_vote
+        ? 'adopté par le 49.3 sans vote final, non compté'
+        : `voté le ${date(texte.date)}`}, {legislature(texte.legislature)} législature</span
     >
   </span>
   <span class="visuellement-cache"

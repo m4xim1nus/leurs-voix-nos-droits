@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { pluriel } from '$lib/format';
+  import { enLettres, pluriel } from '$lib/format';
   import { NOM } from '$lib/site';
 
   let { data } = $props();
@@ -7,7 +7,7 @@
 
 <svelte:head><title>Les droits suivis, {NOM}</title></svelte:head>
 
-<h1>Onze droits</h1>
+<h1>{enLettres(data.droits.length)} droits</h1>
 <p class="chapo">
   La grille suit les droits des personnes face à la puissance publique et aux plus forts. Un texte
   touche un droit principal et, souvent, des droits secondaires, chacun dans un sens : il l’étend ou

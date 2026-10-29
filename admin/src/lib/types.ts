@@ -4,7 +4,7 @@
 export type Statut = 'brouillon' | 'a-relire' | 'valide' | 'ecarte';
 export type RoleDroit = 'principal' | 'secondaire';
 export type Sens = 'etend' | 'restreint';
-export type RoleScrutin = 'decisif' | 'ensemble' | 'motion' | 'article' | 'amendement';
+export type RoleScrutin = 'decisif' | 'ensemble' | 'motion' | 'article' | 'amendement' | 'censure';
 export type Pour = 'texte' | 'contre-texte' | 'a-trancher';
 
 export interface DroitQualifie {

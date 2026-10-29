@@ -94,3 +94,11 @@ def test_par_texte():
     r = scores.par_texte(TEMOINS, votes)["scores_deputes_textes"]
     assert r == [{"acteur_id": "PA1", "texte_id": "t", "votes_favorables": 2, "votes_defavorables": 1,
                   "abstentions": 0, "non_votants": 0, "score": 75.0}]
+
+
+def test_texte_sans_decisif_non_compte():
+    # Adopté par 49.3 sans vote final : ni le texte ni ses amendements ne comptent (règle 9).
+    t = {"textes": [{"id": "r", "droits": [{"code": "sante", "role": "principal", "sens": "restreint"}],
+                     "scrutins": [{"id": "C", "role": "censure", "pour": "contre-texte"},
+                                  {"id": "A", "role": "amendement", "pour": "contre-texte"}]}]}
+    assert scores.scrutins_comptes(t, scores.REGLES) == []

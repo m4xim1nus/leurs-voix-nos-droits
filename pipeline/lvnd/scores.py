@@ -66,6 +66,8 @@ def scrutins_comptes(temoins: dict, regles: dict) -> list[dict]:
     for t in temoins["textes"]:
         comptes = [s for s in t["scrutins"] if s["role"] in COMPTES and s["pour"] in ("texte", "contre-texte")]
         decisif = [s for s in comptes if s["role"] == "decisif"]
+        if not decisif:
+            continue  # adopté par 49.3 sans vote final : affiché, compté nulle part (règle 9)
         amdts = [s for s in comptes if s["role"] == "amendement"]
         if regles["ponderation"] == "decisif":
             amdts = []
@@ -250,3 +252,10 @@ def ecrire(export: Path, sc: dict[str, list[dict]]) -> None:
     """Écrit les scores dans data/export/, au format de `lvnd build`."""
     for nom in FICHIERS:
         pl.DataFrame(sc[nom], infer_schema_length=None).write_csv(export / f"{nom}.csv")
+    # Les référentiels (grille des droits) peuvent changer sans nouveau build : le site les lit ici.
+    from . import referentiels
+    if not (export / "meta.json").exists():
+        return
+    meta = json.loads((export / "meta.json").read_text())
+    meta["referentiels"] = {n: referentiels.charger(n) for n in ("droits", "mots_cles")}
+    (export / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1, default=str) + "\n")

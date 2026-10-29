@@ -69,7 +69,7 @@
  "referentiels": {
   "droits": {
    "statut": "valide",
-   "version": 0,
+   "version": 1,
    "droits": [
     {
      "code": "libertes",
@@ -114,6 +114,10 @@
     {
      "code": "sante",
      "libelle": "Santé, fin de vie, bioéthique"
+    },
+    {
+     "code": "citoyennete",
+     "libelle": "Droits civiques et politiques : droit de vote, élections, citoyenneté"
     }
    ],
    "etiquettes": [

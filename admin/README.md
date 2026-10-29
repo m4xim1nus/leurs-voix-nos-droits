@@ -18,8 +18,9 @@ npm run db:migrer                                   # schéma (migrations/)
 npm run dev                                         # http://localhost:5173
 ```
 
-`lvnd sync-admin` remplace le catalogue (textes, scrutins, groupes, grille)
-à partir de `data/export/`. Avec `--editorial`, il ajoute les
+`lvnd sync-admin` met le catalogue (textes, scrutins, groupes, grille) à
+jour à partir de `data/export/`, en n'écrivant que les différences avec D1
+(`--complet` pour tout réécrire, `--simuler` pour compter sans écrire). Avec `--editorial`, il ajoute les
 qualifications d'`editorial.json` absentes de D1, sans jamais écraser un
 brouillon. On peut le relancer après chaque `lvnd build`.
 
@@ -72,5 +73,7 @@ uv run lvnd download && uv run lvnd build && uv run lvnd check
 uv run lvnd sync-admin --remote
 ```
 
-Un sync complet écrit environ 80 000 lignes dans D1, index compris (limite
-gratuite : 100 000 par jour). Pas plus d'un sync distant par jour.
+Le sync est incrémental : il lit D1, puis n'écrit que les lignes
+ajoutées, modifiées ou disparues (quelques centaines par semaine). Un sync
+`--complet` écrit environ 80 000 lignes, index compris, près de la limite
+gratuite de D1 (100 000 par jour) : à réserver à une reconstruction.
