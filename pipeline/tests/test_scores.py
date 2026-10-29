@@ -87,3 +87,10 @@ def test_lvnd_scores_redonne_build(tmp_path):
         pytest.skip("data/editorial.json publié depuis le dernier `lvnd build`")
     for nom in ("scores_deputes", "scores_groupes"):
         assert (tmp_path / f"{nom}.csv").read_bytes() == (EXPORT / f"{nom}.csv").read_bytes(), nom
+
+
+def test_par_texte():
+    votes = [v("D", "PA1", "contre"), v("A1", "PA1", "pour"), v("A2", "PA1", "contre")]
+    r = scores.par_texte(TEMOINS, votes)["scores_deputes_textes"]
+    assert r == [{"acteur_id": "PA1", "texte_id": "t", "votes_favorables": 2, "votes_defavorables": 1,
+                  "abstentions": 0, "non_votants": 0, "score": 75.0}]
