@@ -69,6 +69,8 @@ def test_sql_echappe_les_apostrophes():
     assert sync_admin.sql_valeur(None) == "NULL" and sync_admin.sql_valeur(True) == "1"
     sql = sync_admin.inserts("t", ("a", "b"), [{"a": 1, "b": "x"}] * 3)
     assert len(sql) == 1 and sql[0].count("(1, 'x')") == 3
+    gros = sync_admin.inserts("t", ("a",), [{"a": "x" * 40_000}] * 5)
+    assert len(gros) == 3 and all(len(i.encode()) < 100_000 for i in gros)
 
 
 def test_qualifications_importees_valides_et_publiees():
@@ -86,7 +88,7 @@ def test_brouillons_charges_a_relire_sans_ecraser(tmp_path):
     (tmp_path / "b.yaml").write_text(
         "id: ''\ndossier_an: DLR5L17N2\nlegislature: 17\ntitre: Loi 2\nstatut: ecarte\nmotif_ecart: organisationnel\n")
     lignes = sync_admin.brouillons(tmp_path)
-    assert [(l["statut"], l["motif_ecart"]) for l in lignes] == [("a-relire", None), ("ecarte", "organisationnel")]
+    assert [(l["statut"], l["motif_ecart"]) for l in lignes] == [("a-relire", None), ("a-relire", "organisationnel")]
     assert "relecture" not in json.loads(lignes[0]["doc"])
     sql = sync_admin.script(tmp_path, None, lignes, avec_catalogue=False)
     assert "DELETE FROM" not in sql and "INSERT OR IGNORE INTO qualifications" in sql

@@ -45,12 +45,23 @@ def sql_valeur(v) -> str:
     return "'" + str(v).replace("'", "''") + "'"
 
 
+TAILLE_MAX = 90_000  # octets par instruction (D1 refuse au-delà de 100 Ko : SQLITE_TOOBIG)
+
+
 def inserts(table: str, colonnes: tuple[str, ...], lignes: list[dict], verbe: str = "INSERT") -> list[str]:
-    out = []
-    for i in range(0, len(lignes), LOT):
-        valeurs = ",\n".join("(" + ", ".join(sql_valeur(r.get(c)) for c in colonnes) + ")"
-                             for r in lignes[i:i + LOT])
-        out.append(f"{verbe} INTO {table} ({', '.join(colonnes)}) VALUES\n{valeurs};")
+    """INSERT par lots d'au plus LOT lignes et TAILLE_MAX octets (une ligne seule peut dépasser)."""
+    tete = f"{verbe} INTO {table} ({', '.join(colonnes)}) VALUES\n"
+    out, lot, taille = [], [], len(tete)
+    for r in lignes:
+        v = "(" + ", ".join(sql_valeur(r.get(c)) for c in colonnes) + ")"
+        n = len(v.encode()) + 2
+        if lot and (len(lot) >= LOT or taille + n > TAILLE_MAX):
+            out.append(tete + ",\n".join(lot) + ";")
+            lot, taille = [], len(tete)
+        lot.append(v)
+        taille += n
+    if lot:
+        out.append(tete + ",\n".join(lot) + ";")
     return out
 
 
@@ -138,7 +149,7 @@ AUTEUR_BROUILLONS = "claude (brouillon)"
 
 def brouillons(dossier: Path) -> list[dict]:
     """Qualifications préparées hors de l'admin (un YAML par texte, format de temoins.yaml plus
-    `statut` et `motif_ecart`), à charger au statut « à relire » ou « écarté ». Le champ
+    `statut` et `motif_ecart`), à charger au statut « à relire » (proposition d'écart comprise). Le champ
     `relecture` (notes pour le relecteur) n'est pas chargé."""
     date = datetime.now(timezone.utc).isoformat(timespec="seconds")
     out = []
@@ -151,6 +162,9 @@ def brouillons(dossier: Path) -> list[dict]:
         if statut == "ecarte" and not motif:
             raise SystemExit(f"{f} : texte écarté sans motif")
         doc = editorial.normaliser({**t, "droits": t.get("droits") or [], "scrutins": t.get("scrutins") or []})
+        # « écarté » est publiable : une proposition d'écart arrive « à relire », motif pré-rempli, et
+        # ne part qu'une fois que le relecteur a lui-même choisi « écarté ».
+        statut = "a-relire" if statut == "ecarte" else statut
         out.append({"dossier_an": doc["dossier_an"], "statut": statut, "doc": compact(doc), "motif_ecart": motif,
                     "modifie_par": AUTEUR_BROUILLONS, "modifie_le": date, "publie_empreinte": None})
     return out
