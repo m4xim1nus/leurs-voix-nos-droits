@@ -30,3 +30,8 @@ File d'attente brute, non ordonnée. Une ligne par item :
 - [ ] Relire `mots_cles.yaml` (brouillon) : motifs larges, sources de faux positifs (« eau », « soins », « violences », « justice ») (claude, 2026-10-29)
 - [→Étape 4] Taux de participation aux scrutins comptés sur la fiche député (règle 17), depuis les votes et les mandats (claude, 2026-10-29)
 - [ ] `data/lvnd.sqlite` pèse 193 Mo (votes en identifiants texte) : identifiants entiers si la taille gêne (claude, 2026-10-29)
+- [→Étape 4] `lvnd scores` : scores recalculés depuis `data/export/` et `editorial.json`, sans dump (choix F de `docs/CONCEPTION.md`) (claude, 2026-10-29)
+- [ ] Admin : afficher le diff entre la version publiée et le brouillon d'un texte (les révisions sont déjà gardées) (claude, 2026-10-29)
+- [ ] Admin : alerte quand `sync-admin` fait disparaître un scrutin retenu dans une qualification (scrutin renuméroté ou rattaché ailleurs) (claude, 2026-10-29)
+- [ ] Rôles d'édition dans l'admin (rédacteur, valideur) : à la passation, quand il y aura plusieurs personnes (claude, 2026-10-29)
+- [ ] Mettre à jour `docs/SOURCES.md` : le serveur de l'AN sert les plages par intermittence ; `download` reprend désormais d'un lancement à l'autre (claude, 2026-10-29)

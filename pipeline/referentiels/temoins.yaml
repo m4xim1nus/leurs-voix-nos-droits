@@ -125,7 +125,8 @@ textes:
         réserve sur la notion de domicile ; nouveau délit et procédure
         administrative d'expulsion validés.
     droits:
-      - { code: logement, role: principal, sens: restreint, sources: [ddd-23-01, fondation-logement-2023],
+      - { code: logement, role: principal, sens: restreint,
+          sources: [ddd-23-01, fondation-logement-2023, cncdh-lettre-2023-03, contribution-2023-853],
           justification: "Atteintes au domicile des occupants et des locataires en impayé « ni nécessaires ni proportionnées » (Défenseure des droits)." }
       - { code: police-justice, role: secondaire, sens: restreint, sources: [cc-2023-853],
           justification: "Nouveau délit, peines triplées, procédure administrative d'expulsion étendue." }
@@ -136,10 +137,15 @@ textes:
     sources:
       ddd-23-01: { auteur: Défenseur des droits, titre: "Avis 23-01 sur la proposition de loi", date: 2023-01-23,
                    url: "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=21552" }
-      cncdh-lettre-2023-03: { auteur: CNCDH, titre: "Lettre du président à l'Assemblée nationale concernant la PPL", date: 2023-03-22,
+      # Date du document (17/03) ; le site de la CNCDH indique le 22/03.
+      cncdh-lettre-2023-03: { auteur: CNCDH, titre: "Lettre du président à l'Assemblée nationale concernant la PPL", date: 2023-03-17,
                               url: "https://www.cncdh.fr/publications/lettre-du-president-lassemblee-nationale-concernant-la-ppl-visant-proteger-les" }
       fondation-logement-2023: { auteur: Fondation pour le logement des défavorisés, titre: "Loi Kasbarian-Bergé : la Constitution, dernier refuge des personnes sans domicile et mal logées", date: 2023-07-07,
                                  url: "https://www.fondationpourlelogement.fr/loi-kasbarian-berge-la-constitution-dernier-refuge-des-personnes-sans-domicile-et-mal-logees/" }
+      # Contribution extérieure collective de 35 organisations, jointe à la page de la Fondation :
+      # analyse article par article de la loi (retenue comme source par Max le 29/10/2026).
+      contribution-2023-853: { auteur: "Collectif de 35 associations et syndicats", titre: "Contribution extérieure collective, affaire n° 2023-853 DC", date: 2023-07-07,
+                               url: "https://www.fondationpourlelogement.fr/wp-content/uploads/2025/06/contribution_exterieure_signee-pdf.pdf" }
       cc-2023-853: { auteur: Conseil constitutionnel, titre: "Décision n° 2023-853 DC", date: 2023-07-26,
                      url: "https://www.conseil-constitutionnel.fr/decision/2023/2023853DC.htm" }
     scrutins:
@@ -148,9 +154,22 @@ textes:
       - { id: VTANR5L16V663, role: ensemble, pour: texte, objet: "ensemble, 1re lecture (40-13)" }
       - { id: VTANR5L16V635, role: motion, pour: contre-texte, objet: "motion de rejet préalable, 1re lecture (43-150)" }
       - { id: VTANR5L16V1316, role: motion, pour: contre-texte, objet: "motion de rejet préalable, 2e lecture (60-121)" }
-      # Candidats « amendement clé » : suppressions d'articles. Contenu des articles à vérifier.
-      - { id: VTANR5L16V636, role: amendement, pour: a-trancher, objet: "suppression de l'article 4, 1re lecture (36-139)" }
-      - { id: VTANR5L16V1317, role: amendement, pour: a-trancher, objet: "suppression de l'article 1er A, 2e lecture (18-91)" }
+      # Amendements clés (2e lecture, dernière lecture de l'AN où des suppressions ont été votées,
+      # règle 11), validés par Max le 29/10/2026. Chaque article visé restreint le droit au logement
+      # ou les garanties des occupants : voter sa suppression va contre le texte. Écartés : les
+      # suppressions de 1re lecture (V636 sur l'article 4, V648 sur l'article 1er A), et V1337, qui
+      # n'est pas une suppression. Détail des sources par article : `note`.
+      - { id: VTANR5L16V1317, role: amendement, pour: contre-texte, objet: "suppression de l'article 1er A, délit d'occupation et amende des locataires maintenus (18-91)" }
+      - { id: VTANR5L16V1327, role: amendement, pour: contre-texte, objet: "suppression de l'article 1er B, fin des délais du juge pour les occupants entrés par manœuvres (16-82)" }
+      - { id: VTANR5L16V1333, role: amendement, pour: contre-texte, objet: "suppression de l'article 4, clause résolutoire obligatoire et délais conditionnés (17-61)" }
+      - { id: VTANR5L16V1335, role: amendement, pour: contre-texte, objet: "suppression de l'article 5, délais de procédure et de maintien raccourcis (18-69)" }
+    note: >-
+      Amendements clés de 2e lecture, dernière lecture de l'AN où des suppressions ont été
+      votées (règle 11). Mesures visées et sources : article 1er A, délit d'occupation et amende
+      de 7 500 € (CNCDH, Fondation pour le logement) ; article 1er B, délais du juge supprimés
+      (contribution extérieure) ; article 4, clause résolutoire et délais conditionnés
+      (Fondation, contribution extérieure) ; article 5, délais raccourcis (Défenseure des droits,
+      CNCDH, Fondation). Les suppressions de 1re lecture ne sont pas comptées.
 
   - id: narcotrafic
     titre: "Loi visant à sortir la France du piège du narcotrafic"

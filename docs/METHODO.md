@@ -5,6 +5,8 @@ Base de la page Méthodologie du site. Chaque règle de ce document est
 le 29/10/2026, à la fin du spike de l'étape 1. Les règles de calcul (14 à
 19) l'ont été le même jour, à l'étape 2, sur simulation des six textes
 témoins (`pipeline/referentiels/temoins.yaml`).
+Le choix de la lecture et la notion de source qui « cite » une mesure (règle
+11) l'ont été le même jour, sur le cas de Kasbarian-Bergé.
 
 ## Grille des droits
 
@@ -67,9 +69,15 @@ Grille v0 : `pipeline/referentiels/droits.yaml`. Onze droits et deux
     garantie (rapport éducatif avant toute détention provisoire). Voter
     cette suppression va donc dans le sens du texte. **Un seul scrutin par
     article et par lecture** : celui qui a fixé le sort de l'article
-    (l'amendement adopté, sinon le dernier mis aux voix). Selon les textes,
-    on compte de 0 (immigration, aide à mourir) à 9 amendements clés
-    (narcotrafic).
+    (l'amendement adopté, sinon le dernier mis aux voix). **Une seule
+    lecture** : la dernière lecture de l'AN où des suppressions ont été
+    mises aux voix. C'est la rédaction la plus proche du texte soumis au
+    scrutin décisif (règle 6) : la 1re lecture pour le narcotrafic et la
+    justice des mineurs, la 2e pour Kasbarian-Bergé. Une source
+    « cite » une mesure quand elle la met en cause. Une décision du Conseil
+    constitutionnel qui la décrit pour la valider ne suffit pas. Selon les
+    textes, on compte de 0 (immigration, aide à mourir) à 9 amendements
+    clés (narcotrafic).
 
 ## Positions de groupe
 

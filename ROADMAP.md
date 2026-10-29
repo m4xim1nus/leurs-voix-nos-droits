@@ -76,15 +76,20 @@ calcul arrêtées.
 - ✅ Règles de calcul 14 à 19 validées, y compris absences, droits
   secondaires, score de groupe, cohésion et lignée UDR → UDDPLR.
 - ✅ Amendements clés du narcotrafic (9) et de la justice des mineurs (4).
-- ⏳ Dump des amendements de la XVIe : téléchargement par blocs, lancé en
+- ⏳ Dump des amendements de la XVIe : téléchargement par plages, lancé en
   processus détaché (journal : `data/raw/download_16.log`). Il est fini
-  quand `an_amendements_16` figure dans `data/raw/manifeste.json`. Ensuite :
+  quand `an_amendements_16` figure dans `data/raw/manifeste.json`. Le
+  29/10, le serveur de l'AN ne servait plus les plages de 1 Mio.
+  `download` garde désormais chaque octet reçu, demande des plages de
+  256 Kio et reprend un fichier partiel d'un lancement à l'autre. Ensuite :
   `lvnd build`, `lvnd check`, mesure du rattachement XVIe dans
-  `docs/SOURCES.md`, proposition à Max des amendements clés de
-  Kasbarian-Bergé (`V636`, `V1317` en `a-trancher`).
+  `docs/SOURCES.md`.
+- ✅ Amendements clés de Kasbarian-Bergé (4, en 2e lecture). La règle 11
+  est complétée : dernière lecture de l'AN où des suppressions ont été
+  votées, et une source « cite » une mesure quand elle la met en cause.
 - ⏳ Relecture des scores des six témoins avec Max.
 
-## Étape 3 : admin en ligne
+## Étape 3 : admin en ligne ← *en cours*
 
 But : qualifier les textes ailleurs que dans un fichier, et publier sans
 passer par la machine de Max.
@@ -103,8 +108,26 @@ passer par la machine de Max.
 - **« Publier »** : export de D1 → `data/editorial.json`, commit par l'API
   GitHub, puis rebuild du site. Chaque modification garde son auteur et
   sa date.
-- **Livrable** : admin en ligne, les six textes témoins ressaisis, et une
+- **Livrable** : admin en ligne, les six textes témoins importés (choix D1), et une
   vingtaine de textes qualifiés par Max à travers elle.
+
+État au 29/10/2026 (conception : `docs/CONCEPTION.md`) :
+
+- ✅ `data/editorial.json` (format 1, généré depuis `temoins.yaml`). Le
+  pipeline le lit pour les scores, et `lvnd check` contrôle chaque
+  qualification.
+- ✅ `lvnd sync-admin` : catalogue et qualifications publiées vers D1
+  (locale ou distante).
+- ✅ App `admin/` : liste des textes, fiche texte (qualification, scrutins
+  avec positions de groupe, aperçu du score, contrôles, historique),
+  aperçu des scores, publication par l'API GitHub, journal. Elle vérifie
+  elle-même le jeton d'Access. Testée en local sur D1 émulée.
+- ✅ Tests croisés pipeline ↔ admin : sérialisation d'`editorial.json` à
+  l'octet près, scores de groupe identiques.
+- ✅ Choix A à F de `docs/CONCEPTION.md` validés par Max.
+- ⏳ Mise en service par Max (D1, jeton GitHub, Access, domaine) :
+  `admin/README.md`. Le dépôt n'a pas encore de remote GitHub.
+- ⏳ Vingtaine de textes qualifiés par Max.
 
 ## Étape 4 : site public v1
 

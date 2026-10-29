@@ -9,6 +9,7 @@ node_modules/
 .svelte-kit/
 build/
 dist/
+.wrangler/
 
 # Dumps open data téléchargés (cache local, régénérable)
 data/raw/

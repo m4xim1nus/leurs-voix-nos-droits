@@ -9,7 +9,7 @@ from pathlib import Path
 
 import polars as pl
 
-from . import amendements, an, candidats, positions, referentiels, scores, textes
+from . import amendements, an, candidats, editorial, positions, referentiels, scores, textes
 from .sources import extraits, lire_manifeste
 
 # Votes nominatifs compacts (docs/SOURCES.md) : numéro de scrutin, identifiant numérique du
@@ -118,8 +118,10 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
     grp = an.groupes(raw, {v["groupe_id"] for v in ventil} | {a["groupe_id"] for a in appart})
     pos = positions.positions(ventil)
 
-    _log("== Scores (textes témoins)")
-    sc = scores.calculer(referentiels.temoins(), votes)
+    qualif = editorial.charger()
+    _log(f"== Scores ({len(qualif['textes'])} textes qualifiés, "
+         f"{'data/editorial.json' if editorial.CHEMIN.exists() else 'textes témoins'})")
+    sc = scores.calculer(qualif, votes)
 
     amd = (amendements.utiles(pl.concat(amdts, how="diagonal"), {a["amendement_id"] for a in par_amdt.values()})
            if amdts else pl.DataFrame())

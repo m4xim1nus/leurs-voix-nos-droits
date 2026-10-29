@@ -7,7 +7,7 @@ sans faire échouer.
 import sqlite3
 from pathlib import Path
 
-from . import referentiels
+from . import editorial, referentiels
 
 
 def _q(con, sql: str, *args) -> list[tuple]:
@@ -76,6 +76,19 @@ def _temoins(con, controle, out) -> None:
             out.append(f"info {n} : sens à trancher pour {', '.join(attente)}")
 
 
+def _qualifications(con, controle, out) -> None:
+    """Chaque qualification publiée passe les contrôles de l'admin (editorial.valider)."""
+    doc = editorial.charger()
+    infos = {sid: {"dossier_id": d, "etape": e, "division": div} for sid, d, e, div in _q(
+        con, "select s.id, s.dossier_id, s.etape, a.division from scrutins s "
+             "left join amendements a on a.id = s.amendement_id")}
+    for t in doc["textes"]:
+        err, avert = editorial.valider(t, infos)
+        controle(f"{t['id']} : qualification valide", not err, " ; ".join(err))
+        out += [f"info {t['id']} : {a}" for a in avert]
+    out.append(f"info {len(doc['textes'])} textes qualifiés, {len(doc.get('ecartes', []))} écartés")
+
+
 def verifier(chemin: Path) -> tuple[bool, list[str]]:
     if not chemin.exists():
         return False, [f"base absente : {chemin} (lancer `lvnd build`)"]
@@ -141,6 +154,9 @@ def verifier(chemin: Path) -> tuple[bool, list[str]]:
 
     out.append("\n== Textes témoins (referentiels/temoins.yaml)")
     _temoins(con, controle, out)
+
+    out.append(f"\n== Qualifications ({'data/editorial.json' if editorial.CHEMIN.exists() else 'textes témoins'})")
+    _qualifications(con, controle, out)
 
     out.append("\n== Catalogue")
     for nature, n, c in _q(con, "select nature, count(*), sum(droits_candidats != '' or etiquettes_candidates != '') "

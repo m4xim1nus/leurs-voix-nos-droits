@@ -1,5 +1,5 @@
 {
- "genere_le": "2026-10-29T10:31:09+00:00",
+ "genere_le": "2026-10-29T13:41:34+00:00",
  "sources": {
   "an_scrutins_17": {
    "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/loi/scrutins/Scrutins.json.zip",
@@ -54,8 +54,8 @@
   "mandats": 1316,
   "appartenances": 2729,
   "mises_au_point": 5199,
-  "scores_scrutins": 82,
-  "scores_deputes": 5559,
+  "scores_scrutins": 98,
+  "scores_deputes": 5563,
   "scores_groupes": 161,
   "votes": 1972492,
   "fichiers_votes": 44

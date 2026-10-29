@@ -1,0 +1,265 @@
+/* Admin : outil de travail, polices système, dense et lisible. Pas de direction visuelle du site
+   public ici (étape 4). Couleurs en jetons, redéfinies en mode sombre. */
+
+:root {
+  color-scheme: light;
+  --fond: #f7f5f0;
+  --surface: #ffffff;
+  --surface-2: #efece4;
+  --texte: #1d1f24;
+  --texte-2: #5b5f69;
+  --bord: #d9d5ca;
+  --accent: #1f3a5f;
+  --accent-texte: #ffffff;
+  --lien: #1f4f8a;
+  --ok: #2f6b3a;
+  --ok-fond: #e3f1e5;
+  --alerte: #8a5a00;
+  --alerte-fond: #fbf0d6;
+  --erreur: #a3271f;
+  --erreur-fond: #fbe4e1;
+  --etend: #2f6b3a;
+  --restreint: #a3271f;
+  --rayon: 6px;
+  --police: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+  --mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --fond: #16181c;
+    --surface: #1e2126;
+    --surface-2: #272b31;
+    --texte: #e6e4df;
+    --texte-2: #a3a7b0;
+    --bord: #3a3f47;
+    --accent: #8fb3e0;
+    --accent-texte: #10141a;
+    --lien: #9cc1f0;
+    --ok: #7fc48b;
+    --ok-fond: #1f3324;
+    --alerte: #e6b75c;
+    --alerte-fond: #3a2f17;
+    --erreur: #f0877d;
+    --erreur-fond: #3d1f1c;
+    --etend: #7fc48b;
+    --restreint: #f0877d;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font: 15px/1.45 var(--police);
+}
+
+a {
+  color: var(--lien);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 1.2em 0 0.5em;
+}
+h1 {
+  font-size: 1.45rem;
+}
+h2 {
+  font-size: 1.15rem;
+}
+h3 {
+  font-size: 1rem;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+input[type='text'],
+input[type='url'],
+input[type='date'],
+input[type='search'],
+select,
+textarea {
+  background: var(--surface);
+  border: 1px solid var(--bord);
+  border-radius: var(--rayon);
+  padding: 0.3rem 0.45rem;
+  max-width: 100%;
+}
+
+textarea {
+  width: 100%;
+  min-height: 3.2em;
+  resize: vertical;
+}
+
+button,
+.bouton {
+  background: var(--surface-2);
+  border: 1px solid var(--bord);
+  border-radius: var(--rayon);
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--texte);
+  display: inline-block;
+}
+button.principal {
+  background: var(--accent);
+  color: var(--accent-texte);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+button.lien {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--lien);
+  text-decoration: underline;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid var(--bord);
+}
+th {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--texte-2);
+  position: sticky;
+  top: 0;
+  background: var(--fond);
+}
+
+.carte {
+  background: var(--surface);
+  border: 1px solid var(--bord);
+  border-radius: var(--rayon);
+  padding: 0.8rem 1rem;
+  margin: 0.8rem 0;
+}
+
+.discret {
+  color: var(--texte-2);
+  font-size: 0.88rem;
+}
+.mono {
+  font-family: var(--mono);
+  font-size: 0.85em;
+}
+.nombre {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.pastille {
+  display: inline-block;
+  padding: 0 0.45rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 1px solid var(--bord);
+  background: var(--surface-2);
+  white-space: nowrap;
+}
+.pastille.valide {
+  background: var(--ok-fond);
+  color: var(--ok);
+  border-color: currentColor;
+}
+.pastille.a-relire {
+  background: var(--alerte-fond);
+  color: var(--alerte);
+  border-color: currentColor;
+}
+.pastille.brouillon {
+  border-style: dashed;
+}
+.pastille.ecarte {
+  color: var(--texte-2);
+}
+.pastille.etend {
+  color: var(--etend);
+  border-color: currentColor;
+}
+.pastille.restreint {
+  color: var(--restreint);
+  border-color: currentColor;
+}
+
+.messages {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0;
+}
+.messages li {
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--rayon);
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+.messages .erreur {
+  background: var(--erreur-fond);
+  color: var(--erreur);
+}
+.messages .avertissement {
+  background: var(--alerte-fond);
+  color: var(--alerte);
+}
+.messages .ok {
+  background: var(--ok-fond);
+  color: var(--ok);
+}
+
+.ligne {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.8rem;
+  align-items: center;
+}
+
+label.champ {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.85rem;
+  color: var(--texte-2);
+}
+label.champ > :is(input, select, textarea) {
+  color: var(--texte);
+  font-size: 0.95rem;
+}
+
+.visuellement-cache {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

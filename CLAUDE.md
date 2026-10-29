@@ -93,17 +93,23 @@ data/editorial.json  qualifications publiées, écrit par l'admin (versionné)
 docs/SOURCES.md      fiche des sources (étape 1)
 docs/METHODO.md      grille des droits et règles de calcul, base de la page Méthodologie
 docs/CONCEPTION.md   conception du site public et de l'admin
-pipeline/lvnd/       package Python (CLI download / build / check / sync-admin)
+docs/A_VALIDER.md    décisions préparées, en attente de Max (vidé au fil des arbitrages)
+pipeline/lvnd/       package Python (CLI download / build / check / editorial / sync-admin)
 pipeline/explo/      scripts jetables (spike)
 pipeline/referentiels/  YAML maintenus à la main (droits, mots-clés, groupes)
 pipeline/tests/      pytest, dont les textes témoins
 site/                site public : SvelteKit adapter-static + d3
 admin/               admin : SvelteKit adapter-cloudflare + D1, derrière Cloudflare Access
+                     (schéma dans admin/migrations/, mise en service dans admin/README.md)
 build.sh             build Cloudflare Pages du site public (aucun téléchargement)
 ```
 
-`site/` et `admin/` n'existent pas encore : ils seront créés aux étapes 3
-et 4.
+`site/` n'existe pas encore : il sera créé à l'étape 4.
+
+`data/editorial.json` a le même format que `temoins.yaml`, sans les champs
+que l'open data fournit. Le pipeline et l'admin le sérialisent à l'octet
+près de la même façon, et un test croisé le vérifie. Tant que l'admin n'a
+rien publié, il est généré depuis `temoins.yaml` (`lvnd editorial`).
 
 ## Suivi
 
@@ -120,9 +126,13 @@ et 4.
 cd pipeline && uv sync              # environnement Python
 cd pipeline && uv run lvnd download # dumps AN → data/raw/        (étape 2)
 cd pipeline && uv run lvnd build    # → data/lvnd.sqlite + data/export/
-cd pipeline && uv run lvnd check    # invariants, textes témoins
+cd pipeline && uv run lvnd check    # invariants, textes témoins, qualifications
 cd pipeline && uv run pytest
+cd pipeline && uv run lvnd sync-admin --local --editorial   # catalogue → D1 de l'admin (--remote en ligne)
+
+cd admin && npm ci && npm run db:migrer && npm run dev     # admin en local (D1 émulée)
+cd admin && npm run check && npm test && npm run format:check
 ```
 
-Les commandes du site et de l'admin s'ajouteront aux étapes 3 et 4, sur
-le modèle de quifaitlaloi.
+Les commandes du site s'ajouteront à l'étape 4, sur le modèle de
+quifaitlaloi.

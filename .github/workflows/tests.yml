@@ -1,0 +1,42 @@
+# Tests à chaque push et PR (repris de quifaitlaloi). Le build du site public s'ajoutera à
+# l'étape 4 ; l'admin se déploie à la main (admin/README.md).
+
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  tests:
+    name: Tests (pipeline et admin)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          cache-dependency-glob: pipeline/uv.lock
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: admin/package-lock.json
+
+      - name: Tests pipeline (les tests `donnees` exigent la base locale, sautés en CI)
+        working-directory: pipeline
+        run: uv run --quiet pytest -q
+
+      - name: Tests admin
+        working-directory: admin
+        run: |
+          npm ci
+          npm run check
+          npm test
+          npm run format:check
