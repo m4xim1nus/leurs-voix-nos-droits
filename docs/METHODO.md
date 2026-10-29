@@ -1,11 +1,10 @@
 # Méthodologie
 
 Base de la page Méthodologie du site. Chaque règle de ce document est
-**validée par Max** avant d'entrer en vigueur. Les règles ci-dessous l'ont
-été le 29/10/2026, à la fin du spike de l'étape 1. Elles ont été testées
-sur six textes témoins (`pipeline/referentiels/temoins.yaml`). Les règles
-de calcul (abstention, absences, pondération, changement de groupe)
-viendront à l'étape 2.
+**validée par Max** avant d'entrer en vigueur. Les règles 1 à 13 l'ont été
+le 29/10/2026, à la fin du spike de l'étape 1. Les règles de calcul (14 à
+19) l'ont été le même jour, à l'étape 2, sur simulation des six textes
+témoins (`pipeline/referentiels/temoins.yaml`).
 
 ## Grille des droits
 
@@ -62,19 +61,65 @@ Grille v0 : `pipeline/referentiels/droits.yaml`. Onze droits et deux
     opposition au texte les créditerait d'un vote favorable aux droits.
 11. **Amendements clés** : seuls entrent en compte les amendements de
     suppression ou de rétablissement d'un article qui porte une mesure
-    citée par une source. Max fixe le sens de chacun. Leur pondération sera
-    décidée à l'étape 2 : selon les textes, on compte de 0 (immigration,
-    rejetée d'emblée à l'AN) à 866 scrutins sur amendement (aide à
-    mourir).
+    citée par une source. Max fixe le sens de chacun, d'après le contenu de
+    l'article et non d'après la nature de l'amendement. Sur la justice des
+    mineurs, le RN propose de supprimer l'article 7, qui ajoute une
+    garantie (rapport éducatif avant toute détention provisoire). Voter
+    cette suppression va donc dans le sens du texte. **Un seul scrutin par
+    article et par lecture** : celui qui a fixé le sort de l'article
+    (l'amendement adopté, sinon le dernier mis aux voix). Selon les textes,
+    on compte de 0 (immigration, aide à mourir) à 9 amendements clés
+    (narcotrafic).
 
 ## Positions de groupe
 
 12. La position d'un groupe est sa **majorité parmi les exprimés** (pour
     contre contre), toujours affichée avec sa cohésion. Quand l'abstention
     l'emporte à la fois sur le pour et sur le contre, la position porte la
-    mention « majoritairement abstentionniste ». datan.fr et
+    mention « majoritairement abstentionniste ». En cas d'égalité entre pour
+    et contre, la position est « partagée ». La cohésion est
+    la part des votants du groupe (pour, contre et abstention) qui ont voté
+    comme la position. Exemple : 10 pour, 2 contre et 8 abstentions donnent
+    « pour », avec une cohésion de 50 %. datan.fr et
     leurs-votes.fr comptent l'abstention comme une position : l'écart
     touche environ 3 % des positions (`docs/SOURCES.md`, contrôle croisé).
 13. **Mises au point** (un député déclare après coup qu'il voulait voter
     autrement) : affichées, pas comptées, puisque le résultat officiel ne
     change pas.
+
+## Calcul des scores
+
+14. **Vote favorable aux droits.** Sur chaque scrutin compté et pour chaque
+    droit touché, voter « pour » est favorable ou défavorable selon deux
+    sens : celui du droit (le texte l'étend ou le restreint) et celui du
+    scrutin (voter pour va dans le sens du texte, ou contre lui). Sur un
+    texte qui restreint un droit, voter contre le texte est favorable, et
+    voter pour la suppression d'un de ses articles restrictifs aussi.
+15. **Score** d'un député ou d'un groupe sur un droit : part pondérée de
+    ses votes favorables parmi ses votes comptés, de 0 à 100. Le score
+    « global » prend le sens du droit principal de chaque texte. Le score d'un droit compte les textes où ce droit est
+    principal **et** ceux où il est secondaire, chacun avec son propre sens
+    (sur l'immigration : `etrangers` restreint, `enfants` étend).
+16. **Abstention : exclue du calcul.** Elle n'entre pas dans le score et
+    s'affiche à côté (« 2 abstentions »). Elle n'est donc jamais assimilée
+    à un vote contre. Simulation : la compter comme demi-vote favorable
+    ferait perdre 8 points à ECOS et GDR en XVIIe.
+17. **Absences et non-votants : hors calcul.** Un député
+    absent n'a pas voté : il n'a pas de score sur ce scrutin. Un
+    non-votant non plus, et c'est souvent la présidence de séance. Le taux
+    de participation aux scrutins comptés s'affiche à côté du score.
+18. **Pondération : chaque texte pèse 1.** Le scrutin décisif en vaut la
+    moitié, et les amendements clés se partagent l'autre moitié à parts
+    égales. Un texte sans amendement clé ne compte que son décisif, qui
+    pèse alors 1. Un texte à neuf amendements n'écrase donc pas les autres.
+    Simulation : compter chaque scrutin pour 1 ferait passer EPR de 37 à 20
+    en XVIIe.
+19. **Changement de groupe : le groupe du jour du vote.** Chaque vote
+    compte pour le groupe où siégeait le député ce jour-là, d'après la
+    ventilation officielle de l'AN. La fiche d'un député réunit tous ses
+    votes et liste ses groupes successifs. Un groupe qui change de nom
+    (nouvel organe à l'AN) forme une seule **lignée**, sous son nom le plus
+    récent : SOC → SOC-A en XVIe, À Droite → UDR → UDDPLR en XVIIe
+    (`pipeline/referentiels/groupes.yaml`). Le score d'un
+    groupe agrège les votes de ses membres. On ne le calcule pas sur ses
+    positions, qui servent à l'affichage scrutin par scrutin.

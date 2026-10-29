@@ -1,0 +1,17 @@
+# Organes successifs d'un même groupe politique (AN).
+#
+# Quand un groupe change de nom, l'AN crée un nouvel organe, et les ventilations
+# des scrutins mêlent parfois l'ancien et le nouveau (jamais les deux dans un même
+# scrutin). Les positions restent calculées par organe, tel que publié. Les scores
+# de groupe, eux, réunissent une lignée sous son organe le plus récent.
+#
+# nouvel organe: organe qu'il continue
+
+suites:
+  # Socialistes et apparentés, XVIe : sortie de l'intergroupe NUPES le 19/10/2023. Les
+  # ventilations utilisent PO830170 dès le 14/12/2022 (8 scrutins) et PO800496 jusqu'au 14/03/2024.
+  PO830170: PO800496
+  # Groupe d'Éric Ciotti, XVIIe : « À Droite » (18/07/2024), « UDR » (12/09/2024), puis nouvel
+  # organe du même nom le 05/09/2025 (15 des 16 membres de l'UDR y passent).
+  PO847173: PO845520
+  PO872880: PO847173

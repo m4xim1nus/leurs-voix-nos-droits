@@ -55,32 +55,60 @@ def lire_manifeste(raw: Path) -> dict:
     return json.loads(p.read_text()) if p.exists() else {}
 
 
-def telecharger(client: httpx.Client, url: str, cible: Path, essais: int = 10) -> str | None:
-    """Télécharge `url` dans `cible` et renvoie son `Last-Modified`. Le serveur de l'AN coupe
-    parfois la connexion au milieu des gros dumps (amendements, ~350 Mo) : on reprend là où le
-    transfert s'est arrêté (en-tête `Range`), en vérifiant que le fichier n'a pas changé entre-temps."""
+BLOC = 1 << 20
+
+
+def telecharger(client: httpx.Client, url: str, cible: Path, patience: int = 3600) -> str | None:
+    """Télécharge `url` dans `cible` et renvoie son `Last-Modified`.
+
+    Le serveur de l'AN (derrière un CDN) coupe souvent la connexion au milieu des gros dumps
+    (amendements, ~350 Mo), et une reprise d'un seul tenant (`Range: bytes=N-`) peut ensuite
+    renvoyer `206` sans aucun octet, plusieurs fois de suite. On télécharge donc d'abord d'un seul
+    flux, puis, en cas de coupure, par blocs de 1 Mio redemandés jusqu'à ce que le serveur les
+    serve. On abandonne après `patience` secondes sans progrès. `If-Range` garantit que le fichier
+    n'a pas changé entre-temps.
+    """
     cible.unlink(missing_ok=True)
-    modifie = None
-    for essai in range(1, essais + 1):
-        recu = cible.stat().st_size if cible.exists() else 0
-        entetes = {"Range": f"bytes={recu}-", "If-Range": modifie} if recu and modifie else {}
-        try:
-            with client.stream("GET", url, headers=entetes) as r:
+    modifie, taille = None, None
+    try:
+        with client.stream("GET", url) as r:
+            r.raise_for_status()
+            modifie = r.headers.get("last-modified")
+            taille = int(r.headers["content-length"]) if "content-length" in r.headers else None
+            with cible.open("wb") as f:
+                for bloc in r.iter_bytes(BLOC):
+                    f.write(bloc)
+    except httpx.TransportError as e:
+        if taille is None or modifie is None:
+            raise
+        print(f"  coupure à {cible.stat().st_size:,} o ({type(e).__name__}) : suite par blocs", file=sys.stderr)
+    recu = cible.stat().st_size
+    if taille is None or recu == taille:
+        return modifie
+    progres, attente, palier = time.monotonic(), 5, recu
+    with cible.open("ab") as f:
+        while recu < taille:
+            try:
+                r = client.get(url, headers={"Range": f"bytes={recu}-{min(recu + BLOC, taille) - 1}",
+                                             "If-Range": modifie})
+                if r.status_code == 200:
+                    raise SystemExit(f"{url} a changé pendant le téléchargement : relancer")
                 r.raise_for_status()
-                if recu and r.status_code != 206:  # fichier modifié ou reprise refusée : on repart de zéro
-                    recu = 0
-                modifie = r.headers.get("last-modified")
-                with cible.open("ab" if recu else "wb") as f:
-                    for bloc in r.iter_bytes(1 << 20):
-                        f.write(bloc)
-            return modifie
-        except (httpx.RemoteProtocolError, httpx.ReadError, httpx.ReadTimeout) as e:
-            if essai == essais:
-                raise
-            attente = 30 * essai
-            print(f"  coupure à {cible.stat().st_size:,} o ({type(e).__name__}), reprise dans {attente} s "
-                  f"({essai}/{essais})", file=sys.stderr)
+                if r.content:
+                    f.write(r.content)
+                    recu += len(r.content)
+                    progres, attente = time.monotonic(), 5
+                    if recu - palier >= 20 * BLOC or recu == taille:
+                        print(f"  {recu:,} / {taille:,} o", file=sys.stderr)
+                        palier = recu
+                    continue
+            except httpx.TransportError:
+                pass
+            if time.monotonic() - progres > patience:
+                raise SystemExit(f"{url} : aucun octet reçu depuis {patience} s, arrêt à {recu:,} / {taille:,} o")
             time.sleep(attente)
+            attente = min(2 * attente, 120)
+    return modifie
 
 
 def download(raw: Path, cles: list[str] | None = None) -> None:

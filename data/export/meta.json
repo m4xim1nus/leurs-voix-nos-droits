@@ -1,0 +1,339 @@
+{
+ "genere_le": "2026-10-29T10:31:09+00:00",
+ "sources": {
+  "an_scrutins_17": {
+   "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/loi/scrutins/Scrutins.json.zip",
+   "last_modified": "Thu, 29 Oct 2026 05:25:21 GMT",
+   "taille": 28543617,
+   "sha256": "704b8cbc8dda3b2c2ee151a1da8f6ae7788b0e04b4c36c5486724cc8d2a965c9",
+   "telecharge_le": "2026-10-29T09:09:47+00:00"
+  },
+  "an_dossiers_17": {
+   "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/loi/dossiers_legislatifs/Dossiers_Legislatifs.json.zip",
+   "last_modified": "Thu, 29 Oct 2026 01:16:31 GMT",
+   "taille": 11090454,
+   "sha256": "acf20f24fe98987b34a96e2f71735795a87655ff89a9d2a458da1cb4cdc4e97a",
+   "telecharge_le": "2026-10-29T09:09:48+00:00"
+  },
+  "an_amendements_17": {
+   "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/loi/amendements_div_legis/Amendements.json.zip",
+   "last_modified": "Thu, 29 Oct 2026 01:20:48 GMT",
+   "taille": 347635855,
+   "sha256": "92d309461bb9d47e2ef0f6c2b8ed1e8f71f52e8824daeb2e66adeb16d407f92b",
+   "telecharge_le": "2026-10-29T09:10:12+00:00"
+  },
+  "an_scrutins_16": {
+   "url": "https://data.assemblee-nationale.fr/static/openData/repository/16/loi/scrutins/Scrutins.json.zip",
+   "last_modified": "Fri, 28 Jun 2024 10:22:27 GMT",
+   "taille": 10107912,
+   "sha256": "adc5e57d3ad5904fd11e176b531b3d525d4ecfdf78db9587f93a14452601126b",
+   "telecharge_le": "2026-10-29T09:10:31+00:00"
+  },
+  "an_dossiers_16": {
+   "url": "https://data.assemblee-nationale.fr/static/openData/repository/16/loi/dossiers_legislatifs/Dossiers_Legislatifs.json.zip",
+   "last_modified": "Fri, 28 Jun 2024 10:16:19 GMT",
+   "taille": 9085119,
+   "sha256": "6a2369c01a44711362b7c9a79ed13c001400cbb00dc6bade7b05499d2e6d478e",
+   "telecharge_le": "2026-10-29T09:11:03+00:00"
+  },
+  "an_amo": {
+   "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/amo/tous_acteurs_mandats_organes_xi_legislature/AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip",
+   "last_modified": "Thu, 29 Oct 2026 01:34:29 GMT",
+   "taille": 13718658,
+   "sha256": "0a077259cac5cac04fecd8a12a922a481b564aba3651c9cec8c533733fde8a33",
+   "telecharge_le": "2026-10-29T09:14:46+00:00"
+  }
+ },
+ "comptes": {
+  "textes": 479,
+  "scrutins": 13305,
+  "positions_groupes": 155543,
+  "amendements": 12475,
+  "groupes": 26,
+  "deputes": 839,
+  "mandats": 1316,
+  "appartenances": 2729,
+  "mises_au_point": 5199,
+  "scores_scrutins": 82,
+  "scores_deputes": 5559,
+  "scores_groupes": 161,
+  "votes": 1972492,
+  "fichiers_votes": 44
+ },
+ "votes_codes": {
+  "P": "pour",
+  "C": "contre",
+  "A": "abstention",
+  "N": "non_votant"
+ },
+ "referentiels": {
+  "droits": {
+   "statut": "valide",
+   "version": 0,
+   "droits": [
+    {
+     "code": "libertes",
+     "libelle": "Libertés publiques : expression, conscience, manifestation, association, culte"
+    },
+    {
+     "code": "police-justice",
+     "libelle": "Garanties face à la police et à la justice pénale, droits de la défense, droits des personnes détenues"
+    },
+    {
+     "code": "vie-privee",
+     "libelle": "Vie privée et surveillance"
+    },
+    {
+     "code": "etrangers",
+     "libelle": "Droits des personnes étrangères, asile"
+    },
+    {
+     "code": "discriminations",
+     "libelle": "Égalité, racisme, antisémitisme, discriminations (dont handicap)"
+    },
+    {
+     "code": "femmes-lgbti",
+     "libelle": "Droits des femmes, égalité de genre, LGBTI"
+    },
+    {
+     "code": "enfants",
+     "libelle": "Droits de l'enfant, justice des mineurs, éducation"
+    },
+    {
+     "code": "logement",
+     "libelle": "Droit au logement"
+    },
+    {
+     "code": "travail-protection-sociale",
+     "libelle": "Droits au travail et à la protection sociale"
+    },
+    {
+     "code": "environnement",
+     "libelle": "Droit à un environnement sain"
+    },
+    {
+     "code": "sante",
+     "libelle": "Santé, fin de vie, bioéthique"
+    }
+   ],
+   "etiquettes": [
+    {
+     "code": "outre-mer",
+     "libelle": "Outre-mer"
+    },
+    {
+     "code": "regime-exception",
+     "libelle": "Régimes d'exception : états d'urgence, dispositifs temporaires ou expérimentaux, extension du droit antiterroriste"
+    }
+   ],
+   "sens": [
+    {
+     "code": "etend",
+     "libelle": "étend les droits"
+    },
+    {
+     "code": "restreint",
+     "libelle": "restreint les droits"
+    }
+   ]
+  },
+  "mots_cles": {
+   "statut": "brouillon",
+   "version": 0,
+   "droits": {
+    "libertes": [
+     "manifest",
+     "liberte d expression",
+     "liberte de la presse",
+     "liberte d association",
+     "associations?",
+     "culte",
+     "laicite",
+     "separatisme",
+     "principes de la republique",
+     "ingerences? etrangere",
+     "haine en ligne",
+     "reseaux sociaux",
+     "manipulation de l information",
+     "journalis",
+     "secret des sources",
+     "lanceurs? d alerte",
+     "dissolution"
+    ],
+    "police-justice": [
+     "police",
+     "gendarm",
+     "forces de l ordre",
+     "securite interieure",
+     "securite globale",
+     "securite (?!sociale)",
+     "surete",
+     "justice",
+     "penal",
+     "procedure penale",
+     "peines?",
+     "prisons?",
+     "penitentiaire",
+     "detention",
+     "detenus",
+     "garde a vue",
+     "terroris",
+     "narcotrafic",
+     "criminalite organisee",
+     "delinquan",
+     "recidive",
+     "legitime defense",
+     "casseurs",
+     "violences"
+    ],
+    "vie-privee": [
+     "donnees",
+     "renseignement",
+     "surveillance",
+     "videoprotection",
+     "videosurveillance",
+     "algorithm",
+     "biometri",
+     "reconnaissance faciale",
+     "fichiers?",
+     "intelligence artificielle",
+     "identite numerique",
+     "espace numerique"
+    ],
+    "etrangers": [
+     "immigration",
+     "etrangers?",
+     "asile",
+     "nationalite",
+     "sejour",
+     "retention administrative",
+     "integration",
+     "droit du sol",
+     "aide medicale de l etat",
+     "regularisation"
+    ],
+    "discriminations": [
+     "discrimination",
+     "racisme",
+     "antisemitisme",
+     "egalite",
+     "handicap",
+     "accessibilite",
+     "haine"
+    ],
+    "femmes-lgbti": [
+     "femmes",
+     "feminicide",
+     "violences conjugales",
+     "violences sexuelles",
+     "viol",
+     "consentement",
+     "interruption volontaire de grossesse",
+     "avortement",
+     "parite",
+     "homosexu",
+     "transgenre",
+     "lgbt",
+     "orientation sexuelle",
+     "identite de genre",
+     "therapies de conversion",
+     "prostitution",
+     "harcelement"
+    ],
+    "enfants": [
+     "mineurs?",
+     "enfants?",
+     "enfance",
+     "jeunesse",
+     "scolaire",
+     "ecoles?",
+     "education",
+     "eleves",
+     "parents"
+    ],
+    "logement": [
+     "logements?",
+     "locatai",
+     "bailleur",
+     "loyers?",
+     "expulsion",
+     "occupation illicite",
+     "hebergement",
+     "habitat",
+     "sans abri",
+     "meubles de tourisme"
+    ],
+    "travail-protection-sociale": [
+     "travail",
+     "emploi",
+     "chomage",
+     "retraites?",
+     "salari",
+     "syndica",
+     "greve",
+     "protection sociale",
+     "securite sociale",
+     "solidarite",
+     "revenu",
+     "pauvrete",
+     "allocations?",
+     "prestations"
+    ],
+    "environnement": [
+     "environnement",
+     "climat",
+     "biodiversite",
+     "pesticide",
+     "phytosanitaire",
+     "eau",
+     "pollution",
+     "energie",
+     "nucleaire",
+     "agricult",
+     "artificialisation",
+     "carbone",
+     "renouvelable"
+    ],
+    "sante": [
+     "sante",
+     "fin de vie",
+     "aide a mourir",
+     "soins",
+     "palliatif",
+     "bioethique",
+     "medic",
+     "hopita",
+     "psychiatr",
+     "vaccin",
+     "pandemie",
+     "sanitaire"
+    ]
+   },
+   "etiquettes": {
+    "outre-mer": [
+     "outre mer",
+     "mayotte",
+     "guadeloupe",
+     "martinique",
+     "guyane",
+     "la reunion",
+     "nouvelle caledonie",
+     "polynesie",
+     "wallis",
+     "saint pierre et miquelon",
+     "saint barthelemy",
+     "saint martin"
+    ],
+    "regime-exception": [
+     "etat d urgence",
+     "etat de crise",
+     "experimenta",
+     "a titre experimental",
+     "terroris",
+     "jeux olympiques",
+     "crise sanitaire"
+    ]
+   }
+  }
+ }
+}

@@ -63,6 +63,27 @@ calcul arrêtées.
 - **Livrable** : `docs/METHODO.md` v0, les scores des six textes témoins
   relus avec Max, `lvnd check` vert.
 
+État au 29/10/2026 :
+
+- ✅ `lvnd build` (≈ 25 s) et `lvnd check`. Exports dans `data/export/`
+  (41 Mo, dont 26 Mo de votes en 44 fichiers mensuels).
+- ✅ Correction `PO0`, amendements identiques, lignées de groupes
+  (`referentiels/groupes.yaml`).
+- ✅ Rattachement scrutin → dossier : 99,9 % en XVIIe. Pour les six
+  témoins, le décisif proposé est bien celui de la qualification.
+- ✅ Catalogue : 479 textes, dont 235 candidats par mots-clés
+  (`mots_cles.yaml` en brouillon).
+- ✅ Règles de calcul 14 à 19 validées, y compris absences, droits
+  secondaires, score de groupe, cohésion et lignée UDR → UDDPLR.
+- ✅ Amendements clés du narcotrafic (9) et de la justice des mineurs (4).
+- ⏳ Dump des amendements de la XVIe : téléchargement par blocs, lancé en
+  processus détaché (journal : `data/raw/download_16.log`). Il est fini
+  quand `an_amendements_16` figure dans `data/raw/manifeste.json`. Ensuite :
+  `lvnd build`, `lvnd check`, mesure du rattachement XVIe dans
+  `docs/SOURCES.md`, proposition à Max des amendements clés de
+  Kasbarian-Bergé (`V636`, `V1317` en `a-trancher`).
+- ⏳ Relecture des scores des six témoins avec Max.
+
 ## Étape 3 : admin en ligne
 
 But : qualifier les textes ailleurs que dans un fichier, et publier sans

@@ -1,0 +1,194 @@
+# Présélection des textes candidats par mots-clés (docs/METHODO.md).
+#
+# Aide au tri dans l'admin, jamais une qualification : un texte retenu ici
+# n'est qu'un candidat, et un texte absent peut être qualifié. Les motifs sont
+# des expressions régulières appliquées aux titres du dossier et de ses textes,
+# normalisés : minuscules, sans accents ni ponctuation (lvnd.texte.norm).
+# Chaque motif est encadré de limites de mot à gauche ; à droite, il peut
+# s'agir d'un début de mot (« penal » trouve « penale », « penales »).
+#
+# Les codes suivent referentiels/droits.yaml (droits et étiquettes).
+
+statut: brouillon
+version: 0
+
+droits:
+  libertes:
+    - manifest
+    - liberte d expression
+    - liberte de la presse
+    - liberte d association
+    - associations?
+    - culte
+    - laicite
+    - separatisme
+    - principes de la republique
+    - ingerences? etrangere
+    - haine en ligne
+    - reseaux sociaux
+    - manipulation de l information
+    - journalis
+    - secret des sources
+    - lanceurs? d alerte
+    - dissolution
+  police-justice:
+    - police
+    - gendarm
+    - forces de l ordre
+    - securite interieure
+    - securite globale
+    - securite (?!sociale)
+    - surete
+    - justice
+    - penal
+    - procedure penale
+    - peines?
+    - prisons?
+    - penitentiaire
+    - detention
+    - detenus
+    - garde a vue
+    - terroris
+    - narcotrafic
+    - criminalite organisee
+    - delinquan
+    - recidive
+    - legitime defense
+    - casseurs
+    - violences
+  vie-privee:
+    - donnees
+    - renseignement
+    - surveillance
+    - videoprotection
+    - videosurveillance
+    - algorithm
+    - biometri
+    - reconnaissance faciale
+    - fichiers?
+    - intelligence artificielle
+    - identite numerique
+    - espace numerique
+  etrangers:
+    - immigration
+    - etrangers?
+    - asile
+    - nationalite
+    - sejour
+    - retention administrative
+    - integration
+    - droit du sol
+    - aide medicale de l etat
+    - regularisation
+  discriminations:
+    - discrimination
+    - racisme
+    - antisemitisme
+    - egalite
+    - handicap
+    - accessibilite
+    - haine
+  femmes-lgbti:
+    - femmes
+    - feminicide
+    - violences conjugales
+    - violences sexuelles
+    - viol
+    - consentement
+    - interruption volontaire de grossesse
+    - avortement
+    - parite
+    - homosexu
+    - transgenre
+    - lgbt
+    - orientation sexuelle
+    - identite de genre
+    - therapies de conversion
+    - prostitution
+    - harcelement
+  enfants:
+    - mineurs?
+    - enfants?
+    - enfance
+    - jeunesse
+    - scolaire
+    - ecoles?
+    - education
+    - eleves
+    - parents
+  logement:
+    - logements?
+    - locatai
+    - bailleur
+    - loyers?
+    - expulsion
+    - occupation illicite
+    - hebergement
+    - habitat
+    - sans abri
+    - meubles de tourisme
+  travail-protection-sociale:
+    - travail
+    - emploi
+    - chomage
+    - retraites?
+    - salari
+    - syndica
+    - greve
+    - protection sociale
+    - securite sociale
+    - solidarite
+    - revenu
+    - pauvrete
+    - allocations?
+    - prestations
+  environnement:
+    - environnement
+    - climat
+    - biodiversite
+    - pesticide
+    - phytosanitaire
+    - eau
+    - pollution
+    - energie
+    - nucleaire
+    - agricult
+    - artificialisation
+    - carbone
+    - renouvelable
+  sante:
+    - sante
+    - fin de vie
+    - aide a mourir
+    - soins
+    - palliatif
+    - bioethique
+    - medic
+    - hopita
+    - psychiatr
+    - vaccin
+    - pandemie
+    - sanitaire
+
+etiquettes:
+  outre-mer:
+    - outre mer
+    - mayotte
+    - guadeloupe
+    - martinique
+    - guyane
+    - la reunion
+    - nouvelle caledonie
+    - polynesie
+    - wallis
+    - saint pierre et miquelon
+    - saint barthelemy
+    - saint martin
+  regime-exception:
+    - etat d urgence
+    - etat de crise
+    - experimenta
+    - a titre experimental
+    - terroris
+    - jeux olympiques
+    - crise sanitaire

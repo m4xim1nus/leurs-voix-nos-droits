@@ -7,15 +7,21 @@
 #   vigilance  : critiques sourcées affichées à côté du jugement, sans le
 #                modifier.
 #   scrutins   : scrutins AN retenus. `pour` donne le sens d'un vote « pour » :
-#                  texte        → voter pour, c'est soutenir le texte ;
-#                  contre-texte → voter pour, c'est s'y opposer (motion de
-#                                 rejet, amendement de suppression) ;
+#                  texte        → voter pour va dans le sens du texte (le
+#                                 texte lui-même, le rétablissement d'un de
+#                                 ses articles, ou la suppression d'une
+#                                 garantie qu'il contient) ;
+#                  contre-texte → voter pour va contre le texte (motion de
+#                                 rejet, suppression d'un article qui porte
+#                                 une mesure citée par une source) ;
 #                  a-trancher   → sens à fixer par Max (amendements candidats).
+#                Le sens d'un amendement se lit sur le contenu de l'article,
+#                jamais sur la seule nature de l'amendement.
 #                `role` : decisif (dernier vote de l'AN sur l'ensemble),
 #                ensemble (autres lectures), motion, article, amendement.
-#                Seuls comptent le scrutin décisif et les amendements clés ;
-#                motions et autres lectures sont affichées, pas comptées
-#                (docs/METHODO.md). La pondération relève de l'étape 2.
+#                Seuls comptent le scrutin décisif et les amendements clés,
+#                un seul scrutin par article ; motions et autres lectures sont
+#                affichées, pas comptées. Pondération : docs/METHODO.md.
 #
 # On qualifie le texte soumis au scrutin décisif (c'est le vote du député qui
 # est mesuré) ; la décision du Conseil constitutionnel est affichée à côté.
@@ -188,8 +194,19 @@ textes:
       - { id: VTANR5L17V1473, role: decisif, pour: texte, objet: "ensemble, texte de la CMP, scrutin solennel (396-68)" }
       - { id: VTANR5L17V1194, role: ensemble, pour: texte, objet: "ensemble, 1re lecture, scrutin solennel (436-75)" }
       - { id: VTANR5L17V1471, role: motion, pour: contre-texte, objet: "motion de rejet préalable, CMP (39-231)" }
-      # 119 scrutins sur amendement, dont une vingtaine de suppressions d'article : choix à faire
-      # (explo/temoins_scrutins.py et explo/rattachement_amendements.py pour la liste).
+      # Amendements clés (1re lecture), validés par Max le 29/10/2026 : suppressions et
+      # rétablissements des articles qui portent une mesure citée par une source. Écartés, faute
+      # de source : V1089 (visioconférence, 111-2), V1129, V1132, V1137, V1141, V1143, V1151,
+      # V1154, V1163 ; V1101 est un sous-amendement.
+      - { id: VTANR5L17V1054, role: amendement, pour: contre-texte, objet: "suppression de l'article 23 quinquies, quartiers de lutte contre la criminalité organisée (91-170)" }
+      - { id: VTANR5L17V1075, role: amendement, pour: contre-texte, objet: "suppression de l'article 23, détention provisoire et visioconférence (47-91)" }
+      - { id: VTANR5L17V1095, role: amendement, pour: contre-texte, objet: "suppression de l'article 8, surveillance algorithmique (27-81)" }
+      - { id: VTANR5L17V1098, role: amendement, pour: contre-texte, objet: "suppression de l'article 8 bis, prolongation des « boîtes noires » (48-71)" }
+      - { id: VTANR5L17V1104, role: amendement, pour: contre-texte, objet: "suppression de l'article 24, interdiction de paraître et fermetures administratives (37-66)" }
+      - { id: VTANR5L17V1103, role: amendement, pour: texte, objet: "rétablissement de l'article 16, « dossier coffre », adopté (57-31)" }
+      - { id: VTANR5L17V1160, role: amendement, pour: texte, objet: "rétablissement de l'article 15 ter, activation à distance des appareils fixes, adopté (75-31)" }
+      - { id: VTANR5L17V1161, role: amendement, pour: texte, objet: "rétablissement de l'article 15 quater, activation à distance des appareils connectés, adopté (76-27)" }
+      - { id: VTANR5L17V1102, role: amendement, pour: texte, objet: "rétablissement de l'article 8 ter, accès aux messageries chiffrées (24-119)" }
 
   - id: justice-mineurs
     titre: "Loi visant à renforcer l'autorité de la justice à l'égard des mineurs délinquants et de leurs parents"
@@ -224,11 +241,15 @@ textes:
       - { id: VTANR5L17V805, role: ensemble, pour: texte, objet: "ensemble, 1re lecture (125-58)" }
       - { id: VTANR5L17V792, role: motion, pour: contre-texte, objet: "motion de rejet préalable, 1re lecture (96-202)" }
       - { id: VTANR5L17V1623, role: motion, pour: contre-texte, objet: "motion de rejet préalable, CMP (103-176)" }
-      # Candidats « amendement clé » (1re lecture) : rétablissement des articles 4 et 5, supprimés en
-      # commission, et suppression de l'article 7. Contenu des articles à vérifier.
-      - { id: VTANR5L17V794, role: amendement, pour: a-trancher, objet: "rétablissement de l'article 4 (66-26)" }
-      - { id: VTANR5L17V797, role: amendement, pour: a-trancher, objet: "rétablissement de l'article 5 (82-34)" }
-      - { id: VTANR5L17V798, role: amendement, pour: a-trancher, objet: "suppression de l'article 7 (32-85)" }
+      # Amendements clés (1re lecture), validés par Max le 29/10/2026. Article 5 : trois
+      # amendements de rétablissement, on garde celui qui a fixé son sort (V797, adopté ; V795 et
+      # V796 écartés). Écartés faute de source : V802 (article 9), V803 (article 10).
+      - { id: VTANR5L17V793, role: amendement, pour: contre-texte, objet: "suppression de l'article 1er, circonstance aggravante pour les parents (63-125)" }
+      - { id: VTANR5L17V794, role: amendement, pour: texte, objet: "rétablissement de l'article 4, audience unique dérogatoire dès 16 ans, adopté (66-26)" }
+      - { id: VTANR5L17V797, role: amendement, pour: texte, objet: "rétablissement de l'article 5, excuse de minorité assouplie, adopté (82-34)" }
+      # L'article 7 ajoute une garantie (rapport éducatif avant toute détention provisoire) : voter
+      # sa suppression va dans le sens du texte.
+      - { id: VTANR5L17V798, role: amendement, pour: texte, objet: "suppression de l'article 7, rapport éducatif avant détention provisoire (32-85)" }
 
   - id: aide-a-mourir
     titre: "Loi relative au droit à l'aide à mourir"

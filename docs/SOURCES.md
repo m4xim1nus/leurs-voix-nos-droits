@@ -39,10 +39,13 @@ découlent ont été validées par Max le 29/10/2026 (`docs/METHODO.md`).
 
 `lvnd download` (`pipeline/lvnd/sources.py`, repris de quifaitlaloi)
 télécharge et extrait ces dumps dans `data/raw/` et tient un manifeste
-(URL, `Last-Modified`, taille, sha256). Le serveur de l'AN coupe souvent la
-connexion au milieu des dumps d'amendements, deux fois de suite le
-29/10. Le téléchargement reprend donc là où il s'est arrêté (en-tête
-`Range`, dix essais).
+(URL, `Last-Modified`, taille, sha256). Le serveur de l'AN, derrière un
+CDN (OVH), coupe souvent la connexion au milieu des dumps d'amendements.
+Une reprise d'un seul tenant (`Range: bytes=N-`) renvoie ensuite `206`
+sans aucun octet, plusieurs fois de suite, alors qu'un bloc de 1 Mio
+demandé à la même position finit par être servi. Après une coupure,
+`download` continue donc par blocs de 1 Mio, redemandés jusqu'à une heure
+sans progrès (`If-Range` garantit que le fichier n'a pas changé).
 
 ## Votes nominatifs : volume et stockage
 
@@ -86,7 +89,8 @@ diffs illisibles, et une bibliothèque de plus côté Node.
 
 Les **mises au point** (un député déclare après coup qu'il voulait voter
 autrement) sont publiées à part (`miseAuPoint`). Elles ne modifient pas le
-résultat officiel : 1 434 en XVIe, 2 555 en XVIIe. Elles sont affichées, pas
+résultat officiel : 1 904 en XVIe, 3 295 en XVIIe (le spike en comptait
+moins, faute de lire les blocs rangés en liste). Elles sont affichées, pas
 comptées (`docs/METHODO.md`).
 
 ## Rattachement des scrutins sur amendement
@@ -140,12 +144,47 @@ quand même, par leur texte (`texteLegislatifRef`).
 Le scrutin qui porte sur « l'amendement n° X et les amendements identiques
 suivants » est rattaché au premier amendement, donc à son seul auteur. Les
 auteurs des amendements identiques, souvent d'autres groupes, se
-retrouvent par `discussionIdentique` (étape 2).
+retrouvent par `discussionIdentique` (même discussion, même texte) :
+l'export `amendements.csv` contient les amendements mis aux voix et leurs
+identiques.
 
 XVIe : *mesure en attente*. Le serveur de l'AN coupe sans cesse le
 téléchargement du dump (363 Mo) : 10, 18, 161 puis 14 Mo reçus selon les
 essais, avec des reprises qui renvoient `206` sans aucun octet. Le format
 est le même que pour la XVIIe.
+
+## Rattachement des scrutins aux dossiers (étape 2)
+
+`lvnd/textes.py`. Le dossier d'un scrutin se lit, dans l'ordre :
+
+1. `objet.dossierLegislatif` (depuis mars 2026) ;
+2. `voteRefs` d'une décision du dossier (rare : 260 scrutins de la XVIIe
+   sur 9 200) ;
+3. l'amendement mis aux voix ;
+4. la séance du scrutin, parmi les dossiers qui y sont débattus. Quand
+   plusieurs dossiers partagent la séance, on départage par le titre (au
+   moins la moitié des mots significatifs) et par la mention « loi
+   organique ».
+
+XVIIe : 9 195 scrutins rattachés sur 9 200 (99,9 %). Pour les six textes
+témoins, le scrutin décisif proposé (dernier vote de l'AN sur l'ensemble)
+est celui que la qualification retient.
+
+## Groupes : renommages et ventilations
+
+- Un groupe qui change de nom reçoit un nouvel organe. Les ventilations des
+  scrutins mêlent alors l'ancien et le nouveau, sans jamais les mettre dans
+  un même scrutin. Le groupe socialiste de la XVIe apparaît sous PO830170
+  dès le 14/12/2022, alors que l'AMO ne fait commencer ce nouvel organe
+  que le 19/10/2023, et sous PO800496 jusqu'au 14/03/2024. Les lignées
+  sont tenues dans `referentiels/groupes.yaml`.
+- Une fois les lignées réunies, il reste 592 votes (33 députés) ventilés
+  dans un groupe que l'AMO ne donne pas au député à la date. Ce sont des
+  décalages de quelques jours, en début de législature ou lors d'un
+  changement de groupe. La ventilation officielle fait foi.
+- Le 21/06/2023, sur 4 scrutins (`V1927`, `V1929`, `V1930`, `V1948`), la
+  ventilation de GDR-NUPES compte un vote de plus que sa liste
+  nominative. L'anomalie vient du dump, et `lvnd check` la signale.
 
 ## Contrôle croisé
 
