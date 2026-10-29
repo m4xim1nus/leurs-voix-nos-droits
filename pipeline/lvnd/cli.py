@@ -32,6 +32,9 @@ def main(argv=None) -> int:
     cible.add_argument("--sql", dest="cible", action="store_const", const="sql", help="écrit le script SQL seulement")
     s.add_argument("--editorial", action="store_true",
                    help="ajoute les qualifications publiées absentes de D1 (sans écraser de brouillon)")
+    s.add_argument("--brouillons", type=Path, metavar="DOSSIER",
+                   help="ajoute seulement les qualifications préparées dans DOSSIER/*.yaml (à relire), "
+                        "sans toucher au catalogue ni écraser une qualification existante")
     s.add_argument("--export", type=Path, default=EXPORT)
     s.add_argument("--sortie", type=Path, help="chemin du script SQL (défaut : admin/.wrangler/sync-admin.sql)")
     args = ap.parse_args(argv)
@@ -57,7 +60,7 @@ def main(argv=None) -> int:
         print(editorial.CHEMIN, file=sys.stderr)
     elif args.commande == "sync-admin":
         from . import sync_admin
-        sync_admin.sync(args.export, ADMIN, args.cible, args.editorial, args.sortie)
+        sync_admin.sync(args.export, ADMIN, args.cible, args.editorial, args.sortie, args.brouillons)
     return 0
 
 

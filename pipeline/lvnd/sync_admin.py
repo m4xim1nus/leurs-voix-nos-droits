@@ -18,6 +18,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import polars as pl
+import yaml
 
 from . import editorial, referentiels
 
@@ -132,28 +133,62 @@ def qualifications(doc: dict) -> list[dict]:
     return out
 
 
-def script(export: Path, editorial_doc: dict | None = None) -> str:
-    cat = catalogue(export)
+AUTEUR_BROUILLONS = "claude (brouillon)"
+
+
+def brouillons(dossier: Path) -> list[dict]:
+    """Qualifications préparées hors de l'admin (un YAML par texte, format de temoins.yaml plus
+    `statut` et `motif_ecart`), à charger au statut « à relire » ou « écarté ». Le champ
+    `relecture` (notes pour le relecteur) n'est pas chargé."""
+    date = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    out = []
+    for f in sorted(dossier.glob("*.yaml")):
+        t = yaml.safe_load(f.read_text())
+        statut = t.get("statut", "a-relire")
+        if statut not in ("a-relire", "ecarte", "brouillon"):
+            raise SystemExit(f"{f} : statut {statut} refusé (a-relire, ecarte ou brouillon)")
+        motif = t.get("motif_ecart") if statut == "ecarte" else None
+        if statut == "ecarte" and not motif:
+            raise SystemExit(f"{f} : texte écarté sans motif")
+        doc = editorial.normaliser({**t, "droits": t.get("droits") or [], "scrutins": t.get("scrutins") or []})
+        out.append({"dossier_an": doc["dossier_an"], "statut": statut, "doc": compact(doc), "motif_ecart": motif,
+                    "modifie_par": AUTEUR_BROUILLONS, "modifie_le": date, "publie_empreinte": None})
+    return out
+
+
+def _qualifs(lignes: list[dict], auteur: str, commentaire: str) -> list[str]:
+    """Ajoute des qualifications absentes de D1 (jamais d'écrasement) et leur révision d'origine."""
+    cols = ("dossier_an", "statut", "doc", "motif_ecart", "modifie_par", "modifie_le", "publie_empreinte")
+    out = inserts("qualifications", cols, lignes, "INSERT OR IGNORE")
+    out.append(f"INSERT INTO revisions (dossier_an, statut, doc, motif_ecart, auteur, date, commentaire) "
+               f"SELECT dossier_an, statut, doc, motif_ecart, modifie_par, modifie_le, {sql_valeur(commentaire)} "
+               f"FROM qualifications WHERE modifie_par = {sql_valeur(auteur)} AND dossier_an NOT IN "
+               f"(SELECT dossier_an FROM revisions);")
+    return out
+
+
+def script(export: Path, editorial_doc: dict | None = None, brouillons_lignes: list[dict] | None = None,
+           avec_catalogue: bool = True) -> str:
     out = ["-- Généré par `lvnd sync-admin` : ne pas éditer."]
-    for table, cols in (("textes", COLONNES_TEXTES), ("scrutins", COLONNES_SCRUTINS),
-                        ("groupes", COLONNES_GROUPES), ("catalogue_meta", ("cle", "valeur"))):
-        out.append(f"DELETE FROM {table};")
-        out += inserts(table, cols, cat[table])
+    if avec_catalogue or editorial_doc is not None:
+        cat = catalogue(export)
+        for table, cols in (("textes", COLONNES_TEXTES), ("scrutins", COLONNES_SCRUTINS),
+                            ("groupes", COLONNES_GROUPES), ("catalogue_meta", ("cle", "valeur"))):
+            out.append(f"DELETE FROM {table};")
+            out += inserts(table, cols, cat[table])
     if editorial_doc is not None:
-        q = qualifications(editorial_doc)
-        cols = ("dossier_an", "statut", "doc", "motif_ecart", "modifie_par", "modifie_le", "publie_empreinte")
-        out += inserts("qualifications", cols, q, "INSERT OR IGNORE")
-        # révision d'origine, seulement pour les qualifications qui viennent d'être créées
-        out += [f"INSERT INTO revisions (dossier_an, statut, doc, motif_ecart, auteur, date, commentaire) "
-                f"SELECT dossier_an, statut, doc, motif_ecart, modifie_par, modifie_le, 'import editorial.json' "
-                f"FROM qualifications WHERE modifie_par = 'editorial.json' AND dossier_an NOT IN "
-                f"(SELECT dossier_an FROM revisions);"]
+        out += _qualifs(qualifications(editorial_doc), "editorial.json", "import editorial.json")
+    if brouillons_lignes:
+        out += _qualifs(brouillons_lignes, AUTEUR_BROUILLONS, "brouillon préparé par Claude, à relire")
     return "\n".join(out) + "\n"
 
 
-def sync(export: Path, admin: Path, cible: str, avec_editorial: bool, sortie: Path | None) -> None:
+def sync(export: Path, admin: Path, cible: str, avec_editorial: bool, sortie: Path | None,
+         dossier_brouillons: Path | None = None) -> None:
     doc = editorial.charger() if avec_editorial else None
-    sql = script(export, doc)
+    # `--brouillons` seul n'ajoute que les brouillons, sans réécrire le catalogue (économie de lignes D1)
+    lignes = brouillons(dossier_brouillons) if dossier_brouillons else None
+    sql = script(export, doc, lignes, avec_catalogue=dossier_brouillons is None)
     fichier = sortie or admin / ".wrangler" / "sync-admin.sql"
     fichier.parent.mkdir(parents=True, exist_ok=True)
     fichier.write_text(sql)

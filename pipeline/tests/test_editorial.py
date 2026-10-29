@@ -77,3 +77,16 @@ def test_qualifications_importees_valides_et_publiees():
     assert {r["statut"] for r in q} == {"valide"}
     r = q[0]
     assert r["publie_empreinte"] == sync_admin.empreinte(r["doc"], "valide", None)
+
+
+def test_brouillons_charges_a_relire_sans_ecraser(tmp_path):
+    (tmp_path / "a.yaml").write_text(
+        "id: essai\ndossier_an: DLR5L17N1\nlegislature: 17\ntitre: Loi\nstatut: a-relire\n"
+        "droits: []\nscrutins: []\nrelecture: {points_attention: [x]}\n")
+    (tmp_path / "b.yaml").write_text(
+        "id: ''\ndossier_an: DLR5L17N2\nlegislature: 17\ntitre: Loi 2\nstatut: ecarte\nmotif_ecart: organisationnel\n")
+    lignes = sync_admin.brouillons(tmp_path)
+    assert [(l["statut"], l["motif_ecart"]) for l in lignes] == [("a-relire", None), ("ecarte", "organisationnel")]
+    assert "relecture" not in json.loads(lignes[0]["doc"])
+    sql = sync_admin.script(tmp_path, None, lignes, avec_catalogue=False)
+    assert "DELETE FROM" not in sql and "INSERT OR IGNORE INTO qualifications" in sql

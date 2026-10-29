@@ -23,8 +23,8 @@
     "GITHUB_BRANCH": "main",
     "EDITORIAL_CHEMIN": "data/editorial.json",
     // Application Access : domaine d'équipe (https://<équipe>.cloudflareaccess.com) et audience (AUD).
-    "ACCESS_TEAM_DOMAIN": "",
-    "ACCESS_AUD": ""
+    "ACCESS_TEAM_DOMAIN": "https://technoperchoir.cloudflareaccess.com",
+    "ACCESS_AUD": "d9379bcd921209f36d3cbfaf206d1628ce68c0958ab554938d7b383929e4c4f3"
   }
   // Secret (jamais ici) : `npx wrangler secret put GITHUB_TOKEN`.
 }
