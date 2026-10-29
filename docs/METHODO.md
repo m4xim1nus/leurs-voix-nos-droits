@@ -51,16 +51,28 @@ Grille v0 : `pipeline/referentiels/droits.yaml`. Onze droits et deux
    - CNIL, CGLPL ;
    - rapporteurs et comités de l'ONU ;
    - ONG ;
-   - pour la santé, ordres professionnels et sociétés savantes.
+   - pour la santé, ordres professionnels et sociétés savantes ;
+   - organisations professionnelles et syndicales du droit, de la santé et
+     de l'enseignement (Conseil national des barreaux, Syndicat des avocats
+     de France, Syndicat de la magistrature…) ;
+   - avis du Conseil d'État sur un projet ou une proposition de loi.
+
+   Ne sont pas des sources les rapports parlementaires ni les positions du
+   Gouvernement ou des groupes, qui sont parties au débat.
 
    Quand un texte étend un droit contesté, au moins une source critique
-   figure en vigilance.
+   figure en vigilance. Si aucune source admise ne conteste le droit
+   étendu, aucune vigilance n'est exigée, et la note de méthode le dit
+   (« aucune critique trouvée parmi les sources admises »).
 8. **Textes purement organisationnels** (par exemple la loi organique
    jumelle du narcotrafic) : non qualifiés. Ne sont pas qualifiées non
    plus les **résolutions**, qui expriment un avis de l'Assemblée sans
    changer aucune règle (commissions d'enquête comprises), ni les **lois
    autorisant la ratification d'une convention internationale**, dont le
-   vote ne porte sur aucune mesure de droit interne.
+   vote ne porte sur aucune mesure de droit interne. N'est pas qualifié
+   enfin un texte qui, au scrutin décisif, ne contient plus aucune mesure
+   normative : ses articles ont été supprimés et il ne reste que des
+   demandes de rapport ou un gage.
 
 ## Scrutins retenus
 
@@ -125,6 +137,10 @@ Grille v0 : `pipeline/referentiels/droits.yaml`. Onze droits et deux
     scrutin (voter pour va dans le sens du texte, ou contre lui). Sur un
     texte qui restreint un droit, voter contre le texte est favorable, et
     voter pour la suppression d'un de ses articles restrictifs aussi.
+    Limite connue : on mesure le vote, pas son motif. Un groupe qui vote
+    contre un texte étendant un droit parce qu'il le juge insuffisant
+    (tests de discrimination, 2023) est compté défavorable, comme celui
+    qui s'y oppose sur le fond.
 15. **Score** d'un député ou d'un groupe sur un droit : part pondérée de
     ses votes favorables parmi ses votes comptés, de 0 à 100. Le score
     « global » prend le sens du droit principal de chaque texte. Le score d'un droit compte les textes où ce droit est
