@@ -170,6 +170,36 @@ def brouillons(dossier: Path) -> list[dict]:
     return out
 
 
+AUTEUR_VALIDATION = "claude, validé par Max"
+
+
+def validations(dossier: Path, commentaire: str) -> list[str]:
+    """Qualifications de DOSSIER/*.yaml validées par Max (dans le chat) : chacune est écrite au statut
+    « valide » (« ecarte » si le YAML le propose, avec son motif), qu'elle existe déjà dans D1 ou non,
+    avec une révision qui le dit. Ne sert que sur décision explicite de Max (CLAUDE.md)."""
+    date = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    out = []
+    for f in sorted(dossier.glob("*.yaml")):
+        t = yaml.safe_load(f.read_text())
+        ecarte = t.get("statut") == "ecarte"
+        if ecarte and not t.get("motif_ecart"):
+            raise SystemExit(f"{f} : texte écarté sans motif")
+        doc = editorial.normaliser({**t, "droits": t.get("droits") or [], "scrutins": t.get("scrutins") or []})
+        if not ecarte:
+            err, _ = editorial.valider(doc)
+            if err:
+                raise SystemExit(f"{f} : {' ; '.join(err)}")
+        statut, motif = ("ecarte", t["motif_ecart"]) if ecarte else ("valide", None)
+        valeurs = [doc["dossier_an"], statut, compact(doc), motif, AUTEUR_VALIDATION, date]
+        out.append("INSERT INTO qualifications (dossier_an, statut, doc, motif_ecart, modifie_par, modifie_le) "
+                   f"VALUES ({', '.join(sql_valeur(x) for x in valeurs)}) ON CONFLICT (dossier_an) DO UPDATE SET "
+                   "statut = excluded.statut, doc = excluded.doc, motif_ecart = excluded.motif_ecart, "
+                   "modifie_par = excluded.modifie_par, modifie_le = excluded.modifie_le;")
+        out.append("INSERT INTO revisions (dossier_an, statut, doc, motif_ecart, auteur, date, commentaire) VALUES "
+                   f"({', '.join(sql_valeur(x) for x in [*valeurs, commentaire])});")
+    return out
+
+
 def _qualifs(lignes: list[dict], auteur: str, commentaire: str) -> list[str]:
     """Ajoute des qualifications absentes de D1 (jamais d'écrasement) et leur révision d'origine."""
     cols = ("dossier_an", "statut", "doc", "motif_ecart", "modifie_par", "modifie_le", "publie_empreinte")
@@ -198,11 +228,17 @@ def script(export: Path, editorial_doc: dict | None = None, brouillons_lignes: l
 
 
 def sync(export: Path, admin: Path, cible: str, avec_editorial: bool, sortie: Path | None,
-         dossier_brouillons: Path | None = None) -> None:
+         dossier_brouillons: Path | None = None, valider: str | None = None) -> None:
     doc = editorial.charger() if avec_editorial else None
-    # `--brouillons` seul n'ajoute que les brouillons, sans réécrire le catalogue (économie de lignes D1)
-    lignes = brouillons(dossier_brouillons) if dossier_brouillons else None
-    sql = script(export, doc, lignes, avec_catalogue=dossier_brouillons is None)
+    if valider is not None:
+        if not dossier_brouillons:
+            raise SystemExit("--valider s'utilise avec --brouillons DOSSIER")
+        sql = "\n".join(["-- Généré par `lvnd sync-admin --valider` : ne pas éditer.",
+                         *validations(dossier_brouillons, valider)]) + "\n"
+    else:
+        # `--brouillons` seul n'ajoute que les brouillons, sans réécrire le catalogue (économie de lignes D1)
+        lignes = brouillons(dossier_brouillons) if dossier_brouillons else None
+        sql = script(export, doc, lignes, avec_catalogue=dossier_brouillons is None)
     fichier = sortie or admin / ".wrangler" / "sync-admin.sql"
     fichier.parent.mkdir(parents=True, exist_ok=True)
     fichier.write_text(sql)

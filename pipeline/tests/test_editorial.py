@@ -1,4 +1,6 @@
 import copy
+import pytest
+import yaml
 import json
 
 from lvnd import editorial, referentiels, sync_admin
@@ -114,3 +116,16 @@ def test_termes_interdits(tmp_path):
     assert check.termes_interdits("ABCD et xabc ne comptent pas", liste) == []
     assert check.termes_interdits("l'association exemple a dit", liste) == ["Association Exemple"]
     assert check.termes_interdits("rien", tmp_path / "absent.txt") == []
+
+
+def test_validations(tmp_path):
+    t = _texte()
+    (tmp_path / "a.yaml").write_text(yaml.safe_dump({**t, "statut": "a-relire"}, allow_unicode=True))
+    (tmp_path / "b.yaml").write_text(yaml.safe_dump({"id": "", "dossier_an": "DLR5L17N2", "legislature": 17,
+                                                      "titre": "T", "statut": "ecarte", "motif_ecart": "m"}))
+    sql = sync_admin.validations(tmp_path, "validé par Max")
+    assert len(sql) == 4 and "ON CONFLICT (dossier_an) DO UPDATE" in sql[0]
+    assert "'valide'" in sql[0] and "'ecarte'" in sql[2] and "'validé par Max'" in sql[3]
+    (tmp_path / "c.yaml").write_text(yaml.safe_dump({**t, "dossier_an": "X", "droits": []}))
+    with pytest.raises(SystemExit, match="droit principal"):
+        sync_admin.validations(tmp_path, "x")

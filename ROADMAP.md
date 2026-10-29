@@ -32,7 +32,7 @@ Verdict **GO** : l'open data AN suffit pour la v1 (`docs/SOURCES.md`).
   (`pipeline/referentiels/droits.yaml`, `docs/METHODO.md`). Six textes
   témoins qualifiés et sourcés (`pipeline/referentiels/temoins.yaml`).
 
-## Étape 2 : pipeline et méthode v0 ← *en cours*
+## Étape 2 : pipeline et méthode v0 ← *en cours (reste : XVIe)*
 
 But : une base fiable des textes, scrutins et votes, et des règles de
 calcul arrêtées.
@@ -89,49 +89,24 @@ calcul arrêtées.
   votées, et une source « cite » une mesure quand elle la met en cause.
 - ⏳ Relecture des scores des six témoins avec Max.
 
-## Étape 3 : admin en ligne ← *en cours*
+## Étape 3 : admin en ligne ✅ (2026-10-29)
 
-But : qualifier les textes ailleurs que dans un fichier, et publier sans
-passer par la machine de Max.
+Admin SvelteKit + D1 sur `lvnd-admin.technoperchoir.fr`, derrière
+Cloudflare Access (code par courriel). Publication par commit de
+`data/editorial.json` via l'API GitHub. Conception et choix A à F validés :
+`docs/CONCEPTION.md` ; mise en service : `admin/README.md`.
 
-- App SvelteKit `admin/` (adapter-cloudflare) avec une base D1, derrière
-  Cloudflare Access.
-- `lvnd sync-admin` pousse le catalogue (textes, scrutins, positions de
-  groupe) dans D1.
-- Écrans :
-  - liste des candidats, avec filtres ;
-  - fiche texte : droits, sens, résumé, sources, statut brouillon ou
-    publié ;
-  - choix des scrutins retenus et de leur sens, avec les positions de
-    groupe affichées ;
-  - aperçu du score.
-- **« Publier »** : export de D1 → `data/editorial.json`, commit par l'API
-  GitHub, puis rebuild du site. Chaque modification garde son auteur et
-  sa date.
-- **Livrable** : admin en ligne, les six textes témoins importés (choix D1), et une
-  vingtaine de textes qualifiés par Max à travers elle.
+- `lvnd sync-admin` : catalogue vers D1 (`--brouillons`, `--valider` pour
+  les lots de qualification).
+- Contrôles identiques dans l'admin et `lvnd check`, tests croisés
+  (sérialisation à l'octet près, scores de groupe, arrondi).
+- Garde-fou : aucune source du commanditaire, liste privée de termes qui
+  bloque la publication.
+- Lot 1 : 21 textes préparés par Claude, relus et validés par Max
+  (19 qualifiés, 2 écartés) ; avec les six témoins, 25 textes qualifiés.
+  Règles 10 et 11 complétées à cette occasion.
 
-État au 29/10/2026 (conception : `docs/CONCEPTION.md`) :
-
-- ✅ `data/editorial.json` (format 1, généré depuis `temoins.yaml`). Le
-  pipeline le lit pour les scores, et `lvnd check` contrôle chaque
-  qualification.
-- ✅ `lvnd sync-admin` : catalogue et qualifications publiées vers D1
-  (locale ou distante).
-- ✅ App `admin/` : liste des textes, fiche texte (qualification, scrutins
-  avec positions de groupe, aperçu du score, contrôles, historique),
-  aperçu des scores, publication par l'API GitHub, journal. Elle vérifie
-  elle-même le jeton d'Access. Testée en local sur D1 émulée.
-- ✅ Tests croisés pipeline ↔ admin : sérialisation d'`editorial.json` à
-  l'octet près, scores de groupe identiques.
-- ✅ Choix A à F de `docs/CONCEPTION.md` validés par Max.
-- ✅ Mise en service : dépôt public sur GitHub, D1 en ligne, admin sur
-  `lvnd-admin.technoperchoir.fr` derrière Cloudflare Access (code par
-  courriel), publication testée.
-- ⏳ Vingtaine de textes : brouillons préparés par Claude (recherche et
-  sources), chargés « à relire », validés un par un par Max.
-
-## Étape 4 : site public v1
+## Étape 4 : site public v1 ← *en cours*
 
 But : mise en ligne publique.
 
@@ -150,6 +125,58 @@ But : mise en ligne publique.
 - `build.sh`, CI de tests, Cloudflare Pages relié au dépôt, sous-domaine
   `technoperchoir.fr`. Recette sur téléphone.
 - **Livrable** : site en ligne, tag `v1.0.0`, `CHANGELOG.md` créé.
+
+À faire en premier, et choix en attente de Max :
+
+- `lvnd scores` (choix F1 de `docs/CONCEPTION.md`) : scores recalculés
+  depuis `data/export/` et `editorial.json`, exécutés par `build.sh`.
+  Une publication depuis l'admin met ainsi le site à jour sans passer par
+  la machine de Max.
+- ⏳ Transparence : la page Méthodologie dit-elle que les qualifications
+  sont préparées avec un assistant IA et validées par une personne ?
+  Recommandation : oui.
+- ⏳ Seuil de la v1 : combien de textes qualifiés pour ouvrir le site ?
+  Recommandation : une cinquantaine, qui couvrent les onze droits de la
+  grille.
+
+## Qualification par lots (en continu, en parallèle de l'étape 4)
+
+Procédure : `docs/QUALIFICATION.md`. Claude prépare, Max arbitre dans le
+chat puis publie depuis l'admin.
+
+- ✅ Lot 1 (21 textes, 29/10/2026).
+- ⏳ **Lot de tri** : parmi les 235 candidats par mots-clés, proposer
+  « garder » ou « écarter » (faux positifs de `mots_cles.yaml`). Max
+  valide en bloc. On en attend 60 à 100 textes à qualifier.
+- ⏳ Lots suivants, d'une vingtaine de textes chacun, jusqu'au seuil de
+  la v1, puis au fil de l'eau.
+- ⏳ Les deux textes passés au 49.3 sans vote final (retraites 2023,
+  PLF 2026) attendent la règle du décisif en cas de 49.3 (`BACKLOG.md`).
+
+## Travail en parallèle (deux sessions Claude Code)
+
+Deux copies de travail du même dépôt, pour que deux sessions ne modifient
+jamais les mêmes fichiers non commités :
+
+| Session | Dossier | Branche | Périmètre |
+|---|---|---|---|
+| Qualification et données | `~/dev/leurs-voix-nos-droits` | `main` | lots de qualification (`source/`, D1), fin de l'étape 2 (dump XVIe, `lvnd build/check`), `pipeline/` hors `lvnd scores`, `docs/METHODO.md`, `docs/SOURCES.md`, `docs/QUALIFICATION.md` |
+| Site public (étape 4) | `~/dev/leurs-voix-nos-droits-site` (`git worktree`) | `etape-4` | `site/`, `build.sh`, `lvnd scores`, section « Site public » de `docs/CONCEPTION.md`, CI du site |
+
+Règles :
+
+- Au début de chaque session : `git pull` (sur `main`), ou `git fetch &&
+  git merge origin/main` (sur `etape-4`). L'admin commite sur `main` à
+  chaque publication.
+- Chaque session commite seulement les fichiers de son périmètre, en les
+  nommant (`git add <chemins>`, jamais `git add -A`), puis pousse.
+- `ROADMAP.md` : chacune met à jour sa propre section. `BACKLOG.md` :
+  on ajoute des lignes à la fin, sans réécrire les autres ; en cas de
+  conflit, on garde les deux.
+- La session « site » ne touche ni à D1 ni à `source/`, sauf pour lire
+  `source/CADRAGE.md` (lien symbolique dans le worktree).
+- Fusion de `etape-4` dans `main` : au livrable de l'étape 4, après
+  relecture par Max.
 
 ## Après la v1
 

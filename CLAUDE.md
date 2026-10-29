@@ -100,6 +100,7 @@ docs/SOURCES.md      fiche des sources (étape 1)
 docs/METHODO.md      grille des droits et règles de calcul, base de la page Méthodologie
 docs/CONCEPTION.md   conception du site public et de l'admin
 docs/A_VALIDER.md    décisions préparées, en attente de Max (vidé au fil des arbitrages)
+docs/QUALIFICATION.md  qualification par lots : rôles, circuit, consigne aux agents
 pipeline/lvnd/       package Python (CLI download / build / check / editorial / sync-admin)
 pipeline/explo/      scripts jetables (spike)
 pipeline/referentiels/  YAML maintenus à la main (droits, mots-clés, groupes)
@@ -124,6 +125,12 @@ rien publié, il est généré depuis `temoins.yaml` (`lvnd editorial`).
   se ferme.
 - `BACKLOG.md` est la file brute, une ligne par item. Tout retour capté
   en session y va d'abord.
+- **Deux sessions peuvent tourner en parallèle** : qualification et
+  données sur `main` dans ce dossier, site public sur `etape-4` dans le
+  worktree `~/dev/leurs-voix-nos-droits-site`. Périmètres et règles de
+  commit : `ROADMAP.md`, section « Travail en parallèle ». En début de
+  session : `git pull`, car l'admin commite sur `main` à chaque
+  publication.
 - `CHANGELOG.md` sera créé au premier tag (`v1.0.0`).
 
 ## Commandes
