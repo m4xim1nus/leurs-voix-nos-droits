@@ -72,5 +72,5 @@ uv run lvnd download && uv run lvnd build && uv run lvnd check
 uv run lvnd sync-admin --remote
 ```
 
-Un sync complet écrit environ 28 000 lignes dans D1 (limite gratuite :
-100 000 par jour).
+Un sync complet écrit environ 80 000 lignes dans D1, index compris (limite
+gratuite : 100 000 par jour). Pas plus d'un sync distant par jour.

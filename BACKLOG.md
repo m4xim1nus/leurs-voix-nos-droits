@@ -35,3 +35,4 @@ File d'attente brute, non ordonnée. Une ligne par item :
 - [ ] Admin : alerte quand `sync-admin` fait disparaître un scrutin retenu dans une qualification (scrutin renuméroté ou rattaché ailleurs) (claude, 2026-10-29)
 - [ ] Rôles d'édition dans l'admin (rédacteur, valideur) : à la passation, quand il y aura plusieurs personnes (claude, 2026-10-29)
 - [ ] Mettre à jour `docs/SOURCES.md` : le serveur de l'AN sert les plages par intermittence ; `download` reprend désormais d'un lancement à l'autre (claude, 2026-10-29)
+- [ ] `sync-admin` incrémental (n'écrire que les lignes changées) : un sync complet écrit ~80 000 lignes, près de la limite gratuite de D1 (100 000/jour) (claude, 2026-10-29)

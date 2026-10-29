@@ -9,12 +9,12 @@
   // Aucune adresse *.workers.dev ni de prévisualisation : l'admin n'est servie que derrière Access.
   "workers_dev": false,
   "preview_urls": false,
+  "routes": [{ "pattern": "lvnd-admin.technoperchoir.fr", "custom_domain": true }],
   "d1_databases": [
     {
       "binding": "DB",
       "database_name": "lvnd-admin",
-      // `npx wrangler d1 create lvnd-admin`, puis reporter ici l'identifiant obtenu.
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "47cced25-23e2-464e-b526-18d11aaa3b4d",
       "migrations_dir": "migrations"
     }
   ],

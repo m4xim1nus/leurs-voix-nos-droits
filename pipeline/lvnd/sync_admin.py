@@ -5,8 +5,9 @@ dump. Le script SQL remplace le catalogue (textes, scrutins rattachés, groupes,
 touche jamais aux tables éditoriales, sauf `--editorial`, qui y ajoute les qualifications
 publiées absentes de D1 (amorçage, ou reconstruction de D1 depuis git) sans écraser un brouillon.
 
-Le script est exécuté par `wrangler d1 execute` depuis `admin/`. Un sync complet écrit environ
-28 000 lignes (limite gratuite de D1 : 100 000 par jour).
+Le script est exécuté par `wrangler d1 execute` depuis `admin/`. Le premier sync écrit 40 800 lignes
+(index compris), un sync suivant environ le double (effacement puis réécriture) : un seul par jour
+sous la limite gratuite de D1 (100 000 lignes écrites).
 """
 
 import hashlib
