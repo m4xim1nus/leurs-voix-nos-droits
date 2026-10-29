@@ -1,7 +1,7 @@
 <script lang="ts">
   import Regle from '$lib/components/Regle.svelte';
   import TexteLigne from '$lib/components/TexteLigne.svelte';
-  import { legislature, pluriel, pourcent } from '$lib/format';
+  import { date, legislature, pluriel, POSITION_GROUPE, pourcent } from '$lib/format';
   import { NOM, URL_SITE } from '$lib/site';
 
   let { data } = $props();
@@ -61,6 +61,28 @@
   <p>Aucun vote compté pour ce groupe.</p>
 {/if}
 
+{#if data.unanimes.length}
+  <h2>Textes adoptés sans opposition</h2>
+  <p>
+    Adoptés sans aucune voix contre, ces textes ne distinguent aucun groupe : ils ne sont ni
+    qualifiés ni comptés. Le groupe a voté pour {data.unanimes.filter((u) => u.position === 'pour')
+      .length} des
+    {data.unanimes.length} textes de sa législature.
+  </p>
+  <details>
+    <summary>{pluriel(data.unanimes.length, 'texte', 'textes')} et sa position</summary>
+    <ul>
+      {#each data.unanimes as u (u.url)}
+        <li>
+          <a href={u.url} rel="external">{u.titre}</a>
+          <span class="discret petit">{date(u.date)}</span> :
+          <strong>{POSITION_GROUPE[u.position]}</strong>
+        </li>
+      {/each}
+    </ul>
+  </details>
+{/if}
+
 <h2>Membres</h2>
 {#snippet liste(ms: typeof data.membres)}
   <div class="defile">
@@ -80,7 +102,7 @@
 {#if actuels.length}
   <p>
     {pluriel(actuels.length, 'membre actuel', 'membres actuels')}, avec leur part de votes
-    favorables aux droits :
+    favorables aux droits :
   </p>
   {@render liste(actuels)}
 {/if}

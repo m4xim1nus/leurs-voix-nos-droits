@@ -157,8 +157,10 @@ export function vueDepute(slug: string) {
   const dep = d.deputes.find((x) => x.slug === slug);
   if (!dep) error(404, 'Député inconnu');
   const textes = d.textes.flatMap((t) => {
-    const votes: VoteDepute[] = t.scrutins
-      .filter((s) => enMandat(dep, s.date))
+    // Seuls les scrutins comptés : les autres (motions, autres lectures) sont sur la fiche texte.
+    const enCours = t.scrutins.filter((s) => enMandat(dep, s.date));
+    const votes: VoteDepute[] = enCours
+      .filter((s) => s.compte)
       .map((s) => {
         const groupe = groupeDuJour(dep, s.date);
         const v = groupe ? s.ventilations.find((x) => x.groupe.id === groupe.id) : undefined;
@@ -172,9 +174,22 @@ export function vueDepute(slug: string) {
       });
     if (!votes.length) return [];
     return [
-      { texte: court(t), score: d.scoresDeputesTextes.get(dep.id)?.get(t.id) ?? null, votes }
+      {
+        texte: court(t),
+        score: d.scoresDeputesTextes.get(dep.id)?.get(t.id) ?? null,
+        votes,
+        autres: enCours.length - votes.length
+      }
     ];
   });
+  const unanimes = d.unanimes
+    .filter((u) => enMandat(dep, u.scrutin.date))
+    .map((u) => ({
+      titre: u.titre,
+      date: u.scrutin.date,
+      url: u.scrutin.url,
+      position: (d.votes.get(u.scrutin.id)?.get(dep.id) ?? 'absent') as Position | 'absent'
+    }));
   const scores = d.scoresDeputes.get(dep.id) ?? new Map<string, Score>();
   const { mandat, groupe, actuel } = situation(dep);
   const lignee = groupe ? (d.ligneeDe.get(groupe.id) ?? null) : null;
@@ -191,6 +206,7 @@ export function vueDepute(slug: string) {
     }),
     participation: d.participation.get(dep.id) ?? null,
     textes,
+    unanimes,
     // Pour situer le député : son groupe actuel sur la même règle.
     scoreGroupe: lignee ? (d.scoresGroupes.get(lignee.id)?.get('global') ?? null) : null
   };
@@ -248,7 +264,13 @@ export function vueGroupe(slug: string) {
       const s = d.scoresGroupesTextes.get(groupe.id)?.get(t.id);
       return s ? [{ texte: court(t), score: s }] : [];
     }),
-    membres
+    membres,
+    unanimes: d.unanimes.flatMap((u) => {
+      const v = u.ventilations.find((x) => groupe.organes.includes(x.groupe.id));
+      return v
+        ? [{ titre: u.titre, date: u.scrutin.date, url: u.scrutin.url, position: v.position }]
+        : [];
+    })
   };
 }
 

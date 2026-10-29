@@ -21,7 +21,7 @@
 
 {#if !OUVERT}
   <p class="bandeau">
-    Site en préparation : {pluriel(data.nTextes, 'texte qualifié', 'textes qualifiés')} à ce jour. Les
+    Site en préparation : {pluriel(data.nTextes, 'texte qualifié', 'textes qualifiés')} à ce jour. Les
     scores changeront à mesure que d’autres textes seront qualifiés.
   </p>
 {/if}
@@ -46,7 +46,7 @@
 <footer>
   <div class="page">
     <p>
-      Votes : open data de l’<a href="https://data.assemblee-nationale.fr">Assemblée nationale</a>,
+      Votes : open data de l’<a href="https://data.assemblee-nationale.fr">Assemblée nationale</a>,
       données du {date(data.genereLe.slice(0, 10))}. Chaque qualification de texte cite ses sources.
     </p>
     <p>

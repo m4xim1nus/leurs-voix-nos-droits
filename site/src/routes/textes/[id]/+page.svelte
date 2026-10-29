@@ -13,13 +13,21 @@
   const affiches = $derived(t.scrutins.filter((s) => !s.compte));
   const src = (ids: string[]) => ids.map((i) => t.sources[i]).filter(Boolean);
 
+  /** La note de méthode, échappée, avec un lien vers chaque règle citée (« règle 11 », « règles 9 et 11 »). */
+  const noteHtml = (note: string) =>
+    note
+      .replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!)
+      .replace(/règles? (\d{1,2})((?:(?:,| et) \d{1,2})*)/g, (tout: string) =>
+        tout.replace(/\d{1,2}/g, (n) => `<a href="/methodologie#regle-${n}">${n}</a>`)
+      );
+
   const pourquoi = (s: ScrutinRetenu) =>
     s.role === 'motion'
-      ? 'Motion : affichée, pas comptée (règle 10).'
+      ? 'Motion : affichée, pas comptée. Une motion peut se voter pour des raisons tactiques.'
       : s.role === 'ensemble'
-        ? 'Autre lecture : affichée, pas comptée (règle 9).'
+        ? 'Autre lecture : affichée, pas comptée. Seul le dernier vote de l’Assemblée sur l’ensemble compte.'
         : s.pour === 'a-trancher'
-          ? 'Sens à trancher : pas compté.'
+          ? 'Sens à trancher : pas compté.'
           : 'Affiché, pas compté.';
 </script>
 
@@ -95,14 +103,12 @@
     </div>
   {/each}
   {#if t.etiquettes.length}
-    <p class="petit">Étiquettes : {t.etiquettes.map((e) => ETIQUETTES[e] ?? e).join(', ')}.</p>
+    <p class="petit">Étiquettes : {t.etiquettes.map((e) => ETIQUETTES[e] ?? e).join(', ')}.</p>
   {/if}
 
   {#if t.vigilance.length}
     <h3>Points de vigilance</h3>
-    <p class="petit discret">
-      Critiques sourcées affichées à côté du jugement, sans le modifier (règle 5).
-    </p>
+    <p class="petit discret">Critiques sourcées, affichées à côté du jugement sans le modifier.</p>
     {#each t.vigilance as v, i (i)}
       <div class="droit">
         <p>{v.texte}</p>
@@ -121,13 +127,21 @@
       {/if}
     </p>
   {/if}
-  {#if t.note}<p class="petit discret">{t.note}</p>{/if}
+  {#if t.note}
+    <details class="note">
+      <summary>Comment ce texte a été qualifié</summary>
+      <p class="petit">{@html noteHtml(t.note)}</p>
+      <p class="petit discret">
+        Les numéros renvoient aux règles de la <a href="/methodologie">méthodologie</a>.
+      </p>
+    </details>
+  {/if}
 </section>
 
 <section>
   <h2>Comment votent les groupes sur ce texte</h2>
   <p>
-    Part des votes favorables aux droits (au sens du droit principal : le texte {phrase(
+    Part des votes favorables aux droits (au sens du droit principal : le texte {phrase(
       t.principal.code,
       t.principal.sens
     )}) sur {comptes.length === 1 ? 'le vote décisif' : `les ${comptes.length} scrutins comptés`}.
@@ -148,12 +162,12 @@
   <p>
     Le vote décisif {comptes.length > 1
       ? 'pèse la moitié du texte, les amendements clés se partagent l’autre moitié'
-      : 'pèse tout le texte'} (règle 18).
+      : 'pèse tout le texte'}. Chaque texte pèse autant dans le score.
   </p>
   {#each comptes as s (s.id)}{@render scrutin(s, s.role === 'decisif')}{/each}
 
   {#if affiches.length}
-    <h2>Les autres scrutins, affichés</h2>
+    <h2 id="autres-scrutins">Les autres scrutins, affichés</h2>
     {#each affiches as s (s.id)}{@render scrutin(s, false)}{/each}
   {/if}
 </section>

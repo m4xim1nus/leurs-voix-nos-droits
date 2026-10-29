@@ -129,6 +129,11 @@
     <button type="submit">Chercher</button>
   </div>
 </form>
+<p class="etranger petit discret">
+  Français établis hors de France : <a href="/circonscriptions#etranger"
+    >vos onze circonscriptions</a
+  >.
+</p>
 
 <div class="resultats" aria-live="polite">
   {#if resultat.type === 'attente'}
@@ -213,6 +218,9 @@
     background: var(--encre);
     color: var(--papier);
     cursor: pointer;
+  }
+  .etranger {
+    margin: 0.5rem 0 0;
   }
   .resultats ul {
     list-style: none;

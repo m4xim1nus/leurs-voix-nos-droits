@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { date, normaliser, pluriel, pourcent, slug, sensDuPour } from './format';
+import { date, normaliser, pluriel, pourcent, slug, sensDuPour, typo } from './format';
 
 describe('format', () => {
   it('écrit les scores arrondis, avec espace insécable', () => {
-    expect([pourcent(36.9), pourcent(0), pourcent(null)]).toEqual(['37 %', '0 %', '–']);
+    expect([pourcent(36.9), pourcent(0), pourcent(null)]).toEqual(['37\u202f%', '0\u202f%', '–']);
   });
   it('écrit les dates en toutes lettres', () => {
     expect(date('2025-05-13')).toBe('13 mai 2025');
@@ -24,5 +24,14 @@ describe('format', () => {
   });
   it('dit ce que signifie voter pour (règle 14)', () => {
     expect(sensDuPour('contre-texte')).toContain('s’opposer');
+  });
+});
+
+describe('typo', () => {
+  it('pose les espaces insécables sans toucher au reste', () => {
+    expect(typo('Censure : article 7 ; « VSA » validée ? Oui !')).toBe(
+      'Censure : article 7 ; « VSA » validée ? Oui !'
+    );
+    expect(typo('https://x.fr/a:b')).toBe('https://x.fr/a:b');
   });
 });

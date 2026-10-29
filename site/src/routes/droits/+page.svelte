@@ -10,7 +10,7 @@
 <h1>Onze droits</h1>
 <p class="chapo">
   La grille suit les droits des personnes face à la puissance publique et aux plus forts. Un texte
-  touche un droit principal et, souvent, des droits secondaires, chacun dans un sens : il l’étend ou
+  touche un droit principal et, souvent, des droits secondaires, chacun dans un sens : il l’étend ou
   il le restreint.
 </p>
 
@@ -27,7 +27,7 @@
 </ul>
 
 <p class="discret">
-  Deux étiquettes transversales complètent la grille : outre-mer, et régimes d’exception (états
+  Deux étiquettes transversales complètent la grille : outre-mer, et régimes d’exception (états
   d’urgence, dispositifs temporaires ou expérimentaux, extension du droit antiterroriste). Voir la
   <a href="/methodologie">méthodologie</a>.
 </p>

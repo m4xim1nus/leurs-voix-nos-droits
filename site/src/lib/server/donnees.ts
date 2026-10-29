@@ -7,7 +7,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { csvParse } from 'd3-dsv';
 import { DROITS } from '$lib/droits';
-import { slug } from '$lib/format';
+import { slug, typo } from '$lib/format';
 import type {
   Appartenance,
   Depute,
@@ -22,6 +22,7 @@ import type {
   Score,
   ScrutinRetenu,
   Texte,
+  TexteUnanime,
   Ventilation
 } from '$lib/types';
 
@@ -42,12 +43,17 @@ export const circoId = (dep: string, n: number) => `${dep}-${String(n).padStart(
 export const urlScrutin = (leg: number, numero: number) =>
   `https://www.assemblee-nationale.fr/dyn/${leg}/scrutins/${numero}`;
 
+/** Motif d'écart d'un texte dont le décisif n'a eu aucune voix contre (ou pour). */
+export const SANS_OPPOSITION = /sans aucune voix (contre|pour) au scrutin décisif/i;
+
 export interface Donnees {
   genereLe: string;
   droits: Droit[];
   /** Textes qualifiés, du plus récent au plus ancien (date du vote décisif). */
   textes: Texte[];
   ecartes: Ecarte[];
+  /** Textes écartés faute d'opposition au décisif (règle 9), avec ce scrutin. */
+  unanimes: TexteUnanime[];
   lignees: Lignee[];
   ligneeDe: Map<string, Lignee>;
   groupe: Map<string, GroupeCourt>;
@@ -194,9 +200,17 @@ function charger(): Donnees {
   const deputeParId = new Map(deps.map((d) => [d.id, d]));
   const catalogue = new Map(exp('textes').map((t) => [t.id!, t]));
 
-  const retenus = new Set<string>(
-    editorial.textes.flatMap((t: { scrutins: { id: string }[] }) => t.scrutins.map((s) => s.id))
-  );
+  // Textes écartés parce que leur décisif n'a eu aucune voix d'un côté (règle 9) : affichés sur
+  // les fiches, hors des scores. Le motif, écrit par l'admin, suit toujours ce modèle.
+  const ecartesBruts: Ecarte[] = editorial.ecartes ?? [];
+  const unanimesBruts = ecartesBruts.flatMap((e) => {
+    const s = catalogue.get(e.dossier_an)?.decisif_propose;
+    return SANS_OPPOSITION.test(e.motif) && s ? [{ e, scrutin: s }] : [];
+  });
+  const retenus = new Set<string>([
+    ...editorial.textes.flatMap((t: { scrutins: { id: string }[] }) => t.scrutins.map((s) => s.id)),
+    ...unanimesBruts.map((u) => u.scrutin)
+  ]);
   const scrutins = new Map(
     exp('scrutins')
       .filter((s) => retenus.has(s.id!))
@@ -245,7 +259,7 @@ function charger(): Donnees {
         legislature: Number(s.legislature),
         role: r.role,
         pour: r.pour,
-        objet: r.objet,
+        objet: typo(r.objet),
         date: s.date!,
         sort: s.sort as 'adopte' | 'rejete',
         decompte: {
@@ -275,7 +289,15 @@ function charger(): Donnees {
     const decisif = retenus.find((s) => s.role === 'decisif')!;
     return {
       ...t,
-      sources: Object.fromEntries(Object.entries(t.sources).map(([id, s]) => [id, { ...s, id }])),
+      titre: typo(t.titre),
+      resume: typo(t.resume),
+      droits: t.droits.map((d) => ({ ...d, justification: typo(d.justification) })),
+      vigilance: t.vigilance.map((v) => ({ ...v, texte: typo(v.texte) })),
+      conseil_constitutionnel: typo(t.conseil_constitutionnel),
+      note: typo(t.note),
+      sources: Object.fromEntries(
+        Object.entries(t.sources).map(([id, s]) => [id, { ...s, id, titre: typo(s.titre) }])
+      ),
       principal: t.droits.find((d) => d.role === 'principal')!,
       scrutins: retenus,
       date: decisif.date,
@@ -289,10 +311,33 @@ function charger(): Donnees {
   });
   textes.sort((a, b) => b.date.localeCompare(a.date));
 
-  const ecartes: Ecarte[] = (editorial.ecartes ?? []).map((e: Ecarte) => ({
+  const ecartes: Ecarte[] = ecartesBruts.map((e) => ({
     ...e,
+    titre: typo(e.titre),
+    motif: typo(e.motif),
     url_an: txt(catalogue.get(e.dossier_an)?.url_an)
   }));
+  const unanimes: TexteUnanime[] = unanimesBruts
+    .flatMap(({ e, scrutin }) => {
+      const s = scrutins.get(scrutin);
+      if (!s) return [];
+      return [
+        {
+          dossier_an: e.dossier_an,
+          titre: typo(e.titre),
+          url_an: txt(catalogue.get(e.dossier_an)?.url_an),
+          scrutin: {
+            id: s.id!,
+            date: s.date!,
+            pour: Number(s.pour),
+            contre: Number(s.contre),
+            url: urlScrutin(Number(s.legislature), Number(s.numero))
+          },
+          ventilations: ventilations.get(s.id!) ?? []
+        }
+      ];
+    })
+    .sort((a, b) => b.scrutin.date.localeCompare(a.scrutin.date));
 
   const participation = new Map<string, Participation>(
     (existsSync(resolve(EXPORT, 'participation.csv')) ? exp('participation') : []).map((p) => [
@@ -311,6 +356,7 @@ function charger(): Donnees {
     droits,
     textes,
     ecartes,
+    unanimes,
     lignees,
     ligneeDe,
     groupe,

@@ -11,7 +11,7 @@
 
 <dl>
   {#each data.departements as d (d.nom)}
-    <dt>{d.nom}</dt>
+    <dt id={d.circos[0].id.startsWith('099') ? 'etranger' : undefined}>{d.nom}</dt>
     <dd>
       {#each d.circos as c, i (c.id)}{#if i},
         {/if}<a href="/circonscriptions/{c.id}">{c.num}</a>{/each}

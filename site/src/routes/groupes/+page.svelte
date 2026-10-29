@@ -15,7 +15,7 @@
 <h1>Les groupes, droit par droit</h1>
 <p class="chapo">
   Part des votes favorables aux droits de chaque groupe, sur chaque droit. Un vote compte pour le
-  groupe où siégeait le député ce jour-là ; un groupe qui a changé de nom est réuni sous son nom le
+  groupe où siégeait le député ce jour-là ; un groupe qui a changé de nom est réuni sous son nom le
   plus récent.
 </p>
 
@@ -62,7 +62,7 @@
   </div>
 {/each}
 <p class="petit discret">
-  Case vide : aucun texte qualifié ne touche ce droit sur la législature. Survolez une case pour le
+  Case vide : aucun texte qualifié ne touche ce droit sur la législature. Survolez une case pour le
   nombre de textes.
 </p>
 

@@ -62,9 +62,9 @@
 {#if data.ecartes.length}
   <h2>Textes examinés et écartés</h2>
   <p>
-    Ces textes ont été examinés, mais pas qualifiés : textes organisationnels, résolutions,
+    Ces textes ont été examinés, mais pas qualifiés : textes organisationnels, résolutions,
     conventions internationales, vote décisif sans opposition, ou droit hors de la grille. Le motif
-    est donné pour chacun (règles 8 et 9).
+    est donné pour chacun.
   </p>
   <details>
     <summary>{pluriel(data.ecartes.length, 'texte écarté', 'textes écartés')}</summary>

@@ -22,7 +22,7 @@
   <title>{data.droit.court}, {NOM}</title>
   <meta
     name="description"
-    content="Votes des groupes et des députés sur les textes qui touchent à : {data.droit.libelle}."
+    content="Votes des groupes et des députés sur les textes qui touchent à : {data.droit.libelle}."
   />
 </svelte:head>
 

@@ -84,3 +84,12 @@ export function normaliser(s: string): string {
 }
 
 export const slug = (s: string) => normaliser(s).replace(/ /g, '-');
+
+/** Espaces insécables du français avant « : ; ! ? » et dans les guillemets, pour les textes saisis. */
+export function typo(t: string): string {
+  return t
+    .replace(/(?<=[\p{L}\p{N}»)%’.]) :(?=\s|$)/gu, ' :')
+    .replace(/(?<=[\p{L}\p{N}»)’]) ([;!?])(?=\s|$)/gu, ' $1')
+    .replace(/« /g, '« ')
+    .replace(/ »/g, ' »');
+}

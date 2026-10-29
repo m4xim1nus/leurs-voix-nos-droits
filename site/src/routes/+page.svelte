@@ -22,14 +22,14 @@
   <title>{NOM} : les votes des députés sur les droits et libertés</title>
   <meta
     name="description"
-    content="Comment les députés votent sur les textes qui touchent aux droits et libertés : chaque texte qualifié et sourcé, chaque vote vérifiable."
+    content="Comment les députés votent sur les textes qui touchent aux droits et libertés : chaque texte qualifié et sourcé, chaque vote vérifiable."
   />
 </svelte:head>
 
 <section class="ouverture">
   <h1>Comment votre député vote sur vos droits</h1>
   <p class="chapo">
-    Chaque texte de loi retenu est qualifié à la main, sources à l’appui : quels droits il touche,
+    Chaque texte de loi retenu est qualifié à la main, sources à l’appui : quels droits il touche,
     et s’il les étend ou les restreint. Ses scrutins sont ensuite croisés avec le vote de chaque
     député depuis 2022.
   </p>

@@ -53,7 +53,7 @@
   </table>
 </div>
 {#if absents.length}
-  <p class="petit discret">Aucun votant : {absents.map((v) => v.groupe.sigle).join(', ')}.</p>
+  <p class="petit discret">Aucun votant : {absents.map((v) => v.groupe.sigle).join(', ')}.</p>
 {/if}
 
 <style>

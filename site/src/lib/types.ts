@@ -127,6 +127,14 @@ export interface Ecarte {
   url_an: string | null;
 }
 
+export interface TexteUnanime {
+  dossier_an: string;
+  titre: string;
+  url_an: string | null;
+  scrutin: { id: string; date: string; pour: number; contre: number; url: string };
+  ventilations: Ventilation[];
+}
+
 export interface Mandat {
   legislature: number;
   departement: string;

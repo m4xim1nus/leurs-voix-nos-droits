@@ -139,7 +139,7 @@
   />
 {:else}
   <p class="chapo">
-    Aucun vote compté : {elle ? 'elle' : 'il'} n’a voté sur aucun des scrutins comptés des textes qualifiés
+    Aucun vote compté : {elle ? 'elle' : 'il'} n’a voté sur aucun des scrutins comptés des textes qualifiés
     à ce jour.
   </p>
 {/if}
@@ -174,35 +174,62 @@
   <section>
     <h2>Ses votes, texte par texte</h2>
     <p>
-      Chaque scrutin retenu, son vote et ce qu’il signifie pour les droits. Absent ou non-votant :
-      hors calcul (règle 17). Abstention : hors calcul aussi, et comptée à part (règle 16).
+      Pour chaque texte qualifié, son vote sur les scrutins comptés et ce qu’il signifie pour les
+      droits. Absent, non-votant ou abstentionniste : son vote n’entre pas dans le score. Les
+      motions et les autres lectures sont sur la fiche de chaque texte.
     </p>
     {#each data.textes as t (t.texte.id)}
       <article class="texte">
         <h3><a href="/textes/{t.texte.id}">{t.texte.titre}</a></h3>
         <p class="petit">
           Le texte {phrase(t.texte.principal.code, t.texte.principal.sens)}.
-          {#if t.score?.score !== null && t.score?.score !== undefined}Sur ce texte : <strong
+          {#if t.score?.score !== null && t.score?.score !== undefined}Sur ce texte : <strong
               >{pourcent(t.score.score)}</strong
             > de votes favorables aux droits.{/if}
         </p>
         <ul class="votes">
-          {#each t.votes.filter((v) => v.scrutin.compte) as v (v.scrutin.id)}{@render vote(
-              v
-            )}{/each}
+          {#each t.votes as v (v.scrutin.id)}{@render vote(v)}{/each}
         </ul>
-        {#if t.votes.some((v) => !v.scrutin.compte)}
-          <details>
-            <summary>Autres scrutins du texte, affichés sans être comptés</summary>
-            <ul class="votes">
-              {#each t.votes.filter((v) => !v.scrutin.compte) as v (v.scrutin.id)}{@render vote(
-                  v
-                )}{/each}
-            </ul>
-          </details>
+        {#if t.autres}
+          <p class="petit discret">
+            <a href="/textes/{t.texte.id}#autres-scrutins"
+              >{pluriel(t.autres, 'autre scrutin', 'autres scrutins')} sur ce texte</a
+            >, affichés sans être comptés.
+          </p>
         {/if}
       </article>
     {/each}
+  </section>
+{/if}
+
+{#if data.unanimes.length}
+  <section>
+    <h2>Textes adoptés sans opposition</h2>
+    <p>
+      Ces textes, examinés pour le site, ont été adoptés sans aucune voix contre. Ce vote ne
+      distingue aucun député des autres : ils ne sont ni qualifiés ni comptés dans le score. Sur ces {data
+        .unanimes.length} textes,
+      {elle ? 'elle' : 'il'} a voté pour
+      {data.unanimes.filter((u) => u.position === 'pour').length} fois.
+    </p>
+    <details>
+      <summary>{pluriel(data.unanimes.length, 'texte', 'textes')} et son vote</summary>
+      <ul class="unanimes">
+        {#each data.unanimes as u (u.url)}
+          <li>
+            <a href={u.url} rel="external">{u.titre}</a>
+            <span class="discret petit">{date(u.date)}</span> :
+            <strong
+              >{u.position === 'absent'
+                ? elle
+                  ? 'absente'
+                  : 'absent'
+                : POSITION[u.position].toLowerCase()}</strong
+            >
+          </li>
+        {/each}
+      </ul>
+    </details>
   </section>
 {/if}
 
@@ -222,12 +249,12 @@
       {#each d.groupes as g, i (i)}
         <li>
           <span class="sigle" style:--c={g.groupe.couleur}>{g.groupe.sigle}</span>
-          ({g.qualite.toLowerCase()}) : du {date(g.debut)}{#if g.fin}
+          ({g.qualite.toLowerCase()}) : du {date(g.debut)}{#if g.fin}
             au {date(g.fin)}{/if}.
         </li>
       {/each}
     </ul>
-    <p class="petit discret">Chaque vote compte pour le groupe du jour du vote (règle 19).</p>
+    <p class="petit discret">Chaque vote compte pour le groupe où siégeait le député ce jour-là.</p>
   </section>
 {/if}
 
@@ -307,9 +334,10 @@
   }
   details summary {
     cursor: pointer;
-    font-size: 0.95rem;
-    color: var(--ardoise);
-    margin-top: 0.5rem;
+    font-weight: 650;
+  }
+  .unanimes li {
+    margin-bottom: 0.35rem;
   }
   @media (max-width: 46rem) {
     .votes li {

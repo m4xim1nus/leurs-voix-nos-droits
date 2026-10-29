@@ -10,7 +10,7 @@
 
 <h1>{titre}</h1>
 {#if !data.actuel}
-  <p class="chapo">Siège vacant : aucun député n’y siège aujourd’hui.</p>
+  <p class="chapo">Siège vacant : aucun député n’y siège aujourd’hui.</p>
 {/if}
 
 <h2>Députés depuis 2022</h2>
