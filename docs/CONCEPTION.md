@@ -1,9 +1,9 @@
 # Conception
 
-Conception de l'admin (étape 3), puis du site public (étape 4, à venir).
+Conception de l'admin (étape 3), puis du site public (étape 4).
 Les choix A à F de l'admin ont été validés par Max le 29/10/2026 : à
 chaque fois l'option recommandée (✅). Les autres options sont gardées
-pour mémoire.
+pour mémoire. Ceux du site (G à K) suivent la même règle.
 
 ## Admin
 
@@ -232,4 +232,206 @@ dans `admin/README.md`) :
 
 ## Site public
 
-À concevoir à l'étape 4.
+### Rôle et public
+
+Le site répond à une question : **comment mon député, et chaque groupe,
+votent-ils sur les textes qui touchent à nos droits ?** Il s'adresse à
+quelqu'un qui n'a jamais lu un scrutin de l'AN. Il ne juge pas les
+personnes : il montre des votes, la qualification de chaque texte et ses
+sources. Chaque chiffre mène, en un ou deux clics, au scrutin officiel
+qui le fonde.
+
+Ton : factuel, phrases courtes, vocabulaire courant. On écrit « vote
+favorable aux droits », jamais « bon vote » ; « le texte restreint la
+vie privée », avec la source à côté, jamais « texte liberticide ».
+
+### Parcours
+
+1. **Mon député** (parcours principal). Code postal ou nom sur l'accueil,
+   puis la fiche du député : score global et par droit, participation,
+   puis ses votes texte par texte, chacun à côté de la position de son
+   groupe. Bouton « Lui écrire » (`mailto:`).
+2. **Un droit**. Depuis l'accueil, l'un des onze droits : les textes qui
+   le touchent, dans quel sens et selon quelles sources, puis le score
+   des groupes sur ce droit.
+3. **Un texte**. Sa qualification sourcée, la décision du Conseil
+   constitutionnel, ses scrutins (comptés ou affichés seulement) et le
+   vote de chaque groupe, avec sa cohésion.
+4. **Vérifier**. Méthodologie (règles fixes, numérotées comme dans
+   `docs/METHODO.md`), textes examinés puis écartés, données
+   téléchargeables.
+
+### Pages
+
+| Page | Adresse | Contenu |
+|---|---|---|
+| Accueil | `/` | recherche (code postal, nom), score global des groupes de la XVIIe, les onze droits, derniers textes qualifiés |
+| Droit | `/droits/<code>` | libellé, textes (principal ou secondaire, sens), scores des groupes par législature |
+| Textes | `/textes` | textes qualifiés (filtres : droit, sens, législature), textes écartés et leur motif |
+| Fiche texte | `/textes/<id>` | droits, sens, justification et sources ; vigilance ; Conseil constitutionnel ; scrutins et positions de groupe ; score de chaque groupe sur ce texte ; liens AN et Légifrance |
+| Fiche député | `/deputes/<slug>` | circonscription, groupes successifs, score global et par droit, participation, abstentions, votes sur chaque scrutin compté, « Lui écrire », carte partageable |
+| Circonscription | `/circonscriptions/<dép>-<num>` | député en cours, ou « siège vacant », et ses prédécesseurs depuis 2022 |
+| Groupes | `/groupes` | par législature : tableau groupe × droit, effectifs |
+| Fiche groupe | `/groupes/<sigle>-<législature>` | score global et par droit, cohésion moyenne, membres et leur score |
+| Méthodologie | `/methodologie` | grille, règles 1 à 19, préparation des qualifications, code postal, sources |
+| Données | `/donnees` | `editorial.json`, exports CSV, votes nominatifs, licence |
+
+Le slug d'un député est `prenom-nom` en minuscules sans accents. En cas
+d'homonymie, on ajoute le numéro d'acteur (`PA…`). Le slug d'un texte est
+l'`id` de sa qualification (`narcotrafic`).
+
+### Données
+
+Le build ne télécharge rien. Il lit `data/export/`, `data/editorial.json`
+et `data/annuaire/` (code postal, courriels), puis prérend chaque page.
+Le navigateur ne reçoit que la page. Deux exceptions, des JSON statiques
+chargés à la demande : l'index des noms (≈ 840 députés) et la table des
+codes postaux, découpée par département.
+
+- **Scores** : `build.sh` lance d'abord `lvnd scores` (choix F1). Le site
+  n'en recalcule aucun : il affiche `scores_*.csv` et
+  `participation.csv`. Une publication depuis l'admin met donc le site à
+  jour sans la machine de Max.
+- **Positions de groupe** : `positions_groupes.csv` (règle 12), telles
+  quelles.
+- **Annuaire** : `lvnd annuaire`, lancé en local depuis les dumps
+  (`data/raw/circos/`, AMO), écrit `data/annuaire/`, versionné. Il ne
+  change qu'avec le découpage, les communes ou les députés. Le
+  rattachement code postal → circonscription reprend le spike
+  (`docs/SOURCES.md`).
+
+### Affichage des scores
+
+- Un score s'écrit « 37 % de votes favorables aux droits », jamais seul :
+  toujours avec le nombre de textes (« sur 6 textes ») et, pour un
+  député, sa participation (« a pris part à 18 des 24 scrutins
+  comptés ») et ses abstentions.
+- La barre de score va de 0 à 100, sans couleur de parti. Le groupe garde
+  sa couleur officielle, toujours avec son sigle.
+- Un vote compté s'affiche avec son sens lu en clair : « Pour le texte,
+  donc défavorable à la vie privée (le texte la restreint) ». C'est la
+  règle 14 rendue lisible.
+- Les scrutins affichés mais non comptés (autres lectures, motions) sont
+  rangés à part, avec leur raison (règles 9 et 10).
+- Le site affiche un bandeau tant que la v1 n'est pas ouverte : « Site en
+  construction, N textes qualifiés ».
+
+### Direction visuelle
+
+Inspirée de Bon Pote (chiffre clé d'abord, preuve à un clic, visuels
+partageables, ton accessible), sans en reprendre la palette, les polices
+ni la mise en page.
+
+- **Registre** : l'affiche et la pancarte de manifestation, plus que le
+  journal. Des titres en grotesque étroite très grasse, en minuscules,
+  serrés ; tout le reste sobre.
+- **Polices** (libres, hébergées par le site) : Archivo, police variable
+  à axe de chasse, étroite et grasse pour les titres et les chiffres
+  clés, normale pour l'interface ; Atkinson Hyperlegible Next pour le
+  texte courant, dessinée pour la lisibilité.
+- **Palette** : papier blanc pur (`#ffffff`), encre presque noire bleutée
+  (`#15171c`), gris ardoise (`#5b606b`) et filets (`#dcdee3`). Deux
+  couleurs de données seulement, jamais employées en décor : **bleu
+  canard** (`#0b6e78`) pour « favorable aux droits » et **framboise**
+  (`#b0325f`) pour « défavorable ». Elles restent distinctes pour les
+  daltoniens et ne reprennent la couleur d'aucun parti. Ni rouge ni bleu
+  roi : en France, ils se lisent gauche et droite. Abstention en gris
+  (`#9ea3ab`).
+- **L'élément marquant** : la **règle graduée** du score, un trait de
+  0 à 100 où chaque groupe ou député est une marque à sa position, comme
+  sur un instrument de mesure. On la retrouve partout (accueil, droit,
+  fiche, carte partageable).
+- Mise en page alignée à gauche, colonne de texte de 70 caractères au
+  plus, tableaux qui défilent horizontalement sur téléphone. Mode sombre
+  suivant le système. Aucune animation hors des actions de l'utilisateur.
+
+### Cartes partageables
+
+Une image PNG par député et par groupe, au format 1200 × 630 (aperçu de
+lien, `og:image`) : nom, groupe, circonscription, score global sur la
+règle graduée, trois droits les plus et les moins favorables, nombre de
+textes, adresse de la fiche. Générées au build (SVG rendu en PNG par
+`@resvg/resvg-js`, polices embarquées), sans service tiers. La fiche
+propose « Télécharger l'image ».
+
+### Code postal
+
+Saisie de cinq chiffres, puis résultat sans rechargement depuis la table
+du département :
+
+- une seule circonscription : on ouvre la fiche du député ;
+- plusieurs (commune coupée, ou code postal à plusieurs communes) : la
+  liste des députés possibles, avec les communes de chaque
+  circonscription (option A du `BACKLOG.md`). L'adresse exacte (option C)
+  attendra un cycle ;
+- siège vacant : la fiche de la circonscription le dit, avec le dernier
+  député.
+
+Français de l'étranger : un lien vers les onze circonscriptions, en
+attendant la table pays → circonscription (`BACKLOG.md`).
+
+### Technique
+
+- SvelteKit `adapter-static`, d3 pour les échelles, Node 22, copié de
+  quifaitlaloi (`site/`, mêmes conventions de test et de format).
+- Aucun tracker, aucun CDN tiers, CSP stricte (`static/_headers`).
+- Accessibilité : contraste AA, focus visible, tableaux de données en vrai
+  `<table>`, chaque graphique doublé d'un texte.
+- `build.sh` : `lvnd scores`, puis `npm ci && npm run build` dans
+  `site/`. La CI lance les tests du site et un build complet.
+
+### Mise en service (gestes de Max)
+
+1. Choisir le sous-domaine (choix K).
+2. Cloudflare Pages, « Connect to Git » sur
+   `m4xim1nus/leurs-voix-nos-droits`, branche de production `main`.
+   Commande de build `bash build.sh`, dossier de sortie `site/build`,
+   variable `NODE_VERSION=22`.
+3. Domaine personnalisé : le sous-domaine choisi, sur la zone
+   `technoperchoir.fr`.
+
+### Choix
+
+**G. Dire que les qualifications sont préparées avec un assistant IA** ✅
+G1 (validé par Max le 29/10/2026)
+
+- G1 (**retenu**) : oui. La page Méthodologie dit que chaque
+  qualification est préparée avec un assistant IA (Claude, d'Anthropic),
+  qui rassemble les sources et propose droits, sens et scrutins, puis
+  relue, corrigée au besoin et validée par une personne avant
+  publication. Aucune n'est publiée sans cette validation.
+- G2 : non.
+
+**H. Seuil d'ouverture de la v1** ✅ H1 (validé par Max le 29/10/2026)
+
+- H1 (**retenu**) : au moins une cinquantaine de textes qualifiés. Max
+  fixera le chiffre exact selon la vitesse de la qualification. D'ici là,
+  le site tourne avec le bandeau « en construction ».
+
+**I. Seuil d'affichage d'un score** ⏳
+
+Avec peu de textes, un score sur un droit repose sur un ou deux votes.
+
+- I1 (**recommandé**) : toujours afficher le score, avec son nombre de
+  textes. Une règle fixe et simple, sans score caché.
+- I2 : ne pas afficher un score fondé sur un seul texte (« un seul texte,
+  voir le vote »).
+
+**J. Participation** ⏳
+
+Règle 17 : le taux de participation s'affiche à côté du score. Définition
+proposée, codée dans `lvnd scores` :
+
+- J1 (**recommandé**) : part des scrutins comptés, tenus pendant le
+  mandat du député, où il a voté pour, contre ou s'est abstenu.
+  Non-votant ou absent : il n'y a pas pris part. Chaque scrutin pèse 1.
+  Sur les six témoins, la médiane est de 33 % : les amendements se votent
+  en séance ordinaire, où l'on est peu nombreux.
+- J2 : les décisifs seulement. Le taux serait plus haut et plus parlant,
+  mais il dirait moins sur les amendements clés comptés dans le score.
+
+**K. Sous-domaine** ⏳
+
+- K1 (**recommandé**) : `lvnd.technoperchoir.fr`, court et cohérent avec
+  l'admin (`lvnd-admin.technoperchoir.fr`).
+- K2 : `droits.technoperchoir.fr`, plus parlant pour le public.
