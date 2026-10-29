@@ -14,4 +14,4 @@ export const OUVERT = false;
  * Adresse qui reçoit les contestations d'une qualification (lien sur chaque fiche texte, choix de
  * Max du 29/10/2026 : un courriel, sans formulaire hébergé). Vide : le lien est masqué.
  */
-export const CONTESTATION = '';
+export const CONTESTATION = 'lvnd-contestations.starting219@passmail.net';
