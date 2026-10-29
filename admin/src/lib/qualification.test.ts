@@ -171,6 +171,29 @@ describe('qualification', () => {
     expect(erreurs).toContain(
       "S : suppression d'un article unique, pas un amendement clé (règle 11)"
     );
+    expect(erreurs.some((e) => e.startsWith('D : décisif unanime'))).toBe(false);
+  });
+
+  it('refuse un décisif unanime (règle 9)', () => {
+    const infos = new Map([
+      [
+        'D',
+        {
+          dossier_id: 'DLR5L17N1',
+          etape: 'AN1',
+          division: null,
+          objet: 'ensemble',
+          pour: 503,
+          contre: 0
+        }
+      ]
+    ]);
+    const { erreurs } = valider(
+      texte({ scrutins: [{ id: 'D', role: 'decisif', pour: 'texte', objet: '' }] }),
+      GRILLE,
+      infos
+    );
+    expect(erreurs).toContain('D : décisif unanime (503-0), texte à écarter (règle 9)');
   });
 
   it('garde les espaces insécables', () => {

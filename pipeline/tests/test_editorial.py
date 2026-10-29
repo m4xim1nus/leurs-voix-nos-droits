@@ -106,6 +106,13 @@ def test_amendement_unanime_ou_article_unique_refuse():
     err, _ = editorial.valider(_texte(scrutins=sc), infos)
     assert "U : amendement unanime (0-46), pas un amendement clé (règle 11)" in err
     assert "S : suppression d'un article unique, pas un amendement clé (règle 11)" in err
+    assert not any(e.startswith("D : décisif unanime") for e in err)
+
+
+def test_decisif_unanime_refuse():
+    infos = {"D": {"dossier_id": "DLR5L17N1", "etape": "AN1", "division": None, "objet": "ensemble", "pour": 503, "contre": 0}}
+    err, _ = editorial.valider(_texte(scrutins=[{"id": "D", "role": "decisif", "pour": "texte"}]), infos)
+    assert "D : décisif unanime (503-0), texte à écarter (règle 9)" in err
 
 
 def test_termes_interdits(tmp_path):

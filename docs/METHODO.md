@@ -8,7 +8,9 @@ témoins (`pipeline/referentiels/temoins.yaml`).
 Le choix de la lecture et la notion de source qui « cite » une mesure (règle
 11) l'ont été le même jour, sur le cas de Kasbarian-Bergé, puis les
 exclusions de la règle 11 et les motions « inversées » (règle 10), à la
-relecture des vingt et un premiers textes.
+relecture des vingt et un premiers textes. L'accès aux soins (règle 2), les
+résolutions et les conventions (règle 8) et le décisif unanime (règle 9)
+l'ont été au lot de tri des candidats, toujours le 29/10/2026.
 
 ## Grille des droits
 
@@ -23,7 +25,11 @@ Grille v0 : `pipeline/referentiels/droits.yaml`. Onze droits et deux
    puissance publique et aux plus forts. La propriété et l'ordre public
    sont des objectifs que le législateur concilie avec ces droits : ils
    n'entrent pas dans la grille. Quand un texte les étend (Kasbarian-Bergé,
-   pour la propriété), on le signale en point de vigilance.
+   pour la propriété), on le signale en point de vigilance. L'**accès aux
+   soins** entre dans `sante` (régulation de l'installation des médecins,
+   accès direct aux professionnels). Le financement de la recherche n'y
+   entre pas. Les droits civiques et politiques (droit de vote, corps
+   électoral de Nouvelle-Calédonie) ne sont pas dans la grille v0.
 3. **Recouvrements**, tranchés par une règle fixe :
    - justice des mineurs → `enfants` principal, `police-justice`
      secondaire ;
@@ -50,7 +56,11 @@ Grille v0 : `pipeline/referentiels/droits.yaml`. Onze droits et deux
    Quand un texte étend un droit contesté, au moins une source critique
    figure en vigilance.
 8. **Textes purement organisationnels** (par exemple la loi organique
-   jumelle du narcotrafic) : non qualifiés.
+   jumelle du narcotrafic) : non qualifiés. Ne sont pas qualifiées non
+   plus les **résolutions**, qui expriment un avis de l'Assemblée sans
+   changer aucune règle (commissions d'enquête comprises), ni les **lois
+   autorisant la ratification d'une convention internationale**, dont le
+   vote ne porte sur aucune mesure de droit interne.
 
 ## Scrutins retenus
 
@@ -58,6 +68,11 @@ Grille v0 : `pipeline/referentiels/droits.yaml`. Onze droits et deux
    C'est la lecture définitive, le texte de CMP, ou la dernière lecture à
    l'AN quand l'adoption définitive a lieu au Sénat (Kasbarian-Bergé,
    justice des mineurs). Les autres lectures sont affichées, pas comptées.
+   Un texte dont le scrutin décisif n'a **aucune voix d'un des deux côtés**
+   (loi intégrale contre les violences sexuelles et sexistes, 503-0) n'est
+   pas qualifié : ce vote ne départage personne, et le compter rapprocherait
+   tous les scores de 100. Une voix suffit pour qu'il départage (même seuil
+   que pour les amendements, règle 11).
 10. **Motions de rejet préalable : affichées, pas comptées.** Sur
     l'immigration, la motion écologiste a été adoptée (270-265) avec les
     voix du RN (87-0) et de LR (40-2). Ces deux groupes ont ensuite voté le

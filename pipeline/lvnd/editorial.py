@@ -176,6 +176,9 @@ def valider(t: dict, scrutins_dossier: dict[str, dict] | None = None) -> tuple[l
             if info is None or info.get("dossier_id") != t.get("dossier_an"):
                 err.append(f"{s.get('id')} : scrutin absent du dossier {t.get('dossier_an')}")
                 continue
+            if s.get("role") == "decisif" and (info.get("pour") == 0 or info.get("contre") == 0):
+                err.append(f"{s['id']} : décisif unanime ({info.get('pour')}-{info.get('contre')}), "
+                           "texte à écarter (règle 9)")
             if s.get("role") == "amendement" and s.get("pour") != "a-trancher":
                 if info.get("objet") == "suppression_article_unique":
                     err.append(f"{s['id']} : suppression d'un article unique, pas un amendement clé (règle 11)")
