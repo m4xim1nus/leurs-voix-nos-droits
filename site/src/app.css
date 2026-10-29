@@ -1,0 +1,228 @@
+/* Jetons et base typographique (docs/CONCEPTION.md, Site public, direction visuelle).
+   Deux couleurs de données seulement, jamais en décor : --favorable et --defavorable. Les
+   groupes gardent leur couleur officielle de l'AN, toujours avec leur sigle. */
+
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  src: url('/fonts/archivo-latin-wdth-normal.woff2') format('woff2-variations');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  src: url('/fonts/archivo-latin-ext-wdth-normal.woff2') format('woff2-variations');
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+:root {
+  color-scheme: light dark;
+  --papier: #ffffff;
+  --plan: #f3f4f6;
+  --encre: #15171c;
+  --ardoise: #5b606b;
+  --filet: #dcdee3;
+  --lien: #15171c;
+  --focus: #0b6e78;
+  --favorable: #0b6e78;
+  --favorable-pale: #d9eeef;
+  --defavorable: #b0325f;
+  --defavorable-pale: #f6dde6;
+  --abstention: #9ea3ab;
+
+  --titre: 'Archivo', 'Arial Narrow', sans-serif;
+  --texte: 'Archivo', system-ui, sans-serif;
+  --mesure: 68ch;
+  --large: 72rem;
+  --gouttiere: clamp(1rem, 4vw, 2rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --papier: #121419;
+    --plan: #1c1f26;
+    --encre: #eceef2;
+    --ardoise: #a3a9b4;
+    --filet: #30343d;
+    --lien: #eceef2;
+    --focus: #5cc3cc;
+    --favorable: #4fb8c2;
+    --favorable-pale: #173a3e;
+    --defavorable: #e0779e;
+    --defavorable-pale: #43202e;
+    --abstention: #7c828c;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--papier);
+  color: var(--encre);
+  font-family: var(--texte);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  font-variant-numeric: lining-nums;
+  font-stretch: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--titre);
+  font-stretch: 72%;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.005em;
+  margin: 0;
+  text-wrap: balance;
+}
+h1 {
+  font-size: clamp(2.4rem, 7vw, 4.25rem);
+}
+h2 {
+  font-size: clamp(1.7rem, 4vw, 2.35rem);
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+}
+h3 {
+  font-size: 1.35rem;
+  font-stretch: 85%;
+  font-weight: 750;
+  line-height: 1.15;
+  margin-top: 1.75rem;
+  margin-bottom: 0.4rem;
+}
+
+p,
+li {
+  max-width: var(--mesure);
+}
+p {
+  margin: 0 0 0.9rem;
+}
+
+a {
+  color: var(--lien);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+a:hover {
+  text-decoration-thickness: 2px;
+}
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.chapo {
+  font-size: 1.2rem;
+  line-height: 1.45;
+  max-width: 60ch;
+}
+.discret {
+  color: var(--ardoise);
+}
+.petit {
+  font-size: 0.9rem;
+}
+.chiffre {
+  font-family: var(--titre);
+  font-stretch: 70%;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.page {
+  max-width: var(--large);
+  margin: 0 auto;
+  padding: 0 var(--gouttiere) 4rem;
+}
+
+/* Sigle de groupe : couleur officielle en pastille, toujours suivie du sigle. */
+.sigle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-weight: 650;
+  white-space: nowrap;
+}
+.sigle::before {
+  content: '';
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+  background: var(--c, var(--ardoise));
+  flex: none;
+}
+
+/* Tableaux de données : défilement horizontal sur téléphone. */
+.defile {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-variant-numeric: tabular-nums;
+}
+th,
+td {
+  padding: 0.45rem 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid var(--filet);
+  vertical-align: top;
+}
+th {
+  font-weight: 650;
+  font-size: 0.9rem;
+  color: var(--ardoise);
+}
+td.nombre,
+th.nombre {
+  text-align: right;
+}
+
+.favorable {
+  color: var(--favorable);
+}
+.defavorable {
+  color: var(--defavorable);
+}
+
+.visuellement-cache {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

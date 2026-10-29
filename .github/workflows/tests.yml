@@ -1,5 +1,5 @@
-# Tests à chaque push et PR (repris de quifaitlaloi). Le build du site public s'ajoutera à
-# l'étape 4 ; l'admin se déploie à la main (admin/README.md).
+# Tests à chaque push et PR (repris de quifaitlaloi), puis build complet du site public
+# (build.sh, comme Cloudflare Pages). L'admin se déploie à la main (admin/README.md).
 
 name: Tests
 
@@ -12,7 +12,7 @@ on:
 
 jobs:
   tests:
-    name: Tests (pipeline et admin)
+    name: Tests (pipeline, admin et site)
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -27,7 +27,9 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
-          cache-dependency-path: admin/package-lock.json
+          cache-dependency-path: |
+            admin/package-lock.json
+            site/package-lock.json
 
       - name: Tests pipeline (les tests `donnees` exigent la base locale, sautés en CI)
         working-directory: pipeline
@@ -40,3 +42,14 @@ jobs:
           npm run check
           npm test
           npm run format:check
+
+      - name: Tests site
+        working-directory: site
+        run: |
+          npm ci
+          npm run check
+          npm test
+          npm run format:check
+
+      - name: Build du site (comme Cloudflare Pages)
+        run: bash build.sh

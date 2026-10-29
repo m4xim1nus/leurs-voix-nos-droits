@@ -28,3 +28,6 @@ data/lvnd.sqlite
 
 # Obsidian
 .obsidian/
+
+# Copie des données faite au build du site (site/scripts/donnees.mjs)
+site/static/donnees/
