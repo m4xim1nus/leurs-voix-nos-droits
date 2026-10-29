@@ -2,7 +2,7 @@
   import Regle from '$lib/components/Regle.svelte';
   import TexteLigne from '$lib/components/TexteLigne.svelte';
   import { legislature, pluriel, pourcent } from '$lib/format';
-  import { NOM } from '$lib/site';
+  import { NOM, URL_SITE } from '$lib/site';
 
   let { data } = $props();
   const g = $derived(data.groupe);
@@ -10,7 +10,12 @@
   const anciens = $derived(data.membres.filter((m) => !m.dans_le_groupe));
 </script>
 
-<svelte:head><title>{g.nom} ({g.sigle}), {NOM}</title></svelte:head>
+<svelte:head>
+  <title>{g.nom} ({g.sigle}), {NOM}</title>
+  <meta property="og:title" content="{g.nom} ({g.sigle})" />
+  <meta property="og:image" content="{URL_SITE}/cartes/groupes/{g.slug}.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+</svelte:head>
 
 <p class="discret"><a href="/groupes">Groupes</a>, {legislature(g.legislature)} législature</p>
 <h1><span class="sigle" style:--c={g.couleur}>{g.sigle}</span></h1>

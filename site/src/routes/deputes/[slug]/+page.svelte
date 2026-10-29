@@ -46,6 +46,9 @@
       ? ` : ${pourcent(data.global.score)} de votes favorables aux droits`
       : ''}."
   />
+  <meta property="og:title" content={nom} />
+  <meta property="og:image" content="{URL_SITE}/cartes/deputes/{d.slug}.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 {#snippet vote(v: VoteDepute)}
@@ -141,11 +144,15 @@
   </p>
 {/if}
 
-{#if mailto}
-  <p>
-    <a class="bouton" href={mailto}>Lui écrire</a> <span class="discret petit">{d.courriel}</span>
-  </p>
-{/if}
+<p class="actions">
+  {#if mailto}
+    <a class="bouton" href={mailto}>Lui écrire</a>
+  {/if}
+  <a class="bouton secondaire" href="/cartes/deputes/{d.slug}.png" download="{d.slug}.png"
+    >Télécharger l’image</a
+  >
+  {#if d.courriel}<span class="discret petit">{d.courriel}</span>{/if}
+</p>
 
 {#if data.droits.length}
   <section>
@@ -255,6 +262,18 @@
     font-weight: 700;
     text-decoration: none;
     margin-right: 0.5rem;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+  }
+  .bouton.secondaire {
+    background: var(--papier);
+    color: var(--encre);
+    border: 2px solid var(--encre);
+    padding: calc(0.55rem - 2px) calc(1.1rem - 2px);
   }
   .texte {
     margin-top: 1.5rem;

@@ -145,7 +145,9 @@
     {#if resultat.circos.length > 1}
       <p>
         Le code postal {resultat.cp} couvre {resultat.circos.length} circonscriptions. Votre député dépend
-        de votre commune, voire de votre adresse.
+        {new Set(resultat.circos.flatMap((c) => c.communes)).size === 1
+          ? 'de votre adresse'
+          : 'de votre commune, voire de votre adresse'}.
       </p>
     {/if}
     <ul>
