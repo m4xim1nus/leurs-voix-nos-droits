@@ -164,6 +164,9 @@ def verifier(chemin: Path) -> tuple[bool, list[str]]:
         controle(f"XV{'I' * (leg - 15)}e : scrutins rattachés à un dossier", ok_d / n >= SEUIL_DOSSIERS,
                  f"{ok_d}/{n} ({ok_d / n:.1%})")
         out.append(f"info XV{'I' * (leg - 15)}e : {ok_d}/{n} ({ok_d / n:.1%}) scrutins rattachés à un dossier")
+    orphelins = [i for (i,) in _q(con, "select id from scrutins where objet = 'ensemble' and dossier_id is null")]
+    controle("votes sur l'ensemble tous rattachés à un dossier (décisif possible)", not orphelins,
+             ", ".join(orphelins))
     desaccords = _un(con, "select count(*) from scrutins s join amendements a on a.id = s.amendement_id "
                           "where s.rattachement = 'objet' and a.dossier_id != s.dossier_id")
     out.append(f"info {desaccords} scrutins dont l'amendement est rangé sous un autre dossier que "
