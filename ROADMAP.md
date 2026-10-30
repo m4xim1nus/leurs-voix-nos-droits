@@ -114,7 +114,7 @@ pour y toucher.
 
 ### Qualification au fil de l'eau
 
-7. ⏳ **Circuit** : section « au fil de l'eau » dans `docs/QUALIFICATION.md`
+7. ✅ **Circuit** : section « au fil de l'eau » dans `docs/QUALIFICATION.md`
    (un texte à la fois dès l'alerte, fiche courte, même validation par Max).
    Corriger ce qui gêne ce rythme : une publication faite avant la validation
    d'une requalification retire le texte du site, alors qu'elle doit y

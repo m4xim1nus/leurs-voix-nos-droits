@@ -111,8 +111,10 @@ reste la référence des contrôles de `lvnd check`.
 3. **Aperçu** : scores des groupes par droit sur l'ensemble des textes
    validés, ou validés et en brouillon, avant publication.
 4. **Publier** : textes validés, nouveaux ou modifiés depuis la dernière
-   publication, avec leurs contrôles. Le bouton ouvre un commit. Liste
-   des publications passées (date, auteur, lien vers le commit).
+   publication, avec leurs contrôles. Le bouton ouvre un commit. Un texte
+   déjà publié, repassé en brouillon ou « à relire », garde sa version
+   publiée jusqu'à sa validation ; pour le retirer du site, on l'écarte.
+   Liste des publications passées (date, auteur, lien vers le commit).
 5. **Journal** : dernières révisions, tous textes confondus.
 
 Les scores des groupes se calculent dans l'aperçu à partir des

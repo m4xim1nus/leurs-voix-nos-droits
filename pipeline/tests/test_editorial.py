@@ -2,6 +2,8 @@ import copy
 import pytest
 import yaml
 import json
+import sqlite3
+from pathlib import Path
 
 from lvnd import editorial, referentiels, sync_admin
 
@@ -94,6 +96,34 @@ def test_brouillons_charges_a_relire_sans_ecraser(tmp_path):
     assert "relecture" not in json.loads(lignes[0]["doc"])
     sql = sync_admin.script(tmp_path, None, lignes, avec_catalogue=False)
     assert "DELETE FROM" not in sql and "INSERT OR IGNORE INTO qualifications" in sql
+
+
+def _base_d1() -> sqlite3.Connection:
+    base = sqlite3.connect(":memory:")
+    base.executescript((Path(__file__).resolve().parents[2] / "admin/migrations/0001_init.sql").read_text())
+    return base
+
+
+def test_brouillon_recoit_sa_revision_meme_si_le_texte_en_a_deja_une(tmp_path):
+    (tmp_path / "a.yaml").write_text(
+        "id: essai\ndossier_an: DLR5L17N1\nlegislature: 17\ntitre: Loi\nstatut: a-relire\n"
+        "droits: []\nscrutins: []\n")
+    (tmp_path / "b.yaml").write_text(
+        "id: autre\ndossier_an: DLR5L17N2\nlegislature: 17\ntitre: Loi 2\nstatut: a-relire\n"
+        "droits: []\nscrutins: []\n")
+    base = _base_d1()
+    # DLR5L17N1 : brouillon retiré d'un lot précédent (sa révision reste). DLR5L17N2 : déjà en cours, intact.
+    base.execute("INSERT INTO revisions (dossier_an, statut, doc, auteur, date) "
+                 f"VALUES ('DLR5L17N1', 'a-relire', '{{}}', '{sync_admin.AUTEUR_BROUILLONS}', '2026-01-01')")
+    base.execute("INSERT INTO qualifications (dossier_an, statut, doc, modifie_par, modifie_le) "
+                 f"VALUES ('DLR5L17N2', 'brouillon', '{{}}', '{sync_admin.AUTEUR_BROUILLONS}', '2026-01-01')")
+    sql = sync_admin.script(tmp_path, None, sync_admin.brouillons(tmp_path), avec_catalogue=False)
+    base.executescript(sql)
+    base.executescript(sql)  # un même script rejoué n'ajoute rien
+    revisions = base.execute("SELECT dossier_an, date FROM revisions ORDER BY dossier_an, date").fetchall()
+    assert [r[0] for r in revisions] == ["DLR5L17N1", "DLR5L17N1"]
+    assert revisions[0][1] == "2026-01-01"
+    assert base.execute("SELECT statut FROM qualifications WHERE dossier_an = 'DLR5L17N2'").fetchone() == ("brouillon",)
 
 
 def test_remplacements_repassent_a_relire(tmp_path):

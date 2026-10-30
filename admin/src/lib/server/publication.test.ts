@@ -165,12 +165,38 @@ describe('publication', () => {
       { dossier_an: 'DLR5L17N2', legislature: 17, titre: 'Loi essai', motif: 'organisationnel' }
     ]);
 
-    // Un texte publié repassé en brouillon est retiré.
-    await enregistrer(
+    // Un texte publié repassé « à relire » garde sa version publiée : le fichier ne bouge pas.
+    const enLigne = etat.contenu;
+    const nCommits = etat.commits.length;
+    le = await enregistrer(
       db,
       {
-        doc: texte({ resume: 'Nouveau résumé.' }),
-        statut: 'brouillon',
+        doc: texte({ resume: 'Requalification en cours.' }),
+        statut: 'a-relire',
+        motif_ecart: null,
+        commentaire: null
+      },
+      'b@x',
+      le
+    );
+    prep = await preparer(db, GRILLE);
+    const requalifie = prep.textes.find((t) => t.dossier_an === 'DLR5L17N1');
+    expect(requalifie?.changement).toBeNull();
+    expect(requalifie?.en_ligne).toBe(true);
+    expect(prep.contenu).toBe(enLigne);
+    expect((await publier(db, GRILLE, CFG, 'b@x', f)).commit).toBeNull();
+    expect(etat.commits).toHaveLength(nCommits);
+    const { n_textes } = (await db
+      .prepare('SELECT n_textes FROM publications ORDER BY id DESC LIMIT 1')
+      .first<{ n_textes: number }>())!;
+    expect(n_textes).toBe(1);
+
+    // Sa validation publie la nouvelle version, comme une modification.
+    le = await enregistrer(
+      db,
+      {
+        doc: texte({ resume: 'Requalification en cours.' }),
+        statut: 'valide',
         motif_ecart: null,
         commentaire: null
       },
@@ -178,11 +204,50 @@ describe('publication', () => {
       le
     );
     expect((await preparer(db, GRILLE)).textes.find((t) => t.id === 'essai')?.changement).toBe(
-      'retire'
+      'modifie'
     );
     await publier(db, GRILLE, CFG, 'b@x', f);
-    expect(JSON.parse(etat.contenu!).textes).toEqual([]);
-    expect(etat.commits[2]).toMatch(/Retirés : essai/);
+    expect(JSON.parse(etat.contenu!).textes[0].resume).toBe('Requalification en cours.');
+    expect(etat.commits.at(-1)).toMatch(/Modifiés : essai/);
+
+    // Un texte écarté repassé « à relire » reste dans la liste des écartés, avec son motif.
+    const ecartes = JSON.parse(etat.contenu!).ecartes;
+    await enregistrer(
+      db,
+      {
+        doc: texte({ id: 'requalif', dossier_an: 'DLR5L17N2' }),
+        statut: 'a-relire',
+        motif_ecart: null,
+        commentaire: null
+      },
+      'b@x',
+      (await db
+        .prepare("SELECT modifie_le FROM qualifications WHERE dossier_an = 'DLR5L17N2'")
+        .first<{ modifie_le: string }>())!.modifie_le
+    );
+    prep = await preparer(db, GRILLE);
+    expect(JSON.parse(prep.contenu).ecartes).toEqual(ecartes);
+    expect(JSON.parse(prep.contenu).textes.map((t: Qualification) => t.id)).toEqual(['essai']);
+  });
+
+  it('refuse de publier si la version en ligne est introuvable, plutôt que de retirer le texte', async () => {
+    const { etat, f } = faux();
+    const doc = JSON.stringify(texte({ id: 'perdu', dossier_an: 'DLR5L17N3' }));
+    await db
+      .prepare(
+        `INSERT INTO qualifications (dossier_an, statut, doc, modifie_par, modifie_le, publie_empreinte)
+         VALUES ('DLR5L17N3', 'a-relire', ?, 'x', '2026-01-01', 'empreinte-sans-revision')`
+      )
+      .bind(doc)
+      .run();
+    const prep = await preparer(db, GRILLE);
+    expect(prep.bloquant).toBe(true);
+    expect(prep.textes.find((t) => t.dossier_an === 'DLR5L17N3')?.erreurs[0]).toMatch(
+      /version publiée introuvable/
+    );
+    await expect(publier(db, GRILLE, CFG, 'x', f)).rejects.toThrow('erreurs bloquantes');
+    expect(etat.commits).toEqual([]);
+    await db.prepare("DELETE FROM qualifications WHERE dossier_an = 'DLR5L17N3'").run();
   });
 
   it('refuse une édition concurrente', async () => {

@@ -40,8 +40,8 @@ celles de `docs/METHODO.md`. Le circuit est celui de l'admin
    ses brouillons vont dans un dossier à part, chargé avec
    `--brouillons ../source/brouillons-lotN-requalif --remplacer "requalification, lot N"`.
    Le texte repasse « à relire » et l'admin montre l'écart avec la
-   version publiée. Une publication faite avant sa validation le retire du
-   site (l'admin l'annonce comme « retiré »).
+   version publiée. Celle-ci reste sur le site jusqu'à sa validation, même
+   si d'autres textes sont publiés entre-temps.
 5. **Fiche de relecture** : `source/relecture-lotN.md` (non versionnée,
    elle peut nommer le commanditaire). En tête : un tableau récapitulatif
    et les questions transversales, avec une recommandation chacune.
@@ -60,6 +60,48 @@ celles de `docs/METHODO.md`. Le circuit est celui de l'admin
 Le lot de tri (garder ou écarter des candidats en masse) suit le même
 circuit. Ses brouillons ne portent que `statut: ecarte` et un
 `motif_ecart` court, ou une simple liste « à qualifier » dans la fiche.
+
+## Au fil de l'eau
+
+Depuis le cycle « Au fil des votes », un nouveau vote se traite sans attendre
+un lot : **un texte à la fois, dès l'alerte**. Rôles, règles et sources ne
+changent pas, ni la validation par Max.
+
+1. **L'alerte.** `lvnd check` (lignes `AVERTISSEMENT`) ou la file « À traiter »
+   de l'admin :
+
+   | Alerte | Ce qu'on fait |
+   |---|---|
+   | `vote_posterieur` | le nouveau vote devient le décisif (règle 9) : relire le sens sur le texte voté (règle 6) |
+   | `unanimite_contestee` | revoir l'écart (règle 9) : qualifier, ou garder l'écart avec un motif à jour |
+   | `premier_decisif` | qualifier, ou écarter avec son motif |
+   | `inscrit` | rien à qualifier : le vote n'a pas eu lieu. On repère les sources utiles et on revient après le vote |
+
+   Le mot est « inscrit », jamais « sera voté ». Aucun scrutin n'est retenu
+   avant d'exister dans `data/export/scrutins.csv`.
+2. **Le brouillon**, `source/brouillons-fil/<id>.yaml` (format de la consigne
+   ci-dessous). Claude le prépare lui-même, sans agent ni lot. Un texte déjà
+   qualifié repart de sa version publiée : on ne touche qu'à ce que le nouveau
+   vote change, et on revérifie les sources sur le texte voté.
+3. **Le contrôle**, comme pour un lot (étape 3 du circuit).
+4. **Le chargement « à relire ».** Texte nouveau : `--brouillons`. Texte déjà
+   validé ou écarté : `--brouillons … --remplacer "requalification, vote du JJ/MM/AAAA"`.
+   Le dossier ne contient que les YAML du texte en cours. La version publiée
+   reste sur le site jusqu'à la validation.
+5. **La fiche courte**, dans le chat, pas dans un fichier : scrutin et décompte,
+   droit principal et sens proposé (avec ce qui a changé depuis le texte
+   précédent), sources avec un extrait lu, points d'attention. Faute de source
+   admise, la fiche le dit et le texte attend.
+6. **La décision de Max**, texte par texte, puis la validation et la
+   publication, comme aux étapes 6 à 8 du circuit. Le commentaire de validation
+   dit : « validé par Max (au fil de l'eau, JJ/MM/AAAA) ».
+
+Pour retirer un texte du site, on l'écarte avec son motif. Le repasser en
+brouillon ne suffit pas : sa version publiée reste en ligne.
+
+Les `scores_*.csv` ne changent qu'à la publication d'une qualification validée.
+Tant que Max n'a pas validé, ils restent identiques à l'octet, même si un
+nouveau vote est au catalogue.
 
 ## Consigne aux agents de recherche (à leur donner telle quelle)
 

@@ -5,16 +5,18 @@
   let { data, form } = $props();
   let enCours = $state(false);
 
-  const LIBELLES = { nouveau: 'nouveau', modifie: 'modifié', retire: 'retiré' } as const;
+  const LIBELLES = { nouveau: 'nouveau', modifie: 'modifié' } as const;
   const changes = $derived(data.textes.filter((t) => t.changement));
   const enErreur = $derived(
-    data.textes.filter((t) => (t.statut === 'valide' || t.statut === 'ecarte') && t.erreurs.length)
-  );
-  const autres = $derived(
     data.textes.filter(
-      (t) => !t.changement && (t.statut === 'brouillon' || t.statut === 'a-relire')
+      (t) => (t.statut === 'valide' || t.statut === 'ecarte' || t.en_ligne) && t.erreurs.length
     )
   );
+  const enTravail = $derived(
+    data.textes.filter((t) => t.statut === 'brouillon' || t.statut === 'a-relire')
+  );
+  const autres = $derived(enTravail.filter((t) => !t.en_ligne));
+  const requalifies = $derived(enTravail.filter((t) => t.en_ligne));
 </script>
 
 <svelte:head><title>Publier · admin</title></svelte:head>
@@ -24,7 +26,8 @@
   « Publier » écrit les textes validés et écartés dans <span class="mono">{data.chemin}</span> du
   dépôt
   <span class="mono">{data.depot}</span> (branche {data.branche}), en un commit : le site public se
-  reconstruit ensuite. Les brouillons et les textes à relire ne sont pas publiés.
+  reconstruit ensuite. Les brouillons et les textes à relire ne sont pas publiés : un texte déjà
+  publié y garde sa version publiée jusqu'à sa validation. Pour le retirer du site, l'écarter.
 </p>
 
 {#if form?.erreur}
@@ -81,8 +84,8 @@
   {#if enErreur.length}
     <ul class="messages">
       <li class="erreur">
-        {enErreur.length} texte(s) à publier ont des erreurs bloquantes : les corriger, ou les repasser
-        en brouillon.
+        {enErreur.length} texte(s) ont des erreurs bloquantes : les corriger, ou repasser en brouillon
+        ceux qui n'ont jamais été publiés.
       </li>
     </ul>
   {/if}
@@ -109,6 +112,17 @@
     <span class="discret">editorial.json : {(data.taille / 1024).toFixed(0)} Ko</span>
   </form>
 </section>
+
+{#if requalifies.length}
+  <section class="carte">
+    <h2>Requalifications en cours, version publiée conservée ({requalifies.length})</h2>
+    <p>
+      {#each requalifies as t (t.dossier_an)}
+        <a href="/textes/{t.dossier_an}" class="pastille {t.statut}">{t.id || t.dossier_an}</a>{' '}
+      {/each}
+    </p>
+  </section>
+{/if}
 
 {#if autres.length}
   <section class="carte">

@@ -669,6 +669,9 @@
       <p class="discret">
         Dernier enregistrement : {data.qualif.modifie_par}, {dateHeure(data.qualif.modifie_le)}.
         {#if data.qualif.publie_empreinte}Publié au moins une fois.{:else}Jamais publié.{/if}
+        {#if data.qualif.publie_empreinte && (data.qualif.statut === 'brouillon' || data.qualif.statut === 'a-relire')}
+          Sa version publiée reste sur le site jusqu'à sa validation ; pour le retirer, l'écarter.
+        {/if}
       </p>
       {#if data.publie}
         {#if data.publie.changements.length}

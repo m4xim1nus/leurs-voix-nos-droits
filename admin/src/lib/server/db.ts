@@ -174,6 +174,17 @@ export async function revisions(db: D1Database, id: string): Promise<Revision[]>
   return results;
 }
 
+/** Toutes les révisions publiables d'un texte, sans limite : sert à retrouver sa version publiée. */
+export async function revisionsPubliables(db: D1Database, id: string): Promise<Revision[]> {
+  const { results } = await db
+    .prepare(
+      "SELECT * FROM revisions WHERE dossier_an = ? AND statut IN ('valide', 'ecarte') ORDER BY id DESC"
+    )
+    .bind(id)
+    .all<Revision>();
+  return results;
+}
+
 export async function journal(db: D1Database, limite = 100) {
   const { results } = await db
     .prepare(

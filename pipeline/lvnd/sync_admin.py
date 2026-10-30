@@ -217,8 +217,7 @@ def validations(dossier: Path, commentaire: str) -> list[str]:
 def remplacements(lignes: list[dict], commentaire: str) -> list[str]:
     """Requalification : les brouillons (`brouillons()`) remplacent la qualification existante et la
     repassent « à relire », avec une révision. `publie_empreinte` est gardée : l'admin montre l'écart avec
-    la version publiée, qui reste en ligne jusqu'à la prochaine publication (le texte y figure alors
-    comme « retiré » tant qu'il n'est pas revalidé)."""
+    la version publiée, qui reste en ligne, publication après publication, jusqu'à sa validation."""
     out = []
     for l in lignes:
         valeurs = [l["dossier_an"], l["statut"], l["doc"], l["motif_ecart"], l["modifie_par"], l["modifie_le"]]
@@ -232,13 +231,17 @@ def remplacements(lignes: list[dict], commentaire: str) -> list[str]:
 
 
 def _qualifs(lignes: list[dict], auteur: str, commentaire: str) -> list[str]:
-    """Ajoute des qualifications absentes de D1 (jamais d'écrasement) et leur révision d'origine."""
+    """Ajoute des qualifications absentes de D1 (jamais d'écrasement) et leur révision d'origine. La
+    date du chargement distingue les lignes écrites ici de celles qu'il a ignorées, et l'absence d'une
+    révision de même date évite le doublon si le même script repasse."""
     cols = ("dossier_an", "statut", "doc", "motif_ecart", "modifie_par", "modifie_le", "publie_empreinte")
     out = inserts("qualifications", cols, lignes, "INSERT OR IGNORE")
+    dates = ", ".join(sql_valeur(d) for d in sorted({l["modifie_le"] for l in lignes}))
     out.append(f"INSERT INTO revisions (dossier_an, statut, doc, motif_ecart, auteur, date, commentaire) "
-               f"SELECT dossier_an, statut, doc, motif_ecart, modifie_par, modifie_le, {sql_valeur(commentaire)} "
-               f"FROM qualifications WHERE modifie_par = {sql_valeur(auteur)} AND dossier_an NOT IN "
-               f"(SELECT dossier_an FROM revisions);")
+               f"SELECT q.dossier_an, q.statut, q.doc, q.motif_ecart, q.modifie_par, q.modifie_le, {sql_valeur(commentaire)} "
+               f"FROM qualifications q WHERE q.modifie_par = {sql_valeur(auteur)} AND q.modifie_le IN ({dates}) "
+               f"AND NOT EXISTS (SELECT 1 FROM revisions r WHERE r.dossier_an = q.dossier_an "
+               f"AND r.auteur = q.modifie_par AND r.date = q.modifie_le);")
     return out
 
 
