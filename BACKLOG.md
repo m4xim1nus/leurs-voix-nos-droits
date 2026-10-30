@@ -25,6 +25,7 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] Rattachement scrutin → dossier : V4239 (amendement du Gouvernement au PLF 2026, 21/11/2025) est rattaché à la simplification de l'urbanisme (DLR5L17N51852) (claude, 2026-10-29)
 - [ ] Rattachement scrutin → dossier : V6758 (amendement à la loi d'urgence agricole) est rattaché à la loi organique « natifs » de Nouvelle-Calédonie (DLR5L17N52104) (claude, 2026-10-29)
 - [ ] Catalogue : `cc_url` en 404 quand la décision est rendue l'année suivant la saisine (2022-846 DC, LOPMI : l'URL valide est `/decision/2023/2022846DC.htm`) (claude, 2026-10-29)
+- [ ] Alertes : aucune ne signale un texte rejeté par le rejet d'une partie (PLFSS 2027, V9097) ni un vote sur l'ensemble sans scrutin public ; `etat` les suit, pas `lvnd check` (claude, 2026-10-30)
 
 ## Cycle en cours : Reliquat XVIe
 
@@ -39,7 +40,7 @@ textes sans décisif lors des tris, `source/relecture-tri*.md`), et le suivi
 des textes avant leur adoption.
 
 - [→Au fil des votes] Suivre les textes avant leur adoption, pour interpeller au bon moment (claude, 2026-10-29)
-- [→Au fil des votes] Candidat `etrangers` en attente d'un vote final : mariages simulés ou arrangés (DLR5L16N49075, examen inachevé le 25/06/2026, 35 amendements votés) (claude, 2026-10-29)
+- [→Au fil des votes] Candidat `etrangers` en attente d'un vote final : mariages simulés ou arrangés (DLR5L16N49075, examen inachevé le 25/06/2026 ; 35 amendements votés le 26/06/2025, six suspensions de séance seulement le 25/06/2026) (claude, 2026-10-29)
 - [→Au fil des votes] `libertes` : suivre la concentration des médias (DLR5L17N53329) et la réforme de l'audiovisuel public (DLR5L16N47697), en attente d'un vote final (user:moi, 2026-10-29)
 - [→Au fil des votes] AGRASC (DLR5L17N53159, écarté au lot 6) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart (claude, 2026-10-29)
 - [→Au fil des votes] `lvnd check` : alerte quand un texte qualifié reçoit un vote sur l'ensemble postérieur à son décisif (texte en navette, règle 9) (claude, 2026-10-29)

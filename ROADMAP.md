@@ -130,6 +130,13 @@ pour y toucher.
    - les textes du backlog : AGRASC, mariages simulés, concentration des
      médias, audiovisuel public.
 
+   Au 30/10/2026, aucun de ces textes n'a de nouveau vote décisif : rien à
+   valider. Sources et mesures préparées (fiches privées), questions de méthode
+   dans `docs/A_VALIDER.md`. Prochains rendez-vous : commission des rapports
+   locatifs le 03/11, commission de Territoires zéro chômeur le 10/11 (réunion
+   éventuelle), vote solennel
+   du PLF inscrit le 17/11.
+
 ### Front (des faits, aucun nouveau jugement)
 
 9. ⏳ **État sur les fiches texte** et dans les listes ; mention « vote de
