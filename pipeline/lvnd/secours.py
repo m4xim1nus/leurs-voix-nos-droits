@@ -31,6 +31,7 @@ PAUSE = 1.0  # secondes entre deux requêtes
 PATIENCE = 600  # secondes d'erreurs serveur d'affilée avant d'abandonner
 MAX_ESSAIS = 60  # identifiants essayés par scrutin
 RE_TEXTE = re.compile(r"^(?:PRJL|PION|PNRE|PTLE|TAP)[A-Z]*R5L(\d+)(BTC\d+|B\d+)")
+RE_CITE = re.compile(r"(?:PRJL|PION|PNRE|PTLE|TAP)[A-Z]*R5L\d+BTC?\d+")
 
 
 def normaliser(v):
@@ -42,10 +43,13 @@ def normaliser(v):
     return v.strip() if isinstance(v, str) else v
 
 
-def textes_par_dossier(dossier_de: dict[str, str], legislature: int) -> dict[str, list[str]]:
-    """dossier → parties `B…`/`BTC…` de l'identifiant de ses textes, du plus récent au plus ancien."""
+def textes_par_dossier(dossier_de: dict[str, str], legislature: int,
+                       dossiers: dict[str, dict] | None = None) -> dict[str, list[str]]:
+    """dossier → parties `B…`/`BTC…` de l'identifiant de ses textes, du plus récent au plus ancien.
+    Le dossier lui-même en cite que l'index des documents ignore (`BTC1991`, loi européenne sur l'espace)."""
     out: dict[str, set[str]] = {}
-    for texte, dossier in dossier_de.items():
+    cites = ((t, uid) for uid, d in (dossiers or {}).items() for t in RE_CITE.findall(json.dumps(d)))
+    for texte, dossier in (*dossier_de.items(), *cites):
         if (m := RE_TEXTE.match(texte)) and int(m[1]) == legislature:
             # Des amendements de séance portent `B<n>` alors que seul `BTC<n>` est un texte (V1191 en XVIIe).
             out.setdefault(dossier, set()).update({m[2], m[2].replace("BTC", "B")})
@@ -53,15 +57,16 @@ def textes_par_dossier(dossier_de: dict[str, str], legislature: int) -> dict[str
 
 
 def candidats(legislature: int, organe: str, numero: str, bases: list[str]) -> list[str]:
-    """Identifiants possibles. Division 1, parties 0 et 1 (PLF), d'abord ; la division 2 est rare."""
+    """Identifiants possibles. Division 1, parties 0, puis 1 et 2 (PLF), d'abord ; la division 2 est rare."""
     n = int(re.sub(r"\D", "", numero))
-    return [f"AMANR5L{legislature}PO{organe}{b}P{p}D{d}N{n:06d}" for d in "12" for b in bases for p in "01"]
+    return [f"AMANR5L{legislature}PO{organe}{b}P{p}D{d}N{n:06d}" for d in "12" for b in bases for p in "012"]
 
 
-def meme_numero(a: dict, numero: str) -> bool:
-    """Le numéro complet (l'identifiant ne porte que ses chiffres) ; « I-1762 » vaut « 1762 » au PLF."""
+def meme_numero(a: dict, numero: str, seconde_partie: bool = False) -> bool:
+    """Le numéro complet (l'identifiant ne porte que ses chiffres). Au PLF, « I-1762 » et « II-1762 » valent
+    « 1762 » : un intitulé qui nomme la seconde partie exclut la première, où le même numéro existe aussi."""
     lu = re.sub(r"\s*\(.*\)", "", str((a.get("identification") or {}).get("numeroLong"))).strip()
-    return lu == numero or bool(re.fullmatch(rf"(?:I|II)-{re.escape(numero)}", lu))
+    return lu == numero or bool(re.fullmatch(rf"{'II' if seconde_partie else '(?:I|II)'}-{re.escape(numero)}", lu))
 
 
 def signe(a: dict, nom: str | None) -> bool:
@@ -97,13 +102,24 @@ def _lire_unitaire(client: httpx.Client, uid: str, patience: int = PATIENCE) -> 
         attente = min(2 * attente, 120)
 
 
+def _lisible(p: Path) -> bool:
+    """Un arrêt brutal de la machine peut laisser un fichier vide ou tronqué : on l'écarte, il sera redemandé."""
+    try:
+        json.loads(p.read_text())
+        return True
+    except ValueError:
+        p.unlink()
+        return False
+
+
 def parcourir(client: httpx.Client, dossier: Path, legislature: int, organe: str, vises: list[dict],
               liens: dict[str, dict], seances: dict[str, set[str]], dossier_de: dict[str, str],
               bases: dict[str, list[str]], duree_max: int | None = None) -> dict:
     """Récupère dans `dossier` l'amendement de chaque scrutin de `vises` ; renvoie le bilan."""
     chemin_etat = dossier / "etat.json"
     etat = json.loads(chemin_etat.read_text()) if chemin_etat.exists() else {"scrutins": {}, "absents": []}
-    connus = {p.stem: p for p in dossier.glob("json/*/*/*.json")}
+    connus = {p.stem: p for p in dossier.glob("json/*/*/*.json") if _lisible(p)}
+    etat["scrutins"] = {k: u for k, u in etat["scrutins"].items() if u is None or u in connus}
     absents, debut, requetes, dernier = set(etat["absents"]), time.monotonic(), 0, {}
 
     def sauver():
@@ -122,8 +138,8 @@ def parcourir(client: httpx.Client, dossier: Path, legislature: int, organe: str
         trouve = None
         if num is not None:
             principal = liens.get(s["id"], {}).get("dossier_id")
-            cands = [principal] if principal else []
-            cands += sorted(seances.get(s["seance"], set()) - set(cands))
+            # Les autres dossiers de la séance seulement à défaut : un même numéro du même auteur y passerait le contrôle.
+            cands = [principal] if principal else sorted(seances.get(s["seance"], set()))
             ordre = [dernier[d] for d in cands if d in dernier]
             ordre += [b for d in cands for b in bases.get(d, [])]
             auteur_date, seance_seule = None, None
@@ -138,7 +154,7 @@ def parcourir(client: httpx.Client, dossier: Path, legislature: int, organe: str
                     if a is None:
                         absents.add(uid)
                         continue
-                if not meme_numero(a, num):
+                if not meme_numero(a, num, "seconde partie" in norm(s["titre"])):
                     continue
                 meme_seance = bool(s["seance"]) and a.get("seanceDiscussionRef") == s["seance"]
                 if meme_seance and signe(a, nom):
@@ -157,7 +173,8 @@ def parcourir(client: httpx.Client, dossier: Path, legislature: int, organe: str
                 if uid not in connus:
                     p = dossier / "json" / maison / str(texte) / f"{uid}.json"
                     p.parent.mkdir(parents=True, exist_ok=True)
-                    p.write_text(json.dumps({"amendement": a}, ensure_ascii=False))
+                    p.with_suffix(".tmp").write_text(json.dumps({"amendement": a}, ensure_ascii=False))
+                    p.with_suffix(".tmp").replace(p)
                     connus[uid] = p
                 dernier[maison] = re.search(r"PO\d+(B(?:TC)?\d+)P", uid)[1]
                 trouve = uid
@@ -184,4 +201,4 @@ def recuperer(client: httpx.Client, raw: Path, cle: str, legislature: int, organ
     dossier = unitaire(raw, cle)
     dossier.mkdir(parents=True, exist_ok=True)
     return parcourir(client, dossier, legislature, organe, vises, liens, textes.Index(dossiers).par_seance,
-                     dossier_de, textes_par_dossier(dossier_de, legislature), duree_max)
+                     dossier_de, textes_par_dossier(dossier_de, legislature, dossiers), duree_max)

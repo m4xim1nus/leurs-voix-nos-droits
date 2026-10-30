@@ -46,8 +46,23 @@ CDN (OVH), coupe souvent la connexion au milieu des dumps d'amendements.
 Une reprise d'un seul tenant (`Range: bytes=N-`) renvoie ensuite `206`
 sans aucun octet, plusieurs fois de suite, alors qu'un bloc de 1 Mio
 demandé à la même position finit par être servi. Après une coupure,
-`download` continue donc par blocs de 1 Mio, redemandés jusqu'à une heure
-sans progrès (`If-Range` garantit que le fichier n'a pas changé).
+`download` continue donc par blocs, et reprend un fichier partiel d'un
+lancement à l'autre (`If-Range` garantit que le fichier n'a pas changé).
+Le service est intermittent : depuis le 29/10/2026 vers 18 h, ce serveur ne
+sert plus aucune plage au-delà d'environ 1 Mo sur les dumps d'amendements.
+
+**Plan B des amendements** (`pipeline/lvnd/secours.py`). Après 20 minutes sans
+aucun octet, et s'il n'existe pas d'archive plus ancienne, `download` récupère
+un à un les amendements mis aux voix sur le site de l'AN, autre serveur
+officiel (`www.assemblee-nationale.fr/dyn/opendata/<uid>.json`), au même
+format. Le manifeste note `mode: secours`, et chaque lancement suivant retente
+le dump, qui remplace tout. Les scrutins, dossiers et acteurs n'ont pas
+d'équivalent à l'unité (404 ou 500 sur les identifiants testés).
+
+**Limite** : ni les amendements identiques, que rien ne permet de lister sans
+le dump, ni les amendements non mis aux voix. Les scores n'en dépendent pas et
+le site n'affiche que les amendements votés ; seul `amendements.csv` est
+moins complet.
 
 ## Votes nominatifs : volume et stockage
 
@@ -149,6 +164,13 @@ auteurs des amendements identiques, souvent d'autres groupes, se
 retrouvent par `discussionIdentique` (même discussion, même texte) :
 l'export `amendements.csv` contient les amendements mis aux voix et leurs
 identiques.
+
+**Mesure sur la XVIe (30/10/2026), par le plan B** : 3 159 scrutins sur
+amendement rattachés sur 3 173 (99,6 %), en 6 036 requêtes. Faute de dump pour
+référence, contrôle par l'article nommé dans l'intitulé et le sort du vote :
+9 articles différents sur 2 712 comparables (0,33 %) et aucun sort différent sur
+3 152, contre 0,45 % et 0,09 % en XVIIe avec le dump. Six scrutins gagnent un
+dossier, aucun n'en change.
 
 XVIe : *mesure en attente*. Le serveur de l'AN coupe sans cesse le
 téléchargement du dump (363 Mo) : 10, 18, 161 puis 14 Mo reçus selon les

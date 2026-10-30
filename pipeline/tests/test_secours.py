@@ -63,10 +63,16 @@ def test_textes_du_dossier_du_plus_recent_au_plus_ancien():
     assert secours.textes_par_dossier(docs, 16) == {"D": ["BTC1010", "B1010", "B0491"]}
 
 
+def test_texte_cite_par_le_dossier_seulement():
+    dossiers = {"D": {"acte": {"texteAssocie": "PNREANR5L16BTC1991"}}}
+    assert secours.textes_par_dossier({"PNREANR5L16B1944": "D"}, 16, dossiers) == {"D": ["BTC1991", "B1991", "B1944"]}
+
+
 def test_ordre_des_candidats():
     assert secours.candidats(16, ORGANE, "I-7", ["BTC1", "B1"]) == [
-        uid("BTC1", 7), uid("BTC1", 7, 1), uid("B1", 7), uid("B1", 7, 1),
-        uid("BTC1", 7, 0, 2), uid("BTC1", 7, 1, 2), uid("B1", 7, 0, 2), uid("B1", 7, 1, 2)]
+        uid("BTC1", 7), uid("BTC1", 7, 1), uid("BTC1", 7, 2), uid("B1", 7), uid("B1", 7, 1), uid("B1", 7, 2),
+        uid("BTC1", 7, 0, 2), uid("BTC1", 7, 1, 2), uid("BTC1", 7, 2, 2),
+        uid("B1", 7, 0, 2), uid("B1", 7, 1, 2), uid("B1", 7, 2, 2)]
 
 
 def test_trouve_et_range_comme_le_dump(tmp_path):
@@ -129,6 +135,22 @@ def test_meme_seance_seule_en_dernier_recours(tmp_path):
     assert json.loads((tmp_path / "etat.json").read_text())["scrutins"]["V1"] == u
 
 
+def test_pas_de_recherche_dans_les_autres_dossiers_de_la_seance(tmp_path):
+    """Cas réel XVIe (V830) : un dossier connu, le même numéro du même auteur sur un autre dossier de la séance."""
+    u = uid("B0578", 7)
+    transport, demandes = site({u: amendement(u, "S1")})
+    with httpx.Client(transport=transport) as c:
+        bilan = secours.parcourir(c, tmp_path, 16, ORGANE, [scrutin()], {"V1": {"dossier_id": "D"}}, {"S1": {"D", "AUTRE"}},
+                                  {}, {"D": ["BTC1010"], "AUTRE": ["B0578"]})
+    assert bilan["amendements_trouves"] == 0 and u not in demandes
+
+
+def test_seconde_partie_du_plf_exclut_la_premiere():
+    a = {"identification": {"numeroLong": "I-7"}}
+    assert secours.meme_numero(a, "7") and not secours.meme_numero(a, "7", True)
+    assert secours.meme_numero({"identification": {"numeroLong": "II-7"}}, "7", True)
+
+
 def test_sans_seance_auteur_et_date_de_depot(tmp_path):
     u = uid("BTC1010", 7)
     transport, _ = site({u: amendement(u, None, "M. Dupont", "2022-01-01")})  # hors fenêtre
@@ -145,6 +167,17 @@ def test_reprise_sans_redemander(tmp_path):
     n = len(demandes)
     parcourir(transport, tmp_path, [scrutin()])
     assert len(demandes) == n
+
+
+def test_fichier_vide_apres_arret_brutal_redemande(tmp_path):
+    u = uid("BTC1010", 7)
+    transport, demandes = site({u: amendement(u, "S1")})
+    parcourir(transport, tmp_path, [scrutin()])
+    fichier = tmp_path / f"json/D/PRJLANR5L16BTC1010/{u}.json"
+    fichier.write_text("")
+    n = len(demandes)
+    parcourir(transport, tmp_path, [scrutin()])
+    assert len(demandes) == n + 1 and json.loads(fichier.read_text())["amendement"]["uid"] == u
 
 
 def test_le_texte_trouve_passe_en_tete_pour_le_scrutin_suivant(tmp_path):
