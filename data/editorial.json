@@ -126,6 +126,72 @@
       ]
     },
     {
+      "id": "aesh-corps-fonctionnaires-2026",
+      "dossier_an": "DLR5L17N54901",
+      "legislature": 17,
+      "titre": "Proposition de loi créant un corps de fonctionnaires de catégorie B pour les accompagnants d'élèves en situation de handicap",
+      "resume": "Le texte crée un corps de fonctionnaires de catégorie B pour les accompagnants d'élèves en situation de handicap (AESH), aujourd'hui agents contractuels, recrutés désormais par concours. Les AESH en poste au 1er septembre 2026 dans les établissements publics ou privés sous contrat sont nommés fonctionnaires stagiaires, avec un an de stage et une formation. Ceux qui ne remplissent pas les conditions d'accès à la fonction publique se voient proposer un CDI aux mêmes conditions de rémunération et de temps de travail. Un rapport du Gouvernement doit évaluer la situation des accompagnants de l'enseignement agricole, que le corps ne couvre pas. Le texte a été adopté en 1re lecture à l'Assemblée le 29 octobre 2026.",
+      "droits": [
+        {
+          "code": "travail-protection-sociale",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "fsu-2026-10"
+          ],
+          "justification": "Le texte fait passer des agents contractuels à un statut de fonctionnaire. La FSU salue son adoption et demande que ce statut garantisse « une titularisation, un véritable salaire, une carrière et une formation adaptée »."
+        },
+        {
+          "code": "discriminations",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "ddd-2022-08"
+          ],
+          "justification": "L'accompagnement humain conditionne la scolarité des élèves en situation de handicap. La Défenseure des droits relie les difficultés de recrutement des AESH à « un statut peu attractif » : le manque d'accompagnants prive des élèves de l'accompagnement décidé pour eux."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Pour la FSU, le vote n'est qu'« une étape » : « L'État doit financer les titularisations, les revalorisations salariales et les recrutements nécessaires ». Elle revendique aussi un temps plein sur la base de 24 heures d'accompagnement, que le texte ne fixe pas.",
+          "sources": [
+            "fsu-2026-10"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision : texte non adopté définitivement.",
+      "note": "Vote de 1re lecture, texte encore en navette (règle 21). Aucune critique trouvée parmi les sources admises (règle 7). La source de la Défenseure des droits est antérieure au texte et porte sur le statut des AESH, sans se prononcer sur la création d'un corps (règle 7).",
+      "sources": {
+        "ddd-2022-08": {
+          "auteur": "Défenseure des droits",
+          "titre": "L'accompagnement humain des élèves en situation de handicap",
+          "date": "2022-08-25",
+          "url": "https://www.defenseurdesdroits.fr/sites/default/files/2023-07/ddd_rapport_accompagnement-eleves-handicap_2022_20220825.pdf"
+        },
+        "fsu-2026-10": {
+          "auteur": "FSU",
+          "titre": "Communiqué – AESH, une nouvelle avancée, amplifions la mobilisation pour gagner le statut !",
+          "date": "2026-10-30",
+          "url": "https://fsu.fr/communique-aesh-une-nouvelle-avancee-amplifions-la-mobilisation-pour-gagner-le-statut/"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V9203",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "Ensemble de la proposition de loi, 1re lecture"
+        },
+        {
+          "id": "VTANR5L17V9202",
+          "role": "article",
+          "pour": "texte",
+          "objet": "Article 1er : création du corps et nomination des AESH en poste"
+        }
+      ]
+    },
+    {
       "id": "aide-a-mourir",
       "dossier_an": "DLR5L17N51670",
       "legislature": 17,
@@ -4278,6 +4344,88 @@
           "role": "decisif",
           "pour": "contre-texte",
           "objet": "suppression de l'article unique, valant rejet du texte, 1re lecture, adoptée, puis texte retiré (169-132)"
+        }
+      ]
+    },
+    {
+      "id": "parcours-soins-violences-sexuelles-2026",
+      "dossier_an": "DLR5L17N54898",
+      "legislature": 17,
+      "titre": "Proposition de loi créant un parcours de soins intégralement pris en charge par la sécurité sociale pour toutes les victimes de violences sexuelles",
+      "resume": "Le texte supprime le ticket modérateur et la franchise pour les soins consécutifs aux violences sexuelles, quels que soient l'âge de la victime et la date des faits, avec dispense d'avance de frais. Les soins spécialisés en psychotraumatisme sont intégralement pris en charge, jusqu'à 33 séances par an, renouvelables. La qualité de victime s'établit par une plainte, un certificat médical ou l'avis d'un assistant de service social ou d'une association d'aide aux victimes. Le texte renforce la formation des professionnels de santé, nomme un adulte référent dans chaque école et instaure un entretien individuel annuel de chaque élève, de la maternelle à la majorité. Il a été adopté en 1re lecture à l'Assemblée le 29 octobre 2026.",
+      "droits": [
+        {
+          "code": "sante",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "ddd-2026-10",
+            "hce-2025-09"
+          ],
+          "justification": "Le texte étend l'accès aux soins (règle 2) en retirant le reste à charge des victimes. Le Défenseur des droits soutient une mesure de même nature dans la proposition de loi « intégrale », et le Haut Conseil à l'Égalité recommande de « rembourser à 100% tous les soins médicaux, psychologiques et psychiatriques » consécutifs à ces violences."
+        },
+        {
+          "code": "femmes-lgbti",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "hce-2025-09"
+          ],
+          "justification": "Le Haut Conseil à l'Égalité formule sa recommandation pour les violences sexistes et sexuelles « subies par les femmes »."
+        },
+        {
+          "code": "enfants",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "ciivise-2026-09"
+          ],
+          "justification": "Le parcours couvre aussi les adultes victimes dans leur enfance. La CIIVISE relève que réserver ce parcours aux mineurs « priverait ainsi l'ensemble des adultes survivants de la possibilité d'accéder à des soins spécialisés sans reste à charge »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Sur une mesure de même nature, le Défenseur des droits recommande de préciser la qualification de « victimes de violences sexuelles », pour éviter une appréciation subjective par les établissements de santé, et de garantir la prise en charge quelle que soit la situation administrative.",
+          "sources": [
+            "ddd-2026-10"
+          ]
+        },
+        {
+          "texte": "Sur un entretien annuel de même nature, le Défenseur des droits partage l'objectif mais « alerte sur les conditions matérielles de mise en œuvre » et sur les compétences requises pour le conduire.",
+          "sources": [
+            "ddd-2026-10"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision : texte non adopté définitivement.",
+      "note": "Vote de 1re lecture, texte encore en navette (règle 21). Les trois sources portent sur la mesure, pas sur ce texte (règle 7). Aucune critique trouvée parmi les sources admises sur le principe de la prise en charge intégrale : les réserves portent sur sa mise en œuvre.",
+      "sources": {
+        "ciivise-2026-09": {
+          "auteur": "CIIVISE",
+          "titre": "La CIIVISE appelle le Gouvernement à déposer un amendement d'extension aux adultes victimes de violences sexuelles et d'inceste dans leur enfance",
+          "date": "2026-09-21",
+          "url": "https://www.ciivise.fr/la-ciivise-appelle-le-gouvernement-deposer-un-amendement-dextension-aux-adultes-victimes-de-violences-sexuelles-et-dinceste-dans-leur-enfance"
+        },
+        "ddd-2026-10": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 26-07 du 1er octobre 2026 sur la proposition de loi apportant une réponse intégrale au phénomène des violences sexuelles et sexistes contre les femmes et les enfants",
+          "date": "2026-10-01",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=23424"
+        },
+        "hce-2025-09": {
+          "auteur": "Haut Conseil à l'Égalité",
+          "titre": "Mettre fin au déni et à l'impunité face aux viols et aux agressions sexuelles",
+          "date": "2025-09-24",
+          "url": "https://www.haut-conseil-egalite.gouv.fr/sites/hce/files/2025-10/HCE-2025-RAPPORT-VIOLENCE-V05.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V9241",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "Ensemble de la proposition de loi, 1re lecture"
         }
       ]
     },
