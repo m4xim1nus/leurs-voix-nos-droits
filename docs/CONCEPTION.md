@@ -88,6 +88,14 @@ publication produit un diff lisible.
 Le pipeline lit `data/editorial.json` pour les scores. `temoins.yaml`
 reste la référence des contrôles de `lvnd check`.
 
+Une liste `suivis` s'ajoute après `ecartes` dès qu'une fiche de suivi est
+publiée : `id`, `dossier_an`, `legislature`, `titre`, `resume`, `droits`
+(`code`, `sources`, `justification`, sans rôle ni sens), `note`, `sources`.
+Absente tant qu'elle est vide, elle ne change donc aucun octet du fichier
+actuel, et le format reste 1 : un lecteur qui l'ignore lit le reste sans
+changement. Aucun score ne la lit. Pipeline et admin l'écrivent à l'identique,
+vérifié sur `pipeline/tests/fixtures/editorial_suivis.json`.
+
 ### Écrans
 
 1. **Textes** (accueil) : les 479 textes du catalogue, avec des filtres
@@ -138,6 +146,11 @@ et dans `lvnd check` :
   pas), un texte qui étend un droit sans source critique en vigilance
   (règle 7), un décisif qui diffère de celui que propose le pipeline, une
   source définie mais jamais citée.
+- **Fiche de suivi** (statut `a-suivre`, bloquants) : au moins un droit touché,
+  codes pris dans la grille, ni sens ni rôle, au moins une source par droit,
+  toute source citée définie avec une URL, aucun scrutin retenu, et les termes
+  interdits comme partout. Un texte déjà qualifié et publié ne peut pas
+  repasser à suivre : il garde son sens.
 
 ### Choix (validés le 29/10/2026)
 

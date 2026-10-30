@@ -1,12 +1,19 @@
 // « Publier » : export des qualifications validées vers data/editorial.json, en un commit.
 //
-// Sont publiés les textes `valide` (dans `textes`) et `ecarte` (dans `ecartes`, avec leur
-// motif), cf. docs/CONCEPTION.md, choix B. Un texte publié puis repassé en brouillon ou « à relire »
+// Sont publiés les textes `valide` (dans `textes`), `ecarte` (dans `ecartes`, avec leur motif) et
+// `a-suivre` (dans `suivis`), cf. docs/CONCEPTION.md, choix B. Un texte publié puis repassé en brouillon ou « à relire »
 // (requalification) garde sa version publiée jusqu'à sa validation ; pour le retirer, on l'écarte.
 // Aucune publication tant qu'un texte à publier a une erreur bloquante.
 
 import type { Ecarte, Grille, LigneQualification, Qualification, Statut } from '../types';
-import { compact, documentEditorial, empreinte, serialiser, valider } from '../qualification';
+import {
+  compact,
+  documentEditorial,
+  empreinte,
+  serialiser,
+  valider,
+  validerSuivi
+} from '../qualification';
 import * as db from './db';
 import { ecrireFichier, lireFichier, shaBlob, type ConfigGitHub } from './github';
 
@@ -30,7 +37,7 @@ export interface Preparation {
   lignes: LigneQualification[];
 }
 
-const PUBLIABLES = new Set(['valide', 'ecarte']);
+const PUBLIABLES = new Set(['valide', 'ecarte', 'a-suivre']);
 
 export interface VersionPubliee {
   doc: Qualification;
@@ -86,6 +93,9 @@ export async function preparer(
     ...valides.map((l) => l.doc),
     ...conserves.filter((v) => v.statut === 'valide').map((v) => v.doc)
   ];
+  const docsSuivis = [...lignes, ...conserves]
+    .filter((l) => l.statut === 'a-suivre')
+    .map((l) => l.doc);
   const infos = db.infos(
     await db.scrutins(
       base,
@@ -93,7 +103,7 @@ export async function preparer(
     )
   );
   const ids = new Map<string, number>();
-  for (const d of docsValides) ids.set(d.id, (ids.get(d.id) ?? 0) + 1);
+  for (const d of [...docsValides, ...docsSuivis]) ids.set(d.id, (ids.get(d.id) ?? 0) + 1);
 
   const textes: EtatTexte[] = [];
   for (const l of lignes) {
@@ -103,12 +113,16 @@ export async function preparer(
     if (publiable && !l.publie_empreinte) changement = 'nouveau';
     else if (publiable && l.publie_empreinte !== e) changement = 'modifie';
     const v =
-      l.statut === 'valide' ? valider(l.doc, g, infos) : { erreurs: [], avertissements: [] };
-    if (l.statut === 'valide' && (ids.get(l.doc.id) ?? 0) > 1)
+      l.statut === 'valide'
+        ? valider(l.doc, g, infos)
+        : l.statut === 'a-suivre'
+          ? validerSuivi(l.doc, g)
+          : { erreurs: [], avertissements: [] };
+    if ((l.statut === 'valide' || l.statut === 'a-suivre') && (ids.get(l.doc.id) ?? 0) > 1)
       v.erreurs.push(`identifiant ${l.doc.id} utilisé par plusieurs textes`);
     if (l.statut === 'ecarte' && !(l.motif_ecart ?? '').trim()) v.erreurs.push('motif manquant');
     const conserve = enLigne.get(l.dossier_an);
-    if (conserve?.statut === 'valide' && (ids.get(conserve.doc.id) ?? 0) > 1)
+    if (conserve && conserve.statut !== 'ecarte' && (ids.get(conserve.doc.id) ?? 0) > 1)
       v.erreurs.push(`identifiant ${conserve.doc.id} utilisé par plusieurs textes`);
     if (introuvables.has(l.dossier_an))
       v.erreurs.push(
@@ -135,7 +149,7 @@ export async function preparer(
       titre: l.doc.titre,
       motif: (l.motif_ecart ?? '').trim()
     }));
-  const contenu = serialiser(documentEditorial(g.version, docsValides, ecartes));
+  const contenu = serialiser(documentEditorial(g.version, docsValides, ecartes, docsSuivis));
   // Un terme interdit (CLAUDE.md, règles dures) bloque la publication : on signale le texte fautif.
   for (const t of textes) {
     const l = lignes.find((x) => x.dossier_an === t.dossier_an)!;
@@ -150,19 +164,26 @@ export async function preparer(
 }
 
 export function message(textes: EtatTexte[]): string {
-  const par = (c: EtatTexte['changement'], ecarte = false) =>
+  const par = (c: EtatTexte['changement'], statut: Statut = 'valide') =>
     textes
-      .filter((t) => t.changement === c && (t.statut === 'ecarte') === ecarte)
-      .map((t) => (ecarte ? t.dossier_an : t.id))
+      .filter((t) => t.changement === c && t.statut === statut)
+      .map((t) => (statut === 'ecarte' ? t.dossier_an : t.id))
       .sort();
   const listes: [string, string[]][] = [
     ['Ajoutés', par('nouveau')],
     ['Modifiés', par('modifie')],
-    ['Écartés', [...par('nouveau', true), ...par('modifie', true)]]
+    ['Écartés', [...par('nouveau', 'ecarte'), ...par('modifie', 'ecarte')]],
+    ['À suivre', [...par('nouveau', 'a-suivre'), ...par('modifie', 'a-suivre')]]
   ];
   const mots = ['ajouté', 'modifié', 'écarté'];
   const titre = listes
-    .map(([, l], i) => l.length && `${l.length} ${mots[i]}${l.length > 1 ? 's' : ''}`)
+    .map(([, l], i) =>
+      !l.length
+        ? 0
+        : i === 3
+          ? `${l.length} à suivre`
+          : `${l.length} ${mots[i]}${l.length > 1 ? 's' : ''}`
+    )
     .filter(Boolean);
   const corps = listes.filter(([, l]) => l.length).map(([k, l]) => `${k} : ${l.join(', ')}`);
   return [

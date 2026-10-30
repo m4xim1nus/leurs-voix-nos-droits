@@ -88,6 +88,11 @@ def test_inscrit():
     # déjà traité : rien
     assert alertes.calculer([texte()], [], pts, qualif(ecartes=[{"dossier_an": "D", "motif": "m"}])) == []
     assert alertes.calculer([texte()], [], pts, qualif([qualifie("D")])) == []
+    # une fiche de suivi répond à l'inscription, pas au vote qui suit
+    suivi = {**qualif(), "suivis": [{"dossier_an": "D"}]}
+    assert alertes.calculer([texte()], [], pts, suivi) == []
+    r = alertes.calculer([texte(decisif="S1")], [scrutin("S1")], pts, suivi)
+    assert types(r) == [("premier_decisif", "D", "S1")]
 
 
 def test_identifiants_uniques():

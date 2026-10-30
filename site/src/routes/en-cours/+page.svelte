@@ -3,8 +3,9 @@
   public de l'Assemblée et, pour un texte qualifié, le sens lu sur le texte alors voté.
 -->
 <script lang="ts">
+  import Sources from '$lib/components/Sources.svelte';
   import Ventilations from '$lib/components/Ventilations.svelte';
-  import { phrase } from '$lib/droits';
+  import { court, phrase } from '$lib/droits';
   import {
     date,
     inscription,
@@ -77,7 +78,7 @@
 {#snippet fiche(t: TexteEnCours)}
   {@const v = t.dernier_vote}
   <article class="texte" id={t.id}>
-    <h3><a href="/textes/{t.id}">{t.titre}</a></h3>
+    <h3><a href={t.href}>{t.titre}</a></h3>
     {#if t.echeance === 'inscrit'}
       <p class="date">{inscription(chambre(t), dates(t))}{eventuel(t.seances)}.</p>
     {/if}
@@ -92,6 +93,21 @@
           >Le texte {phrase(t.qualification.code, t.qualification.sens)}</strong
         >{#if t.qualification.date}, sur le texte voté le {date(t.qualification.date)}{/if}.
       </p>
+    {/if}
+    {#if t.suivi}
+      <p class="petit"><strong>Pas encore qualifié</strong> : ni sens ni score avant le vote.</p>
+      {#if t.suivi.resume}<p>{t.suivi.resume}</p>{/if}
+      <h4>Droits touchés</h4>
+      {#each t.suivi.droits as d (d.code)}
+        <div class="droit">
+          <p>
+            <a href="/droits/{d.code}">{court(d.code)}</a>{#if d.justification}.
+              {d.justification}{/if}
+          </p>
+          <Sources sources={d.sources} />
+        </div>
+      {/each}
+      {#if t.suivi.note}<p class="petit discret">{t.suivi.note}</p>{/if}
     {/if}
     {#if v}
       <p>
@@ -147,6 +163,18 @@
   }
   .date {
     font-weight: 650;
+  }
+  .texte h4 {
+    margin: 0.75rem 0 0.25rem;
+    font-size: 1rem;
+  }
+  .droit {
+    border-left: 3px solid var(--filet);
+    padding-left: 0.9rem;
+    margin: 0.5rem 0 0.75rem;
+  }
+  .droit p {
+    margin-bottom: 0.3rem;
   }
   .positions {
     list-style: none;

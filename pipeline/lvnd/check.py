@@ -103,7 +103,15 @@ def _qualifications(con, controle, out) -> None:
         err, avert = editorial.valider(t, infos)
         controle(f"{t['id']} : qualification valide", not err, " ; ".join(err))
         out += [f"info {t['id']} : {a}" for a in avert]
-    out.append(f"info {len(doc['textes'])} textes qualifiés, {len(doc.get('ecartes', []))} écartés")
+    suivis = doc.get("suivis", [])
+    autres = {t["dossier_an"] for t in doc["textes"]} | {e["dossier_an"] for e in doc.get("ecartes", [])}
+    for s in suivis:
+        err, avert = editorial.valider_suivi(s)
+        if s["dossier_an"] in autres:
+            err.append("déjà qualifié ou écarté")
+        controle(f"{s['id']} : fiche de suivi valide", not err, " ; ".join(err))
+        out += [f"info {s['id']} : {a}" for a in avert]
+    out.append(f"info {len(doc['textes'])} textes qualifiés, {len(doc.get('ecartes', []))} écartés, {len(suivis)} à suivre")
 
 
 def _alertes(con) -> list[dict]:

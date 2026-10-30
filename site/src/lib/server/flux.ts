@@ -8,7 +8,7 @@ import type { TexteEnCours } from '$lib/types';
 const xml = (s: string) =>
   s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
 
-const urlTexte = (t: TexteEnCours) => `${URL_SITE}/textes/${t.id}`;
+const urlTexte = (t: TexteEnCours) => `${URL_SITE}${t.href}`;
 
 /** Dates de séance d'un texte, et la chambre : l'agenda de l'AN, sinon la séance du dossier. */
 function seances(t: TexteEnCours): { chambre: 'AN' | 'SN' | null; dates: string[] } {

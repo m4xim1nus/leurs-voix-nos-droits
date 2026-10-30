@@ -19,6 +19,11 @@ describe('resteATraiter', () => {
     }
   });
 
+  it('fiche de suivi : répond à l’inscription, pas au vote qui suit', () => {
+    expect(resteATraiter(alerte('inscrit'), 'a-suivre', '{}')).toBe(false);
+    expect(resteATraiter(alerte('premier_decisif'), 'a-suivre', '{}')).toBe(true);
+  });
+
   it('vote postérieur : traité quand la qualification retient ce scrutin', () => {
     const a = alerte('vote_posterieur', 'S2');
     expect(resteATraiter(a, 'valide', JSON.stringify({ scrutins: [{ id: 'S1' }] }))).toBe(true);

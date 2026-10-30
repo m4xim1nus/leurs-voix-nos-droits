@@ -9,7 +9,9 @@
   const changes = $derived(data.textes.filter((t) => t.changement));
   const enErreur = $derived(
     data.textes.filter(
-      (t) => (t.statut === 'valide' || t.statut === 'ecarte' || t.en_ligne) && t.erreurs.length
+      (t) =>
+        (t.statut === 'valide' || t.statut === 'ecarte' || t.statut === 'a-suivre' || t.en_ligne) &&
+        t.erreurs.length
     )
   );
   const enTravail = $derived(

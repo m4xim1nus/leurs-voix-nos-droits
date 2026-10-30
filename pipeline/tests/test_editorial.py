@@ -68,6 +68,57 @@ def test_controles_open_data():
     assert any("plusieurs amendements clés sur « Article 7 »" in e for e in err)
 
 
+FIXTURE = Path(__file__).parent / "fixtures/editorial_suivis.json"
+
+
+def test_suivis_a_l_octet():
+    """Même fixture que admin/src/lib/qualification.test.ts : les deux écrivent les mêmes octets."""
+    brut = FIXTURE.read_text()
+    doc = json.loads(brut)
+    # Une fiche stockée dans D1 (document complet, clés dans le désordre) redonne la même entrée.
+    d1 = [editorial.doc_suivi(s) for s in reversed(doc["suivis"])]
+    assert all(s["scrutins"] == [] and s["etiquettes"] == [] for s in d1)
+    assert editorial.serialiser(editorial.document(doc["textes"], doc["ecartes"], d1)) == brut
+
+
+def test_sans_suivi_la_cle_n_apparait_pas():
+    doc = json.loads(FIXTURE.read_text())
+    assert "suivis" not in editorial.document(doc["textes"], doc["ecartes"])
+    assert "suivis" not in editorial.document(doc["textes"], doc["ecartes"], [])
+
+
+def test_valider_suivi():
+    doc = json.loads(FIXTURE.read_text())
+    s = doc["suivis"][0]
+    assert editorial.valider_suivi(s) == ([], [])
+    assert editorial.valider_suivi(editorial.doc_suivi(s)) == ([], [])
+    assert "il faut au moins un droit touché" in editorial.valider_suivi({**s, "droits": []})[0]
+    sens = {**s, "droits": [{"code": "etrangers", "sens": "etend", "sources": ["s2"]}]}
+    assert editorial.valider_suivi(sens)[0] == ["etrangers : ni sens ni rôle avant le vote"]
+    sans = {**s, "droits": [{"code": "etrangers", "sources": []}]}
+    assert "etrangers : aucune source" in editorial.valider_suivi(sans)[0]
+    assert "droit inconnu : x" in editorial.valider_suivi({**s, "droits": [{"code": "x", "sources": ["s1"]}]})[0]
+    assert editorial.valider_suivi({**s, "scrutins": [{"id": "V"}]})[0] == ["aucun scrutin retenu avant le vote"]
+    assert "source s1 définie mais citée nulle part" in editorial.valider_suivi(
+        {**s, "droits": [{"code": "etrangers", "sources": ["s2"]}]})[1]
+    assert "source citée mais non définie : s2" in editorial.valider_suivi({**s, "sources": {}})[0]
+
+
+def test_amorcage_et_validation_des_suivis(tmp_path):
+    doc = json.loads(FIXTURE.read_text())
+    lignes = {l["dossier_an"]: l for l in sync_admin.qualifications(doc)}
+    l = lignes["DLR5L17N3"]
+    assert l["statut"] == "a-suivre" and l["publie_empreinte"] == sync_admin.empreinte(l["doc"], "a-suivre", None)
+    assert '"role"' not in l["doc"] and '"sens"' not in l["doc"]
+    (tmp_path / "s.yaml").write_text(yaml.safe_dump({**doc["suivis"][0], "statut": "a-suivre"}, allow_unicode=True))
+    assert sync_admin.brouillons(tmp_path)[0]["statut"] == "a-relire"
+    sql = "\n".join(sync_admin.validations(tmp_path, "validé par Max"))
+    assert "'a-suivre'" in sql
+    (tmp_path / "s.yaml").write_text(yaml.safe_dump({**doc["suivis"][0], "statut": "a-suivre", "scrutins": [{"id": "V"}]}))
+    with pytest.raises(SystemExit, match="aucun scrutin"):
+        sync_admin.validations(tmp_path, "x")
+
+
 def test_sql_echappe_les_apostrophes():
     assert sync_admin.sql_valeur("l'aide") == "'l''aide'"
     assert sync_admin.sql_valeur(None) == "NULL" and sync_admin.sql_valeur(True) == "1"

@@ -1,7 +1,7 @@
 // Types partagés : catalogue (tables remplies par `lvnd sync-admin`) et qualification (format 1
 // d'editorial.json, docs/CONCEPTION.md).
 
-export type Statut = 'brouillon' | 'a-relire' | 'valide' | 'ecarte';
+export type Statut = 'brouillon' | 'a-relire' | 'valide' | 'ecarte' | 'a-suivre';
 export type RoleDroit = 'principal' | 'secondaire';
 export type Sens = 'etend' | 'restreint';
 export type RoleScrutin = 'decisif' | 'ensemble' | 'motion' | 'article' | 'amendement' | 'censure';
@@ -57,11 +57,25 @@ export interface Ecarte {
   motif: string;
 }
 
+/** Une entrée de `suivis` : droits touchés et sources, sans sens ni scrutin. */
+export interface Suivi {
+  id: string;
+  dossier_an: string;
+  legislature: number;
+  titre: string;
+  resume: string;
+  droits: { code: string; sources: string[]; justification: string }[];
+  note: string;
+  sources: Record<string, Source>;
+}
+
 export interface Editorial {
   format: number;
   grille: number;
   textes: Qualification[];
   ecartes: Ecarte[];
+  /** Absent tant qu'aucune fiche de suivi n'est publiée. */
+  suivis?: Suivi[];
 }
 
 export interface Grille {

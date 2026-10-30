@@ -13,7 +13,14 @@
     LIBELLES_ROLE,
     LIBELLES_STATUT
   } from '$lib/format';
-  import { normaliser, POUR, ROLES_SCRUTIN, STATUTS, valider } from '$lib/qualification';
+  import {
+    normaliser,
+    POUR,
+    ROLES_SCRUTIN,
+    STATUTS,
+    valider,
+    validerSuivi
+  } from '$lib/qualification';
   import { favorable, scoresGroupes, scrutinsComptes } from '$lib/scores';
   import type {
     Groupe,
@@ -65,9 +72,20 @@
     )
   );
 
+  // Fiche de suivi : ni sens, ni rôle, ni scrutin dans ce qui s'enregistre (le formulaire les garde,
+  // au cas où le statut change avant l'enregistrement).
+  const aSuivre = $derived(statut === 'a-suivre');
   const complet = $derived(
     normaliser({
       ...doc,
+      droits: aSuivre
+        ? (doc.droits.map(({ code, sources, justification }) => ({
+            code,
+            sources,
+            justification
+          })) as Qualification['droits'])
+        : doc.droits,
+      scrutins: aSuivre ? [] : doc.scrutins,
       sources: Object.fromEntries(
         sources
           .filter((s) => s.cle.trim())
@@ -81,7 +99,7 @@
         erreurs: motif.trim() ? [] : ['un texte écarté doit avoir un motif'],
         avertissements: []
       };
-    const v = valider(complet, data.grille, infos);
+    const v = aSuivre ? validerSuivi(complet, data.grille) : valider(complet, data.grille, infos);
     if (data.autresIds.includes(complet.id))
       v.erreurs.push(`identifiant ${complet.id} déjà pris par un autre texte`);
     return v;
@@ -214,7 +232,7 @@
 
   // --- Aperçu du score ------------------------------------------------------------------------
 
-  const comptes = $derived(scrutinsComptes(statut === 'ecarte' ? [] : [complet]));
+  const comptes = $derived(scrutinsComptes(statut === 'ecarte' || aSuivre ? [] : [complet]));
   const apercu = $derived.by(() => {
     const pos = new Map(data.scrutins.map((s) => [s.id, s.positions]));
     const scores = scoresGroupes(comptes, pos, (g) => groupes.get(g)?.lignee ?? g);
@@ -289,7 +307,13 @@
 
   {#if statut !== 'ecarte'}
     <section class="carte">
-      <h2>Qualification</h2>
+      <h2>{aSuivre ? 'Fiche de suivi' : 'Qualification'}</h2>
+      {#if aSuivre}
+        <p class="discret">
+          Avant le vote : les droits touchés et leurs sources publiques, sans sens ni score, et
+          aucun scrutin retenu. Le texte passe à « validé » après son vote.
+        </p>
+      {/if}
       <div class="ligne">
         <label class="champ"
           >Identifiant public
@@ -307,8 +331,8 @@
 
       <h3>Droits touchés</h3>
       <p class="discret">
-        Un droit principal ; le sens se lit du point de vue des droits des personnes (règle 1). Une
-        justification courte et au moins une source par droit.
+        {#if !aSuivre}Un droit principal ; le sens se lit du point de vue des droits des personnes
+          (règle 1).{/if} Une justification courte et au moins une source par droit.
       </p>
       {#each doc.droits as d, i (i)}
         <div class="droit">
@@ -319,14 +343,16 @@
                 <option value={g.code} title={g.libelle}>{g.code}</option>
               {/each}
             </select>
-            <select bind:value={d.role} aria-label="Rôle">
-              <option value="principal">principal</option>
-              <option value="secondaire">secondaire</option>
-            </select>
-            <select bind:value={d.sens} aria-label="Sens" class={d.sens}>
-              <option value="restreint">restreint</option>
-              <option value="etend">étend</option>
-            </select>
+            {#if !aSuivre}
+              <select bind:value={d.role} aria-label="Rôle">
+                <option value="principal">principal</option>
+                <option value="secondaire">secondaire</option>
+              </select>
+              <select bind:value={d.sens} aria-label="Sens" class={d.sens}>
+                <option value="restreint">restreint</option>
+                <option value="etend">étend</option>
+              </select>
+            {/if}
             <span class="discret">sources :</span>
             {#each sources.filter((s) => s.cle) as s (s.cle)}
               <label class="ligne petite">
@@ -352,19 +378,21 @@
       {/each}
       <button type="button" onclick={ajouterDroit}>+ droit</button>
 
-      <h3>Étiquettes</h3>
-      <div class="ligne">
-        {#each data.grille.etiquettes as e (e.code)}
-          <label class="ligne petite" title={e.libelle}>
-            <input
-              type="checkbox"
-              checked={doc.etiquettes.includes(e.code)}
-              onchange={() => basculer(doc.etiquettes, e.code)}
-            />
-            {e.code}
-          </label>
-        {/each}
-      </div>
+      {#if !aSuivre}
+        <h3>Étiquettes</h3>
+        <div class="ligne">
+          {#each data.grille.etiquettes as e (e.code)}
+            <label class="ligne petite" title={e.libelle}>
+              <input
+                type="checkbox"
+                checked={doc.etiquettes.includes(e.code)}
+                onchange={() => basculer(doc.etiquettes, e.code)}
+              />
+              {e.code}
+            </label>
+          {/each}
+        </div>
+      {/if}
 
       <h3>Sources</h3>
       <p class="discret">
@@ -430,46 +458,50 @@
         {/if}
       </div>
 
-      <h3>Points de vigilance</h3>
-      <p class="discret">
-        Critiques sourcées affichées à côté du jugement, sans le modifier (règle 5).
-      </p>
-      {#each doc.vigilance as v, i (i)}
-        <div class="droit">
-          <textarea bind:value={v.texte} rows="2"></textarea>
-          <div class="ligne">
-            <span class="discret">sources :</span>
-            {#each sources.filter((s) => s.cle) as s (s.cle)}
-              <label class="ligne petite">
-                <input
-                  type="checkbox"
-                  checked={v.sources.includes(s.cle)}
-                  onchange={() => basculer(v.sources, s.cle)}
-                />
-                {s.cle}
-              </label>
-            {/each}
-            <button type="button" class="lien" onclick={() => doc.vigilance.splice(i, 1)}
-              >retirer</button
-            >
+      {#if !aSuivre}
+        <h3>Points de vigilance</h3>
+        <p class="discret">
+          Critiques sourcées affichées à côté du jugement, sans le modifier (règle 5).
+        </p>
+        {#each doc.vigilance as v, i (i)}
+          <div class="droit">
+            <textarea bind:value={v.texte} rows="2"></textarea>
+            <div class="ligne">
+              <span class="discret">sources :</span>
+              {#each sources.filter((s) => s.cle) as s (s.cle)}
+                <label class="ligne petite">
+                  <input
+                    type="checkbox"
+                    checked={v.sources.includes(s.cle)}
+                    onchange={() => basculer(v.sources, s.cle)}
+                  />
+                  {s.cle}
+                </label>
+              {/each}
+              <button type="button" class="lien" onclick={() => doc.vigilance.splice(i, 1)}
+                >retirer</button
+              >
+            </div>
           </div>
-        </div>
-      {/each}
-      <button type="button" onclick={() => doc.vigilance.push({ texte: '', sources: [] })}>
-        + point de vigilance
-      </button>
+        {/each}
+        <button type="button" onclick={() => doc.vigilance.push({ texte: '', sources: [] })}>
+          + point de vigilance
+        </button>
 
-      <h3>Conseil constitutionnel et note</h3>
+        <h3>Conseil constitutionnel et note</h3>
+        <label class="champ"
+          >Décision résumée {#if t.cc_decision}({t.cc_decision}, {t.cc_sens?.toLowerCase()}){/if}
+          <textarea bind:value={doc.conseil_constitutionnel} rows="2"></textarea>
+        </label>
+      {/if}
       <label class="champ"
-        >Décision résumée {#if t.cc_decision}({t.cc_decision}, {t.cc_sens?.toLowerCase()}){/if}
-        <textarea bind:value={doc.conseil_constitutionnel} rows="2"></textarea>
-      </label>
-      <label class="champ"
-        >Note de méthode (publique : choix des scrutins, amendements écartés…)
+        >Note de méthode (publique{aSuivre ? '' : ' : choix des scrutins, amendements écartés…'})
         <textarea bind:value={doc.note} rows="2"></textarea>
       </label>
     </section>
+  {/if}
 
+  {#if statut !== 'ecarte' && !aSuivre}
     <section class="carte">
       <h2>Scrutins</h2>
       <p class="discret">
@@ -656,8 +688,8 @@
       </label>
       <button
         class="principal"
-        disabled={enCours || (statut === 'valide' && controle.erreurs.length > 0)}
-        title={statut === 'valide' && controle.erreurs.length
+        disabled={enCours || ((statut === 'valide' || aSuivre) && controle.erreurs.length > 0)}
+        title={(statut === 'valide' || aSuivre) && controle.erreurs.length
           ? 'Corriger les erreurs pour valider'
           : ''}
       >

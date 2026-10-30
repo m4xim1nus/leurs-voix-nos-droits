@@ -30,5 +30,7 @@ export function resteATraiter(a: Alerte, statut: Statut | null, doc: string | nu
     const scrutins = (JSON.parse(doc) as { scrutins?: { id: string }[] }).scrutins ?? [];
     return !scrutins.some((s) => s.id === a.scrutin_id);
   }
+  // Une fiche de suivi répond à l'inscription, pas au vote : celui-ci reste à qualifier.
+  if (a.type === 'premier_decisif') return statut === null || statut === 'a-suivre';
   return statut === null;
 }

@@ -100,6 +100,25 @@ changent pas, ni la validation par Max.
 Pour retirer un texte du site, on l'écarte avec son motif. Le repasser en
 brouillon ne suffit pas : sa version publiée reste en ligne.
 
+### Fiche de suivi, avant le vote
+
+Pour un texte inscrit ou attendu, sans vote qualifié, que Max retient à la main
+(les mots-clés ne font que présélectionner). Elle donne les droits touchés et
+les sources publiques, **sans sens ni score, et sans aucun scrutin**.
+
+1. **Le brouillon**, `source/brouillons-suivi/<id>.yaml` : `statut: a-suivre`, et
+   pour chaque droit `{ code, sources, justification }`, sans `role` ni `sens`.
+   La justification dit ce que le texte touche, sans dire s'il étend ou restreint.
+   Les règles 2, 3 et 7 s'appliquent ; `scrutins` reste vide.
+2. **Faute de source admise, la fiche de relecture le dit et le texte attend** :
+   rien n'est publié sur lui. Une source peut porter sur la mesure (règle 7).
+3. **Le circuit** est celui d'un texte au fil de l'eau : chargement « à relire »,
+   décision de Max texte par texte, validation
+   (`--brouillons … --valider "validé par Max (suivi, JJ/MM/AAAA)"`, statut
+   `a-suivre` lu dans le YAML), puis « Publier ».
+4. **Après le vote**, l'alerte `premier_decisif` reste affichée : on qualifie le
+   texte ou on l'écarte, et sa fiche de suivi disparaît d'elle-même de `suivis`.
+
 Les `scores_*.csv` ne changent qu'à la publication d'une qualification validée.
 Tant que Max n'a pas validé, ils restent identiques à l'octet, même si un
 nouveau vote est au catalogue.

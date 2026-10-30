@@ -23,6 +23,7 @@ import type {
   PositionGroupe,
   Score,
   ScrutinRetenu,
+  Source,
   Texte,
   TexteEnCours,
   TexteUnanime,
@@ -188,6 +189,20 @@ function etats(): Map<string, EtatTexte> {
   );
 }
 
+/** Une entrée de `suivis` dans editorial.json. */
+interface SuiviEditorial {
+  id: string;
+  dossier_an: string;
+  titre: string;
+  resume: string;
+  note: string;
+  droits: { code: string; sources: string[]; justification: string }[];
+  sources: Record<string, Omit<Source, 'id'>>;
+}
+
+/** États d'un texte suivi affichés sur /en-cours : pas encore une loi, et encore vivant. */
+const ETATS_SUIVIS = new Set<EtatTexte['etat']>(['en_navette', 'avant_vote', 'adopte']);
+
 /** Ce qu'attend un texte : d'abord une séance fixée, puis la CMP, puis une chambre. */
 function echeance(e: EtatTexte): Echeance {
   if (e.seance_inscrite) return 'inscrit';
@@ -240,6 +255,7 @@ function charger(): Donnees {
     const s = catalogue.get(e.dossier_an)?.decisif_propose;
     return SANS_OPPOSITION.test(e.motif) && s ? [{ e, scrutin: s }] : [];
   });
+  const suivisBruts: SuiviEditorial[] = editorial.suivis ?? [];
   // Votes de l'AN sur l'ensemble des textes en cours : ils s'affichent, sans entrer dans les scores.
   const lecturesAN = new Map<string, string[]>();
   for (const l of exp('en_cours_lectures'))
@@ -250,7 +266,8 @@ function charger(): Donnees {
     ...unanimesBruts.map((u) => u.scrutin),
     ...editorial.textes.flatMap((t: { dossier_an: string }) =>
       etat.get(t.dossier_an)?.etat === 'en_navette' ? (lecturesAN.get(t.dossier_an) ?? []) : []
-    )
+    ),
+    ...suivisBruts.flatMap((s) => lecturesAN.get(s.dossier_an) ?? [])
   ]);
   const scrutins = new Map(
     exp('scrutins')
@@ -409,47 +426,92 @@ function charger(): Donnees {
       url: urlScrutin(Number(s.legislature), Number(s.numero))
     };
   };
-  const enCours: TexteEnCours[] = textes
+  const enCoursDe = (
+    dossier: string,
+    e: EtatTexte,
+    decisif: string | undefined
+  ): Pick<
+    TexteEnCours,
+    | 'dossier_an'
+    | 'etat'
+    | 'echeance'
+    | 'chambre'
+    | 'seances'
+    | 'commissions'
+    | 'dernier_vote'
+    | 'vote_qualifie'
+  > => {
+    // Le plus récent des votes publics de l'AN sur l'ensemble, décisif retenu compris.
+    const dernier = [...(lecturesAN.get(dossier) ?? []), ...(decisif ? [decisif] : [])]
+      .filter((id) => scrutins.has(id))
+      .sort((a, b) => scrutins.get(a)!.date!.localeCompare(scrutins.get(b)!.date!))
+      .at(-1);
+    return {
+      dossier_an: dossier,
+      etat: e,
+      echeance: echeance(e),
+      chambre: e.attente_chambre === 'AN' || e.attente_chambre === 'SN' ? e.attente_chambre : null,
+      seances: points(dossier, 'seance').map((p) => ({
+        date: p.date!,
+        etat: p.etat as 'confirme' | 'eventuel'
+      })),
+      commissions: points(dossier, 'commission').map((p) => ({
+        date: p.date!,
+        etat: p.etat as 'confirme' | 'eventuel',
+        organe: p.organe!
+      })),
+      dernier_vote: dernier ? voteAN(dernier) : null,
+      vote_qualifie: dernier !== undefined && dernier === decisif
+    };
+  };
+  const qualifiesEnCours = textes
     .filter((t) => t.etat?.etat === 'en_navette')
-    .map((t): TexteEnCours => {
-      const e = t.etat!;
-      const decisif = t.scrutins.find((s) => s.role === 'decisif')?.id;
-      // Le plus récent des votes publics de l'AN sur l'ensemble, décisif retenu compris.
-      const dernier = [...(lecturesAN.get(t.dossier_an) ?? []), ...(decisif ? [decisif] : [])]
-        .filter((id) => scrutins.has(id))
-        .sort((a, b) => scrutins.get(a)!.date!.localeCompare(scrutins.get(b)!.date!))
-        .at(-1);
-      return {
-        dossier_an: t.dossier_an,
-        id: t.id,
-        titre: t.titre,
-        etat: e,
-        echeance: echeance(e),
-        chambre:
-          e.attente_chambre === 'AN' || e.attente_chambre === 'SN' ? e.attente_chambre : null,
-        seances: points(t.dossier_an, 'seance').map((p) => ({
-          date: p.date!,
-          etat: p.etat as 'confirme' | 'eventuel'
-        })),
-        commissions: points(t.dossier_an, 'commission').map((p) => ({
-          date: p.date!,
-          etat: p.etat as 'confirme' | 'eventuel',
-          organe: p.organe!
-        })),
-        qualification: {
-          code: t.principal.code,
-          sens: t.principal.sens,
-          date: t.sans_vote ? null : t.date
-        },
-        dernier_vote: dernier ? voteAN(dernier) : null,
-        vote_qualifie: dernier !== undefined && dernier === decisif
-      };
-    })
-    .sort(
-      (a, b) =>
-        (a.etat.seance_inscrite ?? '9999').localeCompare(b.etat.seance_inscrite ?? '9999') ||
-        (b.etat.date_derniere_lecture ?? '').localeCompare(a.etat.date_derniere_lecture ?? '')
-    );
+    .map((t): TexteEnCours => ({
+      ...enCoursDe(t.dossier_an, t.etat!, t.scrutins.find((s) => s.role === 'decisif')?.id),
+      id: t.id,
+      titre: t.titre,
+      href: `/textes/${t.id}`,
+      qualification: {
+        code: t.principal.code,
+        sens: t.principal.sens,
+        date: t.sans_vote ? null : t.date
+      },
+      suivi: null
+    }));
+  // Fiches de suivi : droits touchés et sources, sans sens ni score. Un texte devenu loi, rejeté ou
+  // retiré n'est plus en cours : sa fiche reste dans editorial.json sans s'afficher ici.
+  const suivisEnCours = suivisBruts.flatMap((s): TexteEnCours[] => {
+    const e = etat.get(s.dossier_an);
+    if (!e || !ETATS_SUIVIS.has(e.etat)) return [];
+    const sources = (ids: string[]) =>
+      ids.flatMap((id) => {
+        const v = s.sources[id];
+        return v ? [{ ...v, id, titre: typo(v.titre) }] : [];
+      });
+    return [
+      {
+        ...enCoursDe(s.dossier_an, e, undefined),
+        id: s.id,
+        titre: typo(s.titre),
+        href: `/en-cours#${s.id}`,
+        qualification: null,
+        suivi: {
+          resume: typo(s.resume),
+          note: typo(s.note),
+          droits: s.droits.map((d) => ({
+            code: d.code,
+            justification: typo(d.justification),
+            sources: sources(d.sources)
+          }))
+        }
+      }
+    ];
+  });
+  const enCours: TexteEnCours[] = [...qualifiesEnCours, ...suivisEnCours].sort(
+    (a, b) =>
+      (a.etat.seance_inscrite ?? '9999').localeCompare(b.etat.seance_inscrite ?? '9999') ||
+      (b.etat.date_derniere_lecture ?? '').localeCompare(a.etat.date_derniere_lecture ?? '')
+  );
 
   const participation = new Map<string, Participation>(
     (existsSync(resolve(EXPORT, 'participation.csv')) ? exp('participation') : []).map((p) => [

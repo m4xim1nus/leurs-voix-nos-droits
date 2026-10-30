@@ -1,0 +1,118 @@
+{
+  "format": 1,
+  "grille": 1,
+  "textes": [
+    {
+      "id": "a-qualifie",
+      "dossier_an": "DLR5L17N1",
+      "legislature": 17,
+      "titre": "Loi d'essai « accentuée »",
+      "resume": "",
+      "droits": [
+        {
+          "code": "vie-privee",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "s1"
+          ],
+          "justification": "Une justification."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "",
+      "note": "",
+      "sources": {
+        "s1": {
+          "auteur": "CNIL",
+          "titre": "Avis",
+          "date": "2024-01-01",
+          "url": "https://cnil.fr"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V1",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble (10-5)"
+        }
+      ]
+    }
+  ],
+  "ecartes": [
+    {
+      "dossier_an": "DLR5L17N2",
+      "legislature": 17,
+      "titre": "Résolution d'essai",
+      "motif": "Résolution (règle 8)."
+    }
+  ],
+  "suivis": [
+    {
+      "id": "b-suivi",
+      "dossier_an": "DLR5L17N3",
+      "legislature": 17,
+      "titre": "Proposition de loi d'essai",
+      "resume": "Ce que fait le texte.",
+      "droits": [
+        {
+          "code": "etrangers",
+          "sources": [
+            "s2"
+          ],
+          "justification": "Le texte touche à la régularisation."
+        },
+        {
+          "code": "travail-protection-sociale",
+          "sources": [
+            "s1",
+            "s2"
+          ],
+          "justification": "Le texte touche au droit au travail."
+        }
+      ],
+      "note": "Fiche d'essai.",
+      "sources": {
+        "s1": {
+          "auteur": "CNCDH",
+          "titre": "Avis",
+          "date": "2026-02",
+          "url": "https://cncdh.fr"
+        },
+        "s2": {
+          "auteur": "Défenseur des droits",
+          "titre": "Décision",
+          "date": "2026-03-01",
+          "url": "https://defenseurdesdroits.fr"
+        }
+      }
+    },
+    {
+      "id": "c-suivi",
+      "dossier_an": "DLR5L17N4",
+      "legislature": 17,
+      "titre": "Projet de loi d'essai",
+      "resume": "",
+      "droits": [
+        {
+          "code": "logement",
+          "sources": [
+            "s1"
+          ],
+          "justification": ""
+        }
+      ],
+      "note": "",
+      "sources": {
+        "s1": {
+          "auteur": "HCLPD",
+          "titre": "Avis",
+          "date": "2026",
+          "url": "https://hclpd.fr"
+        }
+      }
+    }
+  ]
+}

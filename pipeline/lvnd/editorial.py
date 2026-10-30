@@ -8,7 +8,8 @@ publication donne un diff lisible. L'admin (admin/src/lib/qualification.ts) prod
 octets : un test croisé le vérifie.
 
 `valider` porte les contrôles d'une qualification, les mêmes que ceux de l'admin : erreurs
-bloquantes et avertissements.
+bloquantes et avertissements. `valider_suivi` porte ceux d'une fiche de suivi : droits touchés et
+sources, sans sens ni scrutin (texte qui n'a pas encore de vote qualifié).
 """
 
 import json
@@ -34,6 +35,8 @@ CLES_SOURCE = ("auteur", "titre", "date", "url")
 CLES_SCRUTIN = ("id", "role", "pour", "objet")
 CLES_VIGILANCE = ("texte", "sources")
 CLES_ECARTE = ("dossier_an", "legislature", "titre", "motif")
+CLES_SUIVI = ("id", "dossier_an", "legislature", "titre", "resume", "droits", "note", "sources")
+CLES_DROIT_SUIVI = ("code", "sources", "justification")
 
 
 def _ordonner(d: dict, cles: tuple[str, ...]) -> dict:
@@ -74,18 +77,33 @@ def ecarte(e: dict) -> dict:
                        "titre": e["titre"], "droits": [], "scrutins": []})
 
 
+def suivi(t: dict) -> dict:
+    """Entrée de `suivis` : d'une qualification normalisée, ne garde ni sens, ni rôle, ni scrutin."""
+    n = normaliser({**t, "scrutins": []})
+    return _ordonner({**n, "droits": [_ordonner(d, CLES_DROIT_SUIVI) for d in n["droits"]]}, CLES_SUIVI)
+
+
+def doc_suivi(s: dict) -> dict:
+    """Document D1 d'une fiche de suivi : une qualification complète, sans sens ni scrutin."""
+    return normaliser({**s, "scrutins": []})
+
+
 def depuis_temoins(temoins: dict) -> dict:
     """Convertit referentiels/temoins.yaml au format d'editorial.json."""
     return document([normaliser(t) for t in temoins["textes"]], [])
 
 
-def document(textes: list[dict], ecartes: list[dict]) -> dict:
-    return {
+def document(textes: list[dict], ecartes: list[dict], suivis: list[dict] = ()) -> dict:
+    """`suivis` n'apparaît que s'il n'est pas vide : ajout compatible avec le format 1."""
+    doc = {
         "format": FORMAT,
         "grille": referentiels.droits()["version"],
         "textes": sorted(textes, key=lambda t: t["id"]),
         "ecartes": sorted((_ordonner(e, CLES_ECARTE) for e in ecartes), key=lambda e: e["dossier_an"]),
     }
+    if suivis:
+        doc["suivis"] = sorted((suivi(s) for s in suivis), key=lambda s: s["id"])
+    return doc
 
 
 def serialiser(doc: dict) -> str:
@@ -100,6 +118,49 @@ def charger(chemin: Path = CHEMIN) -> dict:
             raise SystemExit(f"{chemin} : format {doc.get('format')} inconnu (attendu {FORMAT})")
         return doc
     return depuis_temoins(referentiels.temoins())
+
+
+def _controler_sources(sources: dict, citees: set[str], err: list[str], avert: list[str]) -> None:
+    for s in sorted(citees - set(sources)):
+        err.append(f"source citée mais non définie : {s}")
+    for k, s in sources.items():
+        if not (s.get("url") or "").startswith("http"):
+            err.append(f"source {k} : URL manquante")
+        if not s.get("auteur") or not s.get("titre"):
+            err.append(f"source {k} : auteur ou titre manquant")
+        if not re.fullmatch(r"\d{4}(-\d{2}(-\d{2})?)?", str(s.get("date") or "")):
+            err.append(f"source {k} : date attendue au format AAAA-MM-JJ (ou AAAA-MM)")
+    for k in sorted(set(sources) - citees):
+        avert.append(f"source {k} définie mais citée nulle part")
+
+
+def valider_suivi(t: dict) -> tuple[list[str], list[str]]:
+    """Erreurs bloquantes et avertissements d'une fiche de suivi (docs/CONCEPTION.md, contrôles)."""
+    codes = {d["code"] for d in referentiels.droits()["droits"]}
+    err, avert = [], []
+    if not t.get("id"):
+        err.append("identifiant manquant")
+    if not t.get("titre", "").strip():
+        err.append("titre manquant")
+    droits = t.get("droits") or []
+    if not droits:
+        err.append("il faut au moins un droit touché")
+    vus = set()
+    for d in droits:
+        c = d.get("code")
+        if c not in codes:
+            err.append(f"droit inconnu : {c}")
+        if c in vus:
+            err.append(f"droit en double : {c}")
+        vus.add(c)
+        if d.get("sens") or d.get("role"):
+            err.append(f"{c} : ni sens ni rôle avant le vote")
+        if not d.get("sources"):
+            err.append(f"{c} : aucune source")
+    if t.get("scrutins"):
+        err.append("aucun scrutin retenu avant le vote")
+    _controler_sources(t.get("sources") or {}, {s for d in droits for s in d.get("sources") or []}, err, avert)
+    return err, avert
 
 
 def valider(t: dict, scrutins_dossier: dict[str, dict] | None = None) -> tuple[list[str], list[str]]:
@@ -141,17 +202,7 @@ def valider(t: dict, scrutins_dossier: dict[str, dict] | None = None) -> tuple[l
             err.append(f"étiquette inconnue : {e}")
     citees = {s for d in droits for s in d.get("sources") or []}
     citees |= {s for v in t.get("vigilance") or [] for s in v.get("sources") or []}
-    for s in sorted(citees - set(sources)):
-        err.append(f"source citée mais non définie : {s}")
-    for k, s in sources.items():
-        if not (s.get("url") or "").startswith("http"):
-            err.append(f"source {k} : URL manquante")
-        if not s.get("auteur") or not s.get("titre"):
-            err.append(f"source {k} : auteur ou titre manquant")
-        if not re.fullmatch(r"\d{4}(-\d{2}(-\d{2})?)?", str(s.get("date") or "")):
-            err.append(f"source {k} : date attendue au format AAAA-MM-JJ (ou AAAA-MM)")
-    for k in sorted(set(sources) - citees):
-        avert.append(f"source {k} définie mais citée nulle part")
+    _controler_sources(sources, citees, err, avert)
 
     scrutins = t.get("scrutins") or []
     n_decisifs = sum(s.get("role") == "decisif" for s in scrutins)

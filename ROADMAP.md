@@ -158,7 +158,7 @@ pour y toucher.
 
 ### Suivi avant le vote
 
-13. ⏳ **Statut `a-suivre`** : migration D1, écran de l'admin, liste à part
+13. ✅ (migration D1 et déploiement de l'admin à faire par Max) **Statut `a-suivre`** : migration D1, écran de l'admin, liste à part
     dans `editorial.json` (changement de format, test croisé
     pipeline/admin à l'octet). Contrôles : droits touchés sans sens, au moins
     une source par droit, aucun scrutin, termes interdits. Une validation par

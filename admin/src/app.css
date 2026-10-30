@@ -203,6 +203,9 @@ th {
 .pastille.ecarte {
   color: var(--texte-2);
 }
+.pastille.a-suivre {
+  border-style: dotted;
+}
 .pastille.etend {
   color: var(--etend);
   border-color: currentColor;

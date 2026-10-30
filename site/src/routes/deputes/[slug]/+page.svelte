@@ -51,7 +51,7 @@
     if (!d.courriel) return null;
     const { sujet, corps } = courrielProchainVote({
       titre: p.titre,
-      url: `${URL_SITE}/textes/${p.id}`,
+      url: `${URL_SITE}${p.href}`,
       feminin: elle,
       seances: seancesDe(p),
       vote: p.vote
@@ -206,7 +206,7 @@
     {#each data.prochains as p (p.id)}
       {@const m = mailtoProchain(p)}
       <article class="texte">
-        <h3><a href="/textes/{p.id}">{p.titre}</a></h3>
+        <h3><a href={p.href}>{p.titre}</a></h3>
         <p class="petit">
           <strong
             >{seancesDe(p).length

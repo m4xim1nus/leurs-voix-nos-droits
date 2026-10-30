@@ -183,6 +183,7 @@ function prochains(d: Donnees, dep: Depute) {
       return {
         id: t.id,
         titre: t.titre,
+        href: t.href,
         seances: t.seances.map((s) => s.date),
         date_inscrite: t.etat.seance_inscrite,
         vote: v

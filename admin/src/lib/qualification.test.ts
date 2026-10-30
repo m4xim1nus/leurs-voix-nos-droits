@@ -8,7 +8,8 @@ import {
   normaliser,
   serialiser,
   slug,
-  valider
+  valider,
+  validerSuivi
 } from './qualification';
 import type { Editorial, Grille, Qualification } from './types';
 
@@ -62,6 +63,50 @@ describe('qualification', () => {
   it("réécrit data/editorial.json à l'octet près (même sérialisation que le pipeline)", () => {
     const melange = [...editorial.textes].reverse();
     expect(serialiser(documentEditorial(editorial.grille, melange, editorial.ecartes))).toBe(brut);
+  });
+
+  describe('fiches de suivi', () => {
+    // Même fixture que pipeline/tests/test_editorial.py : les deux écrivent les mêmes octets.
+    const fixture = readFileSync(
+      new URL('pipeline/tests/fixtures/editorial_suivis.json', RACINE),
+      'utf8'
+    );
+    const doc: Editorial = JSON.parse(fixture);
+    const s = doc.suivis![0] as unknown as Qualification;
+
+    it("réécrit la fixture à l'octet près, depuis des documents D1", () => {
+      const d1 = [...doc.suivis!]
+        .reverse()
+        .map((x) => normaliser({ ...x, scrutins: [] } as unknown as Partial<Qualification>));
+      expect(d1.every((x) => x.scrutins.length === 0 && x.etiquettes.length === 0)).toBe(true);
+      expect(serialiser(documentEditorial(doc.grille, doc.textes, doc.ecartes, d1))).toBe(fixture);
+    });
+
+    it('n’écrit pas la clé tant qu’aucune fiche n’est publiée', () => {
+      expect('suivis' in documentEditorial(doc.grille, doc.textes, doc.ecartes)).toBe(false);
+    });
+
+    it('contrôle comme le pipeline : ni sens, ni scrutin, une source par droit', () => {
+      const v = (p: object) => validerSuivi({ ...s, ...p } as Qualification, GRILLE);
+      expect(v({})).toEqual({ erreurs: [], avertissements: [] });
+      expect(v({ droits: [] }).erreurs).toContain('il faut au moins un droit touché');
+      expect(
+        v({ droits: [{ code: 'etrangers', sens: 'etend', sources: ['s2'] }] }).erreurs
+      ).toEqual(['etrangers : ni sens ni rôle avant le vote']);
+      expect(v({ droits: [{ code: 'etrangers', sources: [] }] }).erreurs).toContain(
+        'etrangers : aucune source'
+      );
+      expect(v({ droits: [{ code: 'x', sources: ['s1'] }] }).erreurs).toContain(
+        'droit inconnu : x'
+      );
+      expect(v({ scrutins: [{ id: 'V' }] }).erreurs).toEqual([
+        'aucun scrutin retenu avant le vote'
+      ]);
+      expect(v({ droits: [{ code: 'etrangers', sources: ['s2'] }] }).avertissements).toContain(
+        'source s1 définie mais citée nulle part'
+      );
+      expect(v({ sources: {} }).erreurs).toContain('source citée mais non définie : s2');
+    });
   });
 
   it('valide les textes témoins', () => {

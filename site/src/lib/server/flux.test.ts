@@ -6,6 +6,8 @@ const texte = (t: Partial<TexteEnCours>): TexteEnCours => ({
   dossier_an: 'DLR5L17N1',
   id: 'x',
   titre: 'Loi « A & B », sur le logement',
+  href: '/textes/x',
+  suivi: null,
   etat: {
     etat: 'en_navette',
     attente: 'lecture',

@@ -192,6 +192,8 @@ export interface TexteEnCours {
   dossier_an: string;
   id: string;
   titre: string;
+  /** Sa fiche : /textes/<id> s'il est qualifié, son ancre sur /en-cours sinon. */
+  href: string;
   etat: EtatTexte;
   echeance: Echeance;
   /** Chambre où le texte est attendu, si elle est connue. */
@@ -200,6 +202,12 @@ export interface TexteEnCours {
   commissions: (PointAgenda & { organe: string })[];
   /** Le texte qualifié : son droit principal, et la date du vote sur lequel le sens a été lu. */
   qualification: { code: string; sens: Sens; date: string | null } | null;
+  /** Fiche de suivi d'un texte pas encore qualifié : droits touchés et sources, sans sens ni score. */
+  suivi: {
+    resume: string;
+    note: string;
+    droits: { code: string; justification: string; sources: Source[] }[];
+  } | null;
   dernier_vote: VoteAN | null;
   /** Le dernier vote est-il celui sur lequel le texte a été qualifié ? */
   vote_qualifie: boolean;

@@ -7,9 +7,10 @@ l'admin, qui retire ceux que D1 a déjà traités (admin/src/lib/alertes.ts).
 - `vote_posterieur` : vote sur l'ensemble après le décisif d'un texte qualifié ;
 - `unanimite_contestee` : texte écarté pour unanimité (règle 9) dont le décisif proposé a désormais
   des voix des deux côtés ;
-- `premier_decisif` : décisif proposé sur un texte ni qualifié ni écarté ;
-- `inscrit` : texte ni qualifié ni écarté, inscrit à l'ordre du jour d'une séance. Inscrit ne veut pas
-  dire voté.
+- `premier_decisif` : décisif proposé sur un texte ni qualifié ni écarté (une fiche de suivi n'y change
+  rien : le vote attendu a eu lieu, il reste à qualifier) ;
+- `inscrit` : texte ni qualifié, ni écarté, ni suivi, inscrit à l'ordre du jour d'une séance. Inscrit ne
+  veut pas dire voté.
 """
 
 import re
@@ -35,6 +36,7 @@ def calculer(textes: list[dict], scrutins: list[dict], points: list[dict], quali
     scr = {s["id"]: s for s in scrutins}
     qualifies = {t["dossier_an"]: t for t in qualif["textes"]}
     ecartes = {e["dossier_an"]: e for e in qualif.get("ecartes", [])}
+    suivis = {s["dossier_an"] for s in qualif.get("suivis", [])}
     out = []
 
     def ajouter(type_: str, dossier: str, scrutin: str | None, date: str, detail: str) -> None:
@@ -70,6 +72,6 @@ def calculer(textes: list[dict], scrutins: list[dict], points: list[dict], quali
         if p["instance"] == "seance" and p["dossier_id"] in titre:
             inscrits[p["dossier_id"]] = min(p["date"], inscrits.get(p["dossier_id"], p["date"]))
     for d, jour in inscrits.items():
-        if d not in qualifies and d not in ecartes:
+        if d not in qualifies and d not in ecartes and d not in suivis:
             ajouter("inscrit", d, None, jour, f"inscrit en séance à partir du {jour}")
     return sorted(out, key=lambda a: a["id"])

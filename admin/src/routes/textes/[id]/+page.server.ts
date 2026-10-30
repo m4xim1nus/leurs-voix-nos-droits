@@ -2,7 +2,14 @@ import { error, fail } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 import * as db from '$lib/server/db';
 import { versionPubliee } from '$lib/server/publication';
-import { differences, normaliser, nouvelle, STATUTS, valider } from '$lib/qualification';
+import {
+  differences,
+  normaliser,
+  nouvelle,
+  STATUTS,
+  valider,
+  validerSuivi
+} from '$lib/qualification';
 import type { Qualification, Source, Statut } from '$lib/types';
 
 const plusJours = (date: string, n: number) =>
@@ -99,6 +106,16 @@ export const actions: Actions = {
         )
       );
       erreurs.push(...valider(doc, await db.grille(base), infos).erreurs);
+    }
+    if (statut === 'a-suivre') {
+      erreurs.push(...validerSuivi(doc, await db.grille(base)).erreurs);
+      // Un texte déjà qualifié garde son sens : il ne revient pas à une fiche sans sens.
+      const avant = await db.qualification(base, params.id);
+      const publiee = avant?.publie_empreinte
+        ? await versionPubliee(base, params.id, avant.publie_empreinte)
+        : null;
+      if (publiee?.statut === 'valide')
+        erreurs.push('texte déjà qualifié et publié : il ne peut pas repasser à suivre');
     }
     if (erreurs.length) return fail(400, { erreurs });
     try {

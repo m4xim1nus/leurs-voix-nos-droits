@@ -155,6 +155,11 @@ def qualifications(doc: dict) -> list[dict]:
         out.append({"dossier_an": e["dossier_an"], "statut": "ecarte", "doc": texte, "motif_ecart": e["motif"],
                     "modifie_par": "editorial.json", "modifie_le": date,
                     "publie_empreinte": empreinte(texte, "ecarte", e["motif"])})
+    for s in doc.get("suivis", []):
+        texte = compact(editorial.doc_suivi(s))
+        out.append({"dossier_an": s["dossier_an"], "statut": "a-suivre", "doc": texte, "motif_ecart": None,
+                    "modifie_par": "editorial.json", "modifie_le": date,
+                    "publie_empreinte": empreinte(texte, "a-suivre", None)})
     return out
 
 
@@ -163,22 +168,22 @@ AUTEUR_BROUILLONS = "claude (brouillon)"
 
 def brouillons(dossier: Path) -> list[dict]:
     """Qualifications préparées hors de l'admin (un YAML par texte, format de temoins.yaml plus
-    `statut` et `motif_ecart`), à charger au statut « à relire » (proposition d'écart comprise). Le champ
-    `relecture` (notes pour le relecteur) n'est pas chargé."""
+    `statut` et `motif_ecart`), à charger au statut « à relire » (proposition d'écart ou de suivi
+    comprise). Le champ `relecture` (notes pour le relecteur) n'est pas chargé."""
     date = datetime.now(timezone.utc).isoformat(timespec="seconds")
     out = []
     for f in sorted(dossier.glob("*.yaml")):
         t = yaml.safe_load(f.read_text())
         statut = t.get("statut", "a-relire")
-        if statut not in ("a-relire", "ecarte", "brouillon"):
-            raise SystemExit(f"{f} : statut {statut} refusé (a-relire, ecarte ou brouillon)")
+        if statut not in ("a-relire", "ecarte", "brouillon", "a-suivre"):
+            raise SystemExit(f"{f} : statut {statut} refusé (a-relire, ecarte, a-suivre ou brouillon)")
         motif = t.get("motif_ecart") if statut == "ecarte" else None
         if statut == "ecarte" and not motif:
             raise SystemExit(f"{f} : texte écarté sans motif")
         doc = editorial.normaliser({**t, "droits": t.get("droits") or [], "scrutins": t.get("scrutins") or []})
-        # « écarté » est publiable : une proposition d'écart arrive « à relire », motif pré-rempli, et
-        # ne part qu'une fois que le relecteur a lui-même choisi « écarté ».
-        statut = "a-relire" if statut == "ecarte" else statut
+        # « écarté » et « à suivre » sont publiables : une proposition arrive « à relire », et ne part
+        # qu'une fois que le relecteur a lui-même choisi ce statut.
+        statut = "a-relire" if statut in ("ecarte", "a-suivre") else statut
         out.append({"dossier_an": doc["dossier_an"], "statut": statut, "doc": compact(doc), "motif_ecart": motif,
                     "modifie_par": AUTEUR_BROUILLONS, "modifie_le": date, "publie_empreinte": None})
     return out
@@ -189,7 +194,7 @@ AUTEUR_VALIDATION = "claude, validé par Max"
 
 def validations(dossier: Path, commentaire: str) -> list[str]:
     """Qualifications de DOSSIER/*.yaml validées par Max (dans le chat) : chacune est écrite au statut
-    « valide » (« ecarte » si le YAML le propose, avec son motif), qu'elle existe déjà dans D1 ou non,
+    « valide » (« ecarte » ou « a-suivre » si le YAML le propose), qu'elle existe déjà dans D1 ou non,
     avec une révision qui le dit. Ne sert que sur décision explicite de Max (CLAUDE.md)."""
     date = datetime.now(timezone.utc).isoformat(timespec="seconds")
     out = []
@@ -199,11 +204,12 @@ def validations(dossier: Path, commentaire: str) -> list[str]:
         if ecarte and not t.get("motif_ecart"):
             raise SystemExit(f"{f} : texte écarté sans motif")
         doc = editorial.normaliser({**t, "droits": t.get("droits") or [], "scrutins": t.get("scrutins") or []})
+        a_suivre = t.get("statut") == "a-suivre"
         if not ecarte:
-            err, _ = editorial.valider(doc)
+            err, _ = editorial.valider_suivi(doc) if a_suivre else editorial.valider(doc)
             if err:
                 raise SystemExit(f"{f} : {' ; '.join(err)}")
-        statut, motif = ("ecarte", t["motif_ecart"]) if ecarte else ("valide", None)
+        statut, motif = ("ecarte", t["motif_ecart"]) if ecarte else ("a-suivre" if a_suivre else "valide", None)
         valeurs = [doc["dossier_an"], statut, compact(doc), motif, AUTEUR_VALIDATION, date]
         out.append("INSERT INTO qualifications (dossier_an, statut, doc, motif_ecart, modifie_par, modifie_le) "
                    f"VALUES ({', '.join(sql_valeur(x) for x in valeurs)}) ON CONFLICT (dossier_an) DO UPDATE SET "

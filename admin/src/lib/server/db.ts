@@ -178,7 +178,7 @@ export async function revisions(db: D1Database, id: string): Promise<Revision[]>
 export async function revisionsPubliables(db: D1Database, id: string): Promise<Revision[]> {
   const { results } = await db
     .prepare(
-      "SELECT * FROM revisions WHERE dossier_an = ? AND statut IN ('valide', 'ecarte') ORDER BY id DESC"
+      "SELECT * FROM revisions WHERE dossier_an = ? AND statut IN ('valide', 'ecarte', 'a-suivre') ORDER BY id DESC"
     )
     .bind(id)
     .all<Revision>();

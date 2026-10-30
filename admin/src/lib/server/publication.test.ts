@@ -1,6 +1,6 @@
 // Publication de bout en bout : D1 émulée par wrangler (base neuve, schéma de migrations/), API
 // GitHub simulée.
-import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { mkdtempSync, readdirSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
@@ -80,12 +80,15 @@ beforeAll(async () => {
     persist: { path: dossier }
   });
   db = proxy.env.DB;
-  const schema = readFileSync(new URL('admin/migrations/0001_init.sql', RACINE), 'utf8')
-    .replace(/--.*$/gm, '')
-    .split(';')
-    .map((s) => s.trim())
-    .filter(Boolean);
-  for (const s of schema) await db.prepare(s).run();
+  const migrations = new URL('admin/migrations/', RACINE);
+  for (const f of readdirSync(migrations).sort()) {
+    const schema = readFileSync(new URL(f, migrations), 'utf8')
+      .replace(/--.*$/gm, '')
+      .split(';')
+      .map((s) => s.trim())
+      .filter(Boolean);
+    for (const s of schema) await db.prepare(s).run();
+  }
   await db.batch([
     db.prepare(`INSERT INTO scrutins (id, texte_id, legislature, numero, date, positions)
                 VALUES ('VTANR5L17V1', 'DLR5L17N1', 17, 1, '2025-01-01', '[]')`)
@@ -248,6 +251,68 @@ describe('publication', () => {
     await expect(publier(db, GRILLE, CFG, 'x', f)).rejects.toThrow('erreurs bloquantes');
     expect(etat.commits).toEqual([]);
     await db.prepare("DELETE FROM qualifications WHERE dossier_an = 'DLR5L17N3'").run();
+  });
+
+  it('publie une fiche de suivi à part, sans sens ni scrutin, sans toucher aux qualifications', async () => {
+    const { f, etat } = faux();
+    const doc = normaliser({
+      id: 'suivi-essai',
+      dossier_an: 'DLR5L17N70',
+      legislature: 17,
+      titre: 'Proposition de loi suivie',
+      droits: [{ code: 'vie-privee', sources: ['s'], justification: 'j' }] as never,
+      sources: { s: { auteur: 'CNIL', titre: 'Avis', date: '2024-01-01', url: 'https://cnil.fr' } }
+    });
+    const le = await enregistrer(
+      db,
+      { doc, statut: 'a-suivre', motif_ecart: null, commentaire: null },
+      'a@x',
+      null
+    );
+    const prep = await preparer(db, GRILLE);
+    const ligne = prep.textes.find((t) => t.id === 'suivi-essai')!;
+    expect(ligne.changement).toBe('nouveau');
+    expect(ligne.erreurs).toEqual([]);
+    await publier(db, GRILLE, CFG, 'a@x', f);
+    expect(etat.commits[0]).toContain('1 à suivre');
+    expect(etat.commits[0]).toContain('À suivre : suivi-essai');
+    const fichier = JSON.parse(etat.contenu!);
+    expect(fichier.suivis).toEqual([
+      {
+        id: 'suivi-essai',
+        dossier_an: 'DLR5L17N70',
+        legislature: 17,
+        titre: 'Proposition de loi suivie',
+        resume: '',
+        droits: [{ code: 'vie-privee', sources: ['s'], justification: 'j' }],
+        note: '',
+        sources: doc.sources
+      }
+    ]);
+    expect(fichier.textes.some((t: Qualification) => t.id === 'suivi-essai')).toBe(false);
+
+    // Une fiche qui porte un sens ou un scrutin bloque la publication.
+    await enregistrer(
+      db,
+      {
+        doc: normaliser({
+          ...doc,
+          scrutins: [{ id: 'V', role: 'motion', pour: 'texte', objet: 'o' }]
+        }),
+        statut: 'a-suivre',
+        motif_ecart: null,
+        commentaire: null
+      },
+      'a@x',
+      le
+    );
+    const bloque = await preparer(db, GRILLE);
+    expect(bloque.bloquant).toBe(true);
+    expect(bloque.textes.find((t) => t.id === 'suivi-essai')?.erreurs).toContain(
+      'aucun scrutin retenu avant le vote'
+    );
+    // Retour à une fiche correcte, pour les tests suivants.
+    await db.prepare("DELETE FROM qualifications WHERE dossier_an = 'DLR5L17N70'").run();
   });
 
   it('refuse une édition concurrente', async () => {

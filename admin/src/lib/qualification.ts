@@ -9,7 +9,9 @@ import type {
   Grille,
   Qualification,
   ScrutinRetenu,
+  Source,
   Statut,
+  Suivi,
   TexteCatalogue
 } from './types';
 
@@ -26,7 +28,7 @@ export const ROLES_SCRUTIN = [
   'censure'
 ] as const;
 export const POUR = ['texte', 'contre-texte', 'a-trancher'] as const;
-export const STATUTS: Statut[] = ['brouillon', 'a-relire', 'valide', 'ecarte'];
+export const STATUTS: Statut[] = ['brouillon', 'a-relire', 'valide', 'ecarte', 'a-suivre'];
 
 /** Ordre des clés dans editorial.json (le même que dans le pipeline). */
 const CLES_TEXTE = [
@@ -48,6 +50,17 @@ const CLES_SOURCE = ['auteur', 'titre', 'date', 'url'] as const;
 const CLES_SCRUTIN = ['id', 'role', 'pour', 'objet'] as const;
 const CLES_VIGILANCE = ['texte', 'sources'] as const;
 const CLES_ECARTE = ['dossier_an', 'legislature', 'titre', 'motif'] as const;
+const CLES_SUIVI = [
+  'id',
+  'dossier_an',
+  'legislature',
+  'titre',
+  'resume',
+  'droits',
+  'note',
+  'sources'
+] as const;
+const CLES_DROIT_SUIVI = ['code', 'sources', 'justification'] as const;
 
 function ordonner<T extends object>(d: Record<string, unknown>, cles: readonly string[]): T {
   const out: Record<string, unknown> = {};
@@ -108,6 +121,15 @@ export function ecarte(e: {
   });
 }
 
+/** Entrée de `suivis` : d'une qualification, ne garde ni sens, ni rôle, ni scrutin. */
+export function suivi(t: Qualification | Suivi): Suivi {
+  const n = normaliser({ ...t, scrutins: [] } as Partial<Qualification>);
+  return ordonner<Suivi>(
+    { ...n, droits: n.droits.map((d) => ordonner({ ...d }, CLES_DROIT_SUIVI)) },
+    CLES_SUIVI
+  );
+}
+
 /** Qualification vide d'un texte du catalogue : rien n'est prérempli, sauf l'identité du texte. */
 export function nouvelle(t: TexteCatalogue): Qualification {
   return normaliser({
@@ -158,6 +180,52 @@ export interface InfoScrutin {
   contre?: number;
 }
 
+function controlerSources(
+  sources: Record<string, Source>,
+  citees: Set<string>,
+  err: string[],
+  avert: string[]
+) {
+  for (const s of [...citees].filter((s) => !(s in sources)).sort(parCle))
+    err.push(`source citée mais non définie : ${s}`);
+  for (const [k, s] of Object.entries(sources)) {
+    if (!(s.url ?? '').startsWith('http')) err.push(`source ${k} : URL manquante`);
+    if (!s.auteur || !s.titre) err.push(`source ${k} : auteur ou titre manquant`);
+    if (!/^\d{4}(-\d{2}(-\d{2})?)?$/.test(String(s.date ?? '')))
+      err.push(`source ${k} : date attendue au format AAAA-MM-JJ (ou AAAA-MM)`);
+  }
+  for (const k of Object.keys(sources)
+    .filter((k) => !citees.has(k))
+    .sort(parCle))
+    avert.push(`source ${k} définie mais citée nulle part`);
+}
+
+/** Erreurs bloquantes et avertissements d'une fiche de suivi (mêmes messages que le pipeline). */
+export function validerSuivi(
+  t: Qualification,
+  grille: Grille
+): { erreurs: string[]; avertissements: string[] } {
+  const codes = new Set(grille.droits.map((d) => d.code));
+  const err: string[] = [];
+  const avert: string[] = [];
+  if (!t.id) err.push('identifiant manquant');
+  if (!(t.titre ?? '').trim()) err.push('titre manquant');
+  const droits = t.droits ?? [];
+  if (!droits.length) err.push('il faut au moins un droit touché');
+  const vus = new Set<string>();
+  for (const d of droits) {
+    const c = d.code;
+    if (!codes.has(c)) err.push(`droit inconnu : ${c}`);
+    if (vus.has(c)) err.push(`droit en double : ${c}`);
+    vus.add(c);
+    if (d.sens || d.role) err.push(`${c} : ni sens ni rôle avant le vote`);
+    if (!d.sources?.length) err.push(`${c} : aucune source`);
+  }
+  if (t.scrutins?.length) err.push('aucun scrutin retenu avant le vote');
+  controlerSources(t.sources ?? {}, new Set(droits.flatMap((d) => d.sources ?? [])), err, avert);
+  return { erreurs: err, avertissements: avert };
+}
+
 /** Erreurs bloquantes et avertissements d'une qualification (docs/CONCEPTION.md, contrôles). */
 export function valider(
   t: Qualification,
@@ -191,18 +259,7 @@ export function valider(
     ...droits.flatMap((d) => d.sources ?? []),
     ...(t.vigilance ?? []).flatMap((v) => v.sources ?? [])
   ]);
-  for (const s of [...citees].filter((s) => !(s in sources)).sort(parCle))
-    err.push(`source citée mais non définie : ${s}`);
-  for (const [k, s] of Object.entries(sources)) {
-    if (!(s.url ?? '').startsWith('http')) err.push(`source ${k} : URL manquante`);
-    if (!s.auteur || !s.titre) err.push(`source ${k} : auteur ou titre manquant`);
-    if (!/^\d{4}(-\d{2}(-\d{2})?)?$/.test(String(s.date ?? '')))
-      err.push(`source ${k} : date attendue au format AAAA-MM-JJ (ou AAAA-MM)`);
-  }
-  for (const k of Object.keys(sources)
-    .filter((k) => !citees.has(k))
-    .sort(parCle))
-    avert.push(`source ${k} définie mais citée nulle part`);
+  controlerSources(sources, citees, err, avert);
 
   const scrutins = t.scrutins ?? [];
   const nDecisifs = scrutins.filter((s) => s.role === 'decisif').length;
@@ -268,13 +325,17 @@ export function valider(
   return { erreurs: err, avertissements: avert };
 }
 
-/** Contenu d'editorial.json : textes validés et textes écartés, triés. */
+/**
+ * Contenu d'editorial.json : textes validés, textes écartés et fiches de suivi, triés. `suivis`
+ * n'apparaît que s'il n'est pas vide : ajout compatible avec le format 1.
+ */
 export function documentEditorial(
   grille: number,
   textes: Qualification[],
-  ecartes: Ecarte[]
+  ecartes: Ecarte[],
+  suivis: (Qualification | Suivi)[] = []
 ): Editorial {
-  return {
+  const doc: Editorial = {
     format: FORMAT,
     grille,
     textes: textes.map((t) => normaliser(t)).sort((a, b) => parCle(a.id, b.id)),
@@ -282,6 +343,8 @@ export function documentEditorial(
       .map((e) => ordonner<Ecarte>({ ...e }, CLES_ECARTE))
       .sort((a, b) => parCle(a.dossier_an, b.dossier_an))
   };
+  if (suivis.length) doc.suivis = suivis.map(suivi).sort((a, b) => parCle(a.id, b.id));
+  return doc;
 }
 
 /** Sérialisation d'editorial.json : identique à `editorial.serialiser` du pipeline. */

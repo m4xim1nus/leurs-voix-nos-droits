@@ -6,7 +6,8 @@ export const LIBELLES_STATUT: Record<Statut, string> = {
   brouillon: 'brouillon',
   'a-relire': 'à relire',
   valide: 'validé',
-  ecarte: 'écarté'
+  ecarte: 'écarté',
+  'a-suivre': 'à suivre'
 };
 
 export const LIBELLES_ROLE: Record<string, string> = {
