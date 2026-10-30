@@ -10,7 +10,7 @@ from pathlib import Path
 import polars as pl
 
 from . import amendements, an, candidats, editorial, positions, referentiels, scores, textes
-from .sources import extraits, lire_manifeste
+from .sources import lire_manifeste, racine
 
 # Votes nominatifs compacts (docs/SOURCES.md) : numéro de scrutin, identifiant numérique du
 # député (PA123 → 123), position en une lettre.
@@ -90,7 +90,7 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
         mises += r["mises_au_point"]
         _log(f"   {len(r['scrutins']):,} scrutins, {len(r['votes']):,} votes nominatifs, "
              f"{len(r['mises_au_point']):,} mises au point")
-        if not (extraits(raw, f"an_amendements_{leg}") / "json").exists():
+        if not (racine(raw, f"an_amendements_{leg}") / "json").exists():
             _log(f"   ATTENTION : amendements XV{'I' * (leg - 15)}e absents (lancer `lvnd download "
                  f"an_amendements_{leg}`), scrutins sur amendement rattachés par la séance seulement")
             continue

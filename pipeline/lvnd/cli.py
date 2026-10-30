@@ -17,6 +17,8 @@ def main(argv=None) -> int:
     sub = ap.add_subparsers(dest="commande", required=True)
     d = sub.add_parser("download", help="télécharge et extrait les dumps AN")
     d.add_argument("--raw", type=Path, default=RAW)
+    d.add_argument("--secours-max", type=int, metavar="MINUTES",
+                   help="durée maximale du plan B amendement par amendement (repris au lancement suivant)")
     d.add_argument("sources", nargs="*", help="clés de sources (défaut : toutes)")
     b = sub.add_parser("build", help="dumps → data/lvnd.sqlite + data/export/")
     b.add_argument("--raw", type=Path, default=RAW)
@@ -57,7 +59,7 @@ def main(argv=None) -> int:
 
     if args.commande == "download":
         from . import sources
-        sources.download(args.raw, args.sources or None)
+        sources.download(args.raw, args.sources or None, args.secours_max and args.secours_max * 60)
     elif args.commande == "build":
         from . import build
         build.build(args.raw, args.sqlite, args.export)
