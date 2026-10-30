@@ -25,6 +25,7 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] Rattachement scrutin → dossier : V4239 (amendement du Gouvernement au PLF 2026, 21/11/2025) est rattaché à la simplification de l'urbanisme (DLR5L17N51852) (claude, 2026-10-29)
 - [ ] Rattachement scrutin → dossier : V6758 (amendement à la loi d'urgence agricole) est rattaché à la loi organique « natifs » de Nouvelle-Calédonie (DLR5L17N52104) (claude, 2026-10-29)
 - [ ] Catalogue : `cc_url` en 404 quand la décision est rendue l'année suivant la saisine (2022-846 DC, LOPMI : l'URL valide est `/decision/2023/2022846DC.htm`) (claude, 2026-10-29)
+- [creuser] Règle 7 : un comité national de la CGT (privés d'emploi) vaut-il fédération ? Aucune source récente lue, à trancher si une position sur Territoires zéro chômeur paraît (claude, 2026-10-30)
 - [ ] Alertes : aucune ne signale un texte rejeté par le rejet d'une partie (PLFSS 2027, V9097) ni un vote sur l'ensemble sans scrutin public ; `etat` les suit, pas `lvnd check` (claude, 2026-10-30)
 
 ## Cycle en cours : Reliquat XVIe
@@ -42,7 +43,7 @@ des textes avant leur adoption.
 - [→Au fil des votes] Suivre les textes avant leur adoption, pour interpeller au bon moment (claude, 2026-10-29)
 - [→Au fil des votes] Candidat `etrangers` en attente d'un vote final : mariages simulés ou arrangés (DLR5L16N49075, examen inachevé le 25/06/2026 ; 35 amendements votés le 26/06/2025, six suspensions de séance seulement le 25/06/2026) (claude, 2026-10-29)
 - [→Au fil des votes] `libertes` : suivre la concentration des médias (DLR5L17N53329) et la réforme de l'audiovisuel public (DLR5L16N47697), en attente d'un vote final (user:moi, 2026-10-29)
-- [→Au fil des votes] AGRASC (DLR5L17N53159, écarté au lot 6) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart (claude, 2026-10-29)
+- [→Au fil des votes] AGRASC (DLR5L17N53159, écarté au lot 6) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart. Au prochain passage, actualiser le motif, qui ne cite pas les articles 5 et 5 bis A (décision de Max, 30/10/2026) (claude, 2026-10-29)
 - [→Au fil des votes] `lvnd check` : alerte quand un texte qualifié reçoit un vote sur l'ensemble postérieur à son décisif (texte en navette, règle 9) (claude, 2026-10-29)
 - [→Au fil des votes] `sync-admin --brouillons` : un texte qui a déjà une révision (brouillon retiré d'un lot précédent) ne reçoit pas de révision « brouillon » au chargement suivant (DLR5L17N52087) (claude, 2026-10-29)
 - [→Au fil des votes] Relire `mots_cles.yaml` (brouillon), qui présélectionne les textes à suivre : motifs larges, sources de faux positifs (« eau », « soins », « violences », « justice ») (claude, 2026-10-29)
@@ -83,25 +84,26 @@ compte Cloudflare et du dépôt.
 - [→Passation] Tutoriel de l'admin pour les futur·es rédacteur·ices (connexion par Access, qualifier un texte, contrôles, brouillon et publication) (user:moi, 2026-10-29)
 - [→Passation] Présentation du projet et des choix de méthode retenus : page « bento » ou PDF (user:moi, 2026-10-29)
 
-### Assistant admin
+### Pré-qualification automatique
 
-Non prioritaire. Rendre le circuit de `docs/QUALIFICATION.md` utilisable
-dans l'admin, sans Claude Code, YAML ni wrangler. Garde-fous : le LLM
-propose et ne valide ni ne publie jamais ; chaque révision dit qu'elle vient
-de l'assistant et qui l'a demandée ; un cas non prévu remonte à un humain,
-sans règle inventée ; extraits et incertitudes affichés au moment de valider.
+Non prioritaire, cycle à part. Les Actions appellent un LLM par API : les
+nouveaux textes et les nouvelles sources arrivent dans « À traiter » avec une
+proposition, et la relecture ne part plus d'une feuille blanche. L'admin change
+peu : mêmes écrans, même validation, même bouton « Publier ». Garde-fous : le
+LLM propose et ne valide ni ne publie jamais ; chaque proposition dit qu'elle
+vient de lui ; un cas non prévu remonte à un humain, sans règle inventée.
 
-- [→Assistant admin] Avant tout écran : mesurer l'accord avec des qualifications validées (droit principal, sens, décisif), la stabilité entre deux passages et le taux d'erreur sur les textes corrigés à la relecture, l'accord brut étant flatté parce que Claude les a préparées (claude, 2026-10-30)
-- [→Assistant admin] Avant d'investir : montrer une maquette aux futur·es utilisateur·ices et confirmer que l'usage d'un LLM et de ce fournisseur est accepté (claude, 2026-10-30)
-- [→Assistant admin] Bouton « Préparer un brouillon » : l'agent cherche les sources et propose droits, sens et scrutins ; le résultat passe par `qualification.ts` et arrive « à relire ». Recherche de plusieurs minutes : file d'attente ou Managed Agents (user:moi et claude, 2026-10-30)
-- [→Assistant admin] Vérifier les citations sans LLM : chaque extrait figure dans le document et l'URL répond (claude, 2026-10-30)
-- [→Assistant admin] Relecture dans l'admin : fiche de relecture et contre-lecture critique au regard de `METHODO.md`, à côté du brouillon (claude, 2026-10-30)
-- [→Assistant admin] Import d'une source depuis une URL ou un PDF : auteur, titre, date et extraits préremplis (claude, 2026-10-30)
-- [→Assistant admin] Veille : un nouveau vote décisif sur un texte candidat, détecté après le build hebdomadaire, déclenche un brouillon (claude, 2026-10-30)
-- [→Assistant admin] Audit de cohérence : repérer les cas similaires tranchés différemment, avant la revue des qualifications sensibles (claude, 2026-10-30)
-- [→Assistant admin] Chat d'édition, en dernier : une demande produit un diff à accepter, le formulaire reste disponible (user:moi, 2026-10-30)
-- [→Assistant admin] Clé API : secret Cloudflare, workspace dédié, plafond de dépense, quota par personne ; transfert à prévoir à la passation (claude, 2026-10-30)
-- [→Assistant admin] Exclusions de sources : prompt sans aucun nom, via le secret `TERMES_INTERDITS` ; ce filtre ne repère pas un texte cosigné qui ne reprend pas les noms exclus, à contrôler à part (claude, 2026-10-30)
+- [→Pré-qualification] Prérequis : l'Action quotidienne (`Au fil des votes`, item 6) et l'Action « Données AN » réparée (claude, 2026-10-30)
+- [→Pré-qualification] Avant tout : mesurer l'accord avec des qualifications validées (droit principal, sens, décisif), la stabilité entre deux passages et le taux d'erreur sur les textes corrigés à la relecture, l'accord brut étant flatté parce que Claude les a préparées (claude, 2026-10-30)
+- [→Pré-qualification] Après chaque passe de données, une proposition pour chaque nouvelle alerte de `en_cours_alertes.csv` : `premier_decisif` et `unanimite_contestee` donnent un brouillon complet ; `vote_posterieur`, une requalification ; `inscrit`, droits touchés et sources, sans sens ni scrutin. Les propositions déjà faites ne sont pas recalculées (user:moi et claude, 2026-10-30)
+- [→Pré-qualification] Veille des sources, une fois par semaine, sur les textes suivis et qualifiés : nouveau document d'une source admise ; il arrive en proposition de modification, source et extrait préremplis (user:moi et claude, 2026-10-30)
+- [→Pré-qualification] Une proposition sur un texte publié ne change ni son statut ni son contenu (table ou colonne à part, migration D1) : la file « À traiter » la montre, le relecteur l'accepte ou l'écarte. Une proposition sur un texte nouveau peut arriver « à relire » par le circuit de `sync-admin --brouillons` (claude, 2026-10-30)
+- [→Pré-qualification] « À traiter » : afficher la proposition, l'écart avec la version publiée, les extraits et les incertitudes. Seul ajout au front (user:moi et claude, 2026-10-30)
+- [→Pré-qualification] Contrôles sans LLM avant toute proposition : `editorial.valider`, décomptes, termes interdits, chaque extrait présent dans le document, URL qui répond. Un échec écarte la proposition et le dit (claude, 2026-10-30)
+- [→Pré-qualification] Exclusions de sources : prompt sans aucun nom, via la liste privée ; ce filtre ne repère pas un texte cosigné qui ne reprend pas les noms exclus, à contrôler à part (lire les signataires) (claude, 2026-10-30)
+- [→Pré-qualification] Clé API : secret GitHub de l'Action, workspace dédié, plafond de dépense ; un dépassement arrête les propositions, sans faire échouer la passe de données ; transfert à prévoir à la passation (claude, 2026-10-30)
+- [→Pré-qualification] Audit de cohérence : repérer les cas similaires tranchés différemment, avant la revue des qualifications sensibles (claude, 2026-10-30)
+- [→Pré-qualification] Mettre à jour « Qui qualifie, et comment » sur la page Méthodologie quand les propositions automatiques tournent, et confirmer auprès des futur·es utilisateur·ices que l'usage de ce fournisseur est accepté (claude, 2026-10-30)
 
 ## À creuser
 
@@ -116,6 +118,7 @@ sans règle inventée ; extraits et incertitudes affichés au moment de valider.
 
 ## Refusé
 
+- [refusé] Assistant dans l'admin (bouton « Préparer un brouillon », chat d'édition, import d'une source depuis une URL ou un PDF, relecture à l'écran) : trop de changements dans l'expérience de l'admin, les appels LLM passent par les Actions (user:moi, 2026-10-30)
 - [refusé] Chat libre sur le site public : erreur grave sur un député nommé, réponse invérifiable alors que chaque chiffre mène au scrutin officiel, questions révélant des opinions politiques envoyées à un tiers, coût sans plafond naturel, backend à ajouter à un site statique (user:moi et claude, 2026-10-30)
 - [refusé] Cas « instrumentalise le sujet » (vote favorable mais texte de façade) : jugement au cas par cas, contraire à la règle fixe de la méthode (claude, 2026-10-29)
 - [refusé] Suivre les textes dès leur dépôt : 2 462 dossiers de loi non promulgués en XVIIe au 29/10/2026, presque tous jamais examinés (claude, 2026-10-30)
