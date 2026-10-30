@@ -9415,5 +9415,79 @@
       "titre": "Inviter le Gouvernement à engager les démarches en vue de soutenir l’entrée au Panthéon d’Olympe de Gouges, de l’abbé Charles-Michel de l’Épée et de Zéna M’Déré",
       "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit (règle 8)."
     }
+  ],
+  "suivis": [
+    {
+      "id": "regulariser-travailleurs-sans-papiers-2026",
+      "dossier_an": "DLR5L17N54998",
+      "legislature": 17,
+      "titre": "Proposition de loi visant à régulariser les travailleurs sans-papiers",
+      "resume": "L'article unique prévoit la délivrance de plein droit d'une carte de séjour « salarié » à l'étranger qui justifie par tout moyen d'au moins six mois d'activité professionnelle en France, consécutifs ou non, au cours des vingt-quatre derniers mois. La carte vaut autorisation de travail.",
+      "droits": [
+        {
+          "code": "etrangers",
+          "sources": [
+            "ddd-2023-11",
+            "cgt-2024-10"
+          ],
+          "justification": "Le texte porte sur le droit au séjour des personnes étrangères qui travaillent en France sans titre. Le Défenseur des droits a analysé en 2023 un dispositif de même nature, délivré de plein droit, sans pouvoir discrétionnaire de l'administration ni intervention obligatoire de l'employeur. La CGT revendique « un titre de séjour de plein droit à partir de la simple preuve de travail »."
+        },
+        {
+          "code": "travail-protection-sociale",
+          "sources": [
+            "ddd-2023-11",
+            "cgt-2024-10"
+          ],
+          "justification": "Le texte touche aux droits au travail de ces personnes, puisque la carte vaut autorisation de travail. Le Défenseur des droits relie la régularisation par le travail à la protection de leurs droits. La CGT invoque « l'égalité des droits pour l'ensemble des travailleuses et des travailleurs »."
+        }
+      ],
+      "note": "Fiche de suivi : aucun vote qualifié, ni sens ni score (règle 22). Aucune source admise ne porte encore sur ce texte : les deux sources portent sur la mesure, un titre de séjour de plein droit fondé sur le travail (règle 7).",
+      "sources": {
+        "cgt-2024-10": {
+          "auteur": "CGT",
+          "titre": "La régularisation des travailleurs et travailleuses sans papiers est une mesure de justice sociale",
+          "date": "2024-10-10",
+          "url": "https://www.cgt.fr/comm-de-presse/la-regularisation-des-travailleurs-et-travailleuses-sans-papiers-est-une-mesure-de-justice-sociale"
+        },
+        "ddd-2023-11": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 23-07 du 24 novembre 2023",
+          "date": "2023-11-24",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=21905"
+        }
+      }
+    },
+    {
+      "id": "relance-decentralisation-logement-2026",
+      "dossier_an": "DLR5L17N54608",
+      "legislature": 17,
+      "titre": "Projet de loi visant la relance et la décentralisation du logement",
+      "resume": "Le projet comporte trois titres : accélération des constructions, accélération des rénovations et décentralisation. Il touche notamment à la performance énergétique exigée des logements loués, à l'attribution des logements sociaux et au droit au logement opposable. Adopté par le Sénat le 8 juillet 2026.",
+      "droits": [
+        {
+          "code": "logement",
+          "sources": [
+            "conseil-etat-2026-06",
+            "fondation-logement-2026-07"
+          ],
+          "justification": "Le Conseil d'État examine le texte au regard du droit de toute personne à un logement décent, et se prononce sur les attributions de logements sociaux et sur le droit au logement opposable. La Fondation pour le logement, qui porte une proposition de loi sur les logements bouilloires, relève que le projet ne contient aucun article sur ce sujet."
+        }
+      ],
+      "note": "Fiche de suivi : aucun vote qualifié, ni sens ni score (règle 22). L'avis du Conseil d'État et le communiqué de la Fondation portent sur le projet initial, avant son adoption par le Sénat.",
+      "sources": {
+        "conseil-etat-2026-06": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis sur un projet de loi visant la relance et la décentralisation du logement",
+          "date": "2026-06-11",
+          "url": "https://www.conseil-etat.fr/avis-consultatifs/derniers-avis-rendus/au-gouvernement/avis-sur-un-projet-de-loi-visant-la-relance-et-la-decentralisation-du-logement"
+        },
+        "fondation-logement-2026-07": {
+          "auteur": "Fondation pour le logement des défavorisés",
+          "titre": "« Zéro logement bouilloire » : le projet de loi Logement du gouvernement va-t-il enfin passer à l'action ?",
+          "date": "2026-07-02",
+          "url": "https://www.fondationpourlelogement.fr/zero-logement-bouilloire-le-projet-de-loi-logement-du-gouvernement-va-t-il-enfin-passer-a-laction/"
+        }
+      }
+    }
   ]
 }
