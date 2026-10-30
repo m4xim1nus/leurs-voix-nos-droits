@@ -106,7 +106,7 @@ pour y toucher.
    traité ; texte non traité inscrit à l'ordre du jour. Ce sont des
    **avertissements** : un nouveau vote ne doit pas bloquer l'Action, qui ne
    commite que si `check` passe.
-6. ⏳ **Mise à jour quotidienne** (dossiers, agenda, scrutins, Dosleg), une
+6. ⏳ (code et Action `donnees-quotidien.yml` prêts ; en service quand les amendements de la XVIe seront dans la release `donnees-figees`) **Mise à jour quotidienne** (dossiers, agenda, scrutins, Dosleg), une
    fois l'Action réparée (item 3 du Reliquat XVIe). `build` tourne sans le
    dump des amendements mais rattache alors moins bien les scrutins : la
    passe légère réutilise donc l'archive en cache et ne doit jamais dégrader

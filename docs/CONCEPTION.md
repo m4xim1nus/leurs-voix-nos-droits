@@ -528,6 +528,7 @@ proposée, codée dans `lvnd scores` :
   incrémental (quelques centaines de lignes écrites au lieu de 80 000).
   Cette dernière étape exige deux secrets GitHub : `CLOUDFLARE_API_TOKEN`
   (jeton « D1 : Edit » du compte) et `CLOUDFLARE_ACCOUNT_ID`. Sans eux,
-  elle est sautée.
+  elle est sautée. S'y ajoute une passe quotidienne légère
+  (`donnees-quotidien.yml`, `docs/SOURCES.md`).
 - M2 : à la main, d'après une procédure.
 - M3 : Action sans l'admin.

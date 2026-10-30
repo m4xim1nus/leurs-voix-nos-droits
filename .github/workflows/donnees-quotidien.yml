@@ -1,0 +1,113 @@
+# Passe quotidienne de l'open data (ROADMAP, Au fil des votes, item 6) : dossiers, scrutins, agenda et
+# Dosleg sont rafraîchis ; les gros dumps viennent du cache de l'Action, ou de la release
+# `donnees-figees` pour les amendements de la XVIe. Le dump hebdomadaire (donnees.yml) rafraîchit le reste.
+#
+# Rien n'est commité si une étape échoue, si un score change sans qualification nouvelle, ou si
+# amendements.csv perd des lignes. La date seule (meta.json) ne déclenche pas de commit.
+
+name: Données AN (quotidien)
+
+on:
+  schedule:
+    - cron: '0 5 * * *' # chaque jour, 5 h UTC
+  workflow_dispatch:
+
+concurrency:
+  group: donnees
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  donnees:
+    name: Mise à jour quotidienne des données
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          cache-dependency-glob: pipeline/uv.lock
+
+      - name: Archives des jours précédents
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/raw/**/*.zip
+            data/raw/**/*.part
+            data/raw/**/*.part.json
+            data/raw/an_amendements_*/unitaire
+            data/raw/manifeste.json
+          key: raw-${{ github.run_id }}
+          restore-keys: raw-
+
+      - name: Téléchargement léger (lvnd download --leger)
+        working-directory: pipeline
+        run: uv run --no-dev lvnd download --leger
+
+      - name: Archives gardées pour le lendemain
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            data/raw/**/*.zip
+            data/raw/**/*.part
+            data/raw/**/*.part.json
+            data/raw/an_amendements_*/unitaire
+            data/raw/manifeste.json
+          key: raw-${{ github.run_id }}
+
+      - name: Scores avant le build (publications comprises)
+        working-directory: pipeline
+        run: |
+          uv run --no-dev lvnd scores
+          (cd ../data/export && sha256sum scores_*.csv participation.csv) > "$RUNNER_TEMP/scores.sha256"
+
+      - name: Build et contrôles (lvnd build, lvnd check)
+        working-directory: pipeline
+        run: |
+          uv run --no-dev lvnd build
+          uv run --no-dev lvnd check
+
+      - name: Garde-fous (scores identiques, amendements conservés)
+        run: |
+          (cd data/export && sha256sum -c "$RUNNER_TEMP/scores.sha256")
+          avant=$(git show HEAD:data/export/amendements.csv | wc -l)
+          apres=$(wc -l < data/export/amendements.csv)
+          echo "amendements.csv : $avant → $apres lignes"
+          if [ "$apres" -lt "$avant" ]; then
+            echo "::error::amendements.csv a perdu des lignes : rien n'est commité."
+            exit 1
+          fi
+
+      - name: Commit des données, si un export a changé
+        run: |
+          git add data/export
+          if git diff --cached --quiet -- . ':(exclude)data/export/meta.json'; then
+            echo "Aucune donnée nouvelle."
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -q -m "Données AN du $(date -u +%d/%m/%Y)"
+          git pull -q --rebase origin main
+          git push -q origin HEAD:main
+
+      - uses: actions/setup-node@v5
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: admin/package-lock.json
+
+      - name: Catalogue de l'admin (lvnd sync-admin, incrémental)
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        run: |
+          (cd admin && npm ci --no-audit --no-fund)
+          cd pipeline && uv run --no-dev lvnd sync-admin --remote

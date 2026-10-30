@@ -95,6 +95,20 @@ def test_inscrit():
     assert types(r) == [("premier_decisif", "D", "S1")]
 
 
+def test_scrutins_recents_hors_du_taux_de_rattachement():
+    import sqlite3
+    con = sqlite3.connect(":memory:")
+    con.execute("create table scrutins (legislature int, date text, objet text, amendement_id text)")
+    lignes = [(17, "2026-01-01", "amendement", "A"), (17, "2026-01-02", "amendement", None),
+              (17, "2026-10-29", "amendement", None), (17, "2026-10-30", "amendement", "B"),
+              (17, "2026-10-30", "ensemble", None)]
+    con.executemany("insert into scrutins values (?, ?, ?, ?)", lignes)
+    assert check.rattachement_amendements(con, 17) == (2, 1, 1)
+    # L'archive bloquée depuis plus de 14 jours : ces scrutins comptent de nouveau, et le taux baisse.
+    con.execute("insert into scrutins values (17, '2026-12-01', 'ensemble', null)")
+    assert check.rattachement_amendements(con, 17) == (4, 2, 0)
+
+
 def test_identifiants_uniques():
     ss = [scrutin("S1"), scrutin("S2", date="2026-02-01"), scrutin("S3", date="2026-03-01")]
     r = alertes.calculer([texte(decisif="S3")], ss, [], qualif([qualifie("D", ("S1", "decisif"))]))

@@ -278,6 +278,26 @@ navette ». Les lectures du Sénat n'ont ni scrutin ni mode (`NON_RENSEIGNE`) :
 ses votes restent au cycle Sénat. Les 49.3 de la XVIe n'ont pas de scrutin miroir
 ici (motions sans `voteRefs`) : leur mode reste `ART_49_3`.
 
+## Mise à jour : passe quotidienne et données figées
+
+Deux Actions. `donnees-quotidien.yml` (chaque jour, 5 h UTC) rafraîchit les dossiers
+de la XVIIe, ses scrutins, l'agenda et Dosleg avec `lvnd download --leger`. Les autres archives
+viennent du cache de l'Action. `donnees.yml` (lundi) rafraîchit le reste ; si un dump
+d'amendements est injoignable, l'archive précédente sert, sans échec.
+
+**Amendements de la XVIe.** Figés depuis le 28/06/2024, ils ne sont plus demandés à
+l'AN : `lvnd archiver an_amendements_16` en fait un zip, gardé dans la release
+`donnees-figees` du dépôt. C'est une copie des données de l'AN, sans retraitement.
+
+Garde-fous de la passe quotidienne : rien n'est commité si un score change sans
+qualification nouvelle, si `amendements.csv` perd des lignes ou si `lvnd check` échoue. La
+date seule (`meta.json`) ne déclenche pas de commit.
+
+L'archive des amendements de la XVIIe pouvant dater d'une semaine, `lvnd check` ne compte pas
+dans son taux de rattachement les scrutins des 14 derniers jours. Essai du 30/10/2026
+sur une archive de la veille : 157 nouveaux scrutins, 107 pas encore rattachés, tous du 29/10,
+et `scores_*.csv` identiques à l'octet.
+
 ## Groupes : renommages et ventilations
 
 - Un groupe qui change de nom reçoit un nouvel organe. Les ventilations des

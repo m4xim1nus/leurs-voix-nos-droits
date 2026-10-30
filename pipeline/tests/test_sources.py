@@ -1,6 +1,7 @@
 """Téléchargement robuste aux coupures du serveur de l'AN (sources.telecharger)."""
 
 import json
+import zipfile
 
 import httpx
 import pytest
@@ -92,6 +93,80 @@ def test_abandon_sans_progres(tmp_path, monkeypatch):
     with httpx.Client(transport=transport) as c, pytest.raises(SystemExit, match="aucun octet"):
         sources.telecharger(c, "https://an/a.zip", tmp_path / "a.zip", patience=3600)
     assert sources._etat(tmp_path / "a.zip")[0].stat().st_size == 100  # gardé pour la reprise
+
+
+def _zip(chemin, nom="json/a/b/c.json", contenu=b"{}"):
+    chemin.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(chemin, "w") as z:
+        z.writestr(nom, contenu)
+
+
+def _sources(monkeypatch):
+    """Deux sources, l'une rafraîchie par la passe légère, l'autre non (avec plan B)."""
+    monkeypatch.setattr(sources, "SOURCES", {
+        "legere": {"url": "https://an/legere.zip"},
+        "lourde": {"url": "https://an/lourde.zip", "secours": {"legislature": 16, "organe": "1"}}})
+    monkeypatch.setattr(sources, "LEGERES", ("legere",))
+
+
+def _client_factice(monkeypatch, gerer):
+    vrai = httpx.Client
+    monkeypatch.setattr(sources.httpx, "Client", lambda **kw: vrai(transport=httpx.MockTransport(gerer)))
+
+
+def test_leger_ne_touche_pas_aux_archives_lourdes(tmp_path, monkeypatch):
+    _sources(monkeypatch)
+    _zip(tmp_path / "lourde/lourde.zip")
+    corps = tmp_path / "legere.zip"
+    _zip(corps)
+    appels = []
+
+    def gerer(req):
+        appels.append(str(req.url))
+        return httpx.Response(200, headers={"last-modified": LM, "content-length": str(corps.stat().st_size)},
+                              content=b"" if req.method == "HEAD" else corps.read_bytes())
+
+    _client_factice(monkeypatch, gerer)
+    sources.download(tmp_path, leger=True)
+    assert set(appels) == {"https://an/legere.zip"}  # rien vers l'archive lourde
+    assert (tmp_path / "lourde/x/json/a/b/c.json").exists()  # mais elle est extraite
+    assert "lourde" not in json.loads((tmp_path / "manifeste.json").read_text())
+
+
+def test_leger_sans_archive_ne_lance_pas_le_plan_b(tmp_path, monkeypatch):
+    _sources(monkeypatch)
+    monkeypatch.setattr(sources, "LEGERES", ())
+    _client_factice(monkeypatch, lambda req: httpx.Response(404))
+    with pytest.raises(httpx.HTTPStatusError):
+        sources.download(tmp_path, leger=True)
+    assert not (tmp_path / "legere/x").exists()
+
+
+def test_dump_injoignable_garde_l_archive_precedente(tmp_path, monkeypatch):
+    _sources(monkeypatch)
+    monkeypatch.setitem(sources.SOURCES, "legere", {"url": "https://an/lourde2.zip", "secours": {"legislature": 16, "organe": "1"}})
+    _zip(tmp_path / "legere/lourde2.zip")
+    _zip(tmp_path / "lourde/lourde.zip")
+    _client_factice(monkeypatch, lambda req: httpx.Response(503))
+    sources.download(tmp_path)  # aucun plan B, aucun échec
+    assert (tmp_path / "legere/x/json/a/b/c.json").exists() and (tmp_path / "lourde/x/json/a/b/c.json").exists()
+    assert not (tmp_path / "lourde/unitaire").exists()
+
+
+def test_archiver_refuse_un_plan_b_inacheve_puis_ecrit_les_memes_octets(tmp_path, monkeypatch):
+    _sources(monkeypatch)
+    f = tmp_path / "lourde/unitaire/json/d/t/a.json"
+    f.parent.mkdir(parents=True)
+    f.write_text('{"amendement": {}}')
+    (tmp_path / "lourde/unitaire/etat.json").write_text("{}")
+    with pytest.raises(SystemExit, match="pas terminé"):
+        sources.archiver(tmp_path, "lourde", tmp_path / "s.zip")
+    (tmp_path / "manifeste.json").write_text(json.dumps({"lourde": {"mode": "secours"}}))
+    n, sha = sources.archiver(tmp_path, "lourde", tmp_path / "s.zip")
+    assert n == 1
+    assert sources.archiver(tmp_path, "lourde", tmp_path / "s2.zip")[1] == sha
+    # Même arborescence que le dump : extraite, elle se lit comme lui, sans l'état du plan B.
+    assert zipfile.ZipFile(tmp_path / "s.zip").namelist() == ["json/d/t/a.json"]
 
 
 def test_archive_inchangee_non_retelechargee(tmp_path):

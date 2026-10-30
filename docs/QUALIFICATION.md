@@ -57,6 +57,11 @@ celles de `docs/METHODO.md`. Le circuit est celui de l'admin
 8. **Publication** : Max clique sur « Publier ». Ensuite, `git pull` dans
    chaque copie de travail.
 
+**Un dossier neuf par chargement.** `--valider` et `--remplacer` prennent tous les
+YAML du dossier. Vérifier avant que le nom n'est pas déjà pris, et que la page « Publier »
+ne montre que les textes attendus. Le 30/10/2026, six écarts copiés dans un
+`brouillons-tri` déjà rempli ont ainsi réécrit trois décisions plus récentes.
+
 Le lot de tri (garder ou écarter des candidats en masse) suit le même
 circuit. Ses brouillons ne portent que `statut: ecarte` et un
 `motif_ecart` court, ou une simple liste « à qualifier » dans la fiche.

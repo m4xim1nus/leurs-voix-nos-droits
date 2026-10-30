@@ -9,6 +9,13 @@ recopié dans l'export : il date l'instantané versionné.
 Si un dump d'amendements reste injoignable, `download` bascule seul sur le
 plan B (`secours.py`, amendement par amendement) ; le manifeste le note
 (`mode: secours`) et chaque lancement suivant retente le dump, qui remplace tout.
+Une archive déjà là reste une source complète : elle sert si le dump est
+injoignable, sans plan B.
+
+Les amendements de la XVIe sont figés depuis 2024 : on les lit dans une copie
+gardée dans une release du dépôt (`archiver`), jamais retéléchargée à l'AN.
+`download --leger` (passe quotidienne) ne rafraîchit que `LEGERES` et réutilise
+les archives déjà là.
 """
 
 import fcntl
@@ -25,6 +32,7 @@ from pathlib import Path
 import httpx
 
 AN = "https://data.assemblee-nationale.fr/static/openData/repository"
+FIGEES = "https://github.com/m4xim1nus/leurs-voix-nos-droits/releases/download/donnees-figees"
 
 SOURCES: dict[str, dict] = {
     "an_scrutins_17": {"url": f"{AN}/17/loi/scrutins/Scrutins.json.zip"},
@@ -33,7 +41,7 @@ SOURCES: dict[str, dict] = {
                           "secours": {"legislature": 17, "organe": "838901"}},
     "an_scrutins_16": {"url": f"{AN}/16/loi/scrutins/Scrutins.json.zip"},
     "an_dossiers_16": {"url": f"{AN}/16/loi/dossiers_legislatifs/Dossiers_Legislatifs.json.zip"},
-    "an_amendements_16": {"url": f"{AN}/16/loi/amendements_div_legis/Amendements.json.zip",
+    "an_amendements_16": {"url": f"{FIGEES}/Amendements.json.zip",
                           "secours": {"legislature": 16, "organe": "791932"}},
     "an_amo": {"url": f"{AN}/17/amo/tous_acteurs_mandats_organes_xi_legislature/"
                       "AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip"},
@@ -41,6 +49,8 @@ SOURCES: dict[str, dict] = {
     "senat_dosleg": {"url": "https://data.senat.fr/data/dosleg/dosleg.zip"},
 }
 
+# Passe quotidienne : ce qui change d'un jour à l'autre et se télécharge vite.
+LEGERES = ("an_dossiers_17", "an_scrutins_17", "an_agenda_17", "senat_dosleg")
 MANIFESTE = "manifeste.json"
 PATIENCE_AVANT_SECOURS = 1200  # secondes sans aucun octet avant de basculer sur le plan B
 
@@ -166,19 +176,47 @@ def telecharger(client: httpx.Client, url: str, cible: Path, patience: int = 360
     return modifie
 
 
-def download(raw: Path, cles: list[str] | None = None, secours_max: int | None = None) -> None:
+def archiver(raw: Path, cle: str, sortie: Path) -> tuple[int, str]:
+    """Écrit dans `sortie` un zip de la source `cle` (`json/…`, comme le dump de l'AN), à verser dans la
+    release `donnees-figees`. Refuse une récupération inachevée : le manifeste ne note le plan B qu'à
+    sa fin. Mêmes octets à chaque appel (ordre et dates fixes). Renvoie le nombre de fichiers et le sha256."""
+    if cle not in lire_manifeste(raw):
+        raise SystemExit(f"{cle} : absent du manifeste, téléchargement ou plan B pas terminé")
+    base = racine(raw, cle)
+    fichiers = sorted((base / "json").rglob("*.json"))
+    if not fichiers:
+        raise SystemExit(f"{cle} : aucun fichier dans {base / 'json'}")
+    sortie.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(sortie, "w", zipfile.ZIP_DEFLATED) as z:
+        for f in fichiers:
+            z.writestr(zipfile.ZipInfo(f.relative_to(base).as_posix(), (2024, 6, 28, 0, 0, 0)), f.read_bytes(),
+                       zipfile.ZIP_DEFLATED)
+    return len(fichiers), sha256_fichier(sortie)
+
+
+def download(raw: Path, cles: list[str] | None = None, secours_max: int | None = None, leger: bool = False) -> None:
     """Télécharge chaque source, l'extrait et met à jour le manifeste. `secours_max` : durée maximale
-    du plan B, en secondes (ce qui est récupéré reste acquis pour le lancement suivant)."""
+    du plan B, en secondes (ce qui est récupéré reste acquis pour le lancement suivant). `leger` : ne
+    rafraîchit que `LEGERES` ; les autres archives servent telles quelles, téléchargées seulement si
+    elles manquent, et sans plan B."""
     raw.mkdir(parents=True, exist_ok=True)
     with (raw / ".download.lock").open("w") as verrou:
         try:  # deux processus écriraient dans le même fichier partiel
             fcntl.flock(verrou, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError:
             raise SystemExit(f"un autre `lvnd download` tourne déjà sur {raw}") from None
-        _download(raw, cles, secours_max)
+        _download(raw, cles, secours_max, leger)
 
 
-def _download(raw: Path, cles: list[str] | None, secours_max: int | None) -> None:
+def _extraire(raw: Path, cle: str, cible: Path) -> None:
+    x = extraits(raw, cle)
+    if x.exists():
+        shutil.rmtree(x)
+    with zipfile.ZipFile(cible) as z:
+        z.extractall(x)
+
+
+def _download(raw: Path, cles: list[str] | None, secours_max: int | None, leger: bool = False) -> None:
     manifeste = lire_manifeste(raw)
     # délai de lecture court : le serveur de l'AN laisse parfois une connexion pendante sans la fermer
     with httpx.Client(timeout=httpx.Timeout(60, connect=30), follow_redirects=True) as client:
@@ -187,15 +225,25 @@ def _download(raw: Path, cles: list[str] | None, secours_max: int | None) -> Non
             dossier = raw / cle
             dossier.mkdir(parents=True, exist_ok=True)
             cible = dossier / src["url"].rsplit("/", 1)[1]
+            if leger and cle not in LEGERES and cible.exists():
+                print(f"{cle} : archive déjà là, réutilisée", file=sys.stderr)
+                if src.get("zip", True) and not extraits(raw, cle).exists():
+                    _extraire(raw, cle, cible)
+                continue
             print(f"{cle} : téléchargement de {src['url']}", file=sys.stderr)
             avant = manifeste.get(cle)
             try:
                 modifie = telecharger(client, src["url"], cible, connu=avant,
                                       patience=PATIENCE_AVANT_SECOURS if "secours" in src else 3600)
             except (Injoignable, httpx.HTTPError) as e:
-                # Une archive plus ancienne reste une source complète : on n'y substitue pas un plan B partiel.
-                if "secours" not in src or cible.exists():
+                if "secours" not in src or leger:
                     raise
+                # Une archive plus ancienne reste une source complète : on n'y substitue pas un plan B partiel.
+                if cible.exists():
+                    print(f"{cle} : dump injoignable ({e}), archive précédente réutilisée", file=sys.stderr)
+                    if src.get("zip", True) and not extraits(raw, cle).exists():
+                        _extraire(raw, cle, cible)
+                    continue
                 print(f"{cle} : dump injoignable ({e}), plan B amendement par amendement", file=sys.stderr)
                 from . import secours
                 bilan = secours.recuperer(client, raw, cle, **src["secours"], duree_max=secours_max)
@@ -206,11 +254,7 @@ def _download(raw: Path, cles: list[str] | None, secours_max: int | None) -> Non
             shutil.rmtree(unitaire(raw, cle), ignore_errors=True)  # le dump remplace le plan B
             inchange = bool(avant) and avant.get("last_modified") == modifie and avant.get("taille") == cible.stat().st_size
             if src.get("zip", True) and not (inchange and extraits(raw, cle).exists()):
-                x = extraits(raw, cle)
-                if x.exists():
-                    shutil.rmtree(x)
-                with zipfile.ZipFile(cible) as z:
-                    z.extractall(x)
+                _extraire(raw, cle, cible)
             if inchange:
                 continue
             manifeste[cle] = {

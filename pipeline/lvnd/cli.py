@@ -1,4 +1,4 @@
-"""Ligne de commande : lvnd download | build | check | editorial | scores | annuaire | sync-admin."""
+"""Ligne de commande : lvnd download | archiver | build | check | editorial | scores | annuaire | sync-admin."""
 
 import argparse
 import sys
@@ -19,7 +19,13 @@ def main(argv=None) -> int:
     d.add_argument("--raw", type=Path, default=RAW)
     d.add_argument("--secours-max", type=int, metavar="MINUTES",
                    help="durée maximale du plan B amendement par amendement (repris au lancement suivant)")
+    d.add_argument("--leger", action="store_true",
+                   help="passe quotidienne : dossiers, scrutins, agenda et Dosleg seulement, archives déjà là pour le reste")
     d.add_argument("sources", nargs="*", help="clés de sources (défaut : toutes)")
+    ar = sub.add_parser("archiver", help="zip d'une source figée, à verser dans la release donnees-figees")
+    ar.add_argument("source", help="clé de la source (an_amendements_16)")
+    ar.add_argument("--raw", type=Path, default=RAW)
+    ar.add_argument("--sortie", type=Path, required=True)
     b = sub.add_parser("build", help="dumps → data/lvnd.sqlite + data/export/")
     b.add_argument("--raw", type=Path, default=RAW)
     b.add_argument("--sqlite", type=Path, default=SQLITE)
@@ -59,7 +65,11 @@ def main(argv=None) -> int:
 
     if args.commande == "download":
         from . import sources
-        sources.download(args.raw, args.sources or None, args.secours_max and args.secours_max * 60)
+        sources.download(args.raw, args.sources or None, args.secours_max and args.secours_max * 60, args.leger)
+    elif args.commande == "archiver":
+        from . import sources
+        n, sha = sources.archiver(args.raw, args.source, args.sortie)
+        print(f"{args.sortie} : {n:,} fichiers, sha256 {sha}")
     elif args.commande == "build":
         from . import build
         build.build(args.raw, args.sqlite, args.export)
