@@ -20,6 +20,7 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 
 ## À trier
 
+- [ ] `sync-admin --valider` : refuser d'écarter un texte dont la version publiée est qualifiée, sauf option explicite, et afficher la liste avant d'écrire (incident `brouillons-tri`, claude, 2026-10-30)
 - [ ] `admin/README.md` : `npm run dev` répond 403 depuis que `wrangler.jsonc` déclare Access ; il faut un `admin/.dev.vars` avec `ACCESS_TEAM_DOMAIN=""` (non versionné, à ajouter au `.gitignore` et au README) (claude, 2026-10-30)
 - [ ] Site : l'état et les dates d'inscription restent figés si l'Action est en panne ; les listes et `Prochains votes` n'affichent pas la date de l'état, contrairement à la fiche et à `/en-cours` (claude, 2026-10-30)
 - [ ] Table pays → circonscription des Français de l'étranger (code électoral, art. L. 330-1) à saisir en référentiel (claude, 2026-10-29)

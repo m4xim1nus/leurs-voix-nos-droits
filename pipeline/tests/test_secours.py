@@ -240,12 +240,15 @@ def test_source_sans_plan_b_echoue_comme_avant(tmp_path, monkeypatch):
 
 
 def test_archive_ancienne_preferee_au_plan_b(tmp_path, monkeypatch):
+    import zipfile
     _sources(monkeypatch)
     _dump_coupe(monkeypatch)
     (tmp_path / "am").mkdir()
-    (tmp_path / "am/a.zip").write_bytes(b"ancienne")
-    with pytest.raises(sources.Injoignable):
-        sources.download(tmp_path, ["am"])
+    with zipfile.ZipFile(tmp_path / "am/a.zip", "w") as z:
+        z.writestr("json/D/T/A.json", "{}")
+    sources.download(tmp_path, ["am"])  # l'archive sert, sans plan B ni échec
+    assert (tmp_path / "am/x/json/D/T/A.json").exists()
+    assert not (tmp_path / "am/unitaire").exists()
 
 
 def test_le_dump_revenu_remplace_le_plan_b(tmp_path, monkeypatch):

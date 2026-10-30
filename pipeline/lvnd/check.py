@@ -28,6 +28,7 @@ VENTILATIONS_INCOMPLETES = {
 
 # Seuils de rattachement (docs/SOURCES.md : 99,9 % des scrutins sur amendement en XVIIe au spike).
 SEUIL_AMENDEMENTS = 0.995
+DELAI_AMENDEMENTS = 14  # jours : voir rattachement_amendements
 SEUIL_DOSSIERS = 0.99
 
 
@@ -86,6 +87,19 @@ def termes_interdits(texte: str, chemin: Path = TERMES_INTERDITS) -> list[str]:
         return []
     termes = [t.strip() for t in chemin.read_text().splitlines() if t.strip() and not t.startswith("#")]
     return [t for t in termes if re.search(rf"(?<!\w){re.escape(t)}(?!\w)", texte, re.IGNORECASE)]
+
+
+def rattachement_amendements(con, leg: int) -> tuple[int, int, int]:
+    """Scrutins sur amendement, ceux rattachés, et ceux des `DELAI_AMENDEMENTS` derniers jours pas encore
+    rattachés. L'archive des amendements peut dater de plus d'une semaine (passe quotidienne), et ces
+    derniers ne comptent pas dans le taux ; si elle reste bloquée plus longtemps, le contrôle échoue."""
+    objets = "objet in ('amendement', 'suppression_article_unique')"
+    limite = _un(con, f"select date(max(date), '-{DELAI_AMENDEMENTS} days') from scrutins where legislature = ?", leg)
+    n, ok = _q(con, f"select count(*), count(amendement_id) from scrutins where legislature = ? and date <= ? and {objets}",
+               leg, limite)[0]
+    recents = _un(con, f"select count(*) from scrutins where legislature = ? and date > ? and amendement_id is null and {objets}",
+                  leg, limite)
+    return n, ok, recents
 
 
 def _qualifications(con, controle, out) -> None:
@@ -170,12 +184,14 @@ def verifier(chemin: Path) -> tuple[bool, list[str]]:
 
     out.append("\n== Rattachements")
     for leg in (16, 17):
-        n, ok_amdt = _q(con, "select count(*), count(amendement_id) from scrutins where legislature = ? "
-                             "and objet in ('amendement', 'suppression_article_unique')", leg)[0]
         if not _un(con, "select count(*) from amendements where id like ?", f"AMANR5L{leg}%"):
             controle(f"XV{'I' * (leg - 15)}e : amendements présents (lancer `lvnd download an_amendements_{leg}`)",
                      False)
             continue
+        n, ok_amdt, recents = rattachement_amendements(con, leg)
+        if recents:
+            out.append(f"info XV{'I' * (leg - 15)}e : {recents} scrutins récents pas encore rattachés, hors du taux "
+                       f"(archive des amendements plus ancienne)")
         controle(f"XV{'I' * (leg - 15)}e : scrutins sur amendement rattachés à leur amendement",
                  ok_amdt / n >= SEUIL_AMENDEMENTS, f"{ok_amdt}/{n} ({ok_amdt / n:.1%})")
         out.append(f"info XV{'I' * (leg - 15)}e : {ok_amdt}/{n} ({ok_amdt / n:.1%}) scrutins sur amendement rattachés")

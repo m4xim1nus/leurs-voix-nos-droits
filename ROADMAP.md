@@ -32,6 +32,31 @@ demande des plages de 256 Kio et reprend un fichier partiel d'un lancement
 4. ⏳ Relecture des scores des six textes témoins avec Max (livrable de
    l'étape 2).
 
+## Reprise à la fin du dump de la XVIe
+
+Le dump est fini quand `an_amendements_16` figure dans `data/raw/manifeste.json`
+(un seul signal fiable : 3173 / 3173 dans `etat.json` le précède de peu). Le code de
+l'item 6 attend sur la branche `worktree-textes-en-cours`, pas encore sur `main`.
+
+1. **Fin du Reliquat, dossier principal** : `git pull`, `lvnd build`, `lvnd check` (la ligne
+   « XVIe : amendements présents » doit passer), mesure du rattachement dans
+   `docs/SOURCES.md`, `scores_*.csv` inchangés, relecture des six témoins avec Max. Commit,
+   puis push.
+2. **Mise en service de l'item 6, worktree `textes-en-cours`** : fusionner `origin/main` et
+   tester. Puis Max : `lvnd archiver an_amendements_16 --sortie /tmp/Amendements.json.zip`,
+   `gh release create donnees-figees /tmp/Amendements.json.zip`, push de la branche sur
+   `main`, `gh workflow run donnees-quotidien.yml`. Décision de Max : le zip est publié tel
+   quel. Contrôler ce premier lancement.
+3. **Clôture des deux cycles** (rotation, `CLAUDE.md`) : entrée de `CHANGELOG.md` et tag,
+   items livrés retirés de `BACKLOG.md`, cycle suivant choisi par Max dans `ROADMAP.md`.
+
+Un cycle est un cycle de développement. Décision de Max du 30/10/2026 : Au fil des votes se
+ferme ici, sans attendre le calendrier parlementaire. Le lot test a rendu son bilan. Le
+reste relève du fonctionnement courant (`docs/QUALIFICATION.md`, « Au fil de l'eau ») : les
+textes de l'item 8 selon leurs votes, les fiches de suivi de casseurs-payeurs et des ingérences
+à leur inscription, et d'abord les fiches courtes des votes du 29/10 (AESH, 166-16 ; parcours
+de soins, 152-5), demandées par Max dès que le catalogue est à jour.
+
 ## Cycle en parallèle : Au fil des votes
 
 Ouvert le 30/10/2026 par Max, pendant que le Reliquat XVIe se termine dans
@@ -106,7 +131,7 @@ pour y toucher.
    traité ; texte non traité inscrit à l'ordre du jour. Ce sont des
    **avertissements** : un nouveau vote ne doit pas bloquer l'Action, qui ne
    commite que si `check` passe.
-6. ⏳ **Mise à jour quotidienne** (dossiers, agenda, scrutins, Dosleg), une
+6. ⏳ (code et Action `donnees-quotidien.yml` prêts ; en service quand les amendements de la XVIe seront dans la release `donnees-figees`) **Mise à jour quotidienne** (dossiers, agenda, scrutins, Dosleg), une
    fois l'Action réparée (item 3 du Reliquat XVIe). `build` tourne sans le
    dump des amendements mais rattache alors moins bien les scrutins : la
    passe légère réutilise donc l'archive en cache et ne doit jamais dégrader
@@ -139,11 +164,10 @@ pour y toucher.
 
 ### Front (des faits, aucun nouveau jugement)
 
-9. ⏳ **État sur les fiches texte** et dans les listes ; mention « vote de
+9. ✅ **État sur les fiches texte** et dans les listes ; mention « vote de
    1re lecture, texte encore en navette » à côté d'un vote compté : ✅ fait.
    Retrait, par une publication de l'admin, des « (non promulgué) » saisis dans
-   les titres : ✅ publié par Max le 30/10/2026 (17 textes). Reste à publier le
-   retrait des deux « (rejetée) », préparé dans `source/brouillons-titres-rejetee/`.
+   les titres : publié par Max le 30/10/2026 (17 textes, et les deux « (rejetée) »).
 10. ✅ **Page `/en-cours`**, rangée par échéance (inscrit à une date, attendu
     à l'AN, au Sénat, en CMP, suite pas encore connue) : dernier vote de l'AN
     par groupe, mention « pas encore qualifié » s'il y a lieu. Navigation,
@@ -166,7 +190,7 @@ pour y toucher.
 14. ✅ (règles 20 à 22, validées par Max le 30/10/2026) **Méthodologie** : règles écrites dans `docs/METHODO.md` et sur le
     site (état d'un texte, fiche de suivi, texte qualifié en navette). **Leur
     rédaction est à valider par Max avant la mise en ligne.**
-15. ⏳ (quatre fiches préparées et le tri de la file « À traiter » présenté à Max le 30/10/2026 : en attente de ses décisions) **Lot test** de 3 à 5 textes inscrits, parmi : relance du logement
+15. ⏳ (publié par Max le 30/10/2026 : logement et régularisation. Fiches prêtes dans `source/brouillons-suivi-attente/`, à charger dès l'inscription : casseurs-payeurs et ingérences. Bilan : 4 textes sur 4 sourcés, environ 15 minutes de recherche. Tri de la file décidé par Max : six écarts à publier, six textes attendent leur vote) **Lot test** de 3 à 5 textes inscrits, parmi : relance du logement
     (DLR5L17N54608, 17-20/11), régularisation des travailleurs sans-papiers
     (DLR5L17N54998, 19/11), ingérences étrangères (DLR5L17N54703) et
     casseurs-payeurs (DLR5L17N54925) dès leur inscription. Consigne aux agents
