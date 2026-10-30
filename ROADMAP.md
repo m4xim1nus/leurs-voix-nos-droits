@@ -139,11 +139,10 @@ pour y toucher.
 
 ### Front (des faits, aucun nouveau jugement)
 
-9. ⏳ **État sur les fiches texte** et dans les listes ; mention « vote de
+9. ✅ **État sur les fiches texte** et dans les listes ; mention « vote de
    1re lecture, texte encore en navette » à côté d'un vote compté : ✅ fait.
    Retrait, par une publication de l'admin, des « (non promulgué) » saisis dans
-   les titres : ✅ publié par Max le 30/10/2026 (17 textes). Reste à publier le
-   retrait des deux « (rejetée) », préparé dans `source/brouillons-titres-rejetee/`.
+   les titres : publié par Max le 30/10/2026 (17 textes, et les deux « (rejetée) »).
 10. ✅ **Page `/en-cours`**, rangée par échéance (inscrit à une date, attendu
     à l'AN, au Sénat, en CMP, suite pas encore connue) : dernier vote de l'AN
     par groupe, mention « pas encore qualifié » s'il y a lieu. Navigation,
@@ -166,7 +165,7 @@ pour y toucher.
 14. ✅ (règles 20 à 22, validées par Max le 30/10/2026) **Méthodologie** : règles écrites dans `docs/METHODO.md` et sur le
     site (état d'un texte, fiche de suivi, texte qualifié en navette). **Leur
     rédaction est à valider par Max avant la mise en ligne.**
-15. ⏳ (quatre fiches préparées et le tri de la file « À traiter » présenté à Max le 30/10/2026 : en attente de ses décisions) **Lot test** de 3 à 5 textes inscrits, parmi : relance du logement
+15. ⏳ (publié par Max le 30/10/2026 : logement et régularisation. Fiches prêtes dans `source/brouillons-suivi-attente/`, à charger dès l'inscription : casseurs-payeurs et ingérences. Bilan : 4 textes sur 4 sourcés, environ 15 minutes de recherche. Tri de la file décidé par Max : six écarts à publier, six textes attendent leur vote) **Lot test** de 3 à 5 textes inscrits, parmi : relance du logement
     (DLR5L17N54608, 17-20/11), régularisation des travailleurs sans-papiers
     (DLR5L17N54998, 19/11), ingérences étrangères (DLR5L17N54703) et
     casseurs-payeurs (DLR5L17N54925) dès leur inscription. Consigne aux agents
