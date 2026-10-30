@@ -20,33 +20,18 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 
 ## À trier
 
-- [ ] `sync-admin --valider` : refuser d'écarter un texte dont la version publiée est qualifiée, sauf option explicite, et afficher la liste avant d'écrire (incident `brouillons-tri`, claude, 2026-10-30)
-- [ ] `admin/README.md` : `npm run dev` répond 403 depuis que `wrangler.jsonc` déclare Access ; il faut un `admin/.dev.vars` avec `ACCESS_TEAM_DOMAIN=""` (non versionné, à ajouter au `.gitignore` et au README) (claude, 2026-10-30)
-- [ ] Site : l'état et les dates d'inscription restent figés si l'Action est en panne ; les listes et `Prochains votes` n'affichent pas la date de l'état, contrairement à la fiche et à `/en-cours` (claude, 2026-10-30)
-- [ ] Table pays → circonscription des Français de l'étranger (code électoral, art. L. 330-1) à saisir en référentiel (claude, 2026-10-29)
-- [ ] Catalogue : saisines du Conseil constitutionnel déclarées irrecevables absentes (ingérences étrangères : 2024-870 DC et 2024-871 DC, après la dissolution) ; vérifier aussi « Non conforme » affiché pour une non-conformité partielle (2026-911 DC) (claude, 2026-10-29)
-- [ ] Rattachement scrutin → dossier : V4239 (amendement du Gouvernement au PLF 2026, 21/11/2025) est rattaché à la simplification de l'urbanisme (DLR5L17N51852) (claude, 2026-10-29)
-- [ ] Rattachement scrutin → dossier : V6758 (amendement à la loi d'urgence agricole) est rattaché à la loi organique « natifs » de Nouvelle-Calédonie (DLR5L17N52104) (claude, 2026-10-29)
-- [ ] Catalogue : `cc_url` en 404 quand la décision est rendue l'année suivant la saisine (2022-846 DC, LOPMI : l'URL valide est `/decision/2023/2022846DC.htm`) (claude, 2026-10-29)
-- [creuser] Règle 7 : un comité national de la CGT (privés d'emploi) vaut-il fédération ? Aucune source récente lue, à trancher si une position sur Territoires zéro chômeur paraît (claude, 2026-10-30)
 - [ ] Alertes : aucune ne signale un texte rejeté par le rejet d'une partie (PLFSS 2027, V9097) ni un vote sur l'ensemble sans scrutin public ; `etat` les suit, pas `lvnd check` (claude, 2026-10-30)
-- [ ] Relire `mots_cles.yaml` (brouillon), qui présélectionne les textes à suivre : motifs larges, sources de faux positifs (« eau », « soins », « violences », « justice ») (claude, 2026-10-29)
 - [ ] `lvnd check` : le délai de 14 jours (`DELAI_AMENDEMENTS`) retire à tort du taux de la XVIe ses derniers scrutins (3 041/3 053 affichés, au lieu de 3 159/3 173), alors que cette législature est figée (claude, 2026-10-30)
-- [ ] Actions : Node.js 20 est déprécié et `ubuntu-latest` migre vers Ubuntu 26 depuis le 19/10/2026 (annotations de l'Action « Données AN ») (claude, 2026-10-30)
-- [ ] `lvnd download --leger` retente le dump de l'AN pour les amendements de la XVIe quand ils viennent du plan B (mode `secours`, pas de zip local) : blocage jusqu'à 20 minutes, alors que le mode doit rester léger (claude, 2026-10-30)
-- [ ] `lvnd download` : un `.part` repris alors que l'AN a publié un nouveau fichier échoue (« taille X, attendu Y ») et reste à supprimer à la main ; comparer `Last-Modified` avant de reprendre (claude, 2026-10-30)
+- [ ] `lvnd download` : `--leger` retente le dump de l'AN pour les amendements de la XVIe quand ils viennent du plan B (mode `secours`, pas de zip local), jusqu'à 20 minutes de blocage ; un `.part` repris alors que l'AN a publié un nouveau fichier échoue (« taille X, attendu Y ») et reste à supprimer à la main (claude, 2026-10-30)
 
-## Fonctionnement courant
+## Textes à surveiller
 
-Hors cycle : les textes se traitent selon leurs votes, un à la fois, par le circuit
-« Au fil de l'eau » de `docs/QUALIFICATION.md`.
+Ce que les alertes de `lvnd check` et d'« À traiter » ne signalent pas. Le reste se traite à l'alerte, un texte à la fois (« Au fil de l'eau » de `docs/QUALIFICATION.md`).
 
-- [ ] Rapports locatifs (DLR5L17N53069) : 2e lecture inscrite les 18 et 19/11/2026, commission le 03/11 ; nouveau décisif, sens à relire (règle 6) (claude, 2026-10-30)
-- [ ] Territoires zéro chômeur (DLR5L17N51962, écarté à 96-0) : commission le 10/11, 2e lecture inscrite le 19/11/2026 (claude, 2026-10-30)
-- [ ] PLF 2027 (vote solennel inscrit le 17/11/2026), PLFSS 2027, abrogation des ZFE (DLR5L17N54557) (claude, 2026-10-30)
+- [ ] PLFSS 2027 (DLR5L17N54951) : rejeté à l'AN par le rejet d'une partie, aucune alerte tant que celle du point « À trier » n'existe pas (claude, 2026-10-30)
+- [ ] Territoires zéro chômeur (DLR5L17N51962, écarté à 96-0) : commission le 10/11, 2e lecture inscrite le 19/11/2026 ; alerte seulement si le vote n'est plus unanime. Règle 7 : un comité national de la CGT (privés d'emploi) vaut-il fédération ? Aucune source récente lue, à trancher si une position paraît (claude, 2026-10-30)
+- [ ] Réforme de l'audiovisuel public (DLR5L16N47697) : à l'arrêt depuis juillet 2025, à suivre avant tout vote final, fiche de suivi possible (user:moi, 2026-10-29)
 - [ ] Fiches de suivi prêtes dans `source/brouillons-suivi-attente/`, à charger dès l'inscription : casseurs-payeurs (DLR5L17N54925) et ingérences étrangères (DLR5L17N54703) (claude, 2026-10-30)
-- [ ] Candidat `etrangers` en attente d'un vote final : mariages simulés ou arrangés (DLR5L16N49075, examen inachevé le 25/06/2026 ; 35 amendements votés le 26/06/2025, six suspensions de séance seulement le 25/06/2026) (claude, 2026-10-29)
-- [ ] `libertes` : suivre la concentration des médias (DLR5L17N53329) et la réforme de l'audiovisuel public (DLR5L16N47697), en attente d'un vote final (user:moi, 2026-10-29)
 - [ ] AGRASC (DLR5L17N53159, écarté au lot 6) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart. Au prochain passage, actualiser le motif, qui ne cite pas les articles 5 et 5 bis A (décision de Max, 30/10/2026) (claude, 2026-10-29)
 
 ## Cycles candidats
@@ -104,6 +89,9 @@ vient de lui ; un cas non prévu remonte à un humain, sans règle inventée.
 
 ## À creuser
 
+- [creuser] Rattachement scrutin → dossier : V4239 (amendement au PLF 2026) est rattaché à la simplification de l'urbanisme (DLR5L17N51852), V6758 (loi d'urgence agricole) à la loi organique « natifs » de Nouvelle-Calédonie (DLR5L17N52104). Non retenus, sans effet sur les scores ; d'autres scrutins sont-ils touchés ? (claude, 2026-10-29)
+- [creuser] Table pays → circonscription des Français de l'étranger (code électoral, art. L. 330-1) à saisir en référentiel (claude, 2026-10-29)
+- [creuser] Relire `mots_cles.yaml` (brouillon), qui présélectionne les textes à suivre : motifs larges, sources de faux positifs (« eau », « soins », « violences », « justice ») (claude, 2026-10-29)
 - [creuser] Quiz « qui vote comme vous ? » sur de vrais scrutins, comme leurs-votes.fr (claude, 2026-10-29)
 - [creuser] Eurodéputés (HowTheyVote.eu) : hors périmètre national, à garder en tête (claude, 2026-10-29)
 - [creuser] Après la session close le 28/02/2027 : en cas de dissolution, une XVIIIe à ouvrir (`LEGISLATURES`, textes pendants à l'AN, à vérifier), et un bilan de la XVIIe pour la campagne (claude, 2026-10-30)
@@ -115,6 +103,9 @@ vient de lui ; un cas non prévu remonte à un humain, sans règle inventée.
 
 ## Refusé
 
+- [refusé] Listes et « Prochains votes » : afficher la date de l'état. Le pied de page donne déjà la date des données sur chaque page (claude, 2026-10-31)
+- [refusé] « Non conforme » affiché pour une non-conformité partielle (2026-911 DC) : libellé de l'open data, absent du site, où la fiche dit « non-conformité partielle » (claude, 2026-10-31)
+- [refusé] Saisines irrecevables absentes du catalogue (2024-870 DC et 2024-871 DC) : manque de l'open data, qu'une qualification peut dire à la main (claude, 2026-10-31)
 - [refusé] Assistant dans l'admin (bouton « Préparer un brouillon », chat d'édition, import d'une source depuis une URL ou un PDF, relecture à l'écran) : trop de changements dans l'expérience de l'admin, les appels LLM passent par les Actions (user:moi, 2026-10-30)
 - [refusé] Chat libre sur le site public : erreur grave sur un député nommé, réponse invérifiable alors que chaque chiffre mène au scrutin officiel, questions révélant des opinions politiques envoyées à un tiers, coût sans plafond naturel, backend à ajouter à un site statique (user:moi et claude, 2026-10-30)
 - [refusé] Cas « instrumentalise le sujet » (vote favorable mais texte de façade) : jugement au cas par cas, contraire à la règle fixe de la méthode (claude, 2026-10-29)
