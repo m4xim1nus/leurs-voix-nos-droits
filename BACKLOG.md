@@ -21,13 +21,10 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 ## À trier
 
 - [ ] Table pays → circonscription des Français de l'étranger (code électoral, art. L. 330-1) à saisir en référentiel (claude, 2026-10-29)
-- [ ] Relire `mots_cles.yaml` (brouillon) : motifs larges, sources de faux positifs (« eau », « soins », « violences », « justice ») (claude, 2026-10-29)
 - [ ] Catalogue : saisines du Conseil constitutionnel déclarées irrecevables absentes (ingérences étrangères : 2024-870 DC et 2024-871 DC, après la dissolution) ; vérifier aussi « Non conforme » affiché pour une non-conformité partielle (2026-911 DC) (claude, 2026-10-29)
 - [ ] Rattachement scrutin → dossier : V4239 (amendement du Gouvernement au PLF 2026, 21/11/2025) est rattaché à la simplification de l'urbanisme (DLR5L17N51852) (claude, 2026-10-29)
 - [ ] Rattachement scrutin → dossier : V6758 (amendement à la loi d'urgence agricole) est rattaché à la loi organique « natifs » de Nouvelle-Calédonie (DLR5L17N52104) (claude, 2026-10-29)
 - [ ] Catalogue : `cc_url` en 404 quand la décision est rendue l'année suivant la saisine (2022-846 DC, LOPMI : l'URL valide est `/decision/2023/2022846DC.htm`) (claude, 2026-10-29)
-- [ ] `lvnd check` : alerte quand un texte qualifié reçoit un vote sur l'ensemble postérieur à son décisif (texte en navette, règle 9) (claude, 2026-10-29)
-- [ ] `sync-admin --brouillons` : un texte qui a déjà une révision (brouillon retiré d'un lot précédent) ne reçoit pas de révision « brouillon » au chargement suivant (DLR5L17N52087) (claude, 2026-10-29)
 
 ## Cycle en cours : Reliquat XVIe
 
@@ -35,19 +32,27 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [→Reliquat XVIe] Mettre à jour `docs/SOURCES.md` : le serveur de l'AN sert les plages par intermittence ; `download` reprend désormais d'un lancement à l'autre (claude, 2026-10-29)
 - [→Reliquat XVIe] Action hebdomadaire « Données AN » en échec au téléchargement (lancement manuel du 29/10/2026) : elle ne met à jour ni les données ni l'admin tant que le serveur de l'AN coupe (claude, 2026-10-29)
 
+## Cycle en parallèle : Au fil des votes
+
+Les textes que la v1 laisse de côté, au fil des votes finaux (liste C :
+textes sans décisif lors des tris, `source/relecture-tri*.md`), et le suivi
+des textes avant leur adoption.
+
+- [→Au fil des votes] Suivre les textes avant leur adoption, pour interpeller au bon moment (claude, 2026-10-29)
+- [→Au fil des votes] Candidat `etrangers` en attente d'un vote final : mariages simulés ou arrangés (DLR5L16N49075, examen inachevé le 25/06/2026, 35 amendements votés) (claude, 2026-10-29)
+- [→Au fil des votes] `libertes` : suivre la concentration des médias (DLR5L17N53329) et la réforme de l'audiovisuel public (DLR5L16N47697), en attente d'un vote final (user:moi, 2026-10-29)
+- [→Au fil des votes] AGRASC (DLR5L17N53159, écarté au lot 6) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart (claude, 2026-10-29)
+- [→Au fil des votes] `lvnd check` : alerte quand un texte qualifié reçoit un vote sur l'ensemble postérieur à son décisif (texte en navette, règle 9) (claude, 2026-10-29)
+- [→Au fil des votes] `sync-admin --brouillons` : un texte qui a déjà une révision (brouillon retiré d'un lot précédent) ne reçoit pas de révision « brouillon » au chargement suivant (DLR5L17N52087) (claude, 2026-10-29)
+- [→Au fil des votes] Relire `mots_cles.yaml` (brouillon), qui présélectionne les textes à suivre : motifs larges, sources de faux positifs (« eau », « soins », « violences », « justice ») (claude, 2026-10-29)
+
 ## Cycles candidats
 
 Un cycle à la fois, choisi et nommé au moment de l'ouvrir.
 
-### Qualification continue
+### Stock des lois de finances
 
-Les textes que la v1 laisse de côté, au fil des votes finaux (liste C :
-textes sans décisif lors des tris, `source/relecture-tri*.md`).
-
-- [→Qualification continue] Qualifier les lois de finances adoptées par 49.3 sans vote final, comptées dans aucun score (règle 9) : PLF 2023, 2024 et 2025, PLFSS 2023, 2024 et 2025 ; écarter alors les dossiers de motions de censure rattachés à part (DLR5L17N50975, DLR5L17N51425, DLR5L17N53597, DLR5L17N53619) (claude, 2026-10-29)
-- [→Qualification continue] Candidat `etrangers` en attente d'un vote final : mariages simulés ou arrangés (DLR5L16N49075, examen inachevé le 25/06/2026, 35 amendements votés) (claude, 2026-10-29)
-- [→Qualification continue] `libertes` : suivre la concentration des médias (DLR5L17N53329) et la réforme de l'audiovisuel public (DLR5L16N47697), en attente d'un vote final (user:moi, 2026-10-29)
-- [→Qualification continue] AGRASC (DLR5L17N53159, écarté au lot 6) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart (claude, 2026-10-29)
+- [→Stock des lois de finances] Qualifier les lois de finances adoptées par 49.3 sans vote final, comptées dans aucun score (règle 9) : PLF 2023, 2024 et 2025, PLFSS 2023, 2024 et 2025 ; écarter alors les dossiers de motions de censure rattachés à part (DLR5L17N50975, DLR5L17N51425, DLR5L17N53597, DLR5L17N53619) (claude, 2026-10-29)
 
 ### XVe
 
@@ -58,10 +63,6 @@ textes sans décisif lors des tris, `source/relecture-tri*.md`).
 ### Sénat
 
 - [→Sénat] Scrutins publics des sénateur·ices (Dosleg, déjà maîtrisé dans quifaitlaloi) (claude, 2026-10-29)
-
-### Textes en cours
-
-- [→Textes en cours] Suivre les textes avant leur adoption, pour interpeller au bon moment (claude, 2026-10-29)
 
 ### Passation
 
@@ -85,10 +86,15 @@ compte Cloudflare et du dépôt.
 
 - [creuser] Quiz « qui vote comme vous ? » sur de vrais scrutins, comme leurs-votes.fr (claude, 2026-10-29)
 - [creuser] Eurodéputés (HowTheyVote.eu) : hors périmètre national, à garder en tête (claude, 2026-10-29)
+- [creuser] Après la session close le 28/02/2027 : en cas de dissolution, une XVIIIe à ouvrir (`LEGISLATURES`, textes pendants à l'AN, à vérifier), et un bilan de la XVIIe pour la campagne (claude, 2026-10-30)
 
 ## Refusé
 
 - [refusé] Cas « instrumentalise le sujet » (vote favorable mais texte de façade) : jugement au cas par cas, contraire à la règle fixe de la méthode (claude, 2026-10-29)
+- [refusé] Suivre les textes dès leur dépôt : 2 462 dossiers de loi non promulgués en XVIIe au 29/10/2026, presque tous jamais examinés (claude, 2026-10-30)
+- [refusé] Sens provisoire, score provisoire ou prévision de vote avant le vote : le texte change en navette (règle 6) (claude, 2026-10-30)
+- [refusé] Compteur de marge d'un vote : 1 décisif qualifié sur 94 se joue à 10 voix ou moins (claude, 2026-10-30)
+- [refusé] Newsletter, pétition ou formulaire d'envoi hébergé : stockage de données personnelles, contraire au ton factuel ; à revoir à la passation (claude, 2026-10-30)
 - [refusé] Recherche par code postal, communes coupées : l'option A (tous les députés possibles, avec leurs communes) reste. Choisir son adresse (C) demanderait un service tiers à l'exécution ou une table de 490 Mo (claude, 2026-10-29)
 - [refusé] `data/lvnd.sqlite` en identifiants entiers : 193 Mo, local et non versionné, la taille ne gêne pas (claude, 2026-10-29)
 - [refusé] `lvnd annuaire` : repli sur la table MI 2017 pour les 8 couples code postal × commune sans circonscription. Sans objet : six villages détruits de Verdun (sans habitant, leur code postal est résolu par les autres communes), Monaco et Clipperton (claude, 2026-10-29)
