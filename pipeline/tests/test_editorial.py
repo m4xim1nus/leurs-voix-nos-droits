@@ -161,7 +161,7 @@ def test_texte_adopte_par_49_3():
 
 def test_sync_incremental_n_ecrit_que_les_differences():
     cat = {"textes": [{"id": "T1", "legislature": 17, "titre": "A"}, {"id": "T2", "legislature": 17, "titre": "B"}],
-           "scrutins": [], "groupes": [],
+           "scrutins": [], "groupes": [], "alertes": [],
            "catalogue_meta": [{"cle": "grille", "valeur": "{}"}, {"cle": "sync", "valeur": '"2026"'}]}
     cols = sync_admin.COLONNES_TEXTES
     present = {"textes": {"T1": sync_admin._ligne({"id": "T1", "legislature": 17.0, "titre": "A"}, cols),

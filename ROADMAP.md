@@ -100,7 +100,7 @@ pour y toucher.
    cours au 28/10/2026, dont casseurs-payeurs). Vérifier ce que cela change
    dans `lvnd check`, le filtre par défaut de l'admin, le site et le volume
    de `sync-admin`.
-5. ⏳ **Alertes** (`lvnd check` et file « À traiter » de l'admin) : vote sur
+5. ✅ **Alertes** (`lvnd check` et file « À traiter » de l'admin) : vote sur
    l'ensemble postérieur au décisif d'un texte qualifié ; texte écarté pour
    unanimité qui reçoit un vote contesté ; premier décisif d'un texte non
    traité ; texte non traité inscrit à l'ordre du jour. Ce sont des

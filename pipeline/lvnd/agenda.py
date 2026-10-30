@@ -13,6 +13,8 @@ from .sources import extraits
 CLE = "an_agenda_17"
 ETATS = {"Confirmé": "confirme", "Eventuel": "eventuel"}  # les réunions et points Annulé ou Supprimé sont écartés
 INSTANCES = {"seance_type": "seance", "reunionCommission_type": "commission"}
+COLONNES = ("point_id", "dossier_id", "date", "heure", "instance", "organe_id", "organe", "etat", "type_point", "objet",
+            "procedure")
 
 
 def _organes(raw: Path) -> dict[str, str | None]:

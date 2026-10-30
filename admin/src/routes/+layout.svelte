@@ -7,6 +7,7 @@
 
   const liens = [
     { href: '/', libelle: 'Textes' },
+    { href: '/a-traiter', libelle: 'À traiter' },
     { href: '/apercu', libelle: 'Aperçu des scores' },
     { href: '/publier', libelle: 'Publier' },
     { href: '/journal', libelle: 'Journal' }

@@ -10,6 +10,7 @@ import type {
   Statut,
   TexteCatalogue
 } from '../types';
+import { resteATraiter, type Alerte } from '../alertes';
 import { compact, type InfoScrutin } from '../qualification';
 
 // D1 limite une requête à 100 paramètres liés.
@@ -45,6 +46,18 @@ export async function textes(db: D1Database): Promise<LigneListe[]> {
     )
     .all<LigneListe>();
   return results;
+}
+
+/** Alertes encore à traiter, vu ce que D1 contient déjà (lib/alertes.ts). */
+export async function alertes(db: D1Database): Promise<Alerte[]> {
+  const { results } = await db
+    .prepare(
+      `SELECT a.*, q.statut, q.doc FROM alertes a
+       LEFT JOIN qualifications q ON q.dossier_an = a.dossier_id
+       ORDER BY a.date DESC, a.id`
+    )
+    .all<Alerte & { statut: Statut | null; doc: string | null }>();
+  return results.flatMap(({ statut, doc, ...a }) => (resteATraiter(a, statut, doc) ? [a] : []));
 }
 
 export async function texte(db: D1Database, id: string): Promise<TexteCatalogue | null> {

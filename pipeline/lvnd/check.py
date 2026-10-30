@@ -1,14 +1,14 @@
 """Contrôles de la base produite : invariants, rattachements, textes témoins.
 
 Un invariant ou un texte témoin en échec fait échouer `lvnd check`. Les lignes « info » renseignent
-sans faire échouer.
+sans faire échouer, comme les lignes « AVERTISSEMENT » (`alertes.py`).
 """
 
 import re
 import sqlite3
 from pathlib import Path
 
-from . import editorial, referentiels
+from . import alertes, editorial, referentiels
 
 
 def _q(con, sql: str, *args) -> list[tuple]:
@@ -106,6 +106,17 @@ def _qualifications(con, controle, out) -> None:
     out.append(f"info {len(doc['textes'])} textes qualifiés, {len(doc.get('ecartes', []))} écartés")
 
 
+def _alertes(con) -> list[dict]:
+    """Alertes d'après la base et les qualifications publiées à cet instant."""
+    def lignes(sql: str) -> list[dict]:
+        cur = con.execute(sql)
+        cols = [c[0] for c in cur.description]
+        return [dict(zip(cols, r)) for r in cur.fetchall()]
+    return alertes.calculer(lignes("select id, titre, decisif_propose from textes"),
+                            lignes("select id, dossier_id, date, numero, objet, sort, pour, contre from scrutins"),
+                            lignes("select dossier_id, date, instance from en_cours_agenda"), editorial.charger())
+
+
 def verifier(chemin: Path) -> tuple[bool, list[str]]:
     if not chemin.exists():
         return False, [f"base absente : {chemin} (lancer `lvnd build`)"]
@@ -185,5 +196,9 @@ def verifier(chemin: Path) -> tuple[bool, list[str]]:
     qualifies = [t["dossier_an"] for t in editorial.charger()["textes"]]
     sans = _q(con, f"select id from textes where n_scrutins = 0 and id in ({','.join('?' * len(qualifies))})", *qualifies)
     controle("aucun texte qualifié sans scrutin public à l'AN", not sans, str(sans[:5]))
+
+    out.append("\n== Alertes (avertissements : ne font jamais échouer le contrôle)")
+    for a in _alertes(con):
+        out.append(f"AVERTISSEMENT {a['type']} {a['dossier_id']} : {a['detail']} ({a['titre']})")
     con.close()
     return ok, out

@@ -256,6 +256,21 @@ lignes précédentes sont inchangées.
 - `sync-admin` : 82 lignes de plus au premier sync incrémental, 0 ensuite à
   export égal.
 
+**Alertes** (`lvnd/alertes.py`, `en_cours_alertes.csv`). Quatre avertissements,
+affichés par `lvnd check` et par la file « À traiter » de l'admin. Ils ne font
+jamais échouer le contrôle : un nouveau vote ne doit pas bloquer l'Action.
+
+| Type | Quand | Au 30/10/2026 |
+|---|---|---|
+| `vote_posterieur` | vote sur l'ensemble après le décisif (ou la motion de censure) retenu d'un texte qualifié | 0 |
+| `unanimite_contestee` | texte écarté pour unanimité dont le décisif proposé a des voix des deux côtés | 0 |
+| `premier_decisif` | décisif proposé sur un texte ni qualifié ni écarté | 0 |
+| `inscrit` | texte ni qualifié ni écarté, inscrit **en séance** (pas en commission) | 14 |
+
+L'admin retire ce que D1 a déjà pris en compte, même avant publication : une
+saisie sur le texte, le scrutin retenu dans sa qualification, ou la fin de son
+écart.
+
 Limites, reprises de quifaitlaloi : un texte voté au Sénat sans dossier AN ne
 serait pas vu ; `transmis` se déduit de la Constitution, pas d'un acte ; un
 texte adopté conforme par la seconde chambre peut rester quelques jours « en

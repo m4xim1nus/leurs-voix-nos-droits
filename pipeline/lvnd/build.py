@@ -9,7 +9,7 @@ from pathlib import Path
 
 import polars as pl
 
-from . import agenda, amendements, an, candidats, editorial, encours, parcours, positions, referentiels, scores, senat, textes
+from . import agenda, alertes, amendements, an, candidats, editorial, encours, parcours, positions, referentiels, scores, senat, textes
 from .sources import lire_manifeste, racine
 
 # Votes nominatifs compacts (docs/SOURCES.md) : numéro de scrutin, identifiant numérique du
@@ -21,7 +21,10 @@ def _log(msg: str) -> None:
     print(msg, file=sys.stderr)
 
 
-def _df(rows: list[dict]) -> pl.DataFrame:
+def _df(rows: list[dict], colonnes: tuple[str, ...] = ()) -> pl.DataFrame:
+    """`colonnes` : pour une liste qui peut être vide (agenda en fin de session, aucune alerte)."""
+    if not rows and colonnes:
+        return pl.DataFrame(schema={c: pl.String for c in colonnes})
     return pl.DataFrame(rows, infer_schema_length=None)
 
 
@@ -167,7 +170,8 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
         "en_cours_lectures": _df(lect_ec),
         "en_cours_evenements": _df(evt_ec),
         "en_cours_etats": _df(etats),
-        "en_cours_agenda": _df(points),
+        "en_cours_agenda": _df(points, agenda.COLONNES),
+        "en_cours_alertes": _df(alertes.calculer(cat, scr, points, qualif), alertes.COLONNES),
     }
 
     _log("== Écriture")

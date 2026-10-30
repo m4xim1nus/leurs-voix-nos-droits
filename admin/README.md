@@ -24,6 +24,10 @@ jour à partir de `data/export/`, en n'écrivant que les différences avec D1
 qualifications d'`editorial.json` absentes de D1, sans jamais écraser un
 brouillon. On peut le relancer après chaque `lvnd build`.
 
+Une nouvelle migration (`migrations/`) s'applique en ligne avant le prochain
+`lvnd sync-admin --remote`, y compris celui de l'Action « Données AN » :
+`npm run db:migrer:distant`. Sans cela, le sync échoue sur la table absente.
+
 Contrôles :
 
 ```bash

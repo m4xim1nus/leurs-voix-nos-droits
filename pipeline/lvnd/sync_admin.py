@@ -22,6 +22,7 @@ from pathlib import Path
 import polars as pl
 import yaml
 
+from . import alertes as alertes_
 from . import editorial, referentiels
 
 BASE = "lvnd-admin"
@@ -35,6 +36,7 @@ COLONNES_SCRUTINS = ("id", "texte_id", "legislature", "numero", "date", "type_vo
                      "pour", "contre", "abstention", "non_votants", "amendement_id", "amendement_numero",
                      "amendement_division", "amendement_auteur", "amendement_sort", "positions")
 COLONNES_GROUPES = ("id", "lignee", "legislature", "sigle", "nom", "couleur", "date_debut", "date_fin")
+COLONNES_ALERTES = alertes_.COLONNES
 
 
 def sql_valeur(v) -> str:
@@ -73,6 +75,12 @@ def _lire(export: Path, nom: str) -> pl.DataFrame:
 
 def _vide(v):
     return None if v == "" else v
+
+
+def _alertes(export: Path) -> list[dict]:
+    """Alertes du dernier build, pour la file « À traiter » de l'admin."""
+    return [{k: _vide(v) for k, v in r.items()}
+            for r in pl.read_csv(export / "en_cours_alertes.csv", infer_schema=False).iter_rows(named=True)]
 
 
 def catalogue(export: Path) -> dict[str, list[dict]]:
@@ -119,7 +127,8 @@ def catalogue(export: Path) -> dict[str, list[dict]]:
                                                ensure_ascii=False)},
         {"cle": "sync", "valeur": json.dumps(datetime.now(timezone.utc).isoformat(timespec="seconds"))},
     ]
-    return {"textes": textes, "scrutins": scrutins, "groupes": groupes, "catalogue_meta": metas}
+    return {"textes": textes, "scrutins": scrutins, "groupes": groupes, "alertes": _alertes(export),
+            "catalogue_meta": metas}
 
 
 def compact(t: dict) -> str:
@@ -234,7 +243,8 @@ def _qualifs(lignes: list[dict], auteur: str, commentaire: str) -> list[str]:
 
 
 TABLES = {"textes": ("id", COLONNES_TEXTES), "scrutins": ("id", COLONNES_SCRUTINS),
-          "groupes": ("id", COLONNES_GROUPES), "catalogue_meta": ("cle", ("cle", "valeur"))}
+          "groupes": ("id", COLONNES_GROUPES), "alertes": ("id", COLONNES_ALERTES),
+          "catalogue_meta": ("cle", ("cle", "valeur"))}
 PAGE = 4000  # lignes lues par requête dans D1
 
 
@@ -306,7 +316,8 @@ def script(export: Path, editorial_doc: dict | None = None, brouillons_lignes: l
     if avec_catalogue or editorial_doc is not None:
         cat = catalogue(export)
         for table, cols in (("textes", COLONNES_TEXTES), ("scrutins", COLONNES_SCRUTINS),
-                            ("groupes", COLONNES_GROUPES), ("catalogue_meta", ("cle", "valeur"))):
+                            ("groupes", COLONNES_GROUPES), ("alertes", COLONNES_ALERTES),
+                            ("catalogue_meta", ("cle", "valeur"))):
             out.append(f"DELETE FROM {table};")
             out += inserts(table, cols, cat[table])
     if editorial_doc is not None:
