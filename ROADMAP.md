@@ -153,7 +153,7 @@ pour y toucher.
 11. ✅ **« Prochains votes » sur la fiche député** : textes retenus attendus
     à l'AN, son vote et celui de son groupe à la lecture précédente, courriel
     prérempli au ton factuel. Rien quand le texte est au Sénat.
-12. ⏳ **Flux RSS et iCal statiques**, générés au build, sans donnée
+12. ✅ **Flux RSS et iCal statiques**, générés au build, sans donnée
     personnelle.
 
 ### Suivi avant le vote

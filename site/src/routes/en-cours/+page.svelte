@@ -41,6 +41,12 @@
     name="description"
     content="Les textes qui touchent aux droits et libertés encore en navette : ce qui est inscrit à l’ordre du jour et le dernier vote de chaque groupe."
   />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Textes en cours, {NOM}"
+    href="/en-cours/flux.xml"
+  />
 </svelte:head>
 
 <h1>Textes en cours</h1>
@@ -51,6 +57,10 @@
 <p>
   Un texte inscrit à l’ordre du jour n’est pas forcément examiné à cette date, ni voté. Les règles
   sont dans la <a href="/methodologie">méthodologie</a>.
+</p>
+<p class="petit">
+  Suivre ces textes : <a href="/en-cours/flux.xml">flux RSS</a>,
+  <a href="/en-cours/agenda.ics">agenda à ajouter à votre calendrier</a>.
 </p>
 
 {#if finDeSession && !inscrits}
