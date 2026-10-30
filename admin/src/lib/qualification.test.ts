@@ -62,7 +62,9 @@ function texte(p: Partial<Qualification> = {}): Qualification {
 describe('qualification', () => {
   it("réécrit data/editorial.json à l'octet près (même sérialisation que le pipeline)", () => {
     const melange = [...editorial.textes].reverse();
-    expect(serialiser(documentEditorial(editorial.grille, melange, editorial.ecartes))).toBe(brut);
+    expect(
+      serialiser(documentEditorial(editorial.grille, melange, editorial.ecartes, editorial.suivis))
+    ).toBe(brut);
   });
 
   describe('fiches de suivi', () => {

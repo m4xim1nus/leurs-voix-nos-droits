@@ -12,8 +12,9 @@ plan B (`secours.py`, amendement par amendement) ; le manifeste le note
 Une archive déjà là reste une source complète : elle sert si le dump est
 injoignable, sans plan B.
 
-Les amendements de la XVIe sont figés depuis 2024 : on les lit dans une copie
-gardée dans une release du dépôt (`archiver`), jamais retéléchargée à l'AN.
+Pour une source qui a une copie dans la release `donnees-figees` du dépôt (`archiver`), la
+chaîne est : dump de l'AN, puis cette copie, puis le plan B. Le dump reste tenté à chaque
+lancement complet et remplace tout dès qu'il passe.
 `download --leger` (passe quotidienne) ne rafraîchit que `LEGERES` et réutilise
 les archives déjà là.
 """
@@ -41,7 +42,8 @@ SOURCES: dict[str, dict] = {
                           "secours": {"legislature": 17, "organe": "838901"}},
     "an_scrutins_16": {"url": f"{AN}/16/loi/scrutins/Scrutins.json.zip"},
     "an_dossiers_16": {"url": f"{AN}/16/loi/dossiers_legislatifs/Dossiers_Legislatifs.json.zip"},
-    "an_amendements_16": {"url": f"{FIGEES}/Amendements.json.zip",
+    "an_amendements_16": {"url": f"{AN}/16/loi/amendements_div_legis/Amendements.json.zip",
+                          "figee": f"{FIGEES}/an_amendements_16.zip",
                           "secours": {"legislature": 16, "organe": "791932"}},
     "an_amo": {"url": f"{AN}/17/amo/tous_acteurs_mandats_organes_xi_legislature/"
                       "AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip"},
@@ -52,6 +54,7 @@ SOURCES: dict[str, dict] = {
 # Passe quotidienne : ce qui change d'un jour à l'autre et se télécharge vite.
 LEGERES = ("an_dossiers_17", "an_scrutins_17", "an_agenda_17", "senat_dosleg")
 MANIFESTE = "manifeste.json"
+COPIE_FIGEE = "figee.zip"  # copie de la release, jamais confondue avec le dump de l'AN
 PATIENCE_AVANT_SECOURS = 1200  # secondes sans aucun octet avant de basculer sur le plan B
 
 
@@ -216,6 +219,28 @@ def _extraire(raw: Path, cle: str, cible: Path) -> None:
         z.extractall(x)
 
 
+def _figee(client: httpx.Client, raw: Path, cle: str, manifeste: dict) -> bool:
+    """Reprend la copie de la release quand le dump est injoignable. False si elle l'est aussi."""
+    url = SOURCES[cle].get("figee")
+    if not url:
+        return False
+    copie, avant = raw / cle / COPIE_FIGEE, manifeste.get(cle) or {}
+    try:
+        modifie = telecharger(client, url, copie, connu=avant if avant.get("mode") == "figee" else None, patience=300)
+    except (Injoignable, httpx.HTTPError) as e:
+        print(f"{cle} : copie de la release injoignable ({e})", file=sys.stderr)
+        return False
+    inchange = avant.get("mode") == "figee" and avant.get("last_modified") == modifie
+    if not (inchange and extraits(raw, cle).exists()):
+        _extraire(raw, cle, copie)
+    if not inchange:
+        manifeste[cle] = {"url": url, "mode": "figee", "last_modified": modifie, "taille": copie.stat().st_size,
+                          "sha256": sha256_fichier(copie),
+                          "telecharge_le": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+        (raw / MANIFESTE).write_text(json.dumps(manifeste, indent=2, ensure_ascii=False) + "\n")
+    return True
+
+
 def _download(raw: Path, cles: list[str] | None, secours_max: int | None, leger: bool = False) -> None:
     manifeste = lire_manifeste(raw)
     # délai de lecture court : le serveur de l'AN laisse parfois une connexion pendante sans la fermer
@@ -225,10 +250,11 @@ def _download(raw: Path, cles: list[str] | None, secours_max: int | None, leger:
             dossier = raw / cle
             dossier.mkdir(parents=True, exist_ok=True)
             cible = dossier / src["url"].rsplit("/", 1)[1]
-            if leger and cle not in LEGERES and cible.exists():
+            archive = next((c for c in (cible, dossier / COPIE_FIGEE) if c.exists()), None)
+            if leger and cle not in LEGERES and archive:
                 print(f"{cle} : archive déjà là, réutilisée", file=sys.stderr)
                 if src.get("zip", True) and not extraits(raw, cle).exists():
-                    _extraire(raw, cle, cible)
+                    _extraire(raw, cle, archive)
                 continue
             print(f"{cle} : téléchargement de {src['url']}", file=sys.stderr)
             avant = manifeste.get(cle)
@@ -236,7 +262,7 @@ def _download(raw: Path, cles: list[str] | None, secours_max: int | None, leger:
                 modifie = telecharger(client, src["url"], cible, connu=avant,
                                       patience=PATIENCE_AVANT_SECOURS if "secours" in src else 3600)
             except (Injoignable, httpx.HTTPError) as e:
-                if "secours" not in src or leger:
+                if "secours" not in src:
                     raise
                 # Une archive plus ancienne reste une source complète : on n'y substitue pas un plan B partiel.
                 if cible.exists():
@@ -244,6 +270,11 @@ def _download(raw: Path, cles: list[str] | None, secours_max: int | None, leger:
                     if src.get("zip", True) and not extraits(raw, cle).exists():
                         _extraire(raw, cle, cible)
                     continue
+                print(f"{cle} : dump injoignable ({e}), essai de la copie de la release", file=sys.stderr)
+                if _figee(client, raw, cle, manifeste):
+                    continue
+                if leger:
+                    raise
                 print(f"{cle} : dump injoignable ({e}), plan B amendement par amendement", file=sys.stderr)
                 from . import secours
                 bilan = secours.recuperer(client, raw, cle, **src["secours"], duree_max=secours_max)
@@ -251,7 +282,8 @@ def _download(raw: Path, cles: list[str] | None, secours_max: int | None, leger:
                                   "telecharge_le": datetime.now(timezone.utc).isoformat(timespec="seconds")}
                 (raw / MANIFESTE).write_text(json.dumps(manifeste, indent=2, ensure_ascii=False) + "\n")
                 continue
-            shutil.rmtree(unitaire(raw, cle), ignore_errors=True)  # le dump remplace le plan B
+            shutil.rmtree(unitaire(raw, cle), ignore_errors=True)  # le dump remplace le plan B et la copie
+            (dossier / COPIE_FIGEE).unlink(missing_ok=True)
             inchange = bool(avant) and avant.get("last_modified") == modifie and avant.get("taille") == cible.stat().st_size
             if src.get("zip", True) and not (inchange and extraits(raw, cle).exists()):
                 _extraire(raw, cle, cible)

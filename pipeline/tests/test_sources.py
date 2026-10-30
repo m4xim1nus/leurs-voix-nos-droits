@@ -1,6 +1,7 @@
 """Téléchargement robuste aux coupures du serveur de l'AN (sources.telecharger)."""
 
 import json
+import shutil
 import zipfile
 
 import httpx
@@ -182,3 +183,88 @@ def test_archive_inchangee_non_retelechargee(tmp_path):
         connu = {"last_modified": "Fri, 28 Jun 2024", "taille": 10}
         assert sources.telecharger(client, "https://an/a.zip", cible, connu=connu) == "Fri, 28 Jun 2024"
     assert appels == ["HEAD"]
+
+
+def _chaine(tmp_path, monkeypatch, an=503, release=None):
+    """Une source avec dump (`an`), copie dans la release (`release`, chemin d'un zip ou None) et plan B."""
+    monkeypatch.setattr(sources, "SOURCES", {"am": {"url": "https://an/a.zip", "figee": "https://gh/am.zip",
+                                                     "secours": {"legislature": 16, "organe": "1"}}})
+    appels = []
+
+    def gerer(req):
+        appels.append(str(req.url))
+        if "gh" in str(req.url):
+            if release is None:
+                return httpx.Response(404)
+            return httpx.Response(200, headers={"last-modified": LM, "content-length": str(release.stat().st_size)},
+                                  content=b"" if req.method == "HEAD" else release.read_bytes())
+        r = an["reponse"] if isinstance(an, dict) else an
+        if isinstance(r, int):
+            return httpx.Response(r)
+        return httpx.Response(200, headers={"last-modified": "dump", "content-length": str(r.stat().st_size)},
+                              content=b"" if req.method == "HEAD" else r.read_bytes())
+
+    _client_factice(monkeypatch, gerer)
+    return appels
+
+
+def test_chaine_dump_injoignable_prend_la_copie_sans_plan_b(tmp_path, monkeypatch):
+    from lvnd import secours
+    copie = tmp_path / "copie.zip"
+    _zip(copie)
+    raw = tmp_path / "raw"
+    appels = _chaine(tmp_path, monkeypatch, release=copie)
+    monkeypatch.setattr(secours, "recuperer", lambda *a, **k: pytest.fail("plan B inutile"))
+    sources.download(raw)
+    m = json.loads((raw / "manifeste.json").read_text())["am"]
+    assert appels[0] == "https://an/a.zip"  # le dump d'abord
+    assert m["mode"] == "figee" and m["url"] == "https://gh/am.zip"
+    assert (raw / "am/x/json/a/b/c.json").exists() and not (raw / "am/a.zip").exists()
+
+
+def test_chaine_le_dump_revenu_remplace_la_copie(tmp_path, monkeypatch):
+    copie, dump = tmp_path / "copie.zip", tmp_path / "dump.zip"
+    _zip(copie)
+    _zip(dump, "json/d/t/complet.json")
+    raw = tmp_path / "raw"
+    serveur_an = {"reponse": 503}
+    _chaine(tmp_path, monkeypatch, an=serveur_an, release=copie)
+    sources.download(raw)
+    serveur_an["reponse"] = dump
+    sources.download(raw)
+    m = json.loads((raw / "manifeste.json").read_text())["am"]
+    assert "mode" not in m and m["last_modified"] == "dump"
+    assert (raw / "am/x/json/d/t/complet.json").exists() and not (raw / "am/x/json/a/b/c.json").exists()
+    assert not (raw / "am" / sources.COPIE_FIGEE).exists()
+
+
+def test_chaine_sans_release_lance_le_plan_b(tmp_path, monkeypatch):
+    from lvnd import secours
+    raw = tmp_path / "raw"
+    _chaine(tmp_path, monkeypatch)
+    monkeypatch.setattr(secours, "recuperer", lambda *a, **k: {"amendements_trouves": 1})
+    sources.download(raw)
+    assert json.loads((raw / "manifeste.json").read_text())["am"]["mode"] == "secours"
+
+
+def test_chaine_leger_reutilise_la_copie_sans_tenter_le_dump(tmp_path, monkeypatch):
+    copie = tmp_path / "copie.zip"
+    _zip(copie)
+    raw = tmp_path / "raw"
+    appels = _chaine(tmp_path, monkeypatch, release=copie)
+    monkeypatch.setattr(sources, "LEGERES", ())
+    sources.download(raw)
+    appels.clear()
+    shutil.rmtree(raw / "am/x")
+    sources.download(raw, leger=True)
+    assert appels == [] and (raw / "am/x/json/a/b/c.json").exists()
+
+
+def test_chaine_leger_sans_archive_prend_la_copie(tmp_path, monkeypatch):
+    copie = tmp_path / "copie.zip"
+    _zip(copie)
+    raw = tmp_path / "raw"
+    _chaine(tmp_path, monkeypatch, release=copie)
+    monkeypatch.setattr(sources, "LEGERES", ())
+    sources.download(raw, leger=True)
+    assert (raw / "am/x/json/a/b/c.json").exists()

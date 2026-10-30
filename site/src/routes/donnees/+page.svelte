@@ -12,7 +12,8 @@
       'catalogue des textes (dossiers législatifs), qualifiés ou non : au moins un scrutin public à l’AN, en cours ou inscrits à l’ordre du jour',
     'scrutins.csv': 'tous les scrutins publics, rattachés à leur dossier',
     'positions_groupes.csv': 'décompte et position de chaque groupe sur chaque scrutin',
-    'amendements.csv': 'amendements mis aux voix : auteur, article, sort',
+    'amendements.csv':
+      'amendements mis aux voix : auteur, article, sort ; leurs identiques pour la XVIIe seulement',
     'deputes.csv': 'député·es ayant siégé depuis 2022',
     'mandats.csv': 'mandats de député·e : circonscription, dates',
     'appartenances.csv': 'appartenance des député·es aux groupes, avec les dates',

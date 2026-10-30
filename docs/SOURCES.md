@@ -305,11 +305,16 @@ ici (motions sans `voteRefs`) : leur mode reste `ART_49_3`.
 Deux Actions. `donnees-quotidien.yml` (chaque jour, 5 h UTC) rafraîchit les dossiers
 de la XVIIe, ses scrutins, l'agenda et Dosleg avec `lvnd download --leger`. Les autres archives
 viennent du cache de l'Action. `donnees.yml` (lundi) rafraîchit le reste ; si un dump
-d'amendements est injoignable, l'archive précédente sert, sans échec.
+d'amendements est injoignable, l'archive précédente sert, sans échec ; à défaut, voir
+ci-dessous.
 
-**Amendements de la XVIe.** Figés depuis le 28/06/2024, ils ne sont plus demandés à
-l'AN : `lvnd archiver an_amendements_16` en fait un zip, gardé dans la release
-`donnees-figees` du dépôt. C'est une copie des données de l'AN, sans retraitement.
+**Amendements de la XVIe.** Le dump de l'AN reste bloqué depuis le 29/10/2026. Le
+résultat du plan B (les seuls amendements mis aux voix, sans leurs identiques) est gardé
+dans la release `donnees-figees` du dépôt (`lvnd archiver an_amendements_16`), pour ne pas
+refaire ses milliers de requêtes. `lvnd download` essaie dans l'ordre : le dump de l'AN (20
+minutes sans aucun octet), cette copie (`mode: figee` au manifeste), puis le plan B. Le
+dump remplace tout dès qu'il passe, ce que retente chaque lancement de `donnees.yml`.
+La passe quotidienne ne le retente pas : elle réutilise l'archive déjà là.
 
 Garde-fous de la passe quotidienne : rien n'est commité si un score change sans
 qualification nouvelle, si `amendements.csv` perd des lignes ou si `lvnd check` échoue. La
