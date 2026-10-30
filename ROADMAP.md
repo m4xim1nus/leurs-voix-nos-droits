@@ -38,18 +38,24 @@ Le dump est fini quand `an_amendements_16` figure dans `data/raw/manifeste.json`
 (un seul signal fiable : 3173 / 3173 dans `etat.json` le précède de peu). Le code de
 l'item 6 attend sur la branche `worktree-textes-en-cours`, pas encore sur `main`.
 
-1. **Dossier principal** : `git pull`, `lvnd build`, `lvnd check` (la ligne « XVIe :
-   amendements présents » doit passer), mesure du rattachement dans `docs/SOURCES.md`,
-   `scores_*.csv` inchangés, relecture des six témoins avec Max. Commit, puis push.
-2. **Worktree `textes-en-cours`** : fusionner `origin/main` et tester.
-3. **Max** : `lvnd archiver an_amendements_16 --sortie /tmp/Amendements.json.zip`, puis
+1. **Fin du Reliquat, dossier principal** : `git pull`, `lvnd build`, `lvnd check` (la ligne
+   « XVIe : amendements présents » doit passer), mesure du rattachement dans
+   `docs/SOURCES.md`, `scores_*.csv` inchangés, relecture des six témoins avec Max. Commit,
+   puis push.
+2. **Mise en service de l'item 6, worktree `textes-en-cours`** : fusionner `origin/main` et
+   tester. Puis Max : `lvnd archiver an_amendements_16 --sortie /tmp/Amendements.json.zip`,
    `gh release create donnees-figees /tmp/Amendements.json.zip`, push de la branche sur
-   `main`, puis `gh workflow run donnees-quotidien.yml`. Décision de Max : le zip est
-   publié tel quel.
-4. **Contrôler le premier lancement**, puis fermer le Reliquat XVIe (rotation, `CLAUDE.md`).
-5. **Au fil des votes reste ouvert** (items 8 et 15, jusqu'au 28/02/2027). Dès que le
-   catalogue est à jour : fiches courtes des deux votes du 29/10 (AESH, 166-16 ; parcours
-   de soins, 152-5), demandées par Max.
+   `main`, `gh workflow run donnees-quotidien.yml`. Décision de Max : le zip est publié tel
+   quel. Contrôler ce premier lancement.
+3. **Clôture des deux cycles** (rotation, `CLAUDE.md`) : entrée de `CHANGELOG.md` et tag,
+   items livrés retirés de `BACKLOG.md`, cycle suivant choisi par Max dans `ROADMAP.md`.
+
+Un cycle est un cycle de développement. Décision de Max du 30/10/2026 : Au fil des votes se
+ferme ici, sans attendre le calendrier parlementaire. Le lot test a rendu son bilan. Le
+reste relève du fonctionnement courant (`docs/QUALIFICATION.md`, « Au fil de l'eau ») : les
+textes de l'item 8 selon leurs votes, les fiches de suivi de casseurs-payeurs et des ingérences
+à leur inscription, et d'abord les fiches courtes des votes du 29/10 (AESH, 166-16 ; parcours
+de soins, 152-5), demandées par Max dès que le catalogue est à jour.
 
 ## Cycle en parallèle : Au fil des votes
 
