@@ -3,7 +3,18 @@
   import Sources from '$lib/components/Sources.svelte';
   import Ventilations from '$lib/components/Ventilations.svelte';
   import { court, ETIQUETTES, phrase } from '$lib/droits';
-  import { date, entier, legislature, POSITION, ROLE, sensDuPour } from '$lib/format';
+  import {
+    date,
+    entier,
+    etatTexte,
+    legislature,
+    majuscule,
+    mentionNavette,
+    minuscule,
+    POSITION,
+    ROLE,
+    sensDuPour
+  } from '$lib/format';
   import { CONTESTATION, NOM, URL_SITE } from '$lib/site';
   import type { ScrutinRetenu } from '$lib/types';
 
@@ -12,6 +23,10 @@
   const comptes = $derived(t.scrutins.filter((s) => s.compte));
   const affiches = $derived(t.scrutins.filter((s) => !s.compte));
   const src = (ids: string[]) => ids.map((i) => t.sources[i]).filter(Boolean);
+  const enNavette = $derived(t.etat?.etat === 'en_navette');
+  const mentionDecisif = $derived(
+    mentionNavette(t.etat, t.scrutins.find((s) => s.role === 'decisif')?.etape ?? null)
+  );
 
   /** La note de méthode, échappée, avec un lien vers chaque règle citée (« règle 11 », « règles 9 et 11 »). */
   const noteHtml = (note: string) =>
@@ -61,6 +76,9 @@
       {/if}
       <a href={s.url} rel="external">Scrutin n° {s.numero} sur le site de l’AN</a>.
     </p>
+    {#if s.compte && mentionNavette(t.etat, s.etape)}
+      <p class="petit mention">{majuscule(mentionNavette(t.etat, s.etape)!)}.</p>
+    {/if}
     {#if s.amendement}
       <p class="petit discret">
         {`Amendement n° ${s.amendement.numero}${s.amendement.auteur ? ` de ${s.amendement.auteur}` : ''}${s.amendement.groupe ? ` (${s.amendement.groupe})` : ''}, ${s.amendement.division.toLowerCase()}.`}
@@ -90,15 +108,26 @@
 <p class="discret">
   {legislature(t.legislature)} législature. {t.sans_vote
     ? 'Adopté par le 49.3, sans vote final de l’Assemblée.'
-    : `Vote décisif le ${date(t.date)}.`}
+    : `Vote décisif le ${date(t.date)}${mentionDecisif ? ` (${mentionDecisif})` : ''}.`}
   {#if t.loi}{`Loi n° ${t.loi}${t.date_loi ? ` du ${date(t.date_loi)}` : ''}.`}{/if}
   {#if t.url_an}<a href={t.url_an} rel="external">Dossier à l’Assemblée</a>.{/if}
   {#if t.url_loi}<a href={t.url_loi} rel="external">Texte sur Légifrance</a>.{/if}
 </p>
+{#if t.etat && etatTexte(t.etat) && !t.loi}
+  <p class="etat">
+    État au {date(data.dateEtat)} : <strong>{minuscule(etatTexte(t.etat))}</strong>.
+    {#if t.etat.seance_inscrite}Inscrit en séance le {date(t.etat.seance_inscrite)}.{/if}
+    {#if t.etat.date_derniere_lecture && t.etat.date_derniere_lecture > t.date}Dernière lecture
+      conclue le {date(t.etat.date_derniere_lecture)}.{/if}
+  </p>
+{/if}
 {#if t.resume}<p class="chapo">{t.resume}</p>{/if}
 
 <section>
   <h2>Ce que fait le texte</h2>
+  {#if enNavette && !t.sans_vote}
+    <p class="petit">Sur le texte voté le {date(t.date)}.</p>
+  {/if}
   {#each t.droits as d (d.code)}
     <div class="droit">
       <p class="petit discret">
@@ -219,6 +248,12 @@
     font-size: clamp(2rem, 5.5vw, 3.4rem);
     max-width: 24ch;
     margin-bottom: 0.75rem;
+  }
+  .etat {
+    max-width: 60ch;
+  }
+  .mention {
+    font-weight: 600;
   }
   .droit {
     border-left: 3px solid var(--filet);

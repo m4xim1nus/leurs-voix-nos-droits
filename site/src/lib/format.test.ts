@@ -1,5 +1,17 @@
 import { describe, expect, it } from 'vitest';
-import { date, normaliser, pluriel, pourcent, slug, sensDuPour, typo } from './format';
+import {
+  date,
+  etatEnListe,
+  etatTexte,
+  mentionNavette,
+  normaliser,
+  pluriel,
+  pourcent,
+  slug,
+  sensDuPour,
+  typo
+} from './format';
+import type { EtatTexte } from './types';
 
 describe('format', () => {
   it('écrit les scores arrondis, avec espace insécable', () => {
@@ -24,6 +36,57 @@ describe('format', () => {
   });
   it('dit ce que signifie voter pour (règle 14)', () => {
     expect(sensDuPour('contre-texte')).toContain('s’opposer');
+  });
+});
+
+describe('état d’un texte', () => {
+  const etat = (e: Partial<EtatTexte>): EtatTexte => ({
+    etat: 'en_navette',
+    attente: 'lecture',
+    attente_chambre: 'SN',
+    date_derniere_lecture: null,
+    date_derniere_activite: null,
+    seance_inscrite: null,
+    ...e
+  });
+
+  it('dit où un texte en navette est attendu', () => {
+    expect(etatTexte(etat({}))).toBe('En navette, attendu au Sénat');
+    expect(etatTexte(etat({ attente: 'transmis', attente_chambre: 'AN' }))).toBe(
+      'En navette, attendu à l’Assemblée'
+    );
+    expect(etatTexte(etat({ attente: 'cmp', attente_chambre: 'CMP' }))).toBe(
+      'En navette, en commission mixte paritaire'
+    );
+    expect(etatTexte(etat({ attente: 'navette', attente_chambre: null }))).toBe(
+      'En navette, suite pas encore connue'
+    );
+  });
+
+  it('date un texte à l’arrêt, et ne dit rien d’un texte sans lecture', () => {
+    expect(etatTexte(etat({ etat: 'a_l_arret', date_derniere_activite: '2023-05-04' }))).toBe(
+      'À l’arrêt, aucun acte depuis le 4 mai 2023'
+    );
+    expect(etatTexte(etat({ etat: 'hors_navette' }))).toBe('');
+    expect(etatTexte(null)).toBe('');
+  });
+
+  it('nomme la lecture du vote, seulement pour un texte encore en navette', () => {
+    expect(mentionNavette(etat({}), 'AN1')).toBe('vote de 1re lecture, texte encore en navette');
+    expect(mentionNavette(etat({}), 'AN2')).toBe('vote de 2e lecture, texte encore en navette');
+    expect(mentionNavette(etat({}), 'CMP')).toBe(
+      'vote sur le texte de CMP, texte encore en navette'
+    );
+    expect(mentionNavette(etat({}), null)).toBe('texte encore en navette');
+    expect(mentionNavette(etat({ etat: 'loi' }), 'AN1')).toBeNull();
+    expect(mentionNavette(etat({ etat: 'a_l_arret' }), 'AN1')).toBeNull();
+  });
+
+  it('réunit la mention et l’attente dans une liste', () => {
+    expect(etatEnListe(etat({}), 'AN1')).toBe(
+      'Vote de 1re lecture, texte encore en navette, attendu au Sénat'
+    );
+    expect(etatEnListe(etat({ etat: 'loi' }), 'AN1')).toBe('Loi promulguée');
   });
 });
 

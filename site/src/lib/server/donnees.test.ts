@@ -1,6 +1,7 @@
 // Cohérence des données lues au prérendu (data/export/, data/editorial.json, data/annuaire/).
 import { describe, expect, it } from 'vitest';
 import { DROITS } from '$lib/droits';
+import { mentionNavette } from '$lib/format';
 import { donnees } from './donnees';
 import { tableCodesPostaux } from './annuaire';
 import { vueDepute } from './vues';
@@ -21,6 +22,20 @@ describe('données du site', () => {
       ).toHaveLength(par493 ? 0 : 1);
       for (const s of t.scrutins) expect(s.numero, s.id).toBeGreaterThan(0);
     }
+  });
+
+  it('connaît l’état de chaque texte qualifié ou écarté', () => {
+    for (const t of d.textes) expect(t.etat, t.id).not.toBeNull();
+    for (const e of d.ecartes) expect(e.etat, e.dossier_an).not.toBeNull();
+    expect(d.dateEtat).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+  });
+
+  it('nomme une lecture connue pour chaque vote compté d’un texte en navette', () => {
+    const navette = d.textes.filter((t) => t.etat?.etat === 'en_navette');
+    expect(navette.length).toBeGreaterThan(0);
+    for (const t of navette)
+      for (const s of t.scrutins.filter((x) => x.compte))
+        expect(mentionNavette(t.etat, s.etape), s.id).toMatch(/^vote .*, texte encore en navette$/);
   });
 
   it('donne des slugs de députés uniques', () => {

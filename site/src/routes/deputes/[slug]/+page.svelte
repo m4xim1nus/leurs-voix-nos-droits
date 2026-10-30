@@ -5,7 +5,10 @@
     circonscription,
     date,
     depute as dep,
+    etatTexte,
     legislature,
+    mentionNavette,
+    minuscule,
     pluriel,
     POSITION,
     POSITION_GROUPE,
@@ -13,6 +16,7 @@
   } from '$lib/format';
   import type { VoteDepute } from '$lib/server/vues';
   import { NOM, URL_SITE } from '$lib/site';
+  import type { EtatTexte } from '$lib/types';
 
   let { data } = $props();
   const d = $derived(data.depute);
@@ -62,12 +66,13 @@
   <meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
-{#snippet vote(v: VoteDepute, inverse: boolean)}
+{#snippet vote(v: VoteDepute, inverse: boolean, etat: EtatTexte | null)}
   {@const l = lecture(v, inverse)}
+  {@const mention = mentionNavette(etat, v.scrutin.etape)}
   <li>
     <span class="objet"
       ><a href={v.scrutin.url} rel="external">{v.scrutin.objet}</a>
-      <span class="petit discret">{date(v.scrutin.date)}</span></span
+      <span class="petit discret">{date(v.scrutin.date)}{mention ? `, ${mention}` : ''}</span></span
     >
     <span class="position"
       >{v.position === 'absent' ? (elle ? 'Absente' : 'Absent') : POSITION[v.position]}</span
@@ -214,12 +219,13 @@
       <article class="texte">
         <h3><a href="/textes/{t.texte.id}">{t.texte.titre}</a></h3>
         <p class="petit">
+          {#if etatTexte(t.texte.etat)}{etatTexte(t.texte.etat)}.{/if}
           Le texte {phrase(t.vu.code, t.vu.sens)}.
           {#if t.score !== null}Sur ce texte : <strong>{pourcent(t.score)}</strong> de votes
             favorables {filtre ? 'à ce droit' : 'aux droits'}.{/if}
         </p>
         <ul class="votes">
-          {#each t.votes as v (v.scrutin.id)}{@render vote(v, t.vu.inverse)}{/each}
+          {#each t.votes as v (v.scrutin.id)}{@render vote(v, t.vu.inverse, t.texte.etat)}{/each}
         </ul>
         {#if t.autres}
           <p class="petit discret">
@@ -249,7 +255,10 @@
         {#each data.unanimes as u (u.url)}
           <li>
             <a href={u.url} rel="external">{u.titre}</a>
-            <span class="discret petit">{date(u.date)}</span> :
+            <span class="discret petit"
+              >{date(u.date)}{etatTexte(u.etat) ? `, ${minuscule(etatTexte(u.etat))}` : ''}</span
+            >
+            :
             <strong
               >{u.position === 'absent'
                 ? elle

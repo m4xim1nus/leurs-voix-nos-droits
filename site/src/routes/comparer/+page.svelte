@@ -24,7 +24,7 @@
   }
   interface Donnees {
     droits: { code: string; court: string }[];
-    textes: { id: string; titre: string }[];
+    textes: { id: string; titre: string; etat: string }[];
     entites: Entite[];
   }
 
@@ -194,7 +194,10 @@
       <ul class="lignes" style:--ca={a.couleur} style:--cb={b.couleur}>
         {#each ecarts as t (t.id)}
           <li>
-            <a href="/textes/{t.id}">{t.titre}</a>
+            <span class="titre"
+              ><a href="/textes/{t.id}">{t.titre}</a>
+              {#if t.etat}<span class="petit discret etat">{t.etat}</span>{/if}</span
+            >
             {@render duel(t.a, t.b)}
           </li>
         {/each}
@@ -315,8 +318,12 @@
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--filet);
   }
-  .lignes li > a {
+  .lignes li > a,
+  .lignes li > .titre {
     grid-row: span 2;
+  }
+  .etat {
+    display: block;
   }
   .piste {
     display: block;
@@ -371,7 +378,8 @@
     .lignes li {
       grid-template-columns: 1fr 3.5rem;
     }
-    .lignes li > a {
+    .lignes li > a,
+    .lignes li > .titre {
       grid-column: 1 / -1;
       grid-row: auto;
       margin-bottom: 0.2rem;

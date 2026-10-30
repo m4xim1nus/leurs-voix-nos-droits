@@ -1,6 +1,6 @@
 // Mise en forme française : nombres, dates, libellés des votes et des droits.
 
-import type { Pour, Position, PositionGroupe, RoleScrutin, Sens } from './types';
+import type { EtatTexte, Pour, Position, PositionGroupe, RoleScrutin, Sens } from './types';
 
 const ENTIER = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 });
 const DATE = new Intl.DateTimeFormat('fr-FR', {
@@ -64,6 +64,70 @@ export function sensDuPour(pour: Pour): string {
   if (pour === 'texte') return 'voter pour, c’est soutenir le texte';
   if (pour === 'contre-texte') return 'voter pour, c’est s’opposer au texte';
   return 'sens à trancher, scrutin non compté';
+}
+
+export const majuscule = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+export const minuscule = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
+
+const ATTENDU: Record<string, string> = { AN: 'attendu à l’Assemblée', SN: 'attendu au Sénat' };
+
+/** Où un texte en navette est attendu, d'après ce que les dossiers enregistrent. */
+export function attenteNavette(e: EtatTexte): string {
+  if (e.attente === 'cmp') return 'en commission mixte paritaire';
+  if (e.attente === 'cmp_conclusions')
+    return 'conclusions de la commission mixte paritaire à voter';
+  return (e.attente_chambre && ATTENDU[e.attente_chambre]) || 'suite pas encore connue';
+}
+
+/** Où en est un texte, en clair ; vide s'il n'a aucune lecture (résolution, motion de censure). */
+export function etatTexte(e: EtatTexte | null): string {
+  switch (e?.etat) {
+    case 'loi':
+      return 'Loi promulguée';
+    case 'adopte':
+      return 'Adopté, pas encore promulgué';
+    case 'en_navette':
+      return `En navette, ${attenteNavette(e)}`;
+    case 'avant_vote':
+      return 'Pas encore voté en séance';
+    case 'a_l_arret':
+      return e.date_derniere_activite
+        ? `À l’arrêt, aucun acte depuis le ${date(e.date_derniere_activite)}`
+        : 'À l’arrêt';
+    case 'rejete':
+      return 'Rejeté';
+    case 'retire':
+      return 'Retiré';
+    case 'caduc':
+      return 'Caduc';
+    case 'fusionne':
+      return 'Fusionné avec un autre texte';
+    default:
+      return '';
+  }
+}
+
+const LECTURE: Record<string, string> = {
+  AN1: 'de 1re lecture',
+  AN2: 'de 2e lecture',
+  AN3: 'de 3e lecture',
+  ANNLEC: 'de nouvelle lecture',
+  ANLDEF: 'de lecture définitive',
+  ANLUNI: 'de lecture unique',
+  CMP: 'sur le texte de CMP'
+};
+
+/** Mention à côté d'un vote compté sur un texte encore en navette ; null sinon. */
+export function mentionNavette(e: EtatTexte | null, etape: string | null): string | null {
+  if (e?.etat !== 'en_navette') return null;
+  const lecture = etape ? LECTURE[etape] : undefined;
+  return lecture ? `vote ${lecture}, texte encore en navette` : 'texte encore en navette';
+}
+
+/** L'état d'un texte dans une liste : pour un texte en navette, la mention et où il est attendu. */
+export function etatEnListe(e: EtatTexte | null, etape: string | null): string {
+  const mention = mentionNavette(e, etape);
+  return mention ? majuscule(`${mention}, ${attenteNavette(e!)}`) : etatTexte(e);
 }
 
 /** Députée ou député, selon la civilité publiée par l'AN. */

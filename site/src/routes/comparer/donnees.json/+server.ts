@@ -1,6 +1,7 @@
 // Données de la page Comparer, chargées à la demande : scores de chaque député et de chaque groupe,
 // global, par droit et par texte, en tableaux alignés sur `droits` et `textes` (null : pas de score).
 import { json } from '@sveltejs/kit';
+import { etatEnListe } from '$lib/format';
 import { donnees } from '$lib/server/donnees';
 import { entree } from '$lib/server/vues';
 import type { Score } from '$lib/types';
@@ -43,7 +44,11 @@ export const GET = () => {
     .sort((a, b) => a.nom.localeCompare(b.nom, 'fr'));
   return json({
     droits: d.droits.map((x) => ({ code: x.code, court: x.court })),
-    textes: d.textes.map((t) => ({ id: t.id, titre: t.titre })),
+    textes: d.textes.map((t) => ({
+      id: t.id,
+      titre: t.titre,
+      etat: etatEnListe(t.etat, t.scrutins.find((s) => s.role === 'decisif')?.etape ?? null)
+    })),
     entites: [...groupes, ...deputes]
   });
 };

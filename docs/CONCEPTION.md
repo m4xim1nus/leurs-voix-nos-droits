@@ -324,6 +324,12 @@ codes postaux, découpée par département.
   règle 14 rendue lisible.
 - Les scrutins affichés mais non comptés (autres lectures, motions) sont
   rangés à part, avec leur raison (règles 9 et 10).
+- L'état d'un texte (`en_cours_etats.csv`) s'affiche sur sa fiche, datée du
+  dump des dossiers (« État au… »), et dans les listes : un fait, jamais un
+  jugement. Un vote compté sur un texte en navette porte la mention « vote de
+  1re lecture, texte encore en navette » (la lecture est celle du scrutin), et
+  le sens du texte se lit « sur le texte voté le… ». Un texte à l'arrêt affiche
+  son état, sans cette mention.
 - Le site affiche un bandeau tant que la v1 n'est pas ouverte : « Site en
   construction, N textes qualifiés ».
 - Les textes écartés parce que leur décisif n'a eu aucune voix contre

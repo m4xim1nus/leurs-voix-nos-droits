@@ -2,7 +2,7 @@
   import Regle from '$lib/components/Regle.svelte';
   import Sources from '$lib/components/Sources.svelte';
   import { phrase } from '$lib/droits';
-  import { date, legislature, pluriel } from '$lib/format';
+  import { date, etatEnListe, legislature, pluriel } from '$lib/format';
   import { NOM } from '$lib/site';
 
   let { data } = $props();
@@ -55,6 +55,9 @@
           ? 'principal'
           : 'secondaire'}
         du texte.
+        {#if etatEnListe(t.texte.etat, t.texte.etape)}
+          {etatEnListe(t.texte.etat, t.texte.etape)}.
+        {/if}
       </p>
       <p>
         <strong class={t.droit.sens === 'etend' ? 'favorable' : 'defavorable'}

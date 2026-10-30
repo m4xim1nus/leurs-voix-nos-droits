@@ -1,6 +1,6 @@
 <script lang="ts">
   import TexteLigne from '$lib/components/TexteLigne.svelte';
-  import { legislature, pluriel } from '$lib/format';
+  import { etatTexte, legislature, pluriel } from '$lib/format';
   import { NOM } from '$lib/site';
 
   let { data } = $props();
@@ -72,7 +72,10 @@
       {#each data.ecartes as e (e.dossier_an)}
         <li>
           {#if e.url_an}<a href={e.url_an} rel="external">{e.titre}</a>{:else}{e.titre}{/if}
-          <span class="discret petit">{e.motif}</span>
+          <span class="discret petit"
+            >{e.motif}{#if etatTexte(e.etat)}
+              {etatTexte(e.etat)}.{/if}</span
+          >
         </li>
       {/each}
     </ul>

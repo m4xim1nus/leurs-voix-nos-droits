@@ -1,14 +1,15 @@
 <!--
   Un texte qualifié dans une liste : titre, date du vote décisif, droit principal et son sens, ou
-  ceux du droit `droit` quand la liste est filtrée sur un droit.
+  ceux du droit `droit` quand la liste est filtrée sur un droit, et où en est le texte.
 -->
 <script lang="ts">
   import { court, phrase, sousAngle } from '$lib/droits';
-  import { date, legislature } from '$lib/format';
+  import { date, etatEnListe, legislature } from '$lib/format';
   import type { TexteCourt } from '$lib/server/vues';
 
   let { texte, droit = null }: { texte: TexteCourt; droit?: string | null } = $props();
   const vu = $derived(sousAngle(texte, droit));
+  const etat = $derived(etatEnListe(texte.etat, texte.etape));
 </script>
 
 <a class="texte" href="/textes/{texte.id}">
@@ -23,6 +24,7 @@
         ? 'adopté par le 49.3 sans vote final, non compté'
         : `voté le ${date(texte.date)}`}, {legislature(texte.legislature)} législature</span
     >
+    {#if etat}<span class="etat">{etat}</span>{/if}
   </span>
   <span class="visuellement-cache">Le texte {phrase(vu.code, vu.sens)}.</span>
 </a>
@@ -61,5 +63,8 @@
   }
   .sens span {
     color: var(--encre);
+  }
+  .etat {
+    font-weight: 600;
   }
 </style>

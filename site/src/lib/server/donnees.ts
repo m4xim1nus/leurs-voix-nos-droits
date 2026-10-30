@@ -13,6 +13,7 @@ import type {
   Depute,
   Droit,
   Ecarte,
+  EtatTexte,
   GroupeCourt,
   Lignee,
   Mandat,
@@ -48,6 +49,8 @@ export const SANS_OPPOSITION = /sans aucune voix (contre|pour) au scrutin décis
 
 export interface Donnees {
   genereLe: string;
+  /** Date de l'état des textes : celle du dump des dossiers (`meta.json`). */
+  dateEtat: string;
   droits: Droit[];
   /** Textes qualifiés, du plus récent au plus ancien (date du vote décisif). */
   textes: Texte[];
@@ -164,6 +167,22 @@ function deputes(groupe: Map<string, GroupeCourt>): Depute[] {
   });
 }
 
+function etats(): Map<string, EtatTexte> {
+  return new Map(
+    exp('en_cours_etats').map((e) => [
+      e.id!,
+      {
+        etat: e.etat as EtatTexte['etat'],
+        attente: txt(e.attente),
+        attente_chambre: txt(e.attente_chambre),
+        date_derniere_lecture: txt(e.date_derniere_lecture),
+        date_derniere_activite: txt(e.date_derniere_activite),
+        seance_inscrite: txt(e.seance_inscrite)
+      }
+    ])
+  );
+}
+
 const CODES: Record<string, Position> = {
   P: 'pour',
   C: 'contre',
@@ -199,6 +218,7 @@ function charger(): Donnees {
   const deps = deputes(groupe);
   const deputeParId = new Map(deps.map((d) => [d.id, d]));
   const catalogue = new Map(exp('textes').map((t) => [t.id!, t]));
+  const etat = etats();
 
   // Textes écartés parce que leur décisif n'a eu aucune voix d'un côté (règle 9) : affichés sur
   // les fiches, hors des scores. Le motif, écrit par l'admin, suit toujours ce modèle.
@@ -261,6 +281,7 @@ function charger(): Donnees {
         pour: r.pour,
         objet: typo(r.objet),
         date: s.date!,
+        etape: txt(s.etape),
         sort: s.sort as 'adopte' | 'rejete',
         decompte: {
           pour: Number(s.pour),
@@ -306,6 +327,7 @@ function charger(): Donnees {
       // Législature du vote décisif : un dossier déposé en XVIe peut n'avoir été voté qu'en XVIIe.
       legislature: decisif?.legislature ?? t.legislature,
       sans_vote: !decisif,
+      etat: etat.get(t.dossier_an) ?? null,
       loi: txt(cat?.loi),
       date_loi: txt(cat?.date_loi),
       url_an: txt(cat?.url_an),
@@ -320,7 +342,8 @@ function charger(): Donnees {
     ...e,
     titre: typo(e.titre),
     motif: typo(e.motif),
-    url_an: txt(catalogue.get(e.dossier_an)?.url_an)
+    url_an: txt(catalogue.get(e.dossier_an)?.url_an),
+    etat: etat.get(e.dossier_an) ?? null
   }));
   const unanimes: TexteUnanime[] = unanimesBruts
     .flatMap(({ e, scrutin }) => {
@@ -331,6 +354,7 @@ function charger(): Donnees {
           dossier_an: e.dossier_an,
           titre: typo(e.titre),
           url_an: txt(catalogue.get(e.dossier_an)?.url_an),
+          etat: etat.get(e.dossier_an) ?? null,
           scrutin: {
             id: s.id!,
             date: s.date!,
@@ -358,6 +382,7 @@ function charger(): Donnees {
 
   return {
     genereLe: meta.genere_le,
+    dateEtat: meta.en_cours.date_reference,
     droits,
     textes,
     ecartes,

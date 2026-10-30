@@ -2,7 +2,15 @@
   import Regle from '$lib/components/Regle.svelte';
   import TexteLigne from '$lib/components/TexteLigne.svelte';
   import { court, scoreSousAngle, sousAngle } from '$lib/droits';
-  import { date, legislature, pluriel, POSITION_GROUPE, pourcent } from '$lib/format';
+  import {
+    date,
+    etatTexte,
+    legislature,
+    minuscule,
+    pluriel,
+    POSITION_GROUPE,
+    pourcent
+  } from '$lib/format';
   import { NOM, URL_SITE } from '$lib/site';
 
   let { data } = $props();
@@ -101,7 +109,10 @@
       {#each data.unanimes as u (u.url)}
         <li>
           <a href={u.url} rel="external">{u.titre}</a>
-          <span class="discret petit">{date(u.date)}</span> :
+          <span class="discret petit"
+            >{date(u.date)}{etatTexte(u.etat) ? `, ${minuscule(etatTexte(u.etat))}` : ''}</span
+          >
+          :
           <strong>{POSITION_GROUPE[u.position]}</strong>
         </li>
       {/each}

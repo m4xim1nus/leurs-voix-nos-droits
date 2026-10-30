@@ -7,6 +7,29 @@ export type Pour = 'texte' | 'contre-texte' | 'a-trancher';
 export type Position = 'pour' | 'contre' | 'abstention' | 'non_votant';
 export type PositionGroupe = 'pour' | 'contre' | 'abstention' | 'partage' | 'absent';
 
+/** Où en est un texte : `en_cours_etats.csv`, jamais une appréciation (docs/SOURCES.md). */
+export interface EtatTexte {
+  etat:
+    | 'loi'
+    | 'adopte'
+    | 'en_navette'
+    | 'avant_vote'
+    | 'hors_navette'
+    | 'a_l_arret'
+    | 'rejete'
+    | 'retire'
+    | 'caduc'
+    | 'fusionne';
+  /** `lecture`, `transmis`, `cmp`, `cmp_conclusions` ou `navette`. */
+  attente: string | null;
+  /** `AN`, `SN` ou `CMP`. */
+  attente_chambre: string | null;
+  date_derniere_lecture: string | null;
+  date_derniere_activite: string | null;
+  /** Première séance à venir où le texte est inscrit. Inscrit ne veut pas dire voté. */
+  seance_inscrite: string | null;
+}
+
 export interface Droit {
   code: string;
   libelle: string;
@@ -84,6 +107,8 @@ export interface ScrutinRetenu {
   pour: Pour;
   objet: string;
   date: string;
+  /** Lecture du scrutin (AN1, AN2, ANNLEC, CMP…), vide si l'open data ne la donne pas. */
+  etape: string | null;
   sort: 'adopte' | 'rejete';
   decompte: { pour: number; contre: number; abstention: number; requis: number | null };
   /** Compté dans les scores (décisif ou amendement clé, sens fixé). */
@@ -114,6 +139,7 @@ export interface Texte {
   date: string;
   /** Adopté par 49.3 sans vote final : qualifié, compté dans aucun score (règle 9). */
   sans_vote: boolean;
+  etat: EtatTexte | null;
   loi: string | null;
   date_loi: string | null;
   url_an: string | null;
@@ -128,12 +154,14 @@ export interface Ecarte {
   titre: string;
   motif: string;
   url_an: string | null;
+  etat: EtatTexte | null;
 }
 
 export interface TexteUnanime {
   dossier_an: string;
   titre: string;
   url_an: string | null;
+  etat: EtatTexte | null;
   scrutin: { id: string; date: string; pour: number; contre: number; url: string };
   ventilations: Ventilation[];
 }

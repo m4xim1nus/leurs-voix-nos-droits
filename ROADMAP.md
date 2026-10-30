@@ -140,9 +140,10 @@ pour y toucher.
 ### Front (des faits, aucun nouveau jugement)
 
 9. ⏳ **État sur les fiches texte** et dans les listes ; mention « vote de
-   1re lecture, texte encore en navette » à côté d'un vote compté ; retrait,
-   par une publication de l'admin, des « (non promulgué) » saisis dans les
-   titres.
+   1re lecture, texte encore en navette » à côté d'un vote compté : ✅ fait.
+   Retrait, par une publication de l'admin, des « (non promulgué) » saisis dans
+   les titres : préparé (17 textes, `source/brouillons-titres/`, titres seuls),
+   à charger et publier par Max.
 10. ⏳ **Page `/en-cours`**, rangée par échéance (inscrit à une date, attendu
     à l'AN, au Sénat, en CMP, suite pas encore connue) : dernier vote de l'AN
     par groupe, mention « pas encore qualifié » s'il y a lieu. Navigation,

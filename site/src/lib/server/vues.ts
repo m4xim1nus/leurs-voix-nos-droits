@@ -5,6 +5,7 @@ import { donnees, type Donnees } from './donnees';
 import type {
   Depute,
   EntreeIndex,
+  EtatTexte,
   GroupeCourt,
   Lignee,
   Position,
@@ -25,6 +26,9 @@ export interface TexteCourt {
   etiquettes: string[];
   n_comptes: number;
   sans_vote: boolean;
+  etat: EtatTexte | null;
+  /** Lecture du vote décisif. */
+  etape: string | null;
 }
 
 export const court = (t: Texte): TexteCourt => ({
@@ -36,7 +40,9 @@ export const court = (t: Texte): TexteCourt => ({
   droits: t.droits.map((d) => ({ code: d.code, role: d.role, sens: d.sens })),
   etiquettes: t.etiquettes,
   n_comptes: t.scrutins.filter((s) => s.compte).length,
-  sans_vote: t.sans_vote
+  sans_vote: t.sans_vote,
+  etat: t.etat,
+  etape: t.scrutins.find((s) => s.role === 'decisif')?.etape ?? null
 });
 
 export interface ScoreGroupe {
@@ -129,13 +135,16 @@ export function vueTexte(id: string) {
       return s ? [{ groupe: l, score: { ...s, n_textes: 1 } }] : [];
     })
     .sort((a, b) => (b.score.score ?? -1) - (a.score.score ?? -1));
-  return { texte, groupes };
+  return { texte, groupes, dateEtat: d.dateEtat };
 }
 
 // --- Députés ----------------------------------------------------------------------------------
 
 export interface VoteDepute {
-  scrutin: Pick<ScrutinRetenu, 'id' | 'role' | 'objet' | 'date' | 'url' | 'compte' | 'favorable'>;
+  scrutin: Pick<
+    ScrutinRetenu,
+    'id' | 'role' | 'objet' | 'date' | 'etape' | 'url' | 'compte' | 'favorable'
+  >;
   /** Position du député ; `absent` s'il était député sans figurer au scrutin. */
   position: Position | 'absent';
   /** Son groupe ce jour-là, et la position de ce groupe. */
@@ -165,9 +174,9 @@ export function vueDepute(slug: string) {
       .map((s) => {
         const groupe = groupeDuJour(dep, s.date);
         const v = groupe ? s.ventilations.find((x) => x.groupe.id === groupe.id) : undefined;
-        const { id, role, objet, date, url, compte, favorable } = s;
+        const { id, role, objet, date, etape, url, compte, favorable } = s;
         return {
-          scrutin: { id, role, objet, date, url, compte, favorable },
+          scrutin: { id, role, objet, date, etape, url, compte, favorable },
           position: d.votes.get(s.id)?.get(dep.id) ?? 'absent',
           groupe,
           ventilation: v ? { position: v.position, cohesion: v.cohesion } : null
@@ -187,6 +196,7 @@ export function vueDepute(slug: string) {
     .filter((u) => enMandat(dep, u.scrutin.date))
     .map((u) => ({
       titre: u.titre,
+      etat: u.etat,
       date: u.scrutin.date,
       url: u.scrutin.url,
       position: (d.votes.get(u.scrutin.id)?.get(dep.id) ?? 'absent') as Position | 'absent'
@@ -269,7 +279,15 @@ export function vueGroupe(slug: string) {
     unanimes: d.unanimes.flatMap((u) => {
       const v = u.ventilations.find((x) => groupe.organes.includes(x.groupe.id));
       return v
-        ? [{ titre: u.titre, date: u.scrutin.date, url: u.scrutin.url, position: v.position }]
+        ? [
+            {
+              titre: u.titre,
+              etat: u.etat,
+              date: u.scrutin.date,
+              url: u.scrutin.url,
+              position: v.position
+            }
+          ]
         : [];
     })
   };
