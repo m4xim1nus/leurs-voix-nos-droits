@@ -38,12 +38,18 @@ describe('données du site', () => {
         expect(mentionNavette(t.etat, s.etape), s.id).toMatch(/^vote .*, texte encore en navette$/);
   });
 
-  it('ne met en cours que des textes retenus en navette, chacun avec son échéance', () => {
+  it('ne met en cours que des textes retenus, chacun avec son échéance', () => {
     expect(d.enCours.length).toBeGreaterThan(0);
-    const retenus = new Set(d.textes.map((t) => t.dossier_an));
+    const qualifies = new Set(d.textes.map((t) => t.dossier_an));
     for (const t of d.enCours) {
-      expect(retenus.has(t.dossier_an), t.id).toBe(true);
-      expect(t.etat.etat, t.id).toBe('en_navette');
+      // Qualifié en navette, ou fiche de suivi sans sens : jamais les deux, jamais aucun des deux.
+      expect(t.qualification === null, t.id).toBe(t.suivi !== null);
+      if (t.qualification) {
+        expect(qualifies.has(t.dossier_an), t.id).toBe(true);
+        expect(t.etat.etat, t.id).toBe('en_navette');
+      } else {
+        expect(qualifies.has(t.dossier_an), t.id).toBe(false);
+      }
       expect(t.echeance === 'inscrit', t.id).toBe(t.etat.seance_inscrite !== null);
       if (t.dernier_vote) expect(t.dernier_vote.ventilations.length, t.id).toBeGreaterThan(0);
     }

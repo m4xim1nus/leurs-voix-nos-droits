@@ -20,6 +20,8 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 
 ## À trier
 
+- [ ] `admin/README.md` : `npm run dev` répond 403 depuis que `wrangler.jsonc` déclare Access ; il faut un `admin/.dev.vars` avec `ACCESS_TEAM_DOMAIN=""` (non versionné, à ajouter au `.gitignore` et au README) (claude, 2026-10-30)
+- [ ] Site : l'état et les dates d'inscription restent figés si l'Action est en panne ; les listes et `Prochains votes` n'affichent pas la date de l'état, contrairement à la fiche et à `/en-cours` (claude, 2026-10-30)
 - [ ] Table pays → circonscription des Français de l'étranger (code électoral, art. L. 330-1) à saisir en référentiel (claude, 2026-10-29)
 - [ ] Catalogue : saisines du Conseil constitutionnel déclarées irrecevables absentes (ingérences étrangères : 2024-870 DC et 2024-871 DC, après la dissolution) ; vérifier aussi « Non conforme » affiché pour une non-conformité partielle (2026-911 DC) (claude, 2026-10-29)
 - [ ] Rattachement scrutin → dossier : V4239 (amendement du Gouvernement au PLF 2026, 21/11/2025) est rattaché à la simplification de l'urbanisme (DLR5L17N51852) (claude, 2026-10-29)

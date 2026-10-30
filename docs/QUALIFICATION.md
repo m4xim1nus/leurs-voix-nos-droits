@@ -236,6 +236,11 @@ relecture:                  # pour Max, non publié
   extraits: ["clé1 : « citation courte lue dans la source »", "…"]
 ```
 
+Pour une **fiche de suivi** (texte sans vote qualifié) : `statut: a-suivre`, `scrutins: []`, et pour
+chaque droit `{ code, sources, justification }`, sans `role` ni `sens`. La justification dit ce que le
+texte touche, sans dire s'il étend ou restreint. Sans source admise, ne rédige pas de fiche : dis-le dans
+ton compte rendu. Vérifie aussi la liste des signataires d'un document collectif avant de le citer.
+
 Règles de format :
 - `objet` de chaque scrutin se termine par le décompte `(pour-contre)` exact du CSV.
 - Retiens : le décisif (en principe `decisif_propose` ; vérifie la règle 9), les autres votes sur
