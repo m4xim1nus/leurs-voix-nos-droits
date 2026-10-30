@@ -33,7 +33,8 @@ l'UNAF et les associations porteuses d'un dispositif (règle 7), la réforme de
 structure (règle 8), le vote sans scrutin public et le rejet d'une partie d'une
 loi de finances (règle 9), l'étiquette `regime-exception`. Le même jour, pour le
 suivi des textes en cours : les règles 20 à 22, et la CIIVISE parmi les instances
-consultatives (règle 7).
+consultatives (règle 7). Toujours le 30/10/2026, au stock des lois de finances : la
+formation professionnelle (règle 2), les unions confédérales de retraités (règle 7).
 
 ## Grille des droits
 
@@ -71,7 +72,9 @@ voté le reste ; un texte qui le pérennise ne la reçoit pas.
    allègent les mêmes garanties, sont donc qualifiées dans le même sens.
    L'**inégalité de revenu** n'entre pas dans `discriminations`, qui vise
    l'égalité, le racisme et le handicap : un argument de ce type s'affiche en
-   vigilance (zones à faibles émissions).
+   vigilance (zones à faibles émissions). La **formation professionnelle**
+   entre dans `travail-protection-sociale` (compte personnel de formation,
+   2023).
 3. **Recouvrements**, tranchés par une règle fixe :
    - justice des mineurs → `enfants` principal, `police-justice`
      secondaire ;
@@ -131,7 +134,8 @@ voté le reste ; un texte qui le pérennise ne la reçoit pas.
      CFE-CGC, CFTC, UNSA, FSU, Solidaires), y compris leurs fédérations
      professionnelles et les syndicats nationaux de branche qui leur sont
      affiliés (SNJ-CGT, SNME-CFDT), qui parlent en leur nom dans une branche
-     ou une fonction publique ; pas les syndicats ou sections d'entreprise ;
+     ou une fonction publique, et leurs unions confédérales de retraités
+     (UCR-CGT) ; pas les syndicats ou sections d'entreprise ;
    - avis du Conseil d'État sur un projet ou une proposition de loi.
 
    L'UNAF est admise, avec la mention de son statut institutionnel. Une

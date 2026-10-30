@@ -153,8 +153,8 @@ travail doit être factuel, sourcé, vérifiable, et signaler franchement les po
   sources citent le plus, la mesure opposée en vigilance), 5 (vigilance), 6 (on qualifie le texte
   soumis au scrutin décisif), 7 (sources admises, dont les instances consultatives indépendantes,
   l'ANSES, le HCFEA, l'UNAF (statut signalé), une association porteuse d'un dispositif pour en décrire
-  un risque (signalée partie prenante), les syndicats représentatifs de salariés, leurs fédérations et
-  leurs syndicats nationaux de branche affiliés, les syndicats et ordres
+  un risque (signalée partie prenante), les syndicats représentatifs de salariés, leurs fédérations,
+  leurs syndicats nationaux de branche affiliés et leurs unions confédérales de retraités, les syndicats et ordres
   du droit, de la santé et de l'enseignement, les avis du Conseil d'État ; une source peut porter
   sur la mesure plutôt que sur le texte ; **jamais** un rapport parlementaire, la Cour des comptes
   ni la position du Gouvernement ou d'un groupe ; si le texte **étend** un droit contesté, au

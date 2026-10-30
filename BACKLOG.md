@@ -33,6 +33,8 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] Relire `mots_cles.yaml` (brouillon), qui présélectionne les textes à suivre : motifs larges, sources de faux positifs (« eau », « soins », « violences », « justice ») (claude, 2026-10-29)
 - [ ] `lvnd check` : le délai de 14 jours (`DELAI_AMENDEMENTS`) retire à tort du taux de la XVIe ses derniers scrutins (3 041/3 053 affichés, au lieu de 3 159/3 173), alors que cette législature est figée (claude, 2026-10-30)
 - [ ] Actions : Node.js 20 est déprécié et `ubuntu-latest` migre vers Ubuntu 26 depuis le 19/10/2026 (annotations de l'Action « Données AN ») (claude, 2026-10-30)
+- [ ] `lvnd download --leger` retente le dump de l'AN pour les amendements de la XVIe quand ils viennent du plan B (mode `secours`, pas de zip local) : blocage jusqu'à 20 minutes, alors que le mode doit rester léger (claude, 2026-10-30)
+- [ ] `lvnd download` : un `.part` repris alors que l'AN a publié un nouveau fichier échoue (« taille X, attendu Y ») et reste à supprimer à la main ; comparer `Last-Modified` avant de reprendre (claude, 2026-10-30)
 
 ## Cycle en cours : Stock des lois de finances
 

@@ -56,13 +56,14 @@
       et aux plus forts. La propriété et l’ordre public sont des objectifs que la loi concilie avec ces
       droits : ils n’entrent pas dans la grille. Quand un texte les étend, c’est signalé en point de vigilance.
       L’accès aux soins entre dans le droit à la santé (installation des médecins, accès direct aux professionnels).
-      Le choix d’une source d’énergie (nucléaire, renouvelables) n’est pas un droit de la grille : le
-      droit à un environnement sain se juge sur les garanties des personnes (information, participation
-      du public, protection des milieux). Les droits civiques couvrent qui peut voter et être élu, et
-      les conditions d’exercice du vote (inscription, procuration, vote par correspondance) ; le mode
-      de scrutin et le régime des mandats (cumul, incompatibilités) relèvent de l’organisation des pouvoirs
-      publics et n’entrent pas dans la grille. L’inégalité de revenu n’entre pas dans le droit à l’égalité
-      et à la non-discrimination : un argument de ce type s’affiche en point de vigilance.
+      La formation professionnelle entre dans les droits au travail et à la protection sociale. Le choix
+      d’une source d’énergie (nucléaire, renouvelables) n’est pas un droit de la grille : le droit à un
+      environnement sain se juge sur les garanties des personnes (information, participation du public,
+      protection des milieux). Les droits civiques couvrent qui peut voter et être élu, et les conditions
+      d’exercice du vote (inscription, procuration, vote par correspondance) ; le mode de scrutin et le
+      régime des mandats (cumul, incompatibilités) relèvent de l’organisation des pouvoirs publics et
+      n’entrent pas dans la grille. L’inégalité de revenu n’entre pas dans le droit à l’égalité et à la
+      non-discrimination : un argument de ce type s’affiche en point de vigilance.
     </li>
     <li value="3" id="regle-3">
       <strong>Recouvrements.</strong> Justice des mineurs : droits de l’enfant en principal, police et
@@ -102,15 +103,15 @@
       comités de l’ONU, ONG ; pour la santé, ordres professionnels et sociétés savantes ; organisations
       professionnelles et syndicales du droit, de la santé et de l’enseignement (Conseil national des
       barreaux, syndicats d’avocats et de magistrats…) ; organisations syndicales représentatives de salariés,
-      leurs fédérations professionnelles et leurs syndicats nationaux de branche ; avis du Conseil d’État
-      sur un projet ou une proposition de loi. L’UNAF est admise, avec la mention de son statut institutionnel.
-      Une association qui porte elle-même un dispositif est admise pour en décrire un risque, avec la
-      mention qu’elle est partie prenante. Les rapports parlementaires et les positions du Gouvernement
-      ou des groupes ne sont pas des sources : ils sont parties au débat. La Cour des comptes non plus :
-      elle évalue la dépense publique, pas les droits. Une source peut porter sur la mesure plutôt que
-      sur le texte, même si elle lui est antérieure. Quand un texte étend un droit contesté, au moins
-      une source critique figure en vigilance. Si aucune source admise ne le conteste, la qualification
-      le dit.
+      leurs fédérations professionnelles, leurs syndicats nationaux de branche et leurs unions confédérales
+      de retraités ; avis du Conseil d’État sur un projet ou une proposition de loi. L’UNAF est admise,
+      avec la mention de son statut institutionnel. Une association qui porte elle-même un dispositif
+      est admise pour en décrire un risque, avec la mention qu’elle est partie prenante. Les rapports
+      parlementaires et les positions du Gouvernement ou des groupes ne sont pas des sources : ils sont
+      parties au débat. La Cour des comptes non plus : elle évalue la dépense publique, pas les droits.
+      Une source peut porter sur la mesure plutôt que sur le texte, même si elle lui est antérieure. Quand
+      un texte étend un droit contesté, au moins une source critique figure en vigilance. Si aucune source
+      admise ne le conteste, la qualification le dit.
     </li>
     <li value="8" id="regle-8">
       <strong>Textes purement organisationnels.</strong> Ils ne sont pas qualifiés, pas plus que les
