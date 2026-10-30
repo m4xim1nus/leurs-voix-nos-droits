@@ -82,7 +82,8 @@ changent pas, ni la validation par Max.
 2. **Le brouillon**, `source/brouillons-fil/<id>.yaml` (format de la consigne
    ci-dessous). Claude le prépare lui-même, sans agent ni lot. Un texte déjà
    qualifié repart de sa version publiée : on ne touche qu'à ce que le nouveau
-   vote change, et on revérifie les sources sur le texte voté.
+   vote change, et on revérifie les sources sur le texte voté. Pour un texte
+   composite (règle 4), le décompte des sources se refait après le vote.
 3. **Le contrôle**, comme pour un lot (étape 3 du circuit).
 4. **Le chargement « à relire ».** Texte nouveau : `--brouillons`. Texte déjà
    validé ou écarté : `--brouillons … --remplacer "requalification, vote du JJ/MM/AAAA"`.
@@ -115,24 +116,31 @@ travail doit être factuel, sourcé, vérifiable, et signaler franchement les po
 
 - `docs/METHODO.md` : règles 1 à 13 (qualification et scrutins) — **à appliquer strictement**,
   en particulier : 1 (point de vue des personnes), 2 (périmètre ; propriété, ordre public et choix
-  d'une source d'énergie hors grille ; droits civiques dans `citoyennete`, grille v1 : qui vote et
+  d'une source d'énergie hors grille ; inégalité de revenu hors de `discriminations`, en vigilance ;
+  droits civiques dans `citoyennete`, grille v1 : qui vote et
   qui est élu, conditions du vote, mais ni le mode de scrutin ni le régime des mandats), 3
   (recouvrements ; mesure qui ne vise que des détenus → droit en cause principal, `police-justice`
   secondaire), 4 (sens droit par droit, un droit principal ; corps électoral : `citoyennete` selon
   le droit de vote des personnes, `discriminations` restreint si une source y voit une atteinte aux
   droits d'un peuple autochtone ; sens lu par rapport au droit
   applicable au jour du vote, jurisprudence comprise (rétablir une règle abrogée par le Conseil
-  constitutionnel restreint) ; texte composite : sens des mesures que les
+  constitutionnel restreint ; le droit du jour comprend son échéance légale : prolonger un dispositif
+  protecteur étend) ; texte composite : sens des mesures que les
   sources citent le plus, la mesure opposée en vigilance), 5 (vigilance), 6 (on qualifie le texte
   soumis au scrutin décisif), 7 (sources admises, dont les instances consultatives indépendantes,
-  l'ANSES, les syndicats représentatifs de salariés et leurs fédérations, les syndicats et ordres
+  l'ANSES, le HCFEA, l'UNAF (statut signalé), une association porteuse d'un dispositif pour en décrire
+  un risque (signalée partie prenante), les syndicats représentatifs de salariés, leurs fédérations et
+  leurs syndicats nationaux de branche affiliés, les syndicats et ordres
   du droit, de la santé et de l'enseignement, les avis du Conseil d'État ; une source peut porter
   sur la mesure plutôt que sur le texte ; **jamais** un rapport parlementaire, la Cour des comptes
   ni la position du Gouvernement ou d'un groupe ; si le texte **étend** un droit contesté, au
   moins une source critique en vigilance, et sinon la note dit « aucune critique trouvée parmi les
   sources admises »), 8 (non qualifiés → « écarté » : texte purement organisationnel, résolution,
   convention internationale, motion de censure spontanée, loi de finances de fin de gestion, texte vidé de toute mesure normative au
-  scrutin décisif), 9 (décisif = dernier vote de l'AN sur l'ensemble ; à défaut, pour un article
+  scrutin décisif ; une réforme de structure mise en cause par une source admise au nom d'un droit de la grille
+  reste qualifiable), 9 (décisif = dernier vote de l'AN sur l'ensemble ; vote sans scrutin public : le
+  dernier scrutin public reste décisif, avec mention ; rejet d'une partie d'une loi de finances sans
+  vote sur l'ensemble : affiché, pas décisif ; à défaut, pour un article
   unique, le vote sur l'article ou l'amendement adopté qui le supprime, voter pour allant alors
   contre le texte ; décisif sans aucune voix d'un côté → écarté ; texte adopté par 49.3 sans vote
   final : qualifié, compté dans aucun score, motions de censure en rôle `censure`), 10 (motions

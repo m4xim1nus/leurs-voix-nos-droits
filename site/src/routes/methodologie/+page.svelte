@@ -60,7 +60,8 @@
       du public, protection des milieux). Les droits civiques couvrent qui peut voter et être élu, et
       les conditions d’exercice du vote (inscription, procuration, vote par correspondance) ; le mode
       de scrutin et le régime des mandats (cumul, incompatibilités) relèvent de l’organisation des pouvoirs
-      publics et n’entrent pas dans la grille.
+      publics et n’entrent pas dans la grille. L’inégalité de revenu n’entre pas dans le droit à l’égalité
+      et à la non-discrimination : un argument de ce type s’affiche en point de vigilance.
     </li>
     <li value="3" id="regle-3">
       <strong>Recouvrements.</strong> Justice des mineurs : droits de l’enfant en principal, police et
@@ -75,13 +76,14 @@
       les droits des personnes étrangères et étend ceux de l’enfant. Le sens se lit par rapport au droit
       applicable au jour du vote, jurisprudence comprise : une loi qui plafonne ce que les tribunaux accordaient
       déjà restreint le droit, tout comme une loi qui rétablit une règle que le Conseil constitutionnel
-      avait abrogée, même assortie de la garantie qu’il exigeait. Dans un texte dont les mesures vont
-      en sens opposés pour un même droit, ce droit prend le sens des mesures que les sources citent le
-      plus souvent, et la mesure de sens opposé s’affiche en point de vigilance. Une mesure sur le corps
-      électoral se lit, pour les droits civiques, sur le droit de vote des personnes qu’elle ajoute à
-      la liste ou en retire ; quand une source y voit une atteinte aux droits d’un peuple autochtone,
-      le texte reçoit aussi le droit à l’égalité et à la non-discrimination, au sens « restreint ». Les
-      deux lectures sont alors comptées.
+      avait abrogée, même assortie de la garantie qu’il exigeait. Le droit applicable comprend son échéance
+      légale : prolonger un dispositif protecteur avant son extinction étend le droit. Dans un texte dont
+      les mesures vont en sens opposés pour un même droit, ce droit prend le sens des mesures que les
+      sources citent le plus souvent, et la mesure de sens opposé s’affiche en point de vigilance. Une
+      mesure sur le corps électoral se lit, pour les droits civiques, sur le droit de vote des personnes
+      qu’elle ajoute à la liste ou en retire ; quand une source y voit une atteinte aux droits d’un peuple
+      autochtone, le texte reçoit aussi le droit à l’égalité et à la non-discrimination, au sens « restreint ».
+      Les deux lectures sont alors comptées.
     </li>
     <li value="5" id="regle-5">
       <strong>Points de vigilance.</strong> Les critiques sourcées sur la mise en œuvre ou sur l’insuffisance
@@ -94,12 +96,15 @@
     <li value="7" id="regle-7">
       <strong>Sources.</strong> Commission nationale consultative des droits de l’homme (CNCDH), Défenseur
       des droits, Conseil constitutionnel, CNIL, Contrôleur général des lieux de privation de liberté
-      et autres instances consultatives indépendantes qui rendent des avis publics, ANSES pour la santé
-      et l’environnement, rapporteurs et comités de l’ONU, ONG ; pour la santé, ordres professionnels
-      et sociétés savantes ; organisations professionnelles et syndicales du droit, de la santé et de
-      l’enseignement (Conseil national des barreaux, syndicats d’avocats et de magistrats…) ; organisations
-      syndicales représentatives de salariés et leurs fédérations professionnelles ; avis du Conseil d’État
-      sur un projet ou une proposition de loi. Les rapports parlementaires et les positions du Gouvernement
+      et autres instances consultatives indépendantes qui rendent des avis publics (dont le Haut Conseil
+      de la famille, de l’enfance et de l’âge), ANSES pour la santé et l’environnement, rapporteurs et
+      comités de l’ONU, ONG ; pour la santé, ordres professionnels et sociétés savantes ; organisations
+      professionnelles et syndicales du droit, de la santé et de l’enseignement (Conseil national des
+      barreaux, syndicats d’avocats et de magistrats…) ; organisations syndicales représentatives de salariés,
+      leurs fédérations professionnelles et leurs syndicats nationaux de branche ; avis du Conseil d’État
+      sur un projet ou une proposition de loi. L’UNAF est admise, avec la mention de son statut institutionnel.
+      Une association qui porte elle-même un dispositif est admise pour en décrire un risque, avec la
+      mention qu’elle est partie prenante. Les rapports parlementaires et les positions du Gouvernement
       ou des groupes ne sont pas des sources : ils sont parties au débat. La Cour des comptes non plus :
       elle évalue la dépense publique, pas les droits. Une source peut porter sur la mesure plutôt que
       sur le texte, même si elle lui est antérieure. Quand un texte étend un droit contesté, au moins
@@ -114,7 +119,9 @@
       spontanées (article 49, alinéa 2) ne sont pas qualifiées non plus : elles ne portent sur aucun
       texte. Les lois de finances de fin de gestion, qui ne font qu’ouvrir et annuler les crédits de
       l’année, ne le sont pas non plus ; les lois de finances initiales et rectificatives se
-      qualifient comme les autres textes. Les textes examinés puis écartés sont
+      qualifient comme les autres textes. Une réforme de structure n’est pas purement
+      organisationnelle si une source admise la met en cause au nom d’un droit de la grille. Les
+      textes examinés puis écartés sont
       <a href="/textes">publiés avec leur motif</a>.
     </li>
   </ol>
@@ -156,7 +163,12 @@
       et que le texte n’est plus voté : voter pour, c’est alors voter contre le texte. Un texte adopté
       par le 49.3, sans vote final : il est qualifié, mais ne compte dans aucun score, car le scrutin
       sur une motion de censure n’enregistre que les voix pour la censure. Ses motions de censure s’affichent,
-      groupe par groupe.
+      groupe par groupe. Quand le dernier vote sur l’ensemble n’est pas un scrutin public, le dernier
+      scrutin public reste le vote décisif, avec la date du texte sur lequel il a porté : c’est le seul
+      vote nominatif disponible. Quand une loi de finances est rejetée par le rejet d’une de ses parties,
+      sans vote sur l’ensemble, ce vote est affiché mais n’est pas décisif, car il ne porte pas sur les
+      mesures de la partie non discutée ; à défaut d’un vote ultérieur sur l’ensemble, le texte n’est
+      pas qualifié.
     </li>
     <li value="10" id="regle-10">
       <strong>Motions de rejet : affichées, pas comptées.</strong> Une motion peut être votée pour des

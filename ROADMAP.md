@@ -132,7 +132,7 @@ pour y toucher.
 
    Au 30/10/2026, aucun de ces textes n'a de nouveau vote décisif : rien à
    valider. Sources et mesures préparées (fiches privées), questions de méthode
-   dans `docs/A_VALIDER.md`. Prochains rendez-vous : commission des rapports
+   tranchées par Max le 30/10 (`docs/METHODO.md`). Prochains rendez-vous : commission des rapports
    locatifs le 03/11, commission de Territoires zéro chômeur le 10/11 (réunion
    éventuelle), vote solennel
    du PLF inscrit le 17/11.

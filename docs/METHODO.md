@@ -26,7 +26,12 @@ les mesures qui ne visent que des personnes détenues (règle 3), le corps
 finances de fin de gestion (règle 8), l'article devenu seul au scrutin
 décisif (règle 11). Au lot 6, le même jour : la loi qui rétablit une règle
 abrogée par le Conseil constitutionnel (règle 4), l'article dont les
-sources ne s'accordent pas sur le sens (règle 11).
+sources ne s'accordent pas sur le sens (règle 11). Le 30/10/2026, avant les
+premiers votes suivis au fil de l'eau : l'échéance légale d'un dispositif
+(règle 4), l'inégalité de revenu (règle 2), les syndicats de branche, le HCFEA,
+l'UNAF et les associations porteuses d'un dispositif (règle 7), la réforme de
+structure (règle 8), le vote sans scrutin public et le rejet d'une partie d'une
+loi de finances (règle 9), l'étiquette `regime-exception`.
 
 ## Grille des droits
 
@@ -34,7 +39,9 @@ Grille v1 : `pipeline/referentiels/droits.yaml`. Douze droits et deux
 étiquettes transversales (`outre-mer`, `regime-exception`). La v1 ajoute à
 la v0 les **droits civiques et politiques** (`citoyennete` : droit de vote,
 élections, citoyenneté), d'abord hors grille (corps électoral de
-Nouvelle-Calédonie).
+Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libellé
+à tout dispositif temporaire ou expérimental, y compris protecteur, si le texte
+voté le reste ; un texte qui le pérennise ne la reçoit pas.
 
 1. **Point de vue.** Le sens se lit toujours du point de vue des droits des
    personnes concernées, jamais des prérogatives de l'État. Un texte qui
@@ -60,6 +67,9 @@ Nouvelle-Calédonie).
    garanties des personnes (information, participation du public,
    protection des milieux). Les deux lois d'accélération de 2023, qui
    allègent les mêmes garanties, sont donc qualifiées dans le même sens.
+   L'**inégalité de revenu** n'entre pas dans `discriminations`, qui vise
+   l'égalité, le racisme et le handicap : un argument de ce type s'affiche en
+   vigilance (zones à faibles émissions).
 3. **Recouvrements**, tranchés par une règle fixe :
    - justice des mineurs → `enfants` principal, `police-justice`
      secondaire ;
@@ -80,7 +90,10 @@ Nouvelle-Calédonie).
    la maladie, 2024). De même, une loi qui rétablit une règle que le
    Conseil constitutionnel avait abrogée, en l'assortissant de la garantie
    qu'il exigeait, restreint le droit par rapport au jour du vote (purge
-   des nullités en matière correctionnelle, 2024).
+   des nullités en matière correctionnelle, 2024). Le droit applicable au
+   jour du vote comprend son **échéance légale** : prolonger un dispositif
+   protecteur avant son extinction étend le droit (encadrement des loyers,
+   2026).
    Dans un **texte composite** dont les mesures vont en sens opposés pour
    un même droit, le sens de ce droit est celui des mesures que les sources
    admises citent le plus souvent. La mesure de sens opposé s'affiche en
@@ -104,7 +117,8 @@ Nouvelle-Calédonie).
      créées par la loi ou le règlement qui rendent des avis publics (Haut
      Conseil à l'égalité, Commission nationale du débat public, Haut Comité
      pour le logement des personnes défavorisées, Autorité
-     environnementale…), et, pour la santé et l'environnement, l'ANSES ;
+     environnementale, conseils du Haut Conseil de la famille, de l'enfance
+     et de l'âge…), et, pour la santé et l'environnement, l'ANSES ;
    - rapporteurs et comités de l'ONU ;
    - ONG ;
    - pour la santé, ordres professionnels et sociétés savantes ;
@@ -113,9 +127,15 @@ Nouvelle-Calédonie).
      de France, Syndicat de la magistrature…) ;
    - organisations syndicales représentatives de salariés (CGT, CFDT, FO,
      CFE-CGC, CFTC, UNSA, FSU, Solidaires), y compris leurs fédérations
-     professionnelles, qui parlent en leur nom dans une branche ou une
-     fonction publique ; pas les syndicats ou sections d'entreprise ;
+     professionnelles et les syndicats nationaux de branche qui leur sont
+     affiliés (SNJ-CGT, SNME-CFDT), qui parlent en leur nom dans une branche
+     ou une fonction publique ; pas les syndicats ou sections d'entreprise ;
    - avis du Conseil d'État sur un projet ou une proposition de loi.
+
+   L'UNAF est admise, avec la mention de son statut institutionnel. Une
+   association qui porte elle-même un dispositif est admise pour en décrire
+   un risque, avec la mention qu'elle est partie prenante (Territoires zéro
+   chômeur de longue durée).
 
    Ne sont pas des sources les rapports parlementaires ni les positions du
    Gouvernement ou des groupes, qui sont parties au débat. La Cour des
@@ -146,6 +166,9 @@ Nouvelle-Calédonie).
    relative aux lois de finances, elles ne font qu'ouvrir et annuler les
    crédits de l'année, sans disposition fiscale. Les lois de finances
    initiales et rectificatives se qualifient comme les autres textes.
+   Une **réforme de structure** n'est pas purement organisationnelle si une
+   source admise la met en cause au nom d'un droit de la grille (société-mère
+   de l'audiovisuel public et indépendance de l'information).
 
 ## Scrutins retenus
 
@@ -171,6 +194,15 @@ Nouvelle-Calédonie).
    clés compris. Ses motions de censure s'affichent groupe par groupe
    (rôle `censure`) : un scrutin de censure n'enregistre que les voix pour
    la censure, et ne dit donc rien de ceux qui ne l'ont pas votée.
+   Quand le dernier vote sur l'ensemble **n'est pas un scrutin public**, le
+   dernier scrutin public sur l'ensemble reste décisif, seul vote nominatif
+   disponible, avec la mention « dernier vote public, sur le texte du
+   JJ/MM/AAAA ».
+   Quand une loi de finances est **rejetée par le rejet d'une de ses parties**,
+   sans vote sur l'ensemble (PLFSS 2027, 23/10/2026), ce vote est affiché et
+   n'est pas décisif : il ne porte pas sur les mesures de la partie non
+   discutée (règle 6). Le décisif vient d'un vote ultérieur sur l'ensemble. À
+   défaut, le texte n'est pas qualifié.
 10. **Motions de rejet préalable : affichées, pas comptées.** Sur
     l'immigration, la motion écologiste a été adoptée (270-265) avec les
     voix du RN (87-0) et de LR (40-2). Ces deux groupes ont ensuite voté le
