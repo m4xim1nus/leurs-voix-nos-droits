@@ -163,7 +163,7 @@ pour y toucher.
     pipeline/admin à l'octet). Contrôles : droits touchés sans sens, au moins
     une source par droit, aucun scrutin, termes interdits. Une validation par
     Max et le bouton « Publier », comme pour une qualification.
-14. ⏳ (rédigé, règles 20 à 22 : en attente de la validation de Max) **Méthodologie** : règles écrites dans `docs/METHODO.md` et sur le
+14. ✅ (règles 20 à 22, validées par Max le 30/10/2026) **Méthodologie** : règles écrites dans `docs/METHODO.md` et sur le
     site (état d'un texte, fiche de suivi, texte qualifié en navette). **Leur
     rédaction est à valider par Max avant la mise en ligne.**
 15. ⏳ (quatre fiches préparées et le tri de la file « À traiter » présenté à Max le 30/10/2026 : en attente de ses décisions) **Lot test** de 3 à 5 textes inscrits, parmi : relance du logement

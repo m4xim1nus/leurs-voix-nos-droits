@@ -31,7 +31,8 @@ premiers votes suivis au fil de l'eau : l'échéance légale d'un dispositif
 (règle 4), l'inégalité de revenu (règle 2), les syndicats de branche, le HCFEA,
 l'UNAF et les associations porteuses d'un dispositif (règle 7), la réforme de
 structure (règle 8), le vote sans scrutin public et le rejet d'une partie d'une
-loi de finances (règle 9), l'étiquette `regime-exception`.
+loi de finances (règle 9), l'étiquette `regime-exception`. Le même jour, pour le
+suivi des textes en cours : les règles 20 à 22.
 
 ## Grille des droits
 
@@ -295,9 +296,6 @@ voté le reste ; un texte qui le pérennise ne la reçoit pas.
     positions, qui servent à l'affichage scrutin par scrutin.
 
 ## Textes en cours
-
-**Rédaction proposée, à valider par Max avant la mise en ligne** (règles 20 à
-22, ROADMAP, item 14).
 
 20. **État d'un texte.** L'état d'un texte est un fait lu dans l'open data, jamais
     une appréciation : loi promulguée, en navette (avec la chambre où il est
