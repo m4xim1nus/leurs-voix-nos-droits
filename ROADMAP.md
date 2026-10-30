@@ -32,6 +32,25 @@ demande des plages de 256 Kio et reprend un fichier partiel d'un lancement
 4. ⏳ Relecture des scores des six textes témoins avec Max (livrable de
    l'étape 2).
 
+## Reprise à la fin du dump de la XVIe
+
+Le dump est fini quand `an_amendements_16` figure dans `data/raw/manifeste.json`
+(un seul signal fiable : 3173 / 3173 dans `etat.json` le précède de peu). Le code de
+l'item 6 attend sur la branche `worktree-textes-en-cours`, pas encore sur `main`.
+
+1. **Dossier principal** : `git pull`, `lvnd build`, `lvnd check` (la ligne « XVIe :
+   amendements présents » doit passer), mesure du rattachement dans `docs/SOURCES.md`,
+   `scores_*.csv` inchangés, relecture des six témoins avec Max. Commit, puis push.
+2. **Worktree `textes-en-cours`** : fusionner `origin/main` et tester.
+3. **Max** : `lvnd archiver an_amendements_16 --sortie /tmp/Amendements.json.zip`, puis
+   `gh release create donnees-figees /tmp/Amendements.json.zip`, push de la branche sur
+   `main`, puis `gh workflow run donnees-quotidien.yml`. Décision de Max : le zip est
+   publié tel quel.
+4. **Contrôler le premier lancement**, puis fermer le Reliquat XVIe (rotation, `CLAUDE.md`).
+5. **Au fil des votes reste ouvert** (items 8 et 15, jusqu'au 28/02/2027). Dès que le
+   catalogue est à jour : fiches courtes des deux votes du 29/10 (AESH, 166-16 ; parcours
+   de soins, 152-5), demandées par Max.
+
 ## Cycle en parallèle : Au fil des votes
 
 Ouvert le 30/10/2026 par Max, pendant que le Reliquat XVIe se termine dans
