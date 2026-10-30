@@ -5,195 +5,41 @@ il porte le cycle en cours, et seulement lui. Ce qui est livré est dans
 `CHANGELOG.md`, les cycles à venir et les idées dans `BACKLOG.md`. Règles
 de tenue : `CLAUDE.md`, section « Suivi ».
 
-## Cycle en cours : Reliquat XVIe
+## Cycle en cours : Stock des lois de finances
 
-But : finir l'étape 2 de la v1, c'est-à-dire avoir les amendements de la
-XVIe et mesurer leur rattachement comme pour la XVIIe. Items `[→Reliquat
-XVIe]` de `BACKLOG.md`.
+But : qualifier les six lois de finances adoptées par 49.3 sans vote final, pour
+qu'elles figurent sur le site avec leurs motions de censure. Elles ne comptent
+dans aucun score (règle 9). Items `[→Stock des lois de finances]` de
+`BACKLOG.md`. Le modèle est `plf-2026` dans `data/editorial.json`.
 
-Déjà fait dans ce cycle : `lvnd download` garde chaque octet reçu,
-demande des plages de 256 Kio et reprend un fichier partiel d'un lancement
-à l'autre.
+| Texte | Dossier | Scrutins au catalogue | Loi |
+|---|---|---|---|
+| PLF 2023 | DLR5L16N45988 | 201 | 2022-1726 |
+| PLFSS 2023 | DLR5L16N46347 | 43 | 2022-1616 |
+| PLF 2024 | DLR5L16N48397 | 99 | 2023-1322 |
+| PLFSS 2024 | DLR5L16N48683 | 30 | 2023-1250 |
+| PLF 2025 | DLR5L17N50198 | 344 | 2025-127 |
+| PLFSS 2025 | DLR5L17N50588 | 79 | 2025-199 |
 
-1. ⏳ **Dump `an_amendements_16`** (363 Mo, figé le 28/06/2024). Bloqué à
-   94,1 Mo : depuis le 29/10/2026 vers 18 h, le serveur de l'AN ne sert
-   plus aucune plage au-delà d'environ 1 Mo. Relance :
-   `cd pipeline && uv run lvnd download an_amendements_16 >> ../data/raw/download_16.log 2>&1`.
-   Le dump est complet quand `an_amendements_16` figure dans
-   `data/raw/manifeste.json`.
-2. ⏳ Puis `lvnd build` et `lvnd check` (aujourd'hui en échec sur cette
-   seule ligne), et mesure du rattachement des scrutins sur amendement de
-   la XVIe dans `docs/SOURCES.md`, avec la note sur le service par
-   intermittence du serveur.
-3. ⏳ **Action hebdomadaire « Données AN »** (`.github/workflows/donnees.yml`) :
-   son seul lancement (29/10/2026, manuel) a échoué au téléchargement, pour
-   la même raison. Tant qu'elle échoue, elle ne met à jour ni les données
-   ni l'admin. Prochain lancement : lundi, 4 h UTC.
-4. ⏳ Relecture des scores des six textes témoins avec Max (livrable de
-   l'étape 2).
+Aucun de ces six dossiers n'a de vote sur l'ensemble au catalogue (mesuré le
+30/10/2026).
 
-## Reprise à la fin du dump de la XVIe
-
-Le dump est fini quand `an_amendements_16` figure dans `data/raw/manifeste.json`
-(un seul signal fiable : 3173 / 3173 dans `etat.json` le précède de peu). Le code de
-l'item 6 attend sur la branche `worktree-textes-en-cours`, pas encore sur `main`.
-
-1. **Fin du Reliquat, dossier principal** : `git pull`, `lvnd build`, `lvnd check` (la ligne
-   « XVIe : amendements présents » doit passer), mesure du rattachement dans
-   `docs/SOURCES.md`, `scores_*.csv` inchangés, relecture des six témoins avec Max. Commit,
-   puis push.
-2. **Mise en service de l'item 6, worktree `textes-en-cours`** : fusionner `origin/main` et
-   tester. Puis Max : `lvnd archiver an_amendements_16 --sortie /tmp/Amendements.json.zip`,
-   `gh release create donnees-figees /tmp/Amendements.json.zip`, push de la branche sur
-   `main`, `gh workflow run donnees-quotidien.yml`. Décision de Max : le zip est publié tel
-   quel. Contrôler ce premier lancement.
-3. **Clôture des deux cycles** (rotation, `CLAUDE.md`) : entrée de `CHANGELOG.md` et tag,
-   items livrés retirés de `BACKLOG.md`, cycle suivant choisi par Max dans `ROADMAP.md`.
-
-Un cycle est un cycle de développement. Décision de Max du 30/10/2026 : Au fil des votes se
-ferme ici, sans attendre le calendrier parlementaire. Le lot test a rendu son bilan. Le
-reste relève du fonctionnement courant (`docs/QUALIFICATION.md`, « Au fil de l'eau ») : les
-textes de l'item 8 selon leurs votes, les fiches de suivi de casseurs-payeurs et des ingérences
-à leur inscription, et d'abord les fiches courtes des votes du 29/10 (AESH, 166-16 ; parcours
-de soins, 152-5), demandées par Max dès que le catalogue est à jour.
-
-## Cycle en parallèle : Au fil des votes
-
-Ouvert le 30/10/2026 par Max, pendant que le Reliquat XVIe se termine dans
-une autre copie de travail. Il réunit les anciens candidats « Textes en
-cours » et « Qualification continue ». Items `[→Au fil des votes]` de
-`BACKLOG.md`.
-
-But : savoir où en est chaque texte, tenir les qualifications à jour vote
-après vote, et montrer les votes à venir avec des faits, pour que chacun
-puisse interpeller à temps. La promesse du site : voir qui vote quoi avant
-et après, pas faire basculer un vote (au 29/10/2026, 1 décisif qualifié sur
-94 se joue à 10 voix ou moins).
-
-**Décisions de Max (30/10/2026)**
-
-- Un seul cycle ; les lois de finances 2023 à 2025, simple stock à
-  rattraper, en sortent.
-- Avant le vote : droits touchés et sources publiques, **sans sens ni
-  score**. Un texte déjà qualifié garde son sens, avec la mention « sur le
-  texte voté le… ».
-- `/en-cours` n'affiche que des textes retenus à la main (statut
-  `a-suivre`) et les textes qualifiés en navette. Les mots-clés ne font que
-  présélectionner.
-- Un texte qualifié encore en navette reste dans les scores (règle 9), avec
-  la mention « vote de 1re lecture, texte encore en navette ».
-
-**Échéances**
-
-- **18/11/2026** : 2e lecture des rapports locatifs, texte qualifié inscrit
-  les 18 et 19/11. Les items 1 à 5, 7, 8 et 9 doivent tourner avant cette
-  date.
-- **Mi-décembre** : le front et le lot test, pour qu'ils servent encore
-  plus de deux mois.
-- **28/02/2027** : fin de la session, avant la présidentielle.
-
-**Dépendance** : l'autre copie de travail modifie `sources.py`, `build.py`,
-`cli.py`, `amendements.py` et `donnees.yml`. On attend qu'elle ait commité
-pour y toucher.
-
-### Socle de données
-
-1. ✅ **Dosleg, décisions du Sénat seulement** : ajouter `senat_dosleg`
-   (`https://data.senat.fr/data/dosleg/dosleg.zip`) à `sources.py`, et
-   reprendre de `quifaitlaloi/pipeline/qfl/senat.py` les décisions de
-   séance, les séances, l'activité et l'état des dossiers. Pas de vote de
-   sénateur·ice : ils restent au cycle Sénat. Le dossier AN enregistre ces
-   décisions avec retard (casseurs-payeurs, voté le 27/10/2026). Volume à
-   relever dans `docs/SOURCES.md`.
-2. ✅ **État de chaque texte** : `lvnd/encours.py`, adapté de
-   `qfl/encours.py` (241 lignes) et de ce qu'il utilise de `parcours.py`
-   (501 lignes). Même périmètre : voté au moins une fois en séance, ni
-   promulgué ni adopté définitivement, écarté s'il est retiré, rejeté,
-   caduc, fusionné ou sans acte depuis 12 mois. Exports à part
-   (`en_cours*.csv`), sans effet sur les scores : `scores_*.csv` doivent
-   rester identiques à l'octet. Il faut aussi un état pour **chaque** texte
-   qualifié, y compris ceux de la XVIe (loi, en navette avec la chambre
-   attendue, rejeté, à l'arrêt).
-3. ✅ **Agenda de l'AN** : dump
-   `17/vp/reunions/Agenda.json.zip` (8,5 Mo, quotidien), export des points
-   de séance et de commission non supprimés et reliés à un dossier. Le mot
-   est « inscrit », jamais « sera voté » : sept textes sont inscrits le seul
-   19/11/2026, et une niche ne les examine pas toujours tous. Horizon
-   constaté : environ 3 semaines.
-4. ✅ **Catalogue élargi** : `textes.csv` et D1 reçoivent aussi les textes
-   en cours ou inscrits sans scrutin public à l'AN (66 des 126 textes en
-   cours au 28/10/2026, dont casseurs-payeurs). Vérifier ce que cela change
-   dans `lvnd check`, le filtre par défaut de l'admin, le site et le volume
-   de `sync-admin`.
-5. ✅ **Alertes** (`lvnd check` et file « À traiter » de l'admin) : vote sur
-   l'ensemble postérieur au décisif d'un texte qualifié ; texte écarté pour
-   unanimité qui reçoit un vote contesté ; premier décisif d'un texte non
-   traité ; texte non traité inscrit à l'ordre du jour. Ce sont des
-   **avertissements** : un nouveau vote ne doit pas bloquer l'Action, qui ne
-   commite que si `check` passe.
-6. ⏳ (code et Action `donnees-quotidien.yml` prêts ; en service quand les amendements de la XVIe seront dans la release `donnees-figees`) **Mise à jour quotidienne** (dossiers, agenda, scrutins, Dosleg), une
-   fois l'Action réparée (item 3 du Reliquat XVIe). `build` tourne sans le
-   dump des amendements mais rattache alors moins bien les scrutins : la
-   passe légère réutilise donc l'archive en cache et ne doit jamais dégrader
-   `amendements.csv`. Elle ne commite que si un export a changé.
-
-### Qualification au fil de l'eau
-
-7. ✅ **Circuit** : section « au fil de l'eau » dans `docs/QUALIFICATION.md`
-   (un texte à la fois dès l'alerte, fiche courte, même validation par Max).
-   Corriger ce qui gêne ce rythme : une publication faite avant la validation
-   d'une requalification retire le texte du site, alors qu'elle doit y
-   laisser la version publiée ; `sync-admin --brouillons` n'ajoute pas de
-   révision à un texte qui en a déjà une.
-8. ⏳ **Premiers textes**, à traiter selon leurs votes :
-   - rapports locatifs (DLR5L17N53069, 18-19/11) : nouveau décisif, sens à
-     relire (règle 6) ;
-   - Territoires zéro chômeur (DLR5L17N51962, écarté à 96-0, 2e lecture le
-     19/11) ;
-   - PLF 2027 (vote solennel inscrit le 17/11), PLFSS 2027, abrogation des
-     ZFE (DLR5L17N54557) ;
-   - les textes du backlog : AGRASC, mariages simulés, concentration des
-     médias, audiovisuel public.
-
-   Au 30/10/2026, aucun de ces textes n'a de nouveau vote décisif : rien à
-   valider. Sources et mesures préparées (fiches privées), questions de méthode
-   tranchées par Max le 30/10 (`docs/METHODO.md`). Prochains rendez-vous : commission des rapports
-   locatifs le 03/11, commission de Territoires zéro chômeur le 10/11 (réunion
-   éventuelle), vote solennel
-   du PLF inscrit le 17/11.
-
-### Front (des faits, aucun nouveau jugement)
-
-9. ✅ **État sur les fiches texte** et dans les listes ; mention « vote de
-   1re lecture, texte encore en navette » à côté d'un vote compté : ✅ fait.
-   Retrait, par une publication de l'admin, des « (non promulgué) » saisis dans
-   les titres : publié par Max le 30/10/2026 (17 textes, et les deux « (rejetée) »).
-10. ✅ **Page `/en-cours`**, rangée par échéance (inscrit à une date, attendu
-    à l'AN, au Sénat, en CMP, suite pas encore connue) : dernier vote de l'AN
-    par groupe, mention « pas encore qualifié » s'il y a lieu. Navigation,
-    encart d'accueil, section de la méthodologie, fichiers sur `/donnees`.
-    Repères : `quifaitlaloi/docs/CONCEPTION.md` §19. Une page presque vide
-    après le 28/02 doit le dire simplement (fin de session).
-11. ✅ **« Prochains votes » sur la fiche député** : textes retenus attendus
-    à l'AN, son vote et celui de son groupe à la lecture précédente, courriel
-    prérempli au ton factuel. Rien quand le texte est au Sénat.
-12. ✅ **Flux RSS et iCal statiques**, générés au build, sans donnée
-    personnelle.
-
-### Suivi avant le vote
-
-13. ✅ (migration D1 et déploiement de l'admin à faire par Max) **Statut `a-suivre`** : migration D1, écran de l'admin, liste à part
-    dans `editorial.json` (changement de format, test croisé
-    pipeline/admin à l'octet). Contrôles : droits touchés sans sens, au moins
-    une source par droit, aucun scrutin, termes interdits. Une validation par
-    Max et le bouton « Publier », comme pour une qualification.
-14. ✅ (règles 20 à 22, validées par Max le 30/10/2026) **Méthodologie** : règles écrites dans `docs/METHODO.md` et sur le
-    site (état d'un texte, fiche de suivi, texte qualifié en navette). **Leur
-    rédaction est à valider par Max avant la mise en ligne.**
-15. ⏳ (publié par Max le 30/10/2026 : logement et régularisation. Fiches prêtes dans `source/brouillons-suivi-attente/`, à charger dès l'inscription : casseurs-payeurs et ingérences. Bilan : 4 textes sur 4 sourcés, environ 15 minutes de recherche. Tri de la file décidé par Max : six écarts à publier, six textes attendent leur vote) **Lot test** de 3 à 5 textes inscrits, parmi : relance du logement
-    (DLR5L17N54608, 17-20/11), régularisation des travailleurs sans-papiers
-    (DLR5L17N54998, 19/11), ingérences étrangères (DLR5L17N54703) et
-    casseurs-payeurs (DLR5L17N54925) dès leur inscription. Consigne aux agents
-    dans `docs/QUALIFICATION.md`. Faute de source admise, la fiche le dit.
-    Bilan avec Max : temps passé, part de textes sourcés à temps, et suite à
-    donner.
+1. ⏳ **Attribuer les motions de censure à chaque texte.** Leur intitulé ne nomme
+   pas le texte. En XVIIe, les dossiers le disent : V693 pour le PLF 2025 ; V519,
+   V694, V739 et V791 pour le PLFSS 2025. En XVIe, seule V664 est rattachée (PLFSS
+   2023) ; 25 motions du 49.3, du 24/10/2022 au 21/12/2023, n'ont aucun dossier
+   (hors retraites, V1240 et V1241), et certaines peuvent porter sur un autre texte
+   (programmation des finances publiques). On les attribue une à une, chacune d'après
+   une source officielle de l'AN, et une motion sans attribution sûre n'est pas retenue.
+2. ⏳ **Préparer les six qualifications**, lot par le circuit de
+   `docs/QUALIFICATION.md` : mesures qui touchent des droits, sens selon les règles
+   de la grille (règle 4 pour un texte composite), au moins une source publique admise,
+   résumé qui dit l'adoption par 49.3. Faute de source admise, le texte attend. Les
+   sources de 2022-2023 seront plus rares : la fiche le dit.
+3. ⏳ **Décision de Max, texte par texte**, puis validation et publication.
+4. ⏳ **Écarter les dossiers d'engagement de responsabilité** rattachés à part, avec
+   leur motif : DLR5L17N50975, DLR5L17N51427, DLR5L17N51462, DLR5L17N51475 (PLFSS
+   2025) et DLR5L17N53689 (PLF 2026, déjà qualifié avec ces motions). À faire après
+   la publication des textes dont ils portent les motions.
+5. ⏳ **Contrôle final** : `lvnd check` vert et `scores_*.csv` identiques à
+   l'octet, le 49.3 ne comptant dans aucun score.

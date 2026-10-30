@@ -30,34 +30,32 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] Catalogue : `cc_url` en 404 quand la décision est rendue l'année suivant la saisine (2022-846 DC, LOPMI : l'URL valide est `/decision/2023/2022846DC.htm`) (claude, 2026-10-29)
 - [creuser] Règle 7 : un comité national de la CGT (privés d'emploi) vaut-il fédération ? Aucune source récente lue, à trancher si une position sur Territoires zéro chômeur paraît (claude, 2026-10-30)
 - [ ] Alertes : aucune ne signale un texte rejeté par le rejet d'une partie (PLFSS 2027, V9097) ni un vote sur l'ensemble sans scrutin public ; `etat` les suit, pas `lvnd check` (claude, 2026-10-30)
+- [ ] Relire `mots_cles.yaml` (brouillon), qui présélectionne les textes à suivre : motifs larges, sources de faux positifs (« eau », « soins », « violences », « justice ») (claude, 2026-10-29)
+- [ ] `lvnd check` : le délai de 14 jours (`DELAI_AMENDEMENTS`) retire à tort du taux de la XVIe ses derniers scrutins (3 041/3 053 affichés, au lieu de 3 159/3 173), alors que cette législature est figée (claude, 2026-10-30)
+- [ ] Actions : Node.js 20 est déprécié et `ubuntu-latest` migre vers Ubuntu 26 depuis le 19/10/2026 (annotations de l'Action « Données AN ») (claude, 2026-10-30)
 
-## Cycle en cours : Reliquat XVIe
+## Cycle en cours : Stock des lois de finances
 
-- [→Reliquat XVIe] `lvnd download` : depuis le 29/10 vers 18 h, le serveur de l'AN ne sert plus aucune plage au-delà d'environ 1 Mo (206 sans contenu) et coupe les GET complets ; la reprise par plages ne peut alors pas aboutir (dump `an_amendements_16` bloqué à 94,1 / 363,3 Mo) (claude, 2026-10-29)
-- [→Reliquat XVIe] Mettre à jour `docs/SOURCES.md` : le serveur de l'AN sert les plages par intermittence ; `download` reprend désormais d'un lancement à l'autre (claude, 2026-10-29)
-- [→Reliquat XVIe] Action hebdomadaire « Données AN » en échec au téléchargement (lancement manuel du 29/10/2026) : elle ne met à jour ni les données ni l'admin tant que le serveur de l'AN coupe (claude, 2026-10-29)
+- [→Stock des lois de finances] Qualifier les lois de finances adoptées par 49.3 sans vote final, comptées dans aucun score (règle 9) : PLF 2023, 2024 et 2025, PLFSS 2023, 2024 et 2025 ; écarter alors les dossiers de motions de censure rattachés à part (DLR5L17N50975, DLR5L17N51427, DLR5L17N51462, DLR5L17N51475, DLR5L17N53689) (claude, 2026-10-29)
 
-## Cycle en parallèle : Au fil des votes
+## Fonctionnement courant
 
-Les textes que la v1 laisse de côté, au fil des votes finaux (liste C :
-textes sans décisif lors des tris, `source/relecture-tri*.md`), et le suivi
-des textes avant leur adoption.
+Hors cycle : les textes se traitent selon leurs votes, un à la fois, par le circuit
+« Au fil de l'eau » de `docs/QUALIFICATION.md`. Au 30/10/2026, seuls les deux votes du 29/10
+ci-dessous attendent une fiche.
 
-- [→Au fil des votes] Suivre les textes avant leur adoption, pour interpeller au bon moment (claude, 2026-10-29)
-- [→Au fil des votes] Candidat `etrangers` en attente d'un vote final : mariages simulés ou arrangés (DLR5L16N49075, examen inachevé le 25/06/2026 ; 35 amendements votés le 26/06/2025, six suspensions de séance seulement le 25/06/2026) (claude, 2026-10-29)
-- [→Au fil des votes] `libertes` : suivre la concentration des médias (DLR5L17N53329) et la réforme de l'audiovisuel public (DLR5L16N47697), en attente d'un vote final (user:moi, 2026-10-29)
-- [→Au fil des votes] AGRASC (DLR5L17N53159, écarté au lot 6) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart. Au prochain passage, actualiser le motif, qui ne cite pas les articles 5 et 5 bis A (décision de Max, 30/10/2026) (claude, 2026-10-29)
-- [→Au fil des votes] `lvnd check` : alerte quand un texte qualifié reçoit un vote sur l'ensemble postérieur à son décisif (texte en navette, règle 9) (claude, 2026-10-29)
-- [→Au fil des votes] `sync-admin --brouillons` : un texte qui a déjà une révision (brouillon retiré d'un lot précédent) ne reçoit pas de révision « brouillon » au chargement suivant (DLR5L17N52087) (claude, 2026-10-29)
-- [→Au fil des votes] Relire `mots_cles.yaml` (brouillon), qui présélectionne les textes à suivre : motifs larges, sources de faux positifs (« eau », « soins », « violences », « justice ») (claude, 2026-10-29)
+- [ ] Fiches courtes des votes du 29/10/2026, demandées par Max dès le catalogue à jour : AESH (DLR5L17N54901, V9203, 166-16) et parcours de soins (DLR5L17N54898, V9241, 152-5) (user:moi, 2026-10-30)
+- [ ] Rapports locatifs (DLR5L17N53069) : 2e lecture inscrite les 18 et 19/11/2026, commission le 03/11 ; nouveau décisif, sens à relire (règle 6) (claude, 2026-10-30)
+- [ ] Territoires zéro chômeur (DLR5L17N51962, écarté à 96-0) : commission le 10/11, 2e lecture inscrite le 19/11/2026 (claude, 2026-10-30)
+- [ ] PLF 2027 (vote solennel inscrit le 17/11/2026), PLFSS 2027, abrogation des ZFE (DLR5L17N54557) (claude, 2026-10-30)
+- [ ] Fiches de suivi prêtes dans `source/brouillons-suivi-attente/`, à charger dès l'inscription : casseurs-payeurs (DLR5L17N54925) et ingérences étrangères (DLR5L17N54703) (claude, 2026-10-30)
+- [ ] Candidat `etrangers` en attente d'un vote final : mariages simulés ou arrangés (DLR5L16N49075, examen inachevé le 25/06/2026 ; 35 amendements votés le 26/06/2025, six suspensions de séance seulement le 25/06/2026) (claude, 2026-10-29)
+- [ ] `libertes` : suivre la concentration des médias (DLR5L17N53329) et la réforme de l'audiovisuel public (DLR5L16N47697), en attente d'un vote final (user:moi, 2026-10-29)
+- [ ] AGRASC (DLR5L17N53159, écarté au lot 6) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart. Au prochain passage, actualiser le motif, qui ne cite pas les articles 5 et 5 bis A (décision de Max, 30/10/2026) (claude, 2026-10-29)
 
 ## Cycles candidats
 
 Un cycle à la fois, choisi et nommé au moment de l'ouvrir.
-
-### Stock des lois de finances
-
-- [→Stock des lois de finances] Qualifier les lois de finances adoptées par 49.3 sans vote final, comptées dans aucun score (règle 9) : PLF 2023, 2024 et 2025, PLFSS 2023, 2024 et 2025 ; écarter alors les dossiers de motions de censure rattachés à part (DLR5L17N50975, DLR5L17N51425, DLR5L17N53597, DLR5L17N53619) (claude, 2026-10-29)
 
 ### XVe
 
@@ -96,7 +94,6 @@ peu : mêmes écrans, même validation, même bouton « Publier ». Garde-fous :
 LLM propose et ne valide ni ne publie jamais ; chaque proposition dit qu'elle
 vient de lui ; un cas non prévu remonte à un humain, sans règle inventée.
 
-- [→Pré-qualification] Prérequis : l'Action quotidienne (`Au fil des votes`, item 6) et l'Action « Données AN » réparée (claude, 2026-10-30)
 - [→Pré-qualification] Avant tout : mesurer l'accord avec des qualifications validées (droit principal, sens, décisif), la stabilité entre deux passages et le taux d'erreur sur les textes corrigés à la relecture, l'accord brut étant flatté parce que Claude les a préparées (claude, 2026-10-30)
 - [→Pré-qualification] Après chaque passe de données, une proposition pour chaque nouvelle alerte de `en_cours_alertes.csv` : `premier_decisif` et `unanimite_contestee` donnent un brouillon complet ; `vote_posterieur`, une requalification ; `inscrit`, droits touchés et sources, sans sens ni scrutin. Les propositions déjà faites ne sont pas recalculées (user:moi et claude, 2026-10-30)
 - [→Pré-qualification] Veille des sources, une fois par semaine, sur les textes suivis et qualifiés : nouveau document d'une source admise ; il arrive en proposition de modification, source et extrait préremplis (user:moi et claude, 2026-10-30)

@@ -3,6 +3,65 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Les tags `v*` du dépôt suivent ces versions.
 
+## [1.1.0] — 2026-10-30
+
+Cycles Reliquat XVIe et Au fil des votes : les amendements de la XVIe sont
+là, les données se mettent à jour chaque jour, et le site montre où en est
+chaque texte, avant et après le vote. Scores inchangés (96 textes qualifiés).
+
+### Ajouté
+
+- **Amendements de la XVIe** : `lvnd download` essaie le dump de l'AN (20
+  minutes sans octet, il abandonne), puis une archive antérieure, puis une copie
+  figée dans la release `donnees-figees`, puis un plan B qui lit chaque
+  amendement voté sur le site de l'AN. 3 159 scrutins sur amendement rattachés
+  sur 3 173 (99,6 %). Le dump revenu remplace le tout (`docs/SOURCES.md`).
+- **État de chaque texte** : source `senat_dosleg` (décisions du Sénat, pas de
+  votes de sénateur·ices), parcours, agenda de l'AN (« inscrit », jamais « sera
+  voté »), catalogue élargi aux textes en cours ou inscrits sans scrutin public
+  à l'AN (559 textes). Exports `en_cours*.csv`, sans effet sur les scores.
+- **Alertes** dans `lvnd check` et la file « À traiter » de l'admin : vote
+  postérieur au décisif, unanimité contestée, premier décisif, texte inscrit.
+- **Mise à jour quotidienne** : Action `donnees-quotidien.yml` (dossiers et scrutins
+  de la XVIIe, agenda, Dosleg ; les gros dumps viennent du cache ou de la release).
+  Elle ne commite rien si un score change sans qualification nouvelle ou si
+  `amendements.csv` perd des lignes. L'Action hebdomadaire est réparée.
+- **Site** : page `/en-cours` rangée par échéance, état sur les fiches et dans
+  les listes, mention « vote de 1re lecture, texte encore en navette »,
+  « Prochains votes » sur la fiche député·e, flux RSS et iCal statiques.
+- **Fiches de suivi** : statut `a-suivre` dans l'admin et liste `suivis` de
+  `editorial.json` : droits touchés et sources, sans sens, score ni scrutin.
+  Deux fiches publiées (relance du logement, régularisation des travailleurs
+  sans-papiers).
+- **Méthode** : règles 20 à 22 (état d'un texte, texte qualifié en navette, fiche
+  de suivi) et compléments à la règle 9, validés par Max. Circuit « au fil de
+  l'eau » dans `docs/QUALIFICATION.md`.
+
+### Modifié
+
+- 363 textes écartés (6 de plus, tri de la file) ; titres débarrassés des
+  mentions « (non promulgué) » et « (rejetée) », que l'état remplace.
+
+### Corrigé
+
+- Une publication faite avant la validation d'une requalification laisse la
+  version publiée sur le site. `sync-admin --brouillons` ajoute une révision à
+  un texte qui en a déjà une.
+
+### Limites connues
+
+- Tant que le dump de la XVIe reste injoignable, `amendements.csv` n'a pour cette
+  législature que les amendements mis aux voix, sans leurs identiques ni les
+  amendements non votés. 14 scrutins restent sans amendement. Sur la XVIe, l'article
+  lu diffère dans 9 cas sur 2 712 (0,33 %) de celui de l'intitulé.
+- L'Action hebdomadaire retente ce dump avant de prendre la release : 32 minutes de
+  plus le 30/10/2026.
+- `lvnd check` retire du taux de la XVIe ses derniers scrutins (3 041 sur 3 053
+  affichés), par un délai de 14 jours pensé pour une législature en cours.
+- Le suivi au fil des votes continue en fonctionnement courant (`BACKLOG.md`).
+- Le Sénat (votes) et la XVe législature ne sont pas couverts ; les lois de finances
+  2023 à 2025 ne sont pas encore qualifiées.
+
 ## [1.0.0] — 2026-10-29
 
 Première version publique, en ligne sur
