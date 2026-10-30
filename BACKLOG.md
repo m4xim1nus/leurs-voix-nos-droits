@@ -41,10 +41,8 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 ## Fonctionnement courant
 
 Hors cycle : les textes se traitent selon leurs votes, un à la fois, par le circuit
-« Au fil de l'eau » de `docs/QUALIFICATION.md`. Au 30/10/2026, seuls les deux votes du 29/10
-ci-dessous attendent une fiche.
+« Au fil de l'eau » de `docs/QUALIFICATION.md`.
 
-- [ ] Fiches courtes des votes du 29/10/2026, demandées par Max dès le catalogue à jour : AESH (DLR5L17N54901, V9203, 166-16) et parcours de soins (DLR5L17N54898, V9241, 152-5) (user:moi, 2026-10-30)
 - [ ] Rapports locatifs (DLR5L17N53069) : 2e lecture inscrite les 18 et 19/11/2026, commission le 03/11 ; nouveau décisif, sens à relire (règle 6) (claude, 2026-10-30)
 - [ ] Territoires zéro chômeur (DLR5L17N51962, écarté à 96-0) : commission le 10/11, 2e lecture inscrite le 19/11/2026 (claude, 2026-10-30)
 - [ ] PLF 2027 (vote solennel inscrit le 17/11/2026), PLFSS 2027, abrogation des ZFE (DLR5L17N54557) (claude, 2026-10-30)
@@ -66,6 +64,7 @@ Un cycle à la fois, choisi et nommé au moment de l'ouvrir.
 ### Sénat
 
 - [→Sénat] Scrutins publics des sénateur·ices (Dosleg, déjà maîtrisé dans quifaitlaloi) (claude, 2026-10-29)
+- [→Sénat] Texte adopté d'abord au Sénat (casseurs-payeurs) : alerte quand il devient attendu à l'AN sans être traité, pour décider sa fiche de suivi sans attendre l'inscription, le choix restant à la main (règle 22) ; préciser alors « sans vote qualifié » quand les votes du Sénat comptent. À valider par Max (user:moi et claude, 2026-10-30)
 
 ### Passation
 

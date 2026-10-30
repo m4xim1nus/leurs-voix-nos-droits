@@ -32,7 +32,8 @@ premiers votes suivis au fil de l'eau : l'échéance légale d'un dispositif
 l'UNAF et les associations porteuses d'un dispositif (règle 7), la réforme de
 structure (règle 8), le vote sans scrutin public et le rejet d'une partie d'une
 loi de finances (règle 9), l'étiquette `regime-exception`. Le même jour, pour le
-suivi des textes en cours : les règles 20 à 22.
+suivi des textes en cours : les règles 20 à 22, et la CIIVISE parmi les instances
+consultatives (règle 7).
 
 ## Grille des droits
 
@@ -118,7 +119,7 @@ voté le reste ; un texte qui le pérennise ne la reçoit pas.
      créées par la loi ou le règlement qui rendent des avis publics (Haut
      Conseil à l'égalité, Commission nationale du débat public, Haut Comité
      pour le logement des personnes défavorisées, Autorité
-     environnementale, conseils du Haut Conseil de la famille, de l'enfance
+     environnementale, CIIVISE, conseils du Haut Conseil de la famille, de l'enfance
      et de l'âge…), et, pour la santé et l'environnement, l'ANSES ;
    - rapporteurs et comités de l'ONU ;
    - ONG ;
