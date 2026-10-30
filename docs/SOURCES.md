@@ -189,6 +189,51 @@ cycle Sénat. Le statut des décisions du Sénat dans le dossier AN n'est pas
 toujours fiable (« modifié » pour un texte voté conforme) : l'adoption
 définitive se lit aussi dans Dosleg (`oritxtado = D`).
 
+## État de chaque texte
+
+`lvnd/parcours.py` et `lvnd/encours.py`, adaptés de quifaitlaloi
+(`docs/METHODO.md` §17 de ce dépôt-là). Le dossier AN sert d'ossature ; Dosleg
+complète les décisions du Sénat, les séances et l'état des dossiers. Trois
+fichiers suivent le périmètre de quifaitlaloi (voté en séance depuis le début
+de la XVIIe, ni promulgué ni adopté définitivement), un quatrième couvre tout
+le catalogue :
+
+| Export | Contenu |
+|---|---|
+| `en_cours.csv` | textes en cours, et écartés avec leur `motif_ecart` (pour l'audit) |
+| `en_cours_lectures.csv` | leurs lectures votées : issue, scrutin décisif à l'AN, mode |
+| `en_cours_evenements.csv` | procédure accélérée, 49.3, CMP, saisine du Conseil constitutionnel… |
+| `en_cours_etats.csv` | un état par texte du catalogue, y compris la XVIe |
+
+`etat` vaut : `loi` ; `adopte` (pas encore promulgué) ; `en_navette`, avec
+`attente` et `attente_chambre` ; `avant_vote` (aucune lecture conclue en
+séance) ; `hors_navette` (résolution, engagement de la responsabilité : aucune
+lecture) ; `a_l_arret` (aucun acte depuis 12 mois) ; `rejete` ; `retire` ;
+`caduc` ; `fusionne`. La date de référence est celle du téléchargement du dump
+des dossiers de la XVIIe (`meta.json`, `en_cours.date_reference`) : le build
+reste reproductible.
+
+Ces fichiers n'entrent dans aucun score : après leur ajout, `scores_*.csv`,
+`participation.csv`, `scrutins.csv` et `textes.csv` sont restés identiques à
+l'octet.
+
+Au 29/10/2026 : 127 textes en cours, 48 écartés à l'arrêt, 30 rejetés. Sur
+les 96 textes qualifiés : 69 lois, 11 en navette, 8 à l'arrêt, 6 retirés,
+2 rejetés.
+
+**Contrôle croisé** avec l'export de quifaitlaloi du 28/10/2026 : mêmes motifs
+d'écart et, à l'AN, mêmes scrutins décisifs et mêmes modes sur les 204 textes
+communs. Les écarts tiennent au dump plus récent d'un jour : un texte voté le
+29/10 (accord UE-Vietnam), deux étapes ouvertes depuis, une séance du Sénat
+passée à la suivante.
+
+Limites, reprises de quifaitlaloi : un texte voté au Sénat sans dossier AN ne
+serait pas vu ; `transmis` se déduit de la Constitution, pas d'un acte ; un
+texte adopté conforme par la seconde chambre peut rester quelques jours « en
+navette ». Les lectures du Sénat n'ont ni scrutin ni mode (`NON_RENSEIGNE`) :
+ses votes restent au cycle Sénat. Les 49.3 de la XVIe n'ont pas de scrutin miroir
+ici (motions sans `voteRefs`) : leur mode reste `ART_49_3`.
+
 ## Groupes : renommages et ventilations
 
 - Un groupe qui change de nom reçoit un nouvel organe. Les ventilations des

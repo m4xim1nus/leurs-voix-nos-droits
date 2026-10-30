@@ -13,6 +13,10 @@ def charger(nom: str) -> dict:
     return yaml.safe_load((DOSSIER / f"{nom}.yaml").read_text())
 
 
+def codes_actes() -> dict:
+    return charger("codes_actes")
+
+
 def droits() -> dict:
     return charger("droits")
 

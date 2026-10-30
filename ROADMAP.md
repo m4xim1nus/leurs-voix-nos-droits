@@ -80,7 +80,7 @@ pour y toucher.
    sénateur·ice : ils restent au cycle Sénat. Le dossier AN enregistre ces
    décisions avec retard (casseurs-payeurs, voté le 27/10/2026). Volume à
    relever dans `docs/SOURCES.md`.
-2. ⏳ **État de chaque texte** : `lvnd/encours.py`, adapté de
+2. ✅ **État de chaque texte** : `lvnd/encours.py`, adapté de
    `qfl/encours.py` (241 lignes) et de ce qu'il utilise de `parcours.py`
    (501 lignes). Même périmètre : voté au moins une fois en séance, ni
    promulgué ni adopté définitivement, écarté s'il est retiré, rejeté,

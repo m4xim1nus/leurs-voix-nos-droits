@@ -1,0 +1,53 @@
+# Codes d'actes des dossiers législatifs AN → lectures et issues (repris de quifaitlaloi).
+# Fichier maintenu à la main : un code absent fait échouer le build.
+
+# Étapes de premier niveau (préfixe du codeActe) qui portent une lecture.
+# `chambre` : AN, SN ; l'étape CMP porte deux lectures des conclusions
+# (CMP-DEBATS-AN-DEC, CMP-DEBATS-SN-DEC). `typlec` : code de lecture
+# Dosleg (table typlec) pour rattacher les scrutins du Sénat.
+lectures:
+  AN1: {chambre: AN, type: premiere, typlec: "1"}
+  SN1: {chambre: SN, type: premiere, typlec: "1"}
+  AN2: {chambre: AN, type: deuxieme, typlec: "2"}
+  SN2: {chambre: SN, type: deuxieme, typlec: "2"}
+  AN3: {chambre: AN, type: troisieme, typlec: "3"}
+  SN3: {chambre: SN, type: troisieme, typlec: "3"}
+  ANNLEC: {chambre: AN, type: nouvelle, typlec: "5"}
+  SNNLEC: {chambre: SN, type: nouvelle, typlec: "5"}
+  ANLDEF: {chambre: AN, type: definitive, typlec: "6"}
+  CMP: {chambre: CMP, type: cmp, typlec: "4"}
+
+# Étapes sans lecture : ignorées pour les lectures, lues pour les événements.
+# CG22 : vote du Congrès (révision constitutionnelle, IVG 2024) ; son scrutin
+# réunit les deux chambres et n'est pas ingéré.
+hors_lecture: [CC, PROM, AN20, AN21, ANLUNI, AN-APPLI, CG22]
+
+# statutConclusion.fam_code des décisions de séance (…-DEBATS-DEC) → issue.
+# Le libellé varie en genre ; on se fie au code. Attention : pour les
+# décisions du Sénat, le dossier AN code parfois « modifié » un texte voté
+# conforme (docs/SOURCES.md) ; l'adoption définitive se lit sur la
+# structure du dossier, pas sur ce code.
+statuts:
+  TSORTF01: {issue: adopte, libelle: "adopté"}
+  TSORTF02: {issue: adopte, libelle: "adopté avec modifications"}
+  TSORTF03: {issue: adopte, libelle: "adopté sans modification"}
+  TSORTF05: {issue: adopte, libelle: "modifié"}
+  TSORTF06: {issue: adopte, libelle: "considéré comme adopté (art. 49, al. 3)", art_49_3: true}
+  TSORTF07: {issue: rejete, libelle: "rejeté"}
+  TSORTF12: {issue: adopte, libelle: "considérée comme définitive (art. 151-3 du Règlement)"}
+  TSORTF13: {issue: rejete, libelle: "rejeté définitivement"}
+  TSORTF14: {issue: adopte, libelle: "voté par les deux assemblées en termes identiques"}
+  TSORTF18: {issue: adopte, libelle: "adopté (texte de CMP, art. 45, al. 3)"}
+  TSORTF19: {issue: adopte, libelle: "adopté définitivement (art. 151-7 du Règlement)"}
+  TSORTF24: {issue: rejete, libelle: "considéré comme rejeté (49.3 suivi d'une censure)", art_49_3: true}
+  TSORTFnull: {issue: inconnue, libelle: "statut non renseigné"}
+
+# Décisions des motions de censure (…-MOTION-VOTE).
+motions:
+  TSORTMOT01: adoptee
+  TSORTMOT02: rejetee
+
+# Décision de la CMP elle-même (CMP-DEC).
+cmp:
+  TCCMP01: accord
+  TCCMP02: desaccord

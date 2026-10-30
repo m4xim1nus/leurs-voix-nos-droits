@@ -1,5 +1,5 @@
 {
- "genere_le": "2026-10-29T18:57:22+00:00",
+ "genere_le": "2026-10-30T10:59:19+00:00",
  "sources": {
   "an_scrutins_17": {
    "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/loi/scrutins/Scrutins.json.zip",
@@ -42,6 +42,20 @@
    "taille": 13718658,
    "sha256": "0a077259cac5cac04fecd8a12a922a481b564aba3651c9cec8c533733fde8a33",
    "telecharge_le": "2026-10-29T09:14:46+00:00"
+  },
+  "senat_dosleg": {
+   "url": "https://data.senat.fr/data/dosleg/dosleg.zip",
+   "last_modified": "Fri, 30 Oct 2026 02:31:10 GMT",
+   "taille": 16115908,
+   "sha256": "e84e72f05bd06df43b10c3d8641cdd96de7c9b83f4e250ea4891c1589471cd28",
+   "telecharge_le": "2026-10-30T10:52:34+00:00"
+  },
+  "an_agenda_17": {
+   "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/vp/reunions/Agenda.json.zip",
+   "last_modified": "Fri, 30 Oct 2026 05:40:49 GMT",
+   "taille": 8570468,
+   "sha256": "92bc81b4eddda8eb6d4810dc486fb9d6df8100b5015d7731e214f46bb875ea59",
+   "telecharge_le": "2026-10-30T10:52:40+00:00"
   }
  },
  "comptes": {
@@ -54,9 +68,13 @@
   "mandats": 1316,
   "appartenances": 2729,
   "mises_au_point": 5199,
-  "scores_scrutins": 428,
-  "scores_deputes": 9127,
-  "scores_groupes": 275,
+  "scores_scrutins": 609,
+  "scores_deputes": 10330,
+  "scores_groupes": 299,
+  "en_cours": 205,
+  "en_cours_lectures": 248,
+  "en_cours_evenements": 73,
+  "en_cours_etats": 479,
   "votes": 1972492,
   "fichiers_votes": 44
  },
@@ -339,5 +357,10 @@
     ]
    }
   }
+ },
+ "en_cours": {
+  "date_reference": "2026-10-29",
+  "inactivite_mois": 12,
+  "debut": "2024-07-18"
  }
 }

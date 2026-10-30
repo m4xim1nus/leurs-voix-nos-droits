@@ -9,7 +9,7 @@ from pathlib import Path
 
 import polars as pl
 
-from . import amendements, an, candidats, editorial, positions, referentiels, scores, textes
+from . import amendements, an, candidats, editorial, encours, parcours, positions, referentiels, scores, senat, textes
 from .sources import lire_manifeste, racine
 
 # Votes nominatifs compacts (docs/SOURCES.md) : numéro de scrutin, identifiant numérique du
@@ -28,7 +28,8 @@ def _df(rows: list[dict]) -> pl.DataFrame:
 # --- SQLite ----------------------------------------------------------------------
 
 TYPES = {pl.Int64: "INTEGER", pl.Int32: "INTEGER", pl.UInt32: "INTEGER", pl.Float64: "REAL", pl.Boolean: "INTEGER"}
-CLES = {"scrutins": "id", "textes": "id", "deputes": "id", "mandats": "id", "groupes": "id", "amendements": "id"}
+CLES = {"scrutins": "id", "textes": "id", "deputes": "id", "mandats": "id", "groupes": "id", "amendements": "id",
+        "en_cours": "id", "en_cours_etats": "id"}
 INDEX = ("positions_groupes(scrutin_id)", "votes(scrutin_id)", "votes(acteur_id)", "scrutins(dossier_id)",
          "mandats(acteur_id)", "appartenances(acteur_id)", "scores_deputes(acteur_id)")
 
@@ -73,6 +74,12 @@ def _ecrire_votes(export: Path, votes: pl.DataFrame, scr: pl.DataFrame) -> int:
 
 # --- Build ----------------------------------------------------------------------
 
+def date_reference(raw: Path) -> str:
+    """Date de l'instantané : téléchargement du dump des dossiers AN de la législature en cours. Elle
+    fixe l'« aujourd'hui » des textes en cours (inactivité, séances à venir), pour un build reproductible."""
+    return lire_manifeste(raw)[f"an_dossiers_{max(an.LEGISLATURES)}"]["telecharge_le"][:10]
+
+
 def build(raw: Path, sqlite: Path, export: Path) -> None:
     _log("== Dossiers")
     dossier_de, titres = textes.documents(raw)
@@ -113,6 +120,19 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
     candidats.annoter(cat, titres)
     _log(f"   {len(cat)} textes, dont {sum(bool(t['droits_candidats'] or t['etiquettes_candidates']) for t in cat)} candidats par mots-clés")
 
+    _log("== Où en est chaque texte (Dosleg)")
+    tables = senat.dosleg(raw)
+    idx = parcours.Index(scr, senat.scrutins(tables).to_dicts())
+    classes, exclus = parcours.classer(dossiers, titres, idx, senat.lois(tables))
+    date_ref = date_reference(raw)
+    en_cours, lect_ec, evt_ec, etats = encours.textes(
+        classes, idx, {"decisions": senat.decisions_seance(tables), "activite": senat.activite(tables),
+                       "seances": senat.seances(tables), "etats": senat.etats(tables)}, exclus, date_ref)
+    ids = {t["id"] for t in cat}
+    etats = [e for e in etats if e["id"] in ids]
+    _log(f"   {sum(not t['motif_ecart'] for t in en_cours)} textes en cours au {date_ref}, "
+         f"{sum(bool(t['motif_ecart']) for t in en_cours)} écartés")
+
     _log("== Députés et groupes")
     dep, mandats, appart = an.deputes(raw)
     grp = an.groupes(raw, {v["groupe_id"] for v in ventil} | {a["groupe_id"] for a in appart})
@@ -138,6 +158,11 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
         "appartenances": _df(appart),
         "mises_au_point": _df(mises),
         **{k: _df(v) for k, v in sc.items()},
+        # où en est chaque texte : à part, sans effet sur les scores (lvnd/encours.py)
+        "en_cours": _df(en_cours),
+        "en_cours_lectures": _df(lect_ec),
+        "en_cours_evenements": _df(evt_ec),
+        "en_cours_etats": _df(etats),
     }
 
     _log("== Écriture")
@@ -155,6 +180,7 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
         "comptes": {**{k: v.height for k, v in dfs.items()}, "votes": votes_df.height, "fichiers_votes": n},
         "votes_codes": {v: k for k, v in CODES.items()},
         "referentiels": {n: referentiels.charger(n) for n in ("droits", "mots_cles")},
+        "en_cours": {"date_reference": date_ref, "inactivite_mois": encours.INACTIVITE_MOIS, "debut": encours.DEBUT},
     }
     (export / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1, default=str) + "\n")
     _log(f"   {sqlite} ({sqlite.stat().st_size / 1e6:.1f} Mo), {export}/ ({n} fichiers de votes)")
