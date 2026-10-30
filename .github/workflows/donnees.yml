@@ -4,8 +4,8 @@
 # configuré (secrets CLOUDFLARE_API_TOKEN et CLOUDFLARE_ACCOUNT_ID, docs/CONCEPTION.md).
 #
 # Les archives téléchargées sont gardées en cache d'une semaine à l'autre, partielles comprises :
-# un dump coupé par le serveur de l'AN reprend la semaine suivante. Rien n'est commité si une
-# étape échoue.
+# un dump coupé par le serveur de l'AN reprend la semaine suivante, de même que le plan B des
+# amendements (`unitaire/`, 3 h par lancement au plus). Rien n'est commité si une étape échoue.
 
 name: Données AN
 
@@ -44,13 +44,14 @@ jobs:
             data/raw/**/*.zip
             data/raw/**/*.part
             data/raw/**/*.part.json
+            data/raw/an_amendements_*/unitaire
             data/raw/manifeste.json
           key: raw-${{ github.run_id }}
           restore-keys: raw-
 
       - name: Téléchargement (lvnd download)
         working-directory: pipeline
-        run: uv run --no-dev lvnd download
+        run: uv run --no-dev lvnd download --secours-max 180
 
       - name: Archives gardées pour la semaine suivante, même partielles
         if: always()
@@ -60,6 +61,7 @@ jobs:
             data/raw/**/*.zip
             data/raw/**/*.part
             data/raw/**/*.part.json
+            data/raw/an_amendements_*/unitaire
             data/raw/manifeste.json
           key: raw-${{ github.run_id }}
 

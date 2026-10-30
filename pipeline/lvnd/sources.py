@@ -5,7 +5,13 @@ Repris de quifaitlaloi. Les dumps AN sont régénérés chaque nuit : on ne les
 `<raw>/<cle>/x/` et note dans `<raw>/manifeste.json` l'URL, le
 `Last-Modified`, la taille et le sha256 de chaque archive. Ce manifeste est
 recopié dans l'export : il date l'instantané versionné.
+
+Si un dump d'amendements reste injoignable, `download` bascule seul sur le
+plan B (`secours.py`, amendement par amendement) ; le manifeste le note
+(`mode: secours`) et chaque lancement suivant retente le dump, qui remplace tout.
 """
+
+import fcntl
 
 import hashlib
 import json
@@ -23,15 +29,22 @@ AN = "https://data.assemblee-nationale.fr/static/openData/repository"
 SOURCES: dict[str, dict] = {
     "an_scrutins_17": {"url": f"{AN}/17/loi/scrutins/Scrutins.json.zip"},
     "an_dossiers_17": {"url": f"{AN}/17/loi/dossiers_legislatifs/Dossiers_Legislatifs.json.zip"},
-    "an_amendements_17": {"url": f"{AN}/17/loi/amendements_div_legis/Amendements.json.zip"},
+    "an_amendements_17": {"url": f"{AN}/17/loi/amendements_div_legis/Amendements.json.zip",
+                          "secours": {"legislature": 17, "organe": "838901"}},
     "an_scrutins_16": {"url": f"{AN}/16/loi/scrutins/Scrutins.json.zip"},
     "an_dossiers_16": {"url": f"{AN}/16/loi/dossiers_legislatifs/Dossiers_Legislatifs.json.zip"},
-    "an_amendements_16": {"url": f"{AN}/16/loi/amendements_div_legis/Amendements.json.zip"},
+    "an_amendements_16": {"url": f"{AN}/16/loi/amendements_div_legis/Amendements.json.zip",
+                          "secours": {"legislature": 16, "organe": "791932"}},
     "an_amo": {"url": f"{AN}/17/amo/tous_acteurs_mandats_organes_xi_legislature/"
                       "AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip"},
 }
 
 MANIFESTE = "manifeste.json"
+PATIENCE_AVANT_SECOURS = 1200  # secondes sans aucun octet avant de basculer sur le plan B
+
+
+class Injoignable(SystemExit):
+    """Le dump n'a livré aucun octet pendant toute la patience."""
 
 
 def sha256_fichier(chemin: Path) -> str:
@@ -48,6 +61,17 @@ def extraits(raw: Path, cle: str) -> Path:
     if src.get("zip", True):
         return raw / cle / "x"
     return raw / cle / src["url"].rsplit("/", 1)[1]
+
+
+def unitaire(raw: Path, cle: str) -> Path:
+    """Dossier du plan B : mêmes `json/<dossier>/<texte>/<amendement>.json` que l'archive extraite."""
+    return raw / cle / "unitaire"
+
+
+def racine(raw: Path, cle: str) -> Path:
+    """Où lire une source : l'archive extraite, à défaut ce qu'a récupéré le plan B."""
+    x = extraits(raw, cle)
+    return x if (x / "json").exists() or not (unitaire(raw, cle) / "json").exists() else unitaire(raw, cle)
 
 
 def lire_manifeste(raw: Path) -> dict:
@@ -129,7 +153,7 @@ def telecharger(client: httpx.Client, url: str, cible: Path, patience: int = 360
             if recu >= taille:
                 break
             if time.monotonic() - progres > patience:
-                raise SystemExit(f"{url} : aucun octet reçu depuis {patience} s, arrêt à {recu:,} / {taille:,} o")
+                raise Injoignable(f"{url} : aucun octet reçu depuis {patience} s, arrêt à {recu:,} / {taille:,} o")
             if time.monotonic() - progres > 1:
                 time.sleep(attente)
                 attente = min(2 * attente, 120)
@@ -140,8 +164,19 @@ def telecharger(client: httpx.Client, url: str, cible: Path, patience: int = 360
     return modifie
 
 
-def download(raw: Path, cles: list[str] | None = None) -> None:
-    """Télécharge chaque source, l'extrait et met à jour le manifeste."""
+def download(raw: Path, cles: list[str] | None = None, secours_max: int | None = None) -> None:
+    """Télécharge chaque source, l'extrait et met à jour le manifeste. `secours_max` : durée maximale
+    du plan B, en secondes (ce qui est récupéré reste acquis pour le lancement suivant)."""
+    raw.mkdir(parents=True, exist_ok=True)
+    with (raw / ".download.lock").open("w") as verrou:
+        try:  # deux processus écriraient dans le même fichier partiel
+            fcntl.flock(verrou, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            raise SystemExit(f"un autre `lvnd download` tourne déjà sur {raw}") from None
+        _download(raw, cles, secours_max)
+
+
+def _download(raw: Path, cles: list[str] | None, secours_max: int | None) -> None:
     manifeste = lire_manifeste(raw)
     # délai de lecture court : le serveur de l'AN laisse parfois une connexion pendante sans la fermer
     with httpx.Client(timeout=httpx.Timeout(60, connect=30), follow_redirects=True) as client:
@@ -152,7 +187,21 @@ def download(raw: Path, cles: list[str] | None = None) -> None:
             cible = dossier / src["url"].rsplit("/", 1)[1]
             print(f"{cle} : téléchargement de {src['url']}", file=sys.stderr)
             avant = manifeste.get(cle)
-            modifie = telecharger(client, src["url"], cible, connu=avant)
+            try:
+                modifie = telecharger(client, src["url"], cible, connu=avant,
+                                      patience=PATIENCE_AVANT_SECOURS if "secours" in src else 3600)
+            except (Injoignable, httpx.HTTPError) as e:
+                # Une archive plus ancienne reste une source complète : on n'y substitue pas un plan B partiel.
+                if "secours" not in src or cible.exists():
+                    raise
+                print(f"{cle} : dump injoignable ({e}), plan B amendement par amendement", file=sys.stderr)
+                from . import secours
+                bilan = secours.recuperer(client, raw, cle, **src["secours"], duree_max=secours_max)
+                manifeste[cle] = {"url": secours.URL, "mode": "secours", **bilan,
+                                  "telecharge_le": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+                (raw / MANIFESTE).write_text(json.dumps(manifeste, indent=2, ensure_ascii=False) + "\n")
+                continue
+            shutil.rmtree(unitaire(raw, cle), ignore_errors=True)  # le dump remplace le plan B
             inchange = bool(avant) and avant.get("last_modified") == modifie and avant.get("taille") == cible.stat().st_size
             if src.get("zip", True) and not (inchange and extraits(raw, cle).exists()):
                 x = extraits(raw, cle)

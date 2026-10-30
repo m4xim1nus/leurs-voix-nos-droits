@@ -24,7 +24,7 @@ from pathlib import Path
 import polars as pl
 
 from .an import nul
-from .sources import extraits
+from .sources import racine
 from .texte import mots, norm
 
 FENETRE = timedelta(days=120)
@@ -60,7 +60,7 @@ def lire(raw: Path, legislature: int, dossier_de_texte: dict[str, str]) -> pl.Da
     """Amendements examinés en séance publique. Lecture longue (≈ 150 000 fichiers) : mise en cache
     à côté de l'archive, refaite quand l'archive est plus récente."""
     cle = f"an_amendements_{legislature}"
-    x = extraits(raw, cle)
+    x = racine(raw, cle)
     cache = raw / cle / "seance.parquet"
     if cache.exists() and cache.stat().st_mtime > x.stat().st_mtime:
         return pl.read_parquet(cache)
