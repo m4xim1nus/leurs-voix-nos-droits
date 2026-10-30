@@ -36,10 +36,6 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] `lvnd download --leger` retente le dump de l'AN pour les amendements de la XVIe quand ils viennent du plan B (mode `secours`, pas de zip local) : blocage jusqu'à 20 minutes, alors que le mode doit rester léger (claude, 2026-10-30)
 - [ ] `lvnd download` : un `.part` repris alors que l'AN a publié un nouveau fichier échoue (« taille X, attendu Y ») et reste à supprimer à la main ; comparer `Last-Modified` avant de reprendre (claude, 2026-10-30)
 
-## Cycle en cours : Stock des lois de finances
-
-- [→Stock des lois de finances] Qualifier les lois de finances adoptées par 49.3 sans vote final, comptées dans aucun score (règle 9) : PLF 2023, 2024 et 2025, PLFSS 2023, 2024 et 2025 ; écarter alors les dossiers de motions de censure rattachés à part (DLR5L17N50975, DLR5L17N51427, DLR5L17N51462, DLR5L17N51475, DLR5L17N53689) (claude, 2026-10-29)
-
 ## Fonctionnement courant
 
 Hors cycle : les textes se traitent selon leurs votes, un à la fois, par le circuit

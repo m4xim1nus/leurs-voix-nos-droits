@@ -3,6 +3,42 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Les tags `v*` du dépôt suivent ces versions.
 
+## [1.2.0] — 2026-10-30
+
+Cycle Stock des lois de finances : les six lois de finances adoptées par 49.3
+sans vote final figurent sur le site, avec leurs motions de censure. Elles ne
+comptent dans aucun score (règle 9) : `scores_*.csv` et `participation.csv` sont
+identiques à l'octet avec ou sans elles. 104 textes qualifiés, 368 écartés.
+
+### Ajouté
+
+- **Six qualifications** : PLF 2023, 2024 et 2025, PLFSS 2023, 2024 et 2025, avec
+  leurs 30 motions de censure, attribuées une à une d'après la page du dossier de
+  l'AN et le compte rendu de la séance du vote. V2610 et V2989 portent sur la
+  programmation des finances publiques : non retenues.
+- **Deux textes au fil de l'eau** : corps de fonctionnaires pour les AESH et parcours
+  de soins des victimes de violences sexuelles, votés le 29/10/2026, comptés dans
+  les scores.
+- **Méthode** : la formation professionnelle dans `travail-protection-sociale`
+  (règle 2) ; la CIIVISE et les unions confédérales de retraités parmi les sources
+  (règle 7).
+
+### Modifié
+
+- Cinq dossiers d'engagement de responsabilité écartés : leurs motions s'affichent
+  avec le texte qualifié (PLFSS 2025 et PLF 2026).
+
+### Limites connues
+
+- Sources rares pour 2022-2023. Le PLF 2024 repose sur une seule source admise, un
+  avis de la CNIL postérieur au vote et portant sur le décret d'application. Le
+  PLFSS 2023 repose surtout sur des sources qui portent sur le projet. Le PLF 2025
+  repose sur une seule mesure et sur des sources syndicales.
+- Des mesures restent hors jugement faute de source admise trouvée (AAH à Mayotte,
+  crédits de l'AME).
+- Lois promulguées non lues sur Légifrance (accès refusé) : les articles viennent des
+  textes adoptés par l'AN, comparés aux décisions du Conseil constitutionnel.
+
 ## [1.1.0] — 2026-10-30
 
 Cycles Reliquat XVIe et Au fil des votes : les amendements de la XVIe sont
