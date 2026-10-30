@@ -1508,6 +1508,73 @@
       ]
     },
     {
+      "id": "ecriture-inclusive-ppl-2023",
+      "dossier_an": "DLR5L16N47051",
+      "legislature": 16,
+      "titre": "Proposition de loi portant interdiction de l'écriture dite « inclusive » dans les éditions, productions et publications scolaires et universitaires ainsi que dans les actes civils, administratifs et commerciaux",
+      "resume": "Proposition de loi du groupe RN (Roger Chudeau), examinée le 12 octobre 2023 et non adoptée. Son article unique interdisait l'écriture dite « inclusive » dans les écrits scolaires et universitaires : manuels, devoirs, mémoires et thèses. Il visait trois formes : la double flexion (« les inspectrices et les inspecteurs »), le point médian et le terme épicène. Il rendait nuls de plein droit les actes d'état civil, les actes administratifs et les contrats qui en contiennent un seul signe. L'Assemblée a supprimé l'article unique (127-83), puis l'auteur a retiré le texte.",
+      "droits": [
+        {
+          "code": "femmes-lgbti",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "hce-guide-2022",
+            "fsu-2021-05"
+          ],
+          "justification": "Le texte interdit les trois procédés que le Haut Conseil à l'égalité entre les femmes et les hommes recommande pour que les femmes soient « inclu·es dans l'ensemble des signaux de communication » : la double flexion, le point médian et les termes épicènes. Pour le HCE, le masculin dit générique « conduit à des représentations mentales biaisées, favorables aux hommes ». La FSU, contre une interdiction déjà limitée à l'enseignement, voit dans l'écriture inclusive « une des réponses » à « l'invisibilisation des femmes, y compris dans la langue », qui « participe de l'évolution vers plus d'égalité entre les femmes et les hommes »."
+        },
+        {
+          "code": "discriminations",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "cncph-2019"
+          ],
+          "justification": "Le Conseil national consultatif des personnes handicapées estime que le point médian « met en difficultés nos concitoyens dyslexiques, dyspraxiques, déficients visuels et les utilisateurs de la synthèse vocale ». Selon lui, son usage dans les documents officiels va « à l'encontre du principe de l'accessibilité universelle ». L'interdiction du point médian répond à cette critique."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "La FSU conteste l'argument de l'accessibilité. Elle « dénonce l'instrumentalisation indigne de supposés problèmes d'apprentissage induits par l'utilisation du point médian pour des élèves porteurs de handicaps ».",
+          "sources": [
+            "fsu-2021-05"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Le texte n'a pas fait l'objet d'un vote sur l'ensemble. Le 12/10/2023, l'Assemblée a adopté les amendements de suppression de l'article unique (V2758, 127-83), puis l'auteur a retiré la proposition. Le vote qui a fixé le sort de l'article unique tient lieu de scrutin décisif (règle 9). Il porte sur la suppression de l'article : voter pour, c'est voter contre le texte. Aucun amendement clé ni aucune motion de rejet : c'est le seul scrutin public du dossier. Au jour du vote, deux circulaires écartaient déjà le point médian : celle du Premier ministre du 21 novembre 2017 pour les textes publiés au Journal officiel, et celle du ministre de l'Éducation nationale du 5 mai 2021 pour l'enseignement. Le texte allait plus loin : une loi, l'université, les écrits des élèves et des étudiants, la double flexion et les épicènes, et la nullité des actes. Les sources portent sur la mesure (le guide du HCE, la circulaire de 2021 pour la FSU, les documents officiels pour le CNCPH) et non sur ce texte.",
+      "sources": {
+        "cncph-2019": {
+          "auteur": "Conseil national consultatif des personnes handicapées",
+          "titre": "Motion relative à l'écriture inclusive",
+          "date": "2019-04",
+          "url": "https://info.gouv.fr/upload/media/organization/0001/01/sites_default_files_contenu_piece-jointe_2019_04_motion_relative_a_lecriture_inclusive.pdf"
+        },
+        "fsu-2021-05": {
+          "auteur": "FSU",
+          "titre": "Écriture inclusive, injonction et écran de fumée (communiqué)",
+          "date": "2021-05-07",
+          "url": "https://fsu-snuipp.fr/actualites/posts/ecriture-inclusive-injonction-et-ecran-de-fumee"
+        },
+        "hce-guide-2022": {
+          "auteur": "Haut Conseil à l'égalité entre les femmes et les hommes",
+          "titre": "Pour une communication publique sans stéréotypes de sexe, guide pratique, version actualisée 2022",
+          "date": "2022-09-29",
+          "url": "https://www.haut-conseil-egalite.gouv.fr/sites/hce/files/files-spip/pdf/guide_egacom_sans_stereotypes-2022-versionpublique-min.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V2758",
+          "role": "decisif",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article unique, valant rejet du texte, 1re lecture, adoptée, puis texte retiré (127-83)"
+        }
+      ]
+    },
+    {
       "id": "energies-renouvelables-2023",
       "dossier_an": "DLR5L16N46539",
       "legislature": 16,
@@ -7025,6 +7092,59 @@
       ]
     },
     {
+      "id": "visite-parlementaires-essms-ppl-2023",
+      "dossier_an": "DLR5L16N46778",
+      "legislature": 16,
+      "titre": "Proposition de loi visant à étendre le droit de visite des parlementaires et parlementaires européens élus en France aux établissements sociaux et médico-sociaux",
+      "resume": "Proposition de loi du groupe RN (Laure Lavalette), examinée le 12 janvier 2023 et rejetée. Son article unique autorisait les députés, les sénateurs et les députés européens élus en France à visiter « à tout moment et sans préavis » tous les établissements sociaux et médico-sociaux. Sont notamment visés ceux de l'aide sociale à l'enfance, les Ehpad, les établissements pour personnes handicapées, les centres d'hébergement et les centres d'accueil pour demandeurs d'asile. Les parlementaires pouvaient se faire accompagner de journalistes. L'Assemblée a supprimé l'article unique (100-90), et le texte a été rejeté.",
+      "droits": [
+        {
+          "code": "enfants",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "ddd-2025-005"
+          ],
+          "justification": "Le texte ouvre aux parlementaires un contrôle sans préavis des lieux d'accueil de la protection de l'enfance, comme il en existe déjà pour les prisons, les centres de rétention et les centres éducatifs fermés. Pour la Défenseure des droits, le contrôle des établissements de protection de l'enfance « s'inscrit dans une politique globale de lutte contre la maltraitance institutionnelle ». Elle juge ce contrôle insuffisant et recommande des « contrôles inopinés dans les structures d'accueil collectif »."
+        },
+        {
+          "code": "sante",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "cglpl-2012"
+          ],
+          "justification": "Le texte ouvre aussi aux visites les établissements pour personnes âgées dépendantes (Ehpad). Le Contrôleur général des lieux de privation de liberté y voit un « risque d'atteinte aux droits des personnes âgées hébergées » et relève qu'« aucun instrument de constat sur place n'existe ». Selon lui, les « possibilités de contrôle » suffisent « à modifier les pratiques »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "",
+      "note": "Le texte n'a pas fait l'objet d'un vote sur l'ensemble. Le 12/01/2023, l'Assemblée a adopté les amendements de suppression de l'article unique (V829, 100-90), et la présidente a constaté que la proposition était rejetée. Le vote qui a fixé le sort de l'article unique tient lieu de scrutin décisif (règle 9). Il porte sur la suppression de l'article : voter pour, c'est voter contre le texte. Aucun amendement clé ni aucune motion de rejet : c'est le seul scrutin public du dossier. Les sources portent sur la mesure (le contrôle sans préavis de ces établissements par un tiers) et non sur ce texte. Le texte étend un droit, et aucune critique n'a été trouvée parmi les sources admises.",
+      "sources": {
+        "cglpl-2012": {
+          "auteur": "Contrôleur général des lieux de privation de liberté",
+          "titre": "Rapport d'activité 2012 (chapitre 1 : la question des établissements d'hébergement pour personnes âgées dépendantes)",
+          "date": "2013-02-25",
+          "url": "https://www.vie-publique.fr/files/rapport/pdf/134000232.pdf"
+        },
+        "ddd-2025-005": {
+          "auteur": "Défenseur des droits",
+          "titre": "Décision-cadre n° 2025-005 du 28 janvier 2025 relative à la protection de l'enfance",
+          "date": "2025-01-28",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=22543"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V829",
+          "role": "decisif",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article unique, valant rejet du texte, 1re lecture, adoptée (100-90)"
+        }
+      ]
+    },
+    {
       "id": "vote-correspondance-detenus-2025",
       "dossier_an": "DLR5L17N51052",
       "legislature": 17,
@@ -7258,8 +7378,8 @@
     {
       "dossier_an": "DLR5L16N46249",
       "legislature": 16,
-      "titre": "Instituer dans les écoles et collèges publics le port d’une tenue uniforme aux couleurs de l’établissement scolaire",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+      "titre": "Proposition de loi visant à instituer dans les écoles et collèges publics le port d'une tenue uniforme aux couleurs de l'établissement scolaire",
+      "motif": "Aucune source admise ne met ce texte en relation avec un droit de la grille (règle 7). Il rendait obligatoire une tenue uniforme dans les écoles et collèges publics. Ni le Défenseur des droits, ni la CNCDH, ni les syndicats de l'enseignement ne l'ont analysé sous l'angle des droits des élèves."
     },
     {
       "dossier_an": "DLR5L16N46270",
@@ -7418,12 +7538,6 @@
       "motif": "Règles de la mobilité à l'étranger des apprentis et des alternants. Aucune source admise (règle 7) ne s'est prononcée sur le texte."
     },
     {
-      "dossier_an": "DLR5L16N46778",
-      "legislature": 16,
-      "titre": "Etendre le droit de visite des parlementaires et parlementaires européens élus en France aux établissements sociaux et médico sociaux",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
-    },
-    {
       "dossier_an": "DLR5L16N46780",
       "legislature": 16,
       "titre": "Revivifier la représentation politique",
@@ -7548,12 +7662,6 @@
       "legislature": 16,
       "titre": "Garantir le respect du droit à l'image des enfants",
       "motif": "Adopté sans aucune voix contre au scrutin décisif (195 pour, 0 contre) : ce vote ne départage aucun député."
-    },
-    {
-      "dossier_an": "DLR5L16N47051",
-      "legislature": 16,
-      "titre": "Interdiction de l’écriture dite « inclusive » dans les éditions, productions et publications scolaires et universitaires ainsi que dans les actes civils, administratifs et commerciaux",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
     },
     {
       "dossier_an": "DLR5L16N47073",
