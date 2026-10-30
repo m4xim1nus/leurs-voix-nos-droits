@@ -13,7 +13,7 @@ identiques à l'octet avec ou sans elles. 104 textes qualifiés, 368 écartés.
 ### Ajouté
 
 - **Six qualifications** : PLF 2023, 2024 et 2025, PLFSS 2023, 2024 et 2025, avec
-  leurs 30 motions de censure, attribuées une à une d'après la page du dossier de
+  leurs 29 motions de censure, attribuées une à une d'après la page du dossier de
   l'AN et le compte rendu de la séance du vote. V2610 et V2989 portent sur la
   programmation des finances publiques : non retenues.
 - **Deux textes au fil de l'eau** : corps de fonctionnaires pour les AESH et parcours
