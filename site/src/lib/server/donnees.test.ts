@@ -4,7 +4,7 @@ import { DROITS } from '$lib/droits';
 import { mentionNavette } from '$lib/format';
 import { donnees } from './donnees';
 import { tableCodesPostaux } from './annuaire';
-import { vueDepute } from './vues';
+import { situation, vueDepute } from './vues';
 
 describe('données du site', () => {
   const d = donnees();
@@ -47,6 +47,19 @@ describe('données du site', () => {
       expect(t.echeance === 'inscrit', t.id).toBe(t.etat.seance_inscrite !== null);
       if (t.dernier_vote) expect(t.dernier_vote.ventilations.length, t.id).toBeGreaterThan(0);
     }
+  });
+
+  it('ne propose aux députés en cours que les textes attendus à l’Assemblée', () => {
+    const attendus = new Set(
+      d.enCours
+        .filter((t) => t.echeance === 'AN' || t.seances.length > 0 || t.chambre === 'AN')
+        .map((t) => t.id)
+    );
+    const dep = d.deputes.find((x) => situation(x).actuel)!;
+    const v = vueDepute(dep.slug);
+    expect(v.prochains.map((p) => p.id).sort()).toEqual([...attendus].sort());
+    const ancien = d.deputes.find((x) => !situation(x).actuel)!;
+    expect(vueDepute(ancien.slug).prochains).toEqual([]);
   });
 
   it('donne des slugs de députés uniques', () => {

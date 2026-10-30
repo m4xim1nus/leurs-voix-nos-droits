@@ -1,18 +1,21 @@
 <script lang="ts">
   import Regle from '$lib/components/Regle.svelte';
+  import { courrielProchainVote } from '$lib/courriel';
   import { court, phrase, scoreSousAngle, sousAngle } from '$lib/droits';
   import {
     circonscription,
     date,
     depute as dep,
     etatTexte,
+    inscription,
     legislature,
     mentionNavette,
     minuscule,
     pluriel,
     POSITION,
     POSITION_GROUPE,
-    pourcent
+    pourcent,
+    voteDeLecture
   } from '$lib/format';
   import type { VoteDepute } from '$lib/server/vues';
   import { NOM, URL_SITE } from '$lib/site';
@@ -41,6 +44,20 @@
         )}`
       : null
   );
+
+  const seancesDe = (p: (typeof data.prochains)[number]) =>
+    p.seances.length ? p.seances : p.date_inscrite ? [p.date_inscrite] : [];
+  const mailtoProchain = (p: (typeof data.prochains)[number]) => {
+    if (!d.courriel) return null;
+    const { sujet, corps } = courrielProchainVote({
+      titre: p.titre,
+      url: `${URL_SITE}/textes/${p.id}`,
+      feminin: elle,
+      seances: seancesDe(p),
+      vote: p.vote
+    });
+    return `mailto:${d.courriel}?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corps)}`;
+  };
 
   // Un clic sur un droit de la règle ne garde que ses textes, vus sous l'angle de ce droit.
   let filtre = $state<string | null>(null);
@@ -177,6 +194,50 @@
   {/if}
   {#if d.courriel}<span class="discret petit">{d.courriel}</span>{/if}
 </p>
+
+{#if data.prochains.length}
+  <section>
+    <h2>Prochains votes</h2>
+    <p>
+      Les textes retenus sur ce site <a href="/en-cours">attendus à l’Assemblée</a>, et son vote à
+      la lecture précédente. Un texte inscrit à l’ordre du jour n’est pas forcément examiné à cette
+      date, ni voté.
+    </p>
+    {#each data.prochains as p (p.id)}
+      {@const m = mailtoProchain(p)}
+      <article class="texte">
+        <h3><a href="/textes/{p.id}">{p.titre}</a></h3>
+        <p class="petit">
+          <strong
+            >{seancesDe(p).length
+              ? inscription('AN', seancesDe(p))
+              : 'Attendu à l’Assemblée, pas encore inscrit'}.</strong
+          >
+          {#if p.vote}
+            Le {date(p.vote.date)}{voteDeLecture(p.vote.etape)
+              ? ` (${voteDeLecture(p.vote.etape)})`
+              : ''} :
+            {#if p.vote.position === null}
+              {elle ? 'elle' : 'il'} n’était pas encore {elle ? 'députée' : 'député'}.
+            {:else if p.vote.position === 'absent'}
+              <strong>{elle ? 'absente' : 'absent'}</strong>.
+            {:else}
+              <strong>{POSITION[p.vote.position].toLowerCase()}</strong>.
+            {/if}
+            {#if p.vote.groupe}
+              <span class="sigle" style:--c={p.vote.groupe.couleur}>{p.vote.groupe.sigle}</span
+              >&nbsp;: {POSITION_GROUPE[p.vote.groupe.position]}.
+            {/if}
+            <a href={p.vote.url} rel="external">Le scrutin</a>.
+          {:else}
+            Aucun vote public de l’Assemblée sur ce texte pour l’instant.
+          {/if}
+        </p>
+        {#if m}<p class="petit"><a href={m}>Lui écrire sur ce texte</a></p>{/if}
+      </article>
+    {/each}
+  </section>
+{/if}
 
 {#if data.droits.length}
   <section>

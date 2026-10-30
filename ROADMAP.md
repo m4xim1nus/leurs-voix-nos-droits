@@ -150,7 +150,7 @@ pour y toucher.
     encart d'accueil, section de la méthodologie, fichiers sur `/donnees`.
     Repères : `quifaitlaloi/docs/CONCEPTION.md` §19. Une page presque vide
     après le 28/02 doit le dire simplement (fin de session).
-11. ⏳ **« Prochains votes » sur la fiche député** : textes retenus attendus
+11. ✅ **« Prochains votes » sur la fiche député** : textes retenus attendus
     à l'AN, son vote et celui de son groupe à la lecture précédente, courriel
     prérempli au ton factuel. Rien quand le texte est au Sénat.
 12. ⏳ **Flux RSS et iCal statiques**, générés au build, sans donnée

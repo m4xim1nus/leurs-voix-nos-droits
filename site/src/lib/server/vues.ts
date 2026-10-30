@@ -13,6 +13,7 @@ import type {
   ScrutinRetenu,
   Sens,
   Texte,
+  TexteEnCours,
   Ventilation
 } from '$lib/types';
 
@@ -171,6 +172,37 @@ function groupeDuJour(dep: Depute, date: string): GroupeCourt | null {
   );
 }
 
+/** Textes retenus attendus à l'AN et, à la lecture précédente, le vote du député et de son groupe. */
+function prochains(d: Donnees, dep: Depute) {
+  return d.enCours
+    .filter((t) => t.echeance === 'AN' || (t.echeance === 'inscrit' && estInscritAN(t)))
+    .map((t) => {
+      const v = t.dernier_vote;
+      const groupe = v ? groupeDuJour(dep, v.date) : null;
+      const ventilation = groupe ? v?.ventilations.find((x) => x.groupe.id === groupe.id) : null;
+      return {
+        id: t.id,
+        titre: t.titre,
+        seances: t.seances.map((s) => s.date),
+        date_inscrite: t.etat.seance_inscrite,
+        vote: v
+          ? {
+              date: v.date,
+              etape: v.etape,
+              url: v.url,
+              position: enMandat(dep, v.date)
+                ? (d.votes.get(v.id)?.get(dep.id) ?? ('absent' as const))
+                : null,
+              groupe: groupe && ventilation ? { ...groupe, position: ventilation.position } : null
+            }
+          : null
+      };
+    });
+}
+
+/** Inscrit à l'AN : l'agenda de l'AN le porte, ou la chambre attendue est l'AN. */
+const estInscritAN = (t: TexteEnCours) => t.seances.length > 0 || t.chambre === 'AN';
+
 export function vueDepute(slug: string) {
   const d = donnees();
   const dep = d.deputes.find((x) => x.slug === slug);
@@ -214,6 +246,7 @@ export function vueDepute(slug: string) {
   const { mandat, groupe, actuel } = situation(dep);
   const lignee = groupe ? (d.ligneeDe.get(groupe.id) ?? null) : null;
   return {
+    prochains: actuel ? prochains(d, dep) : [],
     depute: dep,
     mandat,
     groupe,
