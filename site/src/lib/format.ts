@@ -117,11 +117,36 @@ const LECTURE: Record<string, string> = {
   CMP: 'sur le texte de CMP'
 };
 
+/** « vote de 1re lecture » ; null si l'open data ne donne pas la lecture. */
+export function voteDeLecture(etape: string | null): string | null {
+  const lecture = etape ? LECTURE[etape] : undefined;
+  return lecture ? `vote ${lecture}` : null;
+}
+
 /** Mention à côté d'un vote compté sur un texte encore en navette ; null sinon. */
 export function mentionNavette(e: EtatTexte | null, etape: string | null): string | null {
   if (e?.etat !== 'en_navette') return null;
-  const lecture = etape ? LECTURE[etape] : undefined;
-  return lecture ? `vote ${lecture}, texte encore en navette` : 'texte encore en navette';
+  const vote = voteDeLecture(etape);
+  return vote ? `${vote}, texte encore en navette` : 'texte encore en navette';
+}
+
+/** « 18 et 19 novembre 2026 » : le mois et l'année ne se répètent pas s'ils sont communs. */
+export function listeDates(isos: string[]): string {
+  const dates = [...new Set(isos)].sort();
+  const memeMois = new Set(dates.map((d) => d.slice(0, 7))).size === 1;
+  const textes = dates.map((d, i) =>
+    memeMois && i < dates.length - 1 ? date(d).split(' ')[0] : date(d)
+  );
+  return textes.length < 2
+    ? (textes[0] ?? '')
+    : `${textes.slice(0, -1).join(', ')} et ${textes.at(-1)}`;
+}
+
+/** « Inscrit en séance à l'Assemblée les 18 et 19 novembre 2026 ». Inscrit ne veut pas dire voté. */
+export function inscription(chambre: 'AN' | 'SN' | null, dates: string[]): string {
+  const ou = chambre === 'SN' ? ' au Sénat' : chambre === 'AN' ? ' à l’Assemblée' : '';
+  const n = new Set(dates).size;
+  return `Inscrit en séance${ou} ${n > 1 ? 'les' : 'le'} ${listeDates(dates)}`;
 }
 
 /** L'état d'un texte dans une liste : pour un texte en navette, la mention et où il est attendu. */

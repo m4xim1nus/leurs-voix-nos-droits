@@ -38,6 +38,17 @@ describe('données du site', () => {
         expect(mentionNavette(t.etat, s.etape), s.id).toMatch(/^vote .*, texte encore en navette$/);
   });
 
+  it('ne met en cours que des textes retenus en navette, chacun avec son échéance', () => {
+    expect(d.enCours.length).toBeGreaterThan(0);
+    const retenus = new Set(d.textes.map((t) => t.dossier_an));
+    for (const t of d.enCours) {
+      expect(retenus.has(t.dossier_an), t.id).toBe(true);
+      expect(t.etat.etat, t.id).toBe('en_navette');
+      expect(t.echeance === 'inscrit', t.id).toBe(t.etat.seance_inscrite !== null);
+      if (t.dernier_vote) expect(t.dernier_vote.ventilations.length, t.id).toBeGreaterThan(0);
+    }
+  });
+
   it('donne des slugs de députés uniques', () => {
     const slugs = d.deputes.map((x) => x.slug);
     expect(new Set(slugs).size).toBe(slugs.length);

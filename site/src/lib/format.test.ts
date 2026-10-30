@@ -3,6 +3,8 @@ import {
   date,
   etatEnListe,
   etatTexte,
+  inscription,
+  listeDates,
   mentionNavette,
   normaliser,
   pluriel,
@@ -80,6 +82,17 @@ describe('état d’un texte', () => {
     expect(mentionNavette(etat({}), null)).toBe('texte encore en navette');
     expect(mentionNavette(etat({ etat: 'loi' }), 'AN1')).toBeNull();
     expect(mentionNavette(etat({ etat: 'a_l_arret' }), 'AN1')).toBeNull();
+  });
+
+  it('écrit les dates d’inscription sans répéter le mois, et jamais « sera voté »', () => {
+    expect(listeDates(['2026-11-19', '2026-11-18', '2026-11-19'])).toBe('18 et 19 novembre 2026');
+    expect(listeDates(['2026-11-30', '2026-12-01'])).toBe('30 novembre 2026 et 1er décembre 2026');
+    expect(inscription('AN', ['2026-11-18', '2026-11-19'])).toBe(
+      'Inscrit en séance à l’Assemblée les 18 et 19 novembre 2026'
+    );
+    expect(inscription('SN', ['2026-11-01'])).toBe(
+      'Inscrit en séance au Sénat le 1er novembre 2026'
+    );
   });
 
   it('réunit la mention et l’attente dans une liste', () => {

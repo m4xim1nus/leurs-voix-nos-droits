@@ -98,8 +98,17 @@ export function vueAccueil() {
       ...dr,
       n_textes: d.textes.filter((t) => t.droits.some((x) => x.code === dr.code)).length
     })),
-    derniers: d.textes.slice(0, 6).map(court)
+    derniers: d.textes.slice(0, 6).map(court),
+    enCours: {
+      total: d.enCours.length,
+      inscrits: d.enCours.filter((t) => t.echeance === 'inscrit').length
+    }
   };
+}
+
+export function vueEnCours() {
+  const d = donnees();
+  return { textes: d.enCours, dateEtat: d.dateEtat };
 }
 
 // --- Droits et textes -------------------------------------------------------------------------

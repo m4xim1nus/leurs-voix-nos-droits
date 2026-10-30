@@ -10,6 +10,9 @@ export const DEPOT = 'https://github.com/m4xim1nus/leurs-voix-nos-droits';
  */
 export const OUVERT = true;
 
+/** Fin de la session, avant l'élection présidentielle : la page des textes en cours le dit. */
+export const FIN_SESSION = '2027-02-28';
+
 /**
  * Adresse qui reçoit les contestations d'une qualification (lien sur chaque fiche texte, choix de
  * Max du 29/10/2026 : un courriel, sans formulaire hébergé). Vide : le lien est masqué.

@@ -38,6 +38,15 @@
   </div>
 </section>
 
+{#if data.enCours.total}
+  <p class="encart">
+    <a href="/en-cours">{pluriel(data.enCours.total, 'texte en cours', 'textes en cours')}</a> :
+    déjà votés, pas encore des lois{data.enCours.inscrits
+      ? `, dont ${pluriel(data.enCours.inscrits, 'inscrit', 'inscrits')} à l’ordre du jour`
+      : ''}.
+  </p>
+{/if}
+
 <section>
   <h2>Les groupes de l’Assemblée</h2>
   <p>
@@ -87,6 +96,14 @@
   }
   .cherche {
     margin-top: 2rem;
+  }
+  .encart {
+    max-width: none;
+    margin: 1.25rem 0 0;
+    padding: 0.6rem 0.8rem;
+    background: var(--plan);
+    border-radius: 3px;
+    font-weight: 600;
   }
   details summary {
     cursor: pointer;

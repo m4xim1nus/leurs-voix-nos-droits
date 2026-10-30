@@ -166,6 +166,45 @@ export interface TexteUnanime {
   ventilations: Ventilation[];
 }
 
+/** Un vote public de l'AN sur un texte en cours, affiché avec la position de chaque groupe. */
+export interface VoteAN {
+  id: string;
+  numero: number;
+  date: string;
+  etape: string | null;
+  sort: 'adopte' | 'rejete';
+  decompte: { pour: number; contre: number; abstention: number };
+  ventilations: Ventilation[];
+  url: string;
+}
+
+/** Point de l'ordre du jour : `eventuel` si la réunion n'est pas confirmée. */
+export interface PointAgenda {
+  date: string;
+  etat: 'confirme' | 'eventuel';
+}
+
+/** Ce qu'un texte en cours attend : une séance, une chambre, la CMP, ou rien de connu. */
+export type Echeance = 'inscrit' | 'AN' | 'SN' | 'CMP' | 'inconnue';
+
+/** Texte de la page /en-cours : retenu à la main, jamais par les seuls mots-clés. */
+export interface TexteEnCours {
+  dossier_an: string;
+  id: string;
+  titre: string;
+  etat: EtatTexte;
+  echeance: Echeance;
+  /** Chambre où le texte est attendu, si elle est connue. */
+  chambre: 'AN' | 'SN' | null;
+  seances: PointAgenda[];
+  commissions: (PointAgenda & { organe: string })[];
+  /** Le texte qualifié : son droit principal, et la date du vote sur lequel le sens a été lu. */
+  qualification: { code: string; sens: Sens; date: string | null } | null;
+  dernier_vote: VoteAN | null;
+  /** Le dernier vote est-il celui sur lequel le texte a été qualifié ? */
+  vote_qualifie: boolean;
+}
+
 export interface Mandat {
   legislature: number;
   departement: string;

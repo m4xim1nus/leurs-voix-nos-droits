@@ -23,7 +23,14 @@
     'scores_groupes.csv': 'score de chaque groupe, par droit',
     'scores_deputes_textes.csv': 'score de chaque député·e, par texte',
     'scores_groupes_textes.csv': 'score de chaque groupe, par texte',
-    'participation.csv': 'participation de chaque député·e aux scrutins comptés'
+    'participation.csv': 'participation de chaque député·e aux scrutins comptés',
+    'en_cours.csv':
+      'textes votés au moins une fois depuis 2024, pas encore des lois, et motif d’écart',
+    'en_cours_lectures.csv': 'lectures votées de ces textes : issue, scrutin de l’AN, mode de vote',
+    'en_cours_evenements.csv': 'procédure accélérée, 49.3, CMP, saisine du Conseil constitutionnel',
+    'en_cours_etats.csv': 'où en est chaque texte du catalogue',
+    'en_cours_agenda.csv': 'ordre du jour de l’AN : points de séance et de commission à venir',
+    'en_cours_alertes.csv': 'nouveaux votes et inscriptions à traiter pour la qualification'
   };
 </script>
 

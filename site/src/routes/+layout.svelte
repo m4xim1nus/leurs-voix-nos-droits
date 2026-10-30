@@ -9,6 +9,7 @@
   const MENU = [
     { href: '/droits', libelle: 'Droits' },
     { href: '/textes', libelle: 'Textes' },
+    { href: '/en-cours', libelle: 'En cours' },
     { href: '/groupes', libelle: 'Groupes' },
     { href: '/comparer', libelle: 'Comparer' },
     { href: '/methodologie', libelle: 'Méthodologie' },

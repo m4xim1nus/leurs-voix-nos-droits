@@ -12,6 +12,7 @@ import type {
   Appartenance,
   Depute,
   Droit,
+  Echeance,
   Ecarte,
   EtatTexte,
   GroupeCourt,
@@ -23,8 +24,10 @@ import type {
   Score,
   ScrutinRetenu,
   Texte,
+  TexteEnCours,
   TexteUnanime,
-  Ventilation
+  Ventilation,
+  VoteAN
 } from '$lib/types';
 
 /** Racine du dépôt, relative à site/ (cwd de vite). */
@@ -57,6 +60,8 @@ export interface Donnees {
   ecartes: Ecarte[];
   /** Textes écartés faute d'opposition au décisif (règle 9), avec ce scrutin. */
   unanimes: TexteUnanime[];
+  /** Textes retenus encore en navette (page /en-cours), par échéance. */
+  enCours: TexteEnCours[];
   lignees: Lignee[];
   ligneeDe: Map<string, Lignee>;
   groupe: Map<string, GroupeCourt>;
@@ -183,6 +188,14 @@ function etats(): Map<string, EtatTexte> {
   );
 }
 
+/** Ce qu'attend un texte : d'abord une séance fixée, puis la CMP, puis une chambre. */
+function echeance(e: EtatTexte): Echeance {
+  if (e.seance_inscrite) return 'inscrit';
+  if (e.attente === 'cmp' || e.attente === 'cmp_conclusions') return 'CMP';
+  if (e.attente_chambre === 'AN' || e.attente_chambre === 'SN') return e.attente_chambre;
+  return 'inconnue';
+}
+
 const CODES: Record<string, Position> = {
   P: 'pour',
   C: 'contre',
@@ -227,9 +240,17 @@ function charger(): Donnees {
     const s = catalogue.get(e.dossier_an)?.decisif_propose;
     return SANS_OPPOSITION.test(e.motif) && s ? [{ e, scrutin: s }] : [];
   });
+  // Votes de l'AN sur l'ensemble des textes en cours : ils s'affichent, sans entrer dans les scores.
+  const lecturesAN = new Map<string, string[]>();
+  for (const l of exp('en_cours_lectures'))
+    if (l.chambre === 'AN' && l.scrutin_id)
+      lecturesAN.set(l.texte_id!, [...(lecturesAN.get(l.texte_id!) ?? []), l.scrutin_id]);
   const retenus = new Set<string>([
     ...editorial.textes.flatMap((t: { scrutins: { id: string }[] }) => t.scrutins.map((s) => s.id)),
-    ...unanimesBruts.map((u) => u.scrutin)
+    ...unanimesBruts.map((u) => u.scrutin),
+    ...editorial.textes.flatMap((t: { dossier_an: string }) =>
+      etat.get(t.dossier_an)?.etat === 'en_navette' ? (lecturesAN.get(t.dossier_an) ?? []) : []
+    )
   ]);
   const scrutins = new Map(
     exp('scrutins')
@@ -368,6 +389,68 @@ function charger(): Donnees {
     })
     .sort((a, b) => b.scrutin.date.localeCompare(a.scrutin.date));
 
+  const agenda = exp('en_cours_agenda');
+  const points = (dossier: string, instance: string) =>
+    agenda.filter((p) => p.dossier_id === dossier && p.instance === instance);
+  const voteAN = (id: string): VoteAN => {
+    const s = scrutins.get(id)!;
+    return {
+      id,
+      numero: Number(s.numero),
+      date: s.date!,
+      etape: txt(s.etape),
+      sort: s.sort as 'adopte' | 'rejete',
+      decompte: {
+        pour: Number(s.pour),
+        contre: Number(s.contre),
+        abstention: Number(s.abstention)
+      },
+      ventilations: (ventilations.get(id) ?? []).sort((x, y) => y.membres - x.membres),
+      url: urlScrutin(Number(s.legislature), Number(s.numero))
+    };
+  };
+  const enCours: TexteEnCours[] = textes
+    .filter((t) => t.etat?.etat === 'en_navette')
+    .map((t): TexteEnCours => {
+      const e = t.etat!;
+      const decisif = t.scrutins.find((s) => s.role === 'decisif')?.id;
+      // Le plus récent des votes publics de l'AN sur l'ensemble, décisif retenu compris.
+      const dernier = [...(lecturesAN.get(t.dossier_an) ?? []), ...(decisif ? [decisif] : [])]
+        .filter((id) => scrutins.has(id))
+        .sort((a, b) => scrutins.get(a)!.date!.localeCompare(scrutins.get(b)!.date!))
+        .at(-1);
+      return {
+        dossier_an: t.dossier_an,
+        id: t.id,
+        titre: t.titre,
+        etat: e,
+        echeance: echeance(e),
+        chambre:
+          e.attente_chambre === 'AN' || e.attente_chambre === 'SN' ? e.attente_chambre : null,
+        seances: points(t.dossier_an, 'seance').map((p) => ({
+          date: p.date!,
+          etat: p.etat as 'confirme' | 'eventuel'
+        })),
+        commissions: points(t.dossier_an, 'commission').map((p) => ({
+          date: p.date!,
+          etat: p.etat as 'confirme' | 'eventuel',
+          organe: p.organe!
+        })),
+        qualification: {
+          code: t.principal.code,
+          sens: t.principal.sens,
+          date: t.sans_vote ? null : t.date
+        },
+        dernier_vote: dernier ? voteAN(dernier) : null,
+        vote_qualifie: dernier !== undefined && dernier === decisif
+      };
+    })
+    .sort(
+      (a, b) =>
+        (a.etat.seance_inscrite ?? '9999').localeCompare(b.etat.seance_inscrite ?? '9999') ||
+        (b.etat.date_derniere_lecture ?? '').localeCompare(a.etat.date_derniere_lecture ?? '')
+    );
+
   const participation = new Map<string, Participation>(
     (existsSync(resolve(EXPORT, 'participation.csv')) ? exp('participation') : []).map((p) => [
       p.acteur_id!,
@@ -387,6 +470,7 @@ function charger(): Donnees {
     textes,
     ecartes,
     unanimes,
+    enCours,
     lignees,
     ligneeDe,
     groupe,

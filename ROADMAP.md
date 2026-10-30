@@ -144,7 +144,7 @@ pour y toucher.
    Retrait, par une publication de l'admin, des « (non promulgué) » saisis dans
    les titres : préparé (17 textes, `source/brouillons-titres/`, titres seuls),
    à charger et publier par Max.
-10. ⏳ **Page `/en-cours`**, rangée par échéance (inscrit à une date, attendu
+10. ✅ (la section de la méthodologie vient avec l'item 14) **Page `/en-cours`**, rangée par échéance (inscrit à une date, attendu
     à l'AN, au Sénat, en CMP, suite pas encore connue) : dernier vote de l'AN
     par groupe, mention « pas encore qualifié » s'il y a lieu. Navigation,
     encart d'accueil, section de la méthodologie, fichiers sur `/donnees`.
