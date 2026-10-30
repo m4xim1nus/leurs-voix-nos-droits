@@ -73,7 +73,7 @@ pour y toucher.
 
 ### Socle de données
 
-1. ⏳ **Dosleg, décisions du Sénat seulement** : ajouter `senat_dosleg`
+1. ✅ **Dosleg, décisions du Sénat seulement** : ajouter `senat_dosleg`
    (`https://data.senat.fr/data/dosleg/dosleg.zip`) à `sources.py`, et
    reprendre de `quifaitlaloi/pipeline/qfl/senat.py` les décisions de
    séance, les séances, l'activité et l'état des dossiers. Pas de vote de

@@ -36,6 +36,7 @@ découlent ont été validées par Max le 29/10/2026 (`docs/METHODO.md`).
 | Amendements AN XVIIe | `…/17/loi/amendements_div_legis/Amendements.json.zip` | 348 Mo → 1,6 Go, 142 579 fichiers | auteur, groupe de l'auteur, dossier, séance |
 | Amendements AN XVIe | `…/16/loi/amendements_div_legis/Amendements.json.zip` | 363 Mo (figé le 28/06/2024) | idem |
 | Acteurs et organes AN (historique) | `…/17/amo/tous_acteurs_mandats_organes_xi_legislature/AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip` | 14 Mo | sigles des groupes, mandats, circonscriptions |
+| Dosleg (Sénat) | `data.senat.fr/data/dosleg/dosleg.zip` | 16 Mo → 122 Mo (quotidien) | décisions de séance, séances, activité et état des dossiers (`lvnd/senat.py`) |
 
 `lvnd download` (`pipeline/lvnd/sources.py`, repris de quifaitlaloi)
 télécharge et extrait ces dumps dans `data/raw/` et tient un manifeste
@@ -169,6 +170,24 @@ est le même que pour la XVIIe.
 XVIIe : 9 195 scrutins rattachés sur 9 200 (99,9 %). Pour les six textes
 témoins, le scrutin décisif proposé (dernier vote de l'AN sur l'ensemble)
 est celui que la qualification retient.
+
+## Dosleg : où en est un texte au Sénat
+
+`lvnd/senat.py`, adapté de quifaitlaloi. Le dump est un SQL PostgreSQL
+(`dosleg.sql`), lu table par table en 1,3 s. Au 30/10/2026 : 12 495 dossiers,
+6 561 décisions de séance, 7 214 séances, 1 321 scrutins publics depuis la
+XVIe.
+
+Il sert parce que le dossier AN enregistre les décisions du Sénat avec
+retard : casseurs-payeurs, voté le 27/10/2026, n'y figurait pas le 28/10.
+On lit, pour une lecture du Sénat sans décision dans le dossier AN : le texte
+adopté ou rejeté en séance (table `oritxt`), à défaut le décompte du scrutin
+public de la même lecture.
+
+**Aucun vote de sénateur·ice n'est lu** (`votsen` ignorée) : ils restent au
+cycle Sénat. Le statut des décisions du Sénat dans le dossier AN n'est pas
+toujours fiable (« modifié » pour un texte voté conforme) : l'adoption
+définitive se lit aussi dans Dosleg (`oritxtado = D`).
 
 ## Groupes : renommages et ventilations
 
