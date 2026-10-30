@@ -144,7 +144,7 @@ pour y toucher.
    Retrait, par une publication de l'admin, des « (non promulgué) » saisis dans
    les titres : préparé (17 textes, `source/brouillons-titres/`, titres seuls),
    à charger et publier par Max.
-10. ✅ (la section de la méthodologie vient avec l'item 14) **Page `/en-cours`**, rangée par échéance (inscrit à une date, attendu
+10. ✅ **Page `/en-cours`**, rangée par échéance (inscrit à une date, attendu
     à l'AN, au Sénat, en CMP, suite pas encore connue) : dernier vote de l'AN
     par groupe, mention « pas encore qualifié » s'il y a lieu. Navigation,
     encart d'accueil, section de la méthodologie, fichiers sur `/donnees`.
@@ -163,7 +163,7 @@ pour y toucher.
     pipeline/admin à l'octet). Contrôles : droits touchés sans sens, au moins
     une source par droit, aucun scrutin, termes interdits. Une validation par
     Max et le bouton « Publier », comme pour une qualification.
-14. ⏳ **Méthodologie** : règles écrites dans `docs/METHODO.md` et sur le
+14. ⏳ (rédigé, règles 20 à 22 : en attente de la validation de Max) **Méthodologie** : règles écrites dans `docs/METHODO.md` et sur le
     site (état d'un texte, fiche de suivi, texte qualifié en navette). **Leur
     rédaction est à valider par Max avant la mise en ligne.**
 15. ⏳ **Lot test** de 3 à 5 textes inscrits, parmi : relance du logement

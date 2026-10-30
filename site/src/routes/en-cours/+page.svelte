@@ -57,7 +57,7 @@
 </p>
 <p>
   Un texte inscrit à l’ordre du jour n’est pas forcément examiné à cette date, ni voté. Les règles
-  sont dans la <a href="/methodologie">méthodologie</a>.
+  sont dans la <a href="/methodologie#en-cours">méthodologie</a>.
 </p>
 <p class="petit">
   Suivre ces textes : <a href="/en-cours/flux.xml">flux RSS</a>,

@@ -295,7 +295,7 @@ vie privée », avec la source à côté, jamais « texte liberticide ».
 | Groupes | `/groupes` | par législature : tableau groupe × droit, effectifs |
 | Fiche groupe | `/groupes/<sigle>-<législature>` | score global, par droit et par texte (un clic sur un droit filtre ses textes), textes adoptés sans opposition, membres et leur score |
 | Comparer | `/comparer?a=…&b=…` | deux députés, deux groupes, ou un député et son groupe : score, droit par droit, textes où ils s'écartent le plus ; deux règles par ligne (le premier en haut, curseur plein ; le second en bas, curseur creux), bandeau fixe qui les rappelle au défilement |
-| Méthodologie | `/methodologie` | grille, règles 1 à 19, préparation des qualifications, code postal, sources |
+| Méthodologie | `/methodologie` | grille, règles 1 à 22, préparation des qualifications, code postal, sources |
 | Données | `/donnees` | `editorial.json`, exports CSV, votes nominatifs, licence |
 
 Le slug d'un député est `prenom-nom` en minuscules sans accents. En cas

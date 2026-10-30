@@ -31,6 +31,7 @@
     <li><a href="#scrutins">Les scrutins retenus</a></li>
     <li><a href="#groupes">La position d’un groupe</a></li>
     <li><a href="#scores">Le calcul des scores</a></li>
+    <li><a href="#en-cours">Les textes en cours</a></li>
     <li><a href="#donnees">Les données</a></li>
     <li><a href="#limites">Les limites</a></li>
   </ol>
@@ -251,6 +252,38 @@
   <p class="petit discret">
     Les scores s’affichent arrondis à l’unité ; les données téléchargeables les donnent au dixième.
   </p>
+</section>
+
+<section id="en-cours">
+  <h2>Les textes en cours</h2>
+  <ol class="regles">
+    <li value="20" id="regle-20">
+      <strong>État d’un texte.</strong> L’état d’un texte est un fait lu dans l’open data, jamais une
+      appréciation : loi promulguée, en navette (avec la chambre où il est attendu), à l’arrêt, rejeté,
+      retiré. Il vient du dossier de l’Assemblée et des décisions de séance publiées par le Sénat, et
+      il est daté du jour des données. Un texte est dit « à l’arrêt » quand aucun acte n’a été enregistré
+      depuis 12 mois. Un texte « inscrit » figure à l’ordre du jour d’une séance : il n’est pas forcément
+      examiné à cette date, ni voté. L’état n’entre dans aucun score.
+    </li>
+    <li value="21" id="regle-21">
+      <strong>Texte qualifié encore en navette.</strong> Son dernier vote sur l’ensemble à l’Assemblée
+      reste décisif et compte dans les scores, avec la mention « vote de 1re lecture, texte encore en
+      navette » (la lecture est celle du scrutin). Son sens se lit « sur le texte voté le… » : le texte
+      peut encore changer. Après un nouveau vote sur l’ensemble, le sens est relu sur le texte voté. Jusqu’à
+      cette relecture, l’ancien vote décisif reste compté et le nouveau vote s’affiche avec la mention
+      « pas encore qualifié ». Un texte à l’arrêt affiche son état, sans cette mention.
+    </li>
+    <li value="22" id="regle-22">
+      <strong>Fiche de suivi.</strong> Un texte sans vote qualifié peut être suivi avant le vote. Il
+      est retenu à la main : les mots-clés ne font que présélectionner. Sa fiche donne les droits
+      qu’il touche et des sources publiques admises, au moins une par droit,
+      <strong>sans sens ni score</strong>. Aucun scrutin n’y est retenu. Faute de source admise, il
+      n’y a pas de fiche. Après le vote, le texte est qualifié ou écarté selon les règles communes,
+      et sa fiche disparaît. La page des
+      <a href="/en-cours">textes en cours</a> n’affiche que ces textes suivis et les textes qualifiés
+      encore en navette.
+    </li>
+  </ol>
 </section>
 
 <section id="donnees">

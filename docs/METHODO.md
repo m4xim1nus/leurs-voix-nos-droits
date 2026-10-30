@@ -293,3 +293,32 @@ voté le reste ; un texte qui le pérennise ne la reçoit pas.
     (`pipeline/referentiels/groupes.yaml`). Le score d'un
     groupe agrège les votes de ses membres. On ne le calcule pas sur ses
     positions, qui servent à l'affichage scrutin par scrutin.
+
+## Textes en cours
+
+**Rédaction proposée, à valider par Max avant la mise en ligne** (règles 20 à
+22, ROADMAP, item 14).
+
+20. **État d'un texte.** L'état d'un texte est un fait lu dans l'open data, jamais
+    une appréciation : loi promulguée, en navette (avec la chambre où il est
+    attendu), à l'arrêt, rejeté, retiré. Il vient du dossier de l'Assemblée et des
+    décisions de séance publiées par le Sénat, et il est daté du jour des
+    données. Un texte est dit « à l'arrêt » quand aucun acte n'a été enregistré
+    depuis 12 mois. Un texte « inscrit » figure à l'ordre du jour d'une séance : il
+    n'est pas forcément examiné à cette date, ni voté. L'état n'entre dans aucun
+    score.
+21. **Texte qualifié encore en navette.** Son dernier vote sur l'ensemble à
+    l'Assemblée reste décisif et compte dans les scores (règle 9), avec la mention
+    « vote de 1re lecture, texte encore en navette » (la lecture est celle du
+    scrutin). Son sens se lit « sur le texte voté le… » (règle 6) : le texte peut
+    encore changer. Après un nouveau vote sur l'ensemble, le sens est relu sur le
+    texte voté. Jusqu'à cette relecture, l'ancien décisif reste compté et le
+    nouveau vote s'affiche avec la mention « pas encore qualifié ». Un texte à
+    l'arrêt affiche son état, sans cette mention.
+22. **Fiche de suivi.** Un texte sans vote qualifié peut être suivi avant le vote.
+    Il est retenu à la main : les mots-clés ne font que présélectionner. Sa fiche
+    donne les droits qu'il touche et des sources publiques admises (règle 7), au
+    moins une par droit, **sans sens ni score**. Aucun scrutin n'y est retenu. Faute
+    de source admise, il n'y a pas de fiche. Après le vote, le texte est qualifié ou
+    écarté selon les règles communes, et sa fiche disparaît. La page des textes en
+    cours n'affiche que ces textes suivis et les textes qualifiés encore en navette.
