@@ -228,6 +228,15 @@ def test_validations(tmp_path):
         sync_admin.validations(tmp_path, "x")
 
 
+def test_validation_refuse_d_ecarter_un_texte_publie(tmp_path, monkeypatch):
+    monkeypatch.setattr(editorial, "charger", lambda: {"textes": [{"id": "pub", "dossier_an": "DLR5L17N2"}]})
+    (tmp_path / "b.yaml").write_text(yaml.safe_dump({"id": "", "dossier_an": "DLR5L17N2", "legislature": 17,
+                                                      "titre": "T", "statut": "ecarte", "motif_ecart": "m"}))
+    with pytest.raises(SystemExit, match="publié comme qualifié"):
+        sync_admin.validations(tmp_path, "x")
+    assert "'ecarte'" in sync_admin.validations(tmp_path, "x", ecarter_publie=True)[0]
+
+
 def test_texte_adopte_par_49_3():
     # Pas de décisif, mais des motions de censure : valide (règle 9), même hors du dossier.
     censure = [{"id": "C", "role": "censure", "pour": "contre-texte", "objet": "motion de censure"}]

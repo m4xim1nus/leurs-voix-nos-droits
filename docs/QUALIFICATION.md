@@ -61,6 +61,8 @@ celles de `docs/METHODO.md`. Le circuit est celui de l'admin
 YAML du dossier. Vérifier avant que le nom n'est pas déjà pris, et que la page « Publier »
 ne montre que les textes attendus. Le 30/10/2026, six écarts copiés dans un
 `brouillons-tri` déjà rempli ont ainsi réécrit trois décisions plus récentes.
+`--valider` affiche désormais la liste de ce qu'il écrit, et refuse d'écarter un texte
+publié comme qualifié sans `--ecarter-publie`.
 
 Le lot de tri (garder ou écarter des candidats en masse) suit le même
 circuit. Ses brouillons ne portent que `statut: ecarte` et un

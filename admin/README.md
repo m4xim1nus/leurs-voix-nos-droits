@@ -14,6 +14,7 @@ et l'identité est `dev@localhost`.
 cd admin
 npm ci
 npm run db:migrer                                   # schéma (migrations/)
+printf 'ACCESS_TEAM_DOMAIN=""\n' > .dev.vars         # sans Access en local (sinon 403 : wrangler.jsonc le déclare)
 (cd ../pipeline && uv run lvnd sync-admin --local --editorial)   # catalogue + qualifications publiées
 npm run dev                                         # http://localhost:5173
 ```

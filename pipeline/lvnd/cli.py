@@ -52,6 +52,8 @@ def main(argv=None) -> int:
     s.add_argument("--valider", metavar="COMMENTAIRE",
                    help="avec --brouillons : écrit ces qualifications au statut validé (ou écarté), sur décision "
                         "explicite de Max ; COMMENTAIRE va dans la révision")
+    s.add_argument("--ecarter-publie", action="store_true",
+                   help="avec --valider : autorise à écarter un texte publié comme qualifié (refusé sinon)")
     s.add_argument("--remplacer", metavar="COMMENTAIRE",
                    help="avec --brouillons : remplace les qualifications existantes (requalification) et les "
                         "repasse à relire ; COMMENTAIRE va dans la révision")
@@ -100,7 +102,7 @@ def main(argv=None) -> int:
     elif args.commande == "sync-admin":
         from . import sync_admin
         sync_admin.sync(args.export, ADMIN, args.cible, args.editorial, args.sortie, args.brouillons, args.valider,
-                        args.complet, args.simuler, args.remplacer)
+                        args.complet, args.simuler, args.remplacer, args.ecarter_publie)
     return 0
 
 

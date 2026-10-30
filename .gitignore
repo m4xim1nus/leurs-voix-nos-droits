@@ -21,6 +21,7 @@ data/lvnd.sqlite
 /source
 .env
 .env.*
+.dev.vars
 
 # Divers
 .DS_Store

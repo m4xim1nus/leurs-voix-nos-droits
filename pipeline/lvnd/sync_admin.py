@@ -192,11 +192,14 @@ def brouillons(dossier: Path) -> list[dict]:
 AUTEUR_VALIDATION = "claude, validé par Max"
 
 
-def validations(dossier: Path, commentaire: str) -> list[str]:
+def validations(dossier: Path, commentaire: str, ecarter_publie: bool = False) -> list[str]:
     """Qualifications de DOSSIER/*.yaml validées par Max (dans le chat) : chacune est écrite au statut
     « valide » (« ecarte » ou « a-suivre » si le YAML le propose), qu'elle existe déjà dans D1 ou non,
-    avec une révision qui le dit. Ne sert que sur décision explicite de Max (CLAUDE.md)."""
+    avec une révision qui le dit. Ne sert que sur décision explicite de Max (CLAUDE.md). Écarter un texte
+    publié comme qualifié est refusé sans `ecarter_publie`, avant toute écriture (docs/QUALIFICATION.md,
+    « un dossier neuf par chargement ») ; la liste s'affiche pour vérifier ce qui part."""
     date = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    publies = {t["dossier_an"]: t["id"] for t in editorial.charger()["textes"]}
     out = []
     for f in sorted(dossier.glob("*.yaml")):
         t = yaml.safe_load(f.read_text())
@@ -204,12 +207,16 @@ def validations(dossier: Path, commentaire: str) -> list[str]:
         if ecarte and not t.get("motif_ecart"):
             raise SystemExit(f"{f} : texte écarté sans motif")
         doc = editorial.normaliser({**t, "droits": t.get("droits") or [], "scrutins": t.get("scrutins") or []})
+        if ecarte and doc["dossier_an"] in publies and not ecarter_publie:
+            raise SystemExit(f"{f} : {doc['dossier_an']} est publié comme qualifié ({publies[doc['dossier_an']]}) ; "
+                             "rien n'est écrit. Pour l'écarter vraiment : --ecarter-publie")
         a_suivre = t.get("statut") == "a-suivre"
         if not ecarte:
             err, _ = editorial.valider_suivi(doc) if a_suivre else editorial.valider(doc)
             if err:
                 raise SystemExit(f"{f} : {' ; '.join(err)}")
         statut, motif = ("ecarte", t["motif_ecart"]) if ecarte else ("a-suivre" if a_suivre else "valide", None)
+        print(f"{statut} : {doc['dossier_an']} {doc.get('titre', '')}", file=sys.stderr)
         valeurs = [doc["dossier_an"], statut, compact(doc), motif, AUTEUR_VALIDATION, date]
         out.append("INSERT INTO qualifications (dossier_an, statut, doc, motif_ecart, modifie_par, modifie_le) "
                    f"VALUES ({', '.join(sql_valeur(x) for x in valeurs)}) ON CONFLICT (dossier_an) DO UPDATE SET "
@@ -338,7 +345,7 @@ def script(export: Path, editorial_doc: dict | None = None, brouillons_lignes: l
 
 def sync(export: Path, admin: Path, cible: str, avec_editorial: bool, sortie: Path | None,
          dossier_brouillons: Path | None = None, valider: str | None = None, complet: bool = False,
-         simuler: bool = False, remplacer: str | None = None) -> None:
+         simuler: bool = False, remplacer: str | None = None, ecarter_publie: bool = False) -> None:
     doc = editorial.charger() if avec_editorial else None
     if remplacer is not None and (not dossier_brouillons or valider is not None):
         raise SystemExit("--remplacer s'utilise avec --brouillons DOSSIER, sans --valider")
@@ -359,7 +366,7 @@ def sync(export: Path, admin: Path, cible: str, avec_editorial: bool, sortie: Pa
         if not dossier_brouillons:
             raise SystemExit("--valider s'utilise avec --brouillons DOSSIER")
         sql = "\n".join(["-- Généré par `lvnd sync-admin --valider` : ne pas éditer.",
-                         *validations(dossier_brouillons, valider)]) + "\n"
+                         *validations(dossier_brouillons, valider, ecarter_publie)]) + "\n"
     elif remplacer is not None:
         sql = "\n".join(["-- Généré par `lvnd sync-admin --remplacer` : ne pas éditer.",
                          *remplacements(brouillons(dossier_brouillons), remplacer)]) + "\n"

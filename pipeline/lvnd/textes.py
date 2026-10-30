@@ -138,6 +138,14 @@ def _decision(cc: dict) -> str | None:
     return f"{cc['anneeDecision']}-{cc['numDecision']} DC" if cc.get("numDecision") else None
 
 
+def _url_decision(cc: dict) -> str | None:
+    """Adresse de la décision. Son dossier est l'année où elle est rendue, que l'open data peut manquer
+    (2022-846 DC, rendue le 19/01/2023, donnée sous /decision/2022/, en 404) : `dateActe` fait foi."""
+    url = (cc.get("urlConclusion") or "").replace("http://", "https://")
+    annee = (cc.get("dateActe") or "")[:4]
+    return (re.sub(r"/decision/\d{4}/", f"/decision/{annee}/", url) if annee else url) or None
+
+
 def _initiative(d: dict) -> str:
     for e in an.enfants(d):
         for a in an.parcourir(e):
@@ -192,7 +200,7 @@ def catalogue(dossiers: dict[str, dict], scrutins: list[dict], liens: dict[str, 
             "url_loi": url_loi,
             "cc_decision": _decision(cc) if cc else None,
             "cc_sens": (cc.get("statutConclusion") or {}).get("libelle") if cc else None,
-            "cc_url": ((cc.get("urlConclusion") or "").replace("http://", "https://") or None) if cc else None,
+            "cc_url": _url_decision(cc) if cc else None,
             "n_scrutins": len(ss),
             "n_amendements": sum(s["objet"] in ("amendement", "suppression_article_unique") for s in ss),
             "n_ensemble": len(ensembles),

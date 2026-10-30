@@ -36,7 +36,7 @@ jobs:
           cache-dependency-glob: pipeline/uv.lock
 
       - name: Archives des jours précédents
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v5
         with:
           path: |
             data/raw/**/*.zip
@@ -53,7 +53,7 @@ jobs:
 
       - name: Archives gardées pour le lendemain
         if: always()
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v5
         with:
           path: |
             data/raw/**/*.zip
