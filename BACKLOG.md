@@ -82,14 +82,40 @@ compte Cloudflare et du dépôt.
 - [→Passation] Tutoriel de l'admin pour les futur·es rédacteur·ices (connexion par Access, qualifier un texte, contrôles, brouillon et publication) (user:moi, 2026-10-29)
 - [→Passation] Présentation du projet et des choix de méthode retenus : page « bento » ou PDF (user:moi, 2026-10-29)
 
+### Assistant admin
+
+Non prioritaire. Rendre le circuit de `docs/QUALIFICATION.md` utilisable
+dans l'admin, sans Claude Code, YAML ni wrangler. Garde-fous : le LLM
+propose et ne valide ni ne publie jamais ; chaque révision dit qu'elle vient
+de l'assistant et qui l'a demandée ; un cas non prévu remonte à un humain,
+sans règle inventée ; extraits et incertitudes affichés au moment de valider.
+
+- [→Assistant admin] Avant tout écran : mesurer l'accord avec des qualifications validées (droit principal, sens, décisif), la stabilité entre deux passages et le taux d'erreur sur les textes corrigés à la relecture, l'accord brut étant flatté parce que Claude les a préparées (claude, 2026-10-30)
+- [→Assistant admin] Avant d'investir : montrer une maquette aux futur·es utilisateur·ices et confirmer que l'usage d'un LLM et de ce fournisseur est accepté (claude, 2026-10-30)
+- [→Assistant admin] Bouton « Préparer un brouillon » : l'agent cherche les sources et propose droits, sens et scrutins ; le résultat passe par `qualification.ts` et arrive « à relire ». Recherche de plusieurs minutes : file d'attente ou Managed Agents (user:moi et claude, 2026-10-30)
+- [→Assistant admin] Vérifier les citations sans LLM : chaque extrait figure dans le document et l'URL répond (claude, 2026-10-30)
+- [→Assistant admin] Relecture dans l'admin : fiche de relecture et contre-lecture critique au regard de `METHODO.md`, à côté du brouillon (claude, 2026-10-30)
+- [→Assistant admin] Import d'une source depuis une URL ou un PDF : auteur, titre, date et extraits préremplis (claude, 2026-10-30)
+- [→Assistant admin] Veille : un nouveau vote décisif sur un texte candidat, détecté après le build hebdomadaire, déclenche un brouillon (claude, 2026-10-30)
+- [→Assistant admin] Audit de cohérence : repérer les cas similaires tranchés différemment, avant la revue des qualifications sensibles (claude, 2026-10-30)
+- [→Assistant admin] Chat d'édition, en dernier : une demande produit un diff à accepter, le formulaire reste disponible (user:moi, 2026-10-30)
+- [→Assistant admin] Clé API : secret Cloudflare, workspace dédié, plafond de dépense, quota par personne ; transfert à prévoir à la passation (claude, 2026-10-30)
+- [→Assistant admin] Exclusions de sources : prompt sans aucun nom, via le secret `TERMES_INTERDITS` ; ce filtre ne repère pas un texte cosigné qui ne reprend pas les noms exclus, à contrôler à part (claude, 2026-10-30)
+
 ## À creuser
 
 - [creuser] Quiz « qui vote comme vous ? » sur de vrais scrutins, comme leurs-votes.fr (claude, 2026-10-29)
 - [creuser] Eurodéputés (HowTheyVote.eu) : hors périmètre national, à garder en tête (claude, 2026-10-29)
 - [creuser] Après la session close le 28/02/2027 : en cas de dissolution, une XVIIIe à ouvrir (`LEGISLATURES`, textes pendants à l'AN, à vérifier), et un bilan de la XVIIe pour la campagne (claude, 2026-10-30)
+- [creuser] Résumés « facile à lire et à comprendre » des textes qualifiés, générés hors ligne par LLM et relus avant publication : nouveau champ d'`editorial.json`, à sérialiser à l'identique dans le pipeline et l'admin (claude, 2026-10-30)
+- [creuser] Recherche enrichie : des termes courants par texte (« APL », « reconnaissance faciale »), générés hors ligne et relus, pour un index statique, sans serveur ni coût à l'usage (claude, 2026-10-30)
+- [creuser] `llms.txt` et documentation des données : pour interroger le site avec son propre outil, à ses frais (claude, 2026-10-30)
+- [creuser] Routeur public de questions, seulement si un besoin en direct apparaît : renvoi vers des fiches ou des filtres d'une liste fermée, aucune phrase rédigée sur un élu (claude, 2026-10-30)
+- [creuser] Interroger le catalogue de l'admin en langage naturel : peu d'utilisateurs et des filtres déjà là, intérêt à démontrer (user:moi, 2026-10-30)
 
 ## Refusé
 
+- [refusé] Chat libre sur le site public : erreur grave sur un député nommé, réponse invérifiable alors que chaque chiffre mène au scrutin officiel, questions révélant des opinions politiques envoyées à un tiers, coût sans plafond naturel, backend à ajouter à un site statique (user:moi et claude, 2026-10-30)
 - [refusé] Cas « instrumentalise le sujet » (vote favorable mais texte de façade) : jugement au cas par cas, contraire à la règle fixe de la méthode (claude, 2026-10-29)
 - [refusé] Suivre les textes dès leur dépôt : 2 462 dossiers de loi non promulgués en XVIIe au 29/10/2026, presque tous jamais examinés (claude, 2026-10-30)
 - [refusé] Sens provisoire, score provisoire ou prévision de vote avant le vote : le texte change en navette (règle 6) (claude, 2026-10-30)
