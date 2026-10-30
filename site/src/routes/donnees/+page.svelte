@@ -8,7 +8,8 @@
       : `${(n / 1e6).toFixed(1).replace('.', ',')} Mo`;
 
   const DESCRIPTION: Record<string, string> = {
-    'textes.csv': 'catalogue des textes de loi (dossiers législatifs), qualifiés ou non',
+    'textes.csv':
+      'catalogue des textes (dossiers législatifs), qualifiés ou non : au moins un scrutin public à l’AN, en cours ou inscrits à l’ordre du jour',
     'scrutins.csv': 'tous les scrutins publics, rattachés à leur dossier',
     'positions_groupes.csv': 'décompte et position de chaque groupe sur chaque scrutin',
     'amendements.csv': 'amendements mis aux voix : auteur, article, sort',

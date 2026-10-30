@@ -115,11 +115,6 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
         s["amendement_id"] = (par_amdt.get(s["id"]) or {}).get("amendement_id")
     _log(f"   {len(liens):,} scrutins rattachés sur {len(scr):,}")
 
-    _log("== Catalogue des textes")
-    cat = textes.catalogue(dossiers, scr, liens)
-    candidats.annoter(cat, titres)
-    _log(f"   {len(cat)} textes, dont {sum(bool(t['droits_candidats'] or t['etiquettes_candidates']) for t in cat)} candidats par mots-clés")
-
     _log("== Où en est chaque texte (Dosleg)")
     tables = senat.dosleg(raw)
     idx = parcours.Index(scr, senat.scrutins(tables).to_dicts())
@@ -129,10 +124,18 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
     en_cours, lect_ec, evt_ec, etats = encours.textes(
         classes, idx, {"decisions": senat.decisions_seance(tables), "activite": senat.activite(tables),
                        "seances": senat.seances(tables), "etats": senat.etats(tables)}, exclus, date_ref, points)
-    ids = {t["id"] for t in cat}
-    etats = [e for e in etats if e["id"] in ids]
     _log(f"   {sum(not t['motif_ecart'] for t in en_cours)} textes en cours au {date_ref}, "
          f"{sum(bool(t['motif_ecart']) for t in en_cours)} écartés, {len(points)} points d'agenda à venir")
+
+    _log("== Catalogue des textes")
+    # Les textes en cours ou inscrits entrent au catalogue même sans scrutin public à l'AN.
+    suivis = {t["id"] for t in en_cours if not t["motif_ecart"]} | {p["dossier_id"] for p in points}
+    cat = textes.catalogue(dossiers, scr, liens, suivis)
+    candidats.annoter(cat, titres)
+    ids = {t["id"] for t in cat}
+    etats = [e for e in etats if e["id"] in ids]
+    _log(f"   {len(cat)} textes, dont {sum(not t['n_scrutins'] for t in cat)} sans scrutin public à l'AN et "
+         f"{sum(bool(t['droits_candidats'] or t['etiquettes_candidates']) for t in cat)} candidats par mots-clés")
 
     _log("== Députés et groupes")
     dep, mandats, appart = an.deputes(raw)

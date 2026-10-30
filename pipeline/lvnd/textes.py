@@ -154,9 +154,13 @@ def _decisif(ss: list[dict], ensembles: list[dict]) -> str | None:
     return suppr[-1]["id"] if suppr else None
 
 
-def catalogue(dossiers: dict[str, dict], scrutins: list[dict], liens: dict[str, dict]) -> list[dict]:
-    """Une ligne par dossier ayant au moins un scrutin public à l'AN dans le périmètre."""
+def catalogue(dossiers: dict[str, dict], scrutins: list[dict], liens: dict[str, dict],
+              sans_scrutin: set[str] = frozenset()) -> list[dict]:
+    """Une ligne par dossier ayant au moins un scrutin public à l'AN dans le périmètre, et par dossier
+    de `sans_scrutin` (texte en cours ou inscrit à l'ordre du jour, sans scrutin public à l'AN)."""
     par_dossier: dict[str, list[dict]] = defaultdict(list)
+    for uid in sans_scrutin:
+        par_dossier[uid] = []
     for s in scrutins:
         if s["id"] in liens:
             par_dossier[liens[s["id"]]["dossier_id"]].append(s)
@@ -193,8 +197,8 @@ def catalogue(dossiers: dict[str, dict], scrutins: list[dict], liens: dict[str, 
             "n_amendements": sum(s["objet"] in ("amendement", "suppression_article_unique") for s in ss),
             "n_ensemble": len(ensembles),
             "decisif_propose": _decisif(ss, ensembles),
-            "premier_scrutin": ss[0]["date"],
-            "dernier_scrutin": ss[-1]["date"],
+            "premier_scrutin": ss[0]["date"] if ss else None,
+            "dernier_scrutin": ss[-1]["date"] if ss else None,
         })
     return rows
 

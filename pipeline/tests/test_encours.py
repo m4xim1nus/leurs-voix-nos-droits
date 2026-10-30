@@ -4,7 +4,7 @@ import sqlite3
 
 import pytest
 
-from lvnd import encours, parcours
+from lvnd import encours, parcours, textes
 
 REF = "2026-10-28"
 
@@ -144,6 +144,15 @@ def test_completer_senat_par_texte_puis_question_prealable():
     assert (ls[0]["date"], parcours._statut(ls[0]["dec"])["issue"]) == ("2026-03-05", "adopte")
 
 
+# --- Catalogue élargi ------------------------------------------------------------------
+
+def test_catalogue_sans_scrutin():
+    d = {"legislature": "17", "titreDossier": {"titre": "Texte", "titreChemin": "t"}}
+    rows = textes.catalogue({"D1": d, "D2": d}, [], {}, {"D1", "D3"})  # D3 : cité par l'agenda, sans dossier
+    assert [r["id"] for r in rows] == ["D1"]
+    assert (rows[0]["n_scrutins"], rows[0]["decisif_propose"], rows[0]["dernier_scrutin"]) == (0, None, None)
+
+
 # --- Base produite ---------------------------------------------------------------------
 
 @pytest.mark.donnees
@@ -166,3 +175,5 @@ def test_un_etat_pour_chaque_texte_qualifie(base):
     etats = dict(con.execute("select id, etat from en_cours_etats").fetchall())
     assert all(t["dossier_an"] in etats for t in editorial.charger()["textes"])
     assert etats["DLR5L17N53069"] == "en_navette"
+    # casseurs-payeurs : aucun scrutin public à l'AN, mais au catalogue
+    assert con.execute("select n_scrutins from textes where id = 'DLR5L17N54925'").fetchone() == (0,)

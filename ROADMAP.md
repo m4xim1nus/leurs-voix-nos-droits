@@ -95,7 +95,7 @@ pour y toucher.
    est « inscrit », jamais « sera voté » : sept textes sont inscrits le seul
    19/11/2026, et une niche ne les examine pas toujours tous. Horizon
    constaté : environ 3 semaines.
-4. ⏳ **Catalogue élargi** : `textes.csv` et D1 reçoivent aussi les textes
+4. ✅ **Catalogue élargi** : `textes.csv` et D1 reçoivent aussi les textes
    en cours ou inscrits sans scrutin public à l'AN (66 des 126 textes en
    cours au 28/10/2026, dont casseurs-payeurs). Vérifier ce que cela change
    dans `lvnd check`, le filtre par défaut de l'admin, le site et le volume

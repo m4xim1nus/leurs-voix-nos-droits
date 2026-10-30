@@ -241,6 +241,21 @@ seul 19/11/2026, et une niche ne les examine pas toujours tous. `seance_inscrite
 donne la première séance à venir, dans l'agenda, le dossier AN ou Dosleg. Une
 date d'agenda compte aussi comme activité pour la règle des 12 mois.
 
+**Catalogue élargi.** `textes.csv` et D1 reçoivent aussi les textes en cours
+ou inscrits sans scrutin public à l'AN : 82 au 30/10/2026, sur 561 textes
+(`n_scrutins` à 0, `decisif_propose` vide), dont casseurs-payeurs. Les 479
+lignes précédentes sont inchangées.
+
+- `lvnd check` : aucun effet sur les témoins ni sur les qualifications ; un
+  contrôle vérifie qu'aucun texte qualifié n'est sans scrutin.
+- Admin : le filtre par défaut n'affiche que les textes avec au moins un
+  scrutin public (ou déjà saisis), car les autres n'ont rien à qualifier ; le
+  nouveau filtre « Scrutin public à l'AN » les montre.
+- Site : aucun effet, il ne lit le catalogue que pour les textes qualifiés ou
+  écartés.
+- `sync-admin` : 82 lignes de plus au premier sync incrémental, 0 ensuite à
+  export égal.
+
 Limites, reprises de quifaitlaloi : un texte voté au Sénat sans dossier AN ne
 serait pas vu ; `transmis` se déduit de la Constitution, pas d'un acte ; un
 texte adopté conforme par la seconde chambre peut rester quelques jours « en

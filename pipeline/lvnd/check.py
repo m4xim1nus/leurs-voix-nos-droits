@@ -179,8 +179,11 @@ def verifier(chemin: Path) -> tuple[bool, list[str]]:
     _qualifications(con, controle, out)
 
     out.append("\n== Catalogue")
-    for nature, n, c in _q(con, "select nature, count(*), sum(droits_candidats != '' or etiquettes_candidates != '') "
-                                "from textes group by 1 order by 2 desc"):
-        out.append(f"  {nature} : {n} textes, {c} candidats par mots-clés")
+    for nature, n, c, s in _q(con, "select nature, count(*), sum(droits_candidats != '' or etiquettes_candidates != ''), "
+                                   "sum(n_scrutins = 0) from textes group by 1 order by 2 desc"):
+        out.append(f"  {nature} : {n} textes, {c} candidats par mots-clés, {s} sans scrutin public à l'AN")
+    qualifies = [t["dossier_an"] for t in editorial.charger()["textes"]]
+    sans = _q(con, f"select id from textes where n_scrutins = 0 and id in ({','.join('?' * len(qualifies))})", *qualifies)
+    controle("aucun texte qualifié sans scrutin public à l'AN", not sans, str(sans[:5]))
     con.close()
     return ok, out

@@ -1,5 +1,5 @@
 {
- "genere_le": "2026-10-30T11:02:39+00:00",
+ "genere_le": "2026-10-30T11:05:01+00:00",
  "sources": {
   "an_scrutins_17": {
    "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/loi/scrutins/Scrutins.json.zip",
@@ -59,7 +59,7 @@
   }
  },
  "comptes": {
-  "textes": 479,
+  "textes": 561,
   "scrutins": 13305,
   "positions_groupes": 155543,
   "amendements": 12475,
@@ -74,7 +74,7 @@
   "en_cours": 205,
   "en_cours_lectures": 248,
   "en_cours_evenements": 73,
-  "en_cours_etats": 479,
+  "en_cours_etats": 561,
   "en_cours_agenda": 102,
   "votes": 1972492,
   "fichiers_votes": 44

@@ -15,6 +15,7 @@
   let droit = $state(q.get('droit') ?? '');
   let statut = $state(q.get('statut') ?? '');
   let adoptes = $state(q.get('adoptes') === 'oui');
+  let avecScrutin = $state(q.get('scrutins') ?? 'oui');
 
   const natures = $derived([...new Set(data.textes.map((t) => t.nature ?? ''))].sort());
   const libelleDroit = $derived(new Map(data.grille.droits.map((d) => [d.code, d.libelle])));
@@ -34,13 +35,20 @@
       if (droit && !(t.droits_candidats ?? '').split(';').includes(droit)) return false;
       if (statut === 'aucun' ? t.statut : statut && t.statut !== statut) return false;
       if (adoptes && !t.loi) return false;
+      // Un texte en cours sans scrutin public n'a rien à qualifier : hors du tri par défaut.
+      if (avecScrutin === 'oui' && !t.n_scrutins && !t.statut) return false;
+      if (avecScrutin === 'non' && t.n_scrutins) return false;
       return true;
     });
   });
 
   $effect(() => {
     const p = new URLSearchParams();
-    const defauts: Record<string, string> = { nature: 'ordinaire', candidats: 'oui' };
+    const defauts: Record<string, string> = {
+      nature: 'ordinaire',
+      candidats: 'oui',
+      scrutins: 'oui'
+    };
     const valeurs: Record<string, string> = {
       q: recherche,
       leg,
@@ -48,7 +56,8 @@
       candidats,
       droit,
       statut,
-      adoptes: adoptes ? 'oui' : ''
+      adoptes: adoptes ? 'oui' : '',
+      scrutins: avecScrutin
     };
     for (const [k, v] of Object.entries(valeurs)) if (v !== (defauts[k] ?? '')) p.set(k, v);
     const s = p.toString();
@@ -64,7 +73,8 @@
 
 <h1>Textes</h1>
 <p class="discret">
-  {data.textes.length} textes ayant au moins un scrutin public à l'AN.
+  {data.textes.length} textes : au moins un scrutin public à l'AN, ou en cours, ou inscrits à l'ordre
+  du jour.
   {#each comptes as [s, n] (s)}
     <span class="pastille {s}">{LIBELLES_STATUT[s]} : {n}</span>
   {/each}
@@ -115,6 +125,14 @@
       {#each STATUTS as s (s)}<option value={s}>{LIBELLES_STATUT[s]}</option>{/each}
     </select>
   </label>
+  <label class="champ"
+    >Scrutin public à l'AN
+    <select bind:value={avecScrutin}>
+      <option value="oui">au moins un</option>
+      <option value="">indifférent</option>
+      <option value="non">aucun</option>
+    </select>
+  </label>
   <label class="ligne"><input type="checkbox" bind:checked={adoptes} /> promulgués seulement</label>
   <span class="discret">{filtres.length} textes</span>
 </form>
@@ -136,7 +154,10 @@
         <td>
           <a href="/textes/{t.id}">{t.titre}</a>
           <div class="discret">
-            {t.nature} · {t.initiative} · dernier scrutin le {date(t.dernier_scrutin)}
+            {t.nature} · {t.initiative} ·
+            {t.dernier_scrutin
+              ? `dernier scrutin le ${date(t.dernier_scrutin)}`
+              : 'aucun scrutin public à l’AN'}
             {#if t.motifs}· <span title="motifs trouvés">« {t.motifs.replaceAll(';', ', ')} »</span
               >{/if}
           </div>
