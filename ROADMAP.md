@@ -89,7 +89,7 @@ pour y toucher.
    rester identiques à l'octet. Il faut aussi un état pour **chaque** texte
    qualifié, y compris ceux de la XVIe (loi, en navette avec la chambre
    attendue, rejeté, à l'arrêt).
-3. ⏳ **Agenda de l'AN** : dump
+3. ✅ **Agenda de l'AN** : dump
    `17/vp/reunions/Agenda.json.zip` (8,5 Mo, quotidien), export des points
    de séance et de commission non supprimés et reliés à un dossier. Le mot
    est « inscrit », jamais « sera voté » : sept textes sont inscrits le seul

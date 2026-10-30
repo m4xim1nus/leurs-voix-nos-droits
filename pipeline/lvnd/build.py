@@ -9,7 +9,7 @@ from pathlib import Path
 
 import polars as pl
 
-from . import amendements, an, candidats, editorial, encours, parcours, positions, referentiels, scores, senat, textes
+from . import agenda, amendements, an, candidats, editorial, encours, parcours, positions, referentiels, scores, senat, textes
 from .sources import lire_manifeste, racine
 
 # Votes nominatifs compacts (docs/SOURCES.md) : numéro de scrutin, identifiant numérique du
@@ -125,13 +125,14 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
     idx = parcours.Index(scr, senat.scrutins(tables).to_dicts())
     classes, exclus = parcours.classer(dossiers, titres, idx, senat.lois(tables))
     date_ref = date_reference(raw)
+    points = agenda.points(raw, date_ref)
     en_cours, lect_ec, evt_ec, etats = encours.textes(
         classes, idx, {"decisions": senat.decisions_seance(tables), "activite": senat.activite(tables),
-                       "seances": senat.seances(tables), "etats": senat.etats(tables)}, exclus, date_ref)
+                       "seances": senat.seances(tables), "etats": senat.etats(tables)}, exclus, date_ref, points)
     ids = {t["id"] for t in cat}
     etats = [e for e in etats if e["id"] in ids]
     _log(f"   {sum(not t['motif_ecart'] for t in en_cours)} textes en cours au {date_ref}, "
-         f"{sum(bool(t['motif_ecart']) for t in en_cours)} écartés")
+         f"{sum(bool(t['motif_ecart']) for t in en_cours)} écartés, {len(points)} points d'agenda à venir")
 
     _log("== Députés et groupes")
     dep, mandats, appart = an.deputes(raw)
@@ -163,6 +164,7 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
         "en_cours_lectures": _df(lect_ec),
         "en_cours_evenements": _df(evt_ec),
         "en_cours_etats": _df(etats),
+        "en_cours_agenda": _df(points),
     }
 
     _log("== Écriture")

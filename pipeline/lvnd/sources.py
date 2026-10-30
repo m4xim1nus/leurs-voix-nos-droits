@@ -37,6 +37,7 @@ SOURCES: dict[str, dict] = {
                           "secours": {"legislature": 16, "organe": "791932"}},
     "an_amo": {"url": f"{AN}/17/amo/tous_acteurs_mandats_organes_xi_legislature/"
                       "AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip"},
+    "an_agenda_17": {"url": f"{AN}/17/vp/reunions/Agenda.json.zip"},
     "senat_dosleg": {"url": "https://data.senat.fr/data/dosleg/dosleg.zip"},
 }
 

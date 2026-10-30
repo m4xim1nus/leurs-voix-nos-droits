@@ -153,7 +153,7 @@ def test_temoins_en_cours(base):
     r = dict(con.execute("select id, attente_chambre from en_cours where motif_ecart is null "
                          "and id in ('DLR5L17N54925', 'DLR5L17N53069')").fetchall())
     assert r == {"DLR5L17N54925": "AN", "DLR5L17N53069": "AN"}
-    assert con.execute("select seance_prevue from en_cours where id = 'DLR5L17N53069'").fetchone()[0] >= "2026-11-18"
+    assert con.execute("select seance_inscrite from en_cours where id = 'DLR5L17N53069'").fetchone()[0] == "2026-11-18"
     # aucune lecture ne reprend un scrutin rattaché à un autre dossier
     assert not con.execute("select 1 from en_cours_lectures l join scrutins s on s.id = l.scrutin_id "
                            "where not l.art_49_3 and s.dossier_id != l.texte_id").fetchall()

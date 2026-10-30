@@ -133,23 +133,24 @@ def attente(lectures: list[dict], evts: list[dict], type_loi: str = "ordinaire")
     return {"attente": "navette", "etape": None, "chambre": None, "type_lecture": None}
 
 
-def seance_prevue(d: dict, att: dict, seances_senat: list[str], date_ref: str) -> str | None:
-    """Première séance à venir (date ≥ `date_ref`) pour l'étape attendue : séance inscrite dans le
-    dossier AN (`…-DEBATS-SEANCE` datée), ou séance du Sénat dans Dosleg (table date_seance)."""
-    if att["attente"] not in ("lecture", "cmp_conclusions"):
-        return None
-    futures = []
-    for e in an.enfants(d):
-        if e["codeActe"] != att["etape"]:
-            continue
-        for a in an.parcourir(e):
-            c = a["codeActe"]
-            if "-DEBATS-" in c and c.endswith("-SEANCE") and _date(a) >= date_ref:
-                ch = "SN" if (c.startswith("SN") or "-SN-" in c) else "AN"
-                if att["chambre"] in (None, ch):
-                    futures.append(_date(a))
-    if att["chambre"] in ("SN", None):
-        futures += [s for s in seances_senat if s >= date_ref]
+def seance_inscrite(d: dict, att: dict | None, seances_senat: list[str], seances_agenda: list[str],
+                    date_ref: str) -> str | None:
+    """Première séance à venir (date ≥ `date_ref`) où le texte est inscrit : agenda de l'AN ; pour
+    l'étape attendue, séance du dossier AN (`…-DEBATS-SEANCE` datée) ou du Sénat dans Dosleg (table
+    date_seance). Inscrit ne veut pas dire voté."""
+    futures = [s for s in seances_agenda if s >= date_ref]
+    if att and att["attente"] in ("lecture", "cmp_conclusions"):
+        for e in an.enfants(d):
+            if e["codeActe"] != att["etape"]:
+                continue
+            for a in an.parcourir(e):
+                c = a["codeActe"]
+                if "-DEBATS-" in c and c.endswith("-SEANCE") and _date(a) >= date_ref:
+                    ch = "SN" if (c.startswith("SN") or "-SN-" in c) else "AN"
+                    if att["chambre"] in (None, ch):
+                        futures.append(_date(a))
+        if att["chambre"] in ("SN", None):
+            futures += [s for s in seances_senat if s >= date_ref]
     return min(futures, default=None)
 
 
@@ -171,16 +172,22 @@ def etat(statut: str, lectures: list[dict], motif: str | None) -> str:
     return "en_navette" if closes(lectures) else "avant_vote"
 
 
-def textes(classes: list[dict], idx: parcours.Index, dosleg: dict, exclus: set[str], date_ref: str
-           ) -> tuple[list[dict], list[dict], list[dict], list[dict]]:
+def textes(classes: list[dict], idx: parcours.Index, dosleg: dict, exclus: set[str], date_ref: str,
+           points_agenda: list[dict] = ()) -> tuple[list[dict], list[dict], list[dict], list[dict]]:
     """Textes en cours (et écartés, avec leur motif), leurs lectures votées, leurs événements, et l'état
     de chaque dossier.
 
     `classes` : `parcours.classer`. `exclus` : scrutins déjà décisifs pour une loi, qu'une lecture d'un
     texte en cours ne peut pas reprendre. `dosleg` : `decisions` (senat.decisions_seance), `activite`
-    et `seances` (par loicod), `etats` (loicod → état Dosleg).
+    et `seances` (par loicod), `etats` (loicod → état Dosleg). `points_agenda` : `agenda.points`.
     """
     rows, toutes, rows_evt, rows_etat = [], [], [], []
+    inscrit: dict[str, list[str]] = {}  # dossier → dates où il est inscrit, séance ou commission
+    en_seance: dict[str, list[str]] = {}
+    for p in points_agenda:
+        inscrit.setdefault(p["dossier_id"], []).append(p["date"])
+        if p["instance"] == "seance":
+            en_seance.setdefault(p["dossier_id"], []).append(p["date"])
     autres = [c for c in classes if c["statut"] == "autre"]
 
     # Un dossier Sénat peut correspondre à deux dossiers AN (projet de loi constitutionnelle sur la
@@ -209,11 +216,13 @@ def textes(classes: list[dict], idx: parcours.Index, dosleg: dict, exclus: set[s
         actes = [a for e in an.enfants(d) for a in an.parcourir(e)]
         dates = [_date(a) for a in actes if _date(a)] + [l["date"] for l in cl]
         dates += dosleg["activite"].get(loicod, []) if loicod else []
+        dates += inscrit.get(uid, [])
         etat_dosleg = dosleg["etats"].get(loicod) if loicod else None
         motif = motif_ecart(lectures, evts, typ, etat_dosleg, max(dates, default=""), date_ref)
         att = attente(lectures, evts, typ) if cl else None
-        prevue = seance_prevue(d, att, dosleg["seances"].get(loicod, []) if loicod else [], date_ref) if att else None
-        rows_etat.append(_ligne_etat(uid, etat("autre", lectures, motif), motif, lectures, att, dates, prevue, date_ref))
+        seance = seance_inscrite(d, att, dosleg["seances"].get(loicod, []) if loicod else [],
+                                 en_seance.get(uid, []), date_ref)
+        rows_etat.append(_ligne_etat(uid, etat("autre", lectures, motif), motif, lectures, att, dates, seance, date_ref))
         if not any(l["date"] >= DEBUT for l in cl):
             continue
         for l in lectures:
@@ -240,7 +249,7 @@ def textes(classes: list[dict], idx: parcours.Index, dosleg: dict, exclus: set[s
             "attente_etape": att["etape"],
             "attente_chambre": att["chambre"],
             "attente_type_lecture": att["type_lecture"],
-            "seance_prevue": prevue,
+            "seance_inscrite": seance,
             "legislature": parcours.legislature(der["date"]),
             "dossier_an": uid,
             "signet_senat": sn["signet"] if sn else c["signet"],
@@ -266,7 +275,7 @@ def _derniere_activite(dates: list[str], date_ref: str) -> str | None:
 
 
 def _ligne_etat(uid: str, etat_: str, motif: str | None, lectures: list[dict], att: dict | None,
-                dates: list[str] | None, prevue: str | None, date_ref: str) -> dict:
+                dates: list[str] | None, seance: str | None, date_ref: str) -> dict:
     cl = closes(lectures)
     der = max(cl, key=lambda l: (l["date"], l["rang"])) if cl else None
     return {
@@ -277,5 +286,5 @@ def _ligne_etat(uid: str, etat_: str, motif: str | None, lectures: list[dict], a
         "date_derniere_lecture": der["date"] if der else None,
         "issue_derniere_lecture": parcours._statut(der["dec"])["issue"] if der else None,
         "date_derniere_activite": _derniere_activite(dates, date_ref) if dates else None,
-        "seance_prevue": prevue if not motif else None,
+        "seance_inscrite": seance if not motif else None,
     }

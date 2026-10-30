@@ -1,4 +1,4 @@
-id,etat,attente,attente_chambre,date_derniere_lecture,issue_derniere_lecture,date_derniere_activite,seance_prevue
+id,etat,attente,attente_chambre,date_derniere_lecture,issue_derniere_lecture,date_derniere_activite,seance_inscrite
 DLR5L15N43746,loi,,,2023-01-16,adopte,,
 DLR5L15N43846,loi,,,2025-04-07,adopte,,
 DLR5L15N43849,loi,,,2023-01-25,adopte,,
@@ -470,7 +470,7 @@ DLR5L17N54373,en_navette,transmis,AN,2026-06-22,adopte,2026-06-22,
 DLR5L17N54445,en_navette,lecture,SN,2026-10-12,adopte,2026-10-13,
 DLR5L17N54557,avant_vote,,,,,2026-10-08,
 DLR5L17N54613,hors_navette,,,,,2026-07-06,
-DLR5L17N54629,avant_vote,,,,,2026-10-29,
+DLR5L17N54629,avant_vote,,,,,2026-10-29,2026-10-30
 DLR5L17N54776,en_navette,lecture,SN,2026-10-13,adopte,2026-10-13,
 DLR5L17N54777,en_navette,lecture,SN,2026-10-13,adopte,2026-10-13,
 DLR5L17N54841,hors_navette,,,,,2026-10-08,

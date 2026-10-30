@@ -36,6 +36,7 @@ découlent ont été validées par Max le 29/10/2026 (`docs/METHODO.md`).
 | Amendements AN XVIIe | `…/17/loi/amendements_div_legis/Amendements.json.zip` | 348 Mo → 1,6 Go, 142 579 fichiers | auteur, groupe de l'auteur, dossier, séance |
 | Amendements AN XVIe | `…/16/loi/amendements_div_legis/Amendements.json.zip` | 363 Mo (figé le 28/06/2024) | idem |
 | Acteurs et organes AN (historique) | `…/17/amo/tous_acteurs_mandats_organes_xi_legislature/AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip` | 14 Mo | sigles des groupes, mandats, circonscriptions |
+| Agenda de l'AN | `…/17/vp/reunions/Agenda.json.zip` | 8,6 Mo → 42 Mo, 8 174 réunions (quotidien) | points de séance et de commission à venir (`lvnd/agenda.py`) |
 | Dosleg (Sénat) | `data.senat.fr/data/dosleg/dosleg.zip` | 16 Mo → 122 Mo (quotidien) | décisions de séance, séances, activité et état des dossiers (`lvnd/senat.py`) |
 
 `lvnd download` (`pipeline/lvnd/sources.py`, repris de quifaitlaloi)
@@ -226,6 +227,19 @@ d'écart et, à l'AN, mêmes scrutins décisifs et mêmes modes sur les 204 text
 communs. Les écarts tiennent au dump plus récent d'un jour : un texte voté le
 29/10 (accord UE-Vietnam), deux étapes ouvertes depuis, une séance du Sénat
 passée à la suivante.
+
+**Agenda de l'AN** (`lvnd/agenda.py`, `en_cours_agenda.csv`). Une ligne par
+point de séance ou de commission à venir et par dossier. On écarte les réunions
+et les points annulés ou supprimés, ainsi que les réunions d'initiative
+parlementaire (colloques, groupes d'études) et les points sans dossier. `etat`
+vaut `confirme` ou `eventuel`, et un point confirmé dans une réunion éventuelle
+reste éventuel. Au 30/10/2026 : 102 points, jusqu'au 25/11 (horizon d'environ
+trois semaines en séance), sur 16 dossiers en séance.
+
+Le mot est **« inscrit »**, jamais « sera voté » : sept textes sont inscrits le
+seul 19/11/2026, et une niche ne les examine pas toujours tous. `seance_inscrite`
+donne la première séance à venir, dans l'agenda, le dossier AN ou Dosleg. Une
+date d'agenda compte aussi comme activité pour la règle des 12 mois.
 
 Limites, reprises de quifaitlaloi : un texte voté au Sénat sans dossier AN ne
 serait pas vu ; `transmis` se déduit de la Constitution, pas d'un acte ; un
