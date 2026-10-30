@@ -4737,6 +4737,312 @@
       ]
     },
     {
+      "id": "plf-2023",
+      "dossier_an": "DLR5L16N45988",
+      "legislature": 16,
+      "titre": "Loi de finances pour 2023",
+      "resume": "La loi fixe le budget de l'État pour 2023. Parmi ses mesures qui touchent les personnes, elle fait participer le titulaire d'un compte personnel de formation au financement de sa formation, sauf s'il est demandeur d'emploi ou si la formation fait l'objet d'un abondement prévu par le code du travail (article 212). Elle proroge du 31 décembre 2022 au 31 décembre 2027 la dérogation à la règle de l'encellulement individuel dans les maisons d'arrêt (article 190). Le Gouvernement a fait adopter le texte sans vote, par l'article 49, alinéa 3, de la Constitution.",
+      "droits": [
+        {
+          "code": "travail-protection-sociale",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cfdt-2022-12-13",
+            "fo-2022-12-13",
+            "fo-2023-05-12",
+            "cgt-2024-02-20"
+          ],
+          "justification": "L'article 212 crée une participation du salarié au financement des formations suivies avec son compte personnel de formation, jusque-là financées par le compte. Pour la CFDT, cette mesure « viendra éloigner encore plus de la formation les salariés aux plus petites rémunérations ». Pour FO, elle « nie le droit à la formation professionnelle des salariés » et conduira à « une augmentation des inégalités ». Quand le Gouvernement en annonce la mise en œuvre, en 2024, la CGT juge qu'elle pénalisera « d'abord les salarié⋅es les plus fragiles »."
+        },
+        {
+          "code": "police-justice",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "oip-2022-11-18"
+          ],
+          "justification": "La dérogation à l'encellulement individuel dans les maisons d'arrêt devait s'éteindre le 31 décembre 2022. L'article 190 la prolonge de cinq ans. Pour l'Observatoire international des prisons, le texte reporte un principe qui constitue « une condition certes insuffisante mais néanmoins indispensable au respect de la dignité des prisonnières et prisonniers », et les personnes détenues « continuent ainsi de voir l'un de leurs droits fondamentaux foulé au pied »."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "La participation n'est pas due par les demandeurs d'emploi. FO relève qu'elle ne l'est pas non plus lorsque la mobilisation du compte « s'inscrit dans un parcours co-construit avec son employeur », et y voit un risque de « captation du CPF par les entreprises ». La CFDT ne s'oppose pas à toute régulation : elle « souhaite des mesures de régulation du CPF justes et équitables », construites par la concertation.",
+          "sources": [
+            "fo-2023-05-12",
+            "cfdt-2022-12-13"
+          ]
+        },
+        {
+          "texte": "Le Conseil constitutionnel n'a pas examiné le fond de ces deux mesures. Il a seulement admis leur place en loi de finances, et précise qu'il « ne s'est donc pas prononcé sur leur conformité à d'autres exigences constitutionnelles ».",
+          "sources": [
+            "cc-2022-847"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2022-847 DC du 29 décembre 2022, non-conformité partielle. Sept articles sont censurés comme cavaliers budgétaires, sans examen de leur contenu : 82 et 83 (transmission d'informations à l'administration des douanes, levée du secret professionnel de certains agents des finances publiques), 98 (habilitation à légiférer par ordonnance sur les visites douanières), 142, 143, 171 et 187. Les paragraphes II et III de l'article 115 sont déclarés conformes. Les griefs de procédure (recours à l'article 49, alinéa 3, droit d'amendement) et de sincérité sont écartés. Le Conseil admet la place en loi de finances de l'article 190 (encellulement individuel) et de l'article 212 (compte personnel de formation), sans se prononcer sur leur conformité à d'autres exigences constitutionnelles. Aucune réserve d'interprétation.",
+      "note": "Texte composite, adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score. Le droit principal est celui de la mesure que les sources admises mettent le plus en cause, la participation au financement du compte personnel de formation (règle 4). En 1re lecture et en nouvelle lecture, le Gouvernement a engagé sa responsabilité sur la première partie, puis sur la seconde partie et l'ensemble ; en lecture définitive, sur l'ensemble. Les six motions de censure qui ont suivi sont affichées groupe par groupe (rôle censure). La motion de rejet préalable de 1re lecture est affichée, pas comptée (règle 10). Les votes de 1re lecture sur des crédits de mission ou sur un article ne portent pas sur l'ensemble : ils ne sont pas retenus (règle 9). Aucun amendement clé (règle 11). La 1re lecture est la seule où une suppression a été mise aux voix en scrutin public : elle porte sur l'article liminaire, qui ne contient que des prévisions de comptes. Les articles 190 et 212 n'ont fait l'objet d'aucun scrutin de suppression. Aucune source admise se prononçant sur la mesure n'a été trouvée pour les autres dispositions qui touchent les personnes, dont la fin de la prise en compte des revenus du conjoint pour l'allocation aux adultes handicapés à Mayotte (article 209) : elles ne sont pas qualifiées.",
+      "sources": {
+        "cc-2022-847": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2022-847 DC",
+          "date": "2022-12-29",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2022/2022847DC.htm"
+        },
+        "cfdt-2022-12-13": {
+          "auteur": "CFDT",
+          "titre": "Compte personnel de formation. Reste à charge pour les salariés, pour la CFDT c'est non ! (déclaration d'Yvan Ricordeau, secrétaire national)",
+          "date": "2022-12-13",
+          "url": "https://www.cfdt.fr/upload/docs/application/pdf/2022-12/20221213_sg_presse_cp40_cpf.pdf"
+        },
+        "cgt-2024-02-20": {
+          "auteur": "CGT",
+          "titre": "Reste à charge sur l'utilisation du CPF : pour se former, les salariés devront payer ! (communiqué)",
+          "date": "2024-02-20",
+          "url": "https://snjcgt.fr/wp-content/uploads/sites/11/2024/02/CGT-CPF-20-fev.-2024.pdf"
+        },
+        "fo-2022-12-13": {
+          "auteur": "CGT-Force ouvrière",
+          "titre": "Le gouvernement annonce un reste à charge pour les salariés dans le cadre de leur Compte Personnel de formation (communiqué)",
+          "date": "2022-12-13",
+          "url": "https://www.force-ouvriere.fr/le-gouvernement-annonce-un-reste-a-charge-pour-les-salaries-dans"
+        },
+        "fo-2023-05-12": {
+          "auteur": "CGT-Force ouvrière",
+          "titre": "Compte Personnel de Formation : pour FO, pas de reste à charge ! (communiqué)",
+          "date": "2023-05-12",
+          "url": "https://www.force-ouvriere.fr/IMG/pdf/cp_-_fo_-_compte_personnel_de_formation_pour_fo_pas_de_reste_a_charge.pdf"
+        },
+        "oip-2022-11-18": {
+          "auteur": "Observatoire international des prisons (section française)",
+          "titre": "Encellulement individuel : cent cinquante ans plus tard, l'application du principe encore repoussée",
+          "date": "2022-11-18",
+          "url": "https://oip.org/breve/encellulement-individuel-cent-cinquante-ans-plus-tard-lapplication-du-principe-encore-repoussee/"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V358",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la première partie, 1re lecture, de Mme Chatelain, Mme Panot, M. Vallaud, M. Chassaigne et 147 députés, 24 octobre 2022, rejetée, 289 voix requises (239-0)"
+        },
+        {
+          "id": "VTANR5L16V359",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la première partie, 1re lecture, de Mme Le Pen et 89 députés, 24 octobre 2022, rejetée, 289 voix requises (90-0)"
+        },
+        {
+          "id": "VTANR5L16V494",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la seconde partie et l'ensemble, 1re lecture, de Mme Panot et 74 députés, 4 novembre 2022, rejetée, 289 voix requises (188-0)"
+        },
+        {
+          "id": "VTANR5L16V744",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la première partie, nouvelle lecture, de Mme Panot et 74 députés, 11 décembre 2022, rejetée, 288 voix requises (78-0)"
+        },
+        {
+          "id": "VTANR5L16V780",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la seconde partie et l'ensemble, nouvelle lecture, de Mme Panot et 74 députés, 13 décembre 2022, rejetée, 288 voix requises (102-0)"
+        },
+        {
+          "id": "VTANR5L16V822",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur l'ensemble, lecture définitive, de M. Chassaigne, Mme Panot, M. Vallaud, Mme Chatelain et 143 députés, 17 décembre 2022, rejetée, 288 voix requises (101-0)"
+        },
+        {
+          "id": "VTANR5L16V235",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (80-256)"
+        }
+      ]
+    },
+    {
+      "id": "plf-2024",
+      "dossier_an": "DLR5L16N48397",
+      "legislature": 16,
+      "titre": "Loi de finances pour 2024",
+      "resume": "La loi fixe le budget de l'État pour 2024. Parmi ses mesures qui touchent les personnes, elle prolonge de deux ans et élargit l'expérimentation qui permet à l'administration fiscale et aux douanes de collecter et d'exploiter les contenus publiés sur les plateformes en ligne, y compris celles dont l'accès requiert un compte. Elle maintient aussi l'allocation aux adultes handicapés de ceux qui travaillent encore à l'âge où elle prenait fin, et fait rembourser par l'auteur condamné le prêt d'urgence accordé aux victimes de violences conjugales. Le Gouvernement a fait adopter le texte sans vote, par l'article 49, alinéa 3, de la Constitution.",
+      "droits": [
+        {
+          "code": "vie-privee",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cnil-2024-081"
+          ],
+          "justification": "Le paragraphe IV de l'article 112 prolonge l'expérimentation de collecte de deux ans, ajoute la recherche de la minoration ou de la dissimulation de recettes et étend la collecte aux plateformes « y compris lorsque l'accès à ces plateformes requiert une inscription à un compte ». La CNIL rappelle que l'atteinte à la vie privée des utilisateurs « serait beaucoup plus importante » que dans la version initiale. Elle juge que la nécessité de prolonger et d'étendre l'expérimentation « n'est justifiée que par l'existence de conditions initiales trop restrictives », et regrette « que le bilan transmis ne soit pas suffisamment étayé »."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "La CNIL se prononce sur le décret d'application, en novembre 2024, et juge que « les garanties prévues sont satisfaisantes », sous réserve de recommandations : les agents ne peuvent ni entrer en contact avec d'autres titulaires de compte ni publier de contenu. La loi oblige aussi l'administration à transmettre à la CNIL la liste des opérations de collecte et à informer le public en ligne.",
+          "sources": [
+            "cnil-2024-081"
+          ]
+        },
+        {
+          "texte": "Le Conseil constitutionnel n'a pas examiné cette mesure : sa décision ne mentionne pas l'article 112.",
+          "sources": [
+            "cc-2023-862"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2023-862 DC du 28 décembre 2023, non-conformité partielle. L'article 31 (exonérations fiscales de fédérations sportives internationales et de leurs salariés) est censuré sur le fond, pour atteinte à l'égalité devant les charges publiques. Douze articles sont censurés comme cavaliers budgétaires, sans examen de leur contenu : 108, 109, 190, 193, 197, 198, 199, 208, 215, 233 (pôles d'appui à la scolarité), 239 et 242. Plusieurs dispositions sont déclarées conformes, dont les articles 30 (patrimoine religieux, grief de laïcité) et 32 (boissons, grief de protection de la santé). Les griefs de procédure (recours à l'article 49, alinéa 3, droit d'amendement) et de sincérité sont écartés. Le Conseil ne se prononce pas sur l'article 112. Aucune réserve d'interprétation.",
+      "note": "Texte composite, adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score. Le droit principal est celui de la seule mesure sur laquelle une source admise se prononce : la prolongation et l'extension de la collecte de données sur les plateformes (règles 3 et 4). En 1re lecture et en nouvelle lecture, le Gouvernement a engagé sa responsabilité sur la première partie, puis sur la seconde partie et l'ensemble ; en lecture définitive, sur l'ensemble. Les six motions de censure qui ont suivi sont affichées groupe par groupe (rôle censure). La motion de rejet préalable de 1re lecture est affichée, pas comptée (règle 10). Les votes de 1re lecture sur des crédits de mission ne portent pas sur l'ensemble : ils ne sont pas retenus (règle 9). La délibération de la CNIL parle de l'article 122 de la loi ; le texte adopté et le document de présentation publié par l'administration fiscale le numérotent 112. Aucun amendement clé (règle 11) : aucune suppression ni aucun rétablissement d'article n'a été mis aux voix en scrutin public, dans aucune lecture. Aucune source admise se prononçant sur la mesure n'a été trouvée pour les dispositions sur l'allocation aux adultes handicapés (articles 254 et 255) et sur le prêt d'urgence aux victimes de violences conjugales (article 256) : elles ne sont pas qualifiées.",
+      "sources": {
+        "cc-2023-862": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2023-862 DC",
+          "date": "2023-12-28",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2023/2023862DC.htm"
+        },
+        "cnil-2024-081": {
+          "auteur": "CNIL",
+          "titre": "Délibération n° 2024-081 du 14 novembre 2024 portant avis sur un projet de décret modifiant le décret n° 2021-148 du 11 février 2021",
+          "date": "2024-11-14",
+          "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000050935691"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V2798",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la première partie, 1re lecture, de Mme Le Pen et 87 députés, 20 octobre 2023, rejetée, 289 voix requises (89-0)"
+        },
+        {
+          "id": "VTANR5L16V2799",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la première partie, 1re lecture, de Mme Panot et 102 députés, 20 octobre 2023, rejetée, 289 voix requises (219-0)"
+        },
+        {
+          "id": "VTANR5L16V2944",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la seconde partie et l'ensemble, 1re lecture, de Mme Panot et 77 députés, 9 novembre 2023, rejetée, 289 voix requises (167-0)"
+        },
+        {
+          "id": "VTANR5L16V3210",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la première partie, nouvelle lecture, de Mme Panot et 77 députés, 16 décembre 2023, rejetée, 289 voix requises (75-0)"
+        },
+        {
+          "id": "VTANR5L16V3211",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la seconde partie et l'ensemble, nouvelle lecture, de Mme Panot et 77 députés, 18 décembre 2023, rejetée, 289 voix requises (110-0)"
+        },
+        {
+          "id": "VTANR5L16V3215",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur l'ensemble, lecture définitive, de Mme Panot, Mme Chatelain, M. Chassaigne, M. Vallaud et 145 députés, 21 décembre 2023, rejetée, 289 voix requises (116-0)"
+        },
+        {
+          "id": "VTANR5L16V2797",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (90-209)"
+        }
+      ]
+    },
+    {
+      "id": "plf-2025",
+      "dossier_an": "DLR5L17N50198",
+      "legislature": 17,
+      "titre": "Loi de finances pour 2025",
+      "resume": "La loi fixe le budget de l'État pour 2025. Parmi ses mesures qui touchent les personnes, elle ramène de 100 % à 90 % la rémunération maintenue aux fonctionnaires pendant les trois premiers mois d'un congé de maladie ordinaire (article 189). Les deux jours de carence supplémentaires envisagés pendant la discussion budgétaire n'y figurent pas. Le Gouvernement a fait adopter le texte sans vote, par l'article 49, alinéa 3, de la Constitution.",
+      "droits": [
+        {
+          "code": "travail-protection-sociale",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cgt-fp-2025-02-11",
+            "fsu-2025-02-27",
+            "fgf-fo-2025-03-07",
+            "cfdt-2025-02",
+            "intersyndicale-fp-2025-04"
+          ],
+          "justification": "La mesure du texte que les sources mettent en cause réduit la protection des agents publics malades : l'article 189 remplace « l'intégralité » du traitement par « 90 % » pendant les trois premiers mois d'un congé de maladie ordinaire. La CGT Fonction publique y voit « une attaque frontale contre les droits des agents malades » et « une attaque de plus contre le droit à la sécurité sociale des agent.es publics ». Pour la FSU, c'est « une attaque frontale contre un principe fondamental de la Sécurité sociale ». La FGF-FO parle d'« une stigmatisation inacceptable ». La CFDT estime que la mesure revient à « pénaliser les malades quand on prétend viser les fraudeurs ». Une pétition intersyndicale de la fonction publique demande le « maintien de la rémunération à 100 % »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "La baisse ne touche que le congé de maladie ordinaire. Selon la FGF-FO, « les congés longue maladie et longue durée ne sont pas concernés par cet abattement », et le supplément familial de traitement et l'indemnité de résidence restent versés à 100 %. La même source précise que les primes suivent en pratique la baisse du traitement.",
+          "sources": [
+            "fgf-fo-2025-03-07"
+          ]
+        },
+        {
+          "texte": "Le Gouvernement a renoncé à d'autres mesures contestées avant l'adoption. Selon la FSU, la grève du 5 décembre 2024 l'a contraint « à reculer sur les deux jours de carence supplémentaires » et à renoncer à la suppression de 4 000 postes dans l'Éducation nationale. Le jour de carence existant demeure, et la FSU en demande aussi la suppression.",
+          "sources": [
+            "fsu-2025-02-27"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2025-874 DC du 13 février 2025, non-conformité partielle. Dix articles sont censurés sans examen de leur contenu : neuf comme cavaliers budgétaires (articles 155, 174, 176, 177, 179, 180, 181, 187 et 194) et un pour sa procédure d'adoption, l'article 108, ajouté en commission mixte paritaire. Aucune réserve d'interprétation. Les griefs de procédure sont écartés. Le Conseil déclare conformes certaines dispositions issues des articles 9, 17, 27, 32, 46, 106, 109, 135 et 186. Il ne se prononce pas sur l'article 189 : sa décision n'en traite pas, et il n'a soulevé d'office aucune autre question.",
+      "note": "Texte composite, adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score. Le texte qualifié est celui de la commission mixte paritaire, sur lequel le Gouvernement a engagé sa responsabilité le 3 février 2025. Le droit principal est celui de la seule mesure du texte adopté que les sources admises mettent en cause, la baisse de l'indemnisation du congé de maladie ordinaire (règle 4). En 1re lecture, l'Assemblée a rejeté la première partie le 12 novembre 2024 (192-362), ce qui a mis fin à l'examen sans vote sur l'ensemble. Ce vote porte sur une partie du texte et n'est pas retenu (règle 9). Les votes sur les articles ne sont pas retenus non plus. La seule motion de censure rattachée au texte, votée le 5 février 2025, est affichée groupe par groupe (rôle censure). L'Assemblée n'a voté sur aucune motion de rejet préalable. Aucun amendement clé (règle 11). La 1re lecture est la dernière lecture où des suppressions ont été mises aux voix. Elles portent sur des articles fiscaux ou financiers (articles 4, 6, 8, 10, 11, 15 et 30 : revenus du nucléaire, mécanisme de capacité, taxes sur les véhicules, TVA sur le chauffage, contribution des grandes entreprises, CVAE, FCTVA), qu'aucune source admise ne met en cause au nom d'un droit de la grille. L'Assemblée n'a jamais voté sur la mesure mise en cause.",
+      "sources": {
+        "cfdt-2025-02": {
+          "auteur": "CFDT (tract diffusé par l'UFETAM-CFDT)",
+          "titre": "Arrêt maladie : la CFDT s'oppose aux pertes de rémunérations des agents publics !",
+          "date": "2025-02",
+          "url": "https://cfdt-ufetam.org/wp-content/uploads/2025/02/tract_arret_maladie_2025-02-21.pdf"
+        },
+        "cgt-fp-2025-02-11": {
+          "auteur": "CGT Fonction publique",
+          "titre": "Déclaration liminaire au Conseil commun de la fonction publique, séance plénière du 11 février 2025",
+          "date": "2025-02-11",
+          "url": "https://equipementcgt.fr/IMG/pdf/fnee-cgt_ccfp_20250211.pdf"
+        },
+        "fgf-fo-2025-03-07": {
+          "auteur": "FGF-FO",
+          "titre": "Indemnisation des arrêts maladie : une stigmatisation inacceptable ! (communiqué)",
+          "date": "2025-03-07",
+          "url": "https://www.fo-fonctionnaires.fr/assets/images-pdf-preview/20250307-communique-fgf-arret-maladie-duplicate-duplicate.pdf"
+        },
+        "fsu-2025-02-27": {
+          "auteur": "FSU",
+          "titre": "Coupables d'être malades ! (communiqué)",
+          "date": "2025-02-27",
+          "url": "https://fsu.fr/wp-content/uploads/2025/02/CP-FSU-CMO-90-DEF.pdf"
+        },
+        "intersyndicale-fp-2025-04": {
+          "auteur": "CGT FP, UFFA-CFDT, UIAFP-FO, UNSA FP, FSU, Solidaires FP, CFE-CGC Services publics, FA-FP",
+          "titre": "Pétition intersyndicale pour le maintien de la rémunération à 100 % en cas de congé de maladie ordinaire et l'abrogation du jour de carence",
+          "date": "2025-04",
+          "url": "https://unsa-fp.org/resources/upload/20250417/68012512d98ad.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V693",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur l'ensemble, texte de la CMP, de Mme Panot et 90 députés, 5 février 2025, rejetée, 289 voix requises (128-0)"
+        }
+      ]
+    },
+    {
       "id": "plf-2026",
       "dossier_an": "DLR5L17N52428",
       "legislature": 17,
@@ -4857,6 +5163,408 @@
           "role": "motion",
           "pour": "contre-texte",
           "objet": "motion de rejet préalable, 1re lecture (60-258)"
+        }
+      ]
+    },
+    {
+      "id": "plfss-2023",
+      "dossier_an": "DLR5L16N46347",
+      "legislature": 16,
+      "titre": "Loi de financement de la sécurité sociale pour 2023",
+      "resume": "La loi fixe le budget de la sécurité sociale pour 2023. Elle crée des rendez-vous de prévention proposés aux assurés à certains âges. Elle permet le remboursement du dépistage de certaines infections sexuellement transmissibles à la demande du patient, et celui de la contraception d'urgence sans ordonnance. Elle élargit la prescription et l'administration de vaccins par les sages-femmes, les infirmiers et les pharmaciens. Le texte adopté privait aussi d'indemnités journalières certains arrêts de travail prescrits en téléconsultation : le Conseil constitutionnel a censuré cette mesure. Le Gouvernement a fait adopter le texte sans vote, par l'article 49, alinéa 3, de la Constitution.",
+      "droits": [
+        {
+          "code": "sante",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "cfdt-2022-10-11",
+            "fas-2022-10-11",
+            "cgt-ucr-2023-09"
+          ],
+          "justification": "Les mesures du texte que les sources citent le plus sont celles de prévention et d'accès aux soins. La CFDT constate des « mesures positives » : « le rendez-vous de prévention à trois âges clés de la vie, l'élargissement de la prise en charge de la contraception d'urgence et de la détection des maladies sexuellement transmissibles, l'extension des compétences vaccinales aux infirmiers, sages-femmes et pharmaciens ». France Assos Santé accueille « très favorablement les différentes mesures permettant de renforcer la prévention ». Un an plus tard, l'Union confédérale des retraités CGT juge ces mêmes mesures « certes intéressantes », tout en estimant qu'elles « sont loin de dessiner une « révolution de la prévention » »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "France Assos Santé regrette « l'exclusion des bénéficiaires de l'AME » des rendez-vous de prévention, « alors que la précarité est un déterminant défavorable majeur de santé ». La loi propose ces rendez-vous « aux assurés ».",
+          "sources": [
+            "fas-2022-10-11"
+          ]
+        },
+        {
+          "texte": "Les sources jugent le texte insuffisant pour l'accès aux soins. Pour France Assos Santé, les mesures sur l'accès territorial sont « très insuffisantes pour répondre à cette désertification médicale » ; elle ne vote pas pour le texte, mais en prend acte. Neuf organisations de retraités, dont l'UCR-CGT, l'UCR-FO et la FSU, relèvent que l'objectif de dépenses d'assurance maladie est « inférieur à l'inflation prévue, ce qui signifie une nouvelle baisse des moyens » et parlent de « mesurettes » sur le grand âge. La CFDT, favorable au volet santé, regrette « un manque d'ambition pour les autres branches ».",
+          "sources": [
+            "fas-2022-10-11",
+            "g9-2022-10-19",
+            "cfdt-2022-10-11"
+          ]
+        },
+        {
+          "texte": "Le même texte restreignait un volet de la protection sociale. Son article 101 privait d'indemnités journalières l'assuré dont l'arrêt de travail avait été prescrit en téléconsultation par un autre médecin que son médecin traitant ou qu'un médecin l'ayant reçu depuis moins d'un an. Le Conseil constitutionnel l'a censuré sur le fond : cette circonstance « ne permet pas d'établir que l'arrêt de travail aurait été indûment prescrit », et la mesure pouvait priver l'assuré des indemnités « alors même qu'un médecin a constaté son incapacité physique de continuer ou de reprendre le travail ».",
+          "sources": [
+            "cc-2022-845"
+          ]
+        },
+        {
+          "texte": "L'article 90 obligeait l'employeur à garantir au salarié le versement d'une somme au moins égale aux indemnités journalières de maternité et de paternité. La CFDT avait accueilli la mesure « avec une grande satisfaction ». Le Conseil constitutionnel l'a censurée comme cavalier social, sans examiner son contenu.",
+          "sources": [
+            "cfdt-2022-10-11",
+            "cc-2022-845"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2022-845 DC du 20 décembre 2022, non-conformité partielle. Une disposition est censurée sur le fond : la privation d'indemnités journalières pour certains arrêts de travail prescrits en téléconsultation (2° et 3° du I de l'article 101), au regard du onzième alinéa du Préambule de 1946. Onze autres sont censurées comme cavaliers sociaux, sans examen de leur contenu : les articles 39, 42 (limitation du recours à l'intérim), 43, 45, 50, 52, 74, 77, 89 et 90 (garantie par l'employeur des indemnités de maternité et de paternité), et le IV de l'article 54. Sont déclarés conformes, sans réserve, l'article 4, le II de l'article 18, le III de l'article 51, les articles 106 et 115 (objectifs de dépenses) et le 6° du II de l'article L. 138-10 du code de la sécurité sociale. Les griefs de procédure, dont le recours à l'article 49, alinéa 3, et le grief d'insincérité sont écartés. La décision ne se prononce pas sur les mesures de prévention.",
+      "note": "Texte composite, adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score. Le droit principal et le sens sont ceux des mesures que les sources admises citent le plus, la prévention et l'accès aux soins ; la mesure de sens opposé s'affiche en vigilance (règle 4). Le Gouvernement a engagé sa responsabilité cinq fois : le 20 octobre 2022 sur la troisième partie et le 26 octobre sur la quatrième partie et l'ensemble (1re lecture), le 21 novembre sur la troisième partie et le 25 novembre sur la quatrième partie et l'ensemble (nouvelle lecture), le 30 novembre sur l'ensemble (lecture définitive). Les six motions de censure qui ont suivi sont affichées groupe par groupe (rôle censure). Une seule est rattachée à ce dossier dans les données de l'Assemblée ; les cinq autres le sont d'après la page officielle du dossier. Les trois motions de rejet préalable sont affichées, pas comptées (règle 10). Les votes sur une partie (première partie rejetée le 20 octobre 2022, 72-98 ; deuxième partie adoptée le 21 novembre, 91-21) et sur les articles portent sur une partie du texte et ne sont pas retenus (règle 9). Aucun amendement clé (règle 11) : aucune suppression ni aucun rétablissement d'article n'a été mis aux voix par scrutin public. Les deux amendements de la nouvelle lecture modifient des tableaux de chiffres, ceux de la 1re lecture réécrivent des articles ou en ajoutent. Aucune source admise ne se prononce non plus sur les articles 1er et 4, rejetés par scrutin en 1re lecture.",
+      "sources": {
+        "cc-2022-845": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2022-845 DC",
+          "date": "2022-12-20",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2022/2022845DC.htm"
+        },
+        "cfdt-2022-10-11": {
+          "auteur": "CFDT",
+          "titre": "Projet de loi de finances de la sécurité sociale 2023 : des mesures positives en matière de politique de santé mais un manque d'ambition pour les autres branches (déclaration)",
+          "date": "2022-10-11",
+          "url": "https://www.cfdt.fr/upload/docs/application/pdf/2022-10/20221011_sg_presse_cp31_plfss_2023_2022-10-11_11-10-6_302.pdf"
+        },
+        "cgt-ucr-2023-09": {
+          "auteur": "Union confédérale des retraités CGT",
+          "titre": "Nos exigences pour un PLFSS 2024 répondant aux besoins de la population",
+          "date": "2023-09",
+          "url": "https://union-confederale-retraites.cgt.fr/sites/union-confederale-retraites.cgt.fr/files/2024-02/20231026_PLFSS_2024_1.pdf"
+        },
+        "fas-2022-10-11": {
+          "auteur": "France Assos Santé",
+          "titre": "Déclaration France Assos Santé, PLFSS 2023, Conseil de la CNAM",
+          "date": "2022-10-11",
+          "url": "https://www.france-assos-sante.org/wp-content/uploads/2022/10/Declaration-PLFSS-11-10-2022-.pdf"
+        },
+        "g9-2022-10-19": {
+          "auteur": "UCR-CGT, UCR-FO, UNAR-CFTC, UNIR CFE-CGC, FSU, UNIRS-Solidaires, FGR-FP, Ensemble & solidaires-UNRPA, LSR",
+          "titre": "Un PLFSS 2023 sans moyens qui va aggraver une situation déjà catastrophique ! (communiqué commun)",
+          "date": "2022-10-19",
+          "url": "https://www.clermont.snes.edu/IMG/pdf/g9_communique_sur_pflss.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V360",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la troisième partie, 1re lecture, de M. Vallaud, Mme Panot, Mme Chatelain, M. Chassaigne et 146 députés, 24 octobre 2022, rejetée, 289 voix requises (150-0)"
+        },
+        {
+          "id": "VTANR5L16V486",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la quatrième partie et l'ensemble, 1re lecture, de Mme Panot et 74 députés, 31 octobre 2022, rejetée, 289 voix requises (218-0)"
+        },
+        {
+          "id": "VTANR5L16V485",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la quatrième partie et l'ensemble, 1re lecture, de Mme Le Pen et 88 députés, 31 octobre 2022, rejetée, 289 voix requises (90-0)"
+        },
+        {
+          "id": "VTANR5L16V632",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la troisième partie, nouvelle lecture, de Mme Panot et 74 députés, 25 novembre 2022, rejetée, 289 voix requises (85-0)"
+        },
+        {
+          "id": "VTANR5L16V634",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la quatrième partie et l'ensemble, nouvelle lecture, de Mme Panot et 74 députés, 28 novembre 2022, rejetée, 289 voix requises (93-0)"
+        },
+        {
+          "id": "VTANR5L16V664",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur l'ensemble, lecture définitive, de Mme Panot, M. Vallaud, Mme Chatelain, M. Chassaigne et 144 députés, 2 décembre 2022, rejetée, 288 voix requises (87-0)"
+        },
+        {
+          "id": "VTANR5L16V350",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (96-189)"
+        },
+        {
+          "id": "VTANR5L16V618",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, nouvelle lecture (37-99)"
+        },
+        {
+          "id": "VTANR5L16V649",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, lecture définitive (107-196)"
+        }
+      ]
+    },
+    {
+      "id": "plfss-2024",
+      "dossier_an": "DLR5L16N48683",
+      "legislature": 16,
+      "titre": "Loi de financement de la sécurité sociale pour 2024",
+      "resume": "La loi fixe le budget de la sécurité sociale pour 2024. Elle limite à trois jours les arrêts de travail prescrits en téléconsultation, sauf s'ils le sont par le médecin traitant ou la sage-femme référente ou si le patient justifie ne pas pouvoir consulter en présence d'un médecin. Elle réduit le remboursement du transport sanitaire d'un patient qui refuse un transport partagé. Le texte adopté suspendait aussi les indemnités journalières après un contrôle demandé par l'employeur : le Conseil constitutionnel a censuré cette mesure. La loi étend par ailleurs la prévention et l'accès aux soins : préservatifs sans ordonnance pour les moins de 26 ans, protections périodiques réutilisables prises en charge pour les moins de 26 ans et les bénéficiaires de la complémentaire santé solidaire, présomption de droit à cette complémentaire pour certains allocataires de minima sociaux. Le Gouvernement a fait adopter le texte sans vote, par l'article 49, alinéa 3, de la Constitution.",
+      "droits": [
+        {
+          "code": "travail-protection-sociale",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "fas-2023-10-05",
+            "fas-2023-10-11",
+            "cfdt-2023-10-11",
+            "cgt-2023-11-16",
+            "cc-2023-860"
+          ],
+          "justification": "Les mesures du texte que les sources mettent en cause sont celles sur les arrêts de travail. France Assos Santé rejette « la suspension automatique des IJ suite au contrôle mandaté par l'employeur », « une privatisation des contrôles inacceptable », et demande de supprimer la limitation à trois jours des arrêts prescrits en téléconsultation, qui vient « fragiliser les personnes les plus éloignées du système de santé ». La CFDT s'inquiète d'une approche « qui renforce le pouvoir de contrôle des employeurs au détriment de l'assurance maladie et surtout des travailleurs ». Pour la CGT, le projet « attaque nos droits en remettant en cause les arrêts maladie ». Le Conseil constitutionnel a censuré la suspension des indemnités : elle avait pour effet « de priver du versement des indemnités journalières l'assuré social alors même que son incapacité physique de continuer ou de reprendre le travail a été constatée par un médecin »."
+        },
+        {
+          "code": "sante",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "fas-2023-10-05",
+            "unaf-2023-10-05"
+          ],
+          "justification": "France Assos Santé souligne des « intentions positives » : la gratuité des préservatifs pour les moins de 26 ans, la prise en charge des protections menstruelles réutilisables, la présomption de droit à la complémentaire santé solidaire, « mesure demandée depuis longtemps par les associations ». L'Unaf, porte-parole officiel des familles auprès des pouvoirs publics, est favorable à ces mesures de prévention et à la vaccination contre le papillomavirus dans les collèges, et « très favorable » à la présomption de droit, qui « contribuera à améliorer non seulement le recours au droit, mais également, in fine, l'accès aux soins »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Le Conseil constitutionnel a validé la limitation à trois jours des arrêts prescrits en téléconsultation : elle ne s'applique pas au médecin traitant ni à la sage-femme référente, ni au patient qui justifie ne pas pouvoir consulter en présence d'un médecin, et le législateur a poursuivi l'objectif de « lutte contre la fraude en matière de protection sociale ».",
+          "sources": [
+            "cc-2023-860"
+          ]
+        },
+        {
+          "texte": "Le même texte restreint aussi l'accès aux soins sur d'autres points. France Assos Santé voit dans les pénalités sur le transport partagé « une mesure punitive à l'encontre des usagers ». L'Unaf n'y est pas opposée, mais demande un dispositif souple. Le Conseil constitutionnel a validé la mesure sous réserve : le coefficient de minoration ne doit pas remettre en cause les exigences du onzième alinéa du Préambule de 1946. Il a censuré l'article 72, qui permettait d'interdire la prescription par télémédecine de médicaments en rupture d'approvisionnement, car elle pouvait « priver un patient de la possibilité de se voir prescrire un médicament nécessaire au regard de son état de santé ».",
+          "sources": [
+            "fas-2023-10-05",
+            "unaf-2023-10-05",
+            "cc-2023-860"
+          ]
+        },
+        {
+          "texte": "Les mesures de santé jugées positives le sont avec des réserves. Pour France Assos Santé, « les quelques dispositions en matière de prévention ne portent pas une véritable politique de santé publique », et le plafond de la complémentaire santé solidaire « reste en dessous du seuil de pauvreté » ; elle vote contre le projet. L'Unaf en prend acte et regrette des « mesures ciblées ».",
+          "sources": [
+            "fas-2023-10-05",
+            "unaf-2023-10-05"
+          ]
+        },
+        {
+          "texte": "Le projet initial réformait aussi la réparation des accidents du travail et des maladies professionnelles. La CFDT s'opposait « fermement aux effets de bord liés à la proposition de réparation plafonnée et mutualisée en cas de faute inexcusable de l'employeur ». Pour la CGT, le Gouvernement « a essayé d'utiliser le PLFSS pour imposer des reculs » sur ce point. Cette réforme ne figure pas dans le texte définitif.",
+          "sources": [
+            "cfdt-2023-10-11",
+            "cgt-2023-11-16"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2023-860 DC du 21 décembre 2023, non-conformité partielle. Deux dispositions sont censurées sur le fond, au regard du onzième alinéa du Préambule de 1946 : la suspension des indemnités journalières à la suite d'un contrôle demandé par l'employeur (a du 3° du I de l'article 63) et la limitation ou l'interdiction de prescrire par télémédecine des médicaments en rupture d'approvisionnement (quatrième alinéa du 2° de l'article 72). L'article 62 (avis des commissions parlementaires sur certains décrets, dont ceux sur les franchises) est censuré au nom de la séparation des pouvoirs. Huit autres articles sont censurés comme cavaliers sociaux, sans examen de leur contenu : 11, 12, 14, 22, 68, 75, 84 et 102. Une réserve d'interprétation : le coefficient de minoration en cas de refus d'un transport partagé (article 69) ne doit pas remettre en cause les exigences du Préambule. Sont déclarés conformes la limitation à trois jours des arrêts prescrits en téléconsultation (article 65), l'article 2, les mots contestés de l'article 16 (compensation à l'assurance chômage), le I de l'article 34 et l'article 105. Les griefs de procédure et le grief d'insincérité sont écartés.",
+      "note": "Texte composite, adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score. Le droit principal et son sens sont ceux des mesures que les sources admises citent et mettent le plus en cause, les limites aux arrêts de travail ; les mesures de prévention et d'accès aux soins, de sens opposé, relèvent d'un autre droit et sont qualifiées à part (règle 4). Le Gouvernement a engagé sa responsabilité sur la deuxième partie, puis sur la troisième partie et l'ensemble, en 1re lecture et en nouvelle lecture, puis sur l'ensemble en lecture définitive. Les six motions de censure qui ont suivi sont affichées groupe par groupe (rôle censure) : aucune n'est rattachée à ce dossier dans les données de l'Assemblée, et elles le sont d'après la page officielle du dossier. Les deux motions de rejet préalable sont affichées, pas comptées (règle 10). La première partie adoptée en 1re lecture (74-69) et en nouvelle lecture (45-21) et les votes sur les articles portent sur une partie du texte et ne sont pas retenus (règle 9). Aucun amendement clé (règle 11). La nouvelle lecture est la dernière lecture où des suppressions ont été mises aux voix : elles portent sur l'article 1er (comptes de 2023), l'article 2 (objectif de dépenses de 2023) et l'article 4 (contribution des entreprises pharmaceutiques). Aucune source admise ne met en cause ces articles au nom d'un droit de la grille. Les articles sur les arrêts de travail n'ont fait l'objet d'aucun scrutin public : le Gouvernement a engagé sa responsabilité sur la partie qui les contient.",
+      "sources": {
+        "cc-2023-860": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2023-860 DC",
+          "date": "2023-12-21",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2023/2023860DC.htm"
+        },
+        "cfdt-2023-10-11": {
+          "auteur": "CFDT",
+          "titre": "PLFSS 2024 : un budget qui ne répond pas aux enjeux de financement du système de soins et de la protection sociale (déclaration)",
+          "date": "2023-10-11",
+          "url": "https://www.cfdt.fr/upload/docs/application/pdf/2023-10/20231011_sg_presse_cp40_plfss_2024_2023-10-11_15-17-21_808.pdf"
+        },
+        "cgt-2023-11-16": {
+          "auteur": "CGT",
+          "titre": "Le 16 novembre, la santé et la protection sociale au cœur de nos besoins (tract)",
+          "date": "2023-11-16",
+          "url": "https://gironde.cgt.fr/sites/gironde.cgt.fr/files/2023-11/20231108_16Pctobre_Sante_Tract_RVB.pdf"
+        },
+        "fas-2023-10-05": {
+          "auteur": "France Assos Santé",
+          "titre": "Déclaration, projet de loi de financement de la sécurité sociale 2024, Conseil de la CNAM",
+          "date": "2023-10-05",
+          "url": "https://france-assos-sante.org/wp-content/uploads/2023/10/Declaration-PLFSS2024.pdf"
+        },
+        "fas-2023-10-11": {
+          "auteur": "France Assos Santé",
+          "titre": "Propositions d'amendements au PLFSS 2024",
+          "date": "2023-10-11",
+          "url": "https://www.france-assos-sante.org/wp-content/uploads/2023/10/Propositions_France_Assos_SAnte_PLFSS-2024.pdf"
+        },
+        "unaf-2023-10-05": {
+          "auteur": "Union nationale des associations familiales (Unaf)",
+          "titre": "Déclaration sur le volet branche maladie du PLFSS 2024, Conseil de la CNAM",
+          "date": "2023-10-05",
+          "url": "https://www.unaf.fr/app/uploads/sites/3/2023/10/declaration-unaf-sur-le-volet-branche-maladie-du-plfss-2024.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L16V2809",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la deuxième partie, 1re lecture, de Mme Panot, Mme Chatelain, M. Chassaigne et 111 députés, 30 octobre 2023, rejetée, 289 voix requises (223-0)"
+        },
+        {
+          "id": "VTANR5L16V2810",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la deuxième partie, 1re lecture, de Mme Le Pen et 87 députés, 30 octobre 2023, rejetée, 289 voix requises (88-0)"
+        },
+        {
+          "id": "VTANR5L16V2887",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la troisième partie et l'ensemble, 1re lecture, de Mme Panot et 77 députés, 4 novembre 2023, rejetée, 289 voix requises (89-0)"
+        },
+        {
+          "id": "VTANR5L16V3046",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la deuxième partie, nouvelle lecture, de Mme Panot et 77 députés, 26 novembre 2023, rejetée, 289 voix requises (89-0)"
+        },
+        {
+          "id": "VTANR5L16V3067",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la troisième partie et l'ensemble, nouvelle lecture, de Mme Panot et 74 députés, 29 novembre 2023, rejetée, 289 voix requises (145-0)"
+        },
+        {
+          "id": "VTANR5L16V3116",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur l'ensemble, lecture définitive, de Mme Panot, M. Chassaigne, Mme Chatelain, M. Vallaud et 143 députés, 4 décembre 2023, rejetée, 289 voix requises (108-0)"
+        },
+        {
+          "id": "VTANR5L16V2800",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (180-215)"
+        },
+        {
+          "id": "VTANR5L16V3036",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, nouvelle lecture (53-123)"
+        }
+      ]
+    },
+    {
+      "id": "plfss-2025",
+      "dossier_an": "DLR5L17N50588",
+      "legislature": 17,
+      "titre": "Loi de financement de la sécurité sociale pour 2025",
+      "resume": "La loi fixe le budget de la sécurité sociale pour 2025. Elle permet de subordonner le remboursement de certains soins, produits ou transports à un document établi par le prescripteur, à partir de 2026, et le remboursement de dispositifs médicaux au respect de conditions d'utilisation. Elle soumet à la CSG et à la CRDS la part de la rémunération des apprentis qui dépasse 50 % du Smic et transpose l'accord des partenaires sociaux sur les accidents du travail et les maladies professionnelles. Le gel des pensions, prévu par le projet initial, a été retiré. Une première version, issue de la commission mixte paritaire, est tombée le 4 décembre 2024 : l'Assemblée a adopté une motion de censure (331 voix) qui a renversé le Gouvernement. Le texte est reparti en nouvelle lecture, et le Gouvernement suivant l'a fait adopter sans vote, par trois recours à l'article 49, alinéa 3, de la Constitution.",
+      "droits": [
+        {
+          "code": "sante",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "fas-2024-10-17",
+            "unaf-2024-10-17",
+            "cc-2025-875"
+          ],
+          "justification": "Les mesures du texte adopté que les sources mettent en cause conditionnent le remboursement des soins. Jusque-là, un prescripteur qui ne respectait pas certaines obligations devait reverser un indu. Désormais, en l'absence du document requis, le patient n'est pas remboursé (article 48). France Assos Santé relève que « la seule conséquence sera la suppression du remboursement pour l'assuré » et juge « inacceptable que le patient soit sanctionné en cas de défaut du professionnel de santé ». Elle s'oppose aussi au conditionnement du remboursement des dispositifs numériques à leur usage. L'UNAF, dont le statut est institutionnel, craint que ces dispositifs « contribuent à une dégradation de l'offre de soins et de services ». Le texte adopté permettait en outre d'exiger une pénalité pour un rendez-vous non honoré, et une préautorisation bancaire pour prendre rendez-vous : le Conseil constitutionnel a censuré cette mesure, qui a « privé de garanties légales » la protection de la santé garantie par le Préambule de 1946."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Le Conseil constitutionnel a validé le conditionnement du remboursement sous deux réserves : le prescripteur doit informer préalablement le patient de l'absence de prise en charge, et établir ou modifier le document « dans des délais adaptés à l'état de santé du patient » et sans frais supplémentaires pour lui. Il juge que le législateur a poursuivi un objectif de protection de la santé et d'équilibre financier.",
+          "sources": [
+            "cc-2025-875"
+          ]
+        },
+        {
+          "texte": "Les sources ne contestent pas le principe. France Assos Santé se dit « favorable aux mesures de pertinence » et l'UNAF soutient « l'amélioration de la pertinence des prescriptions » : elles visent la façon dont la mesure pèse sur les patients.",
+          "sources": [
+            "fas-2024-10-17",
+            "unaf-2024-10-17"
+          ]
+        },
+        {
+          "texte": "Le texte étend un autre volet de la protection sociale. La CFDT salue la transposition de l'accord sur les accidents du travail et les maladies professionnelles, qui reprend « les nouvelles protections prévues pour toutes les victimes ».",
+          "sources": [
+            "cfdt-2024-10-16"
+          ]
+        },
+        {
+          "texte": "Plusieurs mesures que ces sources contestaient ne figurent pas dans le texte adopté : la baisse du remboursement des consultations, les hausses de franchises et la baisse de l'indemnisation des arrêts de travail relevaient de la voie réglementaire, et le gel des pensions a été retiré. Elles n'entrent donc pas dans ce jugement.",
+          "sources": [
+            "fas-2024-10-17",
+            "cfdt-2024-10-16"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2025-875 DC du 28 février 2025, non-conformité partielle. Censure sur le fond de l'article 52 : en s'abstenant de définir la nature de la pénalité pour rendez-vous non honoré et d'encadrer son montant et sa mise en œuvre, le législateur a « privé de garanties légales les exigences constitutionnelles découlant du onzième alinéa du Préambule de la Constitution de 1946 ». Treize autres articles sont censurés comme cavaliers sociaux, sans examen de leur contenu (articles 34, 36, 42, 44, 49, 50, 51, 53, 58, 60, 74, 84 et 94). Deux réserves d'interprétation portent sur l'article 48 (remboursement subordonné à un document du prescripteur). Sont déclarés conformes les objectifs de dépenses d'assurance maladie (articles 2 et 97) et l'assujettissement à la CSG et à la CRDS de la part de la rémunération des apprentis qui dépasse 50 % du Smic (article 22).",
+      "note": "Texte composite, adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score. Le texte qualifié est celui de la nouvelle lecture, sur lequel le Gouvernement a engagé sa responsabilité les 3, 5 et 10 février 2025. Le droit principal est celui des mesures du texte adopté que les sources admises citent le plus, le conditionnement du remboursement des soins (règle 4). Les mesures de protection sociale que les mêmes sources critiquent le plus ne sont pas dans le texte adopté. Quatre motions de censure sont affichées groupe par groupe (rôle censure). La première, adoptée le 4 décembre 2024 par 331 voix, a renversé le Gouvernement et fait tomber le texte de la commission mixte paritaire : elle porte donc sur une version antérieure du texte, et non sur la loi promulguée. Une seconde motion déposée le 2 décembre 2024, par 140 députés, n'a pas été votée. Les trois suivantes, rejetées, portent sur le texte de la nouvelle lecture. En 1re lecture, l'Assemblée n'a pas achevé l'examen du texte, parti au Sénat sans vote sur l'ensemble. Le vote sur la deuxième partie (126-98) et les votes sur les articles ne sont pas retenus (règle 9). L'Assemblée n'a voté sur aucune motion de rejet préalable. La 1re lecture est la seule lecture où des suppressions ont été mises aux voix (règle 11). Un amendement clé est retenu, pour mémoire puisqu'il n'est pas compté : la suppression de l'article 16, devenu l'article 48 de la loi, mesure mise en cause par France Assos Santé et l'UNAF. Ne sont pas retenues les suppressions de l'article liminaire et des articles 1er, 2, 10 et 11 (équilibre des comptes, objectifs de dépenses), des articles 4 et 6 (exonérations de cotisations des employeurs) et de l'article 7 : cet article réunissait la mesure sur les apprentis et des exonérations d'employeurs, et aucune source admise lue ne le met en cause. La mesure sur le remboursement des dispositifs médicaux n'a pas été mise aux voix : l'examen s'est arrêté avant.",
+      "sources": {
+        "cc-2025-875": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2025-875 DC",
+          "date": "2025-02-28",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2025/2025875DC.htm"
+        },
+        "cfdt-2024-10-16": {
+          "auteur": "CFDT",
+          "titre": "PLFSS 2025 : malgré certaines avancées, un budget brutal pour les plus fragiles et insuffisant au regard des enjeux (communiqué)",
+          "date": "2024-10-16",
+          "url": "https://www.cfdt.fr/sinformer/communiques-de-presse/plfss-2025-malgre-certaines-avancees-un-budget-brutal-pour-les-plus-fragiles-et-insuffisant-au-regard-des-enjeux"
+        },
+        "fas-2024-10-17": {
+          "auteur": "France Assos Santé",
+          "titre": "Déclaration sur le PLFSS 2025, Conseil de la CNAM du 17 octobre 2024",
+          "date": "2024-10-17",
+          "url": "https://www.france-assos-sante.org/wp-content/uploads/2024/10/Declaration_FAS_PLFSS_2025.pdf"
+        },
+        "unaf-2024-10-17": {
+          "auteur": "Union nationale des associations familiales (statut institutionnel)",
+          "titre": "Déclaration au Conseil de la CNAM concernant le PLFSS 2025",
+          "date": "2024-10-17",
+          "url": "https://www.unaf.fr/app/uploads/sites/3/2024/11/declaration-unaf-conseil-cnam-plfss-2025.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V519",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur le texte de la CMP, version antérieure du texte, de Mme Panot, M. Vallaud, Mme Chatelain, M. Chassaigne et 181 députés, 4 décembre 2024, adoptée, 288 voix requises : Gouvernement renversé, texte rejeté (331-0)"
+        },
+        {
+          "id": "VTANR5L17V694",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur l'article liminaire et la première partie, nouvelle lecture, de Mme Panot et 91 députés, 5 février 2025, rejetée, 289 voix requises (122-0)"
+        },
+        {
+          "id": "VTANR5L17V739",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la deuxième partie, nouvelle lecture, de Mme Panot et 70 députés, 10 février 2025, rejetée, 289 voix requises (115-0)"
+        },
+        {
+          "id": "VTANR5L17V791",
+          "role": "censure",
+          "pour": "contre-texte",
+          "objet": "motion de censure (article 49, alinéa 3) sur la troisième partie et l'ensemble, nouvelle lecture, de Mme Panot et 73 députés, 12 février 2025, rejetée, 289 voix requises (121-0)"
+        },
+        {
+          "id": "VTANR5L17V245",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 16 (remboursement subordonné à un document du prescripteur), 1re lecture, adoptée (153-51)"
         }
       ]
     },
