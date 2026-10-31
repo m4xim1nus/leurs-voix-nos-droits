@@ -36,6 +36,10 @@ découlent ont été validées par Max le 29/10/2026 (`docs/METHODO.md`).
 | Amendements AN XVIIe | `…/17/loi/amendements_div_legis/Amendements.json.zip` | 348 Mo → 1,6 Go, 142 579 fichiers | auteur, groupe de l'auteur, dossier, séance |
 | Amendements AN XVIe | `…/16/loi/amendements_div_legis/Amendements.json.zip` | 363 Mo (figé le 28/06/2024) | idem |
 | Acteurs et organes AN (historique) | `…/17/amo/tous_acteurs_mandats_organes_xi_legislature/AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip` | 14 Mo | sigles des groupes, mandats, circonscriptions |
+| Scrutins AN XVe | `…/15/loi/scrutins/Scrutins_XV.json.zip` | 9 Mo → 72 Mo, 4 417 scrutins (figé le 09/06/2022) | idem |
+| Dossiers législatifs AN XVe | `…/15/loi/dossiers_legislatifs/Dossiers_Legislatifs_XV.json.zip` | 15 Mo → 94 Mo, 4 980 dossiers (figé le 09/06/2022) | idem |
+| Dossiers législatifs AN XIVe | `…/14/loi/dossiers_legislatifs/Dossiers_Legislatifs_XIV.json.zip` | 2,6 Mo, un seul fichier JSON | les 11 dossiers ouverts avant juin 2017 et votés en XVe |
+| Amendements AN XVe | `…/15/loi/amendements_legis/Amendements_XV.json.zip` | 649 Mo (figé le 09/06/2022) ; serveur bridé, plan B | auteur, groupe de l'auteur, dossier, séance |
 | Agenda de l'AN | `…/17/vp/reunions/Agenda.json.zip` | 8,6 Mo → 42 Mo, 8 174 réunions (quotidien) | points de séance et de commission à venir (`lvnd/agenda.py`) |
 | Dosleg (Sénat) | `data.senat.fr/data/dosleg/dosleg.zip` | 16 Mo → 122 Mo (quotidien) | décisions de séance, séances, activité et état des dossiers ; scrutins publics et votes nominatifs (`lvnd/senat.py`) |
 | Sénateurs (Sénat) | `data.senat.fr/data/senateurs/ODSEN_GENERAL.csv` | 0,4 Mo (quotidien) | identité, circonscription, courriel public, groupe actuel |
@@ -544,3 +548,23 @@ Points à surveiller à chaque build :
   Wallis-et-Futuna, 4 communes du Cantal rétablies en 2025) ;
 - vérifier le bureau n° 1 de Lyon (386 inscrits), sans arrondissement
   identifiable.
+
+## XVe législature : ce qui diffère
+
+Mesures du 31/10/2026, cycle XVe.
+
+- **Dates.** Scrutins du 04/07/2017 au 24/02/2022, 472 631 votes nominatifs, 2 581 mises au point, 366 député·es qui
+  n'ont siégé qu'en XVe, 17 organes de groupe (`referentiels/groupes.yaml` les réunit en lignées).
+- **Effet sur le reste.** Sur les mêmes dumps, ajouter la XVe ne change rien aux XVIe, XVIIe et au Sénat, scores et
+  votes compris, sauf 5 lignes de `textes.csv` qui gagnent leurs votes XVe, sans changement de décisif.
+- **Dossiers de la XIVe.** Le dump de la XVe ne contient pas les dossiers ouverts avant juin 2017, même votés
+  ensuite : 11 d'entre eux portent des votes de la XVe. Ils viennent du dump de la XIVe, arrêté à juin 2017, et leur
+  loi est saisie dans `referentiels/rattachements.yaml`, avec le numéro et la date lus dans Dosleg. Ils n'ont pas de
+  NOR, donc pas de lien vers Légifrance.
+- **Rattachements figés.** 73 scrutins sans `voteRefs` ni séance exploitable sont rattachés à la main dans ce même
+  référentiel. Il en reste 3 sans dossier : deux déclarations du Gouvernement et une déclaration de politique générale.
+- **Ventilations incomplètes** (`lvnd check`, listes fermées). 13 scrutins dont le décompte officiel dépasse la somme
+  des groupes : un groupe manque, le plus souvent le MoDem (46 voix), et rien ne permet de reconstruire ses votes. Le
+  seul vote sur l'ensemble touché de façon notable est V2816 (loi organique sur la dette sociale). 17 ventilations
+  comptent une voix de plus que leur liste nominative, 15 pour le MoDem en septembre et octobre 2020, 2 pour LaREM.
+
