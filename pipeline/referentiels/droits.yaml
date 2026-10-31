@@ -12,7 +12,7 @@ version: 1
 
 droits:
   - code: libertes
-    libelle: "Libertés publiques : expression, conscience, manifestation, association, culte"
+    libelle: "Libertés publiques : expression, conscience, circulation, manifestation, association, culte"
   - code: police-justice
     libelle: "Garanties face à la police et à la justice pénale, droits de la défense, droits des personnes détenues"
   - code: vie-privee

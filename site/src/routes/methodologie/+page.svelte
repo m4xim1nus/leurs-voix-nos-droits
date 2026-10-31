@@ -184,14 +184,14 @@
     </li>
     <li value="11" id="regle-11">
       <strong>Amendements clés.</strong> Seuls comptent les amendements qui suppriment ou rétablissent
-      un article portant une mesure mise en cause par une source. Leur sens se fixe d’après le contenu
-      de l’article, pas d’après la nature de l’amendement : supprimer un article qui ajoute une garantie
-      va contre les droits. Un article dont le sens n’est pas univoque n’est pas retenu, y compris quand
-      les sources ne s’accordent pas sur ce sens. Un seul scrutin par article (celui qui en a fixé le
-      sort), et une seule lecture : la dernière où des suppressions ont été mises aux voix. Ne comptent
-      pas : la suppression de l’article unique d’un texte (elle double le vote décisif), ou de l’article
-      qui est le seul du texte au vote décisif, et un scrutin sans aucune voix d’un côté (il ne départage
-      personne).
+      un article portant une mesure mise en cause par une source, sur ce projet ou telle qu’elle est votée
+      : une source antérieure et générale ne suffit pas. Leur sens se fixe d’après le contenu de l’article,
+      pas d’après la nature de l’amendement : supprimer un article qui ajoute une garantie va contre les
+      droits. Un article dont le sens n’est pas univoque n’est pas retenu, y compris quand les sources
+      ne s’accordent pas sur ce sens. Un seul scrutin par article (celui qui en a fixé le sort), et une
+      seule lecture : la dernière où des suppressions ont été mises aux voix. Ne comptent pas : la suppression
+      de l’article unique d’un texte (elle double le vote décisif), ou de l’article qui est le seul du
+      texte au vote décisif, et un scrutin sans aucune voix d’un côté (il ne départage personne).
     </li>
   </ol>
 </section>
@@ -245,7 +245,8 @@
       <strong>Chaque texte pèse autant.</strong> Le vote décisif vaut la moitié du texte, les amendements
       clés se partagent l’autre moitié à parts égales. Un texte sans amendement clé ne compte que son
       vote décisif. Un texte à neuf amendements clés n’écrase donc pas les autres. Les lois successives
-      d’une même crise comptent chacune pour un texte, sans regroupement au cas par cas.
+      d’une même crise comptent chacune pour un texte, sans regroupement au cas par cas, de même qu’une
+      loi d’habilitation et la loi qui ratifie ses ordonnances.
     </li>
     <li value="19" id="regle-19">
       <strong>Changement de groupe.</strong> Chaque vote compte pour le groupe où siégeait l’élu·e ce
@@ -277,7 +278,8 @@
       navette » (la lecture est celle du scrutin). Son sens se lit « sur le texte voté le… » : le texte
       peut encore changer. Après un nouveau vote sur l’ensemble, le sens est relu sur le texte voté. Jusqu’à
       cette relecture, l’ancien vote décisif reste compté et le nouveau vote s’affiche avec la mention
-      « pas encore qualifié ». Un texte à l’arrêt affiche son état, sans cette mention.
+      « pas encore qualifié ». Un texte à l’arrêt affiche son état, sans cette mention. Le dernier vote
+      d’un texte retiré reste décisif et compte dans les scores, et sa note dit le retrait.
     </li>
     <li value="22" id="regle-22">
       <strong>Fiche de suivi.</strong> Un texte sans vote qualifié peut être suivi avant le vote. Il

@@ -1796,6 +1796,81 @@
       }
     },
     {
+      "id": "crise-sanitaire-diverses-2020",
+      "dossier_an": "DLR5L15N39644",
+      "legislature": 15,
+      "titre": "Loi relative à diverses dispositions liées à la crise sanitaire, à d'autres mesures urgentes ainsi qu'au retrait du Royaume-Uni de l'Union européenne",
+      "resume": "Texte composite de plusieurs dizaines d'articles. Il porte notamment de dix à dix-huit le nombre maximal de départements où sont expérimentées les cours criminelles, permet jusqu'à fin 2020 de déroger par accord d'entreprise aux règles des CDD et de l'intérim, prolonge des titres de séjour et habilite le Gouvernement à adapter l'activité partielle par ordonnance.",
+      "droits": [
+        {
+          "code": "police-justice",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-a6",
+            "cnb-ag"
+          ],
+          "justification": "Le texte étend l'expérimentation des cours criminelles, qui jugent certains crimes sans jury. La CNCDH y voit « un détournement de finalité de l'expérimentation » et recommande de l'abandonner sans bilan préalable. Le Conseil national des barreaux réitère son opposition à cette extension « sans évaluation préalable »."
+        },
+        {
+          "code": "travail-protection-sociale",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cgt-note"
+          ],
+          "justification": "Le texte permet à un accord d'entreprise de fixer le nombre de renouvellements des CDD et le délai de carence, et d'autoriser l'intérim hors des cas prévus par le code du travail. La CGT y voit des « dérogations passées opportunément en force grâce à la crise et fragilisant encore plus les travailleurs »."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "Mesures de sens opposé sur le travail : la CGT relève aussi des mises à jour qu'elle juge rendues nécessaires par la situation, dont la « prolongation d'allocations chômage ».",
+          "sources": [
+            "cgt-note"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision du Conseil constitutionnel avant la promulgation du 17 juin 2020.",
+      "note": "Texte composite (règle 4) : le sens de chaque droit est celui des mesures que les sources admises citent le plus, et le droit principal suit la mesure la plus citée. Les sources admises trouvées ne portent que sur une partie du texte. Lois d'une même crise (règle 18) : cette loi compte pour 1 dans les scores, comme chacune des lois successives de la crise sanitaire, sans regroupement. Aucun amendement clé (règle 11) : aucun scrutin public sur un amendement n'est rattaché à ce texte.",
+      "sources": {
+        "cgt-note": {
+          "auteur": "CGT",
+          "titre": "Note aux organisations : projet de loi relatif à diverses dispositions liées à la crise sanitaire, à d'autres mesures urgentes (ainsi qu'au retrait du Royaume-Uni de l'Union européenne)",
+          "date": "2020-06-11",
+          "url": "https://www.thcb-cgt.fr/sites/default/files/11.06.20%20-%20Projet%20de%20Loi%20Crise%20sanitaire%20modifications%20CDD%2C%20Cong%C3%A9s%2C%20Chomage%2C%20Activit%C3%A9%20partielle%20....pdf"
+        },
+        "cnb-ag": {
+          "auteur": "Conseil national des barreaux",
+          "titre": "Retour sur l'assemblée générale dématérialisée du 15 mai 2020",
+          "date": "2020-05-15",
+          "url": "https://cnb.avocat.fr/actualite/retour-sur-lassemblee-generale-dematerialisee-du-15-mai-2020"
+        },
+        "cncdh-a6": {
+          "auteur": "CNCDH",
+          "titre": "Avis « Prorogation de l'état d'urgence sanitaire et libertés » (A-2020-6)",
+          "date": "2020-05-26",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/A%20-%202020%20-%206%20-%20Prorogation%20EUS%20et%20Libert%C3%A9s%2C%20mai%202020.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V2750",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la commission mixte paritaire (358-188)"
+        },
+        {
+          "id": "VTANR5L15V2743",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (362-174)"
+        }
+      ]
+    },
+    {
       "id": "ddadue-2024",
       "dossier_an": "DLR5L16N48908",
       "legislature": 16,
@@ -3483,6 +3558,177 @@
         "sources": {},
         "note": "Conclusions de la CMP, votées par les deux chambres."
       }
+    },
+    {
+      "id": "gestion-crise-sanitaire-2021",
+      "dossier_an": "DLR5L15N43005",
+      "legislature": 15,
+      "titre": "Loi relative à la gestion de la crise sanitaire",
+      "resume": "Prolonge jusqu'au 15 novembre 2021 le régime de sortie de crise. Étend le passe sanitaire aux loisirs, à la restauration, aux salons, aux établissements de santé pour les visiteurs et les soins programmés, aux transports de longue distance et à certains centres commerciaux, ainsi qu'aux salariés et agents de ces lieux, sous peine de suspension du contrat. Rend la vaccination obligatoire pour les soignants et d'autres professionnels. Crée un isolement de plein droit pour les personnes testées positives, puni pénalement, et allonge la conservation de certaines données de santé.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-2021-11",
+            "cc-2021-824",
+            "ce-403629"
+          ],
+          "justification": "Selon la Défenseure des droits, ces mesures sont « de nature à porter atteinte à la liberté d'aller et venir » et « n'apparaissent pas proportionnées à l'objectif de sauvegarde de la santé publique ». Le Conseil constitutionnel juge que le passe porte atteinte à la liberté d'aller et de venir et, par ses effets sur la liberté de se réunir, au droit d'expression collective des idées, puis le valide. Il censure l'isolement de plein droit, qu'il qualifie de privation de liberté."
+        },
+        {
+          "code": "travail-protection-sociale",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-2021-11",
+            "cgt-2021-07-21",
+            "cc-2021-824"
+          ],
+          "justification": "Suspension du contrat de travail ou des fonctions, sans rémunération, faute de passe ou de vaccination. La Défenseure des droits relève « les risques de discrimination dans l'emploi » et les risques pour des travailleurs précaires. La CGT dénonce des sanctions « qui pourraient aller jusqu'à la suspension de leur rémunération voire leur licenciement ». Le Conseil constitutionnel censure la rupture des seuls contrats à durée déterminée ou de mission, et valide la suspension."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-2021-11",
+            "cnil-2021-054",
+            "cc-2021-824"
+          ],
+          "justification": "Contrôle de l'état de santé par des personnes privées, que la CNIL écartait des lieux de la vie quotidienne dans son avis sur le premier passe. La Défenseure des droits alerte sur le « risque de glissement vers des pratiques de surveillance sociale générale ». Le texte allonge de trois à six mois la conservation de certaines données de santé, validée sous réserves par le Conseil constitutionnel."
+        },
+        {
+          "code": "enfants",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-2021-11"
+          ],
+          "justification": "Le passe s'applique aux mineurs de plus de douze ans à compter du 30 septembre 2021. La Défenseure des droits relève des « risques considérables d'atteinte aux droits de l'enfant » : accès aux loisirs et à la culture, situation des enfants confiés et des mineurs non accompagnés, risque de stigmatisation à l'école."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception",
+        "outre-mer"
+      ],
+      "vigilance": [
+        {
+          "texte": "Discriminations : la Défenseure des droits écrit que le « caractère discriminatoire » de ces mesures « ne peut être écarté », notamment selon l'état de santé, le handicap, l'origine ou la vulnérabilité économique. Le Conseil constitutionnel exige que le contrôle du passe se fonde sur des critères excluant toute discrimination.",
+          "sources": [
+            "ddd-2021-11",
+            "cc-2021-824"
+          ]
+        },
+        {
+          "texte": "Obligation vaccinale, avis partagés : la Défenseure des droits la juge « compréhensible » pour les soignants, tout en maintenant ses réserves sur la sanction et sur l'emploi ; le Conseil d'État la juge proportionnée ; l'Ordre des médecins est prêt à en accompagner la mise en œuvre ; la CGT réaffirme son opposition à cette obligation. Le passe, lui, conduit selon la Défenseure à une « obligation vaccinale déguisée ».",
+          "sources": [
+            "ddd-2021-11",
+            "ce-403629",
+            "cnom-2021-07-05",
+            "cgt-2021-07-21"
+          ]
+        },
+        {
+          "texte": "Accès aux soins : l'Ordre des médecins « s'inquiète vivement » de l'exigence du passe pour les soins programmés, qui « ne doit pas priver des patients de soins ». Le Conseil constitutionnel juge que cette mesure, qui s'applique sous réserve des cas d'urgence, n'a pas pour effet de limiter l'accès aux soins.",
+          "sources": [
+            "cnom-2021-08-02",
+            "cc-2021-824"
+          ]
+        },
+        {
+          "texte": "Personnes étrangères : le texte punit de trois ans d'emprisonnement le refus de se soumettre aux obligations sanitaires nécessaires à l'éloignement. Le Conseil constitutionnel précise que ces obligations s'entendent des tests de dépistage et émet une réserve.",
+          "sources": [
+            "cc-2021-824"
+          ]
+        },
+        {
+          "texte": "Mesure de sens opposé : autorisation d'absence pour se rendre aux rendez-vous de vaccination. La Défenseure des droits la présente comme une mesure incitative ; la CGT en demande la précision.",
+          "sources": [
+            "ddd-2021-11",
+            "cgt-2021-07-21"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2021-824 DC du 5 août 2021. « Sont contraires à la Constitution » le dix-neuvième alinéa du b du 1° du paragraphe I de l'article 1er (rupture des seuls contrats à durée déterminée ou de mission faute de passe), le 1° de l'article 7 et l'article 9 (isolement de plein droit des personnes testées positives). Sous réserves, sont conformes le 2° du A et le B du paragraphe II de l'article 1er de la loi du 31 mai 2021 (passe sanitaire ; réserve du paragraphe 54, critères excluant toute discrimination), le troisième alinéa de l'article L. 824-9 du code de l'entrée et du séjour des étrangers (réserve du paragraphe 95) et la disposition sur la conservation des données (réserves du paragraphe 106). Sont conformes, notamment, la date du 15 novembre 2021, la suspension du contrat de travail et le A du paragraphe I de l'article 14 sur l'obligation vaccinale. Le Conseil ne s'est pas prononcé sur les autres dispositions.",
+      "note": "Scrutin décisif : texte de la commission mixte paritaire, dernier vote de l'Assemblée sur l'ensemble (25/07/2021). Sens et date de référence (règle 4) : au jour du vote, le régime de sortie prenait fin le 30/09/2021, et le passe ne visait que les déplacements et les grands rassemblements. Prolonger ce régime et l'étendre restreint les droits. Texte composite (règle 4) : les sources citent surtout les mesures restrictives ; l'autorisation d'absence pour la vaccination figure en vigilance. Sur l'obligation vaccinale, les sources sont partagées : elle figure en vigilance, et son effet sur l'emploi dans le droit au travail. Règle 18 : les lois successives de la crise sanitaire comptent chacune pour 1, sans regroupement ; celle-ci pèse donc 1 dans les scores, comme chacune des autres. Un amendement clé (règle 11) : la suppression de l'article 1er, passe sanitaire, mis en cause par la Défenseure des droits, en 1re lecture, seule lecture de l'Assemblée où une suppression a été mise aux voix par scrutin public. Les autres scrutins sur amendement portent sur des alinéas ou des dates. Le vote sur l'article 5, obligation vaccinale, est affiché, non compté.",
+      "sources": {
+        "cc-2021-824": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2021-824 DC",
+          "date": "2021-08-05",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2021/2021824DC.htm"
+        },
+        "ce-403629": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 403.629 sur un projet de loi relatif à la gestion de la crise sanitaire",
+          "date": "2021-07-19",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b4386_avis-conseil-etat"
+        },
+        "cgt-2021-07-21": {
+          "auteur": "CGT",
+          "titre": "La cible à combattre doit être le virus pas les salariés ! (communiqué de presse confédéral)",
+          "date": "2021-07-21",
+          "url": "https://www.snjcgt.fr/wp-content/uploads/sites/11/2021/07/CGT-Extension-pass-sanitaire-21-juillet-2021.pdf"
+        },
+        "cnil-2021-054": {
+          "auteur": "CNIL",
+          "titre": "Délibération n° 2021-054 du 12 mai 2021 portant avis sur le projet de mise en place d'un passe sanitaire",
+          "date": "2021-05-12",
+          "url": "https://www.cnil.fr/sites/default/files/atoms/files/deliberation_2021-054_du_12_mai_2021_portant_avis_sur_le_projet_de_mise_en_place_dun_passe_sanitaire.pdf"
+        },
+        "cnom-2021-07-05": {
+          "auteur": "Conseil national de l'Ordre des médecins",
+          "titre": "Obligation vaccinale des professionnels de santé",
+          "date": "2021-07-05",
+          "url": "https://www.conseil-national.medecin.fr/publications/communiques-presse/obligation-vaccinale-professionnels-sante"
+        },
+        "cnom-2021-08-02": {
+          "auteur": "Conseil national de l'Ordre des médecins",
+          "titre": "Pass sanitaire et accès aux soins",
+          "date": "2021-08-02",
+          "url": "https://www.conseil-national.medecin.fr/publications/communiques-presse/pass-sanitaire-acces-soins"
+        },
+        "ddd-2021-11": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 21-11 sur le projet de loi n° 4386 relatif à la gestion de la crise sanitaire",
+          "date": "2021-07-20",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=20864"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3949",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (156-60)"
+        },
+        {
+          "id": "VTANR5L15V3943",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (117-86)"
+        },
+        {
+          "id": "VTANR5L15V3892",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (48-184)"
+        },
+        {
+          "id": "VTANR5L15V3893",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 1er, passe sanitaire et prolongation du régime de sortie, 1re lecture (103-155)"
+        },
+        {
+          "id": "VTANR5L15V3939",
+          "role": "article",
+          "pour": "texte",
+          "objet": "article 5, obligation vaccinale, 1re lecture (139-45)"
+        }
+      ]
     },
     {
       "id": "hydrocarbures-outre-mer-2026",
@@ -7021,6 +7267,141 @@
       }
     },
     {
+      "id": "passe-vaccinal-2022",
+      "dossier_an": "DLR5L15N44625",
+      "legislature": 15,
+      "titre": "Loi renforçant les outils de gestion de la crise sanitaire et modifiant le code de la santé publique",
+      "resume": "Remplace le passe sanitaire par un passe vaccinal à partir de 16 ans pour les loisirs, la restauration, les foires et salons, les transports interrégionaux et certains centres commerciaux, y compris pour des personnes qui y travaillent. Permet aux contrôleurs du passe de demander un document officiel avec photographie, alourdit des sanctions et proroge l'état d'urgence sanitaire dans plusieurs territoires d'outre-mer jusqu'au 31 mars 2022. Le texte crée aussi une amende administrative contre l'employeur qui expose ses salariés au risque de covid-19, et encadre par le juge l'isolement et la contention en psychiatrie.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-22-01",
+            "ce-404676",
+            "cc-2022-835"
+          ],
+          "justification": "Pour les personnes de 16 ans et plus, un test négatif ne suffit plus pour accéder à de nombreuses activités ni, sauf motif impérieux, aux transports interrégionaux. La Défenseure des droits relève que le texte « prolonge dans le temps, en les renforçant, des mesures particulièrement restrictives de libertés ». Le Conseil d'État y voit, pour les transports, une possible « atteinte substantielle à leur liberté d'aller et venir ». Le Conseil constitutionnel censure le passe sanitaire laissé au choix de l'organisateur d'une réunion politique."
+        },
+        {
+          "code": "travail-protection-sociale",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-22-01",
+            "cc-2022-835"
+          ],
+          "justification": "Le passe vaccinal peut être exigé de personnes qui travaillent dans les lieux concernés, et leur contrat peut être suspendu. Le Conseil constitutionnel les regarde comme soumises à « une obligation ayant la même portée qu'une obligation de vaccination contre la covid-19 », qu'il valide. Pour la Défenseure des droits, l'exigence de ce passe dans les transports « pourrait en effet entrainer la perte d'un emploi ou l'impossibilité d'en trouver un »."
+        },
+        {
+          "code": "enfants",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-22-01"
+          ],
+          "justification": "Le texte voté applique le passe vaccinal dès 16 ans. La Défenseure des droits, sur le projet qui le prévoyait dès 12 ans, juge que la situation des mineurs « justifie » « leur exclusion du passe vaccinal », et relève que l'accès aux loisirs et aux liens familiaux peut en dépendre."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-22-01"
+          ],
+          "justification": "Vérification d'identité par des personnes privées. La Défenseure des droits met en cause « une forme de pouvoir de police » confiée à des entreprises."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception",
+        "outre-mer"
+      ],
+      "vigilance": [
+        {
+          "texte": "Mise en œuvre : la Défenseure des droits estime que les vérifications d'identité « peuvent présenter le risque d'être opérées de manière discriminatoire ». Le Conseil constitutionnel émet une réserve : elles doivent se fonder « sur des critères excluant toute discrimination ».",
+          "sources": [
+            "ddd-22-01",
+            "cc-2022-835"
+          ]
+        },
+        {
+          "texte": "Pérennisation : la Défenseure des droits met en garde contre « un glissement insidieux vers la pérennisation d'un dispositif d'exception », bien que le texte reste temporaire, et elle parle d'une « obligation vaccinale déguisée ». Le Conseil constitutionnel juge au contraire que, pour le public, le passe n'instaure pas d'obligation de vaccination.",
+          "sources": [
+            "ddd-22-01",
+            "cc-2022-835"
+          ]
+        },
+        {
+          "texte": "Psychiatrie : l'article 17, étranger à la crise sanitaire, soumet l'isolement et la contention à un contrôle systématique du juge, après une abrogation par le Conseil constitutionnel. La Défenseure des droits y voit « une évolution positive », tout en relevant le « caractère inabouti du contrôle judiciaire prévu ». Cette mesure n'entre pas dans le sens affiché du texte.",
+          "sources": [
+            "ddd-22-01",
+            "ce-404676"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2022-835 DC du 21 janvier 2022, non-conformité partielle, deux réserves. Article 1er du dispositif : « Les quatrième et cinquième alinéas du g du 2 ° du paragraphe I de l'article 1er de la loi renforçant les outils de gestion de la crise sanitaire et modifiant le code de la santé publique sont contraires à la Constitution » : la possibilité, pour l'organisateur d'une réunion politique, d'en subordonner l'accès à un passe sanitaire. Réserve du paragraphe 20 : le cumul d'un passe vaccinal et d'un test ne saurait « s'appliquer aux déplacements de longue distance par transports publics interrégionaux ». Réserve du paragraphe 46 : la vérification d'identité doit se fonder « sur des critères excluant toute discrimination ». Sont déclarés conformes le passe vaccinal, son application aux personnes qui travaillent dans ces lieux, les sanctions, l'extinction de l'action publique après vaccination, la prorogation de l'état d'urgence outre-mer et l'accès préfectoral aux fichiers (article 16).",
+      "note": "Règle 18 : chaque loi de la crise sanitaire compte pour 1, sans regroupement ; celle-ci pèse donc 1, comme chacune des autres. Scrutin décisif : lecture définitive du 16/01/2022, dernier vote de l'AN sur l'ensemble. Le sens se lit sur ce texte (règle 6), réunions politiques comprises, censurées ensuite. Sens et date de référence (règle 4) : au jour du vote, le passe sanitaire peut être exigé jusqu'au 31/07/2022. Le passe vaccinal retire l'alternative du test dans ces lieux : le texte restreint les droits par rapport à ce droit. Il proroge aussi l'état d'urgence sanitaire déclaré par décret outre-mer, au-delà de la durée d'un mois fixée par la loi. Texte composite : les mesures de sens opposé (amende contre l'employeur, article 2 ; contrôle du juge sur l'isolement et la contention, article 17) ne changent pas le sens de chaque droit : les sources admises citent surtout le passe vaccinal et ses effets. Aucun amendement clé (règle 11) : la dernière lecture où une suppression a été mise aux voix est la lecture définitive. Elle ne porte que sur l'article 1er bis A, devenu l'article 2 (V4320), qu'aucune source admise ne met en cause. Le vote V4319 ne supprime qu'une partie de l'article 1er. Les suppressions des lectures précédentes (article 1er, V4251) ne sont pas comptées (une seule lecture).",
+      "sources": {
+        "cc-2022-835": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2022-835 DC du 21 janvier 2022",
+          "date": "2022-01-21",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2022/2022835DC.htm"
+        },
+        "ce-404676": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 404.676 sur un projet de loi renforçant les outils de gestion de la crise sanitaire et modifiant le code de la santé publique",
+          "date": "2021-12-26",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b4857_avis-conseil-etat"
+        },
+        "ddd-22-01": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 22-01 du 4 janvier 2022 sur le projet de loi renforçant les outils de gestion de la crise sanitaire et modifiant le code de la santé publique",
+          "date": "2022-01-04",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=21145"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V4321",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (215-58)"
+        },
+        {
+          "id": "VTANR5L15V4317",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, nouvelle lecture (185-69)"
+        },
+        {
+          "id": "VTANR5L15V4279",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (214-93)"
+        },
+        {
+          "id": "VTANR5L15V4318",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, lecture définitive (21-180)"
+        },
+        {
+          "id": "VTANR5L15V4299",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, nouvelle lecture (23-142)"
+        },
+        {
+          "id": "VTANR5L15V4250",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (31-200)"
+        }
+      ]
+    },
+    {
       "id": "pfas-2025",
       "dossier_an": "DLR5L16N49455",
       "legislature": 16,
@@ -9154,6 +9535,403 @@
       ]
     },
     {
+      "id": "prorogation-eus-2020-11",
+      "dossier_an": "DLR5L15N40751",
+      "legislature": 15,
+      "titre": "Loi autorisant la prorogation de l'état d'urgence sanitaire et portant diverses mesures de gestion de la crise sanitaire",
+      "resume": "Proroge jusqu'au 16 février 2021 l'état d'urgence sanitaire déclaré le 14 octobre 2020, et jusqu'au 1er avril 2021 le régime de sortie de l'état d'urgence, ainsi que les fichiers de suivi de l'épidémie. Le texte habilite aussi le Gouvernement à rétablir ou à prolonger par ordonnances des mesures prises au printemps 2020, dont des règles dérogatoires pour les juridictions pénales.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-2020-d7",
+            "cncdh-2020-d5",
+            "cc-2020-808"
+          ],
+          "justification": "L'état d'urgence sanitaire permet au Gouvernement d'adopter par décret des « mesures générales gravement restrictives de droits et libertés » (CNCDH). La CNCDH voit dans ce recours « l'illustration du recours systématique à un régime d'exception ». Sur le régime de sortie, que le texte prolonge, elle ne peut que « s'inquiéter de la prorogation » de mesures qui touchent notamment la liberté de manifestation et de réunion. Le Conseil constitutionnel valide ces prorogations."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cnil-2021-004",
+            "cc-2020-808"
+          ],
+          "justification": "Maintien jusqu'au 1er avril 2021 des fichiers SI-DEP et Contact Covid, dont la CNIL rappelle « l'atteinte portée à la vie privée par ces traitements ». Elle regrette que le rapport du Gouvernement ne donne pas d'éléments plus précis justifiant de les maintenir. Le Conseil constitutionnel valide le dispositif sous réserves."
+        },
+        {
+          "code": "police-justice",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-2020-d7"
+          ],
+          "justification": "L'habilitation permet au Gouvernement de déroger de nouveau à des règles d'organisation judiciaire et de procédure pénale, « restreignant ainsi les garanties de procès équitable (contradictoire, publicité, droits de la défense) » (CNCDH)."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "Mise en œuvre : la CNCDH relève que le confinement ou le couvre-feu « ont des effets démesurés sur les personnes les plus précaires », et s'alarme de restrictions d'accès aux droits, en particulier aux soins, des plus fragiles.",
+          "sources": [
+            "cncdh-2020-d7"
+          ]
+        },
+        {
+          "texte": "Droits sociaux : la CNCDH est « préoccupée également par les atteintes aux droits sociaux », notamment celles qui peuvent résulter de l'habilitation à légiférer par ordonnances, et regrette l'absence d'un véritable dialogue social.",
+          "sources": [
+            "cncdh-2020-d7"
+          ]
+        },
+        {
+          "texte": "Durée : la Défenseure des droits alerte sur les risques de la reconduction de l'état d'urgence sanitaire, parmi lesquels « la banalisation du régime » et « la pérennisation des mesures ».",
+          "sources": [
+            "ddd-2020-10"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2020-808 DC du 13 novembre 2020 : aucune censure. « Sous les réserves énoncées au paragraphe 24, sont conformes à la Constitution » les mots « tard, jusqu'au 1er avril 2021 » et deux passages du paragraphe III de l'article 11 de la loi du 11 mai 2020, dans la rédaction issue de l'article 5 (fichiers de suivi : accès des professionnels qui réalisent les examens de dépistage, et des organismes d'accompagnement social). Ce paragraphe 24 reprend les réserves des paragraphes 73 et 74 de la décision du 11 mai 2020. « Sont conformes à la Constitution » l'article 1er, le 1° du paragraphe I et le paragraphe II de l'article 2, et le paragraphe I de l'article 10. Le Conseil ne s'est pas prononcé sur les autres dispositions.",
+      "note": "Scrutin décisif : lecture définitive, dernier vote de l'Assemblée sur l'ensemble (07/11/2020). Sens et date de référence (règle 4) : au jour du vote, l'état d'urgence déclaré par décret ne pouvait se prolonger au-delà d'un mois sans une loi, et le terme du régime de sortie, fixé au 30/10/2020, était passé. Le droit du jour comprend ces échéances : prolonger ces régimes restreint les droits. Règle 18 : les lois successives de la crise sanitaire comptent chacune pour 1, sans regroupement ; celle-ci pèse donc 1 dans les scores, comme chacune des autres. Aucun amendement clé (règle 11) : la suppression de l'article 2, qui proroge le régime de sortie, n'est pas retenue, car aucune source admise ne met en cause cette prorogation sur ce projet, et le Conseil d'État la juge justifiée. Les autres scrutins sur amendement, sur les commerces, les lieux de culte ou des alinéas, ne suppriment aucun article.",
+      "sources": {
+        "cc-2020-808": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2020-808 DC",
+          "date": "2020-11-13",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2020/2020808DC.htm"
+        },
+        "cncdh-2020-d5": {
+          "auteur": "CNCDH",
+          "titre": "Déclaration relative au projet de loi organisant la sortie de l'état d'urgence sanitaire (D-2020-5)",
+          "date": "2020-06-23",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/D%20-%202020%20-%205%20-%20PJL%20fin%20EUS%2C%20juin%202020.pdf"
+        },
+        "cncdh-2020-d7": {
+          "auteur": "CNCDH",
+          "titre": "Déclaration sur l'état d'urgence sanitaire (D-2020-7)",
+          "date": "2020-11-26",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/D%20-%202020%20-%207%20-%20Etat%20d%27urgence%20sanitaire%2C%20nov%202020.pdf"
+        },
+        "cnil-2021-004": {
+          "auteur": "CNIL",
+          "titre": "Délibération n° 2021-004 du 14 janvier 2021 portant avis public sur les conditions de mise en œuvre des systèmes d'information développés aux fins de lutter contre la propagation de l'épidémie de COVID-19",
+          "date": "2021-01-14",
+          "url": "https://cnil.fr/sites/default/files/atoms/files/deliberation-n2021-004.pdf"
+        },
+        "ddd-2020-10": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 20-10 relatif au régime juridique de l'état d'urgence sanitaire",
+          "date": "2020-12-03",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=20282"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3133",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (154-38)"
+        },
+        {
+          "id": "VTANR5L15V3112",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, nouvelle lecture (272-108)"
+        },
+        {
+          "id": "VTANR5L15V3033",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (71-35)"
+        },
+        {
+          "id": "VTANR5L15V3131",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, lecture définitive (39-171)"
+        },
+        {
+          "id": "VTANR5L15V3027",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (18-68)"
+        }
+      ]
+    },
+    {
+      "id": "prorogation-eus-2021-02",
+      "dossier_an": "DLR5L15N41308",
+      "legislature": 15,
+      "titre": "Loi prorogeant l'état d'urgence sanitaire",
+      "resume": "Proroge l'état d'urgence sanitaire du 16 février au 1er juin 2021. Reporte du 1er avril au 31 décembre 2021 la fin du cadre légal de l'état d'urgence sanitaire, ainsi que l'autorisation des fichiers de suivi de l'épidémie. Le texte contient aussi des mesures sur les intercommunalités, sans rapport avec les droits.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-2020-10",
+            "cncdh-2020-d7",
+            "ce-401919"
+          ],
+          "justification": "Le régime permet de « porter des atteintes aux libertés de culte, de réunion, de manifestation », et le Défenseur des droits alerte sur « les risques que présente la reconduction de l'état d'urgence sanitaire ». La CNCDH y voit un recours systématique à un régime d'exception. Le Conseil d'État juge la prorogation justifiée, et rappelle que ce report maintient une base légale pour de nouvelles déclarations ou prorogations."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ce-401919",
+            "cnil-2021-004"
+          ],
+          "justification": "Prolongation jusqu'au 31 décembre 2021 de fichiers qui, selon le Conseil d'État, sont mis en œuvre « dans des conditions conduisant à déroger au secret médical », et de la conservation de certaines données. La CNIL rappelle que l'atteinte à la vie privée n'est admissible que si la nécessité de ces traitements est réévaluée, et demande des indicateurs d'efficacité."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "Durée : la Défenseure des droits craint « la banalisation du régime » et « la pérennisation des mesures ».",
+          "sources": [
+            "ddd-2020-10"
+          ]
+        },
+        {
+          "texte": "Mise en œuvre : la CNCDH relève que le confinement ou le couvre-feu « ont des effets démesurés sur les personnes les plus précaires ».",
+          "sources": [
+            "cncdh-2020-d7"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision du Conseil constitutionnel sur cette loi : son rapport d'activité 2021 ne cite, pour cette période, que les décisions 2020-808 DC, 2021-819 DC et 2021-824 DC, et le dossier de l'Assemblée ne mentionne aucune saisine.",
+      "note": "Scrutin décisif : lecture définitive, dernier vote de l'Assemblée sur l'ensemble (09/02/2021). Sens et date de référence (règle 4) : au jour du vote, l'état d'urgence devait prendre fin le 16/02/2021, et son cadre légal, comme les fichiers, le 01/04/2021. Le droit du jour comprend ces échéances : les repousser restreint les droits. Règle 18 : les lois successives de la crise sanitaire comptent chacune pour 1, sans regroupement ; celle-ci pèse donc 1 dans les scores, comme chacune des autres. Aucun amendement clé (règle 11) : aucune suppression ni aucun rétablissement d'article n'a été mis aux voix par scrutin public. Les amendements de nouvelle lecture sur l'article 2 proposaient de rétablir des paragraphes ajoutés par le Sénat, pas l'article.",
+      "sources": {
+        "ce-401919": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 401.919 sur un projet de loi autorisant la prorogation de l'état d'urgence sanitaire et reportant la date de caducité des régimes institués pour faire face à la crise sanitaire",
+          "date": "2021-01-11",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b3733_avis-conseil-etat"
+        },
+        "cncdh-2020-d7": {
+          "auteur": "CNCDH",
+          "titre": "Déclaration sur l'état d'urgence sanitaire (D-2020-7)",
+          "date": "2020-11-26",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/D%20-%202020%20-%207%20-%20Etat%20d%27urgence%20sanitaire%2C%20nov%202020.pdf"
+        },
+        "cnil-2021-004": {
+          "auteur": "CNIL",
+          "titre": "Délibération n° 2021-004 du 14 janvier 2021 portant avis public sur les conditions de mise en œuvre des systèmes d'information développés aux fins de lutter contre la propagation de l'épidémie de COVID-19",
+          "date": "2021-01-14",
+          "url": "https://cnil.fr/sites/default/files/atoms/files/deliberation-n2021-004.pdf"
+        },
+        "ddd-2020-10": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 20-10 relatif au régime juridique de l'état d'urgence sanitaire",
+          "date": "2020-12-03",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=20282"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3378",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (278-193)"
+        },
+        {
+          "id": "VTANR5L15V3349",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, nouvelle lecture (164-94)"
+        },
+        {
+          "id": "VTANR5L15V3320",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (113-43)"
+        },
+        {
+          "id": "VTANR5L15V3345",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, nouvelle lecture (22-101)"
+        }
+      ]
+    },
+    {
+      "id": "prorogation-eus-mai-2020",
+      "dossier_an": "DLR5L15N39597",
+      "legislature": 15,
+      "titre": "Loi prorogeant l'état d'urgence sanitaire et complétant ses dispositions",
+      "resume": "Proroge l'état d'urgence sanitaire jusqu'au 10 juillet 2020 et précise le régime de la quarantaine et de l'isolement. Élargit les catégories d'agents qui peuvent constater les infractions. Autorise des systèmes d'information sur les personnes atteintes du covid-19 et leurs contacts, par dérogation au secret médical, le cas échéant sans leur consentement.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-a6",
+            "ddd-lettre"
+          ],
+          "justification": "Au jour du vote, l'état d'urgence sanitaire prend fin le 23/05/2020 ; le texte le prolonge de près de deux mois. La CNCDH relève que des libertés « continuent d'être entravées, telles que celles d'aller et de venir, de réunion et de manifestation, de culte ». Le Défenseur des droits voit dans la quarantaine obligatoire à l'arrivée une restriction à encadrer strictement."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cnil-051",
+            "cncdh-a6",
+            "ddd-lettre"
+          ],
+          "justification": "La CNIL souligne une « nouvelle dérogation au principe du secret médical » et une situation « inédite ». La CNCDH estime que cette collecte « pourrait remettre en cause le respect de la vie privée ». Le Défenseur des droits parle d'un « véritable fichier des malades »."
+        },
+        {
+          "code": "police-justice",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-a6",
+            "ddd-lettre"
+          ],
+          "justification": "La CNCDH s'inquiète de la répression des infractions, élargie à de nouvelles catégories d'agents, et met en garde contre les dangers d'« un droit pénal de crise ». Le Défenseur des droits relève que certains de ces agents « ne sont pas assermentés »."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "Mesure de sens opposé : la CNCDH prend acte que le texte « rétablit le contrôle du juge » sur la prolongation des détentions provisoires, tout en regrettant le maintien de dérogations au droit commun.",
+          "sources": [
+            "cncdh-a6"
+          ]
+        },
+        {
+          "texte": "Accès aux soins : la CNCDH juge que la levée du secret médical, « inédite par son ampleur », comporte « un risque réel de renonciation aux soins ».",
+          "sources": [
+            "cncdh-a6"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision n° 2020-800 DC du 11 mai 2020, sur la loi ordinaire. Dispositif, article 1er : « Sont contraires à la Constitution les dispositions suivantes de la loi prorogeant l'état d'urgence sanitaire et complétant ses dispositions : la deuxième phrase du paragraphe III de l'article 11 ; le mot « conforme » figurant à la première phrase du paragraphe V de l'article 11 ; le deuxième alinéa du paragraphe IX de l'article 11 ; l'article 13. » Article 2 : sont conformes sous réserves le paragraphe II de l'article L. 3131-17 du code de la santé publique et des dispositions liées (réserve : pas de prolongation au-delà de quatorze jours d'une mesure imposant de rester chez soi plus de douze heures par jour sans autorisation du juge judiciaire), et le reste de l'article 11 visé (réserves : suppression des coordonnées de contact pour la surveillance épidémiologique, habilitation des agents et traçabilité des accès, encadrement des sous-traitants). Article 3 : sont conformes, sans réserve, notamment les 1°, 5° et 7° du paragraphe I de l'article L. 3131-15. Puis décision n° 2020-869 QPC du 4 décembre 2020 : l'application à la Nouvelle-Calédonie de l'article L. 3841-2 est conforme.",
+      "note": "Sens et date de référence (règle 4) : au jour du vote, l'état d'urgence sanitaire prend fin le 23/05/2020. Ce droit du jour comprend cette échéance. Le texte prolonge ce régime restrictif avant son extinction : il restreint donc les droits, même s'il accompagne la sortie du confinement. Lois d'une même crise (règle 18) : cette loi compte pour 1 dans les scores, comme chacune des lois successives de l'état d'urgence sanitaire, sans regroupement. Aucun amendement clé (règle 11) : aucun scrutin public sur un amendement n'est rattaché à ce texte.",
+      "sources": {
+        "cncdh-a6": {
+          "auteur": "CNCDH",
+          "titre": "Avis « Prorogation de l'état d'urgence sanitaire et libertés » (A-2020-6)",
+          "date": "2020-05-26",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/A%20-%202020%20-%206%20-%20Prorogation%20EUS%20et%20Libert%C3%A9s%2C%20mai%202020.pdf"
+        },
+        "cnil-051": {
+          "auteur": "CNIL",
+          "titre": "Délibération n° 2020-051 portant avis sur un projet de décret relatif aux systèmes d'information mentionnés à l'article 6 du projet de loi prorogeant l'état d'urgence sanitaire",
+          "date": "2020-05-08",
+          "url": "https://www.cnil.fr/sites/cnil/files/atoms/files/2020-051-urgence-sanitaire.pdf"
+        },
+        "ddd-lettre": {
+          "auteur": "Défenseur des droits",
+          "titre": "Lettre aux présidents du Sénat et de l'Assemblée nationale et aux présidents des commissions des lois sur le projet de loi de prorogation de l'état d'urgence sanitaire",
+          "date": "2020-05-02",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=19736"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V2741",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la commission mixte paritaire (450-84)"
+        },
+        {
+          "id": "VTANR5L15V2740",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (367-176)"
+        }
+      ]
+    },
+    {
+      "id": "prorogation-eus-outre-mer-2021",
+      "dossier_an": "DLR5L15N43326",
+      "legislature": 15,
+      "titre": "Loi autorisant la prorogation de l'état d'urgence sanitaire dans les outre-mer",
+      "resume": "Proroge du 30 septembre au 15 novembre 2021 l'état d'urgence sanitaire à La Réunion, en Martinique, en Guadeloupe, à Saint-Barthélemy, à Saint-Martin et en Guyane, ainsi qu'en Polynésie française. Le déclare en Nouvelle-Calédonie jusqu'à la même date, et le prolonge d'avance à la même date s'il est déclaré à Mayotte ou à Wallis-et-Futuna avant le 15 octobre.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-2020-10",
+            "cncdh-2020-d7",
+            "ce-403827"
+          ],
+          "justification": "Le régime prorogé permet de « porter des atteintes aux libertés de culte, de réunion, de manifestation » et de restreindre la liberté d'aller et venir (Défenseur des droits), qui alerte sur « les risques que présente la reconduction de l'état d'urgence sanitaire ». La CNCDH y voit un recours systématique à un régime d'exception. Ces deux sources portent sur le régime, pas sur ce texte. Le Conseil d'État décrit la prorogation et la juge justifiée."
+        }
+      ],
+      "etiquettes": [
+        "outre-mer",
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "Mise en œuvre : la CNCDH relève que le confinement ou le couvre-feu « ont des effets démesurés sur les personnes les plus précaires ».",
+          "sources": [
+            "cncdh-2020-d7"
+          ]
+        },
+        {
+          "texte": "Contrôle du Parlement : la loi déroge pour certains territoires à l'autorisation du Parlement au-delà d'un mois. Le Conseil d'État estime que cette dérogation temporaire ne se heurte à aucun obstacle juridique. La CNCDH veut limiter le recours à l'état d'urgence sanitaire aux situations où le Parlement ne peut se réunir.",
+          "sources": [
+            "ce-403827",
+            "cncdh-2020-d7"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision du Conseil constitutionnel sur cette loi : le dossier de l'Assemblée ne mentionne aucune saisine, et la loi a été promulguée le 11 septembre 2021, deux jours après son adoption au Sénat.",
+      "note": "Scrutin décisif : 1re lecture, seul vote de l'Assemblée sur l'ensemble (07/09/2021) ; le Sénat a adopté le texte sans modification le 09/09/2021. Sens et date de référence (règle 4) : au jour du vote, l'état d'urgence prenait fin le 30/09/2021 dans ces territoires. Le droit du jour comprend cette échéance : le repousser restreint les droits. Règle 18 : les lois successives de la crise sanitaire comptent chacune pour 1, sans regroupement ; celle-ci pèse donc 1 dans les scores, comme chacune des autres, bien qu'elle ne vise que les outre-mer. Aucun amendement clé (règle 11) : la suppression de l'article unique double le scrutin décisif, et les autres amendements mis aux voix ne suppriment ni ne rétablissent aucun article.",
+      "sources": {
+        "ce-403827": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 403.827 sur un projet de loi autorisant la prorogation de l'état d'urgence sanitaire dans les outre-mer",
+          "date": "2021-08-30",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b4428_avis-conseil-etat"
+        },
+        "cncdh-2020-d7": {
+          "auteur": "CNCDH",
+          "titre": "Déclaration sur l'état d'urgence sanitaire (D-2020-7)",
+          "date": "2020-11-26",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/D%20-%202020%20-%207%20-%20Etat%20d%27urgence%20sanitaire%2C%20nov%202020.pdf"
+        },
+        "ddd-2020-10": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 20-10 relatif au régime juridique de l'état d'urgence sanitaire",
+          "date": "2020-12-03",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=20282"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3956",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (90-13)"
+        },
+        {
+          "id": "VTANR5L15V3950",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (13-130)"
+        }
+      ]
+    },
+    {
       "id": "protection-enfants-2026",
       "dossier_an": "DLR5L17N54372",
       "legislature": 17,
@@ -9951,6 +10729,75 @@
         "sources": {},
         "note": ""
       }
+    },
+    {
+      "id": "regime-transitoire-2020",
+      "dossier_an": "DLR5L15N40525",
+      "legislature": 15,
+      "titre": "Projet de loi prorogeant le régime transitoire institué à la sortie de l'état d'urgence sanitaire",
+      "resume": "Reporte du 30 octobre 2020 au 1er avril 2021 le régime de sortie de l'état d'urgence sanitaire, et prolonge jusqu'à cette date l'autorisation des fichiers covid-19. Le texte n'est pas devenu loi : voté en 1re lecture à l'Assemblée, il a été retiré par le Premier ministre le 16 octobre 2020.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ce-401114",
+            "cncdh-d5"
+          ],
+          "justification": "Au jour du vote, le régime transitoire prend fin le 30/10/2020. Le texte le prolonge de cinq mois. Le Conseil d'État relève qu'il a « pour effet de proroger la durée d'application de mesures permettant de limiter certaines libertés publiques ». La CNCDH, sur ce même régime, parlait en juin d'« un régime d'exception transitoire, non dénommé »."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ce-401114"
+          ],
+          "justification": "Le texte prolonge du 10/01/2021 au 01/04/2021 l'autorisation de traiter et partager des données de santé, « le cas échéant sans le consentement des intéressés », selon le Conseil d'État, qui juge cette prolongation nécessaire."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "Sanctions : la CNCDH relevait, dès juin, que ce régime s'accompagne des sanctions de l'état d'urgence sanitaire, « alors même que sa conformité à la Constitution pose question ».",
+          "sources": [
+            "cncdh-cp"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision du Conseil constitutionnel : le texte a été retiré avant toute adoption définitive.",
+      "note": "Scrutin décisif : le seul vote de l'Assemblée sur l'ensemble, en 1re lecture (règle 9), avec 43 suffrages exprimés. Le sens se lit sur le texte voté le 01/10/2020 (T.A. n° 482, règle 6). Ce texte n'a pas abouti : le Premier ministre l'a retiré le 16/10/2020 alors qu'il était au Sénat. Sens et date de référence (règle 4) : au jour du vote, le régime transitoire prend fin le 30/10/2020. Ce droit du jour comprend cette échéance. Le texte le prolonge avant son extinction : il restreint donc les droits. Lois d'une même crise (règle 18) : ce texte compte pour 1 dans les scores, comme chacune des lois successives de l'état d'urgence sanitaire, sans regroupement, y compris avec le dossier suivant, devenu la loi du 14 novembre 2020, qui proroge lui aussi ce régime. Aucun amendement clé (règle 11) : les votes sur l'article 1er portent sur la date, et aucun scrutin public ne porte sur la suppression ou le rétablissement d'un article.",
+      "sources": {
+        "ce-401114": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 401114 sur un projet de loi prorogeant le régime transitoire institué à la sortie de l'état d'urgence sanitaire",
+          "date": "2020-09-14",
+          "url": "https://conseil-etat.fr/content/download/156788/document/401114%20-%20Extrait%20avis.pdf"
+        },
+        "cncdh-cp": {
+          "auteur": "CNCDH",
+          "titre": "Une sortie de l'état d'urgence sanitaire en trompe l'œil : les menaces sur les droits et libertés perdurent (communiqué)",
+          "date": "2020-06-15",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/2006015_CP%20PJL%20Fin%20EUS.pdf"
+        },
+        "cncdh-d5": {
+          "auteur": "CNCDH",
+          "titre": "Déclaration relative au projet de loi organisant la sortie de l'état d'urgence sanitaire (D-2020-5)",
+          "date": "2020-06-23",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/D%20-%202020%20-%205%20-%20PJL%20fin%20EUS%2C%20juin%202020.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V2915",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (26-17)"
+        }
+      ]
     },
     {
       "id": "renouvellement-titres-sejour-2025",
@@ -11546,6 +12393,207 @@
       }
     },
     {
+      "id": "sortie-crise-sanitaire-2021",
+      "dossier_an": "DLR5L15N42326",
+      "legislature": 15,
+      "titre": "Loi relative à la gestion de la sortie de crise sanitaire",
+      "resume": "Du 2 juin au 30 septembre 2021, permet au Premier ministre de réglementer la circulation, l'ouverture des établissements et les rassemblements, et de les interdire ou de les fermer dans certaines zones. Crée le passe sanitaire pour les déplacements vers ou depuis l'Hexagone, la Corse et l'outre-mer, et pour les grands rassemblements de loisirs et les salons. Verse les données des fichiers SI-DEP et Contact Covid au système national des données de santé, et prolonge des règles dérogatoires pour les juridictions.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-2021-06",
+            "cnil-2021-054",
+            "cc-2021-819"
+          ],
+          "justification": "La Défenseure des droits parle d'une « prolongation de l'état d'urgence sanitaire qui ne dit pas son nom » : le Premier ministre peut recourir à « des mesures portant atteinte à la liberté d'aller et venir, la liberté de réunion, la liberté de manifestation ». Selon la CNIL, le passe sanitaire porte atteinte à plusieurs droits et libertés. Le Conseil constitutionnel valide les dispositions dont il est saisi."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cnil-2021-054",
+            "cc-2021-819"
+          ],
+          "justification": "La CNIL relève que le passe porte atteinte au droit à la vie privée et que l'accès à un lieu « ne saurait, par principe, être conditionné à la divulgation d'informations relatives à l'état de santé des personnes ». Elle admet le dispositif sous conditions, compte tenu de la crise. Sur le versement des fichiers au système national des données de santé, le Conseil constitutionnel juge que ces dispositions « portent donc atteinte au droit au respect de la vie privée », puis les valide sous réserve."
+        },
+        {
+          "code": "police-justice",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-2021-06"
+          ],
+          "justification": "L'article 6 prolonge jusqu'au 30 septembre 2021 des règles dérogatoires pour les juridictions. La Défenseure des droits demande de « limiter les mesures portant atteinte au droit à un procès équitable et aux droits de la défense »."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception",
+        "outre-mer"
+      ],
+      "vigilance": [
+        {
+          "texte": "Garantie de sens opposé : le texte interdit d'exiger ces justificatifs hors des cas prévus, sous peine de sanction pénale. La Défenseure des droits salue cet ajout, et « la volonté du Gouvernement de lever peu à peu les restrictions de libertés ».",
+          "sources": [
+            "ddd-2021-06"
+          ]
+        },
+        {
+          "texte": "Mineurs : la Défenseure des droits « s'inquiète du silence du projet de loi sur la situation spécifique des mineurs », à qui le passe a vocation à s'appliquer faute de disposition contraire.",
+          "sources": [
+            "ddd-2021-06"
+          ]
+        },
+        {
+          "texte": "Égalité et emploi : la Défenseure des droits demande un accès garanti aux tests et aux vaccins, et demande si l'embauche sur ces lieux pourrait dépendre de l'état de santé, critère protégé en droit de la non-discrimination. La CNIL relève aussi le risque d'exclusion lié au tout numérique.",
+          "sources": [
+            "ddd-2021-06",
+            "cnil-2021-054"
+          ]
+        },
+        {
+          "texte": "Accoutumance : la CNIL alerte sur « le risque de créer un phénomène d'accoutumance préjudiciable », et estime que ce dispositif ne saurait en aucun cas être maintenu au-delà de la crise.",
+          "sources": [
+            "cnil-2021-054"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2021-819 DC du 31 mai 2021 : aucune censure. « Sous la réserve énoncée au paragraphe 31 », le paragraphe X de l'article 11 de la loi du 11 mai 2020, issu de l'article 7 (versement des données au système national des données de santé), « est conforme à la Constitution » : les coordonnées de contact téléphonique ou électronique doivent aussi en être exclues. « Sont conformes à la Constitution » les mots sur la « circulation active du virus » aux 1° et 2° du paragraphe I de l'article 1er, et le 2° du A du paragraphe II du même article (passe sanitaire). Le Conseil ne s'est pas prononcé sur les autres dispositions.",
+      "note": "Scrutin décisif : texte de la commission mixte paritaire, dernier vote de l'Assemblée sur l'ensemble (25/05/2021). Sens et date de référence (règle 4) : au jour du vote, l'état d'urgence prenait fin le 01/06/2021, et le régime de sortie antérieur n'était plus en vigueur depuis le 01/04/2021. Le droit du jour comprend ces échéances : le texte prolonge des pouvoirs d'exception au-delà et restreint donc les droits, même s'il est moins contraignant que l'état d'urgence. Texte composite (règle 4) : les sources citent surtout les mesures restrictives ; la garantie qui interdit d'exiger le passe ailleurs figure en vigilance. Règle 18 : les lois successives de la crise sanitaire comptent chacune pour 1, sans regroupement ; celle-ci pèse donc 1 dans les scores, comme chacune des autres. Un amendement clé (règle 11) : l'amendement du Gouvernement qui rétablit l'article 1er, rejeté quelques heures plus tôt, en seconde délibération de 1re lecture, seule lecture de l'Assemblée où une suppression ou un rétablissement a été mis aux voix par scrutin public. Cet article est mis en cause par la Défenseure des droits et par la CNIL. Le vote qui l'avait rejeté est affiché, non compté. Non retenue : la suppression de l'article 5, versement des fichiers, car la CNIL ne met pas en cause l'intérêt de cette conservation.",
+      "sources": {
+        "cc-2021-819": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2021-819 DC",
+          "date": "2021-05-31",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2021/2021819DC.htm"
+        },
+        "cnil-2021-054": {
+          "auteur": "CNIL",
+          "titre": "Délibération n° 2021-054 du 12 mai 2021 portant avis sur le projet de mise en place d'un passe sanitaire",
+          "date": "2021-05-12",
+          "url": "https://www.cnil.fr/sites/default/files/atoms/files/deliberation_2021-054_du_12_mai_2021_portant_avis_sur_le_projet_de_mise_en_place_dun_passe_sanitaire.pdf"
+        },
+        "ddd-2021-06": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 21-06 sur le projet de loi relatif à la gestion de la sortie de crise sanitaire",
+          "date": "2021-05-17",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=20699"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3780",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (119-51)"
+        },
+        {
+          "id": "VTANR5L15V3761",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (208-85)"
+        },
+        {
+          "id": "VTANR5L15V3756",
+          "role": "article",
+          "pour": "texte",
+          "objet": "article 1er, régime de sortie et passe sanitaire, rejeté, 1re lecture (103-108)"
+        },
+        {
+          "id": "VTANR5L15V3760",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 1er, seconde délibération, 1re lecture (205-85)"
+        }
+      ]
+    },
+    {
+      "id": "sortie-eus-2020",
+      "dossier_an": "DLR5L15N39896",
+      "legislature": 15,
+      "titre": "Loi organisant la sortie de l'état d'urgence sanitaire",
+      "resume": "Du 11 juillet au 30 octobre 2020, hors de l'état d'urgence, permet au Premier ministre de réglementer par décret la circulation, l'ouverture des établissements recevant du public, les rassemblements et les réunions, et d'imposer un test pour certains voyages en avion. Proroge l'état d'urgence sanitaire en Guyane et à Mayotte jusqu'à la même date, et permet d'allonger la conservation de certaines données des fichiers covid-19.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-d5",
+            "cncdh-cp"
+          ],
+          "justification": "Au jour du vote, l'état d'urgence sanitaire prend fin le 10/07/2020. Le texte prolonge après cette date une partie de ses pouvoirs. La CNCDH y voit « un régime d'exception transitoire, non dénommé », avec le maintien de dispositions « particulièrement attentatoires aux droits et libertés fondamentaux, notamment la liberté de manifestation et de réunion »."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-d5",
+            "ce-400322"
+          ],
+          "justification": "Le texte permet de prolonger par décret la conservation de certaines données des fichiers, jusqu'à six mois après la fin de l'état d'urgence. La CNCDH range cette mesure dans ses inquiétudes. Le Conseil d'État relève que le projet « prolonge la durée de conservation de certaines données »."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception",
+        "outre-mer"
+      ],
+      "vigilance": [
+        {
+          "texte": "Sanctions : la CNCDH relève que cette reconduction s'accompagne du régime de sanctions de l'état d'urgence sanitaire, « alors même que sa conformité à la Constitution pose question ».",
+          "sources": [
+            "cncdh-cp"
+          ]
+        },
+        {
+          "texte": "Pouvoirs du ministre : la CNCDH craint que l'article L. 3131-1 du code de la santé publique, qui n'est pas modifié, serve à « restreindre de nombreux droits fondamentaux par simple arrêté ministériel ».",
+          "sources": [
+            "cncdh-d5"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision n° 2020-803 DC du 9 juillet 2020, sur cette loi. Dispositif, article 1er : « Sont conformes à la Constitution les dispositions suivantes de la loi organisant la sortie de l'état d'urgence sanitaire : le 1 °, le second alinéa du 2 ° et le 3 ° du paragraphe I de l'article 1er ; le renvoi opéré par le paragraphe VII du même article 1er au quatrième alinéa de l'article L. 3136-1 du code de la santé publique. » Dans ses motifs, le Conseil relève que le Premier ministre ne peut pas substituer une autorisation préalable au régime déclaratif des manifestations. Puis décision n° 2020-869 QPC du 4 décembre 2020 : l'application de l'article 5 à la Nouvelle-Calédonie est conforme.",
+      "note": "Sens et date de référence (règle 4) : au jour du vote, l'état d'urgence sanitaire prend fin le 10/07/2020. Ce droit du jour comprend cette échéance. Le texte prolonge une partie de ces pouvoirs après elle : il restreint donc les droits, même s'il allège le régime. Lois d'une même crise (règle 18) : cette loi compte pour 1 dans les scores, comme chacune des lois successives de l'état d'urgence sanitaire, sans regroupement. Décisif : la lecture définitive, 62 suffrages exprimés. Aucun amendement clé (règle 11) : aucun scrutin public sur un amendement n'est rattaché à ce texte.",
+      "sources": {
+        "ce-400322": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 400322 sur un projet de loi organisant la fin de l'état d'urgence sanitaire",
+          "date": "2020-06-09",
+          "url": "https://www.conseil-etat.fr/ressources/avis-aux-pouvoirs-publics/derniers-avis-publies/avis-sur-un-projet-de-loi-organisant-la-fin-de-l-etat-d-urgence-sanitaire"
+        },
+        "cncdh-cp": {
+          "auteur": "CNCDH",
+          "titre": "Une sortie de l'état d'urgence sanitaire en trompe l'œil : les menaces sur les droits et libertés perdurent (communiqué)",
+          "date": "2020-06-15",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/2006015_CP%20PJL%20Fin%20EUS.pdf"
+        },
+        "cncdh-d5": {
+          "auteur": "CNCDH",
+          "titre": "Déclaration relative au projet de loi organisant la sortie de l'état d'urgence sanitaire (D-2020-5)",
+          "date": "2020-06-23",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/D%20-%202020%20-%205%20-%20PJL%20fin%20EUS%2C%20juin%202020.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V2799",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (50-12)"
+        },
+        {
+          "id": "VTANR5L15V2758",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (347-219)"
+        }
+      ]
+    },
+    {
       "id": "sren-2024",
       "dossier_an": "DLR5L16N47884",
       "legislature": 16,
@@ -12325,6 +13373,97 @@
       }
     },
     {
+      "id": "urgence-covid-2020",
+      "dossier_an": "DLR5L15N39205",
+      "legislature": 15,
+      "titre": "Loi d'urgence pour faire face à l'épidémie de covid-19",
+      "resume": "Crée dans le code de la santé publique l'état d'urgence sanitaire, applicable jusqu'au 1er avril 2021, et le déclare pour deux mois sur tout le territoire. Le Premier ministre peut alors restreindre par décret les déplacements, les réunions et l'ouverture des établissements, et ordonner quarantaines et réquisitions, sous peine de sanctions pénales. Le texte autorise aussi le Gouvernement à déroger par ordonnances, notamment au droit du travail et à la procédure pénale, et reporte le second tour des élections municipales.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-a3",
+            "ce-399873"
+          ],
+          "justification": "Au jour du vote, ce régime n'existe pas : le texte le crée. La CNCDH y voit un régime « conférant à l'Exécutif le pouvoir de limiter les libertés individuelles et collectives ». Le Conseil d'État décrit des « mesures générales limitant la liberté d'aller et venir, la liberté d'entreprendre et la liberté de réunion »."
+        },
+        {
+          "code": "police-justice",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-a3",
+            "ddd-20-03"
+          ],
+          "justification": "Le texte autorise par ordonnance des adaptations de la procédure pénale, dont le déroulement et la durée des détentions provisoires, et crée un délit de violation répétée des interdictions. Le Défenseur des droits réclame « le contrôle juridictionnel de la durée de prolongation du délai de placement en garde à vue, de la détention provisoire ». La CNCDH critique le choix « d'éluder l'essentiel du contrôle du juge dans la prolongation de la détention »."
+        },
+        {
+          "code": "travail-protection-sociale",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-a3"
+          ],
+          "justification": "Le texte autorise des ordonnances dérogeant au droit du travail, notamment sur le temps de travail et les congés. La CNCDH relève des « mesures dérogatoires au code du travail en matière de temps de travail » et rappelle l'exigence de négociation collective et le droit de grève."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "Définition du régime : la CNCDH s'inquiète de l'imprécision d'une définition « qui ouvre le risque d'y recourir dans n'importe quelle circonstance ».",
+          "sources": [
+            "cncdh-a3"
+          ]
+        },
+        {
+          "texte": "Mise en œuvre des sanctions : le Défenseur des droits relève que contester une contravention pour déplacement est « très difficile », et que certains procès-verbaux sont « peu circonstanciés ».",
+          "sources": [
+            "ddd-20-03"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision du Conseil sur cette loi ordinaire avant sa promulgation du 23 mars 2020 (la décision n° 2020-799 DC du 26 mars 2020 porte sur la loi organique jumelle). Trois décisions QPC ont suivi. N° 2020-846/847/848 QPC du 26 juin 2020 : « Le renvoi opéré, au sein du quatrième alinéa de l'article L. 3136-1 du code de la santé publique dans sa rédaction résultant de la loi n° 2020-290 du 23 mars 2020 d'urgence pour faire face à l'épidémie de covid-19, au 2 ° de l'article L. 3131-15 du même code, est conforme à la Constitution. » N° 2020-849 QPC du 17 juin 2020 : « Les premier et dernier alinéas du paragraphe I de l'article 19 de la loi n° 2020-290 du 23 mars 2020 d'urgence pour faire face à l'épidémie de covid-19, dans sa rédaction initiale, sont conformes à la Constitution. » N° 2020-851/852 QPC du 3 juillet 2020 : « Les mots « des détentions provisoires » figurant au d du 2 ° du paragraphe I de l'article 11 de la loi n° 2020-290 du 23 mars 2020 d'urgence pour faire face à l'épidémie de covid-19 sont conformes à la Constitution. »",
+      "note": "Sens et date de référence (règle 4) : le texte crée le régime. Il se lit donc par rapport au droit du 22/03/2020, où l'état d'urgence sanitaire n'existait pas. Il restreint les droits, même si des mesures de confinement étaient déjà appliquées sur d'autres fondements. Lois d'une même crise (règle 18) : cette loi compte pour 1 dans les scores, comme chacune des lois successives de l'état d'urgence sanitaire, sans regroupement. Aucun amendement clé (règle 11) : aucun scrutin public sur un amendement n'est rattaché à ce texte.",
+      "sources": {
+        "ce-399873": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 399873 sur le projet de loi d'urgence pour faire face à l'épidémie de covid-19",
+          "date": "2020-03-18",
+          "url": "https://www.senat.fr/leg/pjl19-376-avis-ce.pdf"
+        },
+        "cncdh-a3": {
+          "auteur": "CNCDH",
+          "titre": "Avis « État d'urgence sanitaire et État de droit » (A-2020-3)",
+          "date": "2020-04-28",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/A%20-%202020%20-%203%20-%20Etat%20d%27urgence%20sanitaire%20et%20Etat%20de%20droit%20avril%202020.pdf"
+        },
+        "ddd-20-03": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 20-03 relatif à la mise en œuvre de l'état d'urgence sanitaire, ainsi que des ordonnances et décrets pris pour son application",
+          "date": "2020-04-27",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=19735"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V2736",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la commission mixte paritaire (506-38)"
+        },
+        {
+          "id": "VTANR5L15V2734",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (510-37)"
+        }
+      ]
+    },
+    {
       "id": "vaisselle-plastique-cantines-2026",
       "dossier_an": "DLR5L17N51775",
       "legislature": 17,
@@ -12483,6 +13622,138 @@
         "sources": {},
         "note": "Conclusions de la CMP, votées par les deux chambres."
       }
+    },
+    {
+      "id": "vigilance-sanitaire-2021",
+      "dossier_an": "DLR5L15N43812",
+      "legislature": 15,
+      "titre": "Loi portant diverses dispositions de vigilance sanitaire",
+      "resume": "Reporte au 31 juillet 2022 l'échéance du cadre juridique de l'état d'urgence sanitaire (prévue le 31 décembre 2021), du régime de sortie de crise et du passe sanitaire (prévue le 15 novembre 2021), et des fichiers de suivi de l'épidémie (prévue le 31 décembre 2021). L'article 9 ouvre aux directeurs d'école l'accès au statut virologique et vaccinal des élèves. Le texte subordonne aussi le passe à une condition de situation sanitaire, prévoit des rapports au Parlement et prolonge des mesures d'accompagnement, dont l'activité partielle.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-21-11",
+            "ce-404103"
+          ],
+          "justification": "Le texte maintient au-delà du 15 novembre 2021 un régime qui permet de réglementer la circulation, les réunions et l'accès à des lieux, et de subordonner au passe sanitaire les transports de longue distance et de nombreuses activités. La Défenseure des droits juge, sur ce passe, que « ces restrictions de l'accès aux biens et services et cette atteinte à la liberté d'aller et venir » n'« apparaissent pas proportionnées ». Le Conseil d'État qualifie certaines de ces mesures d'« attentatoires notamment à la liberté personnelle et à la liberté d'entreprendre »."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cc-2021-828",
+            "cnil-2021-139",
+            "anm-2021-10-28"
+          ],
+          "justification": "Prolongation des fichiers de suivi de l'épidémie, qui traitent des données de santé le cas échéant sans consentement, et accès des directeurs d'école à des données médicales des élèves. Le Conseil constitutionnel juge que ce dernier porte « une atteinte disproportionnée au droit au respect de la vie privée ». L'Académie nationale de médecine y voit « une nouvelle dérogation au secret médical ». La CNIL alerte sur le « risque d'accoutumance et de banalisation de tels dispositifs attentatoires à la vie privée »."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception",
+        "outre-mer"
+      ],
+      "vigilance": [
+        {
+          "texte": "Durée : le Conseil d'État relève « la durée particulièrement longue de la prolongation envisagée ». Il la juge toutefois adéquate aux risques de rebond et propose que le Gouvernement rende compte de l'usage de ces pouvoirs devant le Parlement.",
+          "sources": [
+            "ce-404103"
+          ]
+        },
+        {
+          "texte": "Mise en œuvre : la Défenseure des droits relève que le « caractère discriminatoire » des restrictions liées au passe « ne peut être écarté », et s'inquiète de contrôles confiés à des personnes privées ainsi que des effets sur les personnes en situation de précarité.",
+          "sources": [
+            "ddd-21-11"
+          ]
+        },
+        {
+          "texte": "Évaluation : la CNIL regrette de n'avoir reçu du Gouvernement aucun élément sur l'efficacité des fichiers, malgré ses demandes répétées. Elle craint « le glissement vers une société où de tels contrôles deviendraient la norme et non l'exception ».",
+          "sources": [
+            "cnil-2021-139"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2021-828 DC du 9 novembre 2021, non-conformité partielle, sans réserve. Article 1er du dispositif : « Sont contraires à la Constitution les dispositions suivantes de la loi portant diverses dispositions de vigilance sanitaire : l'article 9 ; les troisième à cinquième alinéas, les mots « ordonnances et les » figurant au sixième alinéa et le septième alinéa de l'article 13 ; les paragraphes I, III et IV de l'article 14. » L'article 9 (données médicales des élèves) porte « une atteinte disproportionnée au droit au respect de la vie privée ». Les articles 13 et 14 (habilitations à légiférer par ordonnance) sont censurés pour un motif de procédure, l'article 38 de la Constitution. Sont déclarés conformes les reports au 31 juillet 2022 des articles 1er, 2 et 6 : cadre de l'état d'urgence sanitaire, régime de sortie de crise et passe, fichiers.",
+      "note": "Règle 18 : chaque loi de la crise sanitaire compte pour 1, sans regroupement ; celle-ci pèse donc 1, comme chacune des autres. Scrutin décisif : lecture définitive du 05/11/2021, dernier vote de l'AN sur l'ensemble. Le sens se lit sur ce texte (règle 6), article 9 compris, censuré ensuite. Sens et date de référence (règle 4) : au jour du vote, le régime de sortie de crise et le passe s'éteignent le 15/11/2021, le cadre de l'état d'urgence sanitaire et les fichiers le 31/12/2021. Prolonger ces régimes avant leur échéance restreint les droits, même si le texte ajoute une condition sanitaire au passe et des rapports au Parlement. Un amendement clé (règle 11), en nouvelle lecture, dernière lecture de l'AN où des suppressions ont été mises aux voix : suppression de l'article 4 ter (données médicales des élèves, article 9 de la loi), dont la mesure est mise en cause par des sources. Non retenues : la suppression de l'article 1er (cadre de l'état d'urgence sanitaire), de l'article 2 (régime de sortie de crise et passe) et de l'article 4 (fichiers), faute de source admise qui mette en cause précisément leur prolongation. Les suppressions de 1re lecture ne sont pas comptées (une seule lecture).",
+      "sources": {
+        "anm-2021-10-28": {
+          "auteur": "Académie nationale de médecine",
+          "titre": "Ne pas outrepasser le passe sanitaire",
+          "date": "2021-10-28",
+          "url": "https://www.academie-medecine.fr/ne-pas-outrepasser-le-passe-sanitaire/"
+        },
+        "cc-2021-828": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2021-828 DC du 9 novembre 2021",
+          "date": "2021-11-09",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2021/2021828DC.htm"
+        },
+        "ce-404103": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 404.103 sur un projet de loi portant diverses dispositions de vigilance sanitaire",
+          "date": "2021-10-07",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b4565_avis-conseil-etat"
+        },
+        "cnil-2021-139": {
+          "auteur": "CNIL",
+          "titre": "Délibération n° 2021-139 du 21 octobre 2021 portant avis public sur les conditions de mise en œuvre des systèmes d'information développés aux fins de lutter contre la propagation de l'épidémie de COVID-19 (mai à septembre 2021)",
+          "date": "2021-10-21",
+          "url": "https://www.cnil.fr/sites/default/files/atoms/files/avis_ndeg_2021-139_du_21_octobre_2021_sur_la_mise_en_oeuvre_des_systemes_dinformation_contre_la_covid-19.pdf"
+        },
+        "ddd-21-11": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 21-11 du 20 juillet 2021 sur le projet de loi relatif à la gestion de la crise sanitaire",
+          "date": "2021-07-20",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=20864"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V4114",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (118-89)"
+        },
+        {
+          "id": "VTANR5L15V4109",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, nouvelle lecture (147-125)"
+        },
+        {
+          "id": "VTANR5L15V4034",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (135-125)"
+        },
+        {
+          "id": "VTANR5L15V4113",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, lecture définitive (71-112)"
+        },
+        {
+          "id": "VTANR5L15V4084",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, nouvelle lecture (97-175)"
+        },
+        {
+          "id": "VTANR5L15V4009",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (101-153)"
+        },
+        {
+          "id": "VTANR5L15V4107",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 4 ter, données médicales des élèves, nouvelle lecture (118-137)"
+        }
+      ]
     },
     {
       "id": "violences-sexuelles-sexistes-2025",
@@ -12743,10 +14014,850 @@
   ],
   "ecartes": [
     {
+      "dossier_an": "DLR5L14N33655",
+      "legislature": 14,
+      "titre": "Economie : droit des sociétés",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (21-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L14N33686",
+      "legislature": 14,
+      "titre": "Affaires étrangères : entraide judiciaire en matière pénale avec les Comores",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L14N33962",
+      "legislature": 14,
+      "titre": "Traités et conventions : convention d’extradition avec les Émirats arabes unis",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L14N35233",
+      "legislature": 14,
+      "titre": "Union européenne : accord sur les services aériens entre l'UE et Israël",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L14N35235",
+      "legislature": 14,
+      "titre": "Union européenne : accord de transport aérien avec les USA, l'Islande et la Norvège",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L14N35350",
+      "legislature": 14,
+      "titre": "Outre-mer : compétence judiciaire et exécution des décisions dans les communautés d'outre-mer",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L14N35468",
+      "legislature": 14,
+      "titre": "Agriculture : revalorisation des pensions de retraites agricoles",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (571-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L14N35702",
+      "legislature": 14,
+      "titre": "Affaires étrangères : coopération en matière de défense avec le Nigéria",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L14N35825",
+      "legislature": 14,
+      "titre": "Pouvoirs publics : confiance dans la vie publique",
+      "motif": "Moralisation de la vie politique : régime des mandats et organisation des pouvoirs publics, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L14N35831",
+      "legislature": 14,
+      "titre": "Traités et conventions : normes de formation du personnel des navires de pêche (STCW-F)",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N35824",
+      "legislature": 15,
+      "titre": "Confiance dans la vie politique (loi organique)",
+      "motif": "Loi organique sur la moralisation de la vie politique : régime des mandats et organisation des pouvoirs publics, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N35844",
+      "legislature": 15,
+      "titre": "Protocole annexe à la convention avec l'Algérie sur la sécurité sociale",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (51-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N35846",
+      "legislature": 15,
+      "titre": "Physicien médical",
+      "motif": "Ratification d'une ordonnance sur le statut d'une profession de santé, sans mesure touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N35850",
+      "legislature": 15,
+      "titre": "Convention n° 184 de l'OIT relative à la sécurité et à la santé dans l’agriculture",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N35896",
+      "legislature": 15,
+      "titre": "Accord de partenariat et de coopération entre l'UE et le Kazakhstan",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N35962",
+      "legislature": 15,
+      "titre": "Modification du Règlement de l'Assemblée nationale",
+      "motif": "Modification du Règlement de l'Assemblée nationale : elle organise ses travaux et ne modifie aucun droit (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N35967",
+      "legislature": 15,
+      "titre": "Dons de jours de repos aux aidants familiaux",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (84-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N35984",
+      "legislature": 15,
+      "titre": "Programmation des finances publiques 2018 - 2022",
+      "motif": "Programmation des finances publiques : trajectoire budgétaire, sans mesure touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36047",
+      "legislature": 15,
+      "titre": "Gestion des milieux aquatiques et prévention des inondations",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (69-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N36142",
+      "legislature": 15,
+      "titre": "Accord-cadre de coopération sanitaire avec la Suisse et le Luxembourg",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (29-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N36159",
+      "legislature": 15,
+      "titre": "Etat au service d'une société de confiance (ESSOC)",
+      "motif": "Relations entre l'administration et le public, simplification, sans droit de la grille retenu (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36209",
+      "legislature": 15,
+      "titre": "Sortie de l'indivision successorale en outre-mer",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (55-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N36254",
+      "legislature": 15,
+      "titre": "Election des représentants au Parlement européen",
+      "motif": "Mode de scrutin des élections européennes, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N36304",
+      "legislature": 15,
+      "titre": "Protocole contre la fabrication et le trafic illicites d'armes à feu",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36332",
+      "legislature": 15,
+      "titre": "Accord de coopération entre l’UE et la Nouvelle-Zélande",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36336",
+      "legislature": 15,
+      "titre": "Equilibre des relations commerciales dans le secteur agro-alimentaire (EGALIM)",
+      "motif": "Relations commerciales agricoles : objet principal hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N36343",
+      "legislature": 15,
+      "titre": "Interdiction de la pêche électrique",
+      "motif": "Résolution : elle exprime un avis de l'Assemblée et ne modifie aucun droit (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36361",
+      "legislature": 15,
+      "titre": "Premier paquet Mobilité",
+      "motif": "Résolution : elle exprime un avis de l'Assemblée et ne modifie aucun droit (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36362",
+      "legislature": 15,
+      "titre": "Programmation militaire 2019-2025",
+      "motif": "Programmation militaire : moyens des armées, sans mesure retenue touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36468",
+      "legislature": 15,
+      "titre": "Lutte contre la manipulation des informations",
+      "motif": "Loi organique jumelle de la loi sur la manipulation de l'information (2018-1202) : elle en étend les règles à l'élection présidentielle (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36496",
+      "legislature": 15,
+      "titre": "Lutte contre les violences sexuelles et sexistes",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (92-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N36520",
+      "legislature": 15,
+      "titre": "Répertoire des maladies rares ou orphelines",
+      "motif": "Répertoire administratif de normes, sans mesure touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36530",
+      "legislature": 15,
+      "titre": "Lutte contre la fraude",
+      "motif": "Lutte contre la fraude fiscale et sociale : prérogatives de recouvrement, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N36532",
+      "legislature": 15,
+      "titre": "Engagement associatif",
+      "motif": "Engagement associatif : soutien à la gestion d'associations, sans droit de la grille mis en cause (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N36621",
+      "legislature": 15,
+      "titre": "Lutte contre les rodéos motorisés",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (94-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N36622",
+      "legislature": 15,
+      "titre": "Utilisation du téléphone portable dans les écoles et collèges",
+      "motif": "Règle d'organisation de la vie scolaire (téléphone portable), sans droit de la grille mis en cause (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N36627",
+      "legislature": 15,
+      "titre": "Renforcement de l’organisation des juridictions",
+      "motif": "Loi organique jumelle de la loi de programmation de la justice 2018-2022, qui porte les mesures qualifiées (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36690",
+      "legislature": 15,
+      "titre": "Utilisation des caméras mobiles par les autorités de sécurité publique",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (54-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N36728",
+      "legislature": 15,
+      "titre": "Croissance et transformation des entreprises (PACTE)",
+      "motif": "Croissance et transformation des entreprises : droit économique, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N36748",
+      "legislature": 15,
+      "titre": "Accompagnement des familles après le décès d'un enfant",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (574-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N36751",
+      "legislature": 15,
+      "titre": "Siège de l’Autorité européenne des marchés financiers",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36771",
+      "legislature": 15,
+      "titre": "Versement de la prime de naissance avant la naissance",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (47-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N36780",
+      "legislature": 15,
+      "titre": "Compétences de la prévôté sur le territoire de Djibouti",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36802",
+      "legislature": 15,
+      "titre": "Accord avec l'Ethiopie, le Costa Rica et le Mozambique sur les services aériens",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36853",
+      "legislature": 15,
+      "titre": "Accord avec la Suisse sur l’Organisation européenne pour la recherche nucléaire",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36876",
+      "legislature": 15,
+      "titre": "Encadrement du démarchage téléphonique",
+      "motif": "Démarchage téléphonique : droit de la consommation, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N36910",
+      "legislature": 15,
+      "titre": "Mesures de préparation au retrait du Royaume-Uni de l'Union européenne",
+      "motif": "Préparation du retrait du Royaume-Uni : habilitation technique, sans droit de la grille retenu (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36913",
+      "legislature": 15,
+      "titre": "Reconnaissance des proches aidants",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (58-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N36915",
+      "legislature": 15,
+      "titre": "Agence nationale de la cohésion des territoires",
+      "motif": "Création d'une agence d'État : texte purement organisationnel (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36916",
+      "legislature": 15,
+      "titre": "Amélioration de la trésorerie des associations",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (32-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N36917",
+      "legislature": 15,
+      "titre": "Activités agricoles et cultures marines en zones littorale et de montagne",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (53-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N36927",
+      "legislature": 15,
+      "titre": "Prise en charge des cancers pédiatriques",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (93-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N36973",
+      "legislature": 15,
+      "titre": "Exercice des praticiens diplômés hors Union européenne",
+      "motif": "Exercice des praticiens diplômés hors Union européenne : statut d'une profession, hors de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36990",
+      "legislature": 15,
+      "titre": "Organisation des communes nouvelles",
+      "motif": "Organisation des communes nouvelles : texte purement organisationnel (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N36997",
+      "legislature": 15,
+      "titre": "Office français de la biodiversité",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (42-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37007",
+      "legislature": 15,
+      "titre": "Accès au marché du travail des personnes atteintes de maladies chroniques",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (60-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37030",
+      "legislature": 15,
+      "titre": "Accord de coopération avec l'Afghanistan",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N37065",
+      "legislature": 15,
+      "titre": "Préenseignes",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (81-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37091",
+      "legislature": 15,
+      "titre": "Statut de citoyen sauveteur",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (70-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37092",
+      "legislature": 15,
+      "titre": "Ecole vraiment inclusive",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (81-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37103",
+      "legislature": 15,
+      "titre": "Mesures d’urgence économiques et sociales",
+      "motif": "Mesures de pouvoir d'achat de décembre 2018 (heures supplémentaires, prime, CSG) : mesures de revenu, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N37113",
+      "legislature": 15,
+      "titre": "Qualité nutritionnelle des aliments",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (57-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37127",
+      "legislature": 15,
+      "titre": "Droit voisin au profit des agences et éditeurs de presse",
+      "motif": "Droit voisin de la presse : propriété intellectuelle, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N37168",
+      "legislature": 15,
+      "titre": "Transparence dans l'utilisation de l'épargne populaire en matière énergétique",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (22-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37206",
+      "legislature": 15,
+      "titre": "Droit de résiliation sans frais de contrats de complémentaire santé",
+      "motif": "Droit de la consommation (résiliation d'un contrat), hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N37247",
+      "legislature": 15,
+      "titre": "Accord de coopération avec la Belgique sur la mobilité terrestre",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N37263",
+      "legislature": 15,
+      "titre": "Sécurité nationale et exploitation des réseaux radioélectriques mobiles",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (69-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37289",
+      "legislature": 15,
+      "titre": "Collectivité européenne d'Alsace",
+      "motif": "Création d'une collectivité territoriale : texte purement organisationnel (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N37309",
+      "legislature": 15,
+      "titre": "Taxe sur les services numériques et impôt sur les sociétés (taxe GAFA)",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (34-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37328",
+      "legislature": 15,
+      "titre": "Transparence de l'information sur les produits alimentaires",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (573-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37344",
+      "legislature": 15,
+      "titre": "Interdiction effective de la pêche électrique",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (54-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37352",
+      "legislature": 15,
+      "titre": "Centre national de la musique",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (89-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37385",
+      "legislature": 15,
+      "titre": "Clarification de diverses dispositions du droit électoral",
+      "motif": "Clarification technique du droit électoral : mode de scrutin et régime des mandats, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N37390",
+      "legislature": 15,
+      "titre": "Clarification du droit électoral",
+      "motif": "Loi organique de clarification technique du droit électoral : hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N37404",
+      "legislature": 15,
+      "titre": "Modernisation de la distribution de la presse",
+      "motif": "Organisation de la distribution de la presse : droit économique, sans droit de la grille retenu (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N37436",
+      "legislature": 15,
+      "titre": "Restauration de Notre-Dame de Paris",
+      "motif": "Restauration de Notre-Dame de Paris : texte d'organisation du chantier, sans droit de la grille mis en cause (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N37446",
+      "legislature": 15,
+      "titre": "Modification du Règlement de l’Assemblée nationale",
+      "motif": "Modification du Règlement de l'Assemblée nationale : elle organise ses travaux et ne modifie aucun droit (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N37471",
+      "legislature": 15,
+      "titre": "Règlement du budget 2018",
+      "motif": "Loi de règlement : elle arrête les comptes de l'année et ne contient aucune mesure touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N37597",
+      "legislature": 15,
+      "titre": "Traité sur la coopération et l'intégration franco-allemandes",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
       "dossier_an": "DLR5L15N37607",
       "legislature": 15,
       "titre": "Projet de loi de ratification de l'accord de partenariat stratégique entre l'Union européenne et ses États membres, d'une part, et le Canada, d'autre part",
       "motif": "Ratification d'un accord international : le vote ne porte sur aucune mesure de droit interne (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N37621",
+      "legislature": 15,
+      "titre": "Qualité de pupille de la Nation pour les enfants des sauveteurs en mer décédés en mission",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (33-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37637",
+      "legislature": 15,
+      "titre": "Protection du patrimoine sensoriel des campagnes",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (66-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37659",
+      "legislature": 15,
+      "titre": "Engagement dans la vie locale et action publique",
+      "motif": "Vie locale et action publique : régime des élus locaux et organisation des collectivités, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N37702",
+      "legislature": 15,
+      "titre": "Violences au sein de la famille",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (92-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37763",
+      "legislature": 15,
+      "titre": "Politiques publiques contre la propagation des moustiques Aedes",
+      "motif": "Résolution : elle exprime un avis de l'Assemblée et ne modifie aucun droit (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N37804",
+      "legislature": 15,
+      "titre": "Accès à la prestation de compensation du handicap",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (57-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37846",
+      "legislature": 15,
+      "titre": "Fondation du Patrimoine",
+      "motif": "Fondation du patrimoine : texte sans droit de la grille mis en cause (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N37855",
+      "legislature": 15,
+      "titre": "Réduction du coût du foncier",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (80-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37884",
+      "legislature": 15,
+      "titre": "Epreuve théorique du code de la route dans les lycées",
+      "motif": "Organisation de l'épreuve du code de la route dans les lycées, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N37904",
+      "legislature": 15,
+      "titre": "Fonds de garantie des victimes des actes de terrorisme",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (36-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N37977",
+      "legislature": 15,
+      "titre": "Accord avec l’Inde sur le trafic illicite de stupéfiants",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N37978",
+      "legislature": 15,
+      "titre": "Protection des mineurs des usages dangereux du protoxyde d'azote",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (80-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N38322",
+      "legislature": 15,
+      "titre": "Accord-cadre entre l’Union européenne et l’Australie",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N38334",
+      "legislature": 15,
+      "titre": "Protection des victimes de violences conjugales",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (55-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N38380",
+      "legislature": 15,
+      "titre": "Déshérence des retraites supplémentaires",
+      "motif": "Gestion de contrats d'épargne retraite en déshérence, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N38385",
+      "legislature": 15,
+      "titre": "Exploitation de l'image d'enfants sur les plateformes en ligne",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (69-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N38411",
+      "legislature": 15,
+      "titre": "Gel des matchs de football le 5 mai",
+      "motif": "Calendrier des matchs de football, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N38461",
+      "legislature": 15,
+      "titre": "Proposition de loi relative au monde combattant",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (32-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N38564",
+      "legislature": 15,
+      "titre": "Système universel de retraite (loi organique)",
+      "motif": "Loi organique jumelle du projet de système universel de retraite, qui porte les mesures qualifiées (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N38769",
+      "legislature": 15,
+      "titre": "Adaptation au droit de l’UE en matière économique et financière",
+      "motif": "Adaptation technique au droit de l'Union européenne (matière économique et financière), hors de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N38846",
+      "legislature": 15,
+      "titre": "Code mondial antidopage et lutte contre le dopage",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (64-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N39144",
+      "legislature": 15,
+      "titre": "Loi de finances rectificative 2020",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (572-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N39206",
+      "legislature": 15,
+      "titre": "Loi organique d'urgence pour faire face à l'épidémie de covid-19",
+      "motif": "Loi organique d'urgence : elle suspend les délais des questions prioritaires de constitutionnalité, procédure sans mesure retenue (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N39229",
+      "legislature": 15,
+      "titre": "Déshérence des contrats de retraite supplémentaire",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (82-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N39596",
+      "legislature": 15,
+      "titre": "Règlement du budget 2019",
+      "motif": "Loi de règlement : elle arrête les comptes de l'année et ne contient aucune mesure touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N39648",
+      "legislature": 15,
+      "titre": "Fonction de directrice ou directeur d’école",
+      "motif": "Statut et fonction des directeurs d'école : texte d'organisation, hors de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N39726",
+      "legislature": 15,
+      "titre": "Covid-19 : don de congés au secteur médico-social",
+      "motif": "Don de congés entre salariés à la suite de l'épidémie, sans droit de la grille mis en cause (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N39765",
+      "legislature": 15,
+      "titre": "Accord de coopération avec les pays de l’Union monétaire ouest-africaine",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N39812",
+      "legislature": 15,
+      "titre": "Dette sociale et autonomie (loi organique)",
+      "motif": "Loi organique sur la dette sociale : procédure et financement, sans mesure touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N39813",
+      "legislature": 15,
+      "titre": "Dette sociale et autonomie",
+      "motif": "Dette sociale : financement, sans mesure retenue touchant un droit de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N39814",
+      "legislature": 15,
+      "titre": "Second tour des municipales",
+      "motif": "Calendrier du second tour des élections municipales de 2020 : organisation du scrutin, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N39819",
+      "legislature": 15,
+      "titre": "Ethique de l’urgence",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (42-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N39924",
+      "legislature": 15,
+      "titre": "Inclusion dans l’emploi par l’activité économique",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (79-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N39995",
+      "legislature": 15,
+      "titre": "Valorisation du volontariat des sapeurs-pompiers",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (123-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N40073",
+      "legislature": 15,
+      "titre": "Conseil économique, social et environnemental",
+      "motif": "Loi organique sur le Conseil économique, social et environnemental : organisation des pouvoirs publics (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N40129",
+      "legislature": 15,
+      "titre": "Restitution de biens culturels au Bénin et au Sénégal",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (48-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N40131",
+      "legislature": 15,
+      "titre": "Proposition de loi pour la mise en place d'une certification de cybersécurité des plateformes numériques destinée au grand public",
+      "motif": "Certification de cybersécurité des plateformes : information du consommateur, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N40198",
+      "legislature": 15,
+      "titre": "Plans de prévention des risques technologiques pour les installations abritant en permanence des ouvrages d’infrastructures de stationnement, chargement ou déchargement de matières dangereuses",
+      "motif": "Plans de prévention des risques technologiques : règle technique sur des ouvrages d'infrastructure, sans droit de la grille retenu (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N40253",
+      "legislature": 15,
+      "titre": "Projet de loi organique relatif à la simplification des expérimentations mises en œuvre sur le fondement du quatrième alinéa de l’article 72 de la Constitution",
+      "motif": "Loi organique sur les expérimentations locales : organisation des pouvoirs publics (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N40483",
+      "legislature": 15,
+      "titre": "Projet de loi autorisant l’approbation de l’avenant à la convention entre le Gouvernement de la République française et le Gouvernement de la République argentine du 4 avril 1979, en vue d’éviter les doubles impositions et de prévenir l’évasion fiscale en matière d’impôts sur le revenu et sur la fortune",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N40619",
+      "legislature": 15,
+      "titre": "Création d'une plateforme de référencement et de prise en charge des malades chroniques de la covid-19",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (46-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N40629",
+      "legislature": 15,
+      "titre": "Présence parentale auprès d’un enfant dont la pathologie nécessite un accompagnement soutenu",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (97-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N40696",
+      "legislature": 15,
+      "titre": "Proposition de loi visant à réduire l'empreinte environnementale du numérique en France",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (40-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N40985",
+      "legislature": 15,
+      "titre": "Partenariat stratégique entre l’Union européenne et le Japon",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N40997",
+      "legislature": 15,
+      "titre": "Proposition de loi visant à protéger les jeunes mineurs des crimes sexuels",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (94-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N41089",
+      "legislature": 15,
+      "titre": "Gouvernance des services publics d’eau potable et d’assainissement en Guadeloupe",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (83-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N41103",
+      "legislature": 15,
+      "titre": "Accessibilité des personnes qui ont un trouble du spectre de l’autisme par la mise en place d’une « heure silencieuse » dans les magasins de la grande distribution",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (85-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N41111",
+      "legislature": 15,
+      "titre": "Réformer le régime d’indemnisation des catastrophes naturelles",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (72-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N41126",
+      "legislature": 15,
+      "titre": "Lutte contre la maltraitance animale",
+      "motif": "Protection des animaux : la grille suit les droits des personnes, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N41162",
+      "legislature": 15,
+      "titre": "Programmation relative au développement solidaire et à la lutte contre les inégalités mondiales",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (51-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N41193",
+      "legislature": 15,
+      "titre": "Renforcer la protection des mineurs victimes de violences sexuelles",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (125-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N41207",
+      "legislature": 15,
+      "titre": "Élection du Président de la République",
+      "motif": "Loi organique sur l'élection présidentielle de 2022 : organisation du scrutin, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N41209",
+      "legislature": 15,
+      "titre": "Proposition de loi visant à améliorer l'économie du livre et à renforcer l'équité entre ses acteurs",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (58-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N41210",
+      "legislature": 15,
+      "titre": "Projet de loi portant report du renouvellement général des conseils départementaux, des conseils régionaux et des assemblées de Corse, de Guyane et de Martinique",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (139-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N41310",
+      "legislature": 15,
+      "titre": "Approbation de la décision UE, Euratom 2020/2053",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N41449",
+      "legislature": 15,
+      "titre": "Démocratiser le sport en France",
+      "motif": "Politique du sport et gouvernance des fédérations, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N41485",
+      "legislature": 15,
+      "titre": "Modifier le Règlement de l’Assemblée nationale en ce qui concerne l’organisation des travaux parlementaires en période de crise",
+      "motif": "Modification du Règlement de l'Assemblée nationale : elle organise ses travaux et ne modifie aucun droit (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N41616",
+      "legislature": 15,
+      "titre": "Proposition de loi relative aux bibliothèques et au développement de la lecture publique",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (82-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N41644",
+      "legislature": 15,
+      "titre": "Accompagnement des enfants porteurs de pathologie chronique ou de cancer",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (83-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N41647",
+      "legislature": 15,
+      "titre": "Mesures d’urgence pour assurer la régulation de l’accès au foncier agricole au travers de structures sociétaires",
+      "motif": "Accès au foncier agricole : droit économique, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N41730",
+      "legislature": 15,
+      "titre": "Projet de loi ratifiant les ordonnances n° 2021-45 du 20 janvier 2021 et n° 2021-71 du 27 janvier 2021 portant réforme de la formation des élus locaux",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (63-0) : ce vote ne départage personne (règle 9)."
     },
     {
       "dossier_an": "DLR5L15N41895",
@@ -12755,10 +14866,178 @@
       "motif": "Adopté sans aucune voix contre au Sénat : ce vote ne départage personne (règle 23)."
     },
     {
+      "dossier_an": "DLR5L15N42024",
+      "legislature": 15,
+      "titre": "Accélérer l’égalité économique et professionnelle",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (50-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N42027",
+      "legislature": 15,
+      "titre": "Instaurer la proportionnelle intégrale au scrutin législatif",
+      "motif": "Mode de scrutin législatif, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N42038",
+      "legislature": 15,
+      "titre": "Limitation des impacts négatifs de la publicité",
+      "motif": "Régulation de la publicité : objet économique, sans droit de la grille retenu (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N42043",
+      "legislature": 15,
+      "titre": "Diverses dispositions relatives au Haut Conseil des finances publiques et à l’information du Parlement sur les finances publiques",
+      "motif": "Finances publiques : information du Parlement, procédure budgétaire (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N42044",
+      "legislature": 15,
+      "titre": "Interdiction des pratiques visant à modifier l’orientation sexuelle ou l’identité de genre d’une personne",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (142-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N42045",
+      "legislature": 15,
+      "titre": "Instauration d’une taxe sur les profiteurs de crise",
+      "motif": "Mesure fiscale, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N42194",
+      "legislature": 15,
+      "titre": "Projet de loi relatif à la régulation et à la protection de l’accès aux œuvres culturelles à l’ère numérique",
+      "motif": "Régulation des œuvres en ligne : propriété intellectuelle et organisation des autorités, sans droit de la grille retenu (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N42237",
+      "legislature": 15,
+      "titre": "Confiance dans l'institution judiciaire (loi organique)",
+      "motif": "Loi organique jumelle de la loi sur la confiance dans l'institution judiciaire, qui porte les mesures qualifiées (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N42238",
+      "legislature": 15,
+      "titre": "Projet de loi portant diverses dispositions d’adaptation au droit de l’Union européenne dans le domaine des transports, de l’environnement, de l’économie et des finances",
+      "motif": "Adaptation technique au droit de l'Union européenne (transports, environnement, économie), sans mesure touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N42333",
+      "legislature": 15,
+      "titre": "Protéger la rémunération des agriculteurs",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (79-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N42337",
+      "legislature": 15,
+      "titre": "Assurer la revalorisation des pensions de retraites agricoles les plus faibles",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (132-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N42349",
+      "legislature": 15,
+      "titre": "Proposition de loi organique relative à la modernisation de la gestion des finances publiques",
+      "motif": "Loi organique sur la gestion des finances publiques : procédure budgétaire (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N42350",
+      "legislature": 15,
+      "titre": "Proposition de loi organique relative aux lois de financement de la sécurité sociale",
+      "motif": "Loi organique sur les lois de financement de la sécurité sociale : procédure budgétaire (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N42412",
+      "legislature": 15,
+      "titre": "Projet de loi relatif à la différenciation, la décentralisation, la déconcentration et portant diverses mesures de simplification de l'action publique locale",
+      "motif": "Différenciation et décentralisation : organisation des collectivités, sans droit de la grille retenu (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N42488",
+      "legislature": 15,
+      "titre": "Approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de la République de Maurice relatif à la coopération en matière de défense et au statut des forces",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N42609",
+      "legislature": 15,
+      "titre": "Approbation de la Mesure 1 (2005) annexe VI au Protocole au Traité sur l’Antarctique relatif à la protection de l’environnement, responsabilité découlant de situations critiques pour l’environnement",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (28-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N42835",
+      "legislature": 15,
+      "titre": "Approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de l’Etat du Qatar relatif au statut de leurs forces",
+      "motif": "Autorisation d'approuver un accord international : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N42841",
+      "legislature": 15,
+      "titre": "Projet de loi ratifiant les ordonnances prises sur le fondement de l'article 13 de la loi n°2019-816 du 2 août 2019 relative aux compétences de la Collectivité européenne d'Alsace",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (52-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N42842",
+      "legislature": 15,
+      "titre": "Inscrire parmi les priorités de la présidence française de l’Union européenne l’adoption d’une législation ambitieuse sur le devoir de vigilance des multinationales",
+      "motif": "Résolution : elle exprime un avis de l'Assemblée et ne modifie aucun droit (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N42927",
+      "legislature": 15,
+      "titre": "Ratification de la convention du Conseil de l'Europe contre le trafic d'organes humains",
+      "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N43509",
+      "legislature": 15,
+      "titre": "Proposition de loi visant à renforcer la régulation environnementale du numérique par l'Autorité de régulation des communications électroniques, des postes et de la distribution de la presse",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (43-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N43599",
+      "legislature": 15,
+      "titre": "Projet de loi en faveur de l’activité professionnelle indépendante",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (76-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N43745",
+      "legislature": 15,
+      "titre": "Moderniser la lutte contre la contrefaçon",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (69-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
       "dossier_an": "DLR5L15N43746",
       "legislature": 15,
       "titre": "Faire évoluer la formation de sage-femme",
       "motif": "Adopté sans aucune voix contre au scrutin décisif (111 pour, 0 contre) : ce vote ne départage aucun député (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N44049",
+      "legislature": 15,
+      "titre": "Encourager l’usage du contrôle parental sur certains équipements et services vendus en France et permettant d’accéder à Internet",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (57-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N44085",
+      "legislature": 15,
+      "titre": "Pour un accès plus juste, plus simple et plus transparent au marché de l’assurance emprunteur",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (63-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N44107",
+      "legislature": 15,
+      "titre": "Réhabiliter les militaires « fusillés pour l’exemple » durant la Première Guerre mondiale",
+      "motif": "Mémoire historique (réhabilitation des fusillés de 1914-1918) : aucun droit actuel en cause (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N44109",
+      "legislature": 15,
+      "titre": "Restitution ou remise de certains biens culturels aux ayants droit de leurs propriétaires victimes de persécutions antisémites",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (97-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N44129",
+      "legislature": 15,
+      "titre": "Combattre le harcèlement scolaire",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (86-0) : ce vote ne départage personne (règle 9)."
     },
     {
       "dossier_an": "DLR5L15N44193",
@@ -12767,10 +15046,40 @@
       "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
     },
     {
+      "dossier_an": "DLR5L15N44387",
+      "legislature": 15,
+      "titre": "Proposition de loi visant à faire évoluer la gouvernance de l'Agence pour l'enseignement français à l'étranger et à créer les instituts régionaux de formation",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (38-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N44390",
+      "legislature": 15,
+      "titre": "Instaurer un droit de révocation des élus",
+      "motif": "Révocation des élus : régime des mandats, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N44395",
+      "legislature": 15,
+      "titre": "Réforme des outils de gestion des risques climatiques en agriculture",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (114-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N44426",
+      "legislature": 15,
+      "titre": "Lutter contre la précarité des accompagnants d’élèves en situation de handicap et des assistants d’éducation",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (86-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
       "dossier_an": "DLR5L15N44555",
       "legislature": 16,
       "titre": "Proposition de loi relative à l'entretien régulier de relations personnelles entre l'enfant et ses parents en cas de séparation de ces derniers",
       "motif": "Une seule source admise, descriptive, sur une mesure de faible portée : le sens n'est pas établi (règle 7)."
+    },
+    {
+      "dossier_an": "DLR5L15N44561",
+      "legislature": 15,
+      "titre": "Aménagement du Rhône",
+      "motif": "Adopté sans aucune voix contre au scrutin décisif (55-0) : ce vote ne départage personne (règle 9)."
     },
     {
       "dossier_an": "DLR5L15N44670",

@@ -202,7 +202,7 @@ travail doit être factuel, sourcé, vérifiable, et signaler franchement les po
   final : qualifié, compté dans aucun score, motions de censure en rôle `censure`), 10 (motions
   affichées, pas comptées), 11 (amendements clés : seulement suppression ou rétablissement d'un
   article dont la mesure est **mise en cause** par une source — une source favorable, une critique
-  d'insuffisance ou une décision qui valide la mesure ne suffisent pas ; article mixte, au sens non
+  d'insuffisance ou une décision qui valide la mesure ne suffisent pas, ni une source antérieure au projet et générale : la source vise la mesure sur ce projet, ou telle qu'elle est votée ; article mixte, au sens non
   univoque, ou dont les sources ne s'accordent pas sur le sens → non retenu ; **une seule lecture : la dernière lecture de l'AN où des suppressions
   ont été mises aux voix** ; un seul scrutin par article ; l'article qui est le seul du texte au
   décisif compte comme un article unique ; le sens se lit sur le contenu de

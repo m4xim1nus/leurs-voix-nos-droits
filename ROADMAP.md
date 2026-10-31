@@ -47,14 +47,14 @@ du lot 1 sont validés par Max** et dans le `data/editorial.json` de la branche.
    page Méthodologie. À revoir avec de vraies qualifications, fiche député·e comprise.
 5. [x] Contrôle croisé des positions XVe avec datan.fr (leurs-votes.fr ne couvre pas 2017-2022) : aucun écart réel.
    Section XVe de `docs/SOURCES.md`.
-6. [ ] Tri : 265 textes avec un décisif XVe. 33 écartés par la règle 8 (conventions, résolutions), 76 par la règle 9
-   (unanimes), 156 à trier (72 candidats par mots-clés, 84 sans), dont les six du lot 1. S'y ajoute le seul texte du 49.3
-   (retraites 2020). Fiche `source/relecture-xve-tri.md` et écarts dans `source/brouillons-xve-tri/`, **en attente de Max**.
-7. [ ] Qualifications, par lots thématiques. Lot 1 (libertés) : validé, dans `editorial.json`. Lot 2 (crise sanitaire, 12 textes) :
-   brouillons contrôlés, fiche `source/relecture-xve-lot2.md`, **en attente de Max**, y compris sur le critère des amendements
-   clés (Q2), qui vaut pour la suite. Puis immigration, justice, social, environnement, santé, une fois le tri et Q2 tranchés.
-8. [ ] Revoir l'écart du ticket restaurant étudiant (DLR5L15N41895) : écarté pour unanimité, il a un vote disputé en
-   XVe (V3995, 34-14), que l'alerte `unanimite_contestee` signale désormais.
+6. [x] Tri validé par Max (31/10/2026), fiche `source/relecture-xve-tri.md` : 173 écarts entrés (règle 8 : 33 ; règle 9 : 76,
+   sans exception ; hors grille : 64). Restent à qualifier les 74 de la liste A, et 13 lois de finances à passer par une
+   recherche courte (écart si rien).
+7. [ ] Qualifications, par lots thématiques. Lot 1 (libertés) et lot 2 (crise sanitaire, 12 textes) : validés, dans
+   `editorial.json`. Lot 3 en cours : reste des libertés et immigration, plus la recherche sur les lois de finances
+   (`source/brouillons-xve-finances/`). Puis justice, enfants, égalité, droits civiques, social, environnement, santé.
+8. [ ] Ticket restaurant étudiant (DLR5L15N41895) : à qualifier dans le lot social (V3995, 34-14). Sans source admise, l'écart
+   reste avec un motif neuf, « faute de source ».
 9. [x] `lvnd download` : sous 20 Ko/s pendant la patience, une source avec plan B y bascule (`sources.DEBIT_MINIMAL`).
 10. [x] Fiche député·e : score par législature à partir de deux législatures (règle 19), `scores_deputes_legislatures.csv`,
     écrit par `lvnd scores`. À revoir avec les qualifications de la XVe, comme l'item 4.

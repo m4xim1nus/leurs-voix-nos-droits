@@ -46,8 +46,7 @@ Grille v1 : `pipeline/referentiels/droits.yaml`. Douze droits et deux
 la v0 les **droits civiques et politiques** (`citoyennete` : droit de vote,
 élections, citoyenneté), d'abord hors grille (corps électoral de
 Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libellé
-à tout dispositif temporaire ou expérimental, y compris protecteur, si le texte
-voté le reste ; un texte qui le pérennise ne la reçoit pas.
+à tout dispositif temporaire ou expérimental, y compris protecteur, si le texte voté le reste ; un texte qui le pérennise ne la reçoit pas. L'étiquette `outre-mer` va au texte qui proroge ou déclare un régime sur un territoire d'outre-mer désigné, ou qui y porte une mesure propre ; une simple adaptation de la loi à ce territoire ne suffit pas. `libertes` comprend la liberté de circulation (état d'urgence sanitaire, 2020-2022).
 
 1. **Point de vue.** Le sens se lit toujours du point de vue des droits des
    personnes concernées, jamais des prérogatives de l'État. Un texte qui
@@ -244,8 +243,7 @@ voté le reste ; un texte qui le pérennise ne la reçoit pas.
     mises aux voix. C'est la rédaction la plus proche du texte soumis au
     scrutin décisif (règle 6) : la 1re lecture pour le narcotrafic et la
     justice des mineurs, la 2e pour Kasbarian-Bergé. Une source
-    « cite » une mesure quand elle la met en cause. Une décision du Conseil
-    constitutionnel qui la décrit pour la valider ne suffit pas. Ne sont
+    « cite » une mesure quand elle la met en cause. Une décision du Conseil constitutionnel qui la décrit pour la valider ne suffit pas, ni une source antérieure au projet et générale : la source doit viser la mesure sur ce projet, ou la mesure telle qu'elle est votée (prorogation de l'état d'urgence sanitaire de novembre 2020 : suppression de l'article 2 non retenue). Ne sont
     pas des amendements clés : la suppression d'un article unique, qui
     double le scrutin décisif, et un scrutin unanime (aucun vote d'un des
     deux côtés), qui ne départage personne. Un article qui est le seul
@@ -302,7 +300,7 @@ voté le reste ; un texte qui le pérennise ne la reçoit pas.
     Simulation : compter chaque scrutin pour 1 ferait passer EPR de 37 à 20
     en XVIIe.
     Les lois successives d'une même crise comptent chacune pour 1, sans regroupement
-    au cas par cas (état d'urgence sanitaire, 2020-2022), et leur note le dit.
+    au cas par cas (état d'urgence sanitaire, 2020-2022), et leur note le dit. De même pour une loi d'habilitation et la loi qui ratifie ses ordonnances (ordonnances travail, 2017-2018).
 19. **Changement de groupe : le groupe du jour du vote.** Chaque vote
     compte pour le groupe où siégeait le député ce jour-là, d'après la
     ventilation officielle de l'AN. La fiche d'un député réunit tous ses
@@ -330,8 +328,7 @@ voté le reste ; un texte qui le pérennise ne la reçoit pas.
     scrutin). Son sens se lit « sur le texte voté le… » (règle 6) : le texte peut
     encore changer. Après un nouveau vote sur l'ensemble, le sens est relu sur le
     texte voté. Jusqu'à cette relecture, l'ancien décisif reste compté et le
-    nouveau vote s'affiche avec la mention « pas encore qualifié ». Un texte à
-    l'arrêt affiche son état, sans cette mention.
+    nouveau vote s'affiche avec la mention « pas encore qualifié ». Un texte à l'arrêt affiche son état, sans cette mention. Le dernier vote d'un texte retiré reste décisif et compte dans les scores, et sa note dit le retrait (régime transitoire, 2020).
 22. **Fiche de suivi.** Un texte sans vote qualifié peut être suivi avant le vote.
     Il est retenu à la main : les mots-clés ne font que présélectionner. Sa fiche
     donne les droits qu'il touche et des sources publiques admises (règle 7), au
