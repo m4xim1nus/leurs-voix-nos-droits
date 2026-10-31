@@ -67,11 +67,35 @@ LEGERES = ("an_dossiers_17", "an_scrutins_17", "an_agenda_17", "senat_dosleg", "
            "senat_mandats")
 MANIFESTE = "manifeste.json"
 COPIE_FIGEE = "figee.zip"  # copie de la release, jamais confondue avec le dump de l'AN
-PATIENCE_AVANT_SECOURS = 1200  # secondes sans aucun octet avant de basculer sur le plan B
+PATIENCE_AVANT_SECOURS = 1200  # secondes, sans octet ou sous le débit minimal, avant de basculer sur le plan B
+# Sous ce débit, un dump d'amendements de plusieurs centaines de Mo prend plus de temps que le plan B (une dizaine d'heures).
+DEBIT_MINIMAL = 20_000  # octets par seconde
 
 
 class Injoignable(SystemExit):
-    """Le dump n'a livré aucun octet pendant toute la patience."""
+    """Le dump n'a livré aucun octet pendant toute la patience, ou l'a fait sous le débit minimal."""
+
+
+class _Debit:
+    """Mesure le débit par fenêtres de `duree` secondes : quelques octets relancent le délai de lecture du client, pas
+    cette mesure. Sans `minimum`, ne vérifie rien : un téléchargement lent reste préférable à son abandon."""
+
+    def __init__(self, url: str, duree: int, minimum: int | None):
+        self.url, self.duree, self.minimum = url, duree, minimum
+        self.debut, self.recu = time.monotonic(), 0
+
+    def ajouter(self, n: int) -> None:
+        self.recu += n
+        self.verifier()
+
+    def verifier(self) -> None:
+        ecoule = time.monotonic() - self.debut
+        if not self.minimum or ecoule < self.duree or ecoule <= 0:
+            return
+        if self.recu / ecoule < self.minimum:
+            raise Injoignable(f"{self.url} : {self.recu / ecoule:,.0f} o/s sur {ecoule:,.0f} s, "
+                              f"sous le débit minimal de {self.minimum:,} o/s")
+        self.debut, self.recu = time.monotonic(), 0
 
 
 def sha256_fichier(chemin: Path) -> str:
@@ -115,7 +139,7 @@ def _etat(cible: Path) -> tuple[Path, Path]:
 
 
 def telecharger(client: httpx.Client, url: str, cible: Path, patience: int = 3600,
-                connu: dict | None = None) -> str | None:
+                connu: dict | None = None, debit_minimal: int | None = None) -> str | None:
     """Télécharge `url` dans `cible` et renvoie son `Last-Modified`.
 
     Le serveur de l'AN (derrière un CDN) coupe souvent la connexion au milieu des gros dumps
@@ -125,9 +149,11 @@ def telecharger(client: httpx.Client, url: str, cible: Path, patience: int = 360
     serve. Chaque octet reçu est gardé, même si la plage s'interrompt. Le fichier partiel
     (`<cible>.part`) survit à l'arrêt du processus : un nouveau lancement reprend là où le
     précédent s'est arrêté, si le fichier distant n'a pas changé (même `Last-Modified`, même
-    taille). On abandonne après `patience` secondes sans aucun octet reçu. `If-Range` garantit que
-    le fichier n'a pas changé entre-temps.
+    taille). On abandonne après `patience` secondes sans aucun octet reçu ou, avec `debit_minimal`,
+    après `patience` secondes en dessous de ce débit : le fichier partiel reste. `If-Range` garantit
+    que le fichier n'a pas changé entre-temps.
     """
+    debit = _Debit(url, patience, debit_minimal)
     part, etat = _etat(cible)
     h = client.head(url)
     h.raise_for_status()
@@ -151,6 +177,8 @@ def telecharger(client: httpx.Client, url: str, cible: Path, patience: int = 360
                 r.raise_for_status()
                 for morceau in r.iter_bytes():  # sans tampon : une coupure ne perd rien
                     f.write(morceau)
+                    f.flush()  # le fichier partiel sert à la reprise, même si le débit minimal arrête tout
+                    debit.ajouter(len(morceau))
         except httpx.TransportError as e:
             if taille is None or modifie is None:
                 raise
@@ -172,8 +200,10 @@ def telecharger(client: httpx.Client, url: str, cible: Path, patience: int = 360
                         f.flush()
                         recu += len(morceau)
                         progres, attente = time.monotonic(), 5
+                        debit.ajouter(len(morceau))
             except (httpx.TransportError, httpx.HTTPStatusError):
                 pass
+            debit.verifier()
             if recu - palier >= 20 * BLOC or recu == taille:
                 print(f"  {recu:,} / {taille:,} o", file=sys.stderr)
                 palier = recu
@@ -272,7 +302,8 @@ def _download(raw: Path, cles: list[str] | None, secours_max: int | None, leger:
             avant = manifeste.get(cle)
             try:
                 modifie = telecharger(client, src["url"], cible, connu=avant,
-                                      patience=PATIENCE_AVANT_SECOURS if "secours" in src else 3600)
+                                      patience=PATIENCE_AVANT_SECOURS if "secours" in src else 3600,
+                                      debit_minimal=DEBIT_MINIMAL if "secours" in src else None)
             except (Injoignable, httpx.HTTPError) as e:
                 if "secours" not in src:
                     raise

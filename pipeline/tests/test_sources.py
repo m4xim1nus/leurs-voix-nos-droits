@@ -96,6 +96,66 @@ def test_abandon_sans_progres(tmp_path, monkeypatch):
     assert sources._etat(tmp_path / "a.zip")[0].stat().st_size == 100  # gardé pour la reprise
 
 
+class Goutte(httpx.SyncByteStream):
+    """Flux qui livre un octet à la fois, sans jamais couper : le délai de lecture du client ne se déclenche pas."""
+
+    def __iter__(self):
+        while True:
+            yield b"x"
+
+
+def _goutte(req: httpx.Request) -> httpx.Response:
+    h = {"last-modified": LM, "content-length": str(len(DONNEES))}
+    return httpx.Response(200, headers=h) if req.method == "HEAD" else httpx.Response(200, headers=h, stream=Goutte())
+
+
+def test_debit_minimal_arrete_un_flux_au_goutte_a_goutte(tmp_path, monkeypatch):
+    t = iter(range(0, 10**9, 10))  # 10 s entre deux octets
+    monkeypatch.setattr(sources.time, "monotonic", lambda: next(t))
+    with httpx.Client(transport=httpx.MockTransport(_goutte)) as c, pytest.raises(sources.Injoignable, match="débit minimal"):
+        sources.telecharger(c, "https://an/a.zip", tmp_path / "a.zip", patience=1200, debit_minimal=20_000)
+    assert sources._etat(tmp_path / "a.zip")[0].stat().st_size > 0  # gardé pour la reprise
+
+
+def test_debit_minimal_arrete_des_plages_au_goutte_a_goutte(tmp_path, monkeypatch):
+    transport, _ = serveur(100, [1] * 10_000)
+    t = iter(range(0, 10**9, 100))
+    monkeypatch.setattr(sources.time, "monotonic", lambda: next(t))
+    with httpx.Client(transport=transport) as c, pytest.raises(sources.Injoignable, match="débit minimal"):
+        sources.telecharger(c, "https://an/a.zip", tmp_path / "a.zip", patience=3600, debit_minimal=20_000)
+
+
+def test_sans_debit_minimal_un_flux_lent_continue(tmp_path, monkeypatch):
+    """Une source sans plan B n'a rien de mieux à faire que d'attendre."""
+    transport, _ = serveur(len(DONNEES), [])
+    t = iter(range(0, 10**12, 10**6))  # le téléchargement paraît très lent
+    monkeypatch.setattr(sources.time, "monotonic", lambda: next(t))
+    with httpx.Client(transport=transport) as c:
+        sources.telecharger(c, "https://an/a.zip", tmp_path / "a.zip", patience=3600)
+    assert (tmp_path / "a.zip").read_bytes() == DONNEES
+
+
+def test_debit_suffisant_ne_declenche_rien(tmp_path, monkeypatch):
+    transport, _ = serveur(len(DONNEES), [])
+    t = iter(range(0, 10**6))  # 1 Mio en quelques secondes factices
+    monkeypatch.setattr(sources.time, "monotonic", lambda: next(t))
+    with httpx.Client(transport=transport) as c:
+        sources.telecharger(c, "https://an/a.zip", tmp_path / "a.zip", patience=1, debit_minimal=20_000)
+    assert (tmp_path / "a.zip").read_bytes() == DONNEES
+
+
+def test_goutte_a_goutte_bascule_sur_le_plan_b(tmp_path, monkeypatch):
+    from lvnd import secours
+    monkeypatch.setattr(sources, "SOURCES", {"am": {"url": "https://an/am.zip", "secours": {"legislature": 15, "organe": "1"}}})
+    monkeypatch.setattr(sources, "PATIENCE_AVANT_SECOURS", 1200)
+    t = iter(range(0, 10**9, 10))
+    monkeypatch.setattr(sources.time, "monotonic", lambda: next(t))
+    monkeypatch.setattr(secours, "recuperer", lambda *a, **k: {"amendements_trouves": 1})
+    _client_factice(monkeypatch, _goutte)
+    sources.download(tmp_path, ["am"])
+    assert json.loads((tmp_path / "manifeste.json").read_text())["am"]["mode"] == "secours"
+
+
 def _zip(chemin, nom="json/a/b/c.json", contenu=b"{}"):
     chemin.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(chemin, "w") as z:
