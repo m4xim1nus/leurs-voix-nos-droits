@@ -219,7 +219,7 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
    n'est pas décisif : il ne porte pas sur les mesures de la partie non
    discutée (règle 6). Le décisif vient d'un vote ultérieur sur l'ensemble. À
    défaut, le texte n'est pas qualifié.
-10. **Motions de rejet préalable : affichées, pas comptées** (les motions de renvoi en commission ne sont pas affichées). Sur
+10. **Motions de rejet préalable : affichées, pas comptées** (les motions de renvoi en commission ne sont pas affichées ; une motion référendaire s'affiche comme une motion de rejet). Sur
     l'immigration, la motion écologiste a été adoptée (270-265) avec les
     voix du RN (87-0) et de LR (40-2). Ces deux groupes ont ensuite voté le
     texte de CMP (88-0 et 62-0). Compter « pour la motion » comme une
