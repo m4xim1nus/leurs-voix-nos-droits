@@ -6,7 +6,8 @@ Le dossier d'un scrutin se lit, dans l'ordre :
 2. `voteRefs` d'une décision du dossier ;
 3. l'amendement mis aux voix (`amendements.rattacher`) ;
 4. la séance : les dossiers débattus dans la séance du scrutin, départagés par le titre (seuil
-   `SEUIL_TITRE`) et par la mention « loi organique » de l'intitulé.
+   `SEUIL_TITRE`) et par la mention « loi organique » de l'intitulé ;
+5. pour une poignée de scrutins de la XVe, figée, `referentiels/rattachements.yaml`.
 
 Le scrutin décisif *proposé* est le dernier scrutin de l'AN sur l'ensemble du texte
 (docs/METHODO.md, règle 9). Il n'est qu'une proposition : la qualification le confirme.
@@ -18,6 +19,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from . import an
+from .referentiels import rattachements
 from .sources import extraits
 from .texte import norm, similarite
 
@@ -49,7 +51,8 @@ def documents(raw: Path) -> tuple[dict[str, str], dict[str, set[str]]]:
 def tous_dossiers(raw: Path) -> dict[str, dict]:
     """Dossiers des dumps du périmètre. Un dossier présent dans deux dumps : la version la plus
     récente est au moins aussi complète."""
-    return {uid: d for leg in an.LEGISLATURES for uid, d in an.dossiers(raw, leg).items()}
+    return (an.dossiers_xiv(raw, rattachements()["dossiers_xiv"])
+            | {uid: d for leg in an.LEGISLATURES for uid, d in an.dossiers(raw, leg).items()})
 
 
 def _organique(d: dict) -> bool:
@@ -84,10 +87,22 @@ class Index:
                         self.etape_jour.setdefault((uid, jour), e["codeActe"])
 
 
+def _rattachements_fixes() -> dict[str, dict]:
+    """scrutin → {dossier_id, etape}, d'après le référentiel (numéros « 57 » ou « 57-84 », de la XVe)."""
+    out = {}
+    for r in rattachements()["scrutins"]:
+        for n in str(r["numeros"]).split():
+            debut, _, fin = n.partition("-")
+            for i in range(int(debut), int(fin or debut) + 1):
+                out[f"VTANR5L15V{i}"] = {"dossier_id": r["dossier"], "etape": r.get("etape")}
+    return out
+
+
 def rattacher(scrutins: list[dict], dossiers: dict[str, dict], titres: dict[str, set[str]],
               par_amendement: dict[str, dict]) -> dict[str, dict]:
     """scrutin_id → {dossier_id, etape, rattachement}."""
     idx = Index(dossiers)
+    fixes = _rattachements_fixes()
 
     def titres_de(uid: str) -> list[str]:
         return [dossiers[uid]["titreDossier"]["titre"], *sorted(titres.get(uid, ()))]
@@ -119,6 +134,9 @@ def rattacher(scrutins: list[dict], dossiers: dict[str, dict], titres: dict[str,
             uid, how = u, "seance"
         elif u := par_titre(s, idx.par_jour.get(s["date"], set())):
             uid, how = u, "jour"
+        elif s["id"] in fixes:
+            out[s["id"]] = {**fixes[s["id"]], "rattachement": "referentiel"}
+            continue
         if uid:
             etape = idx.etape.get((uid, s["seance"])) or idx.etape_jour.get((uid, s["date"]))
             out[s["id"]] = {"dossier_id": uid, "etape": etape, "rattachement": how}
@@ -176,7 +194,7 @@ def catalogue(dossiers: dict[str, dict], scrutins: list[dict], liens: dict[str, 
     for uid, ss in sorted(par_dossier.items()):
         d = dossiers.get(uid)
         if d is None:
-            continue  # dossier d'une autre législature (XVe) cité par `objet`
+            continue  # dossier hors des dumps, cité par `objet`
         ss.sort(key=lambda s: (s["date"], s["numero"]))
         ensembles = [s for s in ss if s["objet"] in ENSEMBLE]
         prom = _acte(d, "PROM-PUB")

@@ -33,6 +33,10 @@ def scrutins_senat() -> list[dict]:
     return charger("scrutins_senat")["scrutins"]
 
 
+def rattachements() -> dict:
+    return charger("rattachements")
+
+
 def lignee(organe: str) -> str:
     """Organe le plus récent de la lignée d'un groupe (referentiels/groupes.yaml)."""
     suivant = {ancien: nouveau for nouveau, ancien in charger("groupes")["suites"].items()}

@@ -8,7 +8,7 @@ import re
 import sqlite3
 from pathlib import Path
 
-from . import alertes, editorial, referentiels, senat
+from . import alertes, an, editorial, referentiels, senat
 
 
 def _q(con, sql: str, *args) -> list[tuple]:
@@ -24,7 +24,15 @@ def _un(con, sql: str, *args):
 VENTILATIONS_INCOMPLETES = {
     ("VTANR5L16V1927", "PO800502"), ("VTANR5L16V1929", "PO800502"),
     ("VTANR5L16V1930", "PO800502"), ("VTANR5L16V1948", "PO800502"),
+    # XVe : une voix manque à la liste nominative, MoDem autour de son changement de nom (septembre 2020), LaREM en 2021.
+    *((f"VTANR5L15V{n}", "PO730970") for n in (2875, 2876, 2877)),
+    *((f"VTANR5L15V{n}", "PO774834") for n in (2887, 2888, 2889, 2890, 2892, 2931, 2932, 2934, 2935, 2936, 2937, 2938)),
+    ("VTANR5L15V3871", "PO730964"), ("VTANR5L15V3872", "PO730964"),
 }
+# Scrutins de la XVe dont le décompte officiel dépasse la somme des groupes (docs/SOURCES.md) : un groupe, le plus
+# souvent le MoDem (46 voix), manque à la ventilation, et rien ne permet de reconstruire ses votes.
+DECOMPTES_INCOMPLETS = {f"VTANR5L15V{n}" for n in (1027, 1028, 1029, 2418, 2744, 2751, 2752, 2761, 2762, 2766, 2814, 2816,
+                                                  3778)}
 
 # Seuils de rattachement (docs/SOURCES.md : 99,9 % des scrutins sur amendement en XVIIe au spike).
 SEUIL_AMENDEMENTS = 0.995
@@ -206,7 +214,10 @@ def verifier(chemin: Path) -> tuple[bool, list[str]]:
     ecarts = _q(con, "select s.id from scrutins s join (select scrutin_id, sum(pour) p, sum(contre) c, "
                      "sum(abstention) a from positions_groupes group by 1) v on v.scrutin_id = s.id "
                      "where (s.pour, s.contre, s.abstention) != (v.p, v.c, v.a)")
+    connus = [i for (i,) in ecarts if i in DECOMPTES_INCOMPLETS]
+    ecarts = [e for e in ecarts if e[0] not in DECOMPTES_INCOMPLETS]
     controle("la ventilation par groupe redonne le décompte de chaque scrutin", not ecarts, str(ecarts[:5]))
+    out.append(f"info {len(connus)} scrutins de la XVe dont un groupe manque à la ventilation (dump AN) : {', '.join(connus)}")
     ecarts = _q(con, "select p.scrutin_id, p.groupe_id from positions_groupes p left join (select scrutin_id, "
                      "groupe_id, sum(position = 'pour') p, sum(position = 'contre') c, "
                      "sum(position = 'abstention') a from votes group by 1, 2) v using (scrutin_id, groupe_id) "
@@ -238,7 +249,7 @@ def verifier(chemin: Path) -> tuple[bool, list[str]]:
     _senat(con, controle, out)
 
     out.append("\n== Rattachements")
-    for leg in (16, 17):
+    for leg in an.LEGISLATURES:
         if not _un(con, "select count(*) from amendements where id like ?", f"AMANR5L{leg}%"):
             controle(f"XV{'I' * (leg - 15)}e : amendements présents (lancer `lvnd download an_amendements_{leg}`)",
                      False)

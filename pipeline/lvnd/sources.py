@@ -46,6 +46,13 @@ SOURCES: dict[str, dict] = {
     "an_amendements_16": {"url": f"{AN}/16/loi/amendements_div_legis/Amendements.json.zip",
                           "figee": f"{FIGEES}/an_amendements_16.zip",
                           "secours": {"legislature": 16, "organe": "791932"}},
+    # XVe : archives figées le 09/06/2022, nommées avec un suffixe.
+    "an_scrutins_15": {"url": f"{AN}/15/loi/scrutins/Scrutins_XV.json.zip"},
+    "an_dossiers_15": {"url": f"{AN}/15/loi/dossiers_legislatifs/Dossiers_Legislatifs_XV.json.zip"},
+    "an_amendements_15": {"url": f"{AN}/15/loi/amendements_legis/Amendements_XV.json.zip",
+                          "secours": {"legislature": 15, "organe": "717460"}},
+    # XIVe : quelques dossiers ouverts avant juin 2017, votés en XVe (referentiels/rattachements.yaml).
+    "an_dossiers_14": {"url": f"{AN}/14/loi/dossiers_legislatifs/Dossiers_Legislatifs_XIV.json.zip"},
     "an_amo": {"url": f"{AN}/17/amo/tous_acteurs_mandats_organes_xi_legislature/"
                       "AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip"},
     "an_agenda_17": {"url": f"{AN}/17/vp/reunions/Agenda.json.zip"},

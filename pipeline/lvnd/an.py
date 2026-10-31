@@ -14,7 +14,7 @@ from .referentiels import lignee
 from .sources import extraits
 from .texte import objet_scrutin
 
-LEGISLATURES = (16, 17)
+LEGISLATURES = (15, 16, 17)
 # Positions nominatives : clé du dump → code des exports
 POSITIONS = {"pours": "pour", "contres": "contre", "abstentions": "abstention", "nonVotants": "non_votant"}
 
@@ -193,6 +193,32 @@ def dossiers(raw: Path, legislature: int) -> dict[str, dict]:
     """uid → dossierParlementaire."""
     d = extraits(raw, f"an_dossiers_{legislature}") / "json/dossierParlementaire"
     return {p.stem: json.loads(p.read_text())["dossierParlementaire"] for p in d.glob("*.json")}
+
+
+def dossiers_xiv(raw: Path, lois: dict[str, dict | None]) -> dict[str, dict]:
+    """Dossiers de la XIVe votés en XVe (`referentiels/rattachements.yaml`). Le dump de la XVe ne les contient
+    pas et celui de la XIVe s'arrête en juin 2017 : leur loi vient de ce référentiel."""
+    tous = json.loads((extraits(raw, "an_dossiers_14") / "Dossiers_Legislatifs_XIV.json").read_text())
+    out = {}
+    for x in tous["export"]["dossiersLegislatifs"]["dossier"]:
+        d = x["dossierParlementaire"]
+        if d["uid"] in lois:
+            out[d["uid"]] = _avec_loi(d, lois[d["uid"]]) if lois[d["uid"]] else d
+    if manquants := set(lois) - set(out):
+        raise SystemExit(f"dossiers absents du dump de la XIVe : {sorted(manquants)}")
+    return out
+
+
+def _avec_loi(d: dict, loi: dict) -> dict:
+    """Ajoute au dossier les actes de promulgation et de décision du Conseil constitutionnel."""
+    actes = [{"codeActe": "PROM-PUB", "uid": f"{d['uid']}-PROM", "dateActe": str(loi["date"]), "codeLoi": loi["numero"],
+              "titreLoi": loi["titre"], "infoJO": {"referenceNOR": loi.get("nor")}}]
+    if cc := loi.get("cc"):
+        actes.append({"codeActe": "CC-CONCLUSION", "uid": f"{d['uid']}-CC", "dateActe": str(cc["date"]),
+                      "numDecision": cc["numero"], "anneeDecision": str(cc["annee"]), "urlConclusion": cc["url"],
+                      "statutConclusion": {"libelle": cc["sens"]}})
+    return {**d, "actesLegislatifs": {"acteLegislatif": [*enfants(d), {
+        "codeActe": "PROM", "uid": f"{d['uid']}-ETAPE-PROM", "actesLegislatifs": {"acteLegislatif": actes}}]}}
 
 
 def enfants(acte: dict) -> list[dict]:

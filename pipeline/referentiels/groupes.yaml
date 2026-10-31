@@ -19,3 +19,14 @@ suites:
   # organe du même nom le 05/09/2025 (15 des 16 membres de l'UDR y passent).
   PO847173: PO845520
   PO872880: PO847173
+  # XVe, changements de nom. Nouvelle Gauche devient Socialistes et apparentés (12/09/2018) ; MoDem et apparentés
+  # devient Mouvement Démocrate et Démocrates apparentés (24/09/2020).
+  PO758835: PO730946
+  PO774834: PO730970
+  # XVe, même groupe sous cinq noms : Les Constructifs, UDI, Agir et Indépendants (29/11/2017), UDI et Indépendants
+  # (11/06/2019), UDI, Agir et Indépendants (28/09/2019), UDI et Indépendants (26/05/2020). Agir ensemble, créé le
+  # 27/05/2020 par des députés qui le quittent, ne continue aucun groupe.
+  PO744425: PO730952
+  PO765636: PO744425
+  PO767217: PO765636
+  PO771889: PO767217

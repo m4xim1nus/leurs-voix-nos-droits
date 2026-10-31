@@ -17,9 +17,9 @@ from .texte import cle_titre, mots_ordonnes, norm, similarite
 from .textes import _date
 
 # Début de chaque législature (première séance de l'AN).
-DEBUTS = {16: "2022-06-28", 17: "2024-07-18"}
+DEBUTS = {15: "2017-06-27", 16: "2022-06-28", 17: "2024-07-18"}
 DECISIFS = {"ensemble", "article_unique", "partie", "motion_rejet", "suppression_article_unique"}
-DEBUT_SCRUTINS = DEBUTS[16]  # scrutins ingérés : depuis la XVIe
+DEBUT_SCRUTINS = DEBUTS[15]  # scrutins ingérés : depuis la XVe
 
 
 def _statut(a: dict) -> dict:

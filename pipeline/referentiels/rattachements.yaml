@@ -1,0 +1,52 @@
+# Scrutins de la XVe que ni le dump ni la séance ne rattachent à un dossier. Chaque ligne a été lue à la main
+# (intitulé du scrutin, titre du dossier). La XVe est figée : cette liste ne bouge plus (docs/SOURCES.md).
+#
+# Le dump des dossiers de la XVe ne contient pas ceux ouverts sous la XIVe, même votés après juin 2017. Ils viennent
+# du dump de la XIVe, qui s'arrête à cette date : la loi promulguée, quand il y en a une, est donc saisie ici. Elle est
+# vérifiée dans Dosleg (date et titre) ; le NOR manquant ne donne simplement pas de lien vers Légifrance.
+
+dossiers_xiv:
+  DLR5L14N35825:
+    numero: "2017-1339"
+    date: 2017-09-15
+    titre: "LOI n° 2017-1339 du 15 septembre 2017 pour la confiance dans la vie politique"
+    cc: { numero: "753", annee: 2017, date: 2017-09-08, sens: "Partiellement conforme",
+          url: "https://www.conseil-constitutionnel.fr/decision/2017/2017753DC.htm" }
+  DLR5L14N36020:
+    numero: "2018-957"
+    date: 2018-11-07
+    titre: "LOI n° 2018-957 du 7 novembre 2018 relative à l'accueil des gens du voyage et à la lutte contre les installations illicites"
+  DLR5L14N35468:
+    numero: "2020-839"
+    date: 2020-07-03
+    titre: "LOI n° 2020-839 du 3 juillet 2020 visant à assurer la revalorisation des pensions de retraite agricoles en France continentale et dans les outre-mer"
+  DLR5L14N33655:
+    numero: "2019-744"
+    date: 2019-07-19
+    titre: "LOI n° 2019-744 du 19 juillet 2019 de simplification, de clarification et d'actualisation du droit des sociétés"
+  # Conventions (règle 8 : jamais qualifiées), rattachées pour que le catalogue soit complet.
+  DLR5L14N35235: null  # transport aérien, États-Unis, Islande, Norvège
+  DLR5L14N35233: null  # services aériens, Israël
+  DLR5L14N33962: null  # extradition, Émirats arabes unis
+  DLR5L14N33686: null  # entraide judiciaire, Comores
+  DLR5L14N35831: null  # STCW-F
+  DLR5L14N35702: null  # défense, Nigéria
+  DLR5L14N35350: null  # compétence judiciaire, Saint-Barthélemy, Saint-Pierre-et-Miquelon, Wallis-et-Futuna
+
+scrutins:
+  - { numeros: "57-84", dossier: DLR5L14N35825, etape: AN1 }       # confiance dans la vie publique, loi ordinaire
+  - { numeros: "145 147", dossier: DLR5L15N35984, etape: AN1 }     # programmation des finances publiques 2018-2022
+  - { numeros: "348", dossier: DLR5L15N35984, etape: ANNLEC }
+  - { numeros: "410", dossier: DLR5L14N35235, etape: AN1 }
+  - { numeros: "411", dossier: DLR5L14N35233, etape: AN1 }
+  - { numeros: "412", dossier: DLR5L14N33962, etape: AN1 }
+  - { numeros: "413", dossier: DLR5L14N33686, etape: AN1 }
+  - { numeros: "438", dossier: DLR5L15N36497 }                     # commission spéciale, AAH et revenus du conjoint
+  - { numeros: "442-446 984-989", dossier: DLR5L14N36020, etape: AN1 }  # gens du voyage (Sénat, ppl16-557)
+  - { numeros: "1093", dossier: DLR5L15N36410, etape: AN1 }        # immigration, asile, intégration
+  - { numeros: "1820", dossier: DLR5L14N33655, etape: AN1 }        # droit des sociétés
+  - { numeros: "1821", dossier: DLR5L14N35831, etape: AN1 }
+  - { numeros: "1823", dossier: DLR5L14N35702, etape: AN1 }
+  - { numeros: "2074", dossier: DLR5L14N35350, etape: AN1 }
+  - { numeros: "2708-2727", dossier: DLR5L15N38564, etape: AN1 }   # système universel de retraite, loi organique
+  - { numeros: "2759", dossier: DLR5L14N35468, etape: AN2 }        # retraites agricoles
