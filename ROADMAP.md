@@ -50,10 +50,9 @@ du lot 1 sont validés par Max** et dans le `data/editorial.json` de la branche.
 6. [ ] Tri : 265 textes avec un décisif XVe. 33 écartés par la règle 8 (conventions, résolutions), 76 par la règle 9
    (unanimes), 156 à trier (72 candidats par mots-clés, 84 sans), dont les six du lot 1. S'y ajoute le seul texte du 49.3
    (retraites 2020). Fiche `source/relecture-xve-tri.md` et écarts dans `source/brouillons-xve-tri/`, **en attente de Max**.
-7. [ ] Qualifications, par lots thématiques. Lot 1 (libertés) : séparatisme, sécurité globale, anti-casseurs, SILT,
-   terrorisme et renseignement 2021, responsabilité pénale 2022. Brouillons contrôlés, fiche `source/relecture-xve-lot1.md`,
-   en attente de Max ; champs du Conseil constitutionnel à reprendre sur l'original (site injoignable d'ici). Puis crise sanitaire, immigration, justice, social,
-   environnement, santé.
+7. [ ] Qualifications, par lots thématiques. Lot 1 (libertés) : validé, dans `editorial.json`. Lot 2 (crise sanitaire, 12 textes) :
+   brouillons contrôlés, fiche `source/relecture-xve-lot2.md`, **en attente de Max**, y compris sur le critère des amendements
+   clés (Q2), qui vaut pour la suite. Puis immigration, justice, social, environnement, santé, une fois le tri et Q2 tranchés.
 8. [ ] Revoir l'écart du ticket restaurant étudiant (DLR5L15N41895) : écarté pour unanimité, il a un vote disputé en
    XVe (V3995, 34-14), que l'alerte `unanimite_contestee` signale désormais.
 9. [x] `lvnd download` : sous 20 Ko/s pendant la patience, une source avec plan B y bascule (`sources.DEBIT_MINIMAL`).
