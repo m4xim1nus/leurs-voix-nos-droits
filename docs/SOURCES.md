@@ -369,11 +369,11 @@ L'admin retire ce que D1 a déjà pris en compte, même avant publication : une
 saisie sur le texte, le scrutin retenu dans sa qualification, ou la fin de son
 écart.
 
-Limites, reprises de quifaitlaloi : un texte voté au Sénat sans dossier AN ne
-serait pas vu ; `transmis` se déduit de la Constitution, pas d'un acte ; un
+Limites, reprises de quifaitlaloi : un texte voté au Sénat sans dossier AN n'est
+pas dans ces exports (ses votes sont dans `senat/scrutins.csv`, sans `dossier_id`) ; `transmis` se déduit de la Constitution, pas d'un acte ; un
 texte adopté conforme par la seconde chambre peut rester quelques jours « en
 navette ». Les lectures du Sénat n'ont ni scrutin ni mode (`NON_RENSEIGNE`) :
-ses votes restent au cycle Sénat. Les 49.3 de la XVIe n'ont pas de scrutin miroir
+ses votes sont dans `data/export/senat/`. Les 49.3 de la XVIe n'ont pas de scrutin miroir
 ici (motions sans `voteRefs`) : leur mode reste `ART_49_3`.
 
 ## Mise à jour : passe quotidienne et données figées

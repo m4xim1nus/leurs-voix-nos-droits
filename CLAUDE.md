@@ -50,9 +50,9 @@ témoins. En cas d'écart avec ce fichier, il prime.
   écarté : il dépend de la connexion de la maison et se transfère mal.
 - **Site public** : Cloudflare Pages relié au dépôt. Son build ne
   télécharge rien : il lit `data/` (open data et `editorial.json`).
-- **Périmètre v1** : Assemblée nationale, XVIe et XVIIe législatures
-  (depuis juin 2022, comme leurs-votes.fr). Le Sénat et la XVe viennent
-  ensuite, en cycles.
+- **Périmètre** : Assemblée nationale, XVIe et XVIIe législatures (depuis
+  juin 2022, comme leurs-votes.fr), et Sénat depuis la même date, à part
+  (règles 23 à 28). La XVe vient ensuite, en cycle.
 - **PISTE / Légifrance** : identifiants de compte dans `source/`. Le spike
   dira si l'API apporte quelque chose (texte au JO, décisions du Conseil
   constitutionnel) ; sinon, on s'en passe.

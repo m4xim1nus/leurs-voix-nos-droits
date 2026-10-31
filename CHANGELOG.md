@@ -3,6 +3,52 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Les tags `v*` du dépôt suivent ces versions.
 
+## [1.3.0] — 2026-10-31
+
+Cycle Sénat : le second vote de chaque texte. Le site montre comment les groupes du
+Sénat ont voté sur les textes qualifiés, ajoute ce que le Sénat vote seul, et chacun·e
+retrouve ses sénateur·ices. Aucun score ne mélange les deux chambres : `scores_*.csv` et
+`participation.csv` de l'AN sont identiques à l'octet. 132 textes qualifiés, 417 écartés.
+
+### Ajouté
+
+- **Données** : 1 336 scrutins publics du Sénat et 464 719 votes nominatifs depuis juin
+  2022, sénateur·ices et groupes datés, à part dans `data/export/senat/`, avec un code postal
+  → département dans `data/annuaire/`. Contrôles de `lvnd check`, passe quotidienne et son
+  garde-fou.
+- **Méthode** : règles 23 à 28 (décisif du Sénat, lecture sur le texte voté, texte du seul
+  Sénat, scores, vote de groupe, deux chambres séparées), publiées sur la page Méthodologie.
+- **Qualifications** : 95 votes du Sénat lus sur les textes qualifiés, dont 76 décisifs comptés
+  et 19 affichés. 28 textes votés au seul Sénat, casseurs-payeurs compris, dont 21 comptés
+  et 7 affichés sans jugement. 49 textes écartés au tri. 37 textes publiés n'ont aucun bloc Sénat, ni
+  scrutin public sur l'ensemble ni motion.
+- **Scores du Sénat** : décisif seul, une seule période depuis le 28/06/2022, fichiers à part.
+- **Site** : section « Au Sénat » sur chaque fiche texte, `/senat` (les groupes d'abord,
+  droit par droit, le vote de groupe expliqué, recherche par code postal), `/senat/<slug>`
+  (score « d'après les votes enregistrés à son nom », écarts au groupe, « Lui écrire », aucun
+  taux de participation), filtre de chambre sur `/textes`, dernier vote du Sénat sur `/en-cours`,
+  lien depuis la fiche député·e, sénateur·ices dans la recherche par nom.
+- **Admin** : scrutins et décisif du Sénat sur la fiche, contrôles identiques à `lvnd check`
+  (test croisé à l'octet), aperçu des scores, textes sans vote à l'AN, alertes
+  `senat_premier_vote` et `senat_vote_posterieur` dans « À traiter ». Migration `0004_senat.sql`.
+
+### Modifié
+
+- Le catalogue s'étend aux dossiers votés au Sénat sur l'ensemble, même sans scrutin à l'AN.
+- Le contenu de l'accueil ne change pas. Le menu gagne une entrée « Sénat », le pied de page cite
+  l'open data du Sénat, et la recherche par nom y trouve aussi les sénateur·ices.
+
+### Limites connues
+
+- Le score individuel d'un·e sénateur·ice dit peu de choses : presque tous les votes suivent le groupe,
+  et ils ne disent pas qui était présent (règle 27).
+- Passe quotidienne pas encore observée avec ces données, à vérifier le 01/11/2026.
+- Comparer ne couvre pas le Sénat. Pas d'amendements clés du Sénat, ni de cartes partageables
+  des sénateur·ices.
+- Dans l'admin, les droits d'une version « autre » du Sénat se saisissent en JSON.
+- La fiche de suivi des ingérences étrangères (340-0) attend l'inscription à l'AN : son alerte
+  reste ouverte.
+
 ## [1.2.0] — 2026-10-30
 
 Cycle Stock des lois de finances : les six lois de finances adoptées par 49.3

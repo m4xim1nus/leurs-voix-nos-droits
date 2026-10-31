@@ -27,6 +27,9 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] Sénat : `lvnd build` en local réécrit les exports de l'AN quand `data/raw/` diffère de la copie de la CI. Pour ne changer que le Sénat, restaurer ces fichiers avant de commiter (claude, 2026-10-31)
 - [ ] Admin, version `autre` du Sénat : droits, vigilance et sources se saisissent en JSON sur la fiche, pas avec les formulaires habituels (claude, 2026-10-31)
 - [ ] Fiche député·e : « Prochains votes » ne liste pas les textes du seul Sénat attendus à l'AN (casseurs-payeurs), pour ne rien changer aux vues de l'AN pendant le cycle Sénat (claude, 2026-10-31)
+- [ ] Cloudflare injecte sa balise Web Analytics (`static.cloudflareinsights.com`) dans les pages servies aux navigateurs. La CSP la bloque, donc rien ne se charge, mais la règle est « aucun tracker » : la désactiver côté Cloudflare, réglage du projet Pages à vérifier (claude, 2026-10-31)
+- [ ] Vérifier le 01/11/2026 que la passe quotidienne (`donnees-quotidien.yml`, 5 h UTC) tourne bien : première avec le Sénat publié. Garde-fou du Sénat, sync de l'admin, alertes du Sénat ramenées à une dans « À traiter » (ingérences étrangères). Correction après le cycle si besoin (user:moi, 2026-10-31)
+- [ ] Cycle Sénat, hors cycle : amendements clés du Sénat (environ 31 suppressions hors budgets et retraites, sur 16 textes), cartes partageables des sénateur·ices, Comparer pour le Sénat, correspondance entre groupes des deux chambres (claude, 2026-10-31)
 
 ## Textes à surveiller
 
@@ -48,11 +51,6 @@ Un cycle à la fois, choisi et nommé au moment de l'ouvrir.
 2017-2022 : sécurité globale, séparatisme, état d'urgence sanitaire.
 
 - [→XVe] Ouvrir le cycle par les textes `libertes` (séparatisme, sécurité globale, anti-casseurs) (user:moi, 2026-10-29)
-
-### Sénat
-
-- [→Sénat] Scrutins publics des sénateur·ices (Dosleg, déjà maîtrisé dans quifaitlaloi) (claude, 2026-10-29)
-- [→Sénat] Texte adopté d'abord au Sénat (casseurs-payeurs) : alerte au vote du Sénat, puis qualification sans attendre l'inscription à l'AN, sans fiche de suivi (décision de Max, 31/10/2026) ; détail dans `ROADMAP.md` (user:moi et claude, 2026-10-30)
 
 ### Passation
 
