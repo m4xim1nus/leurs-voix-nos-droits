@@ -361,8 +361,8 @@
   <p>
     Les votes viennent uniquement de l’open data officiel de l’Assemblée nationale et du Sénat :
     scrutins, votes nominatifs, dossiers législatifs, élu·es et groupes. D’autres sites (datan.fr,
-    leurs-votes.fr) servent à vérifier les décomptes, jamais de source. Le périmètre couvre les XVIe
-    et XVIIe législatures, depuis juin 2022.
+    leurs-votes.fr) servent à vérifier les décomptes, jamais de source. À l’Assemblée, le périmètre couvre
+    les XVe, XVIe et XVIIe législatures, depuis juin 2017 ; au Sénat, il part de juin 2022.
   </p>
   <p>
     <strong>Code postal.</strong> Il n’existe pas de table officielle qui relie un code postal à une circonscription.
@@ -396,7 +396,8 @@
       l’assiduité d’un·e député·e.
     </li>
     <li>
-      La législature 2017-2022 n’est pas encore couverte. Elle le sera dans une étape suivante.
+      Pour la législature 2017-2022, le site ne montre pas les votes du Sénat, et un groupe manque au
+      détail de quelques scrutins, faute de données dans l’open data de l’Assemblée.
     </li>
   </ul>
 </section>

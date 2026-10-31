@@ -1,7 +1,7 @@
 // Données de la page Comparer, chargées à la demande : scores de chaque député et de chaque groupe,
 // global, par droit et par texte, en tableaux alignés sur `droits` et `textes` (null : pas de score).
 import { json } from '@sveltejs/kit';
-import { etatEnListe } from '$lib/format';
+import { etatEnListe, legislature } from '$lib/format';
 import { donnees } from '$lib/server/donnees';
 import { entree } from '$lib/server/vues';
 import type { Score } from '$lib/types';
@@ -18,7 +18,7 @@ export const GET = () => {
     .filter((l) => d.scoresGroupes.has(l.id))
     .map((l) => ({
       cle: `g:${l.slug}`,
-      nom: `Groupe ${l.sigle}, ${l.legislature === 17 ? 'XVIIe' : 'XVIe'}`,
+      nom: `Groupe ${l.sigle}, ${legislature(l.legislature)}`,
       sigle: l.sigle,
       couleur: l.couleur,
       lien: `/groupes/${l.slug}`,

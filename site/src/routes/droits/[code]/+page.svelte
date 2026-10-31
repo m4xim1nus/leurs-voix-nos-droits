@@ -7,7 +7,7 @@
 
   let { data } = $props();
 
-  const lignes = (leg: 16 | 17) =>
+  const lignes = (leg: 15 | 16 | 17) =>
     data.groupes[leg].map((g) => ({
       cle: g.groupe.id,
       libelle: g.groupe.sigle,
@@ -39,10 +39,13 @@
     Sur les {pluriel(data.textes.length, 'texte qui touche', 'textes qui touchent')} ce droit, en principal
     ou en secondaire, chacun avec son propre sens.
   </p>
-  {#each [17, 16] as const as leg (leg)}
+  {#each [17, 16, 15] as const as leg (leg)}
     {#if data.groupes[leg].length}
       <h3>{legislature(leg)} législature</h3>
-      <Regle lignes={lignes(leg)} legende={leg === 17 || !data.groupes[17].length} />
+      <Regle
+        lignes={lignes(leg)}
+        legende={leg === [17, 16, 15].find((l) => data.groupes[l as 17 | 16 | 15].length)}
+      />
     {/if}
   {/each}
 

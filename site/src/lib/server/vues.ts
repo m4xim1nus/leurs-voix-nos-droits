@@ -106,7 +106,11 @@ export function entree(d: Donnees, dep: Depute): EntreeIndex {
 export function vueAccueil() {
   const d = donnees();
   return {
-    groupes: { 17: scoresGroupes(d, 17, 'global'), 16: scoresGroupes(d, 16, 'global') },
+    groupes: {
+      17: scoresGroupes(d, 17, 'global'),
+      16: scoresGroupes(d, 16, 'global'),
+      15: scoresGroupes(d, 15, 'global')
+    },
     droits: d.droits.map((dr) => ({
       ...dr,
       n_textes: d.textes.filter((t) => t.droits.some((x) => x.code === dr.code)).length
@@ -138,7 +142,11 @@ export function vueDroit(code: string) {
   return {
     droit,
     textes,
-    groupes: { 17: scoresGroupes(d, 17, code), 16: scoresGroupes(d, 16, code) }
+    groupes: {
+      17: scoresGroupes(d, 17, code),
+      16: scoresGroupes(d, 16, code),
+      15: scoresGroupes(d, 15, code)
+    }
   };
 }
 
@@ -302,7 +310,7 @@ export function vueGroupes() {
         )
       }))
       .sort((a, b) => (b.global?.score ?? -1) - (a.global?.score ?? -1));
-  return { droits: d.droits, legislatures: { 17: parLeg(17), 16: parLeg(16) } };
+  return { droits: d.droits, legislatures: { 17: parLeg(17), 16: parLeg(16), 15: parLeg(15) } };
 }
 
 export function vueGroupe(slug: string) {

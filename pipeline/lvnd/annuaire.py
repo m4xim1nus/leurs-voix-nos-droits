@@ -174,11 +174,12 @@ def codes_postaux_departements(cp: pl.DataFrame) -> pl.DataFrame:
 
 
 def contacts(raw: Path) -> pl.DataFrame:
-    """Courriel et site de chaque député ayant siégé depuis 2022 (adresses de l'AMO)."""
+    """Courriel et site de chaque député ayant siégé depuis 2022 (adresses de l'AMO). Pas les députés de la seule
+    XVe : ils n'ont plus de mandat depuis 2022, et on ne propose pas de leur écrire."""
     rows = []
     for uid, a in sorted(an._acteurs(raw).items()):
         ms = an._liste((a.get("mandats") or {}).get("mandat"))
-        if not any(m.get("typeOrgane") == "ASSEMBLEE" and an._int(m.get("legislature")) in an.LEGISLATURES
+        if not any(m.get("typeOrgane") == "ASSEMBLEE" and an._int(m.get("legislature")) >= 16
                    for m in ms):
             continue
         adresses = an._liste((a.get("adresses") or {}).get("adresse"))

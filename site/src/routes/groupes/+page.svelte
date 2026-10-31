@@ -19,47 +19,49 @@
   plus récent.
 </p>
 
-{#each [17, 16] as const as leg (leg)}
-  <h2>{legislature(leg)} législature</h2>
-  <div class="defile">
-    <table>
-      <thead>
-        <tr>
-          <th scope="col">Groupe</th>
-          <th scope="col" class="nombre">Ensemble</th>
-          {#each data.droits as d (d.code)}<th scope="col" class="nombre"
-              ><a href="/droits/{d.code}">{d.court}</a></th
-            >{/each}
-        </tr>
-      </thead>
-      <tbody>
-        {#each data.legislatures[leg] as g (g.groupe.id)}
+{#each [17, 16, 15] as const as leg (leg)}
+  {#if data.legislatures[leg].length}
+    <h2>{legislature(leg)} législature</h2>
+    <div class="defile">
+      <table>
+        <thead>
           <tr>
-            <th scope="row"
-              ><a
-                class="sigle"
-                style:--c={g.groupe.couleur}
-                href="/groupes/{g.groupe.slug}"
-                title={g.groupe.nom}>{g.groupe.sigle}</a
-              ></th
-            >
-            <td class="nombre fort" style:background={fond(g.global?.score ?? null)}
-              >{pourcent(g.global?.score ?? null)}</td
-            >
-            {#each data.droits as d (d.code)}
-              {@const s = g.droits[d.code]}
-              <td
-                class="nombre"
-                style:background={fond(s?.score ?? null)}
-                title={s ? `${s.n_textes} texte(s)` : 'aucun texte'}
-                >{s ? pourcent(s.score) : ''}</td
-              >
-            {/each}
+            <th scope="col">Groupe</th>
+            <th scope="col" class="nombre">Ensemble</th>
+            {#each data.droits as d (d.code)}<th scope="col" class="nombre"
+                ><a href="/droits/{d.code}">{d.court}</a></th
+              >{/each}
           </tr>
-        {/each}
-      </tbody>
-    </table>
-  </div>
+        </thead>
+        <tbody>
+          {#each data.legislatures[leg] as g (g.groupe.id)}
+            <tr>
+              <th scope="row"
+                ><a
+                  class="sigle"
+                  style:--c={g.groupe.couleur}
+                  href="/groupes/{g.groupe.slug}"
+                  title={g.groupe.nom}>{g.groupe.sigle}</a
+                ></th
+              >
+              <td class="nombre fort" style:background={fond(g.global?.score ?? null)}
+                >{pourcent(g.global?.score ?? null)}</td
+              >
+              {#each data.droits as d (d.code)}
+                {@const s = g.droits[d.code]}
+                <td
+                  class="nombre"
+                  style:background={fond(s?.score ?? null)}
+                  title={s ? `${s.n_textes} texte(s)` : 'aucun texte'}
+                  >{s ? pourcent(s.score) : ''}</td
+                >
+              {/each}
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    </div>
+  {/if}
 {/each}
 <p class="petit discret">
   Case vide : aucun texte qualifié ne touche ce droit sur la législature. Survolez une case pour le

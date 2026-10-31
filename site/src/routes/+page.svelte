@@ -7,7 +7,7 @@
 
   let { data } = $props();
 
-  const lignes = (leg: 16 | 17) =>
+  const lignes = (leg: 15 | 16 | 17) =>
     data.groupes[leg].map((g) => ({
       cle: g.groupe.id,
       libelle: g.groupe.sigle,
@@ -31,7 +31,7 @@
   <p class="chapo">
     Chaque texte de loi retenu est qualifié à la main, sources à l’appui : quels droits il touche,
     et s’il les étend ou les restreint. Ses scrutins sont ensuite croisés avec le vote de chaque
-    député·e depuis 2022.
+    député·e depuis 2017.
   </p>
   <div class="cherche">
     <Recherche grand />
@@ -58,6 +58,12 @@
     <summary>XVIe législature (2022-2024)</summary>
     <Regle lignes={lignes(16)} legende={false} />
   </details>
+  {#if lignes(15).length}
+    <details>
+      <summary>XVe législature (2017-2022)</summary>
+      <Regle lignes={lignes(15)} legende={false} />
+    </details>
+  {/if}
   <p><a href="/groupes">Les groupes droit par droit</a></p>
 </section>
 

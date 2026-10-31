@@ -14,7 +14,7 @@
     'positions_groupes.csv': 'décompte et position de chaque groupe sur chaque scrutin',
     'amendements.csv':
       'amendements mis aux voix : auteur, article, sort ; leurs identiques pour la XVIIe seulement',
-    'deputes.csv': 'député·es ayant siégé depuis 2022',
+    'deputes.csv': 'député·es ayant siégé depuis 2017',
     'mandats.csv': 'mandats de député·e : circonscription, dates',
     'appartenances.csv': 'appartenance des député·es aux groupes, avec les dates',
     'groupes.csv': 'groupes politiques, couleur officielle et lignée',

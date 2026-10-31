@@ -24,7 +24,8 @@ export function date(iso: string | null): string {
   return DATE.format(new Date(`${iso.slice(0, 10)}T00:00:00Z`)).replace(/^1 /, '1er ');
 }
 
-export const legislature = (n: number) => (n === 16 ? 'XVIe' : n === 17 ? 'XVIIe' : `${n}e`);
+const LEGISLATURES: Record<number, string> = { 14: 'XIVe', 15: 'XVe', 16: 'XVIe', 17: 'XVIIe' };
+export const legislature = (n: number) => LEGISLATURES[n] ?? `${n}e`;
 
 /** « 3 textes », « 1 texte », « aucun texte ». */
 export function pluriel(n: number, mot: string, pl = `${mot}s`, zero = `aucun ${mot}`): string {

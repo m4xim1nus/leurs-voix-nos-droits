@@ -13,7 +13,7 @@
   <p class="chapo">Siège vacant : aucun·e député·e n’y siège aujourd’hui.</p>
 {/if}
 
-<h2>Député·es depuis 2022</h2>
+<h2>Député·es depuis 2017</h2>
 <ul class="mandats">
   {#each data.mandats as m, i (i)}
     <li class:actuel={m === data.actuel}>

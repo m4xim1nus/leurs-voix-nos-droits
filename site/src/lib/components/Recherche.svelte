@@ -94,7 +94,7 @@
         ? { type: 'noms', liste }
         : {
             type: 'erreur',
-            message: `Aucun·e député·e ni sénateur·ice ne s’appelle « ${q} » depuis 2022.`
+            message: `Aucun·e député·e depuis 2017 ni sénateur·ice depuis 2022 ne s’appelle « ${q} ».`
           };
     } else {
       resultat = { type: 'vide' };
