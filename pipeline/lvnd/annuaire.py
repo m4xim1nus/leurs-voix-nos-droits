@@ -1,4 +1,4 @@
-"""Annuaire du site : code postal → circonscription(s), et courriel de chaque député.
+"""Annuaire du site : code postal → circonscription(s) et département, et courriel de chaque député.
 
 Écrit data/annuaire/ (versionné), lu au build du site (docs/CONCEPTION.md, Site public). Lancé
 en local, depuis les dumps : il ne change qu'avec le découpage, les communes ou les députés.
@@ -161,6 +161,18 @@ def codes_postaux(raw: Path) -> pl.DataFrame:
             .sort("cp", "insee", "circo"))
 
 
+def departement(insee: str) -> str:
+    """Département ou collectivité d'une commune, au sens des circonscriptions du Sénat. Saint-Barthélemy
+    (977) et Saint-Martin (978) ont chacun leur sénateur."""
+    return insee[:3] if insee.startswith(("97", "98")) else insee[:2]
+
+
+def codes_postaux_departements(cp: pl.DataFrame) -> pl.DataFrame:
+    """Code postal × département, pour retrouver ses sénateurs (senat/senateurs.csv)."""
+    return (cp.select("cp", departement=pl.col("insee").map_elements(departement, return_dtype=pl.String))
+            .unique().sort("cp", "departement"))
+
+
 def contacts(raw: Path) -> pl.DataFrame:
     """Courriel et site de chaque député ayant siégé depuis 2022 (adresses de l'AMO)."""
     rows = []
@@ -187,6 +199,7 @@ def annuaire(raw: Path, sortie: Path) -> None:
     _log("== Codes postaux")
     cp = codes_postaux(circos)
     cp.write_csv(sortie / "codes_postaux.csv")
+    codes_postaux_departements(cp).write_csv(sortie / "cp_departements.csv")
     _log("== Contacts des députés")
     ct = contacts(raw)
     ct.write_csv(sortie / "contacts.csv")

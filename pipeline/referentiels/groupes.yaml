@@ -6,6 +6,10 @@
 # de groupe, eux, réunissent une lignée sous son organe le plus récent.
 #
 # nouvel organe: organe qu'il continue
+#
+# Sénat : rien à déclarer ici. Le code d'un groupe survit à ses changements de nom (UMP pour Les
+# Républicains, LREM pour RDPI, CRC pour CRCE-K, RTLI pour Les Indépendants), donc chaque code est sa
+# propre lignée. UNT, créé le 05/10/2026, ne continue aucun groupe : ses membres viennent de plusieurs.
 
 suites:
   # Socialistes et apparentés, XVIe : sortie de l'intergroupe NUPES le 19/10/2023. Les

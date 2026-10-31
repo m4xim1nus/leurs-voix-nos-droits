@@ -11,6 +11,7 @@ import polars as pl
 
 from . import agenda, alertes, amendements, an, candidats, editorial, encours, parcours, positions, referentiels, scores, senat, textes
 from .sources import lire_manifeste, racine
+from .texte import norm
 
 # Votes nominatifs compacts (docs/SOURCES.md) : numéro de scrutin, identifiant numérique du
 # député (PA123 → 123), position en une lettre.
@@ -32,9 +33,10 @@ def _df(rows: list[dict], colonnes: tuple[str, ...] = ()) -> pl.DataFrame:
 
 TYPES = {pl.Int64: "INTEGER", pl.Int32: "INTEGER", pl.UInt32: "INTEGER", pl.Float64: "REAL", pl.Boolean: "INTEGER"}
 CLES = {"scrutins": "id", "textes": "id", "deputes": "id", "mandats": "id", "groupes": "id", "amendements": "id",
-        "en_cours": "id", "en_cours_etats": "id"}
+        "en_cours": "id", "en_cours_etats": "id", "senat_scrutins": "id", "senat_senateurs": "id", "senat_groupes": "id"}
 INDEX = ("positions_groupes(scrutin_id)", "votes(scrutin_id)", "votes(acteur_id)", "scrutins(dossier_id)",
-         "mandats(acteur_id)", "appartenances(acteur_id)", "scores_deputes(acteur_id)")
+         "mandats(acteur_id)", "appartenances(acteur_id)", "scores_deputes(acteur_id)",
+         "senat_votes(scrutin_id)", "senat_votes(senateur_id)", "senat_appartenances(senateur_id)", "senat_mandats(senateur_id)")
 
 
 def _ecrire_sqlite(chemin: Path, tables: dict[str, pl.DataFrame]) -> None:
@@ -73,6 +75,43 @@ def _ecrire_votes(export: Path, votes: pl.DataFrame, scr: pl.DataFrame) -> int:
         part.select("scrutin", "acteur", "position").write_csv(d / f"{mois}.csv")
         n += 1
     return n
+
+
+def _ecrire_votes_senat(export: Path, votes: pl.DataFrame) -> int:
+    """Un CSV par mois : senat/votes/<AAAA-MM>.csv, trié. Scrutin « session-numéro », position en une lettre."""
+    v = votes.select(pl.col("date").str.slice(0, 7).alias("mois"), "date", "numero",
+                     pl.col("scrutin_id").str.strip_prefix("SN").alias("scrutin"), senateur="senateur_id",
+                     position=pl.col("position").replace_strict(CODES), statut="statut", delegue_a="delegue_a",
+                     mise_au_point=pl.when("mise_au_point").then(pl.lit("1")).otherwise(None))
+    d = export / "votes"
+    d.mkdir(parents=True, exist_ok=True)
+    n = 0
+    for (mois,), part in v.group_by("mois", maintain_order=True):
+        part.select("scrutin", "senateur", "position", "statut", "delegue_a", "mise_au_point").write_csv(d / f"{mois}.csv")
+        n += 1
+    return n
+
+
+def _senat(raw: Path, tables: dict[str, pl.DataFrame], classes: list[dict], mandats_an: list[dict],
+           date_ref: str) -> tuple[dict[str, pl.DataFrame], pl.DataFrame]:
+    """Exports du Sénat, sans lien avec ceux de l'AN : tables de data/export/senat/, et ses votes."""
+    scr_brut = senat.scrutins(tables)
+    appart = senat.appartenances(raw, date_ref)
+    votes = senat.votes(tables, scr_brut, appart)
+    scr = senat.export_scrutins(tables, votes, parcours.dossier_par_loi(classes))
+    ventil = positions.positions(senat.ventilations(votes))
+    actifs = {r["Matricule"] for r in senat._odsen(raw, "senat_senateurs").filter(pl.col("État") == "ACTIF").to_dicts()}
+    ids = set(votes["senateur_id"]) | actifs
+    deps = {norm(m["departement"]): m["num_departement"] for m in mandats_an if m["departement"]}
+    return {
+        "scrutins": scr,
+        "positions_groupes": _df(ventil),
+        "senateurs": senat.senateurs(raw, ids, deps),
+        "groupes": senat.groupes(raw, set(votes["groupe_id"].drop_nulls()) | set(appart.filter(pl.col("fin").is_null())["groupe_id"]), date_ref),
+        "appartenances": appart.filter(pl.col("senateur_id").is_in(ids) & (pl.col("fin").is_null() | (pl.col("fin") >= senat.DEBUT))),
+        "mandats": senat.mandats(raw, ids),
+        "mises_au_point": senat.mises_au_point(tables, scr_brut),
+    }, votes
 
 
 # --- Build ----------------------------------------------------------------------
@@ -174,19 +213,32 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
         "en_cours_alertes": _df(alertes.calculer(cat, scr, points, qualif), alertes.COLONNES),
     }
 
+    _log("== Sénat")
+    dfs_senat, votes_senat = _senat(raw, tables, classes, mandats, date_ref)
+    _log(f"   {dfs_senat['scrutins'].height:,} scrutins, {votes_senat.height:,} votes nominatifs, "
+         f"{dfs_senat['senateurs'].height} sénateurs, {dfs_senat['scrutins']['dossier_id'].is_not_null().sum():,} scrutins "
+         "rattachés à un dossier de l'AN")
+
     _log("== Écriture")
     sqlite.parent.mkdir(parents=True, exist_ok=True)
-    _ecrire_sqlite(sqlite, {**dfs, "votes": votes_df})
+    _ecrire_sqlite(sqlite, {**dfs, "votes": votes_df, **{f"senat_{k}": v for k, v in dfs_senat.items()},
+                            "senat_votes": votes_senat.drop("numero")})
     if export.exists():
         shutil.rmtree(export)
     export.mkdir(parents=True)
     for nom, df in dfs.items():
         df.write_csv(export / f"{nom}.csv")
     n = _ecrire_votes(export, votes_df, scr_df)
+    (export / "senat").mkdir()
+    for nom, df in dfs_senat.items():
+        df.write_csv(export / "senat" / f"{nom}.csv")
+    n_senat = _ecrire_votes_senat(export / "senat", votes_senat)
     meta = {
         "genere_le": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "sources": lire_manifeste(raw),
-        "comptes": {**{k: v.height for k, v in dfs.items()}, "votes": votes_df.height, "fichiers_votes": n},
+        "comptes": {**{k: v.height for k, v in dfs.items()}, "votes": votes_df.height, "fichiers_votes": n,
+                   **{f"senat_{k}": v.height for k, v in dfs_senat.items()}, "senat_votes": votes_senat.height,
+                   "senat_fichiers_votes": n_senat},
         "votes_codes": {v: k for k, v in CODES.items()},
         "referentiels": {n: referentiels.charger(n) for n in ("droits", "mots_cles")},
         "en_cours": {"date_reference": date_ref, "inactivite_mois": encours.INACTIVITE_MOIS, "debut": encours.DEBUT},

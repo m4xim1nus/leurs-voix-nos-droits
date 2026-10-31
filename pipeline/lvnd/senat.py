@@ -1,20 +1,26 @@
-"""Lecture de Dosleg (dump PostgreSQL du Sénat), adaptée de quifaitlaloi.
+"""Lecture de Dosleg (dump PostgreSQL du Sénat) et des fichiers ODSEN, adaptée de quifaitlaloi.
 
-Seulement ce qui dit où en est un texte : décisions de séance, séances, activité, état des dossiers.
-Les votes des sénateurs (`votsen`) ne sont pas lus : ils restent au cycle Sénat. Les décomptes des
-scrutins publics (`scr`) ne servent qu'à dater une décision absente des textes de Dosleg.
+Deux usages, séparés : ce qui dit où en est un texte (décisions de séance, séances, activité, état des
+dossiers, sans effet sur les votes de l'AN) et les votes du Sénat (`votsen`, sénateurs, groupes datés),
+exportés à part dans data/export/senat/ (docs/SOURCES.md).
 """
 
 import re
+from datetime import date, timedelta
 from pathlib import Path
 
 import polars as pl
 
 from .sources import extraits
-from .texte import nettoyer, objet_scrutin
+from .texte import nettoyer, norm, objet_scrutin
 
 TABLES = {
-    "scr": ["sesann", "scrnum", "code", "scrint", "scrdat", "scrvotsea", "scrsufsea", "scrpousea", "scrconsea"],
+    "scr": ["sesann", "scrnum", "code", "scrint", "scrdat", "scrvotsea", "scrsufsea", "scrpousea", "scrconsea",
+            "scrbaspag"],
+    "votsen": ["sesann", "scrnum", "senmat", "posvotcod", "stavotidt", "senmatdel", "votsenmar"],
+    "stavot": ["stavotidt", "stavotlib"],
+    "corscr": ["sesann", "scrnum", "corscrord", "corscrtxt", "corscrurl"],
+    "typlec": ["typleccod", "typleclib"],
     "date_seance": ["code", "lecidt", "date_s"],
     "lecass": ["lecassidt", "lecidt", "codass"],
     "lecture": ["lecidt", "loicod", "typleccod"],
@@ -167,3 +173,162 @@ def scrutins(tables: dict[str, pl.DataFrame]) -> pl.DataFrame:
                           .otherwise(pl.lit("rejete")).alias("sort"))
             .select("id", "numero", "date", "titre", "objet", "sort", "pour", "contre", "loicod", "typleccod")
             .sort("date", "numero"))
+
+
+# --- Votes du Sénat ---------------------------------------------------------------
+
+POSITIONS = {"1": "pour", "2": "contre", "3": "abstention", "4": "non_votant"}
+SANS_GROUPE = "AUCUN"  # quelques jours après un renouvellement : ni un groupe, ni les non-inscrits (NI)
+FUSION_GROUPE = 10  # jours : deux périodes dans le même groupe, séparées par ce blanc au plus, n'en font qu'une
+URL_SCRUTIN = "https://www.senat.fr/scrutin-public/{session}/scr{session}-{numero}.html"
+# Circonscriptions du Sénat absentes des mandats de l'AN : autre libellé, ou collectivités que l'AN réunit.
+DEPARTEMENTS_SENAT = {"saint barthelemy": "977", "saint martin": "978", "la reunion": "974", "iles wallis et futuna": "986"}
+
+
+def _odsen(raw: Path, cle: str) -> pl.DataFrame:
+    """Fichier ODSEN : CSV latin-1, précédé de sa requête en lignes `%`."""
+    chemin = extraits(raw, cle)
+    if not chemin.exists():
+        raise SystemExit(f"{chemin} absent : lancer `lvnd download {cle}`")
+    lignes = chemin.read_text(encoding="latin-1").splitlines()
+    return pl.read_csv("\n".join(l for l in lignes if not l.startswith("%")).encode(), infer_schema=False)
+
+
+def _jour(col: str) -> pl.Expr:
+    return pl.col(col).str.slice(0, 10)
+
+
+def appartenances(raw: Path, date_ref: str) -> pl.DataFrame:
+    """Périodes de chaque sénateur dans un groupe (ODSEN_HISTOGROUPES). `AUCUN` ne compte pas comme un
+    groupe. Une fin postérieure à `date_ref` est une erreur de saisie (2029 pour un mandat en cours) :
+    la période est en cours. Une fiche par fonction occupée au sein du groupe : on ne garde que les
+    appartenances, réunies quand elles se suivent (le renouvellement en coupe beaucoup)."""
+    df = (_odsen(raw, "senat_groupes")
+          .select(senateur_id="Matricule", groupe_id="Code du groupe politique",
+                  debut=_jour("Date de début d'appartenance"), fin=_jour("Date de fin d'appartenance"))
+          .unique().filter(pl.col("groupe_id") != SANS_GROUPE)
+          .with_columns(pl.when(pl.col("fin") > date_ref).then(None).otherwise(pl.col("fin")).alias("fin"))
+          .sort("senateur_id", pl.col("debut").fill_null("")))
+    out: list[dict] = []
+    for r in df.to_dicts():
+        p = out[-1] if out else None
+        if (p and p["senateur_id"] == r["senateur_id"] and p["groupe_id"] == r["groupe_id"] and p["fin"] and r["debut"]
+                and date.fromisoformat(r["debut"]) - date.fromisoformat(p["fin"]) <= timedelta(days=FUSION_GROUPE)):
+            p["fin"] = r["fin"]
+        else:
+            out.append(r)
+    return pl.DataFrame(out, schema=df.schema)
+
+
+def groupes(raw: Path, ids: set[str], date_ref: str) -> pl.DataFrame:
+    """Groupes des votes. Le code reste le même quand un groupe change de nom (`UMP` : Les Républicains ;
+    `LREM` : RDPI), et les fichiers ne donnent que le nom actuel : sigle lu sur les membres en poste
+    (ODSEN_GENERAL), nom lu dans l'historique."""
+    h = (_odsen(raw, "senat_groupes").select(id="Code du groupe politique", senateur_id="Matricule",
+                                             nom=pl.col("Nom court du groupe politique").str.replace(r"^Groupe (du )?", ""))
+         .filter(pl.col("id").is_in(ids)))
+    actifs = (_odsen(raw, "senat_senateurs").filter(pl.col("État") == "ACTIF")
+              .select(senateur_id="Matricule", sigle="Groupe politique"))
+    courants = appartenances(raw, date_ref).filter(pl.col("fin").is_null()).select("senateur_id", "groupe_id")
+    sigles = (actifs.join(courants, on="senateur_id").group_by("groupe_id", "sigle").len()
+              .sort("len", "sigle", descending=True).unique("groupe_id", keep="first", maintain_order=True)
+              .select(id="groupe_id", sigle="sigle"))
+    return (h.select("id", "nom").unique().join(sigles, on="id", how="left")
+            .with_columns(pl.col("sigle").fill_null(pl.col("id"))).select("id", "sigle", "nom").sort("id"))
+
+
+def mandats(raw: Path, ids: set[str]) -> pl.DataFrame:
+    """Mandats datés des sénateurs retenus (ODSEN_ELUSEN)."""
+    return (_odsen(raw, "senat_mandats").filter(pl.col("Matricule").is_in(ids))
+            .select(senateur_id="Matricule", debut=_jour("Date de début de mandat"), fin=_jour("Date de fin de mandat"),
+                    motif_debut="Motif début de mandat", motif_fin="Motif fin de mandat")
+            .sort("senateur_id", "debut"))
+
+
+def senateurs(raw: Path, ids: set[str], departements: dict[str, str]) -> pl.DataFrame:
+    """Sénateurs retenus (ODSEN_GENERAL). `departements` : nom normalisé → code, tiré des mandats de
+    l'AN, qui ne connaît pas tout (`DEPARTEMENTS_SENAT`). Un courriel « Non public » n'est pas exporté."""
+    codes = departements | DEPARTEMENTS_SENAT
+    df = (_odsen(raw, "senat_senateurs").filter(pl.col("Matricule").is_in(ids))
+          .select(id="Matricule", civ="Qualité", prenom="Prénom usuel", nom="Nom usuel", etat=pl.col("État").str.to_lowercase(),
+                  type_appartenance="Type d'app au grp politique", circonscription="Circonscription",
+                  courriel=pl.col("Courrier électronique").replace("Non public", None))
+          .with_columns(departement=pl.col("circonscription").map_elements(
+              lambda c: codes.get(norm(c)), return_dtype=pl.String))
+          .select("id", "civ", "prenom", "nom", "etat", "type_appartenance", "circonscription", "departement", "courriel")
+          .sort("id"))
+    inconnues = sorted(set(df.filter(pl.col("departement").is_null())["circonscription"].to_list()), key=str)
+    if inconnues:
+        raise SystemExit(f"circonscriptions du Sénat sans code de département : {inconnues}")
+    return df
+
+
+def votes(tables: dict[str, pl.DataFrame], scr: pl.DataFrame, appart: pl.DataFrame) -> pl.DataFrame:
+    """Votes nominatifs depuis DEBUT, avec le groupe du jour du vote (`null` si aucun : `lvnd check`
+    échoue). `delegue_a` : sénateur qui a voté pour lui, par délégation (`senmatdel` est porté par la ligne de
+    celui qui reçoit la délégation et nomme celui qui l'a donnée) ; `mise_au_point` : la liste officielle
+    l'étoile, renvoyant à `corscr` ou à la note du scrutin. `statut` : président de séance, membre du
+    gouvernement, déport."""
+    v = (tables["votsen"]
+         .with_columns(pl.format("SN{}-{}", "sesann", "scrnum").alias("scrutin_id"))
+         .join(scr.select(pl.col("id").alias("scrutin_id"), "date", "numero"), on="scrutin_id")
+         .join(tables["stavot"], on="stavotidt", how="left")
+         .select("scrutin_id", "date", "numero", senateur_id="senmat",
+                 position=pl.col("posvotcod").replace_strict(POSITIONS),
+                 statut=pl.when(pl.col("stavotidt") == "0").then(None).otherwise(pl.col("stavotlib")),
+                 delegant="senmatdel", mise_au_point=pl.col("votsenmar").fill_null("") == "*"))
+    recues = v.filter(pl.col("delegant").is_not_null()).select(
+        "scrutin_id", senateur_id="delegant", delegue_a="senateur_id")
+    v = v.drop("delegant").join(recues, on=["scrutin_id", "senateur_id"], how="left")
+    g = (v.select("scrutin_id", "senateur_id", "date")
+         .join(appart.with_columns(pl.col("debut").fill_null("0000"), pl.col("fin").fill_null("9999")), on="senateur_id")
+         .filter((pl.col("debut") <= pl.col("date")) & (pl.col("date") <= pl.col("fin")))
+         .sort("debut").unique(["scrutin_id", "senateur_id"], keep="last")
+         .select("scrutin_id", "senateur_id", "groupe_id"))
+    return (v.join(g, on=["scrutin_id", "senateur_id"], how="left")
+            .select("scrutin_id", "date", "numero", "senateur_id", "groupe_id", "position", "statut", "delegue_a", "mise_au_point")
+            .sort("date", "numero", "senateur_id"))
+
+
+def ventilations(v: pl.DataFrame) -> list[dict]:
+    """Décompte de chaque groupe par scrutin, au format de l'AN (`positions.positions`)."""
+    return (v.group_by("scrutin_id", "groupe_id")
+            .agg(membres=pl.len(), pour=(pl.col("position") == "pour").sum(), contre=(pl.col("position") == "contre").sum(),
+                 abstention=(pl.col("position") == "abstention").sum(), non_votants=(pl.col("position") == "non_votant").sum())
+            .with_columns(pl.col("membres", "pour", "contre", "abstention", "non_votants").cast(pl.Int64))
+            .sort("scrutin_id", "groupe_id").to_dicts())
+
+
+def export_scrutins(tables: dict[str, pl.DataFrame], v: pl.DataFrame, dossier_de: dict[str, str]) -> pl.DataFrame:
+    """Scrutins publics depuis DEBUT : décompte `scrutins`, compté sur la liste nominative quand elle
+    s'en écarte (voir docs/SOURCES.md), lecture, signet et dossier de l'AN."""
+    s = scrutins(tables)
+    n = v.group_by("scrutin_id").agg(
+        pour=(pl.col("position") == "pour").sum(), contre=(pl.col("position") == "contre").sum(),
+        abstention=(pl.col("position") == "abstention").sum(), non_votants=(pl.col("position") == "non_votant").sum()
+    ).with_columns(pl.col("pour", "contre", "abstention", "non_votants").cast(pl.Int64))
+    extra = tables["scr"].select(id=pl.format("SN{}-{}", "sesann", "scrnum"), session="sesann", note="scrbaspag",
+                                 pour_scr=pl.col("scrpousea").cast(pl.Int64), contre_scr=pl.col("scrconsea").cast(pl.Int64))
+    return (s.drop("pour", "contre", "sort")
+            .join(n, left_on="id", right_on="scrutin_id", how="left").join(extra, on="id", how="left")
+            .join(tables["loi"].select("loicod", "signet"), on="loicod", how="left")
+            .join(tables["typlec"], on="typleccod", how="left")
+            .with_columns(
+                votants=pl.col("pour") + pl.col("contre") + pl.col("abstention"),
+                exprimes=pl.col("pour") + pl.col("contre"),
+                requis=(pl.col("pour") + pl.col("contre")) // 2 + 1,
+                dossier_id=pl.col("loicod").replace_strict(dossier_de, default=None, return_dtype=pl.String),
+                url=pl.struct("session", "numero").map_elements(lambda r: URL_SCRUTIN.format(**r), return_dtype=pl.String))
+            .with_columns(sort=pl.when(pl.col("pour") >= pl.col("requis")).then(pl.lit("adopte")).otherwise(pl.lit("rejete")))
+            .select("id", "session", "numero", "date", "titre", "objet", "sort", "pour", "contre", "abstention", "non_votants",
+                    "votants", "exprimes", "requis", "pour_scr", "contre_scr", "loicod", "signet", lecture="typleclib",
+                    dossier_id="dossier_id", note="note", url="url"))
+
+
+def mises_au_point(tables: dict[str, pl.DataFrame], scr: pl.DataFrame) -> pl.DataFrame:
+    """Mises au point publiées (`corscr`, souvent une ligne vide), affichées et non comptées (règle 13)."""
+    return (tables["corscr"].with_columns(pl.format("SN{}-{}", "sesann", "scrnum").alias("scrutin_id"))
+            .filter(pl.col("scrutin_id").is_in(scr["id"].to_list()) & (pl.col("corscrtxt").fill_null("").str.len_chars() > 0))
+            .select("scrutin_id", ordre=pl.col("corscrord").cast(pl.Int64),
+                    texte=pl.col("corscrtxt").map_elements(nettoyer, return_dtype=pl.String), url="corscrurl")
+            .sort("scrutin_id", "ordre", "texte"))

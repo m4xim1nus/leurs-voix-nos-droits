@@ -15,12 +15,12 @@ ADMIN = RACINE / "admin"
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog="lvnd", description=__doc__)
     sub = ap.add_subparsers(dest="commande", required=True)
-    d = sub.add_parser("download", help="télécharge et extrait les dumps AN")
+    d = sub.add_parser("download", help="télécharge et extrait les dumps AN et Sénat")
     d.add_argument("--raw", type=Path, default=RAW)
     d.add_argument("--secours-max", type=int, metavar="MINUTES",
                    help="durée maximale du plan B amendement par amendement (repris au lancement suivant)")
     d.add_argument("--leger", action="store_true",
-                   help="passe quotidienne : dossiers, scrutins, agenda et Dosleg seulement, archives déjà là pour le reste")
+                   help="passe quotidienne : dossiers, scrutins, agenda, Dosleg et sénateurs seulement, archives déjà là pour le reste")
     d.add_argument("sources", nargs="*", help="clés de sources (défaut : toutes)")
     ar = sub.add_parser("archiver", help="zip d'une source figée, à verser dans la release donnees-figees")
     ar.add_argument("source", help="clé de la source (an_amendements_16)")
@@ -36,7 +36,7 @@ def main(argv=None) -> int:
     e.add_argument("--force", action="store_true", help="écrase un editorial.json existant")
     sc = sub.add_parser("scores", help="recalcule les scores depuis data/export/ et data/editorial.json (sans dump)")
     sc.add_argument("--export", type=Path, default=EXPORT)
-    an_ = sub.add_parser("annuaire", help="code postal → circonscription et courriels des députés → data/annuaire/")
+    an_ = sub.add_parser("annuaire", help="code postal → circonscription et département, courriels des députés → data/annuaire/")
     an_.add_argument("--raw", type=Path, default=RAW)
     an_.add_argument("--sortie", type=Path, default=ANNUAIRE)
     s = sub.add_parser("sync-admin", help="pousse le catalogue (data/export/) dans la base D1 de l'admin")

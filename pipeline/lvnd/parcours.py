@@ -374,6 +374,15 @@ def classer(dossiers: dict[str, dict], titres_textes: dict[str, set[str]], idx: 
     return out, {l["scrutin_id"] for l in lois if l["scrutin_id"] and not l["art_49_3"]}
 
 
+def dossier_par_loi(classes: list[dict]) -> dict[str, str]:
+    """loicod (Dosleg) → dossier de l'AN. Un dossier Sénat peut correspondre à plusieurs dossiers AN :
+    on retient une loi plutôt qu'un texte en cours, puis le plus avancé, puis le plus récent."""
+    def rang(c: dict) -> tuple:
+        return (c["statut"] != "autre", sum(l["dec"] is not None for l in c["lectures"]),
+                max((l["date"] or "" for l in c["lectures"]), default=""), c["uid"])
+    return {c["sn"]["loicod"]: c["uid"] for c in sorted(classes, key=rang) if c["sn"]}
+
+
 def _departager(lectures: list[dict], idx: Index) -> None:
     """Un scrutin décisif ne sert qu'une lecture. Deux textes voisins (conventions au titre presque
     identique) peuvent se disputer un scrutin trouvé par la séance : il revient à la lecture qui le

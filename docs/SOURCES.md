@@ -37,7 +37,10 @@ découlent ont été validées par Max le 29/10/2026 (`docs/METHODO.md`).
 | Amendements AN XVIe | `…/16/loi/amendements_div_legis/Amendements.json.zip` | 363 Mo (figé le 28/06/2024) | idem |
 | Acteurs et organes AN (historique) | `…/17/amo/tous_acteurs_mandats_organes_xi_legislature/AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip` | 14 Mo | sigles des groupes, mandats, circonscriptions |
 | Agenda de l'AN | `…/17/vp/reunions/Agenda.json.zip` | 8,6 Mo → 42 Mo, 8 174 réunions (quotidien) | points de séance et de commission à venir (`lvnd/agenda.py`) |
-| Dosleg (Sénat) | `data.senat.fr/data/dosleg/dosleg.zip` | 16 Mo → 122 Mo (quotidien) | décisions de séance, séances, activité et état des dossiers (`lvnd/senat.py`) |
+| Dosleg (Sénat) | `data.senat.fr/data/dosleg/dosleg.zip` | 16 Mo → 122 Mo (quotidien) | décisions de séance, séances, activité et état des dossiers ; scrutins publics et votes nominatifs (`lvnd/senat.py`) |
+| Sénateurs (Sénat) | `data.senat.fr/data/senateurs/ODSEN_GENERAL.csv` | 0,4 Mo (quotidien) | identité, circonscription, courriel public, groupe actuel |
+| Groupes des sénateurs | `…/ODSEN_HISTOGROUPES.csv` | 0,6 Mo (quotidien) | appartenances datées |
+| Mandats des sénateurs | `…/ODSEN_ELUSEN.csv` | 0,5 Mo (quotidien) | mandats datés |
 
 `lvnd download` (`pipeline/lvnd/sources.py`, repris de quifaitlaloi)
 télécharge et extrait ces dumps dans `data/raw/` et tient un manifeste
@@ -207,10 +210,75 @@ On lit, pour une lecture du Sénat sans décision dans le dossier AN : le texte
 adopté ou rejeté en séance (table `oritxt`), à défaut le décompte du scrutin
 public de la même lecture.
 
-**Aucun vote de sénateur·ice n'est lu** (`votsen` ignorée) : ils restent au
-cycle Sénat. Le statut des décisions du Sénat dans le dossier AN n'est pas
+Le statut des décisions du Sénat dans le dossier AN n'est pas
 toujours fiable (« modifié » pour un texte voté conforme) : l'adoption
 définitive se lit aussi dans Dosleg (`oritxtado = D`).
+
+## Votes du Sénat
+
+`lvnd build` écrit `data/export/senat/`, à part des exports de l'AN, que rien de
+ce dossier n'alimente : `scrutins`, `positions_groupes`, `senateurs`, `groupes`,
+`appartenances`, `mandats`, `mises_au_point`, et les votes
+`votes/<AAAA-MM>.csv`. `lvnd annuaire` y ajoute
+`data/annuaire/cp_departements.csv` (code postal → département). Aucun score
+n'est encore calculé. Au 31/10/2026, depuis le 28/06/2022 : 1 321 scrutins,
+459 507 votes, 514 sénateur·ices dont 348 en poste, 333 courriels publics
+(`Non public` n'est pas exporté).
+
+**Table `votsen`.** Une ligne par siège et par scrutin (347 ou 348 lignes), sans
+doublon, toutes dans un mandat de `ODSEN_ELUSEN`.
+
+- `posvotcod` : 1 pour, 2 contre, 3 abstention, 4 non-votant.
+- `stavotidt` (table `stavot`) : exporté en clair dans `statut`, s'il y en a un.
+  Président·e de séance (1 321 lignes, dont 39 avec une position), membre du
+  gouvernement (228), déport (1).
+- `senmatdel` : **délégation de vote** (ordonnance n° 58-1066). La colonne est
+  portée par la ligne de celui ou celle qui **reçoit** la délégation et nomme
+  celui ou celle qui l'a donnée : la page de SN2022-51 donne « Joël Labbé à
+  Thomas Dossus », et `senmatdel` = Labbé est sur la ligne de Dossus. L'export
+  renverse le lien : `delegue_a` est sur la ligne de Labbé et nomme Dossus. Les
+  1 680 délégations portent sur 35 scrutins.
+- `votsenmar` : `*` (1 675 lignes, 334 scrutins) reprend l'étoile de la liste
+  officielle : le ou la sénateur·ice a fait une mise au point. 333 de ces
+  scrutins ont un texte dans `corscr`, le dernier (SN2022-131) dans `scrbaspag`.
+  Valeur vide sur 5 lignes, sans étoile sur la page : ignorée.
+- `corscr` (mises au point, 591 lignes) et `scrbaspag` (erreur matérielle : une
+  seule depuis 2022, SN2022-131) sont exportés tels quels. Ils ne changent aucun
+  décompte (règle 13).
+
+**Décompte : la liste nominative, pas la table `scr`.** Sur 9 scrutins (SN2024-93,
+SN2024-196, SN2025-25, -26, -27, -28, -56, -232 et -293), `scr` s'écarte de
+`votsen` d'une ou deux voix. La page de senat.fr donne chaque fois le chiffre de
+la liste nominative (SN2024-93 : 115-205, `scr` 114-206). L'export compte donc
+sur `votsen` et garde `pour_scr` et `contre_scr` pour la trace. Aucun de ces
+écarts ne change le sort du scrutin, ce que `lvnd check` vérifie. `senat.scrutins`,
+qui ne sert qu'à dater une décision du Sénat pour les textes en cours, reste sur
+`scr`.
+
+**Groupes.** `ODSEN_HISTOGROUPES`, à la date du vote. Le code reste le même
+quand le groupe change de nom (`UMP`, `SOC`, `UC`, `LREM`, `RTLI`, `CRC`…), donc
+pas de lignée à déclarer (`referentiels/groupes.yaml`). Le fichier ne donne que le
+nom actuel. Le sigle affiché est lu sur les membres en poste (`ODSEN_GENERAL`).
+`AUCUN`, quelques jours après un renouvellement (179 lignes du 01 au 04/10/2026),
+n'est ni un groupe ni le groupe des non-inscrits (`NI`) : il est retiré, et les
+périodes qu'il coupe sont réunies. Aucun vote ne tombe dans ces jours-là. Une fin
+d'appartenance postérieure au dump est une erreur de saisie (Fouassin, 27/11/2029) :
+la période reste en cours. UNT, créé le 05/10/2026, ne continue aucun groupe.
+
+**Contrôle croisé** (`explo/controle_senat.py`, 31/10/2026) : 70 pages de senat.fr
+(les 9 écarts, SN2022-131, 60 scrutins tirés au sort dont 30 sur l'ensemble) :
+totaux et 635 lignes scrutin × groupe, **aucun écart**. Toutes les délégations de
+SN2022-51 ont aussi été comparées à la page.
+
+**Rattachement** : scrutin → `date_seance` → lecture → `loi` → signet → dossier AN
+(`senatChemin`), à défaut la date de la loi (`parcours.classer`). Un dossier du
+Sénat peut correspondre à plusieurs dossiers AN : on retient la loi, puis le plus
+avancé (`parcours.dossier_par_loi`). 1 291 scrutins sur 1 321 sont rattachés. Les
+30 autres : 25 sur des résolutions (`ppr…`) ou une motion, et 5 sur `pjl25-801`,
+en 1re lecture le 07/07/2026, sans dossier à l'AN au 31/10/2026.
+
+**Classement des scrutins** : `objet` reprend `texte.objet_scrutin`, non vérifié au
+Sénat texte par texte. Il ne suffit pas à désigner un décisif (`ROADMAP.md`).
 
 ## État de chaque texte
 

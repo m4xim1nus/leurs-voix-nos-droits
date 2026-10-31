@@ -23,6 +23,7 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] Alertes : aucune ne signale un texte rejeté par le rejet d'une partie (PLFSS 2027, V9097) ni un vote sur l'ensemble sans scrutin public ; `etat` les suit, pas `lvnd check` (claude, 2026-10-30)
 - [ ] `lvnd check` : le délai de 14 jours (`DELAI_AMENDEMENTS`) retire à tort du taux de la XVIe ses derniers scrutins (3 041/3 053 affichés, au lieu de 3 159/3 173), alors que cette législature est figée (claude, 2026-10-30)
 - [ ] `lvnd download` : `--leger` retente le dump de l'AN pour les amendements de la XVIe quand ils viennent du plan B (mode `secours`, pas de zip local), jusqu'à 20 minutes de blocage ; un `.part` repris alors que l'AN a publié un nouveau fichier échoue (« taille X, attendu Y ») et reste à supprimer à la main (claude, 2026-10-30)
+- [ ] `lvnd download --leger` en local, quand les amendements de la XVIe ne viennent que du plan B (`unitaire`, sans zip) : il retente le dump de l'AN au lieu de réutiliser ce qui est là, et reste bloqué. Sans effet en CI, qui a la copie de la release (claude, 2026-10-31)
 
 ## Textes à surveiller
 
@@ -31,7 +32,7 @@ Ce que les alertes de `lvnd check` et d'« À traiter » ne signalent pas. Le re
 - [ ] PLFSS 2027 (DLR5L17N54951) : rejeté à l'AN par le rejet d'une partie, aucune alerte tant que celle du point « À trier » n'existe pas (claude, 2026-10-30)
 - [ ] Territoires zéro chômeur (DLR5L17N51962, écarté à 96-0) : commission le 10/11, 2e lecture inscrite le 19/11/2026 ; alerte seulement si le vote n'est plus unanime. Règle 7 : un comité national de la CGT (privés d'emploi) vaut-il fédération ? Aucune source récente lue, à trancher si une position paraît (claude, 2026-10-30)
 - [ ] Réforme de l'audiovisuel public (DLR5L16N47697) : à l'arrêt depuis juillet 2025, à suivre avant tout vote final, fiche de suivi possible (user:moi, 2026-10-29)
-- [ ] Fiches de suivi prêtes dans `source/brouillons-suivi-attente/`, à charger dès l'inscription : casseurs-payeurs (DLR5L17N54925) et ingérences étrangères (DLR5L17N54703) (claude, 2026-10-30)
+- [ ] Fiche de suivi prête dans `source/brouillons-suivi-attente/`, à charger dès l'inscription : ingérences étrangères (DLR5L17N54703). Casseurs-payeurs (DLR5L17N54925) est qualifié au cycle Sénat, sans fiche (décision de Max, 31/10/2026) (claude, 2026-10-30)
 - [ ] AGRASC (DLR5L17N53159, écarté au lot 6) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart. Au prochain passage, actualiser le motif, qui ne cite pas les articles 5 et 5 bis A (décision de Max, 30/10/2026) (claude, 2026-10-29)
 
 ## Cycles candidats
@@ -47,7 +48,7 @@ Un cycle à la fois, choisi et nommé au moment de l'ouvrir.
 ### Sénat
 
 - [→Sénat] Scrutins publics des sénateur·ices (Dosleg, déjà maîtrisé dans quifaitlaloi) (claude, 2026-10-29)
-- [→Sénat] Texte adopté d'abord au Sénat (casseurs-payeurs) : alerte quand il devient attendu à l'AN sans être traité, pour décider sa fiche de suivi sans attendre l'inscription, le choix restant à la main (règle 22) ; préciser alors « sans vote qualifié » quand les votes du Sénat comptent. À valider par Max (user:moi et claude, 2026-10-30)
+- [→Sénat] Texte adopté d'abord au Sénat (casseurs-payeurs) : alerte au vote du Sénat, puis qualification sans attendre l'inscription à l'AN, sans fiche de suivi (décision de Max, 31/10/2026) ; détail dans `ROADMAP.md` (user:moi et claude, 2026-10-30)
 
 ### Passation
 

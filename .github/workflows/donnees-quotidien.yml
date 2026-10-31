@@ -1,9 +1,9 @@
-# Passe quotidienne de l'open data (ROADMAP, Au fil des votes, item 6) : dossiers, scrutins, agenda et
-# Dosleg sont rafraîchis ; les gros dumps viennent du cache de l'Action, ou de la release
+# Passe quotidienne de l'open data (ROADMAP, Au fil des votes, item 6) : dossiers, scrutins, agenda,
+# Dosleg et sénateurs sont rafraîchis ; les gros dumps viennent du cache de l'Action, ou de la release
 # `donnees-figees` pour les amendements de la XVIe. Le dump hebdomadaire (donnees.yml) rafraîchit le reste.
 #
-# Rien n'est commité si une étape échoue, si un score change sans qualification nouvelle, ou si
-# amendements.csv perd des lignes. La date seule (meta.json) ne déclenche pas de commit.
+# Rien n'est commité si une étape échoue, si un score de l'AN change sans qualification nouvelle, ou si
+# amendements.csv ou les votes du Sénat perdent des lignes. La date seule (meta.json) ne déclenche pas de commit.
 
 name: Données AN (quotidien)
 
@@ -75,7 +75,7 @@ jobs:
           uv run --no-dev lvnd build
           uv run --no-dev lvnd check
 
-      - name: Garde-fous (scores identiques, amendements conservés)
+      - name: Garde-fous (scores identiques, amendements et votes du Sénat conservés)
         run: |
           (cd data/export && sha256sum -c "$RUNNER_TEMP/scores.sha256")
           avant=$(git show HEAD:data/export/amendements.csv | wc -l)
@@ -83,6 +83,13 @@ jobs:
           echo "amendements.csv : $avant → $apres lignes"
           if [ "$apres" -lt "$avant" ]; then
             echo "::error::amendements.csv a perdu des lignes : rien n'est commité."
+            exit 1
+          fi
+          avant=$(git archive HEAD data/export/senat/votes | tar -xO | wc -l)
+          apres=$(cat data/export/senat/votes/*.csv | wc -l)
+          echo "votes du Sénat : $avant → $apres lignes"
+          if [ "$apres" -lt "$avant" ]; then
+            echo "::error::les votes du Sénat ont perdu des lignes : rien n'est commité."
             exit 1
           fi
 
@@ -95,7 +102,7 @@ jobs:
           fi
           git -c user.name="github-actions[bot]" \
               -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
-              commit -q -m "Données AN du $(date -u +%d/%m/%Y)"
+              commit -q -m "Données AN et Sénat du $(date -u +%d/%m/%Y)"
           git pull -q --rebase origin main
           git push -q origin HEAD:main
 

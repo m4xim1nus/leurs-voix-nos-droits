@@ -33,6 +33,7 @@ from pathlib import Path
 import httpx
 
 AN = "https://data.assemblee-nationale.fr/static/openData/repository"
+SENATEURS = "https://data.senat.fr/data/senateurs"
 FIGEES = "https://github.com/m4xim1nus/leurs-voix-nos-droits/releases/download/donnees-figees"
 
 SOURCES: dict[str, dict] = {
@@ -49,10 +50,14 @@ SOURCES: dict[str, dict] = {
                       "AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip"},
     "an_agenda_17": {"url": f"{AN}/17/vp/reunions/Agenda.json.zip"},
     "senat_dosleg": {"url": "https://data.senat.fr/data/dosleg/dosleg.zip"},
+    "senat_senateurs": {"url": f"{SENATEURS}/ODSEN_GENERAL.csv", "zip": False},
+    "senat_groupes": {"url": f"{SENATEURS}/ODSEN_HISTOGROUPES.csv", "zip": False},
+    "senat_mandats": {"url": f"{SENATEURS}/ODSEN_ELUSEN.csv", "zip": False},
 }
 
 # Passe quotidienne : ce qui change d'un jour à l'autre et se télécharge vite.
-LEGERES = ("an_dossiers_17", "an_scrutins_17", "an_agenda_17", "senat_dosleg")
+LEGERES = ("an_dossiers_17", "an_scrutins_17", "an_agenda_17", "senat_dosleg", "senat_senateurs", "senat_groupes",
+           "senat_mandats")
 MANIFESTE = "manifeste.json"
 COPIE_FIGEE = "figee.zip"  # copie de la release, jamais confondue avec le dump de l'AN
 PATIENCE_AVANT_SECOURS = 1200  # secondes sans aucun octet avant de basculer sur le plan B

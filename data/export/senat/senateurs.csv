@@ -1,0 +1,515 @@
+id,civ,prenom,nom,etat,type_appartenance,circonscription,departement,courriel
+01024M,M.,Yves,Détraigne,ancien,,Marne,51,y.detraigne@senat.fr
+01025N,Mme,Françoise,Férat,ancien,,Marne,51,f.ferat@senat.fr
+01028R,M.,Jean-Pierre,Sueur,ancien,,Loiret,45,jp.sueur@senat.fr
+01034P,M.,Jean-Marie,Vanlerenberghe,ancien,,Pas-de-Calais,62,jm.vanlerenberghe@senat.fr
+01043Q,Mme,Valérie,Létard,ancien,,Nord,59,v.letard@senat.fr
+01048V,M.,Gérard,Longuet,ancien,,Meuse,55,contact@gerard-longuet.fr
+01057W,M.,Charles,Guené,ancien,,Haute-Marne,52,c.guene@senat.fr
+01058X,M.,Bruno,Sido,actif,,Haute-Marne,52,b.sido@senat.fr
+01060R,M.,Jean Louis,Masson,ancien,,Moselle,57,
+01062T,M.,Jean-Marc,Todeschini,ancien,,Moselle,57,jm.todeschini@senat.fr
+02042T,M.,Renaud,Muselier,actif,Apparenté,Bouches-du-Rhône,13,r.muselier@senat.fr
+04008A,M.,Marc-Philippe,Daubresse,actif,,Nord,59,mp.daubresse@senat.fr
+04033B,M.,Bruno,Retailleau,actif,,Vendée,85,b.retailleau@senat.fr
+04035D,Mme,Joëlle,Garriaud-Maylam,ancien,,Français établis hors de France,099,j.garriaud-maylam@senat.fr
+04042C,M.,Christian,Cambon,actif,,Val-de-Marne,94,c.cambon@senat.fr
+04043D,Mme,Catherine,Procaccia,ancien,,Val-de-Marne,94,c.procaccia@senat.fr
+04045F,Mme,Patricia,Schillinger,ancien,,Haut-Rhin,68,p.schillinger@senat.fr
+04047H,M.,François-Noël,Buffet,ancien,,Rhône,69,fn.buffet@senat.fr
+04057K,Mme,Colette,Mélot,ancien,,Seine-et-Marne,77,c.melot@senat.fr
+04059M,M.,David,Assouline,ancien,,Paris,75,d.assouline@senat.fr
+04070G,Mme,Catherine,Morin-Desailly,actif,,Seine-Maritime,76,c.morin-desailly@senat.fr
+04071H,M.,Philippe,Dominati,ancien,,Paris,75,ph.dominati@senat.fr
+04085P,Mme,Éliane,Assassi,ancien,,Seine-Saint-Denis,93,e.assassi@senat.fr
+04092N,M.,Alain,Milon,ancien,,Vaucluse,84,a.milon@senat.fr
+05008E,M.,Philippe,Bas,ancien,,Manche,50,p.bas@senat.fr
+05012A,M.,Rémy,Pointereau,ancien,,Cher,18,r.pointereau@senat.fr
+07004J,Mme,Nathalie,Goulet,actif,,Orne,61,n.goulet@senat.fr
+07029T,M.,Marc,Laménie,actif,,Ardennes,08,m.lamenie@senat.fr
+07033P,Mme,Catherine,Dumas,actif,,Paris,75,c.dumas@senat.fr
+08009T,M.,Hervé,Maurey,actif,,Eure,27,h.maurey@senat.fr
+08010L,M.,Antoine,Lefèvre,actif,,Aisne,02,a.lefevre@senat.fr
+08011M,M.,Albéric,de Montgolfier,actif,Rattaché,Eure-et-Loir,28,a.de-montgolfier@senat.fr
+08012N,M.,Jean-Jacques,Lozach,actif,,Creuse,23,jj.lozach@senat.fr
+08015R,M.,Daniel,Laurent,ancien,,Charente-Maritime,17,cab.daniel.laurent@orange.fr
+08018U,M.,Christophe-André,Frassa,ancien,,Français établis hors de France,099,c.frassa@senat.fr
+08028W,M.,Alain,Chatillon,ancien,,Haute-Garonne,31,a.chatillon@senat.fr
+08034U,M.,Dominique,de Legge,ancien,,Ille-et-Vilaine,35,d.de-legge@senat.fr
+08045X,M.,Jean-Luc,Fichet,ancien,,Finistère,29,jl.fichet@senat.fr
+08047A,M.,Philippe,Paul,ancien,Rattaché,Finistère,29,p.paul@senat.fr
+08056B,Mme,Sylvie,Goy-Chavent,actif,Rattaché,Ain,01,s.goy-chavent@senat.fr
+08060W,Mme,Nicole,Bonnefoy,actif,,Charente,16,n.bonnefoy@senat.fr
+08061X,M.,François,Patriat,ancien,,Côte-d'Or,21,f.patriat@senat.fr
+08069G,M.,Alain,Houpert,actif,Rattaché,Côte-d'Or,21,a.houpert@senat.fr
+08070Y,M.,François,Rebsamen,actif,Apparenté,Côte-d'Or,21,f.rebsamen@senat.fr
+08073C,M.,Georges,Patient,ancien,,Guyane,973,g.patient@senat.fr
+10006L,Mme,Catherine,Deroche,ancien,,Maine-et-Loire,49,c.deroche@senat.fr
+10015M,M.,André,Reichardt,ancien,Apparenté,Bas-Rhin,67,a.reichardt@senat.fr
+11010L,M.,Pierre,Frogier,ancien,,Nouvelle-Calédonie,988,p.frogier@senat.fr
+11012A,M.,Jean-Claude,Requier,ancien,,Lot,46,senateur-requier@orange.fr
+11026G,M.,Jean-Yves,Leconte,ancien,,Français établis hors de France,099,jy.leconte@senat.fr
+11027H,Mme,Hélène,Conway-Mouret,actif,,Français établis hors de France,099,h.conway-mouret@senat.fr
+11031D,Mme,Laurence,Cohen,ancien,,Val-de-Marne,94,l.cohen@senat.fr
+11033F,Mme,Esther,Benbassa,ancien,,Paris,75,e.benbassa@senat.fr
+11040E,M.,Éric,Bocquet,ancien,,Nord,59,e.bocquet@senat.fr
+11041F,M.,André,Vallini,ancien,,Isère,38,a.vallini@senat.fr
+11043H,M.,Michel,Savin,ancien,,Isère,38,m.savin@senat.fr
+11045K,Mme,Laurence,Rossignol,actif,,Val-de-Marne,94,l.rossignol@senat.fr
+11048N,M.,Jean-François,Husson,actif,,Meurthe-et-Moselle,54,jf.husson@senat.fr
+11053K,M.,Vincent,Capo-Canellas,actif,,Seine-Saint-Denis,93,v.capo-canellas@senat.fr
+11054L,M.,Gilbert,Roger,ancien,,Seine-Saint-Denis,93,g.roger@senat.fr
+11056N,Mme,Cécile,Cukierman,actif,,Loire,42,c.cukierman@senat.fr
+11064N,M.,Joël,Guerriau,ancien,,Loire-Atlantique,44,j.guerriau@senat.fr
+11065P,M.,Ronan,Dantec,actif,,Loire-Atlantique,44,r.dantec@senat.fr
+11066Q,M.,Yannick,Vaugrenard,ancien,,Loire-Atlantique,44,y.vaugrenard@senat.fr
+11067R,Mme,Michelle,Meunier,ancien,,Loire-Atlantique,44,m.meunier@senat.fr
+11070L,M.,Vincent,Delahaye,actif,,Essonne,91,v.delahaye@senat.fr
+11072N,M.,Thani,Mohamed Soilihi,actif,,Mayotte,976,t.mohamed-soilihi@senat.fr
+11074Q,M.,Vincent,Éblé,actif,,Seine-et-Marne,77,v.eble@senat.fr
+11077T,Mme,Marie-Noëlle,Lienemann,ancien,,Paris,75,mn.lienemann@senat.fr
+11080N,M.,Pierre,Charon,ancien,,Paris,75,p.charon@senat.fr
+11083R,M.,André,Gattolin,ancien,,Hauts-de-Seine,92,a.gattolin@senat.fr
+11085T,M.,Hervé,Marseille,actif,,Hauts-de-Seine,92,h.marseille@senat.fr
+11090Q,Mme,Sophie,Primas,actif,,Yvelines,78,s.primas@senat.fr
+11097X,M.,René-Paul,Savary,ancien,,Marne,51,rp.savary@senat.fr
+11099A,M.,Joël,Labbé,ancien,,Morbihan,56,j.labbe@senat.fr
+11101A,M.,François,Calvet,ancien,,Pyrénées-Orientales,66,f.calvet@senat.fr
+11103C,M.,Jean-Noël,Cardoux,ancien,,Loiret,45,jn.cardoux@senat.fr
+11104D,M.,Jacques-Bernard,Magner,ancien,,Puy-de-Dôme,63,jb.magner@senat.fr
+11109J,M.,Maurice,Antiste,ancien,,Martinique,972,m.antiste@senat.fr
+11110B,Mme,Frédérique,Espagnac,actif,,Pyrénées-Atlantiques,64,f.espagnac@senat.fr
+11115U,M.,Édouard,Courtial,actif,,Oise,60,e.courtial@senat.fr
+12016W,M.,Victorin,Lurel,actif,,Guadeloupe,971,v.lurel@senat.fr
+12028B,Mme,Marie-Arlette,Carlotti,actif,,Bouches-du-Rhône,13,ma.carlotti@senat.fr
+12041X,M.,Pierre,Laurent,ancien,,Paris,75,p.laurent@senat.fr
+14001X,M.,Didier,Marie,ancien,,Seine-Maritime,76,d.marie@senat.fr
+14021P,M.,Patrick,Kanner,actif,,Nord,59,p.kanner@senat.fr
+14026U,Mme,Pascale,Gruny,ancien,,Aisne,02,p.gruny@senat.fr
+14030Q,Mme,Annick,Billon,actif,,Vendée,85,a.billon@senat.fr
+14031R,M.,Didier,Mandelli,ancien,,Vendée,85,d.mandelli@senat.fr
+14033T,M.,Daniel,Gremillet,actif,,Vosges,88,d.gremillet@senat.fr
+14037X,M.,Jean-Baptiste,Lemoyne,actif,,Yonne,89,jb.lemoyne@senat.fr
+14038Y,M.,Patrick,Chaize,ancien,,Ain,01,p.chaize@senat.fr
+14042U,Mme,Élisabeth,Doineau,actif,,Mayenne,53,e.doineau@senat.fr
+14053L,Mme,Agnès,Canayer,actif,Apparenté,Seine-Maritime,76,a.canayer@senat.fr
+14055N,M.,Stéphane,Ravier,ancien,,Bouches-du-Rhône,13,s.ravier@senat.fr
+14059S,Mme,Vivette,Lopez,ancien,,Gard,30,v.lopez@senat.fr
+14069U,M.,François,Bonhomme,actif,Apparenté,Tarn-et-Garonne,82,f.bonhomme@senat.fr
+14071N,M.,Philippe,Mouiller,actif,,Deux-Sèvres,79,p.mouiller@senat.fr
+14073Q,M.,Claude,Kern,ancien,,Bas-Rhin,67,c.kern@senat.fr
+14083S,M.,Michel,Canévet,actif,,Finistère,29,m.canevet@senat.fr
+14089Y,M.,Philippe,Bonnecarrère,ancien,,Tarn,81,p.bonnecarrere@senat.fr
+14097Y,Mme,Gisèle,Jourda,ancien,,Aude,11,g.jourda@senat.fr
+14105F,M.,Gilbert,Bouchet,ancien,,Drôme,26,g.bouchet@senat.fr
+14107H,M.,Jean-Yves,Roux,actif,,Alpes de Haute-Provence,04,jy.roux@senat.fr
+14109K,Mme,Marie-Pierre,Monier,ancien,,Drôme,26,mp.monier@senat.fr
+14111D,M.,Alain,Marc,actif,,Aveyron,12,a.marc@senat.fr
+14121F,M.,Éric,Jeansannetas,ancien,,Creuse,23,e.jeansannetas@senat.fr
+14123H,M.,Jacques,Grosperrin,actif,,Doubs,25,j.grosperrin@senat.fr
+14133K,M.,Pascal,Allizard,ancien,,Calvados,14,p.allizard@senat.fr
+14137P,M.,François,Aubey,actif,,Calvados,14,f.aubey@senat.fr
+14147R,Mme,Marie,Mercier,actif,Apparenté,Saône-et-Loire,71,marie.mercier@senat.fr
+14151M,M.,Jérôme,Durain,ancien,,Saône-et-Loire,71,j.durain@senat.fr
+14169X,M.,Louis-Jean,de Nicolaÿ,ancien,,Sarthe,72,lj.de-nicolay@senat.fr
+14173T,M.,Jean Pierre,Vogel,actif,,Sarthe,72,jp.vogel@senat.fr
+14179A,M.,Loïc,Hervé,actif,,Haute-Savoie,74,l.herve@senat.fr
+14187A,Mme,Dominique,Estrosi Sassone,actif,,Alpes-Maritimes,06,d.estrosi-sassone@senat.fr
+14189C,M.,Jean-Michel,Arnaud,actif,,Hautes-Alpes,05,jm.arnaud@senat.fr
+14191V,M.,Jean-Jacques,Panunzi,actif,Apparenté,Corse-du-Sud,2A,jj.panunzi@senat.fr
+14193X,M.,Cédric,Perrin,actif,,Territoire de Belfort,90,cedric.perrin@senat.fr
+14195A,M.,Daniel,Chasseing,ancien,,Corrèze,19,d.chasseing@senat.fr
+14205J,Mme,Anne-Catherine,Loisier,actif,Rattaché,Côte-d'Or,21,ac.loisier@senat.fr
+14207L,M.,Henri,Cabanel,ancien,,Hérault,34,h.cabanel@senat.fr
+14211G,M.,Jean-Pierre,Grand,ancien,,Hérault,34,jp.grand@senat.fr
+14213J,Mme,Corinne,Imbert,actif,,Charente-Maritime,17,c.imbert@senat.fr
+14215L,Mme,Catherine,Di Folco,actif,,Rhône,69,c.di-folco@senat.fr
+14217N,Mme,Chantal,Deseyne,ancien,,Eure-et-Loir,28,c.deseyne@senat.fr
+14219Q,M.,Jean-François,Longeot,actif,,Doubs,25,jf.longeot@senat.fr
+14221J,M.,Pierre,Médevielle,actif,,Haute-Garonne,31,p.medevielle@senat.fr
+14223L,Mme,Brigitte,Micouleau,actif,,Haute-Garonne,31,b.micouleau@senat.fr
+14225N,M.,Claude,Raynal,ancien,,Haute-Garonne,31,c.raynal@senat.fr
+14229S,Mme,Sylvie,Robert,actif,,Ille-et-Vilaine,35,s.robert@senat.fr
+14231L,Mme,Françoise,Gatel,actif,,Ille-et-Vilaine,35,
+14237S,M.,Cyril,Pellevat,actif,,Haute-Savoie,74,c.pellevat@senat.fr
+14241N,Mme,Mireille,Jouve,ancien,,Bouches-du-Rhône,13,m.jouve@senat.fr
+14249W,Mme,Nicole,Duranton,ancien,,Eure,27,n.duranton@senat.fr
+14251Q,M.,Claude,Malhuret,actif,,Allier,03,c.malhuret@senat.fr
+14253S,M.,Claude,Nougein,ancien,,Corrèze,19,c.nougein@senat.fr
+14255U,M.,Olivier,Cadic,actif,,Français établis hors de France,099,o.cadic@senat.fr
+14257W,M.,Franck,Montaugé,ancien,,Gers,32,f.montauge@senat.fr
+14259Y,M.,Mathieu,Darnaud,actif,,Ardèche,07,m.darnaud@senat.fr
+14267Y,M.,Olivier,Cigolotti,actif,,Haute-Loire,43,o.cigolotti@senat.fr
+14275Y,Mme,Lana,Tetuanui,actif,Rattaché,Polynésie française,987,l.tetuanui@senat.fr
+14281W,Mme,Corinne,Féret,actif,,Calvados,14,c.feret@senat.fr
+14327T,M.,Bernard,Delcros,actif,,Cantal,15,b.delcros@senat.fr
+14329V,Mme,Anne,Chain-Larché,actif,,Seine-et-Marne,77,a.chain-larche@senat.fr
+14331P,M.,Jean-François,Rapin,actif,,Pas-de-Calais,62,jf.rapin@senat.fr
+14355X,Mme,Frédérique,Gerbaud,ancien,,Indre,36,f.gerbaud@senat.fr
+14357A,M.,Pierre,Cuypers,actif,,Seine-et-Marne,77,
+15197G,M.,Franck,Dhersin,actif,Apparenté,Nord,59,f.dhersin@senat.fr
+15689X,M.,Édouard,Fritch,actif,Rattaché,Polynésie française,987,e.fritch@senat.fr
+16685X,M.,Jacques,Le Nay,ancien,,Morbihan,56,j.le-nay@senat.fr
+17023S,M.,Philippe,Folliot,actif,,Tarn,81,p.folliot@senat.fr
+17229F,M.,Stéphane,Demilly,actif,,Somme,80,s.demilly@senat.fr
+17305A,M.,Dominique,Le Mèner,actif,Apparenté,Sarthe,72,d.le-mener@senat.fr
+17331C,M.,Christophe,Guilloteau,actif,Apparenté,Rhône,69,c.guilloteau@senat.fr
+17367Q,M.,Étienne,Blanc,ancien,,Rhône,69,e.blanc@senat.fr
+17589D,M.,Jean-Pierre,Decool,ancien,,Nord,59,jp.decool@senat.fr
+17637T,M.,Philippe,Pemezec,ancien,,Hauts-de-Seine,92,p.pemezec@senat.fr
+17737W,Mme,Valérie,Boyer,actif,,Bouches-du-Rhône,13,v.boyer@senat.fr
+17779H,Mme,Monique,Lubin,actif,,Landes,40,m.lubin@senat.fr
+17965H,Mme,Émilienne,Poumirol,ancien,,Haute-Garonne,31,e.poumirol@senat.fr
+18045D,Mme,Brigitte,Bourguignon,actif,,Pas-de-Calais,62,b.bourguignon@senat.fr
+18083K,M.,Guillaume,Chevrollier,actif,,Mayenne,53,g.chevrollier@senat.fr
+18153G,M.,Daniel,Gibbs,actif,Apparenté,Saint-Martin,978,d.gibbs@senat.fr
+18193Q,Mme,Annie,Le Houerou,actif,,Côtes-d'Armor,22,a.le-houerou@senat.fr
+18207D,Mme,Audrey,Linkenheld,actif,,Nord,59,a.linkenheld@senat.fr
+18231D,Mme,Corinne,Narassiguin,actif,,Seine-Saint-Denis,93,
+18233F,Mme,Nathalie,Nieson,actif,,Drôme,26,n.nieson@senat.fr
+18395Y,Mme,Karine,Daniel,actif,,Loire-Atlantique,44,k.daniel@senat.fr
+18503J,Mme,Valérie,Bazin-Malgras,actif,,Aube,10,v.bazin-malgras@senat.fr
+18543S,M.,Loïc,Kervran,actif,,Cher,18,l.kervran@senat.fr
+19057M,Mme,Samantha,Cazebonne,ancien,,Français établis hors de France,099,s.cazebonne@senat.fr
+19111A,Mme,Isabelle,Florennes,actif,,Hauts-de-Seine,92,i.florennes@senat.fr
+19251M,M.,Gilbert-Luc,Devinaz,ancien,Apparenté,Rhône,69,
+19295A,Mme,Catherine,Conconne,actif,,Martinique,972,c.conconne@senat.fr
+19301E,M.,Dominique,Théophile,actif,,Guadeloupe,971,d.theophile@senat.fr
+19319Q,M.,Gérard,Poadja,ancien,,Nouvelle-Calédonie,988,g.poadja@senat.fr
+19329S,M.,Abdallah,Hassani,ancien,,Mayotte,976,a.hassani@senat.fr
+19331L,M.,Saïd,Omar Oili,actif,Apparenté,Mayotte,976,s.omar-oili@senat.fr
+19333N,M.,Jean-Michel,Houllegatte,ancien,,Manche,50,jm.houllegatte@senat.fr
+19335Q,M.,Jean-Marie,Mizzon,actif,,Moselle,57,jm.mizzon@senat.fr
+19347U,M.,Guillaume,Gontard,actif,,Isère,38,g.gontard@senat.fr
+19349W,M.,Didier,Rambaud,actif,,Isère,38,d.rambaud@senat.fr
+19367Y,Mme,Christine,Bonfanti-Dossat,actif,,Lot-et-Garonne,47,c.bonfanti-dossat@senat.fr
+19369B,M.,Jean-Pierre,Moga,ancien,,Lot-et-Garonne,47,jp.moga@senat.fr
+19383Y,M.,Jean-Marc,Boyer,actif,,Puy-de-Dôme,63,jm.boyer@senat.fr
+19387D,M.,Éric,Gold,actif,,Puy-de-Dôme,63,e.gold@senat.fr
+19399H,M.,Jean-Raymond,Hugonet,actif,Apparenté,Essonne,91,jr.hugonet@senat.fr
+19413M,M.,Jean-Claude,Tissot,actif,,Loire,42,jc.tissot@senat.fr
+19415P,M.,Bernard,Bonne,ancien,,Loire,42,b.bonne@senat.fr
+19421M,M.,Hugues,Saury,actif,,Loiret,45,h.saury@senat.fr
+19441R,M.,Pierre,Louault,ancien,,Indre-et-Loire,37,p.louault@senat.fr
+19443T,Mme,Isabelle,Raimond-Pavero,ancien,,Indre-et-Loire,37,i.raimond-pavero@senat.fr
+19447X,Mme,Muriel,Jourda,actif,,Morbihan,56,m.jourda@senat.fr
+19467C,Mme,Marie-Christine,Chauvin,ancien,,Jura,39,mc.chauvin@senat.fr
+19479G,Mme,Sylvie,Vermeillet,actif,,Jura,39,s.vermeillet@senat.fr
+19489J,M.,Éric,Kerrouche,actif,,Landes,40,e.kerrouche@senat.fr
+19503N,Mme,Angèle,Préville,ancien,,Lot,46,
+19507S,M.,Laurent,Duplomb,actif,,Haute-Loire,43,l.duplomb@senat.fr
+19511N,M.,Jean-Marie,Janssens,ancien,,Loir-et-Cher,41,jm.janssens@senat.fr
+19515S,M.,Serge,Babary,ancien,,Indre-et-Loire,37,s.babary@senat.fr
+19525U,M.,Michel,Dagbert,ancien,,Pas-de-Calais,62,m.dagbert@senat.fr
+19527W,Mme,Sabine,Van Heghe,ancien,,Pas-de-Calais,62,s.van-heghe@senat.fr
+19531S,M.,Patrice,Joly,actif,,Nièvre,58,p.joly@senat.fr
+19533U,M.,Stéphane,Piednoir,actif,,Maine-et-Loire,49,s.piednoir@senat.fr
+19543W,M.,Arnaud,de Belenet,ancien,,Seine-et-Marne,77,a.de-belenet@senat.fr
+19545Y,M.,Emmanuel,Capus,actif,,Maine-et-Loire,49,e.capus@senat.fr
+19549D,M.,Joël,Bigot,ancien,,Maine-et-Loire,49,joel.bigot@senat.fr
+19551W,M.,Olivier,Jacquin,actif,,Meurthe-et-Moselle,54,o.jacquin@senat.fr
+19553Y,Mme,Véronique,Guillotin,ancien,,Meurthe-et-Moselle,54,v.guillotin@senat.fr
+19563B,M.,Franck,Menonville,actif,,Meuse,55,f.menonville@senat.fr
+19565D,Mme,Michelle,Gréaume,actif,,Nord,59,m.greaume@senat.fr
+19569H,M.,Olivier,Henno,actif,,Nord,59,o.henno@senat.fr
+19573D,M.,Olivier,Paccaud,actif,,Oise,60,o.paccaud@senat.fr
+19575F,Mme,Martine,Berthet,actif,,Savoie,73,m.berthet@senat.fr
+19577H,Mme,Nassimah,Dindar,ancien,,La Réunion,974,n.dindar@senat.fr
+19581D,Mme,Brigitte,Lherbier,ancien,,Nord,59,b.lherbier@senat.fr
+19583F,M.,Jean-Louis,Lagourgue,ancien,,La Réunion,974,jl.lagourgue@senat.fr
+19585H,M.,Dany,Wattebled,actif,,Nord,59,d.wattebled@senat.fr
+19591F,M.,Xavier,Iacovelli,actif,,Hauts-de-Seine,92,x.iacovelli@senat.fr
+19593H,M.,Pierre,Ouzoulias,actif,,Hauts-de-Seine,92,p.ouzoulias@senat.fr
+19599P,Mme,Martine,Filleul,ancien,,Nord,59,m.filleul@senat.fr
+19611R,M.,Laurent,Lafon,actif,,Val-de-Marne,94,l.lafon@senat.fr
+19619A,Mme,Denise,Saint-Pé,actif,,Pyrénées-Atlantiques,64,d.saint-pe@senat.fr
+19621T,M.,Max,Brisson,actif,,Pyrénées-Atlantiques,64,m.brisson@senat.fr
+19629C,Mme,Maryse,Carrère,actif,,Hautes-Pyrénées,65,m.carrere@senat.fr
+19631V,Mme,Viviane,Artigalas,actif,,Hautes-Pyrénées,65,v.artigalas@senat.fr
+19637C,M.,Frédéric,Marchand,ancien,,Nord,59,f.marchand@senat.fr
+19643A,Mme,Céline,Boulay-Espéronnier,ancien,,Paris,75,c.boulay-esperonnier@senat.fr
+19647E,M.,Rémi,Féraud,actif,,Paris,75,r.feraud@senat.fr
+19649G,Mme,Marie-Pierre,de La Gontrie,actif,,Paris,75,
+19651A,M.,Julien,Bargeton,ancien,,Paris,75,j.bargeton@senat.fr
+19657G,Mme,Viviane,Malet,actif,,La Réunion,974,v.malet@senat.fr
+19659J,M.,Michel,Dennemont,ancien,,La Réunion,974,m.dennemont@senat.fr
+19663E,Mme,Annie,Delmont-Koropoulis,ancien,,Seine-Saint-Denis,93,a.delmont-koropoulis@senat.fr
+19667J,M.,Arnaud,Bazin,actif,,Val-d'Oise,95,a.bazin@senat.fr
+19669L,M.,Rachid,Temal,actif,,Val-d'Oise,95,r.temal@senat.fr
+19671E,M.,Sébastien,Meurant,ancien,,Val-d'Oise,95,s.meurant@senat.fr
+19673G,Mme,Jacqueline,Eustache-Brinio,actif,,Val-d'Oise,95,j.eustache-brinio@senat.fr
+19675J,Mme,Claudine,Thomas,ancien,,Seine-et-Marne,77,c.thomas@senat.fr
+19679N,Mme,Frédérique,Puissat,actif,,Isère,38,f.puissat@senat.fr
+19681G,M.,Jean-Pierre,Corbisez,actif,,Pas-de-Calais,62,jp.corbisez@senat.fr
+19683J,M.,Bernard,Jomier,actif,Apparenté,Paris,75,b.jomier@senat.fr
+19685L,Mme,Christine,Herzog,actif,,Moselle,57,c.herzog@senat.fr
+19687N,M.,Pascal,Savoldelli,actif,,Val-de-Marne,94,p.savoldelli@senat.fr
+19691J,Mme,Jocelyne,Guidez,actif,,Essonne,91,j.guidez@senat.fr
+19693L,Mme,Laure,Darcos,actif,,Essonne,91,l.darcos@senat.fr
+19695N,M.,Fabien,Gay,actif,,Seine-Saint-Denis,93,f.gay@senat.fr
+19697Q,M.,Martin,Lévrier,actif,,Yvelines,78,m.levrier@senat.fr
+19699S,M.,Michel,Laugier,actif,Rattaché,Yvelines,78,m.laugier@senat.fr
+19701S,Mme,Marta,de Cidrac,actif,,Yvelines,78,m.de-cidrac@senat.fr
+19703U,M.,Jean,Sol,actif,,Pyrénées-Orientales,66,j.sol@senat.fr
+19705W,Mme,Évelyne,Renaud-Garabedian,actif,Rattaché,Français établis hors de France,099,e.renaud-garabedian@senat.fr
+19707Y,M.,Jean-Pierre,Bansard,ancien,Rattaché,Français établis hors de France,099,jp.bansard@senat.fr
+19709B,M.,Ronan,Le Gleut,actif,,Français établis hors de France,099,r.le-gleut@senat.fr
+19711U,Mme,Christine,Lavarde,actif,,Hauts-de-Seine,92,c.lavarde@senat.fr
+19713W,Mme,Nadia,Sollogoub,actif,,Nièvre,58,n.sollogoub@senat.fr
+19715Y,Mme,Victoire,Jasmin,ancien,,Guadeloupe,971,v.jasmin@senat.fr
+19717B,M.,Stéphane,Artano,ancien,,Saint-Pierre-et-Miquelon,975,s.artano@senat.fr
+19719D,Mme,Nathalie,Delattre,actif,,Gironde,33,n.delattre@senat.fr
+19721W,M.,Alain,Cazabonne,ancien,,Gironde,33,a.cazabonne@senat.fr
+19723Y,Mme,Florence,Lassarade,ancien,,Gironde,33,f.lassarade@senat.fr
+19725B,Mme,Laurence,Harribey,ancien,,Gironde,33,l.harribey@senat.fr
+19729F,M.,Henri,Leroy,ancien,,Alpes-Maritimes,06,h.leroy@senat.fr
+19735D,Mme,Sonia,de La Provôté,actif,,Calvados,14,s.delaprovote@senat.fr
+19739H,M.,Jean-Paul,Prince,ancien,,Loir-et-Cher,41,
+19741B,M.,Jérôme,Bascher,ancien,,Oise,60,j.bascher@senat.fr
+19745F,Mme,Évelyne,Perrot,ancien,,Aube,10,
+19747H,M.,Yves,Bouloux,ancien,,Vienne,86,y.bouloux@senat.fr
+19749K,Mme,Dominique,Vérien,actif,,Yonne,89,d.verien@senat.fr
+19758L,Mme,Céline,Brulin,actif,,Seine-Maritime,76,c.brulin@senat.fr
+19760E,Mme,Cathy,Apourceau-Poly,actif,,Pas-de-Calais,62,c.apourceau-poly@senat.fr
+19762G,M.,Vincent,Segouin,ancien,,Orne,61,v.segouin@senat.fr
+19766L,M.,Damien,Regnard,ancien,,Français établis hors de France,099,d.regnard@senat.fr
+19768N,Mme,Sylviane,Noël,actif,Rattaché,Haute-Savoie,74,s.noel@senat.fr
+19782L,M.,Bernard,Buis,ancien,,Drôme,26,b.buis@senat.fr
+19798U,Mme,Marie-Pierre,Richer,ancien,Rattaché,Cher,18,mp.richer@senat.fr
+19820Y,M.,Hervé,Gillé,actif,,Gironde,33,h.gille@senat.fr
+19826F,M.,Pascal,Martin,actif,,Seine-Maritime,76,p.martin@senat.fr
+19866P,Mme,Guylène,Pantel,actif,,Lozère,48,g.pantel@senat.fr
+19916G,M.,Bastien,Coriton,actif,,Seine-Maritime,76,b.coriton@senat.fr
+19954N,Mme,Catherine,Belrhiti,actif,,Moselle,57,c.belrhiti@senat.fr
+20016T,M.,Mikaele,Kulimoetoke,ancien,,Iles Wallis et Futuna,986,m.kulimoetoke@senat.fr
+20018V,M.,Jean-Jacques,Michau,actif,,Ariège,09,jj.michau@senat.fr
+20020P,M.,Bruno,Rojouan,actif,Rattaché,Allier,03,b.rojouan@senat.fr
+20022R,Mme,Nadine,Bellurot,actif,Apparenté,Indre,36,n.bellurot@senat.fr
+20024T,M.,Bruno,Belin,actif,Rattaché,Vienne,86,b.belin@senat.fr
+20026V,Mme,Anne,Ventalon,actif,Apparenté,Ardèche,07,a.ventalon@senat.fr
+20028X,M.,Serge,Mérillou,actif,,Dordogne,24,s.merillou@senat.fr
+20030R,M.,Sebastien,Pla,actif,,Aude,11,s.pla@senat.fr
+20032T,M.,Jean-Claude,Anglars,actif,,Aveyron,12,jc.anglars@senat.fr
+20034V,Mme,Micheline,Jacques,actif,,Saint-Barthélemy,977,m.jacques@senat.fr
+20036X,M.,Paul Toussaint,Parigi,actif,Rattaché,Haute-Corse,2B,pt.parigi@senat.fr
+20038A,M.,Gilbert,Favreau,ancien,,Deux-Sèvres,79,g.favreau@senat.fr
+20040T,M.,Alain,Duffourg,actif,Rattaché,Gers,32,a.duffourg@senat.fr
+20042V,M.,François,Bonneau,actif,,Charente,16,f.bonneau@senat.fr
+20044X,M.,Stéphane,Sautarel,actif,,Cantal,15,s.sautarel@senat.fr
+20046A,Mme,Marie-Claude,Varaillas,actif,,Dordogne,24,mc.varaillas@senat.fr
+20048C,M.,Jean,Hingray,actif,,Vosges,88,j.hingray@senat.fr
+20050V,Mme,Vanina,Paoli-Gagin,actif,,Aube,10,v.paoli-gagin@senat.fr
+20052X,M.,Pierre-Antoine,Levi,actif,,Tarn-et-Garonne,82,pa.levi@senat.fr
+20054A,M.,Olivier,Rietmann,actif,,Haute-Saône,70,o.rietmann@senat.fr
+20056C,Mme,Else,Joseph,actif,,Ardennes,08,e.joseph@senat.fr
+20058E,M.,Cédric,Vial,actif,Rattaché,Savoie,73,c.vial@senat.fr
+20060X,M.,Rémi,Cardon,actif,,Somme,80,r.cardon@senat.fr
+20062A,M.,Laurent,Somon,actif,,Somme,80,l.somon@senat.fr
+20064C,M.,Mickaël,Vallet,actif,,Charente-Maritime,17,m.vallet@senat.fr
+20066E,Mme,Annick,Jacquemet,ancien,,Doubs,25,a.jacquemet@senat.fr
+20068G,M.,Daniel,Gueret,ancien,Rattaché,Eure-et-Loir,28,d.gueret@senat.fr
+20070A,M.,Thierry,Cozic,actif,,Sarthe,72,t.cozic@senat.fr
+20072C,M.,André,Guiol,ancien,,Var,83,a.guiol@senat.fr
+20074E,Mme,Françoise,Dumont,actif,,Var,83,f.dumont@senat.fr
+20076G,M.,Jean,Bacci,ancien,,Var,83,j.bacci@senat.fr
+20078J,M.,Michel,Bonnus,ancien,,Var,83,m.bonnus@senat.fr
+20080C,Mme,Isabelle,Briquet,actif,,Haute-Vienne,87,i.briquet@senat.fr
+20082E,M.,Christian,Redon-Sarrazy,actif,,Haute-Vienne,87,c.redon-sarrazy@senat.fr
+20084G,M.,Lucien,Stanzione,ancien,,Vaucluse,84,l.stanzione@senat.fr
+20086J,M.,Jean-Baptiste,Blanc,actif,,Vaucluse,84,jb.blanc@senat.fr
+20088L,M.,Denis,Bouad,actif,,Gard,30,d.bouad@senat.fr
+20090E,M.,Laurent,Burgoa,actif,,Gard,30,l.burgoa@senat.fr
+20092G,M.,Daniel,Salmon,actif,,Ille-et-Vilaine,35,d.salmon@senat.fr
+20094J,Mme,Florence,Blatrix Contat,actif,,Ain,01,f.blatrix-contat@senat.fr
+20096L,Mme,Laurence,Muller-Bronn,actif,Rattaché,Bas-Rhin,67,l.muller-bronn@senat.fr
+20098N,Mme,Elsa,Schalck,actif,,Bas-Rhin,67,e.schalck@senat.fr
+20100N,M.,Jacques,Fernique,ancien,,Bas-Rhin,67,j.fernique@senat.fr
+20102Q,M.,Gérard,Lahellec,actif,,Côtes-d'Armor,22,g.lahellec@senat.fr
+20104S,M.,Alain,Cadec,actif,,Côtes-d'Armor,22,a.cadec@senat.fr
+20106U,Mme,Nadège,Havet,actif,,Finistère,29,n.havet@senat.fr
+20108W,M.,Stéphane,Le Rudulier,ancien,,Bouches-du-Rhône,13,s.le-rudulier@senat.fr
+20110Q,M.,Guy,Benarroche,actif,,Bouches-du-Rhône,13,g.benarroche@senat.fr
+20112S,M.,Jérémy,Bacchi,actif,,Bouches-du-Rhône,13,j.bacchi@senat.fr
+20114U,M.,Hussein,Bourgi,actif,,Hérault,34,h.bourgi@senat.fr
+20116W,M.,Christian,Bilhac,ancien,,Hérault,34,c.bilhac@senat.fr
+20118Y,Mme,Kristina,Pluchet,actif,,Eure,27,k.pluchet@senat.fr
+20120S,M.,Fabien,Genet,actif,Rattaché,Saône-et-Loire,71,f.genet@senat.fr
+20122U,M.,Pierre-Jean,Verzelen,ancien,,Aisne,02,pj.verzelen@senat.fr
+20124W,Mme,Sabine,Drexler,actif,Apparenté,Haut-Rhin,68,s.drexler@senat.fr
+20126Y,M.,Christian,Klinger,actif,,Haut-Rhin,68,c.klinger@senat.fr
+20128B,M.,Ludovic,Haye,actif,,Haut-Rhin,68,l.haye@senat.fr
+20130U,Mme,Raymonde,Poncet Monge,ancien,,Rhône,69,r.poncet@senat.fr
+20132W,M.,Bernard,Fialaire,actif,,Rhône,69,b.fialaire@senat.fr
+20134Y,M.,Thomas,Dossus,actif,,Rhône,69,t.dossus@senat.fr
+20136B,M.,Philippe,Tabarot,ancien,,Alpes-Maritimes,06,p.tabarot@senat.fr
+20138D,Mme,Alexandra,Borchio Fontimp,actif,,Alpes-Maritimes,06,a.borchio-fontimp@senat.fr
+20140W,Mme,Patricia,Demas,ancien,,Alpes-Maritimes,06,p.demas@senat.fr
+20142Y,Mme,Monique,de Marco,ancien,,Gironde,33,m.de-marco@senat.fr
+20144B,M.,Patrick,Chauvet,ancien,,Seine-Maritime,76,p.chauvet@senat.fr
+20146D,Mme,Marie-Laure,Phinera-Horth,ancien,,Guyane,973,ml.phinera-horth@senat.fr
+20148F,Mme,Annick,Petrus,ancien,,Saint-Martin,978,a.petrus@senat.fr
+20150Y,M.,Teva,Rohfritsch,ancien,,Polynésie française,987,t.rohfritsch@senat.fr
+20152B,Mme,Toine,Bourrat,ancien,,Yvelines,78,t.bourrat@senat.fr
+20172F,Mme,Laurence,Garnier,actif,,Loire-Atlantique,44,l.garnier@senat.fr
+20180F,Mme,Béatrice,Gosselin,actif,Apparenté,Manche,50,b.gosselin@senat.fr
+20248J,Mme,Brigitte,Devésa,actif,,Bouches-du-Rhône,13,b.devesa@senat.fr
+20252E,M.,Thierry,Meignen,actif,,Seine-Saint-Denis,93,
+20264J,M.,Yan,Chantrel,actif,,Français établis hors de France,099,y.chantrel@senat.fr
+20266L,Mme,Mélanie,Vogel,actif,,Français établis hors de France,099,m.vogel@senat.fr
+20286Q,Mme,Amel,Gacquerre,actif,,Pas-de-Calais,62,a.gacquerre@senat.fr
+20298U,Mme,Daphné,Ract-Madoux,ancien,,Essonne,91,d.ract-madoux@senat.fr
+20390P,Mme,Edwige,Diaz,actif,,Gironde,33,e.diaz@senat.fr
+20684B,M.,Gabriel,Amard,actif,,Rhône,69,g.amard@senat.fr
+20718T,M.,Christophe,Plassard,actif,,Charente-Maritime,17,c.plassard@senat.fr
+20874F,M.,Frank,Giletti,actif,,Var,83,f.giletti@senat.fr
+20914V,M.,Daniel,Breuiller,ancien,,Val-de-Marne,94,d.breuiller@senat.fr
+20980G,Mme,Véronique,Del Fabro,ancien,,Meurthe-et-Moselle,54,
+21029D,M.,Georges,Naturel,actif,,Nouvelle-Calédonie,988,g.naturel@senat.fr
+21030V,M.,Robert Wienie,Xowie,actif,,Nouvelle-Calédonie,988,rw.xowie@senat.fr
+21031W,M.,Jean-Marc,Vayssouze-Faure,actif,,Lot,46,jm.vayssouze-faure@senat.fr
+21032X,Mme,Annick,Girardin,actif,,Saint-Pierre-et-Miquelon,975,a.girardin@senat.fr
+21033Y,M.,Stéphane,Fouassin,actif,Apparenté,La Réunion,974,s.fouassin@senat.fr
+21034A,Mme,Evelyne,Corbière Naminzo,actif,,La Réunion,974,e.corbiere-naminzo@senat.fr
+21035B,Mme,Audrey,Bélim,actif,,La Réunion,974,a.belim@senat.fr
+21036C,M.,Jean-Luc,Ruelle,actif,Rattaché,Français établis hors de France,099,jl.ruelle@senat.fr
+21037D,Mme,Mathilde,Ollivier,actif,,Français établis hors de France,099,m.ollivier@senat.fr
+21038E,Mme,Olivia,Richard,actif,,Français établis hors de France,099,o.richard@senat.fr
+21039F,Mme,Anne-Marie,Nédélec,actif,,Haute-Marne,52,am.nedelec@senat.fr
+21040X,M.,Michel,Masset,actif,,Lot-et-Garonne,47,m.masset@senat.fr
+21041Y,M.,Raphaël,Daubet,actif,,Lot,46,r.daubet@senat.fr
+21042A,Mme,Jocelyne,Antoine,actif,,Meuse,55,j.antoine@senat.fr
+21043B,M.,Olivier,Bitz,actif,,Orne,61,
+21044C,Mme,Lauriane,Josende,actif,,Pyrénées-Orientales,66,l.josende@senat.fr
+21045D,Mme,Marion,Canalès,actif,,Puy-de-Dôme,63,m.canales@senat.fr
+21046E,Mme,Corinne,Bourcier,actif,,Maine-et-Loire,49,c.bourcier@senat.fr
+21047F,M.,Clément,Pernot,actif,Rattaché,Jura,39,c.pernot@senat.fr
+21048G,M.,Grégory,Blanc,actif,Apparenté,Maine-et-Loire,49,g.blanc@senat.fr
+21049H,Mme,Silvana,Silvani,actif,,Meurthe-et-Moselle,54,s.silvani@senat.fr
+21050A,M.,Yves,Bleunven,actif,,Morbihan,56,y.bleunven@senat.fr
+21051B,M.,Simon,Uzenat,actif,,Morbihan,56,s.uzenat@senat.fr
+21052C,M.,Jean-Luc,Brault,actif,,Loir-et-Cher,41,jl.brault@senat.fr
+21053D,M.,Bernard,Pillefer,actif,,Loir-et-Cher,41,b.pillefer@senat.fr
+21054E,M.,Vincent,Louault,actif,,Indre-et-Loire,37,v.louault@senat.fr
+21055F,M.,Jean-Gérard,Paumier,actif,,Indre-et-Loire,37,
+21056G,M.,Pierre-Alain,Roiron,actif,,Indre-et-Loire,37,pa.roiron@senat.fr
+21057H,M.,Christophe,Chaillou,actif,,Loiret,45,c.chaillou@senat.fr
+21058J,Mme,Pauline,Martin,actif,,Loiret,45,pauline.martin@senat.fr
+21059K,M.,David,Ros,actif,,Essonne,91,d.ros@senat.fr
+21060C,M.,Alexandre,Ouizille,actif,,Oise,60,a.ouizille@senat.fr
+21061D,Mme,Sylvie,Valente Le Hir,actif,Apparenté,Oise,60,
+21062E,M.,Sébastien,Fagnen,actif,,Manche,50,s.fagnen@senat.fr
+21063F,M.,Christian,Bruyen,actif,,Marne,51,c.bruyen@senat.fr
+21064G,Mme,Anne-Sophie,Romagny,actif,,Marne,51,as.romagny@senat.fr
+21065H,M.,Cédric,Chevalier,actif,,Marne,51,c.chevalier@senat.fr
+21066J,M.,Philippe,Grosvalet,actif,,Loire-Atlantique,44,p.grosvalet@senat.fr
+21067K,M.,Jérôme,Darras,actif,,Pas-de-Calais,62,j.darras@senat.fr
+21068L,M.,Hervé,Reynaud,actif,,Loire,42,h.reynaud@senat.fr
+21069M,M.,Christopher,Szczurek,actif,,Pas-de-Calais,62,c.szczurek@senat.fr
+21070E,M.,Pierre Jean,Rochette,actif,,Loire,42,pj.rochette@senat.fr
+21071F,Mme,Marie-Do,Aeschlimann,actif,,Hauts-de-Seine,92,md.aeschlimann@senat.fr
+21072G,Mme,Marie-Carole,Ciuntu,actif,,Val-de-Marne,94,mc.ciuntu@senat.fr
+21073H,M.,Akli,Mellouli,actif,,Val-de-Marne,94,a.mellouli@senat.fr
+21074J,M.,Aymeric,Durox,actif,,Seine-et-Marne,77,a.durox@senat.fr
+21075K,Mme,Marianne,Margaté,actif,,Seine-et-Marne,77,m.margate@senat.fr
+21076L,M.,Louis,Vogel,actif,,Seine-et-Marne,77,l.vogel@senat.fr
+21077M,M.,Adel,Ziane,actif,,Seine-Saint-Denis,93,
+21078N,M.,Ahmed,Laouedj,actif,,Seine-Saint-Denis,93,a.laouedj@senat.fr
+21079P,Mme,Ghislaine,Senée,actif,,Yvelines,78,g.senee@senat.fr
+21080G,M.,Damien,Michallet,actif,,Isère,38,d.michallet@senat.fr
+21081H,M.,Khalifé,Khalifé,actif,Apparenté,Moselle,57,k.khalife@senat.fr
+21082J,M.,Michaël,Weber,actif,,Moselle,57,m.weber@senat.fr
+21083K,M.,Guislain,Cambier,actif,,Nord,59,g.cambier@senat.fr
+21084L,M.,Pierre,Barros,actif,,Val-d'Oise,95,p.barros@senat.fr
+21085M,M.,Joshua,Hochart,actif,,Nord,59,
+21086N,M.,Daniel,Fargeot,actif,,Val-d'Oise,95,d.fargeot@senat.fr
+21087P,Mme,Marie-Claude,Lermytte,actif,,Nord,59,mc.lermytte@senat.fr
+21088Q,M.,Ian,Brossat,actif,,Paris,75,
+21089R,Mme,Colombe,Brossel,actif,,Paris,75,
+21090J,Mme,Marie-Claire,Carrère-Gée,actif,,Paris,75,mc.carrere-gee@senat.fr
+21091K,Mme,Agnès,Evren,actif,,Paris,75,a.evren@senat.fr
+21092L,Mme,Antoinette,Guhl,actif,,Paris,75,
+21093M,M.,Yannick,Jadot,actif,,Paris,75,y.jadot@senat.fr
+21094N,Mme,Anne,Souyris,actif,,Paris,75,a.souyris@senat.fr
+21095P,M.,Francis,Szpiner,actif,Apparenté,Paris,75,f.szpiner@senat.fr
+21096Q,M.,Frédéric,Buval,actif,Apparenté,Martinique,972,
+21097R,Mme,Solanges,Nadille,actif,,Guadeloupe,971,s.nadille@senat.fr
+21125C,Mme,Marie-Jeanne,Bellamy,actif,Apparenté,Vienne,86,mj.bellamy@senat.fr
+21217F,Mme,Sylvie,Josserand,actif,,Gard,30,s.josserand@senat.fr
+21223D,Mme,Manon,Bouquin,actif,,Hérault,34,m.bouquin@senat.fr
+21404G,Mme,Sophie,Briante Guillemont,actif,,Français établis hors de France,099,s.briante-guillemont@senat.fr
+21415K,Mme,Marie-Lise,Housseau,actif,,Tarn,81,ml.housseau@senat.fr
+21416L,M.,Paul,Vidal,ancien,,Rhône,69,p.vidal@senat.fr
+21417M,Mme,Virginie,Lucot Avril,ancien,,Seine-Maritime,76,v.lucot-avril@senat.fr
+21418N,M.,Jean-Baptiste,Olivier,ancien,,Paris,75,jb.olivier@senat.fr
+21419P,Mme,Mireille,Conte Jaubert,ancien,,Gironde,33,m.conte-jaubert@senat.fr
+21420G,M.,Maurice,Perrion,ancien,,Loire-Atlantique,44,m.perrion@senat.fr
+21421H,Mme,Anne-Sophie,Patru,ancien,,Ille-et-Vilaine,35,as.patru@senat.fr
+21422J,Mme,Salama,Ramia,ancien,,Mayotte,976,s.ramia@senat.fr
+21423K,M.,Éric,Dumoulin,ancien,Apparenté,Yvelines,78,e.dumoulin@senat.fr
+21424L,Mme,Brigitte,Hybert,ancien,,Vendée,85,b.hybert@senat.fr
+21436Q,Mme,Marie-Ange,Rousselot,actif,,Français établis hors de France,099,ma.rousselot@senat.fr
+21460Q,M.,Alexandre,Basquin,actif,,Nord,59,a.basquin@senat.fr
+21461R,M.,Jean-Marc,Ruel,ancien,,Saint-Pierre-et-Miquelon,975,jm.ruel@senat.fr
+21470S,M.,Jean-Marc,Delia,actif,Apparenté,Alpes-Maritimes,06,
+21486B,M.,David,Margueritte,actif,,Manche,50,d.margueritte@senat.fr
+21510H,M.,Marc,Séné,actif,,Bas-Rhin,67,m.sene@senat.fr
+21512K,Mme,Paulette,Matray,actif,,Saône-et-Loire,71,p.matray@senat.fr
+21514M,Mme,Marie-Pierre,Bessin-Guérin,actif,,Loire-Atlantique,44,mp.bessin-guerin@senat.fr
+21534R,Mme,Marie-Pierre,Mouton,actif,,Drôme,26,mp.mouton@senat.fr
+21584C,M.,Pierre,Boileau,actif,Apparenté,Meurthe-et-Moselle,54,p.boileau@senat.fr
+21592C,Mme,Sandra,Paire,ancien,Rattaché,Alpes-Maritimes,06,s.paire@senat.fr
+21638Y,M.,Lafaele,Tukumuli,actif,,Iles Wallis et Futuna,986,l.tukumuli@senat.fr
+21640S,M.,Julien,Bounie,actif,,Corrèze,19,j.bounie@senat.fr
+21642U,M.,Pascal,Coste,actif,,Corrèze,19,p.coste@senat.fr
+21644W,M.,Dimitri,Doussot,actif,,Haute-Saône,70,d.doussot@senat.fr
+21646Y,Mme,Claudie,Faucon Mejean,actif,,Aude,11,c.faucon-mejean@senat.fr
+21648B,M.,Bertrand,Labar,actif,Apparenté,Creuse,23,b.labar@senat.fr
+21650U,M.,Samir,Rhimini,actif,,Cher,18,s.rhimini@senat.fr
+21652W,M.,Régis,Blanchet,actif,,Indre,36,r.blanchet@senat.fr
+21654Y,Mme,Carole,Rolando,actif,,Gers,32,c.rolando@senat.fr
+21656B,Mme,Marie-Pierre,Missioux,actif,Apparenté,Deux-Sèvres,79,mp.missioux@senat.fr
+21658D,Mme,Virginie,Quentin,actif,Rattaché,Eure-et-Loir,28,v.quentin@senat.fr
+21660W,M.,Alexis,Robin,actif,Rattaché,Eure-et-Loir,28,a.robin@senat.fr
+21662Y,M.,Benjamin,Huin,actif,,Haut-Rhin,68,b.huin@senat.fr
+21664B,M.,Nicolas,Fricoteaux,actif,Apparenté,Aisne,02,n.fricoteaux@senat.fr
+21666D,M.,Paul,Mougenot,actif,,Aisne,02,p.mougenot@senat.fr
+21668F,Mme,Marie-Pierre,Callet,actif,,Bouches-du-Rhône,13,mp.callet@senat.fr
+21670Y,M.,Fabien,Bravi,actif,,Bouches-du-Rhône,13,f.bravi@senat.fr
+21672B,M.,Bertrand,Dupont,actif,,Français établis hors de France,099,b.dupont@senat.fr
+21674D,Mme,Véronique,Baude,actif,,Ain,01,v.baude@senat.fr
+21676F,M.,Maxence,de Rugy,actif,,Vendée,85,m.de-rugy@senat.fr
+21678H,Mme,Pernelle,Richardot,actif,,Bas-Rhin,67,p.richardot@senat.fr
+21680B,Mme,Isabelle,Dollinger,actif,,Bas-Rhin,67,i.dollinger@senat.fr
+21682D,M.,Frédéric,Duché,actif,,Eure,27,f.duche@senat.fr
+21684F,M.,Nicolas,Belloir,actif,,Ille-et-Vilaine,35,n.belloir@senat.fr
+21686H,M.,Rodolphe,Alexandre,actif,,Guyane,973,r.alexandre@senat.fr
+21688K,M.,Patrick,Leclerc,actif,,Finistère,29,p.leclerc@senat.fr
+21690D,Mme,Forough,Dadkhah,actif,,Finistère,29,f.dadkhah@senat.fr
+21692F,M.,Léon,Levasseur,actif,,Seine-Maritime,76,l.levasseur@senat.fr
+21694H,M.,Florent,Brunet,actif,,Drôme,26,f.brunet@senat.fr
+21696K,M.,Christian,Simon,actif,,Var,83,c.simon@senat.fr
+21698M,Mme,Carine,Leroy,actif,,Var,83,c.leroy@senat.fr
+21700M,M.,Arnaud,Marthey,actif,,Doubs,25,a.marthey@senat.fr
+21702P,Mme,Dominique,Santoni,actif,,Vaucluse,84,d.santoni@senat.fr
+21704R,M.,Thierry,d'Aigremont,actif,,Vaucluse,84,t.d-aigremont@senat.fr
+21706T,Mme,Julie,Frêche,actif,,Hérault,34,j.freche@senat.fr
+21708V,M.,Joseph,Francis,actif,Apparenté,Hérault,34,j.francis@senat.fr
+21710P,Mme,Christine,Bost,actif,,Gironde,33,c.bost@senat.fr
+21712R,M.,Jacques,Breillat,actif,,Gironde,33,j.breillat@senat.fr
+21714T,Mme,Géraldine,Amouroux,actif,,Gironde,33,g.amouroux@senat.fr
+21716V,M.,Laurent,Castillo,actif,,Alpes-Maritimes,06,l.castillo@senat.fr
+21718X,Mme,Gaëlle,Frontoni,actif,,Alpes-Maritimes,06,g.frontoni@senat.fr
+21720R,M.,Thierry,Suaud,actif,,Haute-Garonne,31,t.suaud@senat.fr
+21722T,Mme,Magali,Gasto Oustric,actif,,Haute-Garonne,31,m.gasto-oustric@senat.fr
+21724V,M.,Marc,Péré,actif,,Haute-Garonne,31,m.pere@senat.fr
+21726X,M.,Sébastien,Michel,actif,,Rhône,69,s.michel@senat.fr
+21728A,M.,Serge,Berard,actif,Rattaché,Rhône,69,s.berard@senat.fr
+21730T,M.,Ryan,Persaud,actif,,Guyane,973,r.persaud@senat.fr
+21732V,Mme,Annick,Merle,actif,,Isère,38,a.merle@senat.fr
+86034E,M.,Gérard,Larcher,actif,,Yvelines,78,g.larcher@senat.fr
+92040Q,M.,Philippe,Nachbar,ancien,,Meurthe-et-Moselle,54,
+95041E,M.,Alain,Joyandet,ancien,,Haute-Saône,70,a.joyandet@senat.fr
+95063L,M.,Alain,Richard,ancien,,Val-d'Oise,95,a.richard@senat.fr
+97011G,M.,Bernard,Fournier,ancien,,Loire,42,b.fournier@senat.fr
+98022P,M.,Jean-Noël,Guérini,ancien,,Bouches-du-Rhône,13,jn.guerini@senat.fr
+99004R,M.,Roger,Karoutchi,actif,,Hauts-de-Seine,92,r.karoutchi@senat.fr

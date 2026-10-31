@@ -8,7 +8,7 @@ import re
 import sqlite3
 from pathlib import Path
 
-from . import alertes, editorial, referentiels
+from . import alertes, editorial, referentiels, senat
 
 
 def _q(con, sql: str, *args) -> list[tuple]:
@@ -30,6 +30,9 @@ VENTILATIONS_INCOMPLETES = {
 SEUIL_AMENDEMENTS = 0.995
 DELAI_AMENDEMENTS = 14  # jours : voir rattachement_amendements
 SEUIL_DOSSIERS = 0.99
+SIEGES_SENAT = 348
+SIEGES_SENAT_MIN = 340  # moins de lignes : liste tronquée (un siège vacant en retire une ou deux)
+SEUIL_DOSSIERS_SENAT = 0.98
 
 
 def _temoins(con, controle, out) -> None:
@@ -139,6 +142,50 @@ def _alertes(con) -> list[dict]:
                             lignes("select dossier_id, date, instance from en_cours_agenda"), editorial.charger())
 
 
+def _senat(con, controle, out) -> None:
+    """Exports du Sénat (data/export/senat/, docs/SOURCES.md)."""
+    n, votes = _q(con, "select (select count(*) from senat_scrutins), (select count(*) from senat_votes)")[0]
+    out.append(f"info {n} scrutins, {votes} votes nominatifs depuis {senat.DEBUT}")
+    faibles = _q(con, f"select scrutin_id, count(*) from senat_votes group by 1 having count(*) < {SIEGES_SENAT_MIN}")
+    controle(f"chaque scrutin liste au moins {SIEGES_SENAT_MIN} sénateurs", not faibles, str(faibles[:5]))
+    controle("tout scrutin a sa liste nominative", not _un(
+        con, "select count(*) from senat_scrutins where id not in (select scrutin_id from senat_votes)"))
+    doubles = _un(con, "select count(*) from (select 1 from senat_votes group by scrutin_id, senateur_id having count(*) > 1)")
+    controle("un seul vote par sénateur et par scrutin", not doubles, f"{doubles} doublons")
+    ecarts = _q(con, "select s.id from senat_scrutins s join (select scrutin_id, sum(pour) p, sum(contre) c, "
+                     "sum(abstention) a, sum(non_votants) n from senat_positions_groupes group by 1) v on v.scrutin_id = s.id "
+                     "where (s.pour, s.contre, s.abstention, s.non_votants) != (v.p, v.c, v.a, v.n)")
+    controle("la ventilation par groupe redonne le décompte de chaque scrutin", not ecarts, str(ecarts[:5]))
+    sans = _q(con, "select count(*), count(distinct senateur_id) from senat_votes where groupe_id is null")[0]
+    controle("tout votant a un groupe à la date du scrutin", not sans[0], f"{sans[0]} votes, {sans[1]} sénateurs")
+    inconnus = _un(con, "select count(*) from senat_positions_groupes where groupe_id not in (select id from senat_groupes)")
+    controle("tout groupe des ventilations est décrit", not inconnus)
+    hors = _un(con, "select count(*) from senat_votes v where not exists (select 1 from senat_mandats m where "
+                    "m.senateur_id = v.senateur_id and m.debut <= v.date and (m.fin is null or v.date <= m.fin))")
+    controle("tout votant est sénateur à la date du scrutin", not hors, f"{hors} votes hors mandat")
+    orphelins = _un(con, "select count(*) from senat_votes v where delegue_a is not null and not exists (select 1 from "
+                         "senat_votes d where d.scrutin_id = v.scrutin_id and d.senateur_id = v.delegue_a)")
+    controle("toute délégation mène à un sénateur du même scrutin", not orphelins, f"{orphelins} délégations")
+    actifs, courriels = _q(con, "select count(*), count(courriel) from senat_senateurs where etat = 'actif'")[0]
+    controle(f"{SIEGES_SENAT} sénateurs en poste", actifs == SIEGES_SENAT, str(actifs))
+    out.append(f"info {courriels} sénateurs en poste avec un courriel public")
+    # Le décompte vient de la liste nominative. La table `scr` s'en écarte parfois : la page officielle
+    # donne la liste nominative (docs/SOURCES.md, Sénat).
+    ecarts = [i for (i,) in _q(con, "select id from senat_scrutins where (pour, contre) != (pour_scr, contre_scr)")]
+    out.append(f"info {len(ecarts)} scrutins dont le décompte de `scr` s'écarte de la liste nominative : {', '.join(ecarts)}")
+    bascules = [i for (i,) in _q(con, "select id from senat_scrutins where (pour >= requis) != "
+                                      "(pour_scr >= (pour_scr + contre_scr) / 2 + 1)")]
+    controle("ces écarts ne changent le sort d'aucun scrutin", not bascules, ", ".join(bascules))
+    r, tot = _q(con, f"select count(dossier_id), count(*) from senat_scrutins where signet not like 'ppr%' "
+                     "and signet not like 'motion%'")[0]
+    controle("scrutins sur un texte de loi rattachés à un dossier de l'AN", r / tot >= SEUIL_DOSSIERS_SENAT,
+             f"{r}/{tot} ({r / tot:.1%})")
+    out.append(f"info {r}/{tot} ({r / tot:.1%}) scrutins sur un texte de loi rattachés à un dossier de l'AN")
+    for sg, nb in _q(con, "select signet, count(*) from senat_scrutins where dossier_id is null and signet not like 'ppr%' "
+                          "and signet not like 'motion%' group by 1"):
+        out.append(f"info {sg} : {nb} scrutins, pas de dossier à l'AN (ou pas encore)")
+
+
 def verifier(chemin: Path) -> tuple[bool, list[str]]:
     if not chemin.exists():
         return False, [f"base absente : {chemin} (lancer `lvnd build`)"]
@@ -181,6 +228,9 @@ def verifier(chemin: Path) -> tuple[bool, list[str]]:
     out.append(f"info {autre[0]} votes ({autre[1]} députés) ventilés dans un groupe que l'AMO ne leur donne pas "
                "à la date (changement de groupe le jour même, ou décalage de l'AMO)")
     out.append(f"info {_un(con, 'select count(*) from mises_au_point')} mises au point (affichées, pas comptées)")
+
+    out.append("\n== Sénat")
+    _senat(con, controle, out)
 
     out.append("\n== Rattachements")
     for leg in (16, 17):
