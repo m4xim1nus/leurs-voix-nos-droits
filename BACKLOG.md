@@ -29,6 +29,8 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] Fiche député·e : « Prochains votes » ne liste pas les textes du seul Sénat attendus à l'AN (casseurs-payeurs), pour ne rien changer aux vues de l'AN pendant le cycle Sénat (claude, 2026-10-31)
 - [ ] Vérifier le 01/11/2026 que la passe quotidienne (`donnees-quotidien.yml`, 5 h UTC) tourne bien : première avec le Sénat publié. Garde-fou du Sénat, sync de l'admin, alertes du Sénat ramenées à une dans « À traiter » (ingérences étrangères). Correction après le cycle si besoin (user:moi, 2026-10-31)
 - [ ] Cycle Sénat, hors cycle : amendements clés du Sénat (environ 31 suppressions hors budgets et retraites, sur 16 textes), cartes partageables des sénateur·ices, Comparer pour le Sénat, correspondance entre groupes des deux chambres (claude, 2026-10-31)
+- [DONNÉES] Catalogue XVe, dossier immigration 2018 : V483 (programme de stabilité) rattaché à tort à DLR5L15N36410, V1094 (motion de renvoi de ce texte) rattaché à DLR5L15N36601, V1093 en étape AN1 alors que c'est la nouvelle lecture. Sans effet sur décisif ni scores (claude, 2026-10-31)
+- [DONNÉES] Catalogue : `cc_sens` vide pour 2021-817 DC ; `textes.csv` titre « 2021 à 2027 » pour la programmation de la recherche, la loi dit 2030. Sans effet à l'affichage (claude, 2026-10-31)
 
 ## Textes à surveiller
 
