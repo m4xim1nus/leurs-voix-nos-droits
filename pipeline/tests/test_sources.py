@@ -328,3 +328,10 @@ def test_chaine_leger_sans_archive_prend_la_copie(tmp_path, monkeypatch):
     monkeypatch.setattr(sources, "LEGERES", ())
     sources.download(raw, leger=True)
     assert (raw / "am/x/json/a/b/c.json").exists()
+
+
+def test_url_decision_sans_prefixe_repete():
+    from lvnd.textes import _url_decision
+    base = "https://www.conseil-constitutionnel.fr/decision/"
+    assert _url_decision({"urlConclusion": f"{base}{base}2019/2019790DC.htm", "dateActe": "2019-08-01"}) == f"{base}2019/2019790DC.htm"
+    assert _url_decision({"urlConclusion": f"{base}2022/2022846DC.htm", "dateActe": "2023-01-19"}) == f"{base}2023/2022846DC.htm"

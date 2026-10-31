@@ -160,6 +160,7 @@ def _url_decision(cc: dict) -> str | None:
     """Adresse de la décision. Son dossier est l'année où elle est rendue, que l'open data peut manquer
     (2022-846 DC, rendue le 19/01/2023, donnée sous /decision/2022/, en 404) : `dateActe` fait foi."""
     url = (cc.get("urlConclusion") or "").replace("http://", "https://")
+    url = url[url.rfind("https://"):]  # 2019-790 DC : l'open data répète le préfixe de l'adresse
     annee = (cc.get("dateActe") or "")[:4]
     return (re.sub(r"/decision/\d{4}/", f"/decision/{annee}/", url) if annee else url) or None
 
