@@ -216,6 +216,64 @@
       ]
     },
     {
+      "id": "additifs-nitres-2022",
+      "dossier_an": "DLR5L15N44511",
+      "legislature": 15,
+      "titre": "Proposition de loi relative à la consommation de produits contenant des additifs nitrés",
+      "resume": "Le texte adopté par l'AN charge un décret, pris après avis de l'ANSES dans le délai d'un an après la promulgation, de fixer une trajectoire de baisse de la dose maximale d'additifs nitrés. Ce décret peut aussi fixer une liste et un calendrier de produits interdits à la vente s'ils en contiennent. Un second décret précise un étiquetage spécifique et peut encadrer la publicité, et le Gouvernement remet un rapport tirant les conclusions de l'avis de l'ANSES. L'interdiction par étapes prévue par la proposition initiale a été retirée. Adopté en 1re lecture par l'AN, le texte n'a pas été voté par le Sénat.",
+      "droits": [
+        {
+          "code": "sante",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "anses-2022",
+            "foodwatch-2022-02"
+          ],
+          "justification": "Le texte fait baisser la dose maximale d'additifs nitrés autorisée, ce qui réduit l'exposition des consommateurs. L'ANSES conclut à « l'existence d'une association positive entre l'exposition aux nitrates et/ou aux nitrites via la viande transformée et le risque de cancer colorectal », et recommande de réduire les apports « notamment en limitant les quantités d'additifs nitrés ajoutés dans les produits carnés traités ». foodwatch, la Ligue contre le cancer et Yuka, qui militaient pour l'interdiction, se félicitent d'une « avancée pour la santé publique »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Risque microbiologique : l'ANSES relève que ces additifs permettent de maîtriser des bactéries pathogènes, et que la réduction est « de nature à accroître de façon significative le risque microbiologique ». Elle juge qu'elle « peut être envisagée moyennant la mise en œuvre de mesures compensatrices validées ». Elle précise que les doses permettant de limiter à la fois les deux risques n'ont pas pu être réévaluées, faute de données.",
+          "sources": [
+            "anses-2022"
+          ]
+        },
+        {
+          "texte": "Insuffisance : foodwatch, la Ligue contre le cancer et Yuka, qui ont fait campagne pour l'interdiction, regrettent que les décisions « aient été reportées de plusieurs mois et conditionnées au rapport de l'Anses ». L'interdiction reste une simple faculté du décret.",
+          "sources": [
+            "foodwatch-2022-02"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Texte en navette : adopté en 1re lecture par l'AN le 3 février 2022 et transmis au Sénat, qui ne l'a pas voté. Le scrutin décisif est ce vote sur l'ensemble, seul scrutin public du dossier et dernier vote de l'AN (règle 9) ; la voix contre suffit pour qu'il départage. Le sens se lit sur le texte voté (règle 6) : l'interdiction par étapes de la proposition initiale en a été retirée et n'entre pas dans le jugement. L'avis de l'ANSES, postérieur au vote, se prononce sur la mesure, et le texte y renvoie lui-même (règle 7). Aucun amendement clé : aucun amendement n'a été mis aux voix par scrutin public (règle 11). Aucune motion de rejet.",
+      "sources": {
+        "anses-2022": {
+          "auteur": "ANSES",
+          "titre": "Avis révisé relatif aux risques associés à la consommation de nitrites et de nitrates, saisine n° 2020-SA-0106",
+          "date": "2022-07-06",
+          "url": "https://www.anses.fr/fr/system/files/ERCA2020SA0106Ra.pdf"
+        },
+        "foodwatch-2022-02": {
+          "auteur": "foodwatch, Ligue contre le cancer et Yuka (communiqué commun d'organisations ayant fait campagne pour l'interdiction, parties prenantes)",
+          "titre": "Nitrites dans la charcuterie : une loi adoptée ce jour",
+          "date": "2022-02-03",
+          "url": "https://www.foodwatch.org/fr/communiques-de-presse/2022/nitrites-dans-la-charcuterie-une-loi-adoptee-ce-jour"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V4362",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (93-1)"
+        }
+      ]
+    },
+    {
       "id": "aesh-corps-fonctionnaires-2026",
       "dossier_an": "DLR5L17N54901",
       "legislature": 17,
@@ -278,6 +336,75 @@
           "role": "article",
           "pour": "texte",
           "objet": "Article 1er : création du corps et nomination des AESH en poste"
+        }
+      ]
+    },
+    {
+      "id": "agec-2020",
+      "dossier_an": "DLR5L15N37641",
+      "legislature": 15,
+      "titre": "Loi relative à la lutte contre le gaspillage et à l'économie circulaire",
+      "resume": "La loi interdit progressivement certains produits en plastique à usage unique, ainsi que les contenants jetables pour les repas servis sur place dans la restauration rapide. Elle fixe l'objectif de mettre fin aux emballages en plastique à usage unique d'ici 2040. Elle crée un indice de réparabilité et une obligation d'informer le consommateur sur certaines caractéristiques environnementales des produits. Elle crée de nouvelles filières de responsabilité élargie des producteurs et un fonds pour le réemploi.",
+      "droits": [
+        {
+          "code": "environnement",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "fne-2020"
+          ],
+          "justification": "Le texte ajoute des interdictions de produits polluants et des obligations d'information et de responsabilité des producteurs. France Nature Environnement cite comme avancées l'interdiction progressive de plastiques « particulièrement problématiques en raison de leur impact dans la nature ou sur la santé », l'obligation d'information sur « un large panel de caractéristiques environnementales des produits » et le périmètre élargi du principe pollueur-payeur. Elle écrit que « les mesures qu'elle met en place sont positives »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Insuffisance du texte : France Nature Environnement juge la loi « gentillette » et note qu'elle « n'inscrit pas dans le marbre l'interdiction des plastiques à usage unique d'ici 2040 ». Elle relève l'absence de consigne pour réemploi obligatoire et le caractère facultatif de nombreuses avancées.",
+          "sources": [
+            "fne-2020"
+          ]
+        },
+        {
+          "texte": "Mesure de sens opposé : l'interdiction de certains plastiques jetables prévue par la loi de 2018 (pailles, couverts, piques à steak) est repoussée d'un an, de janvier 2020 à janvier 2021.",
+          "sources": [
+            "fne-2020"
+          ]
+        },
+        {
+          "texte": "Mise en œuvre : quatre ans après, cinq associations estiment que les textes d'application « ont pu conduire à vider le texte de sa substance » et que l'absence de contrôles et de sanctions « remet largement en cause les acquis du texte en pratique ».",
+          "sources": [
+            "ong-2024"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Scrutin décisif : ensemble, texte de la commission mixte paritaire, 21/01/2020. Aucun amendement clé (règle 11) : aucun scrutin public de la 1re lecture ne porte, d'après son titre, sur la suppression ou le rétablissement d'un article. Aucune motion de rejet préalable n'a été soumise à un scrutin public. Le droit étendu est contesté sur sa portée, non sur son principe : les critiques trouvées dénoncent une insuffisance, et s'affichent en vigilance (règles 5 et 7).",
+      "sources": {
+        "fne-2020": {
+          "auteur": "France Nature Environnement",
+          "titre": "Que retenir de la Loi anti-gaspillage et économie circulaire ?",
+          "date": "2020-01-30",
+          "url": "https://fne.asso.fr/dossiers/que-retenir-de-la-loi-anti-gaspillage-et-economie-circulaire"
+        },
+        "ong-2024": {
+          "auteur": "France Nature Environnement, Les Amis de la Terre, No Plastic In My Sea, Surfrider Foundation, Zero Waste France",
+          "titre": "Évaluation de la loi AGEC : 4 ans après, quel bilan pour la réduction des déchets ?",
+          "date": "2024-02-06",
+          "url": "https://www.amisdelaterre.org/wp-content/uploads/2024/02/20240206-bilan-loi-agec-zwf-fne-npims-at-sfe.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V2420",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la commission mixte paritaire (227-10)"
+        },
+        {
+          "id": "VTANR5L15V2417",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (49-1)"
         }
       ]
     },
@@ -667,6 +794,81 @@
       }
     },
     {
+      "id": "asap-2020",
+      "dossier_an": "DLR5L15N38690",
+      "legislature": 15,
+      "titre": "Loi d'accélération et de simplification de l'action publique",
+      "resume": "Texte composite. Il supprime ou regroupe des commissions administratives et simplifie des procédures applicables aux particuliers et aux entreprises. Pour les projets soumis à autorisation environnementale sans évaluation environnementale, le préfet peut remplacer l'enquête publique par une consultation par voie électronique. Il peut aussi autoriser certains travaux de construction avant la délivrance de l'autorisation environnementale. Les nouvelles prescriptions applicables aux installations classées s'appliquent aux projets en cours d'instruction dans les délais accordés aux installations existantes. L'expulsion administrative sans jugement, réservée jusque-là au domicile, est étendue au logement qui n'est pas la résidence principale de la personne, et les peines pour violation de domicile sont triplées.",
+      "droits": [
+        {
+          "code": "environnement",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ae-2021"
+          ],
+          "justification": "Le texte réduit les garanties d'information et de participation du public. Pour l'Autorité environnementale, « l'un des principaux effets de la loi est de réduire significativement le champ de la participation du public », sans garantie nouvelle sur la prise en compte des avis."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Le Conseil constitutionnel a jugé conformes les trois mesures environnementales qui lui étaient déférées. Il estime que les règles sur les installations classées n'entraînent pas de régression de la protection de l'environnement, que les critères confiés au préfet pour choisir le mode de consultation suffisent, et que les travaux anticipés ne peuvent concerner ceux qui exigent une décision au titre d'une législation spéciale, comme le défrichement ou les espèces protégées.",
+          "sources": [
+            "cc-2020-807"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2020-807 DC du 3 décembre 2020, non-conformité partielle, sans réserve. Vingt-six articles sont censurés comme cavaliers, sans examen du fond, dont l'article 74 sur les peines pour violation de domicile. Sont conformes les dispositions contestées des articles 34 (installations classées), 44 (consultation du public) et 56 (travaux anticipés). L'article 73 (expulsion administrative) n'est pas censuré, et la décision ne l'examine pas.",
+      "note": "Scrutin décisif : ensemble, texte de la commission mixte paritaire, 28/10/2020. Texte composite : le sens se lit sur les mesures de procédure environnementale, que vise la source citée (règle 4). L'Autorité environnementale écrit après le vote, à propos du décret d'application, mais se prononce sur la loi. Motions de rejet préalable affichées, pas comptées (règle 10). Un amendement clé, en 1re lecture, seule lecture où des suppressions ont été mises aux voix (règle 11) : la suppression de l'article 25, consultation du public. L'Assemblée l'a adoptée (55-53), puis a rétabli l'article le 02/10/2020 en seconde délibération, sans scrutin public : ce vote de suppression reste le seul vote nominatif sur cet article. La suppression de l'article 26, travaux anticipés, n'est pas retenue, faute d'une source citée qui vise cette mesure. L'extension de l'expulsion administrative n'entre pas dans le jugement, faute de source retenue.",
+      "sources": {
+        "ae-2021": {
+          "auteur": "Autorité environnementale",
+          "titre": "Avis délibéré sur le projet de décret portant diverses dispositions d'application de la loi d'accélération et de simplification de l'action publique et de simplification en matière d'environnement",
+          "date": "2021-02-24",
+          "url": "https://www.igedd.developpement-durable.gouv.fr/IMG/pdf/210224_decret_asap_delibere_cle2cb1b9.pdf"
+        },
+        "cc-2020-807": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2020-807 DC du 3 décembre 2020, loi d'accélération et de simplification de l'action publique",
+          "date": "2020-12-03",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2020/2020807DC.htm"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3061",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la commission mixte paritaire (102-37)"
+        },
+        {
+          "id": "VTANR5L15V2941",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (332-113)"
+        },
+        {
+          "id": "VTANR5L15V3060",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, texte de la commission mixte paritaire (29-95)"
+        },
+        {
+          "id": "VTANR5L15V2882",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (8-27)"
+        },
+        {
+          "id": "VTANR5L15V2886",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 25, consultation du public, 1re lecture, adoptée puis article rétabli sans scrutin public (55-53)"
+        }
+      ]
+    },
+    {
       "id": "asile-europeen-2018",
       "dossier_an": "DLR5L15N36071",
       "legislature": 15,
@@ -1041,6 +1243,144 @@
         },
         "note": "Le Sénat a voté sa propre version le 06/02/2024 (texte n° 62, renommé « portant diverses mesures relatives au grand âge et à l'autonomie »). Le sens est relu sur cette version (règle 24) : les mesures que salue la Défenseure des droits y figurent, et le droit de visite y devient quotidien. La source porte sur le texte adopté par l'Assemblée, transmis au Sénat, et vaut pour les mesures maintenues (règle 7). Le texte de la CMP a été adopté au Sénat le 27/03/2024 sans scrutin public : dernier vote public, sur le texte du 06/02/2024 (règle 23)."
       }
+    },
+    {
+      "id": "bioethique-2021",
+      "dossier_an": "DLR5L15N37672",
+      "legislature": 15,
+      "titre": "Loi relative à la bioéthique",
+      "resume": "Ouvre l'assistance médicale à la procréation aux couples de femmes et aux femmes non mariées, et supprime la condition d'infertilité. Crée une reconnaissance conjointe devant notaire pour établir la filiation à l'égard de la femme qui n'accouche pas. Permet l'autoconservation de gamètes hors raison médicale et donne aux personnes nées d'un don, à leur majorité, accès aux données non identifiantes et à l'identité du donneur. Le texte modifie aussi le régime de la recherche sur l'embryon.",
+      "droits": [
+        {
+          "code": "femmes-lgbti",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "cncdh-2018",
+            "ddd-19-11"
+          ],
+          "justification": "Avant le texte, l'assistance médicale à la procréation est réservée aux couples formés d'un homme et d'une femme. Le texte l'ouvre aux couples de femmes et aux femmes non mariées. La CNCDH y voit « une consécration du principe d'égalité de traitement » ; le Défenseur des droits « salue » cette ouverture « à toutes les femmes »."
+        },
+        {
+          "code": "sante",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "ddd-19-13"
+          ],
+          "justification": "Le texte autorise l'autoconservation de gamètes hors raison médicale et supprime l'obligation de don pour y accéder. Pour le Défenseur des droits, la réforme « doit donc être saluée », et il « soutient pleinement » cette suppression."
+        },
+        {
+          "code": "enfants",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "ddd-19-11",
+            "cncdh-2018"
+          ],
+          "justification": "Les personnes nées d'un don accèdent, à leur majorité, aux données non identifiantes et à l'identité du donneur, qui y consent lors du don. Le Défenseur des droits y voit le respect du « droit de l'enfant à connaître ses origines » ; la CNCDH recommandait « le principe d'une levée de l'anonymat »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Critique de l'ouverture : l'Académie nationale de médecine, qui ne donne pas d'avis sur la mesure elle-même, soulève des réserves : « la conception délibérée d'un enfant privé de père constitue une rupture anthropologique majeure ». Elle demande des études sur le devenir de ces enfants et juge peu convaincantes les données disponibles.",
+          "sources": [
+            "anm-2019"
+          ]
+        },
+        {
+          "texte": "Filiation : le texte réserve la reconnaissance conjointe aux couples de femmes. Sur un régime distinct du même ordre, prévu par le projet initial, le Défenseur des droits juge que cette voie n'apparaît pas « comme une solution satisfaisante » et qu'elle est « susceptible de créer une rupture d'égalité ».",
+          "sources": [
+            "ddd-19-11"
+          ]
+        },
+        {
+          "texte": "Personnes transgenres : la CNCDH est favorable à ce qu'elles puissent recourir à cette assistance « au regard de ce même principe d'égalité ». Le Défenseur des droits constate que le texte adopté en 1re lecture « ne fait pas spécifiquement mention des personnes transgenres ».",
+          "sources": [
+            "cncdh-2018",
+            "ddd-19-13"
+          ]
+        },
+        {
+          "texte": "Accès effectif : le Défenseur des droits relève que l'absence d'évolution sur la prise en charge et l'âge de prélèvement « limite la portée d'un réel accès à l'autoconservation ».",
+          "sources": [
+            "ddd-19-13"
+          ]
+        },
+        {
+          "texte": "Décès du conjoint : le texte maintient l'interdiction de poursuivre le projet après ce décès. Le Conseil d'État juge « paradoxal de maintenir cette interdiction alors que le législateur ouvre l'AMP aux femmes non mariées ».",
+          "sources": [
+            "ce-2019"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2021-821 DC du 29 juillet 2021, conformité. Article 1er du dispositif : « Sont conformes à la Constitution les dispositions suivantes » : des dispositions des articles 5, 20, 23 et 25 de la loi (commission d'accès aux données, recherche sur l'embryon, modification d'un embryon par adjonction de cellules d'autres espèces, information prénatale). Les députés contestaient « certaines dispositions de ses articles 3, 5, 20, 23 et 25 » : l'ouverture de l'assistance médicale à la procréation, à l'article 1er, n'est pas contestée.",
+      "note": "Scrutin décisif : lecture définitive du 29/06/2021, dernier vote de l'AN sur l'ensemble. Sens et date de référence (règle 4) : au jour du vote, l'assistance médicale à la procréation est réservée aux couples formés d'un homme et d'une femme, sur indication médicale. Droit principal (règle 4) : la mesure que les sources citent le plus est l'ouverture à toutes les femmes, qui relève des droits des femmes et des personnes LGBTI plutôt que de la santé. Le droit étendu est contesté : la critique figure en vigilance (règle 7). Aucun amendement clé (règle 11) : aucune suppression n'a fait l'objet d'un scrutin public en nouvelle lecture. En 2e lecture, celles de l'article 1er et de l'article 4 portent sur des mesures où les sources admises ne s'accordent pas, et celle de l'article 19 bis, adoptée, sur un article absent du texte voté.",
+      "sources": {
+        "anm-2019": {
+          "auteur": "Académie nationale de médecine",
+          "titre": "Rapport sur le Projet de loi relatif à la bioéthique",
+          "date": "2019-09-18",
+          "url": "https://www.academie-medecine.fr/wp-content/uploads/2019/09/Rapport-sur-le-projet-de-loi-relatif-a%CC%80-la-bioe%CC%81thique-2019-09-ANM.pdf"
+        },
+        "ce-2019": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis sur un projet de loi relatif à la bioéthique",
+          "date": "2019-07-18",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b2187_avis-conseil-etat"
+        },
+        "cncdh-2018": {
+          "auteur": "CNCDH",
+          "titre": "Avis relatif à l'assistance médicale à la procréation",
+          "date": "2018-11-20",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/181120_Avis%20relatif%20%C3%A0%20l%27assistance%20m%C3%A9dicale%20%C3%A0%20la%20procr%C3%A9ation%20pour%20impression_0.pdf"
+        },
+        "ddd-19-11": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 19-11 du 5 septembre 2019 sur le projet de loi relatif à la bioéthique",
+          "date": "2019-09-05",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=19150"
+        },
+        "ddd-19-13": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 19-13 du 20 décembre 2019 sur le projet de loi n° 63 relatif à la bioéthique",
+          "date": "2019-12-20",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=19446"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3855",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (326-115)"
+        },
+        {
+          "id": "VTANR5L15V3808",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, nouvelle lecture (84-43)"
+        },
+        {
+          "id": "VTANR5L15V2856",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 2e lecture (60-37)"
+        },
+        {
+          "id": "VTANR5L15V2146",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (359-114)"
+        },
+        {
+          "id": "VTANR5L15V2080",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (11-130)"
+        }
+      ]
     },
     {
       "id": "bouclier-loyer-2023",
@@ -1528,6 +1868,101 @@
       }
     },
     {
+      "id": "climat-resilience-2021",
+      "dossier_an": "DLR5L15N41668",
+      "legislature": 15,
+      "titre": "Loi portant lutte contre le dérèglement climatique et renforcement de la résilience face à ses effets",
+      "resume": "Le texte, issu de la Convention citoyenne pour le climat, porte notamment sur l'affichage environnemental, la publicité, les zones à faibles émissions, la location des passoires thermiques, l'artificialisation des sols et les vols intérieurs courts. Il crée aussi des délits environnementaux, dont un délit d'écocide.",
+      "droits": [
+        {
+          "code": "environnement",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "ce-2021-02",
+            "hcc-2021-02"
+          ],
+          "justification": "Le texte ajoute des obligations et des interdictions au droit existant. Le Conseil d'État les rattache à « l'objectif de valeur constitutionnelle de protection de l'environnement », par exemple sur l'affichage environnemental. Le Haut Conseil pour le climat relève que les mesures de pilotage « permettent de renforcer la cohérence de l'action publique avec les objectifs climat »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Portée des mesures : le Haut Conseil pour le climat juge qu'une « proportion élevée de ces mesures voit sa portée réduite », et que le texte « n'offre pas suffisamment de vision stratégique ». La CNCDH regrette « l'absence dans ce texte de mesures plus vigoureuses ». Ces deux avis portent sur le projet, avant le texte de la commission mixte paritaire.",
+          "sources": [
+            "hcc-2021-02",
+            "cncdh-2021-05"
+          ]
+        },
+        {
+          "texte": "Droit pénal de l'environnement et sols : Notre Affaire à Tous parle de « nouveaux délits inapplicables » et d'une « coquille vide » sur l'artificialisation.",
+          "sources": [
+            "naat-2021"
+          ]
+        },
+        {
+          "texte": "Logement : le Haut Conseil pour le climat relève que l'interdiction de louer les passoires thermiques en 2028 ne s'applique pas aux propriétaires occupants, et ne prévoit pas d'extension progressive aux autres classes énergétiques.",
+          "sources": [
+            "hcc-2021-02"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2021-825 DC du 13 août 2021, non-conformité partielle. Censure de mots des articles 81 et 173, et des articles 16, 34, 38, 84, 102, 105, 152, 161, 168, 195, 204, 221, 235 et 255, ces derniers comme dépourvus de lien avec le projet. Le grief selon lequel la loi serait insuffisante pour le climat est écarté, faute de viser une disposition déterminée : le Conseil « ne dispose pas d'un pouvoir général d'injonction à l'égard du législateur ». Le paragraphe V de l'article L. 752-6 du code de commerce est conforme.",
+      "note": "Le sens se lit sur les mesures du texte. Les critiques d'insuffisance, très majoritaires dans les sources, s'affichent en vigilance sans changer le sens (règle 5). Aucune source admise lue ne soutient que le texte réduirait la protection de l'environnement ; les arguments du type liberté d'entreprendre sont hors grille (règle 2). Aucun amendement clé (règle 11) : les suppressions votées en 1re lecture (articles 9, 21, 32, 59 et 68) visent des mesures que les sources lues critiquent comme insuffisantes ou ne mettent pas en cause. Les motions de renvoi ne sont pas affichées (règle 10).",
+      "sources": {
+        "ce-2021-02": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis sur un projet de loi portant lutte contre le dérèglement climatique et renforcement de la résilience face à ses effets",
+          "date": "2021-02-04",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b3875_avis-conseil-etat.pdf"
+        },
+        "cncdh-2021-05": {
+          "auteur": "CNCDH",
+          "titre": "Avis « Urgence climatique et droits de l'Homme » (A-2021-6)",
+          "date": "2021-05-27",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-06/A%20-%202021%20-%206%20-%20Urgence%20climatique%20et%20droits%20de%20l'Homme,%20mai%202021.pdf"
+        },
+        "hcc-2021-02": {
+          "auteur": "Haut Conseil pour le climat",
+          "titre": "Avis portant sur le projet de loi Climat et résilience",
+          "date": "2021-02",
+          "url": "https://www.hautconseilclimat.fr/wp-content/uploads/2021/02/hcc-avis-pjl-climat-resilience-1.pdf"
+        },
+        "naat-2021": {
+          "auteur": "Notre Affaire à Tous",
+          "titre": "Notre Affaire à Tous et la Loi Climat et Résilience",
+          "date": "2021-03",
+          "url": "https://notreaffaireatous.org/notre-affaire-a-tous-et-la-loi-climat-et-resilience/"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3891",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (233-35)"
+        },
+        {
+          "id": "VTANR5L15V3738",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (332-77)"
+        },
+        {
+          "id": "VTANR5L15V3890",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (21-156)"
+        },
+        {
+          "id": "VTANR5L15V3511",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (18-73)"
+        }
+      ]
+    },
+    {
       "id": "code-justice-mineurs-2021",
       "dossier_an": "DLR5L15N37919",
       "legislature": 15,
@@ -1822,6 +2257,77 @@
           "role": "amendement",
           "pour": "contre-texte",
           "objet": "suppression de l'article 7, généralisation des cours criminelles départementales, 1re lecture (7-47)"
+        }
+      ]
+    },
+    {
+      "id": "constitution-environnement-2021",
+      "dossier_an": "DLR5L15N41425",
+      "legislature": 15,
+      "titre": "Projet de loi constitutionnelle complétant l'article 1er de la Constitution et relatif à la préservation de l'environnement",
+      "resume": "Le texte adopté par l'Assemblée en 2e lecture inscrit à l'article 1er de la Constitution que la France « garantit la préservation de l'environnement et de la diversité biologique et agit contre le dérèglement climatique ». Le Sénat ayant retenu une autre rédaction, la révision n'a pas abouti.",
+      "droits": [
+        {
+          "code": "environnement",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "ce-2021-01",
+            "greenpeace-2021-03",
+            "cncdh-2021-05"
+          ],
+          "justification": "Le Conseil d'État juge que le terme « garantit » imposerait aux pouvoirs publics « une quasi-obligation de résultat ». Greenpeace France y voit « un levier supplémentaire dans le contrôle de constitutionnalité des lois », et la CNCDH une initiative qui « donnerait davantage de force à l'urgence climatique »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Portée : le Conseil d'État rappelle que cette inscription « revêt une portée symbolique » et ne confère « aucune prééminence d'ordre juridique sur les autres normes constitutionnelles » ; il juge les effets du terme « garantit » « largement indéterminés » et propose « préserve ». Il relève que la protection de l'environnement figure déjà dans la Charte de 2005.",
+          "sources": [
+            "ce-2021-01"
+          ]
+        },
+        {
+          "texte": "Insuffisance : pour Greenpeace France, le projet est « une tentative de diversion » et « aurait dû intégrer le principe de non-régression ». Le soutien de Greenpeace à la rédaction reste affiché, sous réserve qu'elle ne soit pas modifiée.",
+          "sources": [
+            "greenpeace-2021-03"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Révision non aboutie : le texte n'a jamais été adopté en termes identiques par les deux assemblées, condition d'un référendum. Le Sénat a voté une autre rédaction, y compris en 2e lecture le 5 juillet 2021, et le Gouvernement a renoncé à poursuivre le lendemain. Le sens se lit sur le texte que l'Assemblée a voté (règle 6). Scrutin décisif : l'article unique en 2e lecture, dernier vote de l'Assemblée, sans vote sur l'ensemble (règle 9). Le vote sur l'ensemble de 1re lecture est affiché ; il porte sur une rédaction voisine. Aucun amendement clé : la suppression d'un article unique double le décisif (règle 11).",
+      "sources": {
+        "ce-2021-01": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 401868 sur un projet de loi constitutionnelle complétant l'article 1er de la Constitution et relatif à la préservation de l'environnement",
+          "date": "2021-01-14",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b3787_avis-conseil-etat.pdf"
+        },
+        "cncdh-2021-05": {
+          "auteur": "CNCDH",
+          "titre": "Avis « Urgence climatique et droits de l'Homme » (A-2021-6)",
+          "date": "2021-05-27",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-06/A%20-%202021%20-%206%20-%20Urgence%20climatique%20et%20droits%20de%20l'Homme,%20mai%202021.pdf"
+        },
+        "greenpeace-2021-03": {
+          "auteur": "Greenpeace France",
+          "titre": "Climat : un référendum ne sera pas suffisant",
+          "date": "2021-03-09",
+          "url": "https://www.greenpeace.fr/espace-presse/climat-un-referendum-ne-sera-pas-suffisant/"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3837",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "article unique, tient lieu de vote sur l'ensemble, 2e lecture (331-104)"
+        },
+        {
+          "id": "VTANR5L15V3484",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (391-47)"
         }
       ]
     },
@@ -4112,6 +4618,64 @@
           "role": "ensemble",
           "pour": "texte",
           "objet": "ensemble, 1re lecture (59-6)"
+        }
+      ]
+    },
+    {
+      "id": "fin-hydrocarbures-2017",
+      "dossier_an": "DLR5L15N35929",
+      "legislature": 15,
+      "titre": "Loi mettant fin à la recherche ainsi qu'à l'exploitation des hydrocarbures et portant diverses dispositions relatives à l'énergie et à l'environnement",
+      "resume": "Le texte met fin progressivement à la recherche et à l'exploitation du charbon et des hydrocarbures : plus de nouveau permis de recherche, et des concessions qui ne peuvent être prolongées au-delà du 1er janvier 2040, sauf exceptions. Il prévoit aussi un cahier des charges environnemental pour les titres miniers et des dispositions diverses sur l'énergie.",
+      "droits": [
+        {
+          "code": "environnement",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "amis-terre-2026-01",
+            "fne-2026-01"
+          ],
+          "justification": "L'arrêt des nouveaux permis écarte des atteintes aux milieux. Le jugement porte sur cette protection, non sur le choix d'une source d'énergie (règle 2). Défendant en 2026 cette même interdiction, des ONG citent des « atteintes durables aux écosystèmes côtiers et marins » et France Nature Environnement cite « récifs coralliens, herbiers, lagons, mangroves »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Portée de l'interdiction : les Amis de la Terre jugent que « les mesures proposées dans le projet de loi Hulot ne suffisent pas ». Le texte voté laisse autorisée la prolongation des permis de recherche en cours et admet le gaz de mine.",
+          "sources": [
+            "adt-2017-09"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Scrutin décisif : dernier vote public, sur le texte du 10/10/2017. La loi a ensuite été adoptée en lecture définitive le 19/12/2017 sans scrutin public (règle 9) ; le sens se lit donc sur le texte de 1re lecture (règle 6). Les arguments relatifs au climat et à la politique énergétique ne fondent pas le sens (règle 2) : seule la protection des milieux le fonde. Les deux sources qui la décrivent datent de 2026 : elles défendent l'interdiction posée par cette loi (règle 7). Aucun amendement n'a été voté par scrutin public (règle 11).",
+      "sources": {
+        "adt-2017-09": {
+          "auteur": "Les Amis de la Terre France",
+          "titre": "Loi Hulot : redonnons à l'État le pouvoir de dire non !",
+          "date": "2017-09-21",
+          "url": "https://www.amisdelaterre.org/loi-hulot-redonnons-a-l-etat-le-pouvoir-de-dire-non/"
+        },
+        "amis-terre-2026-01": {
+          "auteur": "Les Amis de la Terre France, Surfrider Foundation Europe, Réseau Action Climat, Greenpeace France",
+          "titre": "Audition au Sénat : les ONG alertent sur les risques d'une relance fossile en outre-mer",
+          "date": "2026-01-15",
+          "url": "https://www.amisdelaterre.org/communique-presse/audition-au-senat-les-ong-alertent-sur-les-risques-dune-relance-fossile-en-outre-mer/"
+        },
+        "fne-2026-01": {
+          "auteur": "Mayotte Nature Environnement, Guyane Nature Environnement, France Nature Environnement",
+          "titre": "Retour de la loi Hulot : Menaces sur l'environnement en Outre-mer",
+          "date": "2026-01-29",
+          "url": "https://mayottenatureenvironnement.com/2026/01/29/petrole-et-gaz-en-outre-mer-le-senat-sapprete-a-franchir-une-ligne-rouge/"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V139",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, dernier vote public, sur le texte du 10/10/2017 (388-92)"
         }
       ]
     },
@@ -7083,6 +7647,76 @@
       }
     },
     {
+      "id": "lom-2019",
+      "dossier_an": "DLR5L15N37029",
+      "legislature": 15,
+      "titre": "Loi d'orientation des mobilités",
+      "resume": "Loi générale sur les transports : programmation des investissements, gouvernance locale des mobilités, données de transport, forfait mobilités durables, zones à faibles émissions mobilité, contrôle automatisé des voies réservées. Elle permet aux plateformes de voitures de transport avec chauffeur et de livraison à deux ou trois roues d'établir une charte, homologuée par l'administration, qui fixe leurs engagements envers les travailleurs. Le texte voté prévoit qu'une charte homologuée et le respect de ces engagements ne peuvent caractériser un lien de subordination. Il donne aussi à ces travailleurs le droit de refuser une prestation sans pénalité et de se déconnecter.",
+      "droits": [
+        {
+          "code": "travail-protection-sociale",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cfdt-2019",
+            "cc-2019-794"
+          ],
+          "justification": "L'article 20 du projet (article 44 de la loi) permet à une plateforme de définir elle-même, dans une charte, des règles qui ne pourront pas servir à établir un contrat de travail. La CFDT s'y oppose : « Il n'est pas envisageable qu'une simple charte unilatérale se substitue à une loi et à des accords collectifs. » Le Conseil constitutionnel relève que les dispositions votées « visent à faire échec à cette requalification » en contrat de travail."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "La mesure la plus contestée ne figure pas dans la loi promulguée : le Conseil constitutionnel a censuré la règle selon laquelle le respect des engagements de la charte ne peut caractériser un lien de subordination. On qualifie toutefois le texte voté par l'Assemblée le 19/11/2019, qui la contenait (règle 6). Le Conseil garde la règle selon laquelle la seule existence d'une charte homologuée ne suffit pas à caractériser ce lien, et il rappelle que le juge peut requalifier la relation.",
+          "sources": [
+            "cc-2019-794"
+          ]
+        },
+        {
+          "texte": "Mesures de sens opposé : la charte reste facultative et doit préciser les modalités permettant d'obtenir un « prix décent ». Elle doit garantir la liberté de se connecter ou de se déconnecter sans plages horaires imposées.",
+          "sources": [
+            "cc-2019-794"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2019-794 DC du 20 décembre 2019, non-conformité partielle, sans réserve. Censure, à l'article 44, des mots qui empêchaient le juge de retenir le respect des engagements de la charte pour caractériser un lien de subordination : le législateur a méconnu l'étendue de sa compétence. Le reste des dispositions contestées sur la charte est conforme. Sont aussi censurés l'article 33, le II de l'article 83, le IX de l'article 98 et le V de l'article 113, qui habilitaient le Gouvernement à légiférer par ordonnance, et, comme cavaliers, les articles 7, 49, 104, 109 et 110.",
+      "note": "Scrutin décisif : ensemble, lecture définitive, 19/11/2019. Texte composite : le droit principal suit la seule mesure sur laquelle une source admise a été lue, la charte des plateformes (règle 4). Les zones à faibles émissions et le contrôle automatisé figurent dans le résumé sans droit associé, faute de source admise lue qui se prononce sur ces mesures dans ce texte. Aucun amendement clé (règle 11) : aucun scrutin public ne porte sur la suppression ou le rétablissement de l'article 20. Aucune motion de rejet préalable n'a été soumise à un scrutin public.",
+      "sources": {
+        "cc-2019-794": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2019-794 DC du 20 décembre 2019, loi d'orientation des mobilités",
+          "date": "2019-12-20",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2019/2019794DC.htm"
+        },
+        "cfdt-2019": {
+          "auteur": "CFDT",
+          "titre": "Projet de loi mobilité : Péril sur les travailleurs des plateformes",
+          "date": "2019-05-17",
+          "url": "https://www.cfdt.fr/portail/actualites/emploi-/-formation/projet-de-loi-mobilite-peril-sur-les-travailleurs-des-plateformes-srv1_681972"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V2308",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (116-49)"
+        },
+        {
+          "id": "VTANR5L15V2071",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, nouvelle lecture (364-130)"
+        },
+        {
+          "id": "VTANR5L15V1957",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (372-40)"
+        }
+      ]
+    },
+    {
       "id": "lopj-2023",
       "dossier_an": "DLR5L16N47779",
       "legislature": 16,
@@ -8498,6 +9132,112 @@
         "sources": {},
         "note": "L'AN adopte définitivement le 15/11/2023 le texte du Sénat."
       }
+    },
+    {
+      "id": "neonicotinoides-betteraves-2020",
+      "dossier_an": "DLR5L15N40450",
+      "legislature": 15,
+      "titre": "Loi relative aux conditions de mise sur le marché de certains produits phytopharmaceutiques en cas de danger sanitaire",
+      "resume": "Le texte permet, jusqu'au 1er juillet 2023 et par arrêté, d'autoriser des semences de betteraves sucrières traitées aux néonicotinoïdes, alors que toute dérogation à leur interdiction avait pris fin le 1er juillet 2020. Il crée un conseil de surveillance chargé du suivi des alternatives et interdit temporairement de semer ensuite des plantes attractives pour les pollinisateurs.",
+      "droits": [
+        {
+          "code": "environnement",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cc-2020-809",
+            "unaf-apiculture-2020-10",
+            "ce-2020-08"
+          ],
+          "justification": "Depuis le 1er juillet 2020, « il n'est plus possible d'accorder de dérogations » (Conseil d'État). Le texte en rétablit. Le Conseil constitutionnel relève que ces produits « ont des incidences sur la biodiversité, en particulier pour les insectes pollinisateurs et les oiseaux ». L'Union nationale de l'apiculture française parle d'« un recul sans précédent »."
+        },
+        {
+          "code": "sante",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cc-2020-809"
+          ],
+          "justification": "Selon le Conseil constitutionnel, ces produits « induisent des risques pour la santé humaine »."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "Risques non évalués : pour les abeilles, l'ANSES indique que les évaluations de risque sur les cultures suivantes « ne peuvent être finalisées faute de données » ou « montrent des effets inacceptables », et que les données disponibles ne permettent pas de fixer les mesures d'atténuation.",
+          "sources": [
+            "anses-2020-12"
+          ]
+        },
+        {
+          "texte": "Limites de la dérogation : le Conseil constitutionnel la juge conforme à la Charte de l'environnement parce qu'elle est cantonnée aux betteraves sucrières et ouverte exclusivement jusqu'au 1er juillet 2023.",
+          "sources": [
+            "cc-2020-809"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2020-809 DC du 10 décembre 2020. Conformité, sans censure ni réserve : les mots « précisées par décret » et la dérogation, applicable jusqu'au 1er juillet 2023, sont jugés conformes. Le Conseil écarte les griefs tirés de la Charte de l'environnement et de l'adaptation au droit de l'Union européenne.",
+      "note": "Le droit applicable au jour du vote (règle 4) interdit ces produits, sans dérogation possible depuis le 1er juillet 2020 : le texte restreint donc le droit. Un amendement clé (règle 11) : la suppression de l'article 1er, qui porte la dérogation, mise en cause par l'Union nationale de l'apiculture française. La suppression de l'article 2 n'est pas retenue : cet article limite la dérogation aux betteraves, et le supprimer l'aurait élargie. L'étiquette tient à la durée limitée de la dérogation. Les amendements de rédaction de l'article 1er ne sont pas retenus.",
+      "sources": {
+        "anses-2020-12": {
+          "auteur": "ANSES",
+          "titre": "Avis relatif aux mesures d'atténuation des risques devant figurer dans toute dérogation à l'interdiction d'utiliser des produits à base de néonicotinoïdes (saisine 2020-SA-0124)",
+          "date": "2020-12-23",
+          "url": "https://www.anses.fr/fr/system/files/PHYTO2020SA0124.pdf"
+        },
+        "cc-2020-809": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2020-809 DC",
+          "date": "2020-12-10",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2020/2020809DC.htm"
+        },
+        "ce-2020-08": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 401036 sur un projet de loi relatif aux conditions de mise sur le marché de certains produits phytopharmaceutiques en cas de danger sanitaire",
+          "date": "2020-08-26",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b3298_avis-conseil-etat.pdf"
+        },
+        "unaf-apiculture-2020-10": {
+          "auteur": "Union nationale de l'apiculture française (partie prenante)",
+          "titre": "Vote sur les néonicotinoïdes : une insulte à l'apiculture, à la science et à la protection du vivant",
+          "date": "2020-10-06",
+          "url": "https://www.unaf-apiculture.info/vote-sur-les-neonicotinoides-pour-l-union-nationale-de-l-apiculture-francaise-c/"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3076",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (103-45)"
+        },
+        {
+          "id": "VTANR5L15V2940",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (313-158)"
+        },
+        {
+          "id": "VTANR5L15V3075",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (28-98)"
+        },
+        {
+          "id": "VTANR5L15V2931",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (34-92)"
+        },
+        {
+          "id": "VTANR5L15V2932",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 1er, dérogation aux néonicotinoïdes, 1re lecture (34-88)"
+        }
+      ]
     },
     {
       "id": "nucleaire-acceleration-2023",
@@ -17980,6 +18720,12 @@
       "motif": "Adopté sans aucune voix contre au scrutin décisif (81-0) : ce vote ne départage personne (règle 9)."
     },
     {
+      "dossier_an": "DLR5L15N37094",
+      "legislature": 15,
+      "titre": "Mesures d'urgence contre la désertification médicale",
+      "motif": "Aucune source admise sur les mesures du texte soumis au scrutin décisif (règles 6 et 7) : le conventionnement sélectif en a été retiré, et il reste le recours au médecin adjoint et la saisine d'un conciliateur pour trouver un médecin traitant."
+    },
+    {
       "dossier_an": "DLR5L15N37103",
       "legislature": 15,
       "titre": "Mesures d’urgence économiques et sociales",
@@ -18008,6 +18754,12 @@
       "legislature": 15,
       "titre": "Droit de résiliation sans frais de contrats de complémentaire santé",
       "motif": "Droit de la consommation (résiliation d'un contrat), hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N37234",
+      "legislature": 15,
+      "titre": "Loi relative à l'organisation et à la transformation du système de santé",
+      "motif": "Aucune source admise sur l'accès aux soins ; réforme d'organisation du système de santé (règle 8)."
     },
     {
       "dossier_an": "DLR5L15N37247",
@@ -18082,6 +18834,12 @@
       "motif": "Modification du Règlement de l'Assemblée nationale : elle organise ses travaux et ne modifie aucun droit (règle 8)."
     },
     {
+      "dossier_an": "DLR5L15N37447",
+      "legislature": 15,
+      "titre": "Loi relative à l'énergie et au climat",
+      "motif": "Aucune source admise ne met en cause une mesure de ce texte au nom d'un droit de la grille, hors une critique conditionnelle sur un décret à venir (règle 7)."
+    },
+    {
       "dossier_an": "DLR5L15N37471",
       "legislature": 15,
       "titre": "Règlement du budget 2018",
@@ -18116,6 +18874,12 @@
       "legislature": 15,
       "titre": "Engagement dans la vie locale et action publique",
       "motif": "Vie locale et action publique : régime des élus locaux et organisation des collectivités, hors de la grille (règle 2)."
+    },
+    {
+      "dossier_an": "DLR5L15N37698",
+      "legislature": 15,
+      "titre": "Points d'accueil pour soins immédiats",
+      "motif": "Aucune source admise sur la mesure, la labellisation de points d'accueil pour soins non programmés (règle 7)."
     },
     {
       "dossier_an": "DLR5L15N37702",
@@ -18286,6 +19050,12 @@
       "motif": "Don de congés entre salariés à la suite de l'épidémie, sans droit de la grille mis en cause (règle 2)."
     },
     {
+      "dossier_an": "DLR5L15N39756",
+      "legislature": 15,
+      "titre": "Proposition de loi en faveur d'une loi de programmation pour l'hôpital public et les établissements d'hébergement pour personnes âgées dépendantes",
+      "motif": "Aucune source admise ne se prononce sur la mesure : une loi de programmation pluriannuelle pour l'hôpital public et les EHPAD (règle 7)."
+    },
+    {
       "dossier_an": "DLR5L15N39765",
       "legislature": 15,
       "titre": "Accord de coopération avec les pays de l’Union monétaire ouest-africaine",
@@ -18392,6 +19162,12 @@
       "legislature": 15,
       "titre": "Proposition de loi visant à réduire l'empreinte environnementale du numérique en France",
       "motif": "Adopté sans aucune voix contre au scrutin décisif (40-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N40764",
+      "legislature": 15,
+      "titre": "Loi visant à améliorer le système de santé par la confiance et la simplification",
+      "motif": "Aucune source admise indépendante sur ses mesures d'accès aux soins (règle 7)."
     },
     {
       "dossier_an": "DLR5L15N40849",
@@ -18734,6 +19510,12 @@
       "legislature": 15,
       "titre": "Projet de loi autorisant l'approbation de l'accord entre le Gouvernement de la République française et le Gouvernement de la Principauté d'Andorre relatif à l'exercice des activités professionnelles des membres de la famille du personnel diplomatique, consulaire, technique et administratif des missions officielles",
       "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L15N44345",
+      "legislature": 15,
+      "titre": "Proposition de loi visant à interdire le glyphosate",
+      "motif": "Aucune source admise lue ne se prononce sur l'interdiction totale du glyphosate (règle 7)."
     },
     {
       "dossier_an": "DLR5L15N44387",

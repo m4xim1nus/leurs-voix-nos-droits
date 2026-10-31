@@ -50,9 +50,9 @@ du lot 1 sont validés par Max** et dans le `data/editorial.json` de la branche.
 6. [x] Tri validé par Max (31/10/2026), fiche `source/relecture-xve-tri.md` : 173 écarts entrés (règle 8 : 33 ; règle 9 : 76,
    sans exception ; hors grille : 64). Restent à qualifier les 74 de la liste A, et 13 lois de finances à passer par une
    recherche courte (écart si rien).
-7. [ ] Qualifications, par lots thématiques. Lots 1 à 5 validés par Max, dans `editorial.json` : libertés, crise sanitaire,
-   immigration, lois de finances (3 qualifiées, 10 écartées), justice, enfants, égalité, droits civiques, social. Lot 6
-   (environnement et santé) en cours, le dernier. Consigne commune aux agents : `source/consigne-xve-agents.md`.
+7. [x] Qualifications, par lots thématiques. Lots 1 à 6 validés par Max, dans `editorial.json` : libertés, crise sanitaire,
+   immigration, lois de finances (3 qualifiées, 10 écartées), justice, enfants, égalité, droits civiques, social, environnement
+   et santé. Consigne commune aux agents : `source/consigne-xve-agents.md`.
 8. [x] Ticket restaurant étudiant (DLR5L15N41895) : reste écarté, motif neuf, aucune source admise.
 9. [x] `lvnd download` : sous 20 Ko/s pendant la patience, une source avec plan B y bascule (`sources.DEBIT_MINIMAL`).
 10. [x] Fiche député·e : score par législature à partir de deux législatures (règle 19), `scores_deputes_legislatures.csv`,
@@ -63,7 +63,7 @@ du lot 1 sont validés par Max** et dans le `data/editorial.json` de la branche.
 12. [x] Résumés du Conseil constitutionnel du lot 1, repris sur l'original et entrés dans `editorial.json`. Le
     rattachement de la loi ordinaire de 2017 sur la vie politique passe de 2017-753 DC, décision de la loi organique, à
     2017-752 DC : effet sur `textes.csv` au rebuild de A.
-13. [ ] Amendements clés du lot 1 à recontrôler après le plan B ; tout changement repasse par Max.
+13. [ ] Amendements clés des lots 1 à 6 à recontrôler après le plan B ; tout changement repasse par Max.
 14. [x] Sigles de la XVe à l'affichage : `UDI-I` sur le site, `UDI_I` reste dans les données.
 
 ### Reprendre : deux conversations en parallèle
