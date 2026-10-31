@@ -32,6 +32,7 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [DONNÉES] Catalogue XVe, dossier immigration 2018 : V483 (programme de stabilité) rattaché à tort à DLR5L15N36410, V1094 (motion de renvoi de ce texte) rattaché à DLR5L15N36601, V1093 en étape AN1 alors que c'est la nouvelle lecture. Sans effet sur décisif ni scores (claude, 2026-10-31)
 - [DONNÉES] Catalogue : `cc_sens` vide pour 2021-817 DC ; `textes.csv` titre « 2021 à 2027 » pour la programmation de la recherche, la loi dit 2030. Sans effet à l'affichage (claude, 2026-10-31)
 - [DONNÉES] Catalogue XVe, programmation de la justice (DLR5L15N36626) : V1518 (motion sur le PLFSS 2019) et V1536 (déclaration sur la fiscalité écologique) rattachés à tort. Sans effet sur décisif ni scores (claude, 2026-10-31)
+- [DONNÉES] Catalogue XVe, scrutins mal rattachés : V1941 (déclaration de politique générale) à la LOM, V3838 (programmation militaire) à la révision constitutionnelle, V3518 et V3633 (déclarations du Gouvernement) à climat et résilience ; V45, titre « article 6 », PDF « art. 7 ». Sans effet sur décisif ni scores (claude, 2026-10-31)
 
 ## Textes à surveiller
 
