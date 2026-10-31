@@ -48,8 +48,8 @@ du lot 1 sont validés par Max** et dans le `data/editorial.json` de la branche.
 5. [x] Contrôle croisé des positions XVe avec datan.fr (leurs-votes.fr ne couvre pas 2017-2022) : aucun écart réel.
    Section XVe de `docs/SOURCES.md`.
 6. [ ] Tri : 265 textes avec un décisif XVe. 33 écartés par la règle 8 (conventions, résolutions), 76 par la règle 9
-   (unanimes), 156 à trier (72 candidats par mots-clés, 84 sans). S'y ajoutent les lois adoptées par le 49.3 sans
-   vote final (retraites 2020). Listes soumises à Max, comme aux lots de tri.
+   (unanimes), 156 à trier (72 candidats par mots-clés, 84 sans), dont les six du lot 1. S'y ajoute le seul texte du 49.3
+   (retraites 2020). Fiche `source/relecture-xve-tri.md` et écarts dans `source/brouillons-xve-tri/`, **en attente de Max**.
 7. [ ] Qualifications, par lots thématiques. Lot 1 (libertés) : séparatisme, sécurité globale, anti-casseurs, SILT,
    terrorisme et renseignement 2021, responsabilité pénale 2022. Brouillons contrôlés, fiche `source/relecture-xve-lot1.md`,
    en attente de Max ; champs du Conseil constitutionnel à reprendre sur l'original (site injoignable d'ici). Puis crise sanitaire, immigration, justice, social,
@@ -62,9 +62,9 @@ du lot 1 sont validés par Max** et dans le `data/editorial.json` de la branche.
 11. [x] Entrée des textes validés dans le `data/editorial.json` de la branche, sans D1 :
     `uv run lvnd editorial --ajouter ../source/brouillons-xve-lotN` (`--remplacer` pour corriger un texte déjà entré),
     seulement après la réponse explicite de Max, puis `uv run lvnd scores`. Rejouable sans effet.
-12. [ ] Avant la fusion : résumés du Conseil constitutionnel du lot 1. Le champ `conseil_constitutionnel` est **vide** dans
-    `editorial.json`, le site n'affiche que le numéro de la décision et son lien ; le résumé tiré de pages secondaires
-    attend dans `relecture.conseil_a_reprendre` du YAML. Le reprendre sur l'original, puis `--ajouter --remplacer`.
+12. [x] Résumés du Conseil constitutionnel du lot 1, repris sur l'original et entrés dans `editorial.json`. Le
+    rattachement de la loi ordinaire de 2017 sur la vie politique passe de 2017-753 DC, décision de la loi organique, à
+    2017-752 DC : effet sur `textes.csv` au rebuild de A.
 13. [ ] Amendements clés du lot 1 à recontrôler après le plan B ; tout changement repasse par Max.
 14. [ ] Sigles de la XVe à l'affichage (`UDI_I`, tel que l'AN l'écrit).
 
