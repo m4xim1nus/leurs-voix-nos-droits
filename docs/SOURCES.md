@@ -567,4 +567,7 @@ Mesures du 31/10/2026, cycle XVe.
   des groupes : un groupe manque, le plus souvent le MoDem (46 voix), et rien ne permet de reconstruire ses votes. Le
   seul vote sur l'ensemble touché de façon notable est V2816 (loi organique sur la dette sociale). 17 ventilations
   comptent une voix de plus que leur liste nominative, 15 pour le MoDem en septembre et octobre 2020, 2 pour LaREM.
+- **Contrôle croisé.** leurs-votes.fr ne couvre pas 2017-2022. datan.fr, 40 scrutins tirés au sort (graine fixe), 327
+  paires scrutin × groupe hors non-inscrits : 322 concordent. Les 5 autres ne sont pas des erreurs : 3 égalités à une
+  voix dans un petit groupe, que datan affiche d'un côté, et 2 écarts de libellé sur les organes UDI successifs.
 

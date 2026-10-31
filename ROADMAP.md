@@ -33,8 +33,8 @@ Tout se passe sur la branche `xve` (worktree `.claude/worktrees/xve`), jamais su
    `donnees-quotidien.yml`.
 4. [x] Site : vues par législature, XVe affichée dès qu'un de ses textes est qualifié ; périmètre et limites sur la
    page Méthodologie. À revoir avec de vraies qualifications, fiche député·e comprise.
-5. [ ] Contrôle croisé des décomptes XVe (leurs-votes.fr ne couvre pas 2017-2022 ; datan.fr par échantillon). Les
-   sections XVe de `docs/SOURCES.md`.
+5. [x] Contrôle croisé des positions XVe avec datan.fr (leurs-votes.fr ne couvre pas 2017-2022) : aucun écart réel.
+   Section XVe de `docs/SOURCES.md`.
 6. [ ] Tri : 265 textes avec un décisif XVe. 33 écartés par la règle 8 (conventions, résolutions), 76 par la règle 9
    (unanimes), 156 à trier (72 candidats par mots-clés, 84 sans). S'y ajoutent les lois adoptées par le 49.3 sans
    vote final (retraites 2020). Listes soumises à Max, comme aux lots de tri.
