@@ -80,10 +80,12 @@
       applicable au jour du vote, jurisprudence comprise : une loi qui plafonne ce que les tribunaux accordaient
       déjà restreint le droit, tout comme une loi qui rétablit une règle que le Conseil constitutionnel
       avait abrogée, même assortie de la garantie qu’il exigeait. Le droit applicable comprend son échéance
-      légale : prolonger un dispositif protecteur avant son extinction étend le droit. Dans un texte dont
-      les mesures vont en sens opposés pour un même droit, ce droit prend le sens des mesures que les
-      sources citent le plus souvent, et la mesure de sens opposé s’affiche en point de vigilance. Une
-      mesure sur le corps électoral se lit, pour les droits civiques, sur le droit de vote des personnes
+      légale : prolonger un dispositif protecteur avant son extinction étend le droit, et prolonger un
+      régime restrictif, ou en inscrire les pouvoirs dans le droit commun, le restreint, même si le texte
+      allège ce régime. Une évolution postérieure au vote n’entre pas dans le jugement. Dans un texte
+      dont les mesures vont en sens opposés pour un même droit, ce droit prend le sens des mesures que
+      les sources citent le plus souvent, et la mesure de sens opposé s’affiche en point de vigilance.
+      Une mesure sur le corps électoral se lit, pour les droits civiques, sur le droit de vote des personnes
       qu’elle ajoute à la liste ou en retire ; quand une source y voit une atteinte aux droits d’un peuple
       autochtone, le texte reçoit aussi le droit à l’égalité et à la non-discrimination, au sens « restreint ».
       Les deux lectures sont alors comptées.
@@ -122,9 +124,9 @@
       spontanées (article 49, alinéa 2) ne sont pas qualifiées non plus : elles ne portent sur aucun
       texte. Les lois de finances de fin de gestion, qui ne font qu’ouvrir et annuler les crédits de
       l’année, ne le sont pas non plus ; les lois de finances initiales et rectificatives se
-      qualifient comme les autres textes. Une réforme de structure n’est pas purement
-      organisationnelle si une source admise la met en cause au nom d’un droit de la grille. Les
-      textes examinés puis écartés sont
+      qualifient comme les autres textes, et sont écartées faute de source admise sur une de leurs
+      mesures. Une réforme de structure n’est pas purement organisationnelle si une source admise la
+      met en cause au nom d’un droit de la grille. Les textes examinés puis écartés sont
       <a href="/textes">publiés avec leur motif</a>.
     </li>
   </ol>
@@ -242,13 +244,15 @@
     <li value="18" id="regle-18">
       <strong>Chaque texte pèse autant.</strong> Le vote décisif vaut la moitié du texte, les amendements
       clés se partagent l’autre moitié à parts égales. Un texte sans amendement clé ne compte que son
-      vote décisif. Un texte à neuf amendements clés n’écrase donc pas les autres.
+      vote décisif. Un texte à neuf amendements clés n’écrase donc pas les autres. Les lois successives
+      d’une même crise comptent chacune pour un texte, sans regroupement au cas par cas.
     </li>
     <li value="19" id="regle-19">
       <strong>Changement de groupe.</strong> Chaque vote compte pour le groupe où siégeait l’élu·e ce
-      jour-là, d’après le décompte officiel de l’Assemblée. La fiche d’un·e député·e réunit tous ses votes.
-      Un groupe qui change de nom reste un seul groupe, sous son nom le plus récent. Le score d’un groupe
-      réunit les votes de ses membres, pas ses positions.
+      jour-là, d’après le décompte officiel de l’Assemblée. La fiche d’un·e député·e réunit tous ses votes,
+      toutes législatures confondues, avec le détail par législature. Un groupe qui change de nom reste
+      un seul groupe, sous son nom le plus récent. Le score d’un groupe réunit les votes de ses membres,
+      pas ses positions.
     </li>
   </ol>
   <p class="petit discret">

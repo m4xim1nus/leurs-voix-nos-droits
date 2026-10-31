@@ -50,6 +50,12 @@ Un cycle à la fois, choisi et nommé au moment de l'ouvrir.
 
 - [→XVe] Ouvrir le cycle par les textes `libertes` (séparatisme, sécurité globale, anti-casseurs) (user:moi, 2026-10-29)
 
+### Sénat 2017-2022
+
+Écarté du cycle XVe (décision de Max, 31/10/2026) : lire chaque version votée, et redécouper la période unique de la règle 26.
+
+- [→Sénat 2017-2022] Votes du Sénat sur les textes de la XVe (claude, 2026-10-31)
+
 ### Passation
 
 Réécriture éditoriale, domaine définitif, comptes d'édition, transfert du

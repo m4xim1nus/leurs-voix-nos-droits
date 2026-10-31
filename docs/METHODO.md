@@ -35,7 +35,9 @@ loi de finances (règle 9), l'étiquette `regime-exception`. Le même jour, pour
 suivi des textes en cours : les règles 20 à 22, et la CIIVISE parmi les instances
 consultatives (règle 7). Toujours le 30/10/2026, au stock des lois de finances : la
 formation professionnelle (règle 2), les unions confédérales de retraités (règle 7).
-Le 31/10/2026, pour le Sénat : les règles 23 à 28, et le CESE hors des sources (règle 7).
+Le 31/10/2026, pour le Sénat : les règles 23 à 28, et le CESE hors des sources (règle 7). Le même jour, pour la XVe :
+l'échéance d'un régime restrictif et le droit lu à la seule date du vote (règle 4), les lois de finances (règle 8), les
+lois successives d'une même crise (règle 18), le détail par législature sur la fiche d'un·e député·e (règle 19).
 
 ## Grille des droits
 
@@ -99,7 +101,13 @@ voté le reste ; un texte qui le pérennise ne la reçoit pas.
    des nullités en matière correctionnelle, 2024). Le droit applicable au
    jour du vote comprend son **échéance légale** : prolonger un dispositif
    protecteur avant son extinction étend le droit (encadrement des loyers,
-   2026).
+   2026). L'échéance vaut dans les deux sens : prolonger un régime restrictif
+   avant son extinction, ou en inscrire les pouvoirs dans le droit commun,
+   restreint le droit, même si le texte allège ce régime (sécurité intérieure et
+   lutte contre le terrorisme, 2017 ; prorogations de l'état d'urgence sanitaire).
+   Seul compte le droit de la date du vote : une évolution postérieure n'entre pas
+   dans le jugement, hors la décision du Conseil constitutionnel sur ce texte, qui
+   s'affiche à côté (règle 6).
    Dans un **texte composite** dont les mesures vont en sens opposés pour
    un même droit, le sens de ce droit est celui des mesures que les sources
    admises citent le plus souvent. La mesure de sens opposé s'affiche en
@@ -173,7 +181,8 @@ voté le reste ; un texte qui le pérennise ne la reçoit pas.
    fin de gestion** : depuis la réforme de 2021 de la loi organique
    relative aux lois de finances, elles ne font qu'ouvrir et annuler les
    crédits de l'année, sans disposition fiscale. Les lois de finances
-   initiales et rectificatives se qualifient comme les autres textes.
+   initiales et rectificatives se qualifient comme les autres textes. Faute de
+   source admise sur une de leurs mesures, elles sont écartées.
    Une **réforme de structure** n'est pas purement organisationnelle si une
    source admise la met en cause au nom d'un droit de la grille (société-mère
    de l'audiovisuel public et indépendance de l'information).
@@ -292,10 +301,13 @@ voté le reste ; un texte qui le pérennise ne la reçoit pas.
     pèse alors 1. Un texte à neuf amendements n'écrase donc pas les autres.
     Simulation : compter chaque scrutin pour 1 ferait passer EPR de 37 à 20
     en XVIIe.
+    Les lois successives d'une même crise comptent chacune pour 1, sans regroupement
+    au cas par cas (état d'urgence sanitaire, 2020-2022), et leur note le dit.
 19. **Changement de groupe : le groupe du jour du vote.** Chaque vote
     compte pour le groupe où siégeait le député ce jour-là, d'après la
     ventilation officielle de l'AN. La fiche d'un député réunit tous ses
-    votes et liste ses groupes successifs. Un groupe qui change de nom
+    votes, quelle que soit la législature, en donne le détail par législature et liste
+    ses groupes successifs. Un groupe qui change de nom
     (nouvel organe à l'AN) forme une seule **lignée**, sous son nom le plus
     récent : SOC → SOC-A en XVIe, À Droite → UDR → UDDPLR en XVIIe
     (`pipeline/referentiels/groupes.yaml`). Le score d'un

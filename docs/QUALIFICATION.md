@@ -181,7 +181,7 @@ travail doit être factuel, sourcé, vérifiable, et signaler franchement les po
   droits d'un peuple autochtone ; sens lu par rapport au droit
   applicable au jour du vote, jurisprudence comprise (rétablir une règle abrogée par le Conseil
   constitutionnel restreint ; le droit du jour comprend son échéance légale : prolonger un dispositif
-  protecteur étend) ; texte composite : sens des mesures que les
+  protecteur étend, prolonger un régime restrictif ou en inscrire les pouvoirs dans le droit commun restreint ; rien de postérieur au vote) ; texte composite : sens des mesures que les
   sources citent le plus, la mesure opposée en vigilance), 5 (vigilance), 6 (on qualifie le texte
   soumis au scrutin décisif), 7 (sources admises, dont les instances consultatives indépendantes,
   l'ANSES, le HCFEA, l'UNAF (statut signalé), une association porteuse d'un dispositif pour en décrire

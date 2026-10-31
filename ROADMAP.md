@@ -21,6 +21,15 @@ Tout se passe sur la branche `xve` (worktree `.claude/worktrees/xve`), jamais su
   validés par Max dans le chat, ils entrent dans le `data/editorial.json` de la branche.
 - `main` est fusionnée régulièrement dans `xve`. `data/export/` ne se fusionne jamais à la main : on le régénère.
 
+### Décisions de Max du 31/10/2026
+
+Passées dans `docs/METHODO.md` : l'échéance d'un régime restrictif vaut dans les deux sens et seul compte le droit de la
+date du vote (règle 4) ; lois de finances écartées faute de source (règle 8) ; lois d'une même crise comptées chacune pour
+1, et leur note le dit (règle 18). Le Sénat de 2017-2022 reste hors du cycle (`BACKLOG.md`). La fiche député·e aura le
+détail par législature (règle 19, item 10). Lot 1 : `regime-exception` retirée de terrorisme 2021 et de sécurité globale,
+`vie-privee` principal sur sécurité globale et responsabilité pénale 2022, V3223 affiché, V1642 non retenu. **Les six textes
+du lot 1 restent à valider un par un.**
+
 ### Items
 
 1. [x] Sources XVe et XIVe, `LEGISLATURES`, rattachements figés, lignées de groupes, anomalies du dump dans `lvnd check`.
@@ -45,7 +54,56 @@ Tout se passe sur la branche `xve` (worktree `.claude/worktrees/xve`), jamais su
    environnement, santé.
 8. [ ] Revoir l'écart du ticket restaurant étudiant (DLR5L15N41895) : écarté pour unanimité, il a un vote disputé en
    XVe (V3995, 34-14), que l'alerte `unanimite_contestee` signale désormais.
-9. [ ] Décisions de `docs/A_VALIDER.md`.
+9. [ ] `lvnd download` : un dump qui livre quelques octets relance sans fin le délai d'attente, et ne bascule jamais sur
+   le plan B. Ajouter un débit minimal.
+10. [ ] Fiche député·e : score par législature, à côté du score d'ensemble (règle 19).
+11. [ ] Entrée des textes validés dans le `data/editorial.json` de la branche : commande à écrire, à partir de
+    `sync_admin.validations` (mêmes contrôles, sérialisation `editorial.serialiser`), sans D1.
+
+### Reprendre : deux conversations en parallèle
+
+**La conversation A** (celle qui a ouvert le cycle) dort jusqu'à la fin du plan B des amendements, puis fait l'item 2 et le
+rebuild. **La conversation B** avance le reste. Elles partagent le worktree `.claude/worktrees/xve` et commitent par
+chemins nommés.
+
+Règles pour B, tant que le plan B tourne (`pgrep -f sources.download`) :
+
+- **Ne pas lancer `lvnd download`** : le verrou de `data/raw/` est pris. Ne pas supprimer `data/raw/an_amendements_15/`.
+- **Ne jamais commiter `data/export/`** : c'est une copie de travail XVe, sans amendements, sur des dumps du 31/10 au
+  matin. Les agents et le site la lisent telle quelle, `amendement_id` et division vides pour la XVe. Ne pas la restaurer.
+- Un `lvnd build` s'écrit ailleurs (`--sqlite` et `--export` dans le scratchpad). Il crée `data/raw/an_amendements_15/seance.parquet`,
+  partiel : A le supprime avant son build final. Le test `donnees.test.ts` échoue sur DLR5L17N51427 tant que les dumps
+  sont ceux du matin, c'est attendu ; `lvnd check` échoue sur les amendements XVe, c'est attendu aussi.
+- Ne rien pousser sans l'accord de Max. Ne rien charger dans D1 (voir plus haut).
+
+Ordre conseillé pour B :
+
+1. **Tri (item 6)** : `source/relecture-xve-tri.md`, avec les listes d'écart d'office (règle 8 : 33 ; règle 9 : 76) et les 156
+   textes, chacun avec une proposition d'une ligne, plus les 49.3 sans vote final et le ticket restaurant (item 8). Max répond
+   en lot. Les YAML d'écart vont dans `source/brouillons-xve-tri/`.
+2. **Lot 1** : soumettre à Max les six textes un par un (`source/relecture-xve-lot1.md`, questions transversales déjà tranchées). Les
+   champs `conseil_constitutionnel` citent des pages secondaires : les reprendre sur l'original, ou demander à Max de coller
+   les décisions, le site étant injoignable d'ici ; retirer la mention « à contrôler ».
+3. **Item 11**, pour que les textes validés apparaissent sur le site de la branche.
+4. **Lots suivants**, selon `docs/QUALIFICATION.md` (cinq textes au plus par agent, dossier neuf `source/brouillons-xve-lotN/`, pas
+   de bloc `senat`). Prochain lot : crise sanitaire, avec la règle 4 et la règle 18. Rappeler aux agents que `amendement_id` est vide
+   (règle 11 d'après le titre du scrutin, à recontrôler), qu'on ne contourne aucun refus de site, et que tout document collectif
+   se vérifie sur ses signataires.
+5. **Items 9 et 10** quand le tri laisse du temps.
+
+Quand le plan B se termine, A : supprime `seance.parquet` ; `lvnd download --leger` puis `lvnd download an_dossiers_14` (manifeste) ; `lvnd
+build` ; règle le seuil de `lvnd check` pour la XVe si besoin ; `pytest`, tests du site ; mesure la passe quotidienne (item 3) ; commite
+`data/export/`. B recontrôle alors les amendements clés de tous les brouillons déjà faits.
+
+Si le plan B s'arrête (terminal fermé, plafond de 10 h), il reprend là où il en était :
+
+```bash
+cd .claude/worktrees/xve/pipeline && uv run python -c "
+from pathlib import Path
+from lvnd import sources
+sources.PATIENCE_AVANT_SECOURS = 0
+sources.download(Path('../data/raw'), ['an_amendements_15'], secours_max=600*60)"
+```
 
 ### Fin du cycle : l'intégration d'un coup
 
