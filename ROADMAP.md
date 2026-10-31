@@ -26,7 +26,8 @@ Tout se passe sur la branche `xve` (worktree `.claude/worktrees/xve`), jamais su
 1. [x] Sources XVe et XIVe, `LEGISLATURES`, rattachements figés, lignées de groupes, anomalies du dump dans `lvnd check`.
    Sur les mêmes dumps, rien ne change pour les XVIe, XVIIe et le Sénat, sauf 5 lignes de `textes.csv` enrichies de
    leurs votes XVe (aucun décisif modifié).
-2. [ ] Amendements XVe : plan B en cours (dump bloqué par le serveur de l'AN, comme pour la XVIe). Puis seuil de
+2. [ ] Amendements XVe : plan B en cours, une dizaine d'heures (le dump plafonne à 11 Ko/s, soit 16 h, et chaque octet
+   relance son délai d'attente : il ne bascule jamais seul sur le plan B, à corriger dans `lvnd download`). Puis seuil de
    `lvnd check`, et copie dans la release `donnees-figees` : **sans elle, la passe quotidienne échouerait après la
    fusion**, faute de pouvoir récupérer l'archive.
 3. [ ] Temps de la passe quotidienne avec la XVe (60 min au plus, sans cache des `seance.parquet`) ; garde-fous de
@@ -39,7 +40,8 @@ Tout se passe sur la branche `xve` (worktree `.claude/worktrees/xve`), jamais su
    (unanimes), 156 à trier (72 candidats par mots-clés, 84 sans). S'y ajoutent les lois adoptées par le 49.3 sans
    vote final (retraites 2020). Listes soumises à Max, comme aux lots de tri.
 7. [ ] Qualifications, par lots thématiques. Lot 1 (libertés) : séparatisme, sécurité globale, anti-casseurs, SILT,
-   terrorisme et renseignement 2021, responsabilité pénale 2022. Puis crise sanitaire, immigration, justice, social,
+   terrorisme et renseignement 2021, responsabilité pénale 2022. Brouillons contrôlés, fiche `source/relecture-xve-lot1.md`,
+   en attente de Max ; champs du Conseil constitutionnel à reprendre sur l'original (site injoignable d'ici). Puis crise sanitaire, immigration, justice, social,
    environnement, santé.
 8. [ ] Revoir l'écart du ticket restaurant étudiant (DLR5L15N41895) : écarté pour unanimité, il a un vote disputé en
    XVe (V3995, 34-14), que l'alerte `unanimite_contestee` signale désormais.
