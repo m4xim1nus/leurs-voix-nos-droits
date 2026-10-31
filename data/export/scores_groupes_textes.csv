@@ -491,6 +491,7 @@ PO840056,surete-transports-2025,0,6,0,0,0.0
 PO840056,urgence-agricole-2026,1,11,2,0,10.7
 PO840056,violences-sexuelles-sexistes-2025,2,0,1,0,100.0
 PO840056,vsa-commerces-2026,0,1,0,0,0.0
+PO845401,aesh-corps-fonctionnaires-2026,0,1,79,0,0.0
 PO845401,aide-a-mourir,12,106,0,0,10.2
 PO845401,allocations-familiales-premier-enfant-2025,24,0,0,0,100.0
 PO845401,antisemitisme-enseignement-superieur,145,1,0,0,99.3
@@ -520,6 +521,7 @@ PO845401,mortalite-infantile-ppl-2025,0,33,1,0,0.0
 PO845401,narcotrafic,45,444,0,0,3.3
 PO845401,nationalite-mayotte-2025,0,122,0,0,0.0
 PO845401,offre-locative-dpe-ppl-2024,0,115,0,0,0.0
+PO845401,parcours-soins-violences-sexuelles-2026,0,0,74,0,
 PO845401,parite-bloc-communal-2025,0,116,0,0,0.0
 PO845401,pfas-2025,0,50,0,0,0.0
 PO845401,plfss-2026,192,55,0,0,85.1
@@ -544,6 +546,7 @@ PO845401,vaisselle-plastique-cantines-2026,0,17,0,1,0.0
 PO845401,violences-sexuelles-sexistes-2025,0,0,55,0,
 PO845401,vote-correspondance-detenus-2025,0,53,0,0,0.0
 PO845401,vsa-commerces-2026,0,16,0,0,0.0
+PO845407,aesh-corps-fonctionnaires-2026,0,6,23,1,0.0
 PO845407,aide-a-mourir,64,18,9,0,78.0
 PO845407,allocations-familiales-premier-enfant-2025,0,13,2,1,0.0
 PO845407,antisemitisme-enseignement-superieur,107,0,0,2,100.0
@@ -573,6 +576,7 @@ PO845407,mortalite-infantile-ppl-2025,4,0,12,2,100.0
 PO845407,narcotrafic,10,219,2,10,1.2
 PO845407,nationalite-mayotte-2025,0,73,4,2,0.0
 PO845407,offre-locative-dpe-ppl-2024,38,0,0,2,100.0
+PO845407,parcours-soins-violences-sexuelles-2026,0,1,11,1,0.0
 PO845407,parite-bloc-communal-2025,57,2,1,0,96.6
 PO845407,pfas-2025,39,0,0,1,100.0
 PO845407,plfss-2026,0,172,1,2,0.0
@@ -597,6 +601,7 @@ PO845407,vaisselle-plastique-cantines-2026,18,0,0,1,100.0
 PO845407,violences-sexuelles-sexistes-2025,44,0,0,1,100.0
 PO845407,vote-correspondance-detenus-2025,0,29,0,2,0.0
 PO845407,vsa-commerces-2026,0,35,0,2,0.0
+PO845413,aesh-corps-fonctionnaires-2026,68,0,0,0,100.0
 PO845413,aide-a-mourir,61,2,3,0,96.8
 PO845413,allocations-familiales-premier-enfant-2025,22,0,0,0,100.0
 PO845413,antisemitisme-enseignement-superieur,0,100,0,0,0.0
@@ -626,6 +631,7 @@ PO845413,mortalite-infantile-ppl-2025,0,19,0,0,0.0
 PO845413,narcotrafic,198,0,0,0,100.0
 PO845413,nationalite-mayotte-2025,65,0,0,0,100.0
 PO845413,offre-locative-dpe-ppl-2024,50,0,0,0,100.0
+PO845413,parcours-soins-violences-sexuelles-2026,68,0,0,0,100.0
 PO845413,parite-bloc-communal-2025,57,0,0,0,100.0
 PO845413,pfas-2025,45,0,0,0,100.0
 PO845413,plfss-2026,119,0,0,0,100.0
@@ -650,6 +656,7 @@ PO845413,vaisselle-plastique-cantines-2026,13,0,0,0,100.0
 PO845413,violences-sexuelles-sexistes-2025,2,19,1,0,9.5
 PO845413,vote-correspondance-detenus-2025,26,0,0,0,100.0
 PO845413,vsa-commerces-2026,7,0,0,0,100.0
+PO845419,aesh-corps-fonctionnaires-2026,41,0,0,0,100.0
 PO845419,aide-a-mourir,57,4,6,0,93.4
 PO845419,allocations-familiales-premier-enfant-2025,14,0,0,0,100.0
 PO845419,antisemitisme-enseignement-superieur,57,0,0,0,100.0
@@ -679,6 +686,7 @@ PO845419,mortalite-infantile-ppl-2025,0,9,0,0,0.0
 PO845419,narcotrafic,140,64,13,0,19.8
 PO845419,nationalite-mayotte-2025,61,0,3,0,100.0
 PO845419,offre-locative-dpe-ppl-2024,36,0,0,0,100.0
+PO845419,parcours-soins-violences-sexuelles-2026,36,0,0,0,100.0
 PO845419,parite-bloc-communal-2025,35,0,0,0,100.0
 PO845419,pfas-2025,46,0,0,0,100.0
 PO845419,plfss-2026,94,64,5,0,42.3
@@ -703,6 +711,7 @@ PO845419,vaisselle-plastique-cantines-2026,14,0,0,0,100.0
 PO845419,violences-sexuelles-sexistes-2025,27,0,0,0,100.0
 PO845419,vote-correspondance-detenus-2025,18,0,2,0,100.0
 PO845419,vsa-commerces-2026,4,0,2,0,100.0
+PO845425,aesh-corps-fonctionnaires-2026,7,0,3,0,100.0
 PO845425,aide-a-mourir,5,41,2,0,10.9
 PO845425,allocations-familiales-premier-enfant-2025,4,0,0,1,100.0
 PO845425,antisemitisme-enseignement-superieur,48,1,0,0,98.0
@@ -732,6 +741,7 @@ PO845425,mortalite-infantile-ppl-2025,0,5,0,0,0.0
 PO845425,narcotrafic,0,104,1,4,0.0
 PO845425,nationalite-mayotte-2025,0,47,0,0,0.0
 PO845425,offre-locative-dpe-ppl-2024,0,6,0,0,0.0
+PO845425,parcours-soins-violences-sexuelles-2026,1,0,6,0,100.0
 PO845425,parite-bloc-communal-2025,2,41,0,0,4.7
 PO845425,pfas-2025,10,1,0,1,90.9
 PO845425,plfss-2026,17,27,28,0,30.8
@@ -756,6 +766,7 @@ PO845425,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PO845425,violences-sexuelles-sexistes-2025,11,0,0,0,100.0
 PO845425,vote-correspondance-detenus-2025,0,5,0,0,0.0
 PO845425,vsa-commerces-2026,0,2,0,0,0.0
+PO845439,aesh-corps-fonctionnaires-2026,34,0,0,0,100.0
 PO845439,aide-a-mourir,33,2,1,0,94.3
 PO845439,allocations-familiales-premier-enfant-2025,19,0,0,0,100.0
 PO845439,antisemitisme-enseignement-superieur,4,25,7,0,13.8
@@ -785,6 +796,7 @@ PO845439,mortalite-infantile-ppl-2025,0,8,0,0,0.0
 PO845439,narcotrafic,95,0,25,0,100.0
 PO845439,nationalite-mayotte-2025,32,0,0,0,100.0
 PO845439,offre-locative-dpe-ppl-2024,26,0,0,0,100.0
+PO845439,parcours-soins-violences-sexuelles-2026,30,0,0,0,100.0
 PO845439,parite-bloc-communal-2025,20,0,0,0,100.0
 PO845439,pfas-2025,38,0,0,0,100.0
 PO845439,plfss-2026,33,2,27,0,91.3
@@ -809,6 +821,7 @@ PO845439,vaisselle-plastique-cantines-2026,9,0,0,0,100.0
 PO845439,violences-sexuelles-sexistes-2025,16,0,1,0,100.0
 PO845439,vote-correspondance-detenus-2025,12,0,0,0,100.0
 PO845439,vsa-commerces-2026,1,0,0,0,100.0
+PO845454,aesh-corps-fonctionnaires-2026,0,7,0,0,0.0
 PO845454,aide-a-mourir,20,16,0,0,55.6
 PO845454,allocations-familiales-premier-enfant-2025,0,1,1,0,0.0
 PO845454,antisemitisme-enseignement-superieur,37,0,0,0,100.0
@@ -838,6 +851,7 @@ PO845454,mortalite-infantile-ppl-2025,0,0,7,0,
 PO845454,narcotrafic,6,96,4,0,1.5
 PO845454,nationalite-mayotte-2025,1,30,3,0,3.2
 PO845454,offre-locative-dpe-ppl-2024,12,0,0,0,100.0
+PO845454,parcours-soins-violences-sexuelles-2026,2,4,0,1,33.3
 PO845454,parite-bloc-communal-2025,20,1,2,0,95.2
 PO845454,pfas-2025,22,0,0,0,100.0
 PO845454,plfss-2026,0,75,0,0,0.0
@@ -862,6 +876,7 @@ PO845454,vaisselle-plastique-cantines-2026,7,0,0,0,100.0
 PO845454,violences-sexuelles-sexistes-2025,9,0,0,0,100.0
 PO845454,vote-correspondance-detenus-2025,0,5,0,0,0.0
 PO845454,vsa-commerces-2026,0,0,3,0,
+PO845470,aesh-corps-fonctionnaires-2026,0,2,8,0,0.0
 PO845470,aide-a-mourir,16,18,1,0,47.1
 PO845470,allocations-familiales-premier-enfant-2025,0,3,2,0,0.0
 PO845470,antisemitisme-enseignement-superieur,44,0,0,0,100.0
@@ -891,6 +906,7 @@ PO845470,mortalite-infantile-ppl-2025,0,5,3,0,0.0
 PO845470,narcotrafic,3,88,6,1,0.8
 PO845470,nationalite-mayotte-2025,0,32,0,0,0.0
 PO845470,offre-locative-dpe-ppl-2024,0,0,7,0,
+PO845470,parcours-soins-violences-sexuelles-2026,0,0,9,0,
 PO845470,parite-bloc-communal-2025,1,0,18,0,100.0
 PO845470,pfas-2025,20,0,0,0,100.0
 PO845470,plfss-2026,1,25,27,0,2.9
@@ -915,6 +931,7 @@ PO845470,vaisselle-plastique-cantines-2026,5,0,0,0,100.0
 PO845470,violences-sexuelles-sexistes-2025,13,0,0,1,100.0
 PO845470,vote-correspondance-detenus-2025,0,13,0,0,0.0
 PO845470,vsa-commerces-2026,0,4,0,0,0.0
+PO845485,aesh-corps-fonctionnaires-2026,4,0,0,0,100.0
 PO845485,aide-a-mourir,10,8,4,0,55.6
 PO845485,allocations-familiales-premier-enfant-2025,2,0,0,0,100.0
 PO845485,antisemitisme-enseignement-superieur,20,0,0,0,100.0
@@ -943,6 +960,7 @@ PO845485,montagne-vivante-2026,0,19,2,0,0.0
 PO845485,mortalite-infantile-ppl-2025,0,13,0,0,0.0
 PO845485,narcotrafic,3,31,0,0,1.4
 PO845485,nationalite-mayotte-2025,0,13,0,0,0.0
+PO845485,parcours-soins-violences-sexuelles-2026,1,0,0,0,100.0
 PO845485,parite-bloc-communal-2025,4,8,3,0,33.3
 PO845485,pfas-2025,2,0,0,0,100.0
 PO845485,plfss-2026,12,24,2,0,21.4
@@ -966,6 +984,7 @@ PO845485,vaisselle-plastique-cantines-2026,2,0,0,0,100.0
 PO845485,violences-sexuelles-sexistes-2025,9,0,0,0,100.0
 PO845485,vote-correspondance-detenus-2025,2,0,0,0,100.0
 PO845485,vsa-commerces-2026,0,1,0,0,0.0
+PO845514,aesh-corps-fonctionnaires-2026,12,0,0,0,100.0
 PO845514,aide-a-mourir,10,2,3,0,83.3
 PO845514,allocations-familiales-premier-enfant-2025,15,0,0,0,100.0
 PO845514,antisemitisme-enseignement-superieur,3,16,0,0,15.8
@@ -995,6 +1014,7 @@ PO845514,mortalite-infantile-ppl-2025,0,2,0,0,0.0
 PO845514,narcotrafic,22,1,7,0,85.7
 PO845514,nationalite-mayotte-2025,13,0,0,0,100.0
 PO845514,offre-locative-dpe-ppl-2024,7,0,0,0,100.0
+PO845514,parcours-soins-violences-sexuelles-2026,14,0,0,0,100.0
 PO845514,parite-bloc-communal-2025,6,0,1,0,100.0
 PO845514,pfas-2025,8,0,0,0,100.0
 PO845514,plfss-2026,15,1,2,0,92.6
@@ -1019,6 +1039,7 @@ PO845514,vaisselle-plastique-cantines-2026,3,0,0,0,100.0
 PO845514,violences-sexuelles-sexistes-2025,4,0,0,0,100.0
 PO845514,vote-correspondance-detenus-2025,2,0,0,0,100.0
 PO845514,vsa-commerces-2026,1,0,0,0,100.0
+PO872880,aesh-corps-fonctionnaires-2026,0,0,10,0,
 PO872880,aide-a-mourir,0,17,0,0,0.0
 PO872880,allocations-familiales-premier-enfant-2025,3,0,0,0,100.0
 PO872880,antisemitisme-enseignement-superieur,19,0,0,0,100.0
@@ -1048,6 +1069,7 @@ PO872880,mortalite-infantile-ppl-2025,0,3,0,0,0.0
 PO872880,narcotrafic,0,50,0,0,0.0
 PO872880,nationalite-mayotte-2025,0,15,0,0,0.0
 PO872880,offre-locative-dpe-ppl-2024,0,11,0,0,0.0
+PO872880,parcours-soins-violences-sexuelles-2026,0,0,10,0,
 PO872880,parite-bloc-communal-2025,0,9,0,0,0.0
 PO872880,pfas-2025,0,0,7,0,
 PO872880,plfss-2026,20,3,0,0,92.3

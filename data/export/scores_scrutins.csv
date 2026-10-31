@@ -5,6 +5,9 @@ abrogation-obligation-vaccinale-2023,VTANR5L16V1457,amendement,travail-protectio
 abrogation-obligation-vaccinale-2023,VTANR5L16V1457,amendement,global,principal,etend,0.5,contre
 accueils-physiques-ppl-2023,VTANR5L16V3115,decisif,discriminations,principal,etend,1.0,pour
 accueils-physiques-ppl-2023,VTANR5L16V3115,decisif,global,principal,etend,1.0,pour
+aesh-corps-fonctionnaires-2026,VTANR5L17V9203,decisif,travail-protection-sociale,principal,etend,1.0,pour
+aesh-corps-fonctionnaires-2026,VTANR5L17V9203,decisif,discriminations,secondaire,etend,1.0,pour
+aesh-corps-fonctionnaires-2026,VTANR5L17V9203,decisif,global,principal,etend,1.0,pour
 aide-a-mourir,VTANR5L17V8280,decisif,sante,principal,etend,1.0,pour
 aide-a-mourir,VTANR5L17V8280,decisif,global,principal,etend,1.0,pour
 allocations-familiales-premier-enfant-2025,VTANR5L17V2272,decisif,travail-protection-sociale,principal,etend,1.0,pour
@@ -295,6 +298,10 @@ nucleaire-acceleration-2023,VTANR5L16V1533,decisif,environnement,principal,restr
 nucleaire-acceleration-2023,VTANR5L16V1533,decisif,global,principal,restreint,1.0,contre
 offre-locative-dpe-ppl-2024,VTANR5L17V219,decisif,logement,principal,restreint,1.0,pour
 offre-locative-dpe-ppl-2024,VTANR5L17V219,decisif,global,principal,restreint,1.0,pour
+parcours-soins-violences-sexuelles-2026,VTANR5L17V9241,decisif,sante,principal,etend,1.0,pour
+parcours-soins-violences-sexuelles-2026,VTANR5L17V9241,decisif,femmes-lgbti,secondaire,etend,1.0,pour
+parcours-soins-violences-sexuelles-2026,VTANR5L17V9241,decisif,enfants,secondaire,etend,1.0,pour
+parcours-soins-violences-sexuelles-2026,VTANR5L17V9241,decisif,global,principal,etend,1.0,pour
 parite-bloc-communal-2025,VTANR5L17V1303,decisif,femmes-lgbti,principal,etend,1.0,pour
 parite-bloc-communal-2025,VTANR5L17V1303,decisif,global,principal,etend,1.0,pour
 partage-valeur-2023,VTANR5L16V3009,decisif,travail-protection-sociale,principal,etend,1.0,pour
