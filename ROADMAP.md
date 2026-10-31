@@ -14,7 +14,7 @@ code postal. Le site reste d'abord celui des député·es.
 
 ### Ce que le Sénat apporte (sondage du 31/10/2026, à confirmer au build)
 
-- **Données** : 1 321 scrutins et 459 507 votes nominatifs depuis juin 2022 ; 348
+- **Données** : 1 336 scrutins et 464 719 votes nominatifs depuis juin 2022 ; 348
   sénateur·ices en poste, 333 courriels publics. Dosleg (`votsen`, déjà téléchargé) et
   `ODSEN_GENERAL` / `ODSEN_HISTOGROUPES` (à ajouter) suffisent.
 - **Sur les 104 textes qualifiés** :
@@ -104,8 +104,24 @@ des 98 lois, et les textes retenus, dont casseurs-payeurs. Celui-ci part du brou
 que ce brouillon n'a pas lu. Vérifier à la main chaque décisif proposé : le
 classement automatique des scrutins n'est pas assez sûr pour décider seul.
 
+*Fait (31/10/2026) : règles 23 à 28 validées par Max, 15 scrutins sans fiche rétablis (`referentiels/scrutins_senat.yaml`),
+qualifications décidées par Max le même jour (fiche `source/relecture-senat.md`). Sur les 104 textes publiés : 55 votes
+comptés, 12 affichés, 37 sans scrutin public du Sénat ni motion. Sur les 78 votés au Sénat : 21 comptés, 7 affichés sans
+jugement, 49 écartés, et les ingérences étrangères (340-0), dont la fiche de suivi attend l'inscription à l'AN. Soit 76
+décisifs. Rien n'est encore dans D1 : voir le début de l'étape 3.*
+
 **3. Admin et site.**
 
+- **Charger les décisions de l'étape 2.** Les brouillons sont dans `source/brouillons-senat-meme/`, `-versions/` et `-tri/`,
+  et `source/outils/controle_senat.py` les contrôle. À prévoir :
+  - le bloc `senat` dans `editorial.normaliser` et son pendant de l'admin, au même octet, absent quand il est vide ;
+  - les YAML de `-meme` et `-versions` ne portent que `id`, `dossier_an` et `senat` : ils complètent le document publié, sans le
+    remplacer, alors que `sync-admin --valider` remplace aujourd'hui tout le document ;
+  - `valider` accepte un texte sans décisif de l'AN (`version: seul`) et un vote affiché sans droits ni sens ;
+  - les textes de `-tri` absents de `textes.csv` (sans scrutin à l'AN) entrent au catalogue et dans `en_cours_etats` ;
+  - validation : `--valider "validé par Max (Sénat, 31/10/2026)"`, puis « Publier » par Max. Les écarts ne passent que si le
+    texte n'est pas déjà publié.
+- **Scores du Sénat** (règle 26) : fichiers à part, dans `data/export/senat/`.
 - **Admin** : scrutins et décisif du Sénat sur la fiche, contrôles identiques à
   `lvnd check` (test croisé à l'octet), aperçu des scores, textes sans dossier retenu à
   l'AN. Alerte, dans `lvnd check` et « À traiter », quand un texte est voté en scrutin

@@ -35,6 +35,7 @@ loi de finances (règle 9), l'étiquette `regime-exception`. Le même jour, pour
 suivi des textes en cours : les règles 20 à 22, et la CIIVISE parmi les instances
 consultatives (règle 7). Toujours le 30/10/2026, au stock des lois de finances : la
 formation professionnelle (règle 2), les unions confédérales de retraités (règle 7).
+Le 31/10/2026, pour le Sénat : les règles 23 à 28, et le CESE hors des sources (règle 7).
 
 ## Grille des droits
 
@@ -146,7 +147,8 @@ voté le reste ; un texte qui le pérennise ne la reçoit pas.
    Ne sont pas des sources les rapports parlementaires ni les positions du
    Gouvernement ou des groupes, qui sont parties au débat. La Cour des
    comptes non plus : elle évalue la dépense et l'efficacité des
-   politiques publiques, pas les droits.
+   politiques publiques, pas les droits. Le CESE non plus : il est créé par
+   la Constitution, et cette liste vise la loi et le règlement.
 
    Une source peut porter sur la **mesure** plutôt que sur le texte, même si
    elle lui est antérieure : il suffit qu'elle se prononce sur la mesure que
@@ -325,3 +327,55 @@ voté le reste ; un texte qui le pérennise ne la reçoit pas.
     de source admise, il n'y a pas de fiche. Après le vote, le texte est qualifié ou
     écarté selon les règles communes, et sa fiche disparaît. La page des textes en
     cours n'affiche que ces textes suivis et les textes qualifiés encore en navette.
+
+## Sénat
+
+Les règles 1 à 8 s'appliquent au Sénat, de même que les règles 12 à 14 et 20. Les règles
+ci-dessous remplacent, pour le Sénat, les règles 9 à 11 et 15 à 19.
+
+23. **Scrutin décisif du Sénat** : le dernier scrutin public du Sénat sur l'ensemble du texte,
+    ou sur son article unique. Il est compté s'il a au moins une voix de chaque côté et si son
+    sens est établi (règle 24). Sinon, il est affiché et non compté. Les autres lectures et les
+    parties d'une loi de finances sont affichées, pas comptées. Les **motions** aussi, question
+    préalable comprise, même quand elle met fin à l'examen du texte. Les crédits d'une mission
+    et les amendements ne sont pas retenus. Quand le dernier vote sur l'ensemble n'est pas public, le dernier scrutin public
+    reste décisif, avec la mention « dernier vote public, sur le texte du JJ/MM/AAAA ».
+24. **Chaque vote se lit sur le texte voté.** Si le Sénat a voté le même texte que le scrutin
+    décisif de l'Assemblée (conclusions de la commission mixte paritaire, adoption sans
+    modification par l'une des chambres), le sens est repris. S'il a voté une autre version,
+    le sens est relu sur cette version et sourcé (règle 7). La source peut porter sur la mesure,
+    à condition que la lecture du texte voté montre qu'il s'agit bien de la même. Sans source
+    admise, le vote est affiché et non compté, et aucun sens n'est donné. Sur un texte rejeté par le Sénat, le
+    sens se lit sur la version mise aux voix, pas sur celle de l'Assemblée.
+25. **Texte voté au seul Sénat.** Il est trié, puis qualifié s'il entre dans la grille (règles 2
+    et 8). Il ne compte que dans les scores du Sénat, avec la mention « pas de vote sur
+    l'ensemble à l'Assemblée », qui vaut aussi pour un texte que l'Assemblée a rejeté par une
+    motion ou à main levée. Un texte attendu à l'Assemblée est qualifié dès le vote du Sénat,
+    sans attendre son inscription, avec la mention « texte encore en navette, attendu à
+    l'Assemblée ». Un texte à l'arrêt affiche son état (règle 20), sans cette mention. Il ne compte dans les scores de l'Assemblée qu'après un vote de
+    l'Assemblée. Chaque chambre garde alors son décisif, chacun lu sur son texte. Comme à la
+    règle 21, un nouveau vote du Sénat sur l'ensemble est relu sur le texte voté. Jusque-là,
+    l'ancien décisif reste compté et le nouveau vote porte la mention « pas encore qualifié ».
+    Un décisif du Sénat sur un texte encore en navette porte la mention « vote de 1re lecture
+    au Sénat, texte encore en navette » (la lecture est celle du scrutin).
+26. **Scores du Sénat.** Chaque texte pèse 1 et ne compte que son décisif : pas d'amendements
+    clés. Un texte adopté par le 49.3 à l'Assemblée compte au Sénat s'il y a eu un vote sur
+    l'ensemble (règles 23 et 24). Abstentions et non-votants sont hors calcul. Le calcul du
+    score par droit, le groupe du jour du vote et l'agrégation des votes dans le score d'un
+    groupe sont ceux des règles 15 et 19. Il n'y a qu'une **période** : depuis le 28/06/2022,
+    sans découpage, puisque le Sénat n'a pas de législature et se renouvelle par moitié. Le
+    nombre de votes comptés s'affiche à côté du score : un·e élu·e récent·e en a peu.
+27. **Vote de groupe.** Sur presque chaque scrutin public du Sénat, un vote est enregistré pour
+    presque tous les sièges, et il suit presque toujours la majorité du groupe. Le règlement du
+    Sénat permet de voter par délégation et par procédé électronique. Public Sénat décrit la
+    pratique en avril 2025 : « un seul sénateur peut voter pour l'ensemble de son groupe ». Ces
+    votes sont les résultats officiels, et on les compte tels quels. Ils ne disent pas qui était
+    présent, et ils peuvent ne pas refléter un choix individuel. La fiche d'un·e sénateur·ice
+    affiche donc un score « d'après les votes enregistrés à son nom » et met en avant ses écarts
+    au groupe. **Elle n'affiche aucun taux de participation.** La page du Sénat présente d'abord
+    les groupes.
+28. **Deux chambres séparées.** Aucun score ne mélange les deux chambres. Aucun score d'un·e
+    député·e n'est comparé à celui d'un·e sénateur·ice, puisque les textes comptés diffèrent.
+    Aucune correspondance n'est établie entre les groupes des deux chambres : ils sont côte à
+    côte, chacun sous son sigle. Un texte écarté (règles 8 et 9) l'est pour les deux chambres :
+    son vote au Sénat n'entre dans aucun score.

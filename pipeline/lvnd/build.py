@@ -95,10 +95,10 @@ def _ecrire_votes_senat(export: Path, votes: pl.DataFrame) -> int:
 def _senat(raw: Path, tables: dict[str, pl.DataFrame], classes: list[dict], mandats_an: list[dict],
            date_ref: str) -> tuple[dict[str, pl.DataFrame], pl.DataFrame]:
     """Exports du Sénat, sans lien avec ceux de l'AN : tables de data/export/senat/, et ses votes."""
-    scr_brut = senat.scrutins(tables)
+    scr_brut = senat.completer(senat.scrutins(tables), referentiels.scrutins_senat())
     appart = senat.appartenances(raw, date_ref)
     votes = senat.votes(tables, scr_brut, appart)
-    scr = senat.export_scrutins(tables, votes, parcours.dossier_par_loi(classes))
+    scr = senat.export_scrutins(tables, scr_brut, votes, parcours.dossier_par_loi(classes))
     ventil = positions.positions(senat.ventilations(votes))
     actifs = {r["Matricule"] for r in senat._odsen(raw, "senat_senateurs").filter(pl.col("État") == "ACTIF").to_dicts()}
     ids = set(votes["senateur_id"]) | actifs
@@ -222,7 +222,8 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
     _log("== Écriture")
     sqlite.parent.mkdir(parents=True, exist_ok=True)
     _ecrire_sqlite(sqlite, {**dfs, "votes": votes_df, **{f"senat_{k}": v for k, v in dfs_senat.items()},
-                            "senat_votes": votes_senat.drop("numero")})
+                            "senat_votes": votes_senat.drop("numero"),
+                            "senat_sans_fiche": pl.DataFrame({"id": senat.sans_fiche(tables, dfs_senat["scrutins"])}, schema={"id": pl.String})})
     if export.exists():
         shutil.rmtree(export)
     export.mkdir(parents=True)

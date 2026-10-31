@@ -299,20 +299,40 @@ def ventilations(v: pl.DataFrame) -> list[dict]:
             .sort("scrutin_id", "groupe_id").to_dicts())
 
 
-def export_scrutins(tables: dict[str, pl.DataFrame], v: pl.DataFrame, dossier_de: dict[str, str]) -> pl.DataFrame:
-    """Scrutins publics depuis DEBUT : décompte `scrutins`, compté sur la liste nominative quand elle
+def completer(s: pl.DataFrame, fiches: list[dict]) -> pl.DataFrame:
+    """`scrutins`, plus ceux que Dosleg donne sans fiche (referentiels/scrutins_senat.yaml). Chacun reprend
+    la loi et la lecture de son scrutin `comme` ; le décompte vient ensuite de la liste nominative."""
+    par_id = {r["id"]: r for r in s.to_dicts()}
+    lignes = []
+    for f in fiches:
+        frere = par_id.get(f["comme"], {})
+        lignes.append({"id": f"SN{f['session']}-{f['numero']}", "numero": f["numero"], "date": str(f["date"]), "titre": f["titre"],
+                       "objet": objet_scrutin(f["titre"]), "sort": None, "pour": None, "contre": None,
+                       "loicod": frere.get("loicod"), "typleccod": frere.get("typleccod")})
+    return pl.concat([s, pl.DataFrame(lignes, schema=s.schema)]).sort("date", "numero")
+
+
+def sans_fiche(tables: dict[str, pl.DataFrame], s: pl.DataFrame) -> list[str]:
+    """Scrutins dont `votsen` donne les votes, absents de `s` : à ajouter à referentiels/scrutins_senat.yaml."""
+    ids = (tables["votsen"].filter(pl.col("sesann") >= DEBUT[:4])
+           .select(pl.format("SN{}-{}", "sesann", "scrnum").alias("id")).unique())
+    return sorted(set(ids["id"]) - set(s["id"]))
+
+
+def export_scrutins(tables: dict[str, pl.DataFrame], s: pl.DataFrame, v: pl.DataFrame, dossier_de: dict[str, str]) -> pl.DataFrame:
+    """Scrutins publics depuis DEBUT (`s`) : décompte `scrutins`, compté sur la liste nominative quand elle
     s'en écarte (voir docs/SOURCES.md), lecture, signet et dossier de l'AN."""
-    s = scrutins(tables)
     n = v.group_by("scrutin_id").agg(
         pour=(pl.col("position") == "pour").sum(), contre=(pl.col("position") == "contre").sum(),
         abstention=(pl.col("position") == "abstention").sum(), non_votants=(pl.col("position") == "non_votant").sum()
     ).with_columns(pl.col("pour", "contre", "abstention", "non_votants").cast(pl.Int64))
-    extra = tables["scr"].select(id=pl.format("SN{}-{}", "sesann", "scrnum"), session="sesann", note="scrbaspag",
+    extra = tables["scr"].select(id=pl.format("SN{}-{}", "sesann", "scrnum"), note="scrbaspag",
                                  pour_scr=pl.col("scrpousea").cast(pl.Int64), contre_scr=pl.col("scrconsea").cast(pl.Int64))
     return (s.drop("pour", "contre", "sort")
             .join(n, left_on="id", right_on="scrutin_id", how="left").join(extra, on="id", how="left")
             .join(tables["loi"].select("loicod", "signet"), on="loicod", how="left")
             .join(tables["typlec"], on="typleccod", how="left")
+            .with_columns(session=pl.col("id").str.extract(r"^SN(\d+)-"))
             .with_columns(
                 votants=pl.col("pour") + pl.col("contre") + pl.col("abstention"),
                 exprimes=pl.col("pour") + pl.col("contre"),

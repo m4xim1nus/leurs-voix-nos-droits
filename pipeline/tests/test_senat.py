@@ -1,5 +1,8 @@
 """Lecture de Dosleg : mini-dump au format COPY de PostgreSQL."""
 
+from datetime import date
+
+import polars as pl
 import pytest
 
 from lvnd import build, editorial, parcours, scores, senat
@@ -60,6 +63,21 @@ def test_etats_et_definitifs(tables):
 def test_scrutins_decomptes(tables):
     s = senat.scrutins(tables).to_dicts()[0]
     assert (s["id"], s["sort"], s["pour"], s["contre"], s["loicod"], s["typleccod"]) == ("SN2026-41", "adopte", 229, 105, "85760", "1")
+
+
+def test_scrutin_sans_fiche_complete_et_signale(tables, odsen):
+    # Dosleg donne ses votes sans la fiche : il reprend la loi et la lecture de son scrutin `comme`.
+    votsen = tables["votsen"].vstack(tables["votsen"].filter(pl.col("scrnum") == "41").with_columns(scrnum=pl.lit("42")))
+    t = {**tables, "votsen": votsen}
+    assert senat.sans_fiche(t, senat.scrutins(t)) == ["SN2026-42"]
+    fiche = {"session": 2026, "numero": 42, "date": date(2026, 10, 28), "comme": "SN2026-41", "titre": "sur l'ensemble du projet de loi"}
+    s = senat.completer(senat.scrutins(t), [fiche])
+    assert senat.sans_fiche(t, s) == []
+    v = senat.votes(t, s, senat.appartenances(odsen, "2026-10-31"))
+    e = senat.export_scrutins(t, s, v, {"85760": "DL1"}).filter(pl.col("id") == "SN2026-42").to_dicts()[0]
+    assert (e["session"], e["objet"], e["pour"], e["contre"], e["dossier_id"], e["lecture"], e["pour_scr"]) == (
+        "2026", "ensemble", 1, 1, "DL1", "Première lecture", None)
+    assert e["url"].endswith("/2026/scr2026-42.html")
 
 
 def test_dump_absent(tmp_path):
@@ -128,7 +146,7 @@ def test_votes_groupe_du_jour_et_marques(tables, odsen):
 
 def test_scrutin_decompte_de_la_liste_nominative(tables, odsen):
     v = senat.votes(tables, senat.scrutins(tables), senat.appartenances(odsen, "2026-10-31"))
-    s = senat.export_scrutins(tables, v, {"85760": "DL1"}).to_dicts()[0]
+    s = senat.export_scrutins(tables, senat.scrutins(tables), v, {"85760": "DL1"}).to_dicts()[0]
     assert (s["pour"], s["contre"], s["pour_scr"], s["contre_scr"], s["non_votants"]) == (1, 1, 229, 105, 1)
     assert (s["sort"], s["requis"], s["dossier_id"], s["signet"], s["lecture"]) == ("rejete", 2, "DL1", "ppl24-001", "Première lecture")
     assert s["url"] == "https://www.senat.fr/scrutin-public/2026/scr2026-41.html"

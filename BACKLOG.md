@@ -24,6 +24,7 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] `lvnd check` : le délai de 14 jours (`DELAI_AMENDEMENTS`) retire à tort du taux de la XVIe ses derniers scrutins (3 041/3 053 affichés, au lieu de 3 159/3 173), alors que cette législature est figée (claude, 2026-10-30)
 - [ ] `lvnd download` : `--leger` retente le dump de l'AN pour les amendements de la XVIe quand ils viennent du plan B (mode `secours`, pas de zip local), jusqu'à 20 minutes de blocage ; un `.part` repris alors que l'AN a publié un nouveau fichier échoue (« taille X, attendu Y ») et reste à supprimer à la main (claude, 2026-10-30)
 - [ ] `lvnd download --leger` en local, quand les amendements de la XVIe ne viennent que du plan B (`unitaire`, sans zip) : il retente le dump de l'AN au lieu de réutiliser ce qui est là, et reste bloqué. Sans effet en CI, qui a la copie de la release (claude, 2026-10-31)
+- [ ] Sénat : `lvnd build` en local réécrit les exports de l'AN quand `data/raw/` diffère de la copie de la CI. Pour ne changer que le Sénat, restaurer ces fichiers avant de commiter (claude, 2026-10-31)
 
 ## Textes à surveiller
 
@@ -34,6 +35,7 @@ Ce que les alertes de `lvnd check` et d'« À traiter » ne signalent pas. Le re
 - [ ] Réforme de l'audiovisuel public (DLR5L16N47697) : à l'arrêt depuis juillet 2025, à suivre avant tout vote final, fiche de suivi possible (user:moi, 2026-10-29)
 - [ ] Fiche de suivi prête dans `source/brouillons-suivi-attente/`, à charger dès l'inscription : ingérences étrangères (DLR5L17N54703). Casseurs-payeurs (DLR5L17N54925) est qualifié au cycle Sénat, sans fiche (décision de Max, 31/10/2026) (claude, 2026-10-30)
 - [ ] AGRASC (DLR5L17N53159, écarté au lot 6) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart. Au prochain passage, actualiser le motif, qui ne cite pas les articles 5 et 5 bis A (décision de Max, 30/10/2026) (claude, 2026-10-29)
+- [ ] Hydrocarbures outre-mer (DLR5L17N53304) : article 1er, seul restant, rejeté à l'AN en scrutin public (V7386, 64-74), sans alerte. La règle 9 peut en faire un décisif de l'AN : requalifier après l'étape 3 du cycle Sénat (décision de Max, 31/10/2026) (claude, 2026-10-31)
 
 ## Cycles candidats
 
@@ -104,6 +106,7 @@ vient de lui ; un cas non prévu remonte à un humain, sans règle inventée.
 
 ## Refusé
 
+- [refusé] Sénat : compter au Sénat un texte écarté à l'AN pour unanimité et disputé au Sénat (nationalisation d'EDF, douane, commission d'évaluation de l'aide, textile, chlordécone, devoir conjugal, accès à l'accompagnement, Territoires zéro chômeur) : un texte écarté l'est pour les deux chambres, règle 28 (décision de Max, 2026-10-31)
 - [refusé] Listes et « Prochains votes » : afficher la date de l'état. Le pied de page donne déjà la date des données sur chaque page (claude, 2026-10-31)
 - [refusé] « Non conforme » affiché pour une non-conformité partielle (2026-911 DC) : libellé de l'open data, absent du site, où la fiche dit « non-conformité partielle » (claude, 2026-10-31)
 - [refusé] Saisines irrecevables absentes du catalogue (2024-870 DC et 2024-871 DC) : manque de l'open data, qu'une qualification peut dire à la main (claude, 2026-10-31)

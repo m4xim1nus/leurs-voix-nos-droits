@@ -146,6 +146,8 @@ def _senat(con, controle, out) -> None:
     """Exports du Sénat (data/export/senat/, docs/SOURCES.md)."""
     n, votes = _q(con, "select (select count(*) from senat_scrutins), (select count(*) from senat_votes)")[0]
     out.append(f"info {n} scrutins, {votes} votes nominatifs depuis {senat.DEBUT}")
+    for (i,) in _q(con, "select id from senat_sans_fiche"):
+        out.append(f"AVERTISSEMENT scrutin du Sénat sans fiche dans Dosleg : {i}, à ajouter à referentiels/scrutins_senat.yaml")
     faibles = _q(con, f"select scrutin_id, count(*) from senat_votes group by 1 having count(*) < {SIEGES_SENAT_MIN}")
     controle(f"chaque scrutin liste au moins {SIEGES_SENAT_MIN} sénateurs", not faibles, str(faibles[:5]))
     controle("tout scrutin a sa liste nominative", not _un(

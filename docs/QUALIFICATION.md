@@ -126,6 +126,33 @@ les sources publiques, **sans sens ni score, et sans aucun scrutin**.
 4. **Après le vote**, l'alerte `premier_decisif` reste affichée : on qualifie le
    texte ou on l'écarte, et sa fiche de suivi disparaît d'elle-même de `suivis`.
 
+### Vote du Sénat (règles 23 à 28)
+
+Le vote du Sénat s'ajoute à la qualification d'un texte, dans un bloc `senat`. Tant que l'admin ne
+sait pas le lire (cycle Sénat, étape 3), les brouillons restent dans `source/brouillons-senat-*/`, sans
+chargement dans D1 et sans validation.
+
+```yaml
+id: justice-mineurs              # id publié, ou nouvel id si le texte n'est pas qualifié
+dossier_an: DLR5L17N50690
+senat:
+  version: meme                  # meme : texte du décisif de l'AN ; autre : version propre au Sénat ; seul : pas de décisif à l'AN
+  scrutins:
+    - { id: SN2024-289, role: decisif, pour: texte, objet: "ensemble, conclusions de la CMP (223-112)" }
+    - { id: SN2024-243, role: ensemble, pour: texte, objet: "ensemble, 1re lecture (227-113)" }
+  droits: []                     # version autre : droits, sens et sources propres, au format habituel
+  etiquettes: []                 # version autre, comme droits, sources et vigilance
+  vigilance: []
+  sources: {}
+  note: ""
+relecture: { points_attention: [], extraits: [] }
+```
+
+Seul `role: decisif` est compté. Un décisif unanime, ou sans source admise sur sa version, reste en
+`role: ensemble`, sans droits ni sens, et la `note` dit pourquoi. Un texte sans qualification à l'AN porte en plus les champs
+habituels (`titre`, `resume`, `droits`, `sources`, `scrutins: []`), et ses droits valent pour le texte
+voté au Sénat.
+
 Les `scores_*.csv` ne changent qu'à la publication d'une qualification validée.
 Tant que Max n'a pas validé, ils restent identiques à l'octet, même si un
 nouveau vote est au catalogue.

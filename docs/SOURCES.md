@@ -221,9 +221,17 @@ ce dossier n'alimente : `scrutins`, `positions_groupes`, `senateurs`, `groupes`,
 `appartenances`, `mandats`, `mises_au_point`, et les votes
 `votes/<AAAA-MM>.csv`. `lvnd annuaire` y ajoute
 `data/annuaire/cp_departements.csv` (code postal → département). Aucun score
-n'est encore calculé. Au 31/10/2026, depuis le 28/06/2022 : 1 321 scrutins,
-459 507 votes, 514 sénateur·ices dont 348 en poste, 333 courriels publics
+n'est encore calculé. Au 31/10/2026, depuis le 28/06/2022 : 1 336 scrutins,
+464 719 votes, 514 sénateur·ices dont 348 en poste, 333 courriels publics
 (`Non public` n'est pas exporté).
+
+**Scrutins sans fiche.** 15 scrutins depuis 2022 ont leurs votes dans `votsen` et
+pas de ligne dans `scr`, dont le vote sur l'ensemble des lois de finances pour
+2023, 2024, 2025 et 2026 (SN2022-94, SN2023-98, SN2024-175, SN2025-125). Le
+contrôle croisé du 31/10/2026, parti de `scr`, ne pouvait pas les voir. Leur date
+et leur intitulé sont lus sur senat.fr et rangés dans
+`referentiels/scrutins_senat.yaml` ; leurs votes restent ceux de Dosleg. `lvnd check`
+signale tout nouveau cas par un `AVERTISSEMENT`.
 
 **Table `votsen`.** Une ligne par siège et par scrutin (347 ou 348 lignes), sans
 doublon, toutes dans un mandat de `ODSEN_ELUSEN`.
@@ -273,8 +281,8 @@ SN2022-51 ont aussi été comparées à la page.
 **Rattachement** : scrutin → `date_seance` → lecture → `loi` → signet → dossier AN
 (`senatChemin`), à défaut la date de la loi (`parcours.classer`). Un dossier du
 Sénat peut correspondre à plusieurs dossiers AN : on retient la loi, puis le plus
-avancé (`parcours.dossier_par_loi`). 1 291 scrutins sur 1 321 sont rattachés. Les
-30 autres : 25 sur des résolutions (`ppr…`) ou une motion, et 5 sur `pjl25-801`,
+avancé (`parcours.dossier_par_loi`). 1 302 scrutins sur 1 336 sont rattachés. Les
+34 autres : 4 déclarations du Gouvernement, 25 sur des résolutions (`ppr…`) ou une motion, et 5 sur `pjl25-801`,
 en 1re lecture le 07/07/2026, sans dossier à l'AN au 31/10/2026.
 
 **Classement des scrutins** : `objet` reprend `texte.objet_scrutin`, non vérifié au
