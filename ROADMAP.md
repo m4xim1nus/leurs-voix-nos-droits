@@ -69,7 +69,7 @@ du lot 1 sont validés par Max** et dans le `data/editorial.json` de la branche.
 ### Reprendre : deux conversations en parallèle
 
 **La conversation A** (celle qui a ouvert le cycle) dort jusqu'à la fin du plan B des amendements, puis fait l'item 2 et le
-rebuild. **La conversation B** avance le reste. Elles partagent le worktree `.claude/worktrees/xve` et commitent par
+rebuild. **La conversation B** a avancé le reste, et s'arrête : voir « Passation » plus bas. Elles partagent le worktree `.claude/worktrees/xve` et commitent par
 chemins nommés.
 
 Règles pour B, tant que le plan B tourne (`pgrep -f sources.download`) :
@@ -97,6 +97,30 @@ Ordre conseillé pour B :
 Quand le plan B se termine, A : supprime `seance.parquet` ; `lvnd download --leger` puis `lvnd download an_dossiers_14` (manifeste) ; `lvnd
 build` ; règle le seuil de `lvnd check` pour la XVe si besoin ; `pytest`, tests du site ; mesure la passe quotidienne (item 3) ; commite
 `data/export/`. B recontrôle alors les amendements clés de tous les brouillons déjà faits.
+
+### Passation de B à A (31/10/2026)
+
+**B est close : A porte seule tout ce qui suit la fin du plan B.** Lots 1 à 6 commités, rien de B en attente dans le worktree.
+En plus de la liste ci-dessus, A fait l'item 13 et ces recontrôles :
+
+1. **Item 13.** Pour chaque scrutin `role: amendement` de la XVe dans `data/editorial.json`, lire `amendement_id` et la division dans
+   `scrutins.csv`. Vérifier que c'est bien la suppression de l'article que dit `objet`, puis lire les points « à recontrôler » dans
+   `relecture.points_attention` du brouillon (`source/brouillons-xve-*`). Chercher aussi les suppressions manquées, quand le titre du
+   scrutin ne disait pas « suppression ».
+2. **`lvnd check` complet sur la XVe** : les « scrutin absent du dossier » doivent disparaître au rebuild (sqlite d'avant la XVe).
+   Lots 1 à 6 jamais passés par ce contrôle.
+3. **Effets attendus au rebuild :** 2017-752 DC sur la loi ordinaire de 2017 (item 12), adresse de la 2019-790 DC (`_url_decision`).
+4. **Affichage :** `gens-du-voyage-2018` (DLR5L14N36020), et les 4 écarts qui n'avaient pas d'état au catalogue.
+5. **Tests attendus au vert :** `test_check_passe`, `test_un_etat_pour_chaque_texte_qualifie`, `donnees.test.ts`.
+
+Garde-fous, inchangés :
+
+- **Une qualification ne change jamais sans la réponse explicite de Max.** Tout écart de l'item 13 (amendement à retirer, à ajouter, sens,
+  objet) va dans `source/relecture-xve-item13.md` avec une recommandation, pas dans `editorial.json` ni dans les brouillons. Un scrutin mal
+  rattaché va au backlog. Une proposition encore ouverte sur le lot 6 : fin de `source/relecture-xve-lot6.md`.
+- Commits par chemins nommés. Pousser ou lancer une étape de « Fin du cycle » (fusion dans `main`, release, D1, déploiement) seulement si
+  Max l'a écrit explicitement, étape par étape.
+- Rendre compte à Max de ce qui est fait, de ce qui échoue et de ce qui attend sa décision.
 
 Si le plan B s'arrête (terminal fermé, plafond de 10 h), il reprend là où il en était :
 
