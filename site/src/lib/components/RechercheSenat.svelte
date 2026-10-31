@@ -26,7 +26,12 @@
       if (/^\d{5}$/.test(q)) {
         const prefixe = q.slice(0, 2);
         if (!tables.has(prefixe))
-          tables.set(prefixe, await json(`/recherche/departements/${prefixe}.json`));
+          try {
+            tables.set(prefixe, await json(`/recherche/departements/${prefixe}.json`));
+          } catch {
+            message = `Aucun code postal ne commence par ${prefixe}.`;
+            return;
+          }
         const deps = tables.get(prefixe)![q];
         if (!deps) {
           message = `Le code postal ${q} n’existe pas dans la base de La Poste.`;

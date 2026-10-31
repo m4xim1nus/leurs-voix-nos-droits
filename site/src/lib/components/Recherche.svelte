@@ -119,10 +119,8 @@
             : 'ancienne sénatrice'
           : e.actuel
             ? 'sénateur'
-            : 'ancien sénateur'},
-      {/if}{#if e.departement}{e.departement}{/if}{#if !e.actuel && !e.senat}, {e.feminin
-          ? 'ancienne députée'
-          : 'ancien député'}{/if}
+            : 'ancien sénateur'},{' '}{/if}{#if e.departement}{e.departement}{/if}{#if !e.actuel && !e.senat},
+        {e.feminin ? 'ancienne députée' : 'ancien député'}{/if}
     </span>
   </a>
 {/snippet}

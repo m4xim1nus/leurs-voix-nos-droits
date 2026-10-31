@@ -137,6 +137,8 @@
     .nom,
     .nom :global(.sigle) {
       white-space: normal;
+      overflow-wrap: anywhere;
+      hyphens: auto;
     }
   }
   .nom a:hover {
