@@ -117,7 +117,7 @@ Garde-fous, inchangés :
 
 - **Une qualification ne change jamais sans la réponse explicite de Max.** Tout écart de l'item 13 (amendement à retirer, à ajouter, sens,
   objet) va dans `source/relecture-xve-item13.md` avec une recommandation, pas dans `editorial.json` ni dans les brouillons. Un scrutin mal
-  rattaché va au backlog. Une proposition encore ouverte sur le lot 6 : fin de `source/relecture-xve-lot6.md`.
+  rattaché va au backlog.
 - Commits par chemins nommés. Pousser ou lancer une étape de « Fin du cycle » (fusion dans `main`, release, D1, déploiement) seulement si
   Max l'a écrit explicitement, étape par étape.
 - Rendre compte à Max de ce qui est fait, de ce qui échoue et de ce qui attend sa décision.

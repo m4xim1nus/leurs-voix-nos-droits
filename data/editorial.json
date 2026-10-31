@@ -805,9 +805,10 @@
           "role": "principal",
           "sens": "restreint",
           "sources": [
-            "ae-2021"
+            "ae-2021",
+            "hb-2021"
           ],
-          "justification": "Le texte réduit les garanties d'information et de participation du public. Pour l'Autorité environnementale, « l'un des principaux effets de la loi est de réduire significativement le champ de la participation du public », sans garantie nouvelle sur la prise en compte des avis."
+          "justification": "Le texte réduit les garanties d'information et de participation du public. Pour l'Autorité environnementale, « l'un des principaux effets de la loi est de réduire significativement le champ de la participation du public », sans garantie nouvelle sur la prise en compte des avis. La Commission nationale du débat public, citée par Humanité et Biodiversité, relève que « la loi a divisé par deux le délai pendant lequel ce droit peut être exercé », celui de demander une concertation."
         }
       ],
       "etiquettes": [],
@@ -820,7 +821,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2020-807 DC du 3 décembre 2020, non-conformité partielle, sans réserve. Vingt-six articles sont censurés comme cavaliers, sans examen du fond, dont l'article 74 sur les peines pour violation de domicile. Sont conformes les dispositions contestées des articles 34 (installations classées), 44 (consultation du public) et 56 (travaux anticipés). L'article 73 (expulsion administrative) n'est pas censuré, et la décision ne l'examine pas.",
-      "note": "Scrutin décisif : ensemble, texte de la commission mixte paritaire, 28/10/2020. Texte composite : le sens se lit sur les mesures de procédure environnementale, que vise la source citée (règle 4). L'Autorité environnementale écrit après le vote, à propos du décret d'application, mais se prononce sur la loi. Motions de rejet préalable affichées, pas comptées (règle 10). Un amendement clé, en 1re lecture, seule lecture où des suppressions ont été mises aux voix (règle 11) : la suppression de l'article 25, consultation du public. L'Assemblée l'a adoptée (55-53), puis a rétabli l'article le 02/10/2020 en seconde délibération, sans scrutin public : ce vote de suppression reste le seul vote nominatif sur cet article. La suppression de l'article 26, travaux anticipés, n'est pas retenue, faute d'une source citée qui vise cette mesure. L'extension de l'expulsion administrative n'entre pas dans le jugement, faute de source retenue.",
+      "note": "Scrutin décisif : ensemble, texte de la commission mixte paritaire, 28/10/2020. Texte composite : le sens se lit sur les mesures de procédure environnementale, que vise la source citée (règle 4). L'Autorité environnementale écrit après le vote, à propos du décret d'application, mais se prononce sur la loi ; de même la Commission nationale du débat public, dont l'avis est lu dans la reprise d'Humanité et Biodiversité. Motions de rejet préalable affichées, pas comptées (règle 10). Deux amendements clés, en 1re lecture, seule lecture où des suppressions ont été mises aux voix (règle 11) : la suppression de l'article 24 bis, délai du droit d'initiative, et celle de l'article 25, consultation du public. L'Assemblée a adopté la seconde (55-53), puis a rétabli l'article le 02/10/2020 en seconde délibération, sans scrutin public : ce vote de suppression reste le seul vote nominatif sur cet article. La suppression de l'article 26, travaux anticipés, n'est pas retenue, faute d'une source citée qui vise cette mesure. L'extension de l'expulsion administrative n'entre pas dans le jugement, faute de source retenue.",
       "sources": {
         "ae-2021": {
           "auteur": "Autorité environnementale",
@@ -833,6 +834,12 @@
           "titre": "Décision n° 2020-807 DC du 3 décembre 2020, loi d'accélération et de simplification de l'action publique",
           "date": "2020-12-03",
           "url": "https://www.conseil-constitutionnel.fr/decision/2020/2020807DC.htm"
+        },
+        "hb-2021": {
+          "auteur": "Humanité et Biodiversité (reprend l'avis de la Commission nationale du débat public)",
+          "titre": "Environnement : accélération et simplification de l'action publique (ASAP)",
+          "date": "2021-03-04",
+          "url": "https://www.humanite-biodiversite.fr/articles/70523-environnement-acceleration-et-simplification-de-l-action-publique-asap"
         }
       },
       "scrutins": [
@@ -859,6 +866,12 @@
           "role": "motion",
           "pour": "contre-texte",
           "objet": "motion de rejet préalable, 1re lecture (8-27)"
+        },
+        {
+          "id": "VTANR5L15V2885",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 24 bis, délai du droit d'initiative, 1re lecture, rejetée (38-43)"
         },
         {
           "id": "VTANR5L15V2886",
@@ -18759,7 +18772,7 @@
       "dossier_an": "DLR5L15N37234",
       "legislature": 15,
       "titre": "Loi relative à l'organisation et à la transformation du système de santé",
-      "motif": "Aucune source admise sur l'accès aux soins ; réforme d'organisation du système de santé (règle 8)."
+      "motif": "Les sources admises lues n'établissent pas de sens sur l'accès aux soins ; réforme d'organisation du système de santé (règle 8)."
     },
     {
       "dossier_an": "DLR5L15N37247",
