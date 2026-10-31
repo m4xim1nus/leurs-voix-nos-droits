@@ -19,6 +19,18 @@ export const LIBELLES_ROLE: Record<string, string> = {
   censure: 'motion de censure (49.3)'
 };
 
+export const LIBELLES_ROLE_SENAT: Record<string, string> = {
+  decisif: 'décisif du Sénat',
+  ensemble: 'ensemble, affiché',
+  motion: 'motion, affichée'
+};
+
+export const LIBELLES_VERSION_SENAT: Record<string, string> = {
+  meme: 'même texte que le décisif de l’Assemblée (sens repris)',
+  autre: 'autre version (sens relu et sourcé, ou vote affiché)',
+  seul: 'pas de décisif à l’Assemblée (droits du texte)'
+};
+
 export const LIBELLES_POUR: Record<string, string> = {
   texte: 'voter pour = dans le sens du texte',
   'contre-texte': 'voter pour = contre le texte',

@@ -3,15 +3,17 @@
 import type {
   Grille,
   Groupe,
+  GroupeSenat,
   LigneQualification,
   PositionGroupe,
   Qualification,
   ScrutinCatalogue,
+  ScrutinSenat,
   Statut,
   TexteCatalogue
 } from '../types';
 import { resteATraiter, type Alerte } from '../alertes';
-import { compact, type InfoScrutin } from '../qualification';
+import { compact, type InfoScrutin, type InfoScrutinSenat } from '../qualification';
 
 // D1 limite une requête à 100 paramètres liés.
 const PAQUET = 90;
@@ -123,6 +125,52 @@ export function infos(scrutins: ScrutinCatalogue[]): Map<string, InfoScrutin> {
       }
     ])
   );
+}
+
+type LigneScrutinSenat = Omit<ScrutinSenat, 'positions'> & { positions: string };
+
+const decoderSenat = (s: LigneScrutinSenat): ScrutinSenat => ({
+  ...s,
+  positions: JSON.parse(s.positions) as PositionGroupe[]
+});
+
+export async function scrutinsSenatDuTexte(db: D1Database, id: string): Promise<ScrutinSenat[]> {
+  const { results } = await db
+    .prepare('SELECT * FROM senat_scrutins WHERE texte_id = ? ORDER BY date DESC, numero DESC')
+    .bind(id)
+    .all<LigneScrutinSenat>();
+  return results.map(decoderSenat);
+}
+
+/** Scrutins du Sénat par identifiant, par paquets (limite de D1 sur les paramètres). */
+export async function scrutinsSenat(db: D1Database, ids: string[]): Promise<ScrutinSenat[]> {
+  const out: ScrutinSenat[] = [];
+  const uniques = [...new Set(ids)];
+  for (let i = 0; i < uniques.length; i += PAQUET) {
+    const lot = uniques.slice(i, i + PAQUET);
+    const { results } = await db
+      .prepare(`SELECT * FROM senat_scrutins WHERE id IN (${lot.map(() => '?').join(',')})`)
+      .bind(...lot)
+      .all<LigneScrutinSenat>();
+    out.push(...results.map(decoderSenat));
+  }
+  return out;
+}
+
+export function infosSenat(scrutins: ScrutinSenat[]): Map<string, InfoScrutinSenat> {
+  return new Map(
+    scrutins.map((s) => [
+      s.id,
+      { dossier_id: s.texte_id, objet: s.objet, pour: s.pour, contre: s.contre }
+    ])
+  );
+}
+
+export async function groupesSenat(db: D1Database): Promise<GroupeSenat[]> {
+  const { results } = await db
+    .prepare('SELECT * FROM senat_groupes ORDER BY sigle')
+    .all<GroupeSenat>();
+  return results;
 }
 
 export async function groupes(db: D1Database): Promise<Groupe[]> {

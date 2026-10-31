@@ -12,6 +12,7 @@
     { href: '/en-cours', libelle: 'En cours' },
     { href: '/groupes', libelle: 'Groupes' },
     { href: '/comparer', libelle: 'Comparer' },
+    { href: '/senat', libelle: 'Sénat' },
     { href: '/methodologie', libelle: 'Méthodologie' },
     { href: '/donnees', libelle: 'Données' }
   ];
@@ -48,8 +49,10 @@
 <footer>
   <div class="page">
     <p>
-      Votes : open data de l’<a href="https://data.assemblee-nationale.fr">Assemblée nationale</a>,
-      données du {date(data.genereLe.slice(0, 10))}. Chaque qualification de texte cite ses sources.
+      Votes : open data de l’<a href="https://data.assemblee-nationale.fr">Assemblée nationale</a>
+      et du <a href="https://data.senat.fr">Sénat</a>, données du {date(
+        data.genereLe.slice(0, 10)
+      )}. Chaque qualification de texte cite ses sources.
     </p>
     <p>
       Règles de calcul dans la <a href="/methodologie">méthodologie</a>, tout est

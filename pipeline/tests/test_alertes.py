@@ -132,7 +132,17 @@ def test_les_alertes_ne_font_pas_echouer_check(base, monkeypatch):
     """Tout simuler comme non traité : le résultat de `check` ne change pas."""
     ok, lignes = check.verifier(base)
     vraies = alertes.calculer
-    monkeypatch.setattr(alertes, "calculer", lambda t, s, p, q: vraies(t, s, p, {"textes": [], "ecartes": []}))
+    monkeypatch.setattr(alertes, "calculer", lambda t, s, p, q, sn=(): vraies(t, s, p, {"textes": [], "ecartes": []}, sn))
     ok2, lignes2 = check.verifier(base)
     assert ok2 == ok
     assert sum(l.startswith("AVERTISSEMENT") for l in lignes2) > sum(l.startswith("AVERTISSEMENT") for l in lignes)
+
+
+def test_alertes_senat():
+    qualif = {"textes": [{"dossier_an": "Q", "scrutins": [], "senat": {"scrutins": [{"id": "S1"}]}},
+                         {"dossier_an": "SB", "scrutins": []}], "ecartes": [{"dossier_an": "E", "motif": "règle 8"}]}
+    s = lambda i, d, j, o="ensemble": {"id": i, "dossier_id": d, "date": j, "numero": int(i[1:]), "objet": o, "pour": 2, "contre": 1}
+    scr = [s("S1", "Q", "2025-01-01"), s("S2", "Q", "2025-06-01"), s("S3", "N", "2025-01-02"), s("S4", "E", "2025-01-02"),
+           s("S5", "SB", "2025-01-03"), s("S6", "M", "2025-01-03", "motion_rejet"), s("S7", None, "2025-01-03")]
+    out = {a["id"]: a for a in alertes.calculer([], [], [], qualif, scr)}
+    assert set(out) == {"senat_vote_posterieur:Q:S2", "senat_premier_vote:N:S3", "senat_premier_vote:SB:S5"}

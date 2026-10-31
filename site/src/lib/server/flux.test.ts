@@ -27,6 +27,8 @@ const texte = (t: Partial<TexteEnCours>): TexteEnCours => ({
   qualification: null,
   dernier_vote: null,
   vote_qualifie: false,
+  vote_senat: null,
+  seul: false,
   ...t
 });
 

@@ -20,6 +20,16 @@
     const g = groupes.get(l);
     return g ? `${g.sigle} (${['', 'XV', 'XVI', 'XVII'][g.legislature - 14]}e)` : l;
   };
+  const groupesSenat = $derived(new Map(data.groupesSenat.map((g) => [g.id, g])));
+  const droitsSenat = $derived(droits.filter((d) => data.scoresSenat.some((s) => s.droit === d)));
+  const parCleSenat = $derived(new Map(data.scoresSenat.map((s) => [`${s.lignee}|${s.droit}`, s])));
+  const lignesSenat = $derived(
+    [...new Set(data.scoresSenat.map((s) => s.lignee))].sort(
+      (a, b) =>
+        (parCleSenat.get(`${b}|global`)?.score ?? -1) -
+        (parCleSenat.get(`${a}|global`)?.score ?? -1)
+    )
+  );
 </script>
 
 <svelte:head><title>Aperçu des scores · admin</title></svelte:head>
@@ -70,6 +80,46 @@
     </tbody>
   </table>
 </div>
+
+<h2>Sénat (règle 26)</h2>
+<p class="discret">
+  Calcul à part, sur le seul décisif de chaque texte. Aucune correspondance avec les groupes de
+  l'Assemblée (règle 28). Score individuel des sénateur·ices : après publication.
+</p>
+{#if lignesSenat.length}
+  <div class="defile">
+    <table>
+      <thead>
+        <tr>
+          <th>Groupe</th>
+          {#each droitsSenat as d (d)}<th class="nombre">{d}</th>{/each}
+        </tr>
+      </thead>
+      <tbody>
+        {#each lignesSenat as g (g)}
+          <tr>
+            <td>{groupesSenat.get(g)?.sigle ?? g}</td>
+            {#each droitsSenat as d (d)}
+              {@const s = parCleSenat.get(`${g}|${d}`)}
+              <td
+                class="nombre"
+                title={s
+                  ? `${s.n_textes} texte(s), ${s.votes_favorables} votes favorables, ${s.votes_defavorables} défavorables, ${s.abstentions} abstentions, ${s.non_votants} non-votants`
+                  : ''}
+              >
+                {#if s?.score != null}
+                  <span class="barre" style:--v="{s.score}%">{s.score}</span>
+                {:else}–{/if}
+              </td>
+            {/each}
+          </tr>
+        {/each}
+      </tbody>
+    </table>
+  </div>
+{:else}
+  <p class="discret">Aucun décisif du Sénat parmi ces textes.</p>
+{/if}
 
 <h2>Textes pris en compte</h2>
 <p>

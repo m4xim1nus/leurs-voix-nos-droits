@@ -27,6 +27,7 @@ export interface TexteCourt {
   etiquettes: string[];
   n_comptes: number;
   sans_vote: boolean;
+  seul: boolean;
   etat: EtatTexte | null;
   /** Lecture du vote décisif. */
   etape: string | null;
@@ -37,13 +38,24 @@ export const court = (t: Texte): TexteCourt => ({
   titre: t.titre,
   date: t.date,
   legislature: t.legislature,
-  principal: { code: t.principal.code, sens: t.principal.sens },
+  principal: { code: t.principal?.code, sens: t.principal?.sens },
   droits: t.droits.map((d) => ({ code: d.code, role: d.role, sens: d.sens })),
   etiquettes: t.etiquettes,
   n_comptes: t.scrutins.filter((s) => s.compte).length,
   sans_vote: t.sans_vote,
+  seul: t.seul,
   etat: t.etat,
   etape: t.scrutins.find((s) => s.role === 'decisif')?.etape ?? null
+});
+
+/** Un texte dans la liste de tous les textes : un vote du seul Sénat peut être affiché sans jugement. */
+export type TexteListe = Omit<TexteCourt, 'principal'> & {
+  principal: TexteCourt['principal'] | null;
+};
+
+const enListe = (t: Texte): TexteListe => ({
+  ...court(t),
+  principal: t.principal ? court(t).principal : null
 });
 
 export interface ScoreGroupe {
@@ -109,7 +121,8 @@ export function vueAccueil() {
 
 export function vueEnCours() {
   const d = donnees();
-  return { textes: d.enCours, dateEtat: d.dateEtat };
+  const textes = [...d.enCours, ...d.enCoursSeuls];
+  return { textes, dateEtat: d.dateEtat };
 }
 
 // --- Droits et textes -------------------------------------------------------------------------
@@ -131,12 +144,13 @@ export function vueDroit(code: string) {
 
 export function vueTextes() {
   const d = donnees();
-  return { textes: d.textes.map(court), ecartes: d.ecartes, droits: d.droits };
+  const textes = [...d.textes, ...d.seuls].sort((a, b) => b.date.localeCompare(a.date));
+  return { textes: textes.map(enListe), ecartes: d.ecartes, droits: d.droits };
 }
 
 export function vueTexte(id: string) {
   const d = donnees();
-  const texte = d.textes.find((t) => t.id === id);
+  const texte = d.textes.find((t) => t.id === id) ?? d.seuls.find((t) => t.id === id);
   if (!texte) error(404, 'Texte inconnu');
   const groupes = d.lignees
     .filter((l) => l.legislature === texte.legislature || d.scoresGroupesTextes.get(l.id)?.has(id))
@@ -145,7 +159,14 @@ export function vueTexte(id: string) {
       return s ? [{ groupe: l, score: { ...s, n_textes: 1 } }] : [];
     })
     .sort((a, b) => (b.score.score ?? -1) - (a.score.score ?? -1));
-  return { texte, groupes, dateEtat: d.dateEtat };
+  // Chaque groupe du Sénat sous son sigle, sans correspondance avec ceux de l'Assemblée (règle 28).
+  const groupesSenat = d.senat.groupes
+    .flatMap((g) => {
+      const s = d.senat.scoresGroupesTextes.get(g.id)?.get(id);
+      return s ? [{ groupe: g, score: s }] : [];
+    })
+    .sort((a, b) => (b.score.score ?? -1) - (a.score.score ?? -1));
+  return { texte, groupes, groupesSenat, dateEtat: d.dateEtat };
 }
 
 // --- Députés ----------------------------------------------------------------------------------

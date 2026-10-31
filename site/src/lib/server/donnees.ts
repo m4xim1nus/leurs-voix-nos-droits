@@ -8,6 +8,7 @@ import { resolve } from 'node:path';
 import { csvParse } from 'd3-dsv';
 import { DROITS } from '$lib/droits';
 import { slug, typo } from '$lib/format';
+import { baseSenat, dernierVoteEnsemble, voteSenat, type BaseSenat, type BlocSenat } from './senat';
 import type {
   Appartenance,
   Depute,
@@ -24,6 +25,7 @@ import type {
   Score,
   ScrutinRetenu,
   Source,
+  StatutSenat,
   Texte,
   TexteEnCours,
   TexteUnanime,
@@ -56,13 +58,18 @@ export interface Donnees {
   /** Date de l'état des textes : celle du dump des dossiers (`meta.json`). */
   dateEtat: string;
   droits: Droit[];
-  /** Textes qualifiés, du plus récent au plus ancien (date du vote décisif). */
+  /** Textes qualifiés avec un vote à l'Assemblée, du plus récent au plus ancien (date du vote décisif). */
   textes: Texte[];
+  /** Textes votés au seul Sénat (règle 25) : à part, pour que rien n'entre sans le vouloir dans les vues de l'Assemblée. */
+  seuls: Texte[];
   ecartes: Ecarte[];
   /** Textes écartés faute d'opposition au décisif (règle 9), avec ce scrutin. */
   unanimes: TexteUnanime[];
   /** Textes retenus encore en navette (page /en-cours), par échéance. */
   enCours: TexteEnCours[];
+  /** Textes du seul Sénat encore en navette (page /en-cours seulement). */
+  enCoursSeuls: TexteEnCours[];
+  senat: BaseSenat;
   lignees: Lignee[];
   ligneeDe: Map<string, Lignee>;
   groupe: Map<string, GroupeCourt>;
@@ -247,6 +254,18 @@ function charger(): Donnees {
   const deputeParId = new Map(deps.map((d) => [d.id, d]));
   const catalogue = new Map(exp('textes').map((t) => [t.id!, t]));
   const etat = etats();
+  const senat = baseSenat();
+  const lectures = exp('en_cours_lectures');
+  const lecturesSenat = new Set(
+    lectures.filter((l) => l.chambre === 'SN' && l.issue).map((l) => l.texte_id!)
+  );
+  /** Ce que le Sénat a fait d'un texte, faute de bloc : un fait lu dans l'open data, jamais un jugement. */
+  const sansVoteSenat = (dossier: string): StatutSenat => {
+    const e = etat.get(dossier)?.etat;
+    return (e === 'en_navette' || e === 'avant_vote') && !lecturesSenat.has(dossier)
+      ? 'pas_examine'
+      : 'sans_scrutin';
+  };
 
   // Textes écartés parce que leur décisif n'a eu aucune voix d'un côté (règle 9) : affichés sur
   // les fiches, hors des scores. Le motif, écrit par l'admin, suit toujours ce modèle.
@@ -258,7 +277,7 @@ function charger(): Donnees {
   const suivisBruts: SuiviEditorial[] = editorial.suivis ?? [];
   // Votes de l'AN sur l'ensemble des textes en cours : ils s'affichent, sans entrer dans les scores.
   const lecturesAN = new Map<string, string[]>();
-  for (const l of exp('en_cours_lectures'))
+  for (const l of lectures)
     if (l.chambre === 'AN' && l.scrutin_id)
       lecturesAN.set(l.texte_id!, [...(lecturesAN.get(l.texte_id!) ?? []), l.scrutin_id]);
   const retenus = new Set<string>([
@@ -304,7 +323,8 @@ function charger(): Donnees {
   );
 
   const ORDRE = ['decisif', 'amendement', 'censure', 'ensemble', 'article', 'motion'];
-  const textes: Texte[] = editorial.textes.map((t: Texte) => {
+  type Entree = Omit<Texte, 'senat'> & { senat?: BlocSenat };
+  const construits: Texte[] = editorial.textes.map((t: Entree) => {
     const cat = catalogue.get(t.dossier_an);
     const retenus: ScrutinRetenu[] = t.scrutins.map((r) => {
       const s = scrutins.get(r.id)!;
@@ -348,6 +368,9 @@ function charger(): Donnees {
     );
     const decisif = retenus.find((s) => s.role === 'decisif');
     const censures = retenus.filter((s) => s.role === 'censure').map((s) => s.date);
+    const vote = t.senat ? voteSenat(senat, t.id, t.dossier_an, t.senat) : null;
+    const seul = t.senat?.version === 'seul';
+    const nonLu = vote ? null : dernierVoteEnsemble(senat, t.dossier_an);
     return {
       ...t,
       titre: typo(t.titre),
@@ -361,10 +384,28 @@ function charger(): Donnees {
       ),
       principal: t.droits.find((d) => d.role === 'principal')!,
       scrutins: retenus,
-      date: decisif?.date ?? censures.sort().at(-1)!,
+      // Texte du seul Sénat : la date de son décisif, ou de son dernier vote affiché.
+      date:
+        decisif?.date ??
+        censures.sort().at(-1) ??
+        vote!.decisif?.date ??
+        vote!.scrutins
+          .map((s) => s.date)
+          .sort()
+          .at(-1)!,
       // Législature du vote décisif : un dossier déposé en XVIe peut n'avoir été voté qu'en XVIIe.
       legislature: decisif?.legislature ?? t.legislature,
-      sans_vote: !decisif,
+      sans_vote: !decisif && !seul,
+      seul,
+      senat: vote,
+      statut_senat: vote
+        ? vote.decisif
+          ? 'compte'
+          : 'affiche'
+        : nonLu
+          ? 'non_lu'
+          : sansVoteSenat(t.dossier_an),
+      senat_non_lu: nonLu,
       etat: etat.get(t.dossier_an) ?? null,
       loi: txt(cat?.loi),
       date_loi: txt(cat?.date_loi),
@@ -374,7 +415,9 @@ function charger(): Donnees {
       cc_url: txt(cat?.cc_url)
     };
   });
-  textes.sort((a, b) => b.date.localeCompare(a.date));
+  construits.sort((a, b) => b.date.localeCompare(a.date));
+  const textes = construits.filter((t) => !t.seul);
+  const seuls = construits.filter((t) => t.seul);
 
   const ecartes: Ecarte[] = ecartesBruts.map((e) => ({
     ...e,
@@ -440,6 +483,8 @@ function charger(): Donnees {
     | 'commissions'
     | 'dernier_vote'
     | 'vote_qualifie'
+    | 'vote_senat'
+    | 'seul'
   > => {
     // Le plus récent des votes publics de l'AN sur l'ensemble, décisif retenu compris.
     const dernier = [...(lecturesAN.get(dossier) ?? []), ...(decisif ? [decisif] : [])]
@@ -461,23 +506,45 @@ function charger(): Donnees {
         organe: p.organe!
       })),
       dernier_vote: dernier ? voteAN(dernier) : null,
-      vote_qualifie: dernier !== undefined && dernier === decisif
+      vote_qualifie: dernier !== undefined && dernier === decisif,
+      vote_senat: null,
+      seul: false
     };
   };
-  const qualifiesEnCours = textes
-    .filter((t) => t.etat?.etat === 'en_navette')
-    .map((t): TexteEnCours => ({
+  const qualifieEnCours = (t: Texte): TexteEnCours => {
+    const dernierSenat = t.senat?.scrutins
+      .filter((s) => s.role !== 'motion')
+      .sort((a, b) => a.date.localeCompare(b.date))
+      .at(-1);
+    return {
       ...enCoursDe(t.dossier_an, t.etat!, t.scrutins.find((s) => s.role === 'decisif')?.id),
       id: t.id,
       titre: t.titre,
       href: `/textes/${t.id}`,
-      qualification: {
-        code: t.principal.code,
-        sens: t.principal.sens,
-        date: t.sans_vote ? null : t.date
-      },
-      suivi: null
-    }));
+      qualification: t.principal
+        ? {
+            code: t.principal.code,
+            sens: t.principal.sens,
+            date: t.sans_vote ? null : t.date
+          }
+        : null,
+      suivi: null,
+      vote_senat: dernierSenat
+        ? {
+            date: dernierSenat.date,
+            lecture: dernierSenat.lecture,
+            sort: dernierSenat.sort,
+            pour: dernierSenat.decompte.pour,
+            contre: dernierSenat.decompte.contre,
+            abstention: dernierSenat.decompte.abstention,
+            url: dernierSenat.url,
+            compte: dernierSenat.compte
+          }
+        : null,
+      seul: t.seul
+    };
+  };
+  const qualifiesEnCours = textes.filter((t) => t.etat?.etat === 'en_navette').map(qualifieEnCours);
   // Fiches de suivi : droits touchés et sources, sans sens ni score. Un texte devenu loi, rejeté ou
   // retiré n'est plus en cours : sa fiche reste dans editorial.json sans s'afficher ici.
   const suivisEnCours = suivisBruts.flatMap((s): TexteEnCours[] => {
@@ -507,11 +574,14 @@ function charger(): Donnees {
       }
     ];
   });
-  const enCours: TexteEnCours[] = [...qualifiesEnCours, ...suivisEnCours].sort(
-    (a, b) =>
-      (a.etat.seance_inscrite ?? '9999').localeCompare(b.etat.seance_inscrite ?? '9999') ||
-      (b.etat.date_derniere_lecture ?? '').localeCompare(a.etat.date_derniere_lecture ?? '')
-  );
+  const parEcheance = (a: TexteEnCours, b: TexteEnCours) =>
+    (a.etat.seance_inscrite ?? '9999').localeCompare(b.etat.seance_inscrite ?? '9999') ||
+    (b.etat.date_derniere_lecture ?? '').localeCompare(a.etat.date_derniere_lecture ?? '');
+  const enCours: TexteEnCours[] = [...qualifiesEnCours, ...suivisEnCours].sort(parEcheance);
+  const enCoursSeuls = seuls
+    .filter((t) => t.etat?.etat === 'en_navette')
+    .map(qualifieEnCours)
+    .sort(parEcheance);
 
   const participation = new Map<string, Participation>(
     (existsSync(resolve(EXPORT, 'participation.csv')) ? exp('participation') : []).map((p) => [
@@ -530,9 +600,12 @@ function charger(): Donnees {
     dateEtat: meta.en_cours.date_reference,
     droits,
     textes,
+    seuls,
     ecartes,
     unanimes,
     enCours,
+    enCoursSeuls,
+    senat,
     lignees,
     ligneeDe,
     groupe,

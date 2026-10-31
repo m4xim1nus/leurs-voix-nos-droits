@@ -1,6 +1,6 @@
 import type { PageServerLoad } from './$types';
 import * as db from '$lib/server/db';
-import { scoresGroupes, scrutinsComptes } from '$lib/scores';
+import { qualifSenat, scoresGroupes, scrutinsComptes } from '$lib/scores';
 
 export const load: PageServerLoad = async ({ platform, url }) => {
   const base = platform!.env.DB;
@@ -24,9 +24,22 @@ export const load: PageServerLoad = async ({ platform, url }) => {
     new Map(scrutins.map((s) => [s.id, s.positions])),
     (g) => lignee.get(g) ?? g
   );
+  // Sénat (règle 26) : à part, chaque groupe sous son sigle, sans lien avec ceux de l'Assemblée.
+  const comptesSenat = scrutinsComptes(qualifSenat(retenues.map((l) => l.doc)));
+  const scrutinsSenat = await db.scrutinsSenat(
+    base,
+    comptesSenat.map((c) => c.scrutin_id)
+  );
+  const scoresSenat = scoresGroupes(
+    comptesSenat,
+    new Map(scrutinsSenat.map((s) => [s.id, s.positions])),
+    (g) => g
+  );
   return {
     brouillons,
     scores,
+    scoresSenat,
+    groupesSenat: await db.groupesSenat(base),
     groupes,
     droits: grille.droits,
     textes: retenues.map((l) => ({ id: l.doc.id, dossier_an: l.dossier_an, statut: l.statut }))

@@ -1,6 +1,7 @@
 <!--
   Recherche d'un député par code postal ou par nom, sans serveur : les tables sont des JSON
-  statiques chargés à la demande (/recherche/deputes.json, /recherche/cp/<2 chiffres>.json).
+  statiques chargés à la demande (/recherche/deputes.json, /recherche/cp/<2 chiffres>.json). La
+  recherche par nom trouve aussi les sénateur·ices, signalé·es comme tel·les.
   Code postal à plusieurs circonscriptions : on liste les députés possibles, avec les communes
   de chacune (docs/CONCEPTION.md, code postal).
 -->
@@ -70,19 +71,31 @@
       };
     } else if (normaliser(q).length >= 2) {
       try {
-        index ??= await json<EntreeIndex[]>('/recherche/deputes.json');
+        index ??= (
+          await Promise.all([
+            json<EntreeIndex[]>('/recherche/deputes.json'),
+            json<EntreeIndex[]>('/recherche/senateurs.json')
+          ])
+        ).flat();
       } catch {
-        resultat = { type: 'erreur', message: 'La liste des député·es n’a pas pu être chargée.' };
+        resultat = { type: 'erreur', message: 'La liste des élu·es n’a pas pu être chargée.' };
         return;
       }
       const mots = normaliser(q).split(' ');
       const liste = index
         .filter((e) => mots.every((m) => normaliser(e.nom).includes(m)))
-        .sort((a, b) => Number(b.actuel) - Number(a.actuel))
+        .sort(
+          (a, b) =>
+            Number(b.actuel) - Number(a.actuel) ||
+            Number(a.senat ?? false) - Number(b.senat ?? false)
+        )
         .slice(0, 12);
       resultat = liste.length
         ? { type: 'noms', liste }
-        : { type: 'erreur', message: `Aucun·e député·e ne s’appelle « ${q} » depuis 2022.` };
+        : {
+            type: 'erreur',
+            message: `Aucun·e député·e ni sénateur·ice ne s’appelle « ${q} » depuis 2022.`
+          };
     } else {
       resultat = { type: 'vide' };
     }
@@ -96,11 +109,18 @@
 </script>
 
 {#snippet carte(e: EntreeIndex)}
-  <a class="depute" href="/deputes/{e.slug}">
+  <a class="depute" href="{e.senat ? '/senat' : '/deputes'}/{e.slug}">
     <span class="nom">{e.nom}</span>
     <span class="detail">
       <span class="sigle" style:--c={e.couleur}>{e.sigle}</span>
-      {#if e.departement}{e.departement}{/if}{#if !e.actuel}, {e.feminin
+      {#if e.senat}{e.feminin
+          ? e.actuel
+            ? 'sénatrice'
+            : 'ancienne sénatrice'
+          : e.actuel
+            ? 'sénateur'
+            : 'ancien sénateur'},
+      {/if}{#if e.departement}{e.departement}{/if}{#if !e.actuel && !e.senat}, {e.feminin
           ? 'ancienne députée'
           : 'ancien député'}{/if}
     </span>

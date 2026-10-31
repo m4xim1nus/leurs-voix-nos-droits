@@ -10,7 +10,10 @@ l'admin, qui retire ceux que D1 a déjà traités (admin/src/lib/alertes.ts).
 - `premier_decisif` : décisif proposé sur un texte ni qualifié ni écarté (une fiche de suivi n'y change
   rien : le vote attendu a eu lieu, il reste à qualifier) ;
 - `inscrit` : texte ni qualifié, ni écarté, ni suivi, inscrit à l'ordre du jour d'une séance. Inscrit ne
-  veut pas dire voté.
+  veut pas dire voté ;
+- `senat_premier_vote` : vote du Sénat en scrutin public sur l'ensemble d'un texte ni écarté ni lu pour
+  le Sénat (une fiche de suivi n'y change rien, comme pour `premier_decisif`) ;
+- `senat_vote_posterieur` : vote du Sénat sur l'ensemble après ceux que retient une qualification (règle 25).
 """
 
 import re
@@ -29,9 +32,11 @@ def _cle(s: dict) -> tuple:
     return (s["date"], s["numero"])
 
 
-def calculer(textes: list[dict], scrutins: list[dict], points: list[dict], qualif: dict) -> list[dict]:
+def calculer(textes: list[dict], scrutins: list[dict], points: list[dict], qualif: dict,
+             scrutins_senat: list[dict] = ()) -> list[dict]:
     """`textes` : id, titre, decisif_propose. `scrutins` : id, dossier_id, date, numero, objet, sort, pour,
-    contre. `points` : dossier_id, date, instance (`agenda.points`). `qualif` : `editorial.charger`."""
+    contre. `points` : dossier_id, date, instance (`agenda.points`). `qualif` : `editorial.charger`.
+    `scrutins_senat` : id, dossier_id, date, numero, objet, pour, contre."""
     titre = {t["id"]: t["titre"] for t in textes}
     scr = {s["id"]: s for s in scrutins}
     qualifies = {t["dossier_an"]: t for t in qualif["textes"]}
@@ -74,4 +79,20 @@ def calculer(textes: list[dict], scrutins: list[dict], points: list[dict], quali
     for d, jour in inscrits.items():
         if d not in qualifies and d not in ecartes and d not in suivis:
             ajouter("inscrit", d, None, jour, f"inscrit en séance à partir du {jour}")
+
+    par_dossier: dict[str, list[dict]] = {}
+    for s in scrutins_senat:
+        if s["dossier_id"] and s["objet"] in ENSEMBLE:
+            par_dossier.setdefault(s["dossier_id"], []).append(s)
+    senat_scr = {s["id"]: s for s in scrutins_senat}
+    for d, votes in par_dossier.items():
+        if d in ecartes:
+            continue
+        dernier = max(votes, key=_cle)
+        retenus = [senat_scr[s["id"]] for s in (qualifies.get(d, {}).get("senat") or {}).get("scrutins", []) if s["id"] in senat_scr]
+        if not retenus:
+            ajouter("senat_premier_vote", d, dernier["id"], dernier["date"], f"vote du Sénat sur l'ensemble : {_decompte(dernier)}")
+        elif _cle(dernier) > _cle(max(retenus, key=_cle)):
+            ajouter("senat_vote_posterieur", d, dernier["id"], dernier["date"],
+                    f"vote du Sénat sur l'ensemble : {_decompte(dernier)}, après ceux que retient la qualification")
     return sorted(out, key=lambda a: a["id"])

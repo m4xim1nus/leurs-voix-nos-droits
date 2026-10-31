@@ -16,6 +16,9 @@ data/editorial.json (docs/CONCEPTION.md, choix F1) : les députés depuis les vo
 versionnés, les groupes depuis les ventilations officielles, comme l'aperçu de l'admin. Le
 score d'un groupe agrège les votes de ses membres, ce que la ventilation donne directement.
 build.sh l'exécute avant le build du site : une publication depuis l'admin met le site à jour.
+
+Le Sénat a ses propres fichiers, dans data/export/senat/ (règle 26) : même calcul, sur son seul décisif.
+Aucun score ne mélange les deux chambres (règle 28).
 """
 
 import json
@@ -246,6 +249,79 @@ def depuis_export(export: Path, qualif: dict) -> dict[str, list[dict]]:
     mandats = pl.read_csv(export / "mandats.csv", infer_schema=False).with_columns(pl.col("legislature").cast(pl.Int64))
     sc["participation"] = participation(sc["scores_scrutins"], scrutins, votes, mandats)
     return sc
+
+
+# --- Sénat (règles 23 à 28) ------------------------------------------------------------------------
+
+REGLES_SENAT = {"ponderation": "decisif"}  # règle 26 : chaque texte pèse 1, son décisif seul
+CODES_SENAT = {"P": "pour", "C": "contre", "A": "abstention", "N": "non_votant"}
+COLONNES_SENAT = {
+    "scores_scrutins": ("texte_id", "scrutin_id", "role", "droit", "droit_role", "sens", "poids", "favorable"),
+    "scores_senateurs": ("senateur_id", "droit", "n_textes", "votes_favorables", "votes_defavorables", "abstentions",
+                         "non_votants", "score"),
+    "scores_groupes": ("groupe_id", "droit", "n_textes", "votes_favorables", "votes_defavorables", "abstentions",
+                       "non_votants", "score"),
+    "scores_senateurs_textes": ("senateur_id", "texte_id", "votes_favorables", "votes_defavorables", "abstentions",
+                                "non_votants", "score"),
+    "scores_groupes_textes": ("groupe_id", "texte_id", "votes_favorables", "votes_defavorables", "abstentions",
+                              "non_votants", "score"),
+}
+
+
+def qualif_senat(qualif: dict) -> dict:
+    """Les textes comptés au Sénat, au format d'une qualification : le décisif du Sénat, et les droits de
+    la version votée. Pas de décisif, pas de compte (règle 23)."""
+    textes = []
+    for t in qualif["textes"]:
+        s = t.get("senat") or {}
+        decisif = [x for x in s.get("scrutins", []) if x["role"] == "decisif"]
+        if decisif:
+            textes.append({"id": t["id"], "droits": s["droits"] if s["version"] == "autre" else t["droits"],
+                           "scrutins": decisif})
+    return {"textes": textes}
+
+
+def _votes_senat(export: Path, ids: set[str], dates: dict[str, str]) -> list[dict]:
+    """Votes nominatifs versionnés (senat/votes/<AAAA-MM>.csv) des scrutins donnés."""
+    out = []
+    for mois in sorted({dates[i][:7] for i in ids}):
+        v = pl.read_csv(export / "senat/votes" / f"{mois}.csv", infer_schema=False)
+        for r in v.filter(pl.format("SN{}", "scrutin").is_in(ids)).iter_rows(named=True):
+            out.append({"scrutin_id": f"SN{r['scrutin']}", "acteur_id": r["senateur"], "position": CODES_SENAT[r["position"]]})
+    return out
+
+
+def senat_depuis_export(export: Path, qualif: dict) -> dict[str, list[dict]]:
+    """Scores du Sénat depuis data/export/senat/ et une qualification, sans dump. Le score d'un groupe
+    agrège les votes de ses membres, ce que la ventilation donne directement."""
+    doc = qualif_senat(qualif)
+    ids = {x["id"] for t in doc["textes"] for x in t["scrutins"]}
+    scrutins = pl.read_csv(export / "senat/scrutins.csv", infer_schema=False)
+    dates = dict(scrutins.select("id", "date").iter_rows())
+    votes = _votes_senat(export, ids, dates)
+    ventil = (pl.read_csv(export / "senat/positions_groupes.csv", infer_schema=False)
+              .filter(pl.col("scrutin_id").is_in(ids))
+              .with_columns(pl.col("pour", "contre", "abstention", "non_votants").cast(pl.Int64)).to_dicts())
+    sc = calculer(doc, votes, REGLES_SENAT, ventil)
+    pt = par_texte(doc, votes, ventil, REGLES_SENAT)
+
+    def renommer(rows: list[dict], avant: str, apres: str) -> list[dict]:
+        return [{(apres if k == avant else k): v for k, v in r.items()} for r in rows]
+    return {
+        "scores_scrutins": sc["scores_scrutins"],
+        "scores_senateurs": renommer(sc["scores_deputes"], "acteur_id", "senateur_id"),
+        "scores_groupes": renommer(sc["scores_groupes"], "lignee", "groupe_id"),
+        "scores_senateurs_textes": renommer(pt["scores_deputes_textes"], "acteur_id", "senateur_id"),
+        "scores_groupes_textes": renommer(pt["scores_groupes_textes"], "lignee", "groupe_id"),
+    }
+
+
+def ecrire_senat(export: Path, sc: dict[str, list[dict]]) -> None:
+    """Écrit les scores du Sénat dans data/export/senat/ (en-têtes seuls tant qu'aucun décisif n'est publié)."""
+    for nom, cols in COLONNES_SENAT.items():
+        lignes = [{c: r[c] for c in cols} for r in sc[nom]]
+        df = pl.DataFrame(lignes, infer_schema_length=None) if lignes else pl.DataFrame(schema=dict.fromkeys(cols, pl.String))
+        df.write_csv(export / "senat" / f"{nom}.csv")
 
 
 def ecrire(export: Path, sc: dict[str, list[dict]]) -> None:

@@ -32,6 +32,7 @@
     <li><a href="#groupes">La position d’un groupe</a></li>
     <li><a href="#scores">Le calcul des scores</a></li>
     <li><a href="#en-cours">Les textes en cours</a></li>
+    <li><a href="#senat">Le Sénat</a></li>
     <li><a href="#donnees">Les données</a></li>
     <li><a href="#limites">Les limites</a></li>
   </ol>
@@ -287,11 +288,79 @@
   </ol>
 </section>
 
+<section id="senat">
+  <h2>Le Sénat</h2>
+  <p>
+    Les règles 1 à 8 s’appliquent au Sénat, de même que les règles 12 à 14 et 20. Les règles
+    ci-dessous remplacent, pour le Sénat, les règles 9 à 11 et 15 à 19.
+  </p>
+  <ol>
+    <li value="23" id="regle-23">
+      <strong>Scrutin décisif du Sénat</strong> : le dernier scrutin public du Sénat sur l’ensemble
+      du texte, ou sur son article unique. Il est compté s’il a au moins une voix de chaque côté et
+      si son sens est établi (règle 24). Sinon, il est affiché et non compté. Les autres lectures et
+      les parties d’une loi de finances sont affichées, pas comptées. Les motions aussi, question
+      préalable comprise, même quand elle met fin à l’examen du texte. Les crédits d’une mission et
+      les amendements ne sont pas retenus. Quand le dernier vote sur l’ensemble n’est pas public, le
+      dernier scrutin public reste décisif, avec la mention « dernier vote public, sur le texte du
+      JJ/MM/AAAA ».
+    </li>
+    <li value="24" id="regle-24">
+      <strong>Chaque vote se lit sur le texte voté.</strong> Si le Sénat a voté le même texte que le scrutin
+      décisif de l’Assemblée (conclusions de la commission mixte paritaire, adoption sans modification
+      par l’une des chambres), le sens est repris. S’il a voté une autre version, le sens est relu sur
+      cette version et sourcé (règle 7). La source peut porter sur la mesure, à condition que la lecture
+      du texte voté montre qu’il s’agit bien de la même. Sans source admise, le vote est affiché et non
+      compté, et aucun sens n’est donné. Sur un texte rejeté par le Sénat, le sens se lit sur la version
+      mise aux voix, pas sur celle de l’Assemblée.
+    </li>
+    <li value="25" id="regle-25">
+      <strong>Texte voté au seul Sénat.</strong> Il est trié, puis qualifié s’il entre dans la grille
+      (règles 2 et 8). Il ne compte que dans les scores du Sénat, avec la mention « pas de vote sur l’ensemble
+      à l’Assemblée », qui vaut aussi pour un texte que l’Assemblée a rejeté par une motion ou à main
+      levée. Un texte attendu à l’Assemblée est qualifié dès le vote du Sénat, sans attendre son inscription,
+      avec la mention « texte encore en navette, attendu à l’Assemblée ». Un texte à l’arrêt affiche son
+      état (règle 20), sans cette mention. Il ne compte dans les scores de l’Assemblée qu’après un vote
+      de l’Assemblée. Chaque chambre garde alors son décisif, chacun lu sur son texte. Comme à la règle
+      21, un nouveau vote du Sénat sur l’ensemble est relu sur le texte voté. Jusque-là, l’ancien décisif
+      reste compté et le nouveau vote porte la mention « pas encore qualifié ». Un décisif du Sénat sur
+      un texte encore en navette porte la mention « vote de 1re lecture au Sénat, texte encore en navette »
+      (la lecture est celle du scrutin).
+    </li>
+    <li value="26" id="regle-26">
+      <strong>Scores du Sénat.</strong> Chaque texte pèse 1 et ne compte que son décisif : pas d’amendements
+      clés. Un texte adopté par le 49.3 à l’Assemblée compte au Sénat s’il y a eu un vote sur l’ensemble
+      (règles 23 et 24). Abstentions et non-votants sont hors calcul. Le calcul du score par droit, le
+      groupe du jour du vote et l’agrégation des votes dans le score d’un groupe sont ceux des règles
+      15 et 19. Il n’y a qu’une période : depuis le 28/06/2022, sans découpage, puisque le Sénat n’a pas
+      de législature et se renouvelle par moitié. Le nombre de votes comptés s’affiche à côté du score :
+      un·e élu·e récent·e en a peu.
+    </li>
+    <li value="27" id="regle-27">
+      <strong>Vote de groupe.</strong> Sur presque chaque scrutin public du Sénat, un vote est enregistré
+      pour presque tous les sièges, et il suit presque toujours la majorité du groupe. Le règlement du
+      Sénat permet de voter par délégation et par procédé électronique. Public Sénat décrit la pratique
+      en avril 2025 : « un seul sénateur peut voter pour l’ensemble de son groupe ». Ces votes sont les
+      résultats officiels, et on les compte tels quels. Ils ne disent pas qui était présent, et ils peuvent
+      ne pas refléter un choix individuel. La fiche d’un·e sénateur·ice affiche donc un score « d’après
+      les votes enregistrés à son nom » et met en avant ses écarts au groupe. Elle n’affiche aucun taux
+      de participation. La page du Sénat présente d’abord les groupes.
+    </li>
+    <li value="28" id="regle-28">
+      <strong>Deux chambres séparées.</strong> Aucun score ne mélange les deux chambres. Aucun score d’un·e
+      député·e n’est comparé à celui d’un·e sénateur·ice, puisque les textes comptés diffèrent. Aucune
+      correspondance n’est établie entre les groupes des deux chambres : ils sont côte à côte, chacun
+      sous son sigle. Un texte écarté (règles 8 et 9) l’est pour les deux chambres : son vote au Sénat
+      n’entre dans aucun score.
+    </li>
+  </ol>
+</section>
+
 <section id="donnees">
   <h2>Les données</h2>
   <p>
-    Les votes viennent uniquement de l’open data officiel de l’Assemblée nationale : scrutins, votes
-    nominatifs, dossiers législatifs, député·es et groupes. D’autres sites (datan.fr,
+    Les votes viennent uniquement de l’open data officiel de l’Assemblée nationale et du Sénat :
+    scrutins, votes nominatifs, dossiers législatifs, élu·es et groupes. D’autres sites (datan.fr,
     leurs-votes.fr) servent à vérifier les décomptes, jamais de source. Le périmètre couvre les XVIe
     et XVIIe législatures, depuis juin 2022.
   </p>
@@ -327,8 +396,7 @@
       l’assiduité d’un·e député·e.
     </li>
     <li>
-      Le Sénat et la législature 2017-2022 ne sont pas encore couverts. Ils le seront dans des
-      étapes suivantes.
+      La législature 2017-2022 n’est pas encore couverte. Elle le sera dans une étape suivante.
     </li>
   </ul>
 </section>

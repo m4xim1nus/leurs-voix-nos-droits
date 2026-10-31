@@ -121,6 +121,64 @@ export interface ScrutinRetenu {
   url: string;
 }
 
+export type VersionSenat = 'meme' | 'autre' | 'seul';
+export type RoleSenat = 'decisif' | 'ensemble' | 'motion';
+
+/** Un scrutin du Sénat retenu sur un texte (règle 23). */
+export interface ScrutinSenat {
+  id: string;
+  numero: number;
+  role: RoleSenat;
+  pour: Pour;
+  objet: string;
+  date: string;
+  lecture: string | null;
+  sort: 'adopte' | 'rejete';
+  decompte: { pour: number; contre: number; abstention: number; requis: number | null };
+  compte: boolean;
+  favorable: 'pour' | 'contre' | null;
+  ventilations: Ventilation[];
+  url: string;
+  /** Erreur matérielle signalée par le Sénat : affichée, sans changer le décompte (règle 13). */
+  note: string | null;
+  mises_au_point: { texte: string; url: string | null }[];
+}
+
+/** Vote du Sénat sur un texte, lu sur le texte voté (règle 24). */
+export interface VoteSenat {
+  version: VersionSenat;
+  scrutins: ScrutinSenat[];
+  /** Le décisif compté ; null si le vote est seulement affiché. */
+  decisif: ScrutinSenat | null;
+  /** Autre version : droits, sens et sources propres. Sinon vides : ceux du texte valent. */
+  droits: DroitTouche[];
+  principal: DroitTouche | null;
+  etiquettes: string[];
+  vigilance: { texte: string; sources: string[] }[];
+  sources: Record<string, Source>;
+  note: string;
+  /** Vote sur l'ensemble postérieur à ceux retenus : pas encore qualifié (règle 25). */
+  nouveau: { id: string; date: string; pour: number; contre: number; url: string } | null;
+}
+
+/** Ce que le Sénat a fait d'un texte qualifié. */
+export type StatutSenat = 'compte' | 'affiche' | 'non_lu' | 'sans_scrutin' | 'pas_examine';
+
+export interface Senateur {
+  id: string;
+  slug: string;
+  civ: string;
+  prenom: string;
+  nom: string;
+  tri: string;
+  actuel: boolean;
+  circonscription: string;
+  departement: string;
+  courriel: string | null;
+  groupes: { groupe: GroupeCourt; debut: string | null; fin: string | null }[];
+  mandats: { debut: string; fin: string | null }[];
+}
+
 export interface Texte {
   id: string;
   dossier_an: string;
@@ -139,6 +197,12 @@ export interface Texte {
   date: string;
   /** Adopté par 49.3 sans vote final : qualifié, compté dans aucun score (règle 9). */
   sans_vote: boolean;
+  /** Voté au seul Sénat : pas de décisif à l'Assemblée, ne compte que dans les scores du Sénat (règle 25). */
+  seul: boolean;
+  senat: VoteSenat | null;
+  statut_senat: StatutSenat;
+  /** Dernier vote du Sénat sur l'ensemble, tant qu'il n'est pas lu pour ce texte (règle 25). */
+  senat_non_lu: { date: string; pour: number; contre: number; url: string } | null;
   etat: EtatTexte | null;
   loi: string | null;
   date_loi: string | null;
@@ -211,6 +275,19 @@ export interface TexteEnCours {
   dernier_vote: VoteAN | null;
   /** Le dernier vote est-il celui sur lequel le texte a été qualifié ? */
   vote_qualifie: boolean;
+  /** Dernier vote public retenu du Sénat. */
+  vote_senat: {
+    date: string;
+    lecture: string | null;
+    sort: 'adopte' | 'rejete';
+    pour: number;
+    contre: number;
+    abstention: number;
+    url: string;
+    compte: boolean;
+  } | null;
+  /** Voté au seul Sénat (règle 25). */
+  seul: boolean;
 }
 
 export interface Mandat {
@@ -262,6 +339,8 @@ export interface EntreeIndex {
   sigle: string;
   couleur: string;
   actuel: boolean;
+  /** Sénateur·ice : sa fiche est sous /senat. */
+  senat?: boolean;
 }
 
 /** Table d'un préfixe de code postal (JSON chargé à la demande). */

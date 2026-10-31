@@ -25,6 +25,8 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] `lvnd download` : `--leger` retente le dump de l'AN pour les amendements de la XVIe quand ils viennent du plan B (mode `secours`, pas de zip local), jusqu'à 20 minutes de blocage ; un `.part` repris alors que l'AN a publié un nouveau fichier échoue (« taille X, attendu Y ») et reste à supprimer à la main (claude, 2026-10-30)
 - [ ] `lvnd download --leger` en local, quand les amendements de la XVIe ne viennent que du plan B (`unitaire`, sans zip) : il retente le dump de l'AN au lieu de réutiliser ce qui est là, et reste bloqué. Sans effet en CI, qui a la copie de la release (claude, 2026-10-31)
 - [ ] Sénat : `lvnd build` en local réécrit les exports de l'AN quand `data/raw/` diffère de la copie de la CI. Pour ne changer que le Sénat, restaurer ces fichiers avant de commiter (claude, 2026-10-31)
+- [ ] Admin, version `autre` du Sénat : droits, vigilance et sources se saisissent en JSON sur la fiche, pas avec les formulaires habituels (claude, 2026-10-31)
+- [ ] Fiche député·e : « Prochains votes » ne liste pas les textes du seul Sénat attendus à l'AN (casseurs-payeurs), pour ne rien changer aux vues de l'AN pendant le cycle Sénat (claude, 2026-10-31)
 
 ## Textes à surveiller
 

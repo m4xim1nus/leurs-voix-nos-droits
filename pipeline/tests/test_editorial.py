@@ -21,7 +21,7 @@ def test_temoins_convertis_et_valides():
     doc = editorial.depuis_temoins(referentiels.temoins())
     assert [t["id"] for t in doc["textes"]] == sorted(t["id"] for t in referentiels.temoins()["textes"])
     for t in doc["textes"]:
-        assert list(t) == list(editorial.CLES_TEXTE)
+        assert list(t) == [k for k in editorial.CLES_TEXTE if k != "senat"]
         assert not editorial.valider(t)[0], t["id"]
     kb = next(t for t in doc["textes"] if t["id"] == "kasbarian-berge")
     assert kb["vigilance"][0]["sources"] == []  # chaîne simple → objet
@@ -69,6 +69,54 @@ def test_controles_open_data():
 
 
 FIXTURE = Path(__file__).parent / "fixtures/editorial_suivis.json"
+FIXTURE_SENAT = Path(__file__).parent / "fixtures/editorial_senat.json"
+
+
+def test_senat_a_l_octet_et_controles():
+    """Même fixture que admin/src/lib/qualification.test.ts : mêmes octets, mêmes messages."""
+    f = json.loads(FIXTURE_SENAT.read_text())
+    assert editorial.serialiser(editorial.document([editorial.normaliser(t) for t in f["entrees"]], [])) == f["sortie"]
+    for c in f["cas"]:
+        doc = editorial.normaliser(c["doc"])
+        assert editorial.valider(doc, c.get("infos"), c.get("infos_senat")) == (c["erreurs"], c["avertissements"]), c["nom"]
+
+
+def test_senat_absent_quand_vide():
+    assert "senat" not in _texte()
+    assert "senat" not in _texte(senat={"version": "meme", "scrutins": [], "note": ""})
+    t = _texte(senat={"version": "meme", "scrutins": [{"id": "SN1", "role": "decisif", "pour": "texte", "objet": "x"}]})
+    assert list(t["senat"]) == list(editorial.CLES_SENAT)
+
+
+def test_complement_ne_touche_que_le_senat(tmp_path, monkeypatch):
+    base = _texte()
+    monkeypatch.setattr(editorial, "charger", lambda: {"textes": [base], "ecartes": []})
+    (tmp_path / "t.yaml").write_text(yaml.safe_dump({"id": "t", "dossier_an": "DLR5L17N1", "senat": {
+        "version": "meme", "scrutins": [{"id": "SN1", "role": "decisif", "pour": "texte", "objet": "x (2-1)"}]}}))
+    sql = sync_admin.validations(tmp_path, "validé")
+    assert "json_set(doc, '$.senat'" in sql[0] and "UPDATE qualifications" in sql[0]
+    con = sqlite3.connect(":memory:")
+    con.executescript("create table qualifications (dossier_an, statut, doc, motif_ecart, modifie_par, modifie_le);"
+                      "create table revisions (dossier_an, statut, doc, motif_ecart, auteur, date, commentaire);")
+    con.execute("insert into qualifications values (?, 'valide', ?, null, 'x', 'y')", ("DLR5L17N1", sync_admin.compact(base)))
+    con.executescript("\n".join(sql))
+    doc, = con.execute("select doc from qualifications").fetchone()
+    assert doc == sync_admin.compact(editorial.normaliser({**base, "senat": {
+        "version": "meme", "scrutins": [{"id": "SN1", "role": "decisif", "pour": "texte", "objet": "x (2-1)"}]}}))
+    assert con.execute("select count(*), max(commentaire) from revisions").fetchone() == (1, "validé")
+    # un texte non publié ne se complète pas
+    (tmp_path / "t.yaml").write_text(yaml.safe_dump({"id": "autre", "dossier_an": "DLR5L17N9", "senat": {"version": "meme"}}))
+    with pytest.raises(SystemExit):
+        sync_admin.validations(tmp_path, "validé")
+
+
+def test_ecarte_sans_senat(tmp_path, monkeypatch):
+    monkeypatch.setattr(editorial, "charger", lambda: {"textes": [], "ecartes": []})
+    (tmp_path / "e.yaml").write_text(yaml.safe_dump({"id": "", "dossier_an": "DLR5L17N2", "legislature": 17, "titre": "Loi",
+                                                     "statut": "ecarte", "motif_ecart": "règle 8", "senat": {
+        "version": "seul", "scrutins": [{"id": "SN1", "role": "ensemble", "pour": "texte", "objet": "x"}]}}))
+    sql = "\n".join(sync_admin.validations(tmp_path, "validé"))
+    assert "'ecarte'" in sql and "senat" not in sql
 
 
 def test_suivis_a_l_octet():
@@ -251,7 +299,7 @@ def test_texte_adopte_par_49_3():
 
 def test_sync_incremental_n_ecrit_que_les_differences():
     cat = {"textes": [{"id": "T1", "legislature": 17, "titre": "A"}, {"id": "T2", "legislature": 17, "titre": "B"}],
-           "scrutins": [], "groupes": [], "alertes": [],
+           "scrutins": [], "groupes": [], "alertes": [], "senat_scrutins": [], "senat_groupes": [],
            "catalogue_meta": [{"cle": "grille", "valeur": "{}"}, {"cle": "sync", "valeur": '"2026"'}]}
     cols = sync_admin.COLONNES_TEXTES
     present = {"textes": {"T1": sync_admin._ligne({"id": "T1", "legislature": 17.0, "titre": "A"}, cols),

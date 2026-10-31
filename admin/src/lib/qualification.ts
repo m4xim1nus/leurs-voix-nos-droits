@@ -4,6 +4,7 @@
 // sortie) : qualification.test.ts compare les deux sur data/editorial.json.
 
 import type {
+  BlocSenat,
   Ecarte,
   Editorial,
   Grille,
@@ -43,7 +44,8 @@ const CLES_TEXTE = [
   'conseil_constitutionnel',
   'note',
   'sources',
-  'scrutins'
+  'scrutins',
+  'senat'
 ] as const;
 const CLES_DROIT = ['code', 'role', 'sens', 'sources', 'justification'] as const;
 const CLES_SOURCE = ['auteur', 'titre', 'date', 'url'] as const;
@@ -61,6 +63,18 @@ const CLES_SUIVI = [
   'sources'
 ] as const;
 const CLES_DROIT_SUIVI = ['code', 'sources', 'justification'] as const;
+const CLES_SENAT = [
+  'version',
+  'scrutins',
+  'droits',
+  'etiquettes',
+  'vigilance',
+  'sources',
+  'note'
+] as const;
+export const VERSIONS_SENAT = ['meme', 'autre', 'seul'] as const;
+export const ROLES_SENAT = ['decisif', 'ensemble', 'motion'] as const;
+const OBJETS_DECISIF_SENAT = ['ensemble', 'article_unique'];
 
 function ordonner<T extends object>(d: Record<string, unknown>, cles: readonly string[]): T {
   const out: Record<string, unknown> = {};
@@ -71,13 +85,51 @@ function ordonner<T extends object>(d: Record<string, unknown>, cles: readonly s
 const espaces = (s: unknown) => String(s ?? '').trim();
 const parCle = (a: string, b: string) => (a < b ? -1 : a > b ? 1 : 0);
 
-/** Une qualification au format 1, clés dans l'ordre du fichier. */
-export function normaliser(t: Partial<Qualification>): Qualification {
-  const sources: Record<string, unknown> = {};
-  for (const k of Object.keys(t.sources ?? {}).sort(parCle)) {
-    const s = (t.sources ?? {})[k];
-    sources[k] = ordonner({ ...s, date: String(s.date ?? '') }, CLES_SOURCE);
+function droitsOrdonnes(droits: Qualification['droits'] | undefined) {
+  return (droits ?? []).map((d) =>
+    ordonner(
+      { ...d, sources: [...(d.sources ?? [])], justification: espaces(d.justification) },
+      CLES_DROIT
+    )
+  );
+}
+
+function vigilanceOrdonnee(vigilance: Qualification['vigilance'] | undefined) {
+  return (vigilance ?? []).map((v) =>
+    ordonner({ texte: espaces(v.texte), sources: [...(v.sources ?? [])] }, CLES_VIGILANCE)
+  );
+}
+
+function sourcesOrdonnees(sources: Record<string, Source> | undefined) {
+  const out: Record<string, unknown> = {};
+  for (const k of Object.keys(sources ?? {}).sort(parCle)) {
+    const s = (sources ?? {})[k];
+    out[k] = ordonner({ ...s, date: String(s.date ?? '') }, CLES_SOURCE);
   }
+  return out;
+}
+
+function senatOrdonne(s: Partial<BlocSenat>): BlocSenat {
+  return ordonner<BlocSenat>(
+    {
+      version: s.version,
+      scrutins: (s.scrutins ?? []).map((x) => ordonner<ScrutinRetenu>({ ...x }, CLES_SCRUTIN)),
+      droits: droitsOrdonnes(s.droits),
+      etiquettes: [...(s.etiquettes ?? [])],
+      vigilance: vigilanceOrdonnee(s.vigilance),
+      sources: sourcesOrdonnees(s.sources),
+      note: espaces(s.note)
+    },
+    CLES_SENAT
+  );
+}
+
+/**
+ * Une qualification au format 1, clés dans l'ordre du fichier. `senat` n'apparaît que s'il n'est pas
+ * vide : ajout compatible avec le format 1.
+ */
+export function normaliser(t: Partial<Qualification>): Qualification {
+  const senat = senatOrdonne(t.senat ?? {});
   return ordonner<Qualification>(
     {
       id: espaces(t.id),
@@ -85,23 +137,17 @@ export function normaliser(t: Partial<Qualification>): Qualification {
       legislature: Number(t.legislature),
       titre: t.titre,
       resume: espaces(t.resume),
-      droits: (t.droits ?? []).map((d) =>
-        ordonner(
-          { ...d, sources: [...(d.sources ?? [])], justification: espaces(d.justification) },
-          CLES_DROIT
-        )
-      ),
+      droits: droitsOrdonnes(t.droits),
       etiquettes: [...(t.etiquettes ?? [])],
-      vigilance: (t.vigilance ?? []).map((v) =>
-        ordonner({ texte: espaces(v.texte), sources: [...(v.sources ?? [])] }, CLES_VIGILANCE)
-      ),
+      vigilance: vigilanceOrdonnee(t.vigilance),
       // espaces ASCII seulement : les espaces insécables de la typographie française restent
       conseil_constitutionnel: String(t.conseil_constitutionnel ?? '')
         .replace(/[ \t\n\r]+/g, ' ')
         .trim(),
       note: espaces(t.note),
-      sources,
-      scrutins: (t.scrutins ?? []).map((s) => ordonner<ScrutinRetenu>({ ...s }, CLES_SCRUTIN))
+      sources: sourcesOrdonnees(t.sources),
+      scrutins: (t.scrutins ?? []).map((s) => ordonner<ScrutinRetenu>({ ...s }, CLES_SCRUTIN)),
+      senat: senat.scrutins.length || senat.note ? senat : undefined
     },
     CLES_TEXTE
   );
@@ -180,6 +226,13 @@ export interface InfoScrutin {
   contre?: number;
 }
 
+export interface InfoScrutinSenat {
+  dossier_id: string;
+  objet: string | null;
+  pour: number;
+  contre: number;
+}
+
 function controlerSources(
   sources: Record<string, Source>,
   citees: Set<string>,
@@ -226,11 +279,118 @@ export function validerSuivi(
   return { erreurs: err, avertissements: avert };
 }
 
+/** Contrôles du bloc `senat` (règles 23 à 28), mêmes messages que le pipeline. */
+function validerSenat(
+  t: Qualification,
+  grille: Grille,
+  scrutinsSenat: Map<string, InfoScrutinSenat> | undefined,
+  err: string[],
+  avert: string[]
+) {
+  const s = t.senat!;
+  const scrutins = s.scrutins ?? [];
+  if (!(VERSIONS_SENAT as readonly string[]).includes(s.version))
+    err.push(`Sénat : version inconnue (${s.version})`);
+  if (!scrutins.length) err.push('Sénat : aucun scrutin retenu');
+  const decisifs = scrutins.filter((x) => x.role === 'decisif');
+  if (decisifs.length > 1) err.push('Sénat : plusieurs scrutins décisifs');
+  const ids = scrutins.map((x) => x.id);
+  for (const i of [...new Set(ids.filter((i, n) => ids.indexOf(i) !== n))].sort(parCle))
+    err.push(`Sénat : scrutin en double : ${i}`);
+  for (const x of scrutins) {
+    if (!(ROLES_SENAT as readonly string[]).includes(x.role))
+      err.push(`Sénat : ${x.id} : rôle inconnu (${x.role})`);
+    if (!(POUR as readonly string[]).includes(x.pour))
+      err.push(`Sénat : ${x.id} : sens inconnu (${x.pour})`);
+    else if (x.pour === 'a-trancher')
+      avert.push(`Sénat : ${x.id} : sens à trancher, scrutin non compté`);
+  }
+
+  const droits = s.droits ?? [];
+  if (s.version !== 'autre' && droits.length)
+    err.push('Sénat : droits propres réservés à une autre version');
+  // Un texte adopté par 49.3 n'a pas de décisif, mais le Sénat peut voter le même texte (règle 26).
+  if (
+    s.version === 'meme' &&
+    !t.scrutins?.some((x) => x.role === 'decisif' || x.role === 'censure')
+  )
+    err.push(
+      "Sénat : même texte que l'Assemblée, mais aucun décisif ni motion de censure de l'Assemblée retenu"
+    );
+  if (s.version === 'seul' && !decisifs.length && t.droits?.length)
+    err.push('Sénat : vote affiché, ni droits ni sens');
+  if (s.version === 'seul' && decisifs.length && !t.droits?.length)
+    err.push('Sénat : décisif sans droits');
+  if (s.version === 'autre') {
+    const codes = new Set(grille.droits.map((d) => d.code));
+    const etiquettes = new Set(grille.etiquettes.map((e) => e.code));
+    if (!decisifs.length && droits.length) err.push('Sénat : vote affiché, ni droits ni sens');
+    if (decisifs.length && droits.filter((d) => d.role === 'principal').length !== 1)
+      err.push('Sénat : il faut exactement un droit principal');
+    const vus = new Set<string>();
+    for (const d of droits) {
+      const c = d.code;
+      if (!codes.has(c)) err.push(`Sénat : droit inconnu : ${c}`);
+      if (vus.has(c)) err.push(`Sénat : droit en double : ${c}`);
+      vus.add(c);
+      if (!(ROLES_DROIT as readonly string[]).includes(d.role))
+        err.push(`Sénat : ${c} : rôle inconnu (${d.role})`);
+      if (!(SENS as readonly string[]).includes(d.sens))
+        err.push(`Sénat : ${c} : sens inconnu (${d.sens})`);
+      if (!d.sources?.length) err.push(`Sénat : ${c} : aucune source`);
+    }
+    for (const e of s.etiquettes ?? [])
+      if (!etiquettes.has(e)) err.push(`Sénat : étiquette inconnue : ${e}`);
+    const e: string[] = [];
+    const a: string[] = [];
+    controlerSources(
+      s.sources ?? {},
+      new Set([
+        ...droits.flatMap((d) => d.sources ?? []),
+        ...(s.vigilance ?? []).flatMap((v) => v.sources ?? [])
+      ]),
+      e,
+      a
+    );
+    err.push(...e.map((x) => `Sénat : ${x}`));
+    avert.push(...a.map((x) => `Sénat : ${x}`));
+    if (
+      droits.find((d) => d.role === 'principal')?.sens === 'etend' &&
+      !(s.vigilance ?? []).some((v) => v.sources?.length)
+    )
+      avert.push(
+        'Sénat : le texte étend son droit principal : la règle 7 demande une source critique en vigilance'
+      );
+  }
+
+  if (!scrutinsSenat) return;
+  for (const x of scrutins) {
+    const info = scrutinsSenat.get(x.id);
+    if (!info || info.dossier_id !== t.dossier_an) {
+      err.push(`Sénat : ${x.id} : scrutin absent du dossier ${t.dossier_an}`);
+      continue;
+    }
+    if (x.role === 'decisif') {
+      if (!OBJETS_DECISIF_SENAT.includes(info.objet ?? ''))
+        err.push(`Sénat : ${x.id} : décisif sur ${info.objet}, pas sur l'ensemble (règle 23)`);
+      if (info.pour === 0 || info.contre === 0)
+        err.push(
+          `Sénat : ${x.id} : décisif sans voix d'un côté (${info.pour}-${info.contre}), vote affiché (règle 23)`
+        );
+    }
+    if (!(x.objet ?? '').includes(`(${info.pour}-${info.contre})`))
+      avert.push(
+        `Sénat : ${x.id} : l'objet ne reprend pas le décompte (${info.pour}-${info.contre})`
+      );
+  }
+}
+
 /** Erreurs bloquantes et avertissements d'une qualification (docs/CONCEPTION.md, contrôles). */
 export function valider(
   t: Qualification,
   grille: Grille,
-  scrutinsDossier?: Map<string, InfoScrutin>
+  scrutinsDossier?: Map<string, InfoScrutin>,
+  scrutinsSenat?: Map<string, InfoScrutinSenat>
 ): { erreurs: string[]; avertissements: string[] } {
   const codes = new Set(grille.droits.map((d) => d.code));
   const etiquettes = new Set(grille.etiquettes.map((e) => e.code));
@@ -241,7 +401,9 @@ export function valider(
   if (!t.id) err.push('identifiant manquant');
   if (!(t.titre ?? '').trim()) err.push('titre manquant');
   const droits = t.droits ?? [];
-  if (droits.filter((d) => d.role === 'principal').length !== 1)
+  // Texte voté au seul Sénat : pas de décisif à l'AN, et pas de droits si son vote n'est qu'affiché.
+  const seul = t.senat?.version === 'seul';
+  if (droits.filter((d) => d.role === 'principal').length !== 1 && !(seul && !droits.length))
     err.push('il faut exactement un droit principal');
   const vus = new Set<string>();
   for (const d of droits) {
@@ -263,7 +425,12 @@ export function valider(
 
   const scrutins = t.scrutins ?? [];
   const nDecisifs = scrutins.filter((s) => s.role === 'decisif').length;
-  if (nDecisifs > 1 || (nDecisifs === 0 && !scrutins.some((s) => s.role === 'censure')))
+  if (seul) {
+    if (nDecisifs)
+      err.push(
+        "Sénat : texte sans décisif de l'Assemblée, mais un décisif de l'Assemblée est retenu"
+      );
+  } else if (nDecisifs > 1 || (nDecisifs === 0 && !scrutins.some((s) => s.role === 'censure')))
     err.push(
       'il faut exactement un scrutin décisif (ou, pour un texte adopté par 49.3 sans vote final, au moins une motion de censure)'
     );
@@ -322,6 +489,7 @@ export function valider(
         );
     }
   }
+  if (t.senat) validerSenat(t, grille, scrutinsSenat, err, avert);
   return { erreurs: err, avertissements: avert };
 }
 
@@ -411,5 +579,6 @@ export function differences(avant: Qualification, apres: Qualification): string[
     else if (v.objet !== s.objet) out.push(`scrutin ${id} : objet modifié`);
   }
   for (const id of scrA.keys()) if (!scrB.has(id)) out.push(`scrutin ${id} retiré`);
+  if (!egal(a.senat, b.senat)) out.push('vote du Sénat modifié');
   return out;
 }

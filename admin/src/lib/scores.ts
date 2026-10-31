@@ -69,6 +69,16 @@ export function scrutinsComptes(textes: Qualification[]): Compte[] {
   return out;
 }
 
+/** Les textes comptés au Sénat (règle 26) : son décisif, et les droits de la version votée. */
+export function qualifSenat(textes: Qualification[]): Qualification[] {
+  return textes.flatMap((t) => {
+    const s = t.senat;
+    const decisif = s?.scrutins.filter((x) => x.role === 'decisif') ?? [];
+    if (!s || !decisif.length) return [];
+    return [{ ...t, droits: s.version === 'autre' ? s.droits : t.droits, scrutins: decisif }];
+  });
+}
+
 /**
  * Arrondi au dixième comme `round(x, 1)` en Python : sur la valeur exacte du flottant, égalité
  * au pair. `toFixed` arrondit lui aussi la valeur exacte, mais tranche les égalités vers le haut.

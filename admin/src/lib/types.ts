@@ -34,6 +34,19 @@ export interface ScrutinRetenu {
   objet: string;
 }
 
+export type VersionSenat = 'meme' | 'autre' | 'seul';
+
+/** Vote du Sénat sur un texte (règles 23 à 28). Absent tant qu'aucun scrutin n'est retenu. */
+export interface BlocSenat {
+  version: VersionSenat;
+  scrutins: ScrutinRetenu[];
+  droits: DroitQualifie[];
+  etiquettes: string[];
+  vigilance: Vigilance[];
+  sources: Record<string, Source>;
+  note: string;
+}
+
 /** Une entrée de `textes` dans editorial.json. */
 export interface Qualification {
   id: string;
@@ -48,6 +61,7 @@ export interface Qualification {
   note: string;
   sources: Record<string, Source>;
   scrutins: ScrutinRetenu[];
+  senat?: BlocSenat;
 }
 
 export interface Ecarte {
@@ -137,6 +151,32 @@ export interface ScrutinCatalogue {
   amendement_auteur: string | null;
   amendement_sort: string | null;
   positions: PositionGroupe[];
+}
+
+/** Ligne de la table `senat_scrutins`, positions décodées. */
+export interface ScrutinSenat {
+  id: string;
+  texte_id: string;
+  session: number;
+  numero: number;
+  date: string;
+  titre: string | null;
+  objet: string | null;
+  lecture: string | null;
+  sort: string | null;
+  pour: number;
+  contre: number;
+  abstention: number;
+  non_votants: number;
+  note: string | null;
+  url: string | null;
+  positions: PositionGroupe[];
+}
+
+export interface GroupeSenat {
+  id: string;
+  sigle: string;
+  nom: string;
 }
 
 export interface Groupe {

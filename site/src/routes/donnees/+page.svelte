@@ -9,7 +9,7 @@
 
   const DESCRIPTION: Record<string, string> = {
     'textes.csv':
-      'catalogue des textes (dossiers législatifs), qualifiés ou non : au moins un scrutin public à l’AN, en cours ou inscrits à l’ordre du jour',
+      'catalogue des textes (dossiers législatifs), qualifiés ou non : au moins un scrutin public à l’AN, en cours, inscrits à l’ordre du jour, ou votés au Sénat sur l’ensemble',
     'scrutins.csv': 'tous les scrutins publics, rattachés à leur dossier',
     'positions_groupes.csv': 'décompte et position de chaque groupe sur chaque scrutin',
     'amendements.csv':
@@ -31,7 +31,19 @@
     'en_cours_evenements.csv': 'procédure accélérée, 49.3, CMP, saisine du Conseil constitutionnel',
     'en_cours_etats.csv': 'où en est chaque texte du catalogue',
     'en_cours_agenda.csv': 'ordre du jour de l’AN : points de séance et de commission à venir',
-    'en_cours_alertes.csv': 'nouveaux votes et inscriptions à traiter pour la qualification'
+    'en_cours_alertes.csv': 'nouveaux votes et inscriptions à traiter pour la qualification',
+    'senat/scrutins.csv': 'scrutins publics du Sénat depuis juin 2022, rattachés à leur dossier',
+    'senat/positions_groupes.csv': 'décompte et position de chaque groupe sur chaque scrutin',
+    'senat/senateurs.csv': 'sénateur·ices : département, courriel public',
+    'senat/mandats.csv': 'mandats de sénateur·ice, avec les dates',
+    'senat/appartenances.csv': 'appartenance aux groupes, avec les dates',
+    'senat/groupes.csv': 'groupes du Sénat, sans correspondance avec ceux de l’Assemblée',
+    'senat/mises_au_point.csv': 'mises au point de vote (affichées, pas comptées)',
+    'senat/scores_scrutins.csv': 'décisifs comptés : vote favorable aux droits, droit par droit',
+    'senat/scores_senateurs.csv': 'score de chaque sénateur·ice, par droit',
+    'senat/scores_groupes.csv': 'score de chaque groupe, par droit',
+    'senat/scores_senateurs_textes.csv': 'score de chaque sénateur·ice, par texte',
+    'senat/scores_groupes_textes.csv': 'score de chaque groupe, par texte'
   };
 </script>
 
@@ -90,6 +102,45 @@
   </ul>
 </details>
 
+<h2>Sénat</h2>
+<p>
+  Fichiers à part : aucun score ne mélange les deux chambres. Votes nominatifs, un fichier par mois
+  : colonnes <code>scrutin</code> (session-numéro), <code>senateur</code> (matricule),
+  <code>position</code> (P, C, A, N), <code>statut</code>, <code>delegue_a</code> et
+  <code>mise_au_point</code>. Le vote de groupe est expliqué à la
+  <a href="/methodologie#regle-27">règle 27</a>.
+</p>
+<div class="defile">
+  <table>
+    <thead>
+      <tr
+        ><th scope="col">Fichier</th><th scope="col" class="nombre">Taille</th><th scope="col"
+          >Contenu</th
+        ></tr
+      >
+    </thead>
+    <tbody>
+      {#each data.senat as f (f.nom)}
+        <tr>
+          <td><a href="/donnees/{f.nom}" download>{f.nom}</a></td>
+          <td class="nombre discret">{mo(f.taille)}</td>
+          <td>{DESCRIPTION[f.nom] ?? ''}</td>
+        </tr>
+      {/each}
+    </tbody>
+  </table>
+</div>
+<details>
+  <summary>{data.votesSenat.length} fichiers de votes</summary>
+  <ul class="votes">
+    {#each data.votesSenat as f (f.nom)}
+      <li>
+        <a href="/donnees/{f.nom}" download>{f.nom}</a> <span class="discret">{mo(f.taille)}</span>
+      </li>
+    {/each}
+  </ul>
+</details>
+
 <h2>Annuaire</h2>
 <ul>
   {#each data.annuaire as f (f.nom)}
@@ -100,9 +151,8 @@
 </ul>
 <p class="petit">
   Code postal → commune → circonscription, avec la part des inscrits de la commune dans chaque
-  circonscription ; courriel public de chaque député·e. Méthode : <a href="/methodologie#donnees"
-    >méthodologie</a
-  >.
+  circonscription ; courriel public de chaque député·e ; code postal → département, pour les
+  sénateur·ices. Méthode : <a href="/methodologie#donnees">méthodologie</a>.
 </p>
 
 <style>

@@ -142,6 +142,13 @@ décisifs. Rien n'est encore dans D1 : voir le début de l'étape 3.*
 - **Comparer** : deux sénateur·ices ou deux groupes du Sénat si l'existant s'y prête sans
   détour ; jamais d'une chambre à l'autre.
 
+*Fait (31/10/2026, non commité ni déployé) : bloc `senat` à l'octet dans le pipeline et l'admin, chargement par complément, contrôles
+croisés, migration `0004_senat.sql`, catalogue étendu aux dossiers votés au Sénat, alertes, scores à part (76 décisifs, chiffres
+identiques à la simulation de la relecture), fiche admin et aperçu, fiche texte, pages `/senat` et `/senat/<slug>`, recherche, `/textes`,
+`/en-cours`, méthodologie, données, menu. Accueil, `/groupes` et droits identiques avec et sans les données du Sénat, hors menu et pied de
+page. Comparer n'est pas étendu au Sénat : l'existant ne s'y prête pas sans détour. Reste : migration en ligne, déploiement de l'admin,
+validation dans D1, « Publier » par Max.*
+
 ### Hors cycle
 
 Amendements clés du Sénat (environ 31 suppressions hors budgets et retraites, sur 16

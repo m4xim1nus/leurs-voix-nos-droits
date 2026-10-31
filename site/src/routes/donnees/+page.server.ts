@@ -13,11 +13,22 @@ export const load = () => {
     .filter((f) => f.endsWith('.csv'))
     .sort()
     .map((f) => ({ nom: `votes/${f}`, taille: taille(resolve(EXPORT, 'votes', f)) }));
+  const SENAT = resolve(EXPORT, 'senat');
+  const senat = readdirSync(SENAT)
+    .filter((f) => f.endsWith('.csv'))
+    .sort()
+    .map((f) => ({ nom: `senat/${f}`, taille: taille(resolve(SENAT, f)) }));
+  const votesSenat = readdirSync(resolve(SENAT, 'votes'))
+    .filter((f) => f.endsWith('.csv'))
+    .sort()
+    .map((f) => ({ nom: `senat/votes/${f}`, taille: taille(resolve(SENAT, 'votes', f)) }));
   return {
+    senat,
+    votesSenat,
     editorial: taille(resolve(RACINE, 'data/editorial.json')),
     csv,
     votes,
-    annuaire: ['codes_postaux.csv', 'contacts.csv'].map((f) => ({
+    annuaire: ['codes_postaux.csv', 'contacts.csv', 'cp_departements.csv'].map((f) => ({
       nom: `annuaire/${f}`,
       taille: taille(resolve(RACINE, 'data/annuaire', f))
     }))

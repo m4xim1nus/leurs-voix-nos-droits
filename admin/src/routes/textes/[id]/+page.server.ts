@@ -19,19 +19,22 @@ export const load: PageServerLoad = async ({ params, platform }) => {
   const base = platform!.env.DB;
   const texte = await db.texte(base, params.id);
   if (!texte) error(404, `texte ${params.id} absent du catalogue`);
-  const [duDossier, censures, groupes, grille, qualif, revisions, toutes] = await Promise.all([
-    db.scrutinsDuTexte(base, params.id),
-    // Motions de censure votées pendant l'examen du texte et dans les 4 mois qui suivent ses
-    // derniers votes : à retenir (rôle « censure ») s'il a été adopté par 49.3 sans vote final.
-    texte.premier_scrutin && texte.dernier_scrutin
-      ? db.censures(base, texte.premier_scrutin, plusJours(texte.dernier_scrutin, 120))
-      : Promise.resolve([]),
-    db.groupes(base),
-    db.grille(base),
-    db.qualification(base, params.id),
-    db.revisions(base, params.id),
-    db.qualifications(base)
-  ]);
+  const [duDossier, censures, groupes, grille, qualif, revisions, toutes, senat, groupesSenat] =
+    await Promise.all([
+      db.scrutinsDuTexte(base, params.id),
+      // Motions de censure votées pendant l'examen du texte et dans les 4 mois qui suivent ses
+      // derniers votes : à retenir (rôle « censure ») s'il a été adopté par 49.3 sans vote final.
+      texte.premier_scrutin && texte.dernier_scrutin
+        ? db.censures(base, texte.premier_scrutin, plusJours(texte.dernier_scrutin, 120))
+        : Promise.resolve([]),
+      db.groupes(base),
+      db.grille(base),
+      db.qualification(base, params.id),
+      db.revisions(base, params.id),
+      db.qualifications(base),
+      db.scrutinsSenatDuTexte(base, params.id),
+      db.groupesSenat(base)
+    ]);
   // Sources des autres textes, pour les reprendre sans ressaisie (docs/CONCEPTION.md, choix C).
   const bibliotheque: { cle: string; texte: string; source: Source }[] = [];
   for (const q of toutes)
@@ -50,6 +53,8 @@ export const load: PageServerLoad = async ({ params, platform }) => {
     texte,
     publie,
     scrutins,
+    senat,
+    groupesSenat,
     groupes,
     grille,
     qualif: qualif ?? {
@@ -105,7 +110,13 @@ export const actions: Actions = {
           doc.scrutins.map((s) => s.id)
         )
       );
-      erreurs.push(...valider(doc, await db.grille(base), infos).erreurs);
+      const infosSenat = db.infosSenat(
+        await db.scrutinsSenat(
+          base,
+          (doc.senat?.scrutins ?? []).map((s) => s.id)
+        )
+      );
+      erreurs.push(...valider(doc, await db.grille(base), infos, infosSenat).erreurs);
     }
     if (statut === 'a-suivre') {
       erreurs.push(...validerSuivi(doc, await db.grille(base)).erreurs);

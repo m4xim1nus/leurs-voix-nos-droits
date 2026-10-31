@@ -1,0 +1,1079 @@
+{
+ "entrees": [
+  {
+   "id": "a-meme",
+   "dossier_an": "DLR5L17N1",
+   "legislature": 17,
+   "titre": "Loi",
+   "droits": [
+    {
+     "code": "vie-privee",
+     "role": "principal",
+     "sens": "restreint",
+     "sources": [
+      "s1"
+     ],
+     "justification": " Parce que. "
+    }
+   ],
+   "sources": {
+    "s1": {
+     "auteur": "CNIL",
+     "titre": "Avis",
+     "date": "2024-01-01",
+     "url": "https://cnil.fr"
+    }
+   },
+   "scrutins": [
+    {
+     "id": "V1",
+     "role": "decisif",
+     "pour": "texte",
+     "objet": "x"
+    }
+   ],
+   "senat": {
+    "note": " Conclusions de la CMP. ",
+    "scrutins": [
+     {
+      "role": "decisif",
+      "objet": "ensemble (2-1)",
+      "pour": "texte",
+      "id": "SN1"
+     },
+     {
+      "role": "motion",
+      "objet": "ensemble (2-1)",
+      "pour": "texte",
+      "id": "SN0"
+     }
+    ],
+    "version": "meme"
+   }
+  },
+  {
+   "id": "b-autre",
+   "dossier_an": "DLR5L17N1",
+   "legislature": 17,
+   "titre": "Loi",
+   "droits": [
+    {
+     "code": "vie-privee",
+     "role": "principal",
+     "sens": "restreint",
+     "sources": [
+      "s1"
+     ],
+     "justification": " Parce que. "
+    }
+   ],
+   "sources": {
+    "s1": {
+     "auteur": "CNIL",
+     "titre": "Avis",
+     "date": "2024-01-01",
+     "url": "https://cnil.fr"
+    }
+   },
+   "scrutins": [
+    {
+     "id": "V1",
+     "role": "decisif",
+     "pour": "texte",
+     "objet": "x"
+    }
+   ],
+   "senat": {
+    "version": "autre",
+    "scrutins": [
+     {
+      "role": "decisif",
+      "objet": "ensemble (2-1)",
+      "pour": "texte",
+      "id": "SN2"
+     }
+    ],
+    "droits": [
+     {
+      "code": "sante",
+      "role": "principal",
+      "sens": "etend",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "etiquettes": [
+     "regime-exception"
+    ],
+    "vigilance": [
+     {
+      "texte": " Une critique ",
+      "sources": [
+       "s2"
+      ]
+     }
+    ],
+    "sources": {
+     "s2": {
+      "titre": "Note",
+      "auteur": "Ligue",
+      "date": "2024-02",
+      "url": "https://a.b"
+     },
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "note": "Autre version."
+   }
+  },
+  {
+   "id": "c-seul",
+   "dossier_an": "DLR5L17N1",
+   "legislature": 17,
+   "titre": "Loi",
+   "droits": [
+    {
+     "code": "vie-privee",
+     "role": "principal",
+     "sens": "restreint",
+     "sources": [
+      "s1"
+     ],
+     "justification": " Parce que. "
+    }
+   ],
+   "sources": {
+    "s1": {
+     "auteur": "CNIL",
+     "titre": "Avis",
+     "date": "2024-01-01",
+     "url": "https://cnil.fr"
+    }
+   },
+   "scrutins": [],
+   "senat": {
+    "version": "seul",
+    "scrutins": [
+     {
+      "role": "decisif",
+      "objet": "ensemble (2-1)",
+      "pour": "texte",
+      "id": "SN3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "d-affiche",
+   "dossier_an": "DLR5L17N1",
+   "legislature": 17,
+   "titre": "Loi",
+   "droits": [],
+   "sources": {},
+   "scrutins": [],
+   "senat": {
+    "version": "seul",
+    "scrutins": [
+     {
+      "role": "ensemble",
+      "objet": "ensemble (2-1)",
+      "pour": "texte",
+      "id": "SN4"
+     }
+    ],
+    "note": "Vote affiché."
+   }
+  },
+  {
+   "id": "e-vide",
+   "dossier_an": "DLR5L17N1",
+   "legislature": 17,
+   "titre": "Loi",
+   "droits": [
+    {
+     "code": "vie-privee",
+     "role": "principal",
+     "sens": "restreint",
+     "sources": [
+      "s1"
+     ],
+     "justification": " Parce que. "
+    }
+   ],
+   "sources": {
+    "s1": {
+     "auteur": "CNIL",
+     "titre": "Avis",
+     "date": "2024-01-01",
+     "url": "https://cnil.fr"
+    }
+   },
+   "scrutins": [
+    {
+     "id": "V1",
+     "role": "decisif",
+     "pour": "texte",
+     "objet": "x"
+    }
+   ],
+   "senat": {
+    "version": "meme",
+    "scrutins": [],
+    "note": ""
+   }
+  }
+ ],
+ "sortie": "{\n  \"format\": 1,\n  \"grille\": 1,\n  \"textes\": [\n    {\n      \"id\": \"a-meme\",\n      \"dossier_an\": \"DLR5L17N1\",\n      \"legislature\": 17,\n      \"titre\": \"Loi\",\n      \"resume\": \"\",\n      \"droits\": [\n        {\n          \"code\": \"vie-privee\",\n          \"role\": \"principal\",\n          \"sens\": \"restreint\",\n          \"sources\": [\n            \"s1\"\n          ],\n          \"justification\": \"Parce que.\"\n        }\n      ],\n      \"etiquettes\": [],\n      \"vigilance\": [],\n      \"conseil_constitutionnel\": \"\",\n      \"note\": \"\",\n      \"sources\": {\n        \"s1\": {\n          \"auteur\": \"CNIL\",\n          \"titre\": \"Avis\",\n          \"date\": \"2024-01-01\",\n          \"url\": \"https://cnil.fr\"\n        }\n      },\n      \"scrutins\": [\n        {\n          \"id\": \"V1\",\n          \"role\": \"decisif\",\n          \"pour\": \"texte\",\n          \"objet\": \"x\"\n        }\n      ],\n      \"senat\": {\n        \"version\": \"meme\",\n        \"scrutins\": [\n          {\n            \"id\": \"SN1\",\n            \"role\": \"decisif\",\n            \"pour\": \"texte\",\n            \"objet\": \"ensemble (2-1)\"\n          },\n          {\n            \"id\": \"SN0\",\n            \"role\": \"motion\",\n            \"pour\": \"texte\",\n            \"objet\": \"ensemble (2-1)\"\n          }\n        ],\n        \"droits\": [],\n        \"etiquettes\": [],\n        \"vigilance\": [],\n        \"sources\": {},\n        \"note\": \"Conclusions de la CMP.\"\n      }\n    },\n    {\n      \"id\": \"b-autre\",\n      \"dossier_an\": \"DLR5L17N1\",\n      \"legislature\": 17,\n      \"titre\": \"Loi\",\n      \"resume\": \"\",\n      \"droits\": [\n        {\n          \"code\": \"vie-privee\",\n          \"role\": \"principal\",\n          \"sens\": \"restreint\",\n          \"sources\": [\n            \"s1\"\n          ],\n          \"justification\": \"Parce que.\"\n        }\n      ],\n      \"etiquettes\": [],\n      \"vigilance\": [],\n      \"conseil_constitutionnel\": \"\",\n      \"note\": \"\",\n      \"sources\": {\n        \"s1\": {\n          \"auteur\": \"CNIL\",\n          \"titre\": \"Avis\",\n          \"date\": \"2024-01-01\",\n          \"url\": \"https://cnil.fr\"\n        }\n      },\n      \"scrutins\": [\n        {\n          \"id\": \"V1\",\n          \"role\": \"decisif\",\n          \"pour\": \"texte\",\n          \"objet\": \"x\"\n        }\n      ],\n      \"senat\": {\n        \"version\": \"autre\",\n        \"scrutins\": [\n          {\n            \"id\": \"SN2\",\n            \"role\": \"decisif\",\n            \"pour\": \"texte\",\n            \"objet\": \"ensemble (2-1)\"\n          }\n        ],\n        \"droits\": [\n          {\n            \"code\": \"sante\",\n            \"role\": \"principal\",\n            \"sens\": \"etend\",\n            \"sources\": [\n              \"s1\"\n            ],\n            \"justification\": \"Parce que.\"\n          }\n        ],\n        \"etiquettes\": [\n          \"regime-exception\"\n        ],\n        \"vigilance\": [\n          {\n            \"texte\": \"Une critique\",\n            \"sources\": [\n              \"s2\"\n            ]\n          }\n        ],\n        \"sources\": {\n          \"s1\": {\n            \"auteur\": \"CNIL\",\n            \"titre\": \"Avis\",\n            \"date\": \"2024-01-01\",\n            \"url\": \"https://cnil.fr\"\n          },\n          \"s2\": {\n            \"auteur\": \"Ligue\",\n            \"titre\": \"Note\",\n            \"date\": \"2024-02\",\n            \"url\": \"https://a.b\"\n          }\n        },\n        \"note\": \"Autre version.\"\n      }\n    },\n    {\n      \"id\": \"c-seul\",\n      \"dossier_an\": \"DLR5L17N1\",\n      \"legislature\": 17,\n      \"titre\": \"Loi\",\n      \"resume\": \"\",\n      \"droits\": [\n        {\n          \"code\": \"vie-privee\",\n          \"role\": \"principal\",\n          \"sens\": \"restreint\",\n          \"sources\": [\n            \"s1\"\n          ],\n          \"justification\": \"Parce que.\"\n        }\n      ],\n      \"etiquettes\": [],\n      \"vigilance\": [],\n      \"conseil_constitutionnel\": \"\",\n      \"note\": \"\",\n      \"sources\": {\n        \"s1\": {\n          \"auteur\": \"CNIL\",\n          \"titre\": \"Avis\",\n          \"date\": \"2024-01-01\",\n          \"url\": \"https://cnil.fr\"\n        }\n      },\n      \"scrutins\": [],\n      \"senat\": {\n        \"version\": \"seul\",\n        \"scrutins\": [\n          {\n            \"id\": \"SN3\",\n            \"role\": \"decisif\",\n            \"pour\": \"texte\",\n            \"objet\": \"ensemble (2-1)\"\n          }\n        ],\n        \"droits\": [],\n        \"etiquettes\": [],\n        \"vigilance\": [],\n        \"sources\": {},\n        \"note\": \"\"\n      }\n    },\n    {\n      \"id\": \"d-affiche\",\n      \"dossier_an\": \"DLR5L17N1\",\n      \"legislature\": 17,\n      \"titre\": \"Loi\",\n      \"resume\": \"\",\n      \"droits\": [],\n      \"etiquettes\": [],\n      \"vigilance\": [],\n      \"conseil_constitutionnel\": \"\",\n      \"note\": \"\",\n      \"sources\": {},\n      \"scrutins\": [],\n      \"senat\": {\n        \"version\": \"seul\",\n        \"scrutins\": [\n          {\n            \"id\": \"SN4\",\n            \"role\": \"ensemble\",\n            \"pour\": \"texte\",\n            \"objet\": \"ensemble (2-1)\"\n          }\n        ],\n        \"droits\": [],\n        \"etiquettes\": [],\n        \"vigilance\": [],\n        \"sources\": {},\n        \"note\": \"Vote affiché.\"\n      }\n    },\n    {\n      \"id\": \"e-vide\",\n      \"dossier_an\": \"DLR5L17N1\",\n      \"legislature\": 17,\n      \"titre\": \"Loi\",\n      \"resume\": \"\",\n      \"droits\": [\n        {\n          \"code\": \"vie-privee\",\n          \"role\": \"principal\",\n          \"sens\": \"restreint\",\n          \"sources\": [\n            \"s1\"\n          ],\n          \"justification\": \"Parce que.\"\n        }\n      ],\n      \"etiquettes\": [],\n      \"vigilance\": [],\n      \"conseil_constitutionnel\": \"\",\n      \"note\": \"\",\n      \"sources\": {\n        \"s1\": {\n          \"auteur\": \"CNIL\",\n          \"titre\": \"Avis\",\n          \"date\": \"2024-01-01\",\n          \"url\": \"https://cnil.fr\"\n        }\n      },\n      \"scrutins\": [\n        {\n          \"id\": \"V1\",\n          \"role\": \"decisif\",\n          \"pour\": \"texte\",\n          \"objet\": \"x\"\n        }\n      ]\n    }\n  ],\n  \"ecartes\": []\n}\n",
+ "cas": [
+  {
+   "nom": "ok",
+   "doc": {
+    "id": "t",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "principal",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "senat": {
+     "version": "meme",
+     "scrutins": [
+      {
+       "role": "decisif",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN1"
+      }
+     ]
+    }
+   },
+   "erreurs": [],
+   "avertissements": [],
+   "infos_senat": {
+    "SN1": {
+     "dossier_id": "DLR5L17N1",
+     "objet": "ensemble",
+     "pour": 2,
+     "contre": 1
+    },
+    "SN5": {
+     "dossier_id": "DLR5L17N1",
+     "objet": "article",
+     "pour": 3,
+     "contre": 0
+    },
+    "SN6": {
+     "dossier_id": "DLR5L17N2",
+     "objet": "ensemble",
+     "pour": 2,
+     "contre": 1
+    }
+   }
+  },
+  {
+   "nom": "version",
+   "doc": {
+    "id": "t",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "principal",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "senat": {
+     "version": "x",
+     "scrutins": [
+      {
+       "role": "decisif",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN1"
+      }
+     ]
+    }
+   },
+   "erreurs": [
+    "Sénat : version inconnue (x)"
+   ],
+   "avertissements": []
+  },
+  {
+   "nom": "vide",
+   "doc": {
+    "id": "t",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "principal",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "senat": {
+     "version": "meme",
+     "scrutins": [],
+     "note": "n"
+    }
+   },
+   "erreurs": [
+    "Sénat : aucun scrutin retenu"
+   ],
+   "avertissements": []
+  },
+  {
+   "nom": "doubles",
+   "doc": {
+    "id": "t",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "principal",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "senat": {
+     "version": "meme",
+     "scrutins": [
+      {
+       "role": "decisif",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN1"
+      },
+      {
+       "role": "decisif",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN1"
+      }
+     ]
+    }
+   },
+   "erreurs": [
+    "Sénat : plusieurs scrutins décisifs",
+    "Sénat : scrutin en double : SN1"
+   ],
+   "avertissements": []
+  },
+  {
+   "nom": "role",
+   "doc": {
+    "id": "t",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "principal",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "senat": {
+     "version": "meme",
+     "scrutins": [
+      {
+       "id": "SN1",
+       "role": "amendement",
+       "pour": "a-trancher",
+       "objet": "x"
+      },
+      {
+       "id": "SN2",
+       "role": "ensemble",
+       "pour": "y",
+       "objet": "x"
+      }
+     ]
+    }
+   },
+   "erreurs": [
+    "Sénat : SN1 : rôle inconnu (amendement)",
+    "Sénat : SN2 : sens inconnu (y)"
+   ],
+   "avertissements": [
+    "Sénat : SN1 : sens à trancher, scrutin non compté"
+   ]
+  },
+  {
+   "nom": "droits propres",
+   "doc": {
+    "id": "t",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "principal",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "senat": {
+     "version": "meme",
+     "scrutins": [
+      {
+       "role": "decisif",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN1"
+      }
+     ],
+     "droits": [
+      {
+       "code": "vie-privee",
+       "role": "principal",
+       "sens": "restreint",
+       "sources": [
+        "s1"
+       ],
+       "justification": " Parce que. "
+      }
+     ]
+    }
+   },
+   "erreurs": [
+    "Sénat : droits propres réservés à une autre version"
+   ],
+   "avertissements": []
+  },
+  {
+   "nom": "meme sans decisif",
+   "doc": {
+    "id": "s",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "principal",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [],
+    "senat": {
+     "version": "meme",
+     "scrutins": [
+      {
+       "role": "decisif",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN1"
+      }
+     ]
+    }
+   },
+   "erreurs": [
+    "il faut exactement un scrutin décisif (ou, pour un texte adopté par 49.3 sans vote final, au moins une motion de censure)",
+    "Sénat : même texte que l'Assemblée, mais aucun décisif ni motion de censure de l'Assemblée retenu"
+   ],
+   "avertissements": []
+  },
+  {
+   "nom": "seul affiche",
+   "doc": {
+    "id": "s",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [],
+    "sources": {},
+    "scrutins": [],
+    "senat": {
+     "version": "seul",
+     "scrutins": [
+      {
+       "role": "ensemble",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN1"
+      }
+     ]
+    }
+   },
+   "erreurs": [],
+   "avertissements": []
+  },
+  {
+   "nom": "seul affiche avec droits",
+   "doc": {
+    "id": "s",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "principal",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [],
+    "senat": {
+     "version": "seul",
+     "scrutins": [
+      {
+       "role": "ensemble",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN1"
+      }
+     ]
+    }
+   },
+   "erreurs": [
+    "Sénat : vote affiché, ni droits ni sens"
+   ],
+   "avertissements": []
+  },
+  {
+   "nom": "seul sans droits",
+   "doc": {
+    "id": "s",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [],
+    "sources": {},
+    "scrutins": [],
+    "senat": {
+     "version": "seul",
+     "scrutins": [
+      {
+       "role": "decisif",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN1"
+      }
+     ]
+    }
+   },
+   "erreurs": [
+    "Sénat : décisif sans droits"
+   ],
+   "avertissements": []
+  },
+  {
+   "nom": "seul avec decisif AN",
+   "doc": {
+    "id": "t",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "principal",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "senat": {
+     "version": "seul",
+     "scrutins": [
+      {
+       "role": "decisif",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN1"
+      }
+     ]
+    }
+   },
+   "erreurs": [
+    "Sénat : texte sans décisif de l'Assemblée, mais un décisif de l'Assemblée est retenu"
+   ],
+   "avertissements": []
+  },
+  {
+   "nom": "autre sans principal",
+   "doc": {
+    "id": "t",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "principal",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "senat": {
+     "version": "autre",
+     "scrutins": [
+      {
+       "role": "decisif",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN1"
+      }
+     ]
+    }
+   },
+   "erreurs": [
+    "Sénat : il faut exactement un droit principal"
+   ],
+   "avertissements": []
+  },
+  {
+   "nom": "autre affiche avec droits",
+   "doc": {
+    "id": "t",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "principal",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "senat": {
+     "version": "autre",
+     "scrutins": [
+      {
+       "role": "ensemble",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN1"
+      }
+     ],
+     "droits": [
+      {
+       "code": "vie-privee",
+       "role": "principal",
+       "sens": "restreint",
+       "sources": [
+        "s1"
+       ],
+       "justification": " Parce que. "
+      }
+     ],
+     "sources": {
+      "s1": {
+       "auteur": "CNIL",
+       "titre": "Avis",
+       "date": "2024-01-01",
+       "url": "https://cnil.fr"
+      }
+     }
+    }
+   },
+   "erreurs": [
+    "Sénat : vote affiché, ni droits ni sens"
+   ],
+   "avertissements": []
+  },
+  {
+   "nom": "autre controles",
+   "doc": {
+    "id": "t",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "principal",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "senat": {
+     "version": "autre",
+     "scrutins": [
+      {
+       "role": "decisif",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN1"
+      }
+     ],
+     "droits": [
+      {
+       "code": "inconnu",
+       "role": "x",
+       "sens": "y",
+       "sources": []
+      },
+      {
+       "code": "inconnu",
+       "role": "principal",
+       "sens": "etend",
+       "sources": [
+        "z"
+       ]
+      }
+     ],
+     "etiquettes": [
+      "e"
+     ],
+     "sources": {
+      "s9": {
+       "auteur": "",
+       "titre": "",
+       "date": "x",
+       "url": ""
+      }
+     }
+    }
+   },
+   "erreurs": [
+    "Sénat : droit inconnu : inconnu",
+    "Sénat : inconnu : rôle inconnu (x)",
+    "Sénat : inconnu : sens inconnu (y)",
+    "Sénat : inconnu : aucune source",
+    "Sénat : droit inconnu : inconnu",
+    "Sénat : droit en double : inconnu",
+    "Sénat : étiquette inconnue : e",
+    "Sénat : source citée mais non définie : z",
+    "Sénat : source s9 : URL manquante",
+    "Sénat : source s9 : auteur ou titre manquant",
+    "Sénat : source s9 : date attendue au format AAAA-MM-JJ (ou AAAA-MM)"
+   ],
+   "avertissements": [
+    "Sénat : source s9 définie mais citée nulle part",
+    "Sénat : le texte étend son droit principal : la règle 7 demande une source critique en vigilance"
+   ]
+  },
+  {
+   "nom": "open data",
+   "doc": {
+    "id": "t",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "principal",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "senat": {
+     "version": "meme",
+     "scrutins": [
+      {
+       "role": "decisif",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN5"
+      },
+      {
+       "role": "ensemble",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN6"
+      },
+      {
+       "role": "motion",
+       "objet": "ensemble (2-1)",
+       "pour": "texte",
+       "id": "SN7"
+      },
+      {
+       "role": "ensemble",
+       "objet": "sans",
+       "pour": "texte",
+       "id": "SN1"
+      }
+     ]
+    }
+   },
+   "erreurs": [
+    "Sénat : SN5 : décisif sur article, pas sur l'ensemble (règle 23)",
+    "Sénat : SN5 : décisif sans voix d'un côté (3-0), vote affiché (règle 23)",
+    "Sénat : SN6 : scrutin absent du dossier DLR5L17N1",
+    "Sénat : SN7 : scrutin absent du dossier DLR5L17N1"
+   ],
+   "avertissements": [
+    "Sénat : SN5 : l'objet ne reprend pas le décompte (3-0)",
+    "Sénat : SN1 : l'objet ne reprend pas le décompte (2-1)"
+   ],
+   "infos_senat": {
+    "SN1": {
+     "dossier_id": "DLR5L17N1",
+     "objet": "ensemble",
+     "pour": 2,
+     "contre": 1
+    },
+    "SN5": {
+     "dossier_id": "DLR5L17N1",
+     "objet": "article",
+     "pour": 3,
+     "contre": 0
+    },
+    "SN6": {
+     "dossier_id": "DLR5L17N2",
+     "objet": "ensemble",
+     "pour": 2,
+     "contre": 1
+    }
+   }
+  }
+ ]
+}

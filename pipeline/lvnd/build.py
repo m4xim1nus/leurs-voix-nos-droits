@@ -169,9 +169,18 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
     _log(f"   {sum(not t['motif_ecart'] for t in en_cours)} textes en cours au {date_ref}, "
          f"{sum(bool(t['motif_ecart']) for t in en_cours)} écartés, {len(points)} points d'agenda à venir")
 
+    dep, mandats, appart = an.deputes(raw)
+    _log("== Sénat")
+    dfs_senat, votes_senat = _senat(raw, tables, classes, mandats, date_ref)
+    _log(f"   {dfs_senat['scrutins'].height:,} scrutins, {votes_senat.height:,} votes nominatifs, "
+         f"{dfs_senat['senateurs'].height} sénateurs, {dfs_senat['scrutins']['dossier_id'].is_not_null().sum():,} scrutins "
+         "rattachés à un dossier de l'AN")
+
     _log("== Catalogue des textes")
-    # Les textes en cours ou inscrits entrent au catalogue même sans scrutin public à l'AN.
-    suivis = {t["id"] for t in en_cours if not t["motif_ecart"]} | {p["dossier_id"] for p in points}
+    # Les textes en cours, inscrits ou votés au Sénat sur l'ensemble entrent au catalogue même sans
+    # scrutin public à l'AN (règle 25).
+    votes_ensemble = dfs_senat["scrutins"].filter(pl.col("objet").is_in(textes.ENSEMBLE))["dossier_id"].drop_nulls()
+    suivis = {t["id"] for t in en_cours if not t["motif_ecart"]} | {p["dossier_id"] for p in points} | set(votes_ensemble)
     cat = textes.catalogue(dossiers, scr, liens, suivis)
     candidats.annoter(cat, titres)
     ids = {t["id"] for t in cat}
@@ -180,7 +189,6 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
          f"{sum(bool(t['droits_candidats'] or t['etiquettes_candidates']) for t in cat)} candidats par mots-clés")
 
     _log("== Députés et groupes")
-    dep, mandats, appart = an.deputes(raw)
     grp = an.groupes(raw, {v["groupe_id"] for v in ventil} | {a["groupe_id"] for a in appart})
     pos = positions.positions(ventil)
 
@@ -210,14 +218,8 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
         "en_cours_evenements": _df(evt_ec),
         "en_cours_etats": _df(etats),
         "en_cours_agenda": _df(points, agenda.COLONNES),
-        "en_cours_alertes": _df(alertes.calculer(cat, scr, points, qualif), alertes.COLONNES),
+        "en_cours_alertes": _df(alertes.calculer(cat, scr, points, qualif, dfs_senat["scrutins"].to_dicts()), alertes.COLONNES),
     }
-
-    _log("== Sénat")
-    dfs_senat, votes_senat = _senat(raw, tables, classes, mandats, date_ref)
-    _log(f"   {dfs_senat['scrutins'].height:,} scrutins, {votes_senat.height:,} votes nominatifs, "
-         f"{dfs_senat['senateurs'].height} sénateurs, {dfs_senat['scrutins']['dossier_id'].is_not_null().sum():,} scrutins "
-         "rattachés à un dossier de l'AN")
 
     _log("== Écriture")
     sqlite.parent.mkdir(parents=True, exist_ok=True)
@@ -249,3 +251,4 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
     # Fichiers propres à `lvnd scores` (participation, scores par texte) : build.sh les recalcule
     # aussi, mais l'export versionné doit les contenir.
     scores.ecrire(export, scores.depuis_export(export, qualif))
+    scores.ecrire_senat(export, scores.senat_depuis_export(export, qualif))

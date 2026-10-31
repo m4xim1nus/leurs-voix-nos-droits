@@ -53,7 +53,8 @@
 <h1>Textes en cours</h1>
 <p class="chapo">
   Les textes retenus sur ce site qui poursuivent leur parcours au Parlement : où ils en sont, et
-  comment chaque groupe a voté la dernière fois à l’Assemblée. État au {date(data.dateEtat)}.
+  comment chaque groupe a voté la dernière fois à l’Assemblée, ainsi que le dernier vote public du
+  Sénat. État au {date(data.dateEtat)}.
 </p>
 <p>
   Un texte inscrit à l’ordre du jour n’est pas forcément examiné à cette date, ni voté. Les règles
@@ -133,6 +134,16 @@
       </details>
     {:else}
       <p>Aucun vote public de l’Assemblée sur ce texte pour l’instant.</p>
+    {/if}
+    {#if t.vote_senat}
+      {@const n = t.vote_senat}
+      <p class="petit">
+        Dernier vote public du Sénat sur l’ensemble, le {date(n.date)}{n.lecture
+          ? ` (${n.lecture.toLowerCase()})`
+          : ''} : {n.sort === 'adopte' ? 'adopté' : 'rejeté'} par {n.pour} voix pour, {n.contre} contre
+        et {n.abstention} abstentions. <a href={n.url} rel="external">Scrutin du Sénat</a>.
+        {n.compte ? 'Compté dans les scores du Sénat.' : 'Affiché, pas compté.'}
+      </p>
     {/if}
   </article>
 {/snippet}

@@ -102,6 +102,12 @@ export async function preparer(
       valides.flatMap((l) => l.doc.scrutins.map((s) => s.id))
     )
   );
+  const infosSenat = db.infosSenat(
+    await db.scrutinsSenat(
+      base,
+      valides.flatMap((l) => (l.doc.senat?.scrutins ?? []).map((s) => s.id))
+    )
+  );
   const ids = new Map<string, number>();
   for (const d of [...docsValides, ...docsSuivis]) ids.set(d.id, (ids.get(d.id) ?? 0) + 1);
 
@@ -114,7 +120,7 @@ export async function preparer(
     else if (publiable && l.publie_empreinte !== e) changement = 'modifie';
     const v =
       l.statut === 'valide'
-        ? valider(l.doc, g, infos)
+        ? valider(l.doc, g, infos, infosSenat)
         : l.statut === 'a-suivre'
           ? validerSuivi(l.doc, g)
           : { erreurs: [], avertissements: [] };

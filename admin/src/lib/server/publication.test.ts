@@ -315,6 +315,100 @@ describe('publication', () => {
     await db.prepare("DELETE FROM qualifications WHERE dossier_an = 'DLR5L17N70'").run();
   });
 
+  it('publie le vote du Sénat : texte complété, et texte voté au seul Sénat sans vote de l’Assemblée', async () => {
+    const { f, etat } = faux();
+    await db.batch(
+      [
+        ['SN2025-1', 'DLR5L17N80', 'ensemble', 10, 5],
+        ['SN2025-2', 'DLR5L17N81', 'ensemble', 10, 5]
+      ].map(([id, texte, objet, pour, contre]) =>
+        db
+          .prepare(
+            `INSERT INTO senat_scrutins (id, texte_id, session, numero, date, objet, pour, contre, positions)
+             VALUES (?, ?, 2025, 1, '2025-06-01', ?, ?, ?, '[]')`
+          )
+          .bind(id, texte, objet, pour, contre)
+      )
+    );
+    const scrutin = (id: string) => ({
+      id,
+      role: 'decisif' as const,
+      pour: 'texte' as const,
+      objet: 'ensemble (10-5)'
+    });
+    const bloc = { droits: [], etiquettes: [], vigilance: [], sources: {}, note: '' };
+    const avecDecisif = texte({
+      id: 'senat-seul',
+      dossier_an: 'DLR5L17N81',
+      scrutins: [],
+      senat: { version: 'seul', scrutins: [scrutin('SN2025-2')], ...bloc }
+    });
+    const affiche = normaliser({
+      id: 'senat-affiche',
+      dossier_an: 'DLR5L17N82',
+      legislature: 17,
+      titre: 'Vote affiché',
+      senat: {
+        version: 'seul',
+        scrutins: [{ ...scrutin('SN2025-3'), role: 'ensemble' }],
+        ...bloc
+      }
+    });
+    await db
+      .prepare(
+        `INSERT INTO senat_scrutins (id, texte_id, session, numero, date, objet, pour, contre, positions)
+         VALUES ('SN2025-3', 'DLR5L17N82', 2025, 3, '2025-06-01', 'ensemble', 10, 5, '[]')`
+      )
+      .run();
+    for (const doc of [avecDecisif, affiche])
+      await enregistrer(
+        db,
+        { doc, statut: 'valide', motif_ecart: null, commentaire: null },
+        'a@x',
+        null
+      );
+    const prep = await preparer(db, GRILLE);
+    for (const id of ['senat-seul', 'senat-affiche'])
+      expect(prep.textes.find((t) => t.id === id)!.erreurs, id).toEqual([]);
+    await publier(db, GRILLE, CFG, 'a@x', f);
+    const fichier = JSON.parse(etat.contenu!);
+    const seul = fichier.textes.find((t: { id: string }) => t.id === 'senat-seul');
+    expect(seul.scrutins).toEqual([]);
+    expect(Object.keys(seul.senat)).toEqual([
+      'version',
+      'scrutins',
+      'droits',
+      'etiquettes',
+      'vigilance',
+      'sources',
+      'note'
+    ]);
+    expect(fichier.textes.find((t: { id: string }) => t.id === 'senat-affiche').droits).toEqual([]);
+    // Un scrutin d'un autre dossier reste refusé.
+    await enregistrer(
+      db,
+      {
+        doc: {
+          ...avecDecisif,
+          senat: { version: 'seul', scrutins: [scrutin('SN2025-1')], ...bloc }
+        },
+        statut: 'valide',
+        motif_ecart: null,
+        commentaire: null
+      },
+      'a@x',
+      prep.lignes.find((l) => l.doc.id === 'senat-seul')!.modifie_le
+    );
+    const refuse = await preparer(db, GRILLE);
+    expect(refuse.bloquant).toBe(true);
+    expect(refuse.textes.find((t) => t.id === 'senat-seul')!.erreurs).toContain(
+      'Sénat : SN2025-1 : scrutin absent du dossier DLR5L17N81'
+    );
+    await db
+      .prepare("DELETE FROM qualifications WHERE dossier_an IN ('DLR5L17N81', 'DLR5L17N82')")
+      .run();
+  });
+
   it('refuse une édition concurrente', async () => {
     await expect(
       enregistrer(

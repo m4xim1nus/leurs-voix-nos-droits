@@ -10,6 +10,10 @@ octets : un test croisé le vérifie.
 `valider` porte les contrôles d'une qualification, les mêmes que ceux de l'admin : erreurs
 bloquantes et avertissements. `valider_suivi` porte ceux d'une fiche de suivi : droits touchés et
 sources, sans sens ni scrutin (texte qui n'a pas encore de vote qualifié).
+
+Le bloc `senat` d'une qualification porte le vote du Sénat (règles 23 à 28) : `version` dit sur quel
+texte il porte (`meme` : celui du décisif de l'AN ; `autre` : une autre version, avec ses droits et ses
+sources ; `seul` : pas de décisif à l'AN, les droits du texte valent). Il est absent quand il est vide.
 """
 
 import json
@@ -29,7 +33,7 @@ POUR = ("texte", "contre-texte", "a-trancher")
 
 # Ordre des clés dans le fichier (le même dans l'admin).
 CLES_TEXTE = ("id", "dossier_an", "legislature", "titre", "resume", "droits", "etiquettes", "vigilance",
-              "conseil_constitutionnel", "note", "sources", "scrutins")
+              "conseil_constitutionnel", "note", "sources", "scrutins", "senat")
 CLES_DROIT = ("code", "role", "sens", "sources", "justification")
 CLES_SOURCE = ("auteur", "titre", "date", "url")
 CLES_SCRUTIN = ("id", "role", "pour", "objet")
@@ -37,15 +41,45 @@ CLES_VIGILANCE = ("texte", "sources")
 CLES_ECARTE = ("dossier_an", "legislature", "titre", "motif")
 CLES_SUIVI = ("id", "dossier_an", "legislature", "titre", "resume", "droits", "note", "sources")
 CLES_DROIT_SUIVI = ("code", "sources", "justification")
+CLES_SENAT = ("version", "scrutins", "droits", "etiquettes", "vigilance", "sources", "note")
+VERSIONS_SENAT = ("meme", "autre", "seul")
+ROLES_SENAT = ("decisif", "ensemble", "motion")
+OBJETS_DECISIF_SENAT = ("ensemble", "article_unique")
 
 
 def _ordonner(d: dict, cles: tuple[str, ...]) -> dict:
     return {k: d[k] for k in cles if k in d}
 
 
+def _droits(droits: list[dict]) -> list[dict]:
+    return [_ordonner({**d, "sources": list(d.get("sources") or []), "justification": (d.get("justification") or "").strip()},
+                      CLES_DROIT) for d in droits]
+
+
+def _vigilance(vigilance: list) -> list[dict]:
+    return [_ordonner({"texte": v["texte"].strip(), "sources": list(v.get("sources") or [])}, CLES_VIGILANCE)
+            for v in (v if isinstance(v, dict) else {"texte": v, "sources": []} for v in vigilance)]
+
+
+def _sources(sources: dict) -> dict:
+    return {k: _ordonner({**s, "date": str(s.get("date") or "")}, CLES_SOURCE) for k, s in sorted(sources.items())}
+
+
+def _senat(s: dict) -> dict:
+    return _ordonner({
+        "version": s.get("version"),
+        "scrutins": [_ordonner(x, CLES_SCRUTIN) for x in s.get("scrutins") or []],
+        "droits": _droits(s.get("droits") or []),
+        "etiquettes": list(s.get("etiquettes") or []),
+        "vigilance": _vigilance(s.get("vigilance") or []),
+        "sources": _sources(s.get("sources") or {}),
+        "note": (s.get("note") or "").strip(),
+    }, CLES_SENAT)
+
+
 def normaliser(t: dict) -> dict:
-    """Une qualification au format 1, clés dans l'ordre du fichier."""
-    vigilance = [v if isinstance(v, dict) else {"texte": v, "sources": []} for v in t.get("vigilance") or []]
+    """Une qualification au format 1, clés dans l'ordre du fichier. `senat` n'apparaît que s'il n'est
+    pas vide : ajout compatible avec le format 1."""
     cc = t.get("conseil_constitutionnel") or ""
     if isinstance(cc, dict):
         cc = cc.get("resume", "")
@@ -55,19 +89,18 @@ def normaliser(t: dict) -> dict:
         "legislature": int(t["legislature"]),
         "titre": t["titre"],
         "resume": (t.get("resume") or "").strip(),
-        "droits": [_ordonner({**d, "sources": list(d.get("sources") or []),
-                              "justification": (d.get("justification") or "").strip()}, CLES_DROIT)
-                   for d in t["droits"]],
+        "droits": _droits(t["droits"]),
         "etiquettes": list(t.get("etiquettes") or []),
-        "vigilance": [_ordonner({"texte": v["texte"].strip(), "sources": list(v.get("sources") or [])},
-                                CLES_VIGILANCE) for v in vigilance],
+        "vigilance": _vigilance(t.get("vigilance") or []),
         # espaces ASCII seulement : les espaces insécables de la typographie française restent
         "conseil_constitutionnel": re.sub(r"[ \t\n\r]+", " ", cc).strip(),
         "note": (t.get("note") or "").strip(),
-        "sources": {k: _ordonner({**s, "date": str(s.get("date") or "")}, CLES_SOURCE)
-                    for k, s in sorted((t.get("sources") or {}).items())},
+        "sources": _sources(t.get("sources") or {}),
         "scrutins": [_ordonner(s, CLES_SCRUTIN) for s in t["scrutins"]],
     }
+    senat = _senat(t.get("senat") or {})
+    if senat["scrutins"] or senat["note"]:
+        out["senat"] = senat
     return _ordonner(out, CLES_TEXTE)
 
 
@@ -163,12 +196,98 @@ def valider_suivi(t: dict) -> tuple[list[str], list[str]]:
     return err, avert
 
 
-def valider(t: dict, scrutins_dossier: dict[str, dict] | None = None) -> tuple[list[str], list[str]]:
+def _valider_senat(t: dict, scrutins_senat: dict[str, dict] | None, err: list[str], avert: list[str]) -> None:
+    """Contrôles du bloc `senat` (règles 23 à 28)."""
+    s = t["senat"]
+    version = s.get("version")
+    scrutins = s.get("scrutins") or []
+    if version not in VERSIONS_SENAT:
+        err.append(f"Sénat : version inconnue ({version})")
+    if not scrutins:
+        err.append("Sénat : aucun scrutin retenu")
+    decisifs = [x for x in scrutins if x.get("role") == "decisif"]
+    if len(decisifs) > 1:
+        err.append("Sénat : plusieurs scrutins décisifs")
+    ids = [x.get("id") for x in scrutins]
+    for i in sorted({i for i in ids if ids.count(i) > 1}):
+        err.append(f"Sénat : scrutin en double : {i}")
+    for x in scrutins:
+        if x.get("role") not in ROLES_SENAT:
+            err.append(f"Sénat : {x.get('id')} : rôle inconnu ({x.get('role')})")
+        if x.get("pour") not in POUR:
+            err.append(f"Sénat : {x.get('id')} : sens inconnu ({x.get('pour')})")
+        elif x["pour"] == "a-trancher":
+            avert.append(f"Sénat : {x['id']} : sens à trancher, scrutin non compté")
+
+    droits = s.get("droits") or []
+    if version != "autre" and droits:
+        err.append("Sénat : droits propres réservés à une autre version")
+    # Un texte adopté par 49.3 n'a pas de décisif, mais le Sénat peut voter le même texte (règle 26).
+    if version == "meme" and not any(x.get("role") in ("decisif", "censure") for x in t.get("scrutins") or []):
+        err.append("Sénat : même texte que l'Assemblée, mais aucun décisif ni motion de censure de l'Assemblée retenu")
+    if version == "seul" and not decisifs and t.get("droits"):
+        err.append("Sénat : vote affiché, ni droits ni sens")
+    if version == "seul" and decisifs and not t.get("droits"):
+        err.append("Sénat : décisif sans droits")
+    if version == "autre":
+        codes = {d["code"] for d in referentiels.droits()["droits"]}
+        etiquettes = {e["code"] for e in referentiels.droits()["etiquettes"]}
+        if not decisifs and droits:
+            err.append("Sénat : vote affiché, ni droits ni sens")
+        if decisifs and sum(d.get("role") == "principal" for d in droits) != 1:
+            err.append("Sénat : il faut exactement un droit principal")
+        vus = set()
+        for d in droits:
+            c = d.get("code")
+            if c not in codes:
+                err.append(f"Sénat : droit inconnu : {c}")
+            if c in vus:
+                err.append(f"Sénat : droit en double : {c}")
+            vus.add(c)
+            if d.get("role") not in ROLES_DROIT:
+                err.append(f"Sénat : {c} : rôle inconnu ({d.get('role')})")
+            if d.get("sens") not in SENS:
+                err.append(f"Sénat : {c} : sens inconnu ({d.get('sens')})")
+            if not d.get("sources"):
+                err.append(f"Sénat : {c} : aucune source")
+        for e in s.get("etiquettes") or []:
+            if e not in etiquettes:
+                err.append(f"Sénat : étiquette inconnue : {e}")
+        citees = {x for d in droits for x in d.get("sources") or []}
+        citees |= {x for v in s.get("vigilance") or [] for x in v.get("sources") or []}
+        e, a = [], []
+        _controler_sources(s.get("sources") or {}, citees, e, a)
+        err += [f"Sénat : {x}" for x in e]
+        avert += [f"Sénat : {x}" for x in a]
+        principal = next((d for d in droits if d.get("role") == "principal"), {})
+        if principal.get("sens") == "etend" and not any(v.get("sources") for v in s.get("vigilance") or []):
+            avert.append("Sénat : le texte étend son droit principal : la règle 7 demande une source critique en vigilance")
+
+    if scrutins_senat is None:
+        return
+    for x in scrutins:
+        info = scrutins_senat.get(x.get("id"))
+        if info is None or info.get("dossier_id") != t.get("dossier_an"):
+            err.append(f"Sénat : {x.get('id')} : scrutin absent du dossier {t.get('dossier_an')}")
+            continue
+        if x.get("role") == "decisif":
+            if info.get("objet") not in OBJETS_DECISIF_SENAT:
+                err.append(f"Sénat : {x['id']} : décisif sur {info.get('objet')}, pas sur l'ensemble (règle 23)")
+            if info.get("pour") == 0 or info.get("contre") == 0:
+                err.append(f"Sénat : {x['id']} : décisif sans voix d'un côté ({info.get('pour')}-{info.get('contre')}), "
+                           "vote affiché (règle 23)")
+        if f"({info.get('pour')}-{info.get('contre')})" not in (x.get("objet") or ""):
+            avert.append(f"Sénat : {x['id']} : l'objet ne reprend pas le décompte ({info.get('pour')}-{info.get('contre')})")
+
+
+def valider(t: dict, scrutins_dossier: dict[str, dict] | None = None,
+            scrutins_senat: dict[str, dict] | None = None) -> tuple[list[str], list[str]]:
     """Erreurs bloquantes et avertissements d'une qualification (docs/CONCEPTION.md, contrôles).
 
     `scrutins_dossier` : scrutin → {dossier_id, etape, division, objet, pour, contre} pour les scrutins du
     catalogue (objet, pour et contre facultatifs) ;
-    sans lui, les contrôles qui portent sur l'open data sont sautés.
+    `scrutins_senat` : de même pour le Sénat, scrutin → {dossier_id, objet, pour, contre} ;
+    sans eux, les contrôles qui portent sur l'open data sont sautés.
     """
     grille = referentiels.droits()
     codes = {d["code"] for d in grille["droits"]}
@@ -181,7 +300,9 @@ def valider(t: dict, scrutins_dossier: dict[str, dict] | None = None) -> tuple[l
     if not t.get("titre", "").strip():
         err.append("titre manquant")
     droits = t.get("droits") or []
-    if sum(d.get("role") == "principal" for d in droits) != 1:
+    # Texte voté au seul Sénat : pas de décisif à l'AN, et pas de droits si son vote n'est qu'affiché.
+    seul = (t.get("senat") or {}).get("version") == "seul"
+    if sum(d.get("role") == "principal" for d in droits) != 1 and not (seul and not droits):
         err.append("il faut exactement un droit principal")
     vus = set()
     for d in droits:
@@ -206,7 +327,10 @@ def valider(t: dict, scrutins_dossier: dict[str, dict] | None = None) -> tuple[l
 
     scrutins = t.get("scrutins") or []
     n_decisifs = sum(s.get("role") == "decisif" for s in scrutins)
-    if n_decisifs > 1 or (n_decisifs == 0 and not any(s.get("role") == "censure" for s in scrutins)):
+    if seul:
+        if n_decisifs:
+            err.append("Sénat : texte sans décisif de l'Assemblée, mais un décisif de l'Assemblée est retenu")
+    elif n_decisifs > 1 or (n_decisifs == 0 and not any(s.get("role") == "censure" for s in scrutins)):
         err.append("il faut exactement un scrutin décisif (ou, pour un texte adopté par 49.3 sans vote final, "
                     "au moins une motion de censure)")
     ids = [s.get("id") for s in scrutins]
@@ -249,4 +373,6 @@ def valider(t: dict, scrutins_dossier: dict[str, dict] | None = None) -> tuple[l
         for (_, division), ss in sorted(par_article.items(), key=lambda x: str(x[0])):
             if len(ss) > 1:
                 err.append(f"plusieurs amendements clés sur « {division} » dans la même lecture : {', '.join(ss)}")
+    if t.get("senat"):
+        _valider_senat(t, scrutins_senat, err, avert)
     return err, avert

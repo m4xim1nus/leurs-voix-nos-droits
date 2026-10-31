@@ -16,7 +16,7 @@
     sensDuPour
   } from '$lib/format';
   import { CONTESTATION, NOM, URL_SITE } from '$lib/site';
-  import type { ScrutinRetenu } from '$lib/types';
+  import type { ScrutinRetenu, ScrutinSenat } from '$lib/types';
 
   let { data } = $props();
   const t = $derived(data.texte);
@@ -27,6 +27,39 @@
   const mentionDecisif = $derived(
     mentionNavette(t.etat, t.scrutins.find((s) => s.role === 'decisif')?.etape ?? null)
   );
+
+  const vs = $derived(t.senat);
+  const srcSenat = (ids: string[]) =>
+    ids.map((i) => (vs?.version === 'autre' ? vs.sources[i] : t.sources[i])).filter(Boolean);
+  // Droits lus sur le texte voté au Sénat : les siens s'il s'agit d'une autre version, sinon ceux du texte.
+  const principalSenat = $derived(vs?.version === 'autre' ? vs.principal : t.principal);
+  const mentionSenat = $derived.by(() => {
+    if (t.etat?.etat !== 'en_navette' || !vs?.decisif) return null;
+    const lecture = vs.decisif.lecture?.toLowerCase();
+    const vote =
+      lecture === 'première lecture'
+        ? 'vote de 1re lecture'
+        : lecture === 'deuxième lecture'
+          ? 'vote de 2e lecture'
+          : lecture
+            ? `vote en ${lecture}`
+            : 'vote';
+    return `${vote} au Sénat, texte encore en navette`;
+  });
+  const attenduAN = $derived(
+    t.seul && t.etat?.etat === 'en_navette' && t.etat.attente_chambre === 'AN'
+  );
+  const ROLE_SENAT: Record<ScrutinSenat['role'], string> = {
+    decisif: 'Vote décisif du Sénat',
+    ensemble: 'Vote sur l’ensemble, affiché',
+    motion: 'Motion, affichée'
+  };
+  const pourquoiSenat = (s: ScrutinSenat) =>
+    s.role === 'motion'
+      ? 'Motion : affichée, pas comptée, même quand elle met fin à l’examen du texte.'
+      : s.role === 'decisif'
+        ? 'Sens à trancher : pas compté.'
+        : 'Affiché, pas compté. Seul le décisif du Sénat compte, sur un sens établi et avec des voix des deux côtés.';
 
   /** La note de méthode, échappée, avec un lien vers chaque règle citée (« règle 11 », « règles 9 et 11 »). */
   const noteHtml = (note: string) =>
@@ -52,10 +85,9 @@
   <title>{t.titre}, {NOM}</title>
   <meta
     name="description"
-    content="Le texte {phrase(
-      t.principal.code,
-      t.principal.sens
-    )}. Sources, scrutins et votes des groupes."
+    content={t.principal
+      ? `Le texte ${phrase(t.principal.code, t.principal.sens)}. Sources, scrutins et votes des groupes.`
+      : 'Vote du Sénat affiché, sans jugement sur le sens du texte. Scrutins et votes des groupes.'}
   />
 </svelte:head>
 
@@ -106,9 +138,14 @@
 <p class="discret"><a href="/textes">Textes</a></p>
 <h1 class="titre">{t.titre}</h1>
 <p class="discret">
-  {legislature(t.legislature)} législature. {t.sans_vote
-    ? 'Adopté par le 49.3, sans vote final de l’Assemblée.'
-    : `Vote décisif le ${date(t.date)}${mentionDecisif ? ` (${mentionDecisif})` : ''}.`}
+  {#if t.seul}
+    Pas de vote sur l’ensemble à l’Assemblée. Vote du Sénat le {date(t.date)}.
+    {#if attenduAN}Texte encore en navette, attendu à l’Assemblée.{/if}
+  {:else}
+    {legislature(t.legislature)} législature. {t.sans_vote
+      ? 'Adopté par le 49.3, sans vote final de l’Assemblée.'
+      : `Vote décisif le ${date(t.date)}${mentionDecisif ? ` (${mentionDecisif})` : ''}.`}
+  {/if}
   {#if t.loi}{`Loi n° ${t.loi}${t.date_loi ? ` du ${date(t.date_loi)}` : ''}.`}{/if}
   {#if t.url_an}<a href={t.url_an} rel="external">Dossier à l’Assemblée</a>.{/if}
   {#if t.url_loi}<a href={t.url_loi} rel="external">Texte sur Légifrance</a>.{/if}
@@ -125,8 +162,14 @@
 
 <section>
   <h2>Ce que fait le texte</h2>
-  {#if enNavette && !t.sans_vote}
+  {#if enNavette && !t.sans_vote && t.principal}
     <p class="petit">Sur le texte voté le {date(t.date)}.</p>
+  {/if}
+  {#if !t.droits.length}
+    <p>
+      <strong>Pas de jugement sur le sens de ce texte.</strong> Aucune source admise n’établit le sens
+      de la version votée par le Sénat : le vote est affiché, pas compté (règles 23 et 24).
+    </p>
   {/if}
   {#each t.droits as d (d.code)}
     <div class="droit">
@@ -191,7 +234,9 @@
   {/if}
 </section>
 
-{#if t.sans_vote}
+{#if t.seul}
+  <!-- Pas de vote de l'Assemblée : la section du Sénat ci-dessous dit tout. -->
+{:else if t.sans_vote}
   <section>
     <h2>Un texte adopté sans vote</h2>
     <p>
@@ -240,6 +285,130 @@
       {comptes.length ? 'Les autres scrutins, affichés' : 'Les scrutins, affichés'}
     </h2>
     {#each affiches as s (s.id)}{@render scrutin(s, s.role === 'censure')}{/each}
+  {/if}
+</section>
+
+<section id="senat">
+  <h2>Au Sénat</h2>
+  {#if vs}
+    <p>
+      {#if vs.version === 'meme'}
+        Le Sénat a voté le même texte que l’Assemblée : le sens est repris (règle 24).
+      {:else if vs.version === 'autre'}
+        Le Sénat a voté une autre version que celle de l’Assemblée :
+        {vs.decisif
+          ? 'le sens est relu sur cette version, avec ses propres sources (règle 24).'
+          : 'son vote est affiché, pas compté (règles 23 et 24).'}
+      {:else if vs.decisif}
+        Le sens se lit sur le texte voté par le Sénat. Le texte ne compte que dans les scores du
+        Sénat (règle 25).
+      {:else}
+        Le vote est affiché, pas compté (règles 23 et 25).
+      {/if}
+      Le calcul reste à part de celui de l’Assemblée (<a href="/senat">page du Sénat</a>).
+    </p>
+    {#if vs.nouveau}
+      <p class="mention">
+        Un nouveau vote du Sénat sur l’ensemble, le {date(vs.nouveau.date)} ({vs.nouveau.pour}-{vs
+          .nouveau.contre}), n’est pas encore qualifié.
+        <a href={vs.nouveau.url} rel="external">Scrutin du Sénat</a>.
+      </p>
+    {/if}
+    {#if vs.version === 'autre' && vs.droits.length}
+      <h3>Ce que fait la version votée par le Sénat</h3>
+      {#each vs.droits as d (d.code)}
+        <div class="droit">
+          <p class="petit discret">
+            <a href="/droits/{d.code}">{court(d.code)}</a>, droit {d.role === 'principal'
+              ? 'principal'
+              : 'secondaire'}
+          </p>
+          <p>
+            <strong class={d.sens === 'etend' ? 'favorable' : 'defavorable'}
+              >Cette version {phrase(d.code, d.sens)}.</strong
+            >
+            {d.justification}
+          </p>
+          <Sources sources={srcSenat(d.sources)} />
+        </div>
+      {/each}
+      {#if vs.etiquettes.length}
+        <p class="petit">
+          Étiquettes : {vs.etiquettes.map((e) => ETIQUETTES[e] ?? e).join(', ')}.
+        </p>
+      {/if}
+      {#each vs.vigilance as v, i (i)}
+        <div class="droit">
+          <p>{v.texte}</p>
+          <Sources sources={srcSenat(v.sources)} />
+        </div>
+      {/each}
+    {/if}
+    {#if data.groupesSenat.length && principalSenat}
+      <h3>Comment votent les groupes du Sénat</h3>
+      <p>
+        Part des votes favorables aux droits, au sens du droit principal (le texte {phrase(
+          principalSenat.code,
+          principalSenat.sens
+        )}), sur le vote décisif du Sénat. Chaque groupe est sous son sigle, sans correspondance
+        avec ceux de l’Assemblée.
+      </p>
+      <Regle
+        lignes={data.groupesSenat.map((g) => ({
+          cle: g.groupe.id,
+          libelle: g.groupe.sigle,
+          couleur: g.groupe.couleur,
+          href: `/senat#groupe-${g.groupe.id}`,
+          score: g.score.score
+        }))}
+      />
+    {/if}
+    {#each vs.scrutins as s (s.id)}
+      <article class="scrutin">
+        <p class="role">{ROLE_SENAT[s.role]}</p>
+        <h3>{s.objet}</h3>
+        <p class="petit">
+          {date(s.date)}. {s.sort === 'adopte' ? 'Adopté' : 'Rejeté'} par {s.decompte.pour} voix pour,
+          {s.decompte.contre} contre et {s.decompte.abstention} abstentions.
+          <a href={s.url} rel="external">Scrutin n° {s.numero} sur le site du Sénat</a>.
+        </p>
+        {#if s.compte && mentionSenat}
+          <p class="petit mention">{majuscule(mentionSenat)}.</p>
+        {/if}
+        <p class="petit">
+          {#if s.compte}
+            Ici, {sensDuPour(s.pour)} : le vote favorable aux droits est
+            <strong class="favorable">{POSITION[s.favorable!].toLowerCase()}</strong>.
+          {:else}
+            <span class="discret">{pourquoiSenat(s)}</span>
+          {/if}
+        </p>
+        {#if s.note}<p class="petit discret">Note du Sénat : {s.note}</p>{/if}
+        {#each s.mises_au_point as m, i (i)}
+          <p class="petit discret">Mise au point, sans effet sur le décompte : {m.texte}</p>
+        {/each}
+        <details open={s.role === 'decisif'}>
+          <summary>Position des groupes du Sénat</summary>
+          <Ventilations ventilations={s.ventilations} favorable={s.compte ? s.favorable : null} />
+        </details>
+      </article>
+    {/each}
+    {#if vs.note}
+      <details class="note">
+        <summary>Comment ce vote a été lu</summary>
+        <p class="petit">{@html noteHtml(vs.note)}</p>
+      </details>
+    {/if}
+  {:else if t.senat_non_lu}
+    <p>
+      Le Sénat a voté sur l’ensemble de ce texte le {date(t.senat_non_lu.date)} ({t.senat_non_lu
+        .pour}-{t.senat_non_lu.contre}). Ce vote n’est pas encore qualifié.
+      <a href={t.senat_non_lu.url} rel="external">Scrutin du Sénat</a>.
+    </p>
+  {:else if t.statut_senat === 'pas_examine'}
+    <p>Pas encore examiné au Sénat.</p>
+  {:else}
+    <p>Pas de scrutin public au Sénat sur l’ensemble de ce texte.</p>
   {/if}
 </section>
 

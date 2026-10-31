@@ -193,6 +193,11 @@
     >
   {/if}
   {#if d.courriel}<span class="discret petit">{d.courriel}</span>{/if}
+  {#if data.actuel && data.mandat}
+    <a class="petit" href="/senat#dep-{data.mandat.circo.split('-')[0]}"
+      >Les sénateur·ices de {data.mandat.departement}</a
+    >
+  {/if}
 </p>
 
 {#if data.prochains.length}

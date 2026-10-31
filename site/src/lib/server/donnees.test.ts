@@ -92,4 +92,27 @@ describe('données du site', () => {
       expect(fav, dep.slug).toBe(v.global.favorables);
     }
   });
+
+  it('les textes du seul Sénat restent hors des vues de l’Assemblée', () => {
+    expect(d.textes.every((t) => !t.seul && t.scrutins.length > 0)).toBe(true);
+    expect(d.seuls.every((t) => t.seul && t.senat)).toBe(true);
+    const seuls = new Set(d.seuls.map((t) => t.id));
+    expect(d.enCours.some((t) => seuls.has(t.id))).toBe(false);
+    for (const m of d.scoresGroupesTextes.values())
+      expect([...m.keys()].some((id) => seuls.has(id))).toBe(false);
+  });
+
+  it('un texte dit ce que le Sénat en a fait', () => {
+    for (const t of [...d.textes, ...d.seuls]) {
+      if (t.senat) expect(t.statut_senat, t.id).toBe(t.senat.decisif ? 'compte' : 'affiche');
+      else
+        expect(t.statut_senat, t.id).toBe(
+          t.senat_non_lu
+            ? 'non_lu'
+            : t.statut_senat === 'pas_examine'
+              ? 'pas_examine'
+              : 'sans_scrutin'
+        );
+    }
+  });
 });

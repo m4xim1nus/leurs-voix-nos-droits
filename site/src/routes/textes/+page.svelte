@@ -8,12 +8,14 @@
   let droit = $state('');
   let sens = $state('');
   let leg = $state('');
+  let chambre = $state('');
   const textes = $derived(
     data.textes.filter(
       (t) =>
         (!droit || t.droits.some((d) => d.code === droit)) &&
-        (!sens || t.principal.sens === sens) &&
-        (!leg || String(t.legislature) === leg)
+        (!sens || t.principal?.sens === sens) &&
+        (!leg || (!t.seul && String(t.legislature) === leg)) &&
+        (!chambre || (chambre === 'senat') === t.seul)
     )
   );
 </script>
@@ -23,7 +25,8 @@
 <h1>Textes qualifiés</h1>
 <p class="chapo">
   {pluriel(data.textes.length, 'texte', 'textes', 'Aucun texte')} de loi examinés et qualifiés, du plus
-  récent au plus ancien. Le sens indiqué est celui du droit principal de chaque texte.
+  récent au plus ancien. Le sens indiqué est celui du droit principal de chaque texte. Les textes votés
+  au seul Sénat ne comptent que dans les scores du Sénat.
 </p>
 
 <form class="filtres" onsubmit={(e) => e.preventDefault()}>
@@ -48,6 +51,14 @@
       <option value="">Les deux</option>
       <option value="17">{legislature(17)}</option>
       <option value="16">{legislature(16)}</option>
+    </select>
+  </label>
+  <label>
+    Vote
+    <select bind:value={chambre}>
+      <option value="">Tous</option>
+      <option value="an">À l’Assemblée</option>
+      <option value="senat">Au seul Sénat</option>
     </select>
   </label>
 </form>

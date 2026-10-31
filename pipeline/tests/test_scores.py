@@ -102,3 +102,25 @@ def test_texte_sans_decisif_non_compte():
                      "scrutins": [{"id": "C", "role": "censure", "pour": "contre-texte"},
                                   {"id": "A", "role": "amendement", "pour": "contre-texte"}]}]}
     assert scores.scrutins_comptes(t, scores.REGLES) == []
+
+
+def test_senat_ne_change_rien_a_l_an_et_compte_le_seul_decisif():
+    an = {"id": "t", "droits": [{"code": "vie-privee", "role": "principal", "sens": "restreint"}],
+          "scrutins": [{"id": "D", "role": "decisif", "pour": "texte"}]}
+    droits_autre = [{"code": "sante", "role": "principal", "sens": "etend"}]
+    meme = {**an, "senat": {"version": "meme", "droits": [], "scrutins": [
+        {"id": "SN1", "role": "decisif", "pour": "texte"}, {"id": "SN0", "role": "motion", "pour": "contre-texte"}]}}
+    autre = {**an, "id": "a", "senat": {"version": "autre", "droits": droits_autre, "scrutins": [{"id": "SN2", "role": "decisif", "pour": "texte"}]}}
+    seul = {"id": "s", "droits": an["droits"], "scrutins": [], "senat": {"version": "seul", "droits": [], "scrutins": [{"id": "SN3", "role": "decisif", "pour": "texte"}]}}
+    affiche = {"id": "x", "droits": [], "scrutins": [], "senat": {"version": "seul", "droits": [], "scrutins": [{"id": "SN4", "role": "ensemble", "pour": "texte"}]}}
+    votes = [{"scrutin_id": "D", "acteur_id": "PA1", "groupe_id": "G", "position": "pour"}]
+    assert scores.calculer({"textes": [an]}, votes) == scores.calculer({"textes": [meme, seul, affiche]}, votes)
+    doc = scores.qualif_senat({"textes": [an, meme, autre, seul, affiche]})
+    assert [(t["id"], t["scrutins"][0]["id"]) for t in doc["textes"]] == [("t", "SN1"), ("a", "SN2"), ("s", "SN3")]
+    assert doc["textes"][1]["droits"] == droits_autre and doc["textes"][2]["droits"] == an["droits"]
+    votes = [{"scrutin_id": "SN1", "acteur_id": "1A", "groupe_id": "UC", "position": "contre"},
+             {"scrutin_id": "SN3", "acteur_id": "1A", "groupe_id": "UC", "position": "pour"},
+             {"scrutin_id": "SN2", "acteur_id": "1A", "groupe_id": "UC", "position": "abstention"}]
+    sc = scores.calculer(doc, votes, scores.REGLES_SENAT)
+    g = next(r for r in sc["scores_deputes"] if r["droit"] == "global")
+    assert (g["score"], g["abstentions"], g["n_textes"]) == (50.0, 1, 3)

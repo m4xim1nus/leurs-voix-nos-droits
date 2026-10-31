@@ -96,6 +96,14 @@ actuel, et le format reste 1 : un lecteur qui l'ignore lit le reste sans
 changement. Aucun score ne la lit. Pipeline et admin l'écrivent à l'identique,
 vérifié sur `pipeline/tests/fixtures/editorial_suivis.json`.
 
+Un bloc `senat` s'ajoute en dernier à un texte dès qu'un vote du Sénat y est retenu
+(règles 23 à 28) : `version` (`meme`, `autre`, `seul`), `scrutins` (rôles `decisif`, `ensemble`,
+`motion`), `droits`, `etiquettes`, `vigilance`, `sources` (propres à une version `autre`, vides
+sinon), `note`. Absent quand il est vide, il ne change aucun octet des autres textes, et le format
+reste 1. Un texte `seul` a `scrutins: []`, et `droits: []` si son vote n'est qu'affiché. Un texte
+écarté n'a pas de bloc (règle 28). Les scores de l'AN ne le lisent pas. Même contrôle croisé, sur
+`pipeline/tests/fixtures/editorial_senat.json`, qui vérifie aussi les messages des contrôles.
+
 ### Écrans
 
 1. **Textes** (accueil) : les 479 textes du catalogue, avec des filtres
@@ -151,6 +159,11 @@ et dans `lvnd check` :
   toute source citée définie avec une URL, aucun scrutin retenu, et les termes
   interdits comme partout. Un texte déjà qualifié et publié ne peut pas
   repasser à suivre : il garde son sens.
+- **Vote du Sénat** (bloc `senat`, bloquants) : version connue, au moins un scrutin, un décisif au
+  plus, scrutins du dossier, décisif sur l'ensemble ou l'article unique avec des voix des deux côtés ;
+  `meme` suppose un décisif ou une motion de censure à l'AN ; `seul` exclut un décisif de l'AN ; un vote
+  affiché n'a ni droits ni sens ; une version `autre` comptée passe les contrôles de droits et de
+  sources. Avertissement : l'objet ne reprend pas le décompte.
 
 ### Choix (validés le 29/10/2026)
 
@@ -295,7 +308,9 @@ vie privée », avec la source à côté, jamais « texte liberticide ».
 | Groupes | `/groupes` | par législature : tableau groupe × droit, effectifs |
 | Fiche groupe | `/groupes/<sigle>-<législature>` | score global, par droit et par texte (un clic sur un droit filtre ses textes), textes adoptés sans opposition, membres et leur score |
 | Comparer | `/comparer?a=…&b=…` | deux députés, deux groupes, ou un député et son groupe : score, droit par droit, textes où ils s'écartent le plus ; deux règles par ligne (le premier en haut, curseur plein ; le second en bas, curseur creux), bandeau fixe qui les rappelle au défilement |
-| Méthodologie | `/methodologie` | grille, règles 1 à 22, préparation des qualifications, code postal, sources |
+| Sénat | `/senat` | les groupes d'abord, droit par droit ; le vote de groupe expliqué ; recherche par code postal ou nom ; sénateur·ices en poste par département |
+| Fiche sénateur·ice | `/senat/<slug>` | département, groupes successifs, score « d'après les votes enregistrés à son nom », écarts au groupe, votes comptés, « Lui écrire » ; **aucun taux de participation** (règle 27) |
+| Méthodologie | `/methodologie` | grille, règles 1 à 28, préparation des qualifications, code postal, sources |
 | Données | `/donnees` | `editorial.json`, exports CSV, votes nominatifs, licence |
 
 Le slug d'un député est `prenom-nom` en minuscules sans accents. En cas
@@ -319,6 +334,9 @@ codes postaux, découpée par département.
   jour sans la machine de Max.
 - **Positions de groupe** : `positions_groupes.csv` (règle 12), telles
   quelles.
+- **Sénat** : `data/export/senat/`, lu à part (`lib/server/senat.ts`, `vues-senat.ts`). Les textes du seul
+  Sénat sont dans `seuls`, hors de `textes` : l'accueil, les droits, les groupes et les fiches de député·es
+  ne les voient pas. Seules `/textes`, leur fiche et `/en-cours` les ajoutent.
 - **Annuaire** : `lvnd annuaire`, lancé en local depuis les dumps
   (`data/raw/circos/`, AMO), écrit `data/annuaire/`, versionné. Il ne
   change qu'avec le découpage, les communes ou les députés. Le

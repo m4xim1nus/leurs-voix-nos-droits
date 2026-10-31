@@ -116,8 +116,10 @@ def _qualifications(con, controle, out) -> None:
              for sid, d, e, div, o, p, c in _q(
                  con, "select s.id, s.dossier_id, s.etape, a.division, s.objet, s.pour, s.contre from scrutins s "
                       "left join amendements a on a.id = s.amendement_id")}
+    infos_senat = {sid: {"dossier_id": d, "objet": o, "pour": p, "contre": c}
+                   for sid, d, o, p, c in _q(con, "select id, dossier_id, objet, pour, contre from senat_scrutins")}
     for t in doc["textes"]:
-        err, avert = editorial.valider(t, infos)
+        err, avert = editorial.valider(t, infos, infos_senat)
         controle(f"{t['id']} : qualification valide", not err, " ; ".join(err))
         out += [f"info {t['id']} : {a}" for a in avert]
     suivis = doc.get("suivis", [])
@@ -139,7 +141,8 @@ def _alertes(con) -> list[dict]:
         return [dict(zip(cols, r)) for r in cur.fetchall()]
     return alertes.calculer(lignes("select id, titre, decisif_propose from textes"),
                             lignes("select id, dossier_id, date, numero, objet, sort, pour, contre from scrutins"),
-                            lignes("select dossier_id, date, instance from en_cours_agenda"), editorial.charger())
+                            lignes("select dossier_id, date, instance from en_cours_agenda"), editorial.charger(),
+                            lignes("select id, dossier_id, date, numero, objet, pour, contre from senat_scrutins"))
 
 
 def _senat(con, controle, out) -> None:
@@ -269,9 +272,10 @@ def verifier(chemin: Path) -> tuple[bool, list[str]]:
     for nature, n, c, s in _q(con, "select nature, count(*), sum(droits_candidats != '' or etiquettes_candidates != ''), "
                                    "sum(n_scrutins = 0) from textes group by 1 order by 2 desc"):
         out.append(f"  {nature} : {n} textes, {c} candidats par mots-clés, {s} sans scrutin public à l'AN")
-    qualifies = [t["dossier_an"] for t in editorial.charger()["textes"]]
+    # Un texte voté au seul Sénat n'a pas de scrutin à l'AN (règle 25).
+    qualifies = [t["dossier_an"] for t in editorial.charger()["textes"] if (t.get("senat") or {}).get("version") != "seul"]
     sans = _q(con, f"select id from textes where n_scrutins = 0 and id in ({','.join('?' * len(qualifies))})", *qualifies)
-    controle("aucun texte qualifié sans scrutin public à l'AN", not sans, str(sans[:5]))
+    controle("aucun texte qualifié sans scrutin public à l'AN, hors textes du seul Sénat", not sans, str(sans[:5]))
 
     out.append("\n== Alertes (avertissements : ne font jamais échouer le contrôle)")
     for a in _alertes(con):

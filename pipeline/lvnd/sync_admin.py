@@ -37,6 +37,10 @@ COLONNES_SCRUTINS = ("id", "texte_id", "legislature", "numero", "date", "type_vo
                      "amendement_division", "amendement_auteur", "amendement_sort", "positions")
 COLONNES_GROUPES = ("id", "lignee", "legislature", "sigle", "nom", "couleur", "date_debut", "date_fin")
 COLONNES_ALERTES = alertes_.COLONNES
+COLONNES_SENAT_SCRUTINS = ("id", "texte_id", "session", "numero", "date", "titre", "objet", "lecture", "sort", "pour", "contre",
+                           "abstention", "non_votants", "note", "url", "positions")
+COLONNES_SENAT_GROUPES = ("id", "sigle", "nom")
+OBJETS_SANS_FICHE = ("amendement",)  # le Sénat ne retient aucun amendement (règle 23) : D1 s'en passe
 
 
 def sql_valeur(v) -> str:
@@ -127,7 +131,18 @@ def catalogue(export: Path) -> dict[str, list[dict]]:
                                                ensure_ascii=False)},
         {"cle": "sync", "valeur": json.dumps(datetime.now(timezone.utc).isoformat(timespec="seconds"))},
     ]
+    pos_senat: dict[str, list] = {}
+    for r in _lire(export, "senat/positions_groupes").iter_rows(named=True):
+        if r["pour"] + r["contre"] + r["abstention"] + r["non_votants"]:
+            pos_senat.setdefault(r["scrutin_id"], []).append(
+                [r["groupe_id"], r["pour"], r["contre"], r["abstention"], r["non_votants"], r["position"], r["cohesion"]])
+    senat_scrutins = [
+        {**{k: r[k] for k in COLONNES_SENAT_SCRUTINS if k in r}, "texte_id": r["dossier_id"], "note": _vide(r["note"]),
+         "positions": json.dumps(pos_senat.get(r["id"], []), separators=(",", ":"))}
+        for r in _lire(export, "senat/scrutins").iter_rows(named=True)
+        if r["dossier_id"] in ids and r["objet"] not in OBJETS_SANS_FICHE]
     return {"textes": textes, "scrutins": scrutins, "groupes": groupes, "alertes": _alertes(export),
+            "senat_scrutins": senat_scrutins, "senat_groupes": _lire(export, "senat/groupes").to_dicts(),
             "catalogue_meta": metas}
 
 
@@ -192,27 +207,62 @@ def brouillons(dossier: Path) -> list[dict]:
 AUTEUR_VALIDATION = "claude, validé par Max"
 
 
-def validations(dossier: Path, commentaire: str, ecarter_publie: bool = False) -> list[str]:
+def _infos_senat(export: Path) -> dict[str, dict]:
+    """Scrutins du Sénat pour `editorial.valider`, depuis data/export/."""
+    return {r["id"]: {"dossier_id": r["dossier_id"], "objet": r["objet"], "pour": r["pour"], "contre": r["contre"]}
+            for r in _lire(export, "senat/scrutins").iter_rows(named=True)}
+
+
+def _complement(f: Path, t: dict, publies: dict[str, dict], date: str, commentaire: str, infos: dict[str, dict] | None) -> list[str]:
+    """YAML qui ne porte que `id`, `dossier_an` et `senat` : le vote du Sénat s'ajoute au document de D1,
+    sans toucher au reste (qui peut être en cours de requalification). `publie_empreinte` ne bouge pas :
+    l'admin montre le texte comme modifié jusqu'à « Publier »."""
+    base = publies.get(t["dossier_an"])
+    if base is None or base["id"] != t.get("id"):
+        raise SystemExit(f"{f} : complément d'un texte qui n'est pas publié ({t.get('id')}, {t['dossier_an']})")
+    doc = editorial.normaliser({**base, "senat": t["senat"]})
+    err, _ = editorial.valider(doc, None, infos)
+    if err:
+        raise SystemExit(f"{f} : {' ; '.join(err)}")
+    print(f"sénat : {doc['dossier_an']} {doc['id']}", file=sys.stderr)
+    d = sql_valeur(doc["dossier_an"])
+    senat = compact(doc["senat"])
+    return [f"UPDATE qualifications SET doc = json_set(doc, '$.senat', json({sql_valeur(senat)})), "
+            f"modifie_par = {sql_valeur(AUTEUR_VALIDATION)}, modifie_le = {sql_valeur(date)} WHERE dossier_an = {d};",
+            "INSERT INTO revisions (dossier_an, statut, doc, motif_ecart, auteur, date, commentaire) "
+            f"SELECT dossier_an, statut, doc, motif_ecart, {sql_valeur(AUTEUR_VALIDATION)}, {sql_valeur(date)}, {sql_valeur(commentaire)} "
+            f"FROM qualifications WHERE dossier_an = {d};"]
+
+
+def validations(dossier: Path, commentaire: str, ecarter_publie: bool = False, export: Path | None = None) -> list[str]:
     """Qualifications de DOSSIER/*.yaml validées par Max (dans le chat) : chacune est écrite au statut
     « valide » (« ecarte » ou « a-suivre » si le YAML le propose), qu'elle existe déjà dans D1 ou non,
     avec une révision qui le dit. Ne sert que sur décision explicite de Max (CLAUDE.md). Écarter un texte
     publié comme qualifié est refusé sans `ecarter_publie`, avant toute écriture (docs/QUALIFICATION.md,
-    « un dossier neuf par chargement ») ; la liste s'affiche pour vérifier ce qui part."""
+    « un dossier neuf par chargement ») ; la liste s'affiche pour vérifier ce qui part. Un YAML sans
+    `titre` complète le document existant (`_complement`)."""
     date = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    publies = {t["dossier_an"]: t["id"] for t in editorial.charger()["textes"]}
+    docs = {t["dossier_an"]: t for t in editorial.charger()["textes"]}
+    publies = {d: t["id"] for d, t in docs.items()}
+    infos = _infos_senat(export) if export else None
     out = []
     for f in sorted(dossier.glob("*.yaml")):
         t = yaml.safe_load(f.read_text())
+        if "titre" not in t and t.get("senat"):
+            out += _complement(f, t, docs, date, commentaire, infos)
+            continue
         ecarte = t.get("statut") == "ecarte"
         if ecarte and not t.get("motif_ecart"):
             raise SystemExit(f"{f} : texte écarté sans motif")
         doc = editorial.normaliser({**t, "droits": t.get("droits") or [], "scrutins": t.get("scrutins") or []})
+        if ecarte:
+            doc.pop("senat", None)  # un texte écarté l'est pour les deux chambres (règle 28)
         if ecarte and doc["dossier_an"] in publies and not ecarter_publie:
             raise SystemExit(f"{f} : {doc['dossier_an']} est publié comme qualifié ({publies[doc['dossier_an']]}) ; "
                              "rien n'est écrit. Pour l'écarter vraiment : --ecarter-publie")
         a_suivre = t.get("statut") == "a-suivre"
         if not ecarte:
-            err, _ = editorial.valider_suivi(doc) if a_suivre else editorial.valider(doc)
+            err, _ = editorial.valider_suivi(doc) if a_suivre else editorial.valider(doc, None, infos)
             if err:
                 raise SystemExit(f"{f} : {' ; '.join(err)}")
         statut, motif = ("ecarte", t["motif_ecart"]) if ecarte else ("a-suivre" if a_suivre else "valide", None)
@@ -260,6 +310,7 @@ def _qualifs(lignes: list[dict], auteur: str, commentaire: str) -> list[str]:
 
 TABLES = {"textes": ("id", COLONNES_TEXTES), "scrutins": ("id", COLONNES_SCRUTINS),
           "groupes": ("id", COLONNES_GROUPES), "alertes": ("id", COLONNES_ALERTES),
+          "senat_scrutins": ("id", COLONNES_SENAT_SCRUTINS), "senat_groupes": ("id", COLONNES_SENAT_GROUPES),
           "catalogue_meta": ("cle", ("cle", "valeur"))}
 PAGE = 4000  # lignes lues par requête dans D1
 
@@ -315,9 +366,17 @@ def alertes(cat: dict[str, list[dict]], qualifs: list[tuple[str, str]]) -> list[
     """Scrutins retenus dans une qualification de D1 qui disparaissent du catalogue ou changent de
     dossier (renumérotés ou rattachés ailleurs) : la qualification est à revoir dans l'admin."""
     scrutins = {r["id"]: r for r in cat["scrutins"]}
+    senat = {r["id"]: r for r in cat.get("senat_scrutins", [])}
     out = []
     for dossier, doc in qualifs:
-        for s in json.loads(doc).get("scrutins", []):
+        document = json.loads(doc)
+        for s in (document.get("senat") or {}).get("scrutins", []):
+            r = senat.get(s["id"])
+            if r is None:
+                out.append(f"{dossier} : scrutin du Sénat retenu {s['id']} absent du nouveau catalogue")
+            elif r["texte_id"] != dossier:
+                out.append(f"{dossier} : scrutin du Sénat retenu {s['id']} rattaché désormais à {r['texte_id']}")
+        for s in document.get("scrutins", []):
             r = scrutins.get(s["id"])
             if r is None:
                 out.append(f"{dossier} : scrutin retenu {s['id']} absent du nouveau catalogue")
@@ -331,9 +390,7 @@ def script(export: Path, editorial_doc: dict | None = None, brouillons_lignes: l
     out = ["-- Généré par `lvnd sync-admin` : ne pas éditer."]
     if avec_catalogue or editorial_doc is not None:
         cat = catalogue(export)
-        for table, cols in (("textes", COLONNES_TEXTES), ("scrutins", COLONNES_SCRUTINS),
-                            ("groupes", COLONNES_GROUPES), ("alertes", COLONNES_ALERTES),
-                            ("catalogue_meta", ("cle", "valeur"))):
+        for table, (_, cols) in TABLES.items():
             out.append(f"DELETE FROM {table};")
             out += inserts(table, cols, cat[table])
     if editorial_doc is not None:
@@ -366,7 +423,7 @@ def sync(export: Path, admin: Path, cible: str, avec_editorial: bool, sortie: Pa
         if not dossier_brouillons:
             raise SystemExit("--valider s'utilise avec --brouillons DOSSIER")
         sql = "\n".join(["-- Généré par `lvnd sync-admin --valider` : ne pas éditer.",
-                         *validations(dossier_brouillons, valider, ecarter_publie)]) + "\n"
+                         *validations(dossier_brouillons, valider, ecarter_publie, export)]) + "\n"
     elif remplacer is not None:
         sql = "\n".join(["-- Généré par `lvnd sync-admin --remplacer` : ne pas éditer.",
                          *remplacements(brouillons(dossier_brouillons), remplacer)]) + "\n"

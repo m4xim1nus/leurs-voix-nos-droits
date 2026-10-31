@@ -93,6 +93,11 @@ def main(argv=None) -> int:
         qualif = editorial.charger()
         sc = scores.depuis_export(args.export, qualif)
         scores.ecrire(args.export, sc)
+        sc_senat = scores.senat_depuis_export(args.export, qualif)
+        scores.ecrire_senat(args.export, sc_senat)
+        print(f"Sénat : {len({l['texte_id'] for l in sc_senat['scores_scrutins']})} décisifs, "
+              f"{len(sc_senat['scores_senateurs'])} scores de sénateurs, {len(sc_senat['scores_groupes'])} de groupes",
+              file=sys.stderr)
         print(f"{len(qualif['textes'])} textes qualifiés, {len(sc['scores_scrutins'])} lignes de scrutins comptés, "
               f"{len(sc['scores_deputes'])} scores de députés, {len(sc['scores_groupes'])} de groupes, "
               f"{len(sc['participation'])} taux de participation", file=sys.stderr)

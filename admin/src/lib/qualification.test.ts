@@ -67,6 +67,27 @@ describe('qualification', () => {
     ).toBe(brut);
   });
 
+  describe('vote du Sénat', () => {
+    // Même fixture que pipeline/tests/test_editorial.py : mêmes octets, mêmes messages.
+    const f = JSON.parse(
+      readFileSync(new URL('pipeline/tests/fixtures/editorial_senat.json', RACINE), 'utf8')
+    );
+    it("réécrit la fixture à l'octet près", () => {
+      expect(serialiser(documentEditorial(1, f.entrees, []))).toBe(f.sortie);
+    });
+    it('sans bloc vide', () => {
+      const e = f.entrees.find((t: Qualification) => t.id === 'e-vide');
+      expect('senat' in normaliser(e)).toBe(false);
+    });
+    for (const c of f.cas)
+      it(`contrôles identiques : ${c.nom}`, () => {
+        const infos = c.infos_senat ? new Map(Object.entries(c.infos_senat)) : undefined;
+        const v = valider(normaliser(c.doc), GRILLE, undefined, infos as never);
+        expect(v.erreurs).toEqual(c.erreurs);
+        expect(v.avertissements).toEqual(c.avertissements);
+      });
+  });
+
   describe('fiches de suivi', () => {
     // Même fixture que pipeline/tests/test_editorial.py : les deux écrivent les mêmes octets.
     const fixture = readFileSync(

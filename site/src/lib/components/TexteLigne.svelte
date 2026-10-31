@@ -5,28 +5,34 @@
 <script lang="ts">
   import { court, phrase, sousAngle } from '$lib/droits';
   import { date, etatEnListe, legislature } from '$lib/format';
-  import type { TexteCourt } from '$lib/server/vues';
+  import type { TexteListe } from '$lib/server/vues';
 
-  let { texte, droit = null }: { texte: TexteCourt; droit?: string | null } = $props();
-  const vu = $derived(sousAngle(texte, droit));
+  let { texte, droit = null }: { texte: TexteListe; droit?: string | null } = $props();
+  const vu = $derived(
+    texte.principal ? sousAngle({ ...texte, principal: texte.principal }, droit) : null
+  );
   const etat = $derived(etatEnListe(texte.etat, texte.etape));
 </script>
 
 <a class="texte" href="/textes/{texte.id}">
   <span class="titre">{texte.titre}</span>
   <span class="meta">
-    <span class="sens {vu.sens}">
-      {vu.sens === 'etend' ? '▲' : '▼'}
-      <span>{court(vu.code)}</span></span
-    >
+    {#if vu}
+      <span class="sens {vu.sens}">
+        {vu.sens === 'etend' ? '▲' : '▼'}
+        <span>{court(vu.code)}</span></span
+      >
+    {/if}
     <span class="discret"
-      >{texte.sans_vote
-        ? 'adopté par le 49.3 sans vote final, non compté'
-        : `voté le ${date(texte.date)}`}, {legislature(texte.legislature)} législature</span
+      >{#if texte.seul}{vu ? 'voté' : 'vote affiché, non compté,'} au seul Sénat, le {date(
+          texte.date
+        )}{:else}{texte.sans_vote
+          ? 'adopté par le 49.3 sans vote final, non compté'
+          : `voté le ${date(texte.date)}`}, {legislature(texte.legislature)} législature{/if}</span
     >
     {#if etat}<span class="etat">{etat}</span>{/if}
   </span>
-  <span class="visuellement-cache">Le texte {phrase(vu.code, vu.sens)}.</span>
+  {#if vu}<span class="visuellement-cache">Le texte {phrase(vu.code, vu.sens)}.</span>{/if}
 </a>
 
 <style>

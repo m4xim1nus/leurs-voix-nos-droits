@@ -128,9 +128,12 @@ les sources publiques, **sans sens ni score, et sans aucun scrutin**.
 
 ### Vote du Sénat (règles 23 à 28)
 
-Le vote du Sénat s'ajoute à la qualification d'un texte, dans un bloc `senat`. Tant que l'admin ne
-sait pas le lire (cycle Sénat, étape 3), les brouillons restent dans `source/brouillons-senat-*/`, sans
-chargement dans D1 et sans validation.
+Le vote du Sénat s'ajoute à la qualification d'un texte, dans un bloc `senat`. Un YAML sans `titre` (`id`,
+`dossier_an`, `senat`) complète le document de D1 sans toucher au reste : `--brouillons … --valider` ne remplace
+alors que le bloc. Un YAML complet (texte du seul Sénat, ou écart) se charge comme d'habitude ; un texte écarté
+perd son bloc (règle 28). Un vote du Sénat sur l'ensemble sans lecture déclenche l'alerte `senat_premier_vote`,
+un vote postérieur à ceux retenus `senat_vote_posterieur`. Les dossiers votés sur l'ensemble au Sénat entrent
+d'eux-mêmes au catalogue, sans scrutin à l'AN.
 
 ```yaml
 id: justice-mineurs              # id publié, ou nouvel id si le texte n'est pas qualifié

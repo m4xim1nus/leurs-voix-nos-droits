@@ -36,4 +36,14 @@ describe('resteATraiter', () => {
     expect(resteATraiter(a, 'ecarte', '{}')).toBe(true);
     expect(resteATraiter(a, 'brouillon', '{}')).toBe(false);
   });
+
+  it("Sénat : le bloc répond à l'alerte, le scrutin retenu à un nouveau vote", () => {
+    const doc = JSON.stringify({ senat: { scrutins: [{ id: 'S1' }] } });
+    expect(resteATraiter(alerte('senat_premier_vote', 'S1'), null, null)).toBe(true);
+    expect(resteATraiter(alerte('senat_premier_vote', 'S1'), 'valide', '{}')).toBe(true);
+    expect(resteATraiter(alerte('senat_premier_vote', 'S1'), 'valide', doc)).toBe(false);
+    expect(resteATraiter(alerte('senat_premier_vote', 'S1'), 'ecarte', '{}')).toBe(false);
+    expect(resteATraiter(alerte('senat_vote_posterieur', 'S2'), 'valide', doc)).toBe(true);
+    expect(resteATraiter(alerte('senat_vote_posterieur', 'S1'), 'valide', doc)).toBe(false);
+  });
 });

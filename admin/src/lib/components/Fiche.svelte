@@ -11,24 +11,30 @@
     LIBELLES_ETAPE,
     LIBELLES_POUR,
     LIBELLES_ROLE,
-    LIBELLES_STATUT
+    LIBELLES_ROLE_SENAT,
+    LIBELLES_STATUT,
+    LIBELLES_VERSION_SENAT
   } from '$lib/format';
   import {
     normaliser,
     POUR,
     ROLES_SCRUTIN,
+    ROLES_SENAT,
     STATUTS,
     valider,
-    validerSuivi
+    validerSuivi,
+    VERSIONS_SENAT
   } from '$lib/qualification';
-  import { favorable, scoresGroupes, scrutinsComptes } from '$lib/scores';
+  import { favorable, qualifSenat, scoresGroupes, scrutinsComptes } from '$lib/scores';
   import type {
+    BlocSenat,
     Groupe,
     Pour,
     Qualification,
     RoleScrutin,
     ScrutinCatalogue,
     ScrutinRetenu,
+    ScrutinSenat,
     Source,
     Statut
   } from '$lib/types';
@@ -72,6 +78,52 @@
     )
   );
 
+  const infosSenat = $derived(
+    new Map(
+      data.senat.map((s) => [
+        s.id,
+        { dossier_id: s.texte_id, objet: s.objet, pour: s.pour, contre: s.contre }
+      ])
+    )
+  );
+
+  // Sénat (règles 23 à 28).
+  const vide = (): BlocSenat => ({
+    version: 'seul',
+    scrutins: [],
+    droits: [],
+    etiquettes: [],
+    vigilance: [],
+    sources: {},
+    note: ''
+  });
+  let blocSenat: BlocSenat = $state(depart.doc.senat ?? vide());
+  // Autre version : droits, étiquettes, vigilance et sources propres, saisis en JSON (rare, et le plus
+  // souvent chargés depuis un brouillon relu).
+  const versJson = (b: BlocSenat) =>
+    b.droits.length || b.etiquettes.length || b.vigilance.length || Object.keys(b.sources).length
+      ? JSON.stringify(
+          {
+            droits: b.droits,
+            etiquettes: b.etiquettes,
+            vigilance: b.vigilance,
+            sources: b.sources
+          },
+          null,
+          2
+        )
+      : '';
+  let texteAutre = $state(versJson(depart.doc.senat ?? vide()));
+  const senatJson = $derived.by(() => {
+    if (blocSenat.version !== 'autre' || !texteAutre.trim()) return { valeur: {}, erreur: null };
+    try {
+      return { valeur: JSON.parse(texteAutre) as Partial<BlocSenat>, erreur: null };
+    } catch {
+      return { valeur: {}, erreur: 'droits propres : JSON illisible' };
+    }
+  });
+  const senat = $derived<BlocSenat>({ ...blocSenat, ...senatJson.valeur });
+
   // Fiche de suivi : ni sens, ni rôle, ni scrutin dans ce qui s'enregistre (le formulaire les garde,
   // au cas où le statut change avant l'enregistrement).
   const aSuivre = $derived(statut === 'a-suivre');
@@ -86,6 +138,7 @@
           })) as Qualification['droits'])
         : doc.droits,
       scrutins: aSuivre ? [] : doc.scrutins,
+      senat: aSuivre ? undefined : senat,
       sources: Object.fromEntries(
         sources
           .filter((s) => s.cle.trim())
@@ -99,7 +152,10 @@
         erreurs: motif.trim() ? [] : ['un texte écarté doit avoir un motif'],
         avertissements: []
       };
-    const v = aSuivre ? validerSuivi(complet, data.grille) : valider(complet, data.grille, infos);
+    const v = aSuivre
+      ? validerSuivi(complet, data.grille)
+      : valider(complet, data.grille, infos, infosSenat);
+    if (senatJson.erreur) v.erreurs.push(`Sénat : ${senatJson.erreur}`);
     if (data.autresIds.includes(complet.id))
       v.erreurs.push(`identifiant ${complet.id} déjà pris par un autre texte`);
     return v;
@@ -230,6 +286,56 @@
     })
   );
 
+  // --- Sénat (règles 23 à 28) -----------------------------------------------------------------
+
+  const retenusSenat = $derived(new Map(blocSenat.scrutins.map((s) => [s.id, s])));
+  const parIdSenat = $derived(new Map(data.senat.map((s) => [s.id, s])));
+  const groupesSenatPos = $derived(
+    new Map<string, Groupe>(
+      data.groupesSenat.map((g) => [
+        g.id,
+        { ...g, lignee: g.id, legislature: 0, couleur: null, date_debut: null, date_fin: null }
+      ])
+    )
+  );
+  let tousSenat = $state(false);
+  const principalSenat = (s: ScrutinSenat) =>
+    retenusSenat.has(s.id) ||
+    s.objet === 'ensemble' ||
+    s.objet === 'article_unique' ||
+    (s.objet ?? '').startsWith('motion') ||
+    s.objet === 'question_prealable';
+  const visiblesSenat = $derived(data.senat.filter((s) => tousSenat || principalSenat(s)));
+
+  function retenirSenat(s: ScrutinSenat, role: ScrutinRetenu['role'] | '') {
+    const i = blocSenat.scrutins.findIndex((x) => x.id === s.id);
+    if (!role) {
+      if (i >= 0) blocSenat.scrutins.splice(i, 1);
+      return;
+    }
+    if (i >= 0) {
+      blocSenat.scrutins[i].role = role;
+      return;
+    }
+    const quoi = (s.objet === 'ensemble' ? 'ensemble' : (s.titre ?? '').slice(0, 80)).trim();
+    blocSenat.scrutins.push({
+      id: s.id,
+      role,
+      pour: role === 'motion' ? 'contre-texte' : 'texte',
+      objet: `${quoi}, ${(s.lecture ?? '').toLowerCase()} (${s.pour}-${s.contre})`
+    });
+  }
+
+  const comptesSenat = $derived(
+    scrutinsComptes(statut === 'ecarte' || aSuivre ? [] : qualifSenat([complet]))
+  );
+  const apercuSenat = $derived.by(() => {
+    const pos = new Map(data.senat.map((s) => [s.id, s.positions]));
+    return scoresGroupes(comptesSenat, pos, (g) => g)
+      .filter((s) => s.droit === 'global')
+      .sort((a, b) => (b.score ?? -1) - (a.score ?? -1));
+  });
+
   // --- Aperçu du score ------------------------------------------------------------------------
 
   const comptes = $derived(scrutinsComptes(statut === 'ecarte' || aSuivre ? [] : [complet]));
@@ -254,6 +360,8 @@
     const d = JSON.parse(r.doc) as Qualification;
     doc = d;
     sources = versLignes(d.sources);
+    blocSenat = d.senat ?? vide();
+    texteAutre = versJson(blocSenat);
     statut = r.statut;
     motif = r.motif_ecart ?? '';
     commentaire = `retour à la version du ${dateHeure(r.date)}`;
@@ -618,6 +726,143 @@
           {/each}
         </tbody>
       </table>
+    </section>
+
+    <section class="carte">
+      <h2>Vote du Sénat</h2>
+      <p class="discret">
+        Compté : le décisif seul, dernier vote public sur l'ensemble, lu sur le texte voté (règles
+        23, 24 et 26). Sans source admise sur la version votée ou sans voix d'un côté : vote affiché
+        (« ensemble »), sans droits ni sens. Motions affichées, question préalable comprise. Le bloc
+        n'est enregistré qu'avec au moins un scrutin ou une note.
+      </p>
+      <label class="champ"
+        >Le vote porte sur
+        <select bind:value={blocSenat.version}>
+          {#each VERSIONS_SENAT as v (v)}<option value={v}>{LIBELLES_VERSION_SENAT[v]}</option
+            >{/each}
+        </select>
+      </label>
+      {#if blocSenat.scrutins.length}
+        <h3>Retenus ({blocSenat.scrutins.length})</h3>
+        <table>
+          <tbody>
+            {#each blocSenat.scrutins as r, i (r.id)}
+              {@const s = parIdSenat.get(r.id)}
+              <tr>
+                <td class="mono">{r.id}</td>
+                <td>
+                  <select bind:value={r.role} aria-label="Rôle au Sénat">
+                    {#each ROLES_SENAT as role (role)}<option value={role}
+                        >{LIBELLES_ROLE_SENAT[role]}</option
+                      >{/each}
+                  </select>
+                </td>
+                <td>
+                  <select bind:value={r.pour} aria-label="Sens au Sénat">
+                    {#each POUR as p (p)}<option value={p}>{LIBELLES_POUR[p]}</option>{/each}
+                  </select>
+                </td>
+                <td class="large"><input type="text" bind:value={r.objet} /></td>
+                <td>{s ? date(s.date) : 'absent du catalogue'}</td>
+                <td
+                  ><button
+                    type="button"
+                    class="lien"
+                    onclick={() => blocSenat.scrutins.splice(i, 1)}>retirer</button
+                  ></td
+                >
+              </tr>
+            {/each}
+          </tbody>
+        </table>
+      {/if}
+      {#if blocSenat.version === 'autre'}
+        <label class="champ"
+          >Droits propres à cette version (JSON : droits, etiquettes, vigilance, sources)
+          <textarea bind:value={texteAutre} rows="6" class="mono"></textarea>
+        </label>
+      {/if}
+      <label class="champ"
+        >Note (publique : sur quoi porte le vote, pourquoi il est compté ou affiché)
+        <textarea bind:value={blocSenat.note} rows="2"></textarea>
+      </label>
+
+      <div class="ligne entete-scrutins">
+        <h3>Scrutins du Sénat sur ce dossier ({data.senat.length})</h3>
+        <label class="ligne petite">
+          <input type="checkbox" bind:checked={tousSenat} /> articles et parties aussi
+        </label>
+      </div>
+      {#if visiblesSenat.length}
+        <table class="scrutins">
+          <thead>
+            <tr
+              ><th>Scrutin</th><th>Objet et positions de groupe</th><th class="nombre"
+                >Pour-contre</th
+              ><th>Retenu</th></tr
+            >
+          </thead>
+          <tbody>
+            {#each visiblesSenat as s (s.id)}
+              {@const r = retenusSenat.get(s.id)}
+              <tr class:retenu={r}>
+                <td>
+                  {#if s.url}<a class="mono" href={s.url} rel="external noopener" target="_blank"
+                      >{s.id}</a
+                    >{:else}<span class="mono">{s.id}</span>{/if}
+                  <div class="discret">{date(s.date)}</div>
+                  <div class="discret">{s.lecture ?? ''}</div>
+                </td>
+                <td>
+                  <span class="discret">{s.objet} :</span>
+                  {s.titre}
+                  {#if s.note}<div class="discret">{s.note}</div>{/if}
+                  <Positions positions={s.positions} groupes={groupesSenatPos} favorable={null} />
+                </td>
+                <td class="nombre">
+                  {s.pour}-{s.contre}
+                  <div class="discret">{s.abstention} abst.</div>
+                  <div class="discret">{s.sort}</div>
+                </td>
+                <td>
+                  <select
+                    value={r?.role ?? ''}
+                    onchange={(e) =>
+                      retenirSenat(s, e.currentTarget.value as ScrutinRetenu['role'] | '')}
+                    aria-label="Retenir le scrutin {s.id}"
+                  >
+                    <option value="">—</option>
+                    {#each ROLES_SENAT as role (role)}<option value={role}
+                        >{LIBELLES_ROLE_SENAT[role]}</option
+                      >{/each}
+                  </select>
+                </td>
+              </tr>
+            {/each}
+          </tbody>
+        </table>
+      {:else}
+        <p class="discret">Pas de scrutin public du Sénat sur ce dossier.</p>
+      {/if}
+
+      {#if apercuSenat.length}
+        <h3>Aperçu du score de ce texte au Sénat</h3>
+        <table class="apercu">
+          <tbody>
+            {#each apercuSenat as a (a.lignee)}
+              <tr>
+                <td>{groupesSenatPos.get(a.lignee)?.sigle ?? a.lignee}</td>
+                <td
+                  class="nombre"
+                  title={`${a.votes_favorables} favorables, ${a.votes_defavorables} défavorables, ${a.abstentions} abstentions`}
+                  >{a.score ?? '–'}</td
+                >
+              </tr>
+            {/each}
+          </tbody>
+        </table>
+      {/if}
     </section>
 
     <section class="carte">
