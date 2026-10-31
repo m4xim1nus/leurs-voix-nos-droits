@@ -3414,7 +3414,7 @@
       "dossier_an": "DLR5L17N53304",
       "legislature": 17,
       "titre": "Proposition de loi visant à lever dans les territoires d'outre-mer l'interdiction de recherche, d'exploration et d'exploitation des hydrocarbures",
-      "resume": "Le texte voté par le Sénat écarte l'interdiction de rechercher et d'exploiter des hydrocarbures, posée par la loi de 2017, à Saint-Pierre-et-Miquelon et dans les régions d'outre-mer qui exercent leurs compétences minières. Il supprime aussi le second alinéa de deux articles du code minier propres aux Terres australes et antarctiques et à Wallis-et-Futuna. L'article qui plafonnait la production à la consommation nationale a été supprimé en séance.",
+      "resume": "Le texte écarte l'interdiction de rechercher et d'exploiter des hydrocarbures, posée par la loi de 2017, dans les régions d'outre-mer qui exercent leurs compétences minières et à Saint-Pierre-et-Miquelon. Il supprime aussi le second alinéa de deux articles du code minier propres aux Terres australes et antarctiques et à Wallis-et-Futuna. Le Sénat l'a adopté le 29 janvier 2026. L'Assemblée a rejeté son article 1er, le seul restant, le 11 juin 2026, et le texte avec lui.",
       "droits": [
         {
           "code": "environnement",
@@ -3424,7 +3424,7 @@
             "amis-terre-2026-01",
             "fne-2026-01"
           ],
-          "justification": "Le texte lève une interdiction qui protège aussi les milieux littoraux et marins. Le jugement porte sur cette protection, non sur le choix d'une source d'énergie (règle 2). Les ONG citent des « atteintes durables aux écosystèmes côtiers et marins » et des marées noires. France Nature Environnement et ses fédérations de Guyane et de Mayotte citent les récifs coralliens, les herbiers, les lagons et les mangroves."
+          "justification": "L'article 1er lève une interdiction qui protège aussi les milieux littoraux et marins. Le jugement porte sur cette protection, non sur le choix d'une source d'énergie (règle 2). Les ONG citent des « atteintes durables aux écosystèmes côtiers et marins » et des marées noires. France Nature Environnement et ses fédérations de Guyane et de Mayotte citent les récifs coralliens, les herbiers, les lagons et les mangroves."
         }
       ],
       "etiquettes": [
@@ -3432,7 +3432,7 @@
       ],
       "vigilance": [],
       "conseil_constitutionnel": "",
-      "note": "Le sens se lit sur le texte adopté le 29 janvier 2026, dont l'article 2 a été retiré. Les deux sources précèdent ce vote et portent sur l'article 1er, conservé et élargi à Saint-Pierre-et-Miquelon. Les arguments relatifs au climat et à la politique énergétique de ces sources ne fondent pas le sens (règle 2).",
+      "note": "Le sens se lit sur l'article 1er mis aux voix à l'Assemblée, amendé : l'amendement n° 22 retire Saint-Pierre-et-Miquelon de la dérogation du II, et le reste de l'article est celui du Sénat. Les deux sources précèdent ce vote et portent sur cette mesure (règle 7). Leurs arguments relatifs au climat et à la politique énergétique ne fondent pas le sens (règle 2). L'article 2 ayant été supprimé par le Sénat, l'article 1er était le seul restant. Son rejet a entraîné celui du texte, sans vote sur l'ensemble : le scrutin sur cet article tient lieu de décisif (règle 9).",
       "sources": {
         "amis-terre-2026-01": {
           "auteur": "Les Amis de la Terre France, Surfrider Foundation Europe, Réseau Action Climat, Greenpeace France",
@@ -3447,9 +3447,16 @@
           "url": "https://mayottenatureenvironnement.com/2026/01/29/petrole-et-gaz-en-outre-mer-le-senat-sapprete-a-franchir-une-ligne-rouge/"
         }
       },
-      "scrutins": [],
+      "scrutins": [
+        {
+          "id": "VTANR5L17V7386",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "article 1er amendé, seul article restant, 1re lecture, rejeté (64-74)"
+        }
+      ],
       "senat": {
-        "version": "seul",
+        "version": "autre",
         "scrutins": [
           {
             "id": "SN2025-178",
@@ -3458,11 +3465,37 @@
             "objet": "ensemble, 1re lecture (227-105)"
           }
         ],
-        "droits": [],
-        "etiquettes": [],
+        "droits": [
+          {
+            "code": "environnement",
+            "role": "principal",
+            "sens": "restreint",
+            "sources": [
+              "amis-terre-2026-01",
+              "fne-2026-01"
+            ],
+            "justification": "Le texte adopté par le Sénat lève la même interdiction, qui protège aussi les milieux littoraux et marins, y compris dans la dérogation visant Saint-Pierre-et-Miquelon. Le jugement porte sur cette protection, non sur le choix d'une source d'énergie (règle 2). Les ONG citent des « atteintes durables aux écosystèmes côtiers et marins » et des marées noires. France Nature Environnement et ses fédérations de Guyane et de Mayotte citent les récifs coralliens, les herbiers, les lagons et les mangroves."
+          }
+        ],
+        "etiquettes": [
+          "outre-mer"
+        ],
         "vigilance": [],
-        "sources": {},
-        "note": "Vote de 1re lecture au Sénat, texte encore en navette. L'Assemblée a rejeté ce texte le 11 juin 2026 : il est retourné au Sénat pour une 2e lecture."
+        "sources": {
+          "amis-terre-2026-01": {
+            "auteur": "Les Amis de la Terre France, Surfrider Foundation Europe, Réseau Action Climat, Greenpeace France",
+            "titre": "Audition au Sénat : les ONG alertent sur les risques d'une relance fossile en outre-mer",
+            "date": "2026-01-15",
+            "url": "https://www.amisdelaterre.org/communique-presse/audition-au-senat-les-ong-alertent-sur-les-risques-dune-relance-fossile-en-outre-mer/"
+          },
+          "fne-2026-01": {
+            "auteur": "Mayotte Nature Environnement, Guyane Nature Environnement, France Nature Environnement",
+            "titre": "Retour de la loi Hulot : Menaces sur l'environnement en Outre-mer",
+            "date": "2026-01-29",
+            "url": "https://mayottenatureenvironnement.com/2026/01/29/petrole-et-gaz-en-outre-mer-le-senat-sapprete-a-franchir-une-ligne-rouge/"
+          }
+        },
+        "note": "Le sens se lit sur le texte adopté le 29 janvier 2026, dont l'article 2 a été retiré. Il diffère de l'article mis aux voix à l'Assemblée, qui a retiré Saint-Pierre-et-Miquelon de la dérogation du II (règle 24). Vote de 1re lecture au Sénat, texte encore en navette : après le rejet à l'Assemblée du 11 juin 2026, il est retourné au Sénat pour une 2e lecture."
       }
     },
     {
