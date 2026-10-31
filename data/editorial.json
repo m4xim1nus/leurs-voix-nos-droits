@@ -667,6 +667,72 @@
       }
     },
     {
+      "id": "asile-europeen-2018",
+      "dossier_an": "DLR5L15N36071",
+      "legislature": 15,
+      "titre": "Loi permettant une bonne application du régime d'asile européen",
+      "resume": "Le texte voté le 7 décembre 2017 permet de placer en rétention ou d'assigner à résidence un étranger en procédure Dublin dès la requête adressée à l'État jugé responsable de sa demande d'asile, avant toute décision de transfert. Il définit par une liste de critères le « risque non négligeable de fuite » qui fonde ce placement.",
+      "droits": [
+        {
+          "code": "etrangers",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-18-02",
+            "ddd-2018-090",
+            "cimade-dublin-2019"
+          ],
+          "justification": "Avant ce texte, un placement en rétention n'était possible qu'après notification de la décision de transfert, et la Cour de cassation jugeait illégale, faute de critères dans la loi, la rétention des personnes visées par un arrêté de transfert (arrêt du 27 septembre 2017, cité par le Défenseur des droits). Le Défenseur des droits, qui se prononce sur le texte adopté par l'Assemblée, y voit « un tournant parfaitement inédit », réitère sa « ferme opposition à la rétention des demandeurs d'asile placés en procédure « Dublin » dès lors qu'ils ne font encore l'objet d'aucune mesure d'éloignement » et juge les possibilités de placement « excessivement larges ». La Cimade relève que la personne peut être enfermée « sans être visée par une mesure d'expulsion du territoire »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Le texte adopté par l'Assemblée contient aussi des garanties. Le Défenseur des droits « prend acte » de critères resserrés par rapport à la version initiale, note que l'exclusion du risque de fuite lors de la présentation pour une première demande d'asile « renforce les garanties des demandeurs d'asile » (tout en regrettant qu'elle soit limitée à ces premières demandes), et se dit « rassuré » par l'interdiction d'engager la procédure vers un État aux défaillances systémiques, dont il juge la transposition laconique.",
+          "sources": [
+            "ddd-18-02"
+          ]
+        },
+        {
+          "texte": "Mineurs : le Défenseur des droits « rappelle sa ferme opposition à la rétention des mineurs, qu'ils soient ou non accompagnés ». La Cimade écrit que les critères de la loi permettent d'enfermer les personnes dublinées « y compris des enfants ».",
+          "sources": [
+            "ddd-18-02",
+            "cimade-dublin-2019"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2018-762 DC du 15 mars 2018, sur la loi définitive. Aucune censure ni réserve. Sont conformes les critères du risque de fuite et le placement en rétention ou l'assignation à résidence dès la requête (5° à 8° du II de l'article L. 551-1, second alinéa de l'article L. 554-1, 1° bis et dernier alinéa du I de l'article L. 561-2 du CESEDA, rédaction de l'article 1er), ainsi que le délai de recours de sept jours contre une décision de transfert (article 3). Le Conseil ne s'est pas prononcé sur les autres dispositions.",
+      "note": "Scrutin décisif : dernier vote public, sur le texte du 07/12/2017. La proposition de loi a été définitivement adoptée à l'Assemblée le 15/02/2018, en 2e lecture et sans scrutin public sur l'ensemble (règle 9). Le sens se lit donc sur le texte de 1re lecture (règle 6). Les ajouts du Sénat, votés à cette 2e lecture, n'y figurent pas : refus de relevé d'empreintes parmi les critères du risque de fuite, délai de recours de sept jours contre une décision de transfert, durée de l'assignation à résidence. Les scrutins publics de 2e lecture portent chacun sur un article, ni sur l'ensemble ni sur une suppression : ils ne sont pas retenus. Amendements clés : aucun scrutin public sur un amendement dans ce dossier (règle 11).",
+      "sources": {
+        "cimade-dublin-2019": {
+          "auteur": "La Cimade",
+          "titre": "La machine infernale de l'asile européen. Rapport d'observation sur le règlement Dublin",
+          "date": "2019-04",
+          "url": "https://www.lacimade.org/wp-content/uploads/2019/04/La_Cimade_Rapport_Dublin_2019.pdf"
+        },
+        "ddd-18-02": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 18-02 sur la proposition de loi permettant une bonne application du régime d'asile européen",
+          "date": "2018-01-10",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=18311"
+        },
+        "ddd-2018-090": {
+          "auteur": "Défenseur des droits",
+          "titre": "Décision n° 2018-090 portant observations devant le Conseil constitutionnel sur la loi permettant une bonne application du régime d'asile européen",
+          "date": "2018-03-08",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=17328"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V341",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, dernier vote public, sur le texte du 07/12/2017 (41-11)"
+        }
+      ]
+    },
+    {
       "id": "assurance-chomage-2022",
       "dossier_an": "DLR5L16N46266",
       "legislature": 16,
@@ -1340,6 +1406,94 @@
       }
     },
     {
+      "id": "code-justice-mineurs-2021",
+      "dossier_an": "DLR5L15N37919",
+      "legislature": 15,
+      "titre": "Loi ratifiant l'ordonnance n° 2019-950 du 11 septembre 2019 portant partie législative du code de la justice pénale des mineurs",
+      "resume": "Ratifie et modifie le code de la justice pénale des mineurs, qui remplace l'ordonnance de 1945 et entre en vigueur le 30 septembre 2021. Le code supprime la phase d'instruction conduite par le juge des enfants et la remplace par une audience sur la culpabilité, une période de « mise à l'épreuve éducative » puis une audience sur la sanction, avec une audience unique possible. Il présume non discernants les moins de treize ans, présomption simple, et réduit les délais de jugement.",
+      "droits": [
+        {
+          "code": "enfants",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-20-09",
+            "cncdh-2020",
+            "cncdh-2019"
+          ],
+          "justification": "La CNCDH juge que la réforme « va à l'encontre de l'obligation même de protection de l'Etat envers les mineurs » et que l'audience unique « fait craindre une accélération du temps procédural ». La Défenseure des droits constate que le régime des mineurs « tend à s'aligner sur celui des majeurs », craint qu'un audiencement trop rapide empêche le mineur de préparer sa comparution, et se dit « fermement opposée » à ce que le juge des enfants prononce seul une peine en chambre du conseil."
+        },
+        {
+          "code": "police-justice",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-20-09"
+          ],
+          "justification": "La Défenseure des droits relève que la réforme réduit le rôle du juge des enfants « au profit du procureur de la République » et qu'elle a pour conséquence de « supprimer l'appréciation des charges pesant sur un mineur par un magistrat du siège avant son renvoi pour jugement »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Âge de responsabilité : la CNCDH « se félicite qu'un âge plancher de responsabilité soit fixé à 13 ans ». La Défenseure des droits juge la mesure « insuffisante », car il ne s'agit que d'une présomption simple : « Il n'y aura donc pas de réel changement par rapport au régime applicable aujourd'hui. »",
+          "sources": [
+            "cncdh-2019",
+            "ddd-20-09"
+          ]
+        },
+        {
+          "texte": "Mesures de sens opposé (règle 4) : la CNCDH « est favorable » au principe de la césure du procès, « dès lors qu'il permet une évaluation personnalisée du mineur ». La Défenseure des droits voit « une avancée majeure » pour les victimes dans le raccourcissement des délais, en relevant que le nouveau délai risque d'être trop court.",
+          "sources": [
+            "cncdh-2019",
+            "ddd-20-09"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision du Conseil avant la promulgation du 26 février 2021.",
+      "note": "Scrutin décisif : l'ensemble du texte de la commission mixte paritaire, le 16/02/2021 (481-37). Le code n'était pas en vigueur au jour du vote : le sens se lit par rapport à l'ordonnance de 1945 (règle 4). Justice des mineurs : droits de l'enfant en droit principal, garanties face à la justice pénale en droit secondaire (règle 3). Le texte est composite : le sens suit les mesures que les sources citent le plus. Aucun amendement n'a fait l'objet d'un scrutin public (règle 11). Motion de rejet affichée, non comptée.",
+      "sources": {
+        "cncdh-2019": {
+          "auteur": "CNCDH",
+          "titre": "Avis relatif à la réforme de la justice des mineurs : premier regard de la CNCDH",
+          "date": "2019-07-09",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/A%20-%202019%20-%203%20-%20R%C3%A9forme%20de%20la%20justice%20des%20mineurs,%20juillet%202019.pdf"
+        },
+        "cncdh-2020": {
+          "auteur": "CNCDH",
+          "titre": "Les droits fondamentaux et l'intérêt supérieur de l'enfant, les grands oubliés de la réforme de la justice pénale des mineurs (communiqué)",
+          "date": "2020-12-09",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/20.12.09%20CP%20R%C3%A9forme%20de%20la%20justice%20p%C3%A9nale%20de%20mineurs_0.pdf"
+        },
+        "ddd-20-09": {
+          "auteur": "Défenseure des droits",
+          "titre": "Avis n° 20-09 du 1er décembre 2020 sur le projet de loi ratifiant l'ordonnance n° 2019-950 portant partie législative du code de la justice pénale des mineurs",
+          "date": "2020-12-01",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=20275"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3422",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la commission mixte paritaire (481-37)"
+        },
+        {
+          "id": "VTANR5L15V3302",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (41-8)"
+        },
+        {
+          "id": "VTANR5L15V3301",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (8-69)"
+        }
+      ]
+    },
+    {
       "id": "condition-residence-prestations-2025",
       "dossier_an": "DLR5L17N51458",
       "legislature": 17,
@@ -1430,6 +1584,126 @@
       }
     },
     {
+      "id": "confiance-justice-2021",
+      "dossier_an": "DLR5L15N42236",
+      "legislature": 15,
+      "titre": "Loi pour la confiance dans l'institution judiciaire",
+      "resume": "Généralise les cours criminelles départementales, sans jury, à compter de 2023 et remplace les crédits automatiques de réduction de peine par des réductions accordées par le juge selon la conduite et les efforts de réinsertion. Le texte limite aussi la durée de l'enquête préliminaire, ouvre davantage le dossier aux personnes mises en cause, renforce le secret professionnel de la défense et du conseil avec des exceptions pour le conseil, encadre l'enregistrement des audiences et crée un contrat d'emploi pénitentiaire.",
+      "droits": [
+        {
+          "code": "police-justice",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-2021",
+            "saf-2021-04",
+            "saf-2021-11",
+            "oip-2021",
+            "ddd-21-05"
+          ],
+          "justification": "Mesures les plus citées : la CNCDH « s'étonne et s'inquiète » de la généralisation des cours criminelles, et le SAF y voit un retrait du jury pour « l'essentiel des crimes ». L'OIP estime que la réforme des réductions de peine « concourra inévitablement à aggraver la surpopulation carcérale », et la Défenseure des droits s'inquiète pour le « droit au recours effectif des personnes détenues ». Le SAF dénonce enfin « une exception au secret professionnel »."
+        },
+        {
+          "code": "travail-protection-sociale",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "ddd-21-05",
+            "saf-2021-11"
+          ],
+          "justification": "La Défenseure des droits juge que le contrat d'emploi pénitentiaire « permettra le renforcement de la protection des droits des travailleurs détenus ». Le SAF compte cette création parmi les avancées du texte."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Mesures de sens opposé (règle 4) : la Défenseure des droits est « favorable à l'encadrement de la durée de l'enquête préliminaire » et juge que le projet initial renforce la protection du secret de la défense. Le SAF cite aussi l'accès à la procédure par la personne mise en cause parmi les avancées.",
+          "sources": [
+            "ddd-21-05",
+            "saf-2021-11"
+          ]
+        },
+        {
+          "texte": "Contrat d'emploi pénitentiaire : la Défenseure des droits relève que « ses contours demeurent encore imprécis », les droits sociaux étant renvoyés à une ordonnance, et que le déclassement pour des fautes sans lien avec l'emploi « freine » la fonction de réinsertion du travail.",
+          "sources": [
+            "ddd-21-05"
+          ]
+        },
+        {
+          "texte": "Enregistrement des audiences : la Défenseure des droits juge que le projet « ne prévoit pas suffisamment de garanties » et relève un « risque d'atteinte à la vie privée des parties ». Elle émet aussi des réserves sur la communication par un officier de police judiciaire sur l'enquête, au nom de la présomption d'innocence.",
+          "sources": [
+            "ddd-21-05"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2021-830 DC du 17 décembre 2021, sur saisine du Premier ministre, qui n'invoquait aucun grief. Dispositif : « La procédure d'adoption de la loi pour la confiance dans l'institution judiciaire est conforme à la Constitution. » Le Conseil précise qu'il « ne s'est pas prononcé sur la conformité à la Constitution du contenu des dispositions de la loi déférée ».",
+      "note": "Scrutin décisif : l'ensemble du texte de la commission mixte paritaire, le 16/11/2021 (66-11). Le texte est composite : le sens du droit principal suit les mesures que les sources citent le plus (règle 4), les mesures opposées figurent en vigilance. Un amendement clé (règle 11) : la suppression de l'article 7, généralisation des cours criminelles, mise en cause par la CNCDH sur ce projet. La suppression de l'article 8 (avocats honoraires) n'est pas retenue, faute de source lue qui la mette en cause. Deux motions de rejet préalable sont affichées, non comptées. La loi organique jumelle n'est pas qualifiée (règle 8).",
+      "sources": {
+        "cncdh-2021": {
+          "auteur": "CNCDH",
+          "titre": "Lettre du président aux députés sur la généralisation des cours criminelles départementales",
+          "date": "2021-05-18",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-05/CNCDH-Lettre%20Pr%C3%A9sident%20-Cours%20criminelles%20d%C3%A9partementales-18.05.2021.pdf"
+        },
+        "ddd-21-05": {
+          "auteur": "Défenseure des droits",
+          "titre": "Avis n° 21-05 du 3 mai 2021 sur le projet de loi pour la confiance dans l'institution judiciaire",
+          "date": "2021-05-03",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=20653"
+        },
+        "oip-2021": {
+          "auteur": "Observatoire international des prisons",
+          "titre": "Projet de loi « Confiance dans la justice » : derrière une réforme timide, des logiques dangereuses",
+          "date": "2021",
+          "url": "https://oip.org/analyse/projet-de-loi-confiance-dans-la-justice-derriere-une-reforme-timide-des-logiques-dangereuses/"
+        },
+        "saf-2021-04": {
+          "auteur": "Syndicat des avocats de France",
+          "titre": "Projet de loi pour restaurer la confiance dans l'institution judiciaire : entre petites avancées et grands reniements !",
+          "date": "2021-04-15",
+          "url": "https://lesaf.org/projet-de-loi-pour-restaurer-la-confiance-dans-linstitution-judiciaire-entre-petites-avancees-et-grands-reniements/"
+        },
+        "saf-2021-11": {
+          "auteur": "Syndicat des avocats de France",
+          "titre": "Une avancée mineure pour la justice, un recul majeur pour le secret",
+          "date": "2021-11-19",
+          "url": "https://lesaf.org/wp-content/uploads/2021/11/CP-Confiance-Justice-18-11-2021-1.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V4154",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la commission mixte paritaire (66-11)"
+        },
+        {
+          "id": "VTANR5L15V3778",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (342-105)"
+        },
+        {
+          "id": "VTANR5L15V4153",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, texte de la commission mixte paritaire (4-49)"
+        },
+        {
+          "id": "VTANR5L15V3767",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (10-105)"
+        },
+        {
+          "id": "VTANR5L15V3772",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 7, généralisation des cours criminelles départementales, 1re lecture (7-47)"
+        }
+      ]
+    },
+    {
       "id": "constitutionnaliser-securite-sociale-2024",
       "dossier_an": "DLR5L16N49750",
       "legislature": 16,
@@ -1471,6 +1745,146 @@
           "role": "decisif",
           "pour": "texte",
           "objet": "article unique, 1re lecture, rejeté (56-68)"
+        }
+      ]
+    },
+    {
+      "id": "consultation-nc-2018",
+      "dossier_an": "DLR5L15N36333",
+      "legislature": 15,
+      "titre": "Loi organique relative à l'organisation de la consultation sur l'accession à la pleine souveraineté de la Nouvelle-Calédonie",
+      "resume": "La loi organise la consultation de 2018. Elle prévoit, à titre exceptionnel pour l'année du scrutin, l'inscription d'office sur la liste électorale générale des électeurs qui résident dans la commune sans y être inscrits, et sur la liste spéciale à la consultation des électeurs nés sur le territoire et domiciliés depuis trois ans. Elle ouvre à Nouméa des bureaux de vote pour les électeurs de cinq communes insulaires et limite le vote par procuration à des motifs justifiés. Elle ne modifie pas les conditions de fond pour participer à la consultation, fixées par l'accord de Nouméa.",
+      "droits": [
+        {
+          "code": "citoyennete",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "cc-2018-764",
+            "ce-393830"
+          ],
+          "justification": "La loi facilite l'inscription sur les listes et, par elle, l'exercice du droit de vote à la consultation. Le Conseil constitutionnel relève que le législateur « a entendu favoriser la participation la plus large possible à la consultation », en créant l'inscription d'office et les bureaux délocalisés. Le Conseil d'État parle de « la nécessité de favoriser la plus large participation possible des électeurs au scrutin concerné »."
+        }
+      ],
+      "etiquettes": [
+        "outre-mer"
+      ],
+      "vigilance": [
+        {
+          "texte": "Mesure de sens opposé : le vote par procuration est limité à des motifs justifiés pour cette consultation. Le Conseil d'État avait écarté cette disposition du projet : aucun motif d'intérêt général n'était avancé, et elle aurait pour effet de « réduire les possibilités pour les électeurs de prendre part au scrutin ». Une limitation des procurations figure pourtant dans la loi votée, et le Conseil constitutionnel la juge conforme, au nom de la sincérité du scrutin.",
+          "sources": [
+            "ce-393830",
+            "cc-2018-764"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2018-764 DC du 19 avril 2018 : conforme, sans réserve. Article 1er du dispositif : « La loi organique relative à l'organisation de la consultation sur l'accession à la pleine souveraineté de la Nouvelle-Calédonie est conforme à la Constitution. »",
+      "note": "Projet de loi organique adopté d'abord par le Sénat. L'Assemblée l'a voté sans modification en 1re lecture : ce vote sur l'ensemble est le scrutin décisif (règle 9). Le sens se lit sur le droit de vote des personnes (règle 4), par rapport au droit au jour du vote, où l'inscription d'office ne couvrait pas ces électeurs. Texte composite : les sources admises citent surtout l'inscription d'office, la limite des procurations va en vigilance (règle 4). Le droit `discriminations` n'est pas retenu : aucune source admise lue n'y voit une atteinte aux droits d'un peuple autochtone. Sur l'inscription d'office, aucune critique trouvée parmi les sources admises (règle 7). Aucun amendement ni motion n'a été mis aux voix par scrutin public (règles 10 et 11).",
+      "sources": {
+        "cc-2018-764": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2018-764 DC du 19 avril 2018 (loi organique relative à l'organisation de la consultation sur l'accession à la pleine souveraineté de la Nouvelle-Calédonie)",
+          "date": "2018-04-19",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2018/2018764DC.htm"
+        },
+        "ce-393830": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 393830 sur un projet de loi organique relatif à l'organisation de la consultation sur l'accession à la pleine souveraineté de la Nouvelle-Calédonie",
+          "date": "2017-11-30",
+          "url": "https://www.senat.fr/leg/pjl17-152-avis-ce.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V419",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel, adoption sans modification du texte du Sénat (537-2)"
+        }
+      ]
+    },
+    {
+      "id": "contenus-haineux-2020",
+      "dossier_an": "DLR5L15N37327",
+      "legislature": 15,
+      "titre": "Loi visant à lutter contre les contenus haineux sur internet",
+      "resume": "Oblige les grandes plateformes et les moteurs de recherche à retirer sous vingt-quatre heures, sous peine de sanction pénale, les contenus manifestement haineux ou à caractère sexuel qui leur sont notifiés. Ramène à une heure le délai de retrait des contenus terroristes ou pédopornographiques notifiés par l'administration. Confie au CSA le contrôle d'obligations de moyens, sous peine de sanctions pouvant atteindre 20 millions d'euros ou 4 % du chiffre d'affaires mondial, et crée un observatoire de la haine en ligne.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-2019",
+            "cc-2020-801",
+            "snjcgt-2020"
+          ],
+          "justification": "Le texte fait apprécier par des opérateurs privés, ou par l'administration, le caractère illicite d'une expression, sans décision préalable d'un juge. La CNCDH y voit « une menace disproportionnée sur la liberté d'expression » et « la consécration d'une quasi-censure privée ». Le Conseil constitutionnel juge que ces dispositions « ne peuvent qu'inciter les opérateurs de plateforme en ligne à retirer les contenus qui leur sont signalés, qu'ils soient ou non manifestement illicites ». Le SNJ-CGT et l'Ugict-CGT dénoncent « de graves risques de censure »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Objectif : le Conseil d'État estime légitime de poursuivre des contenus « reposant sur le racisme, l'antisémitisme ou la discrimination qui restent très largement impunis », et la CNCDH « souscrit évidemment pleinement à l'objectif affiché », tout en doutant du moyen choisi.",
+          "sources": [
+            "ce-397368",
+            "cncdh-2019"
+          ]
+        },
+        {
+          "texte": "Efficacité contre la haine : la CNCDH regrette une « approche répressive centrée sur le retrait des contenus », un palliatif à l'insuffisance de moyens budgétaires, et le manque de mesures de prévention et d'éducation au numérique.",
+          "sources": [
+            "cncdh-2019"
+          ]
+        },
+        {
+          "texte": "Recours : la CNCDH estime que la brièveté du délai « ne permet pas d'exercer un recours effectif contre un retrait abusif ». Le Conseil d'État relève des « risques élevés de censure excessive par les opérateurs de plateforme ».",
+          "sources": [
+            "cncdh-2019",
+            "ce-397368"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2020-801 DC du 18 juin 2020, non-conformité partielle, sans réserve. Article 1er du dispositif : « Sont contraires à la Constitution les dispositions suivantes de la loi visant à lutter contre les contenus haineux sur internet : les paragraphes I et II de son article 1 er ; son article 3 ; son article 4 ; son article 5 ; son article 7 ; son article 8 ; son article 9 ; les mots « et à l'avant-dernier alinéa du I de l'article 6-2 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, » figurant au second alinéa de son article 10 ; le 1 ° de son article 12 ; les mots « 4 et 5 ainsi que les I, II et III de l'article 7 » figurant à la première phrase de son article 18 et la seconde phrase de ce même article ; le paragraphe II de son article 19 ; son article 11 et les 2 ° et 3 ° de son article 12. » Les délais de retrait d'une heure et de vingt-quatre heures portent à la liberté d'expression une atteinte qui n'est pas adaptée, nécessaire et proportionnée. Les articles 11 et 12 (2° et 3°) sont censurés pour un motif de procédure, sans lien avec le texte déposé.",
+      "note": "Scrutin décisif : lecture définitive du 13/05/2020, dernier vote de l'AN sur l'ensemble. Le sens se lit sur le texte voté (règle 6), retraits sous vingt-quatre heures compris, censurés ensuite ; la décision du Conseil s'affiche à côté. Droit principal : `libertes`, parce que les sources admises visent surtout la liberté d'expression (règle 4). L'objectif de lutte contre les discriminations figure en vigilance : les sources l'approuvent sans dire que ce texte étend ce droit. Aucun amendement clé (règle 11) : aucun des scrutins publics sur amendement ne porte sur la suppression ou le rétablissement d'un article. Le vote sur l'article 1er (1re lecture) et la motion de renvoi en commission ne sont pas affichés. Aucune motion de rejet préalable n'a été mise aux voix par scrutin public.",
+      "sources": {
+        "cc-2020-801": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2020-801 DC du 18 juin 2020",
+          "date": "2020-06-18",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2020/2020801DC.htm"
+        },
+        "ce-397368": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 397368 sur la proposition de loi visant à lutter contre la haine sur Internet",
+          "date": "2019-05-16",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b1785_avis-conseil-etat"
+        },
+        "cncdh-2019": {
+          "auteur": "CNCDH",
+          "titre": "Avis relatif à la proposition de loi visant à lutter contre la haine sur Internet (A - 2019 - 1)",
+          "date": "2019-07-09",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/final_avis_relatif_a_la_ppl_lutte_contre_la_haine_en_ligne.pdf"
+        },
+        "snjcgt-2020": {
+          "auteur": "SNJ-CGT et Ugict-CGT",
+          "titre": "Loi Avia : où sont les juges ?",
+          "date": "2020-06-09",
+          "url": "https://snjcgt.fr/wp-content/uploads/sites/11/2020/06/Snj-Cgt-Ugict-Cgt-Loi-Avia-9-juin-2020.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V2742",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (355-150)"
+        },
+        {
+          "id": "VTANR5L15V2039",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (434-33)"
         }
       ]
     },
@@ -2272,6 +2686,106 @@
       ]
     },
     {
+      "id": "droit-avortement-2022",
+      "dossier_an": "DLR5L15N40346",
+      "legislature": 15,
+      "titre": "Loi visant à renforcer le droit à l'avortement",
+      "resume": "La loi allonge de deux semaines le délai légal de l'interruption volontaire de grossesse, de douze à quatorze semaines de grossesse. Elle permet aux sages-femmes de pratiquer des IVG par voie chirurgicale en établissement de santé, supprime un délai de réflexion de deux jours, et autorise l'IVG médicamenteuse en ville jusqu'à la fin de la septième semaine. Elle crée aussi un répertoire des professionnels et des structures, publié par les agences régionales de santé, et vise le refus de délivrer une contraception d'urgence parmi les refus de soins. La clause de conscience spécifique à l'IVG est maintenue.",
+      "droits": [
+        {
+          "code": "femmes-lgbti",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "ccne-2020"
+          ],
+          "justification": "Le texte allonge le délai pendant lequel une femme peut recourir à l'IVG, au-delà du droit en vigueur au jour du vote. Saisi du délai de 14 semaines, le Comité consultatif national d'éthique considère « qu'il n'y a pas d'objection éthique à allonger le délai d'accès à l'IVG de deux semaines ». Il estime à 1 500 ou 2 000 le nombre de femmes ayant dépassé la limite en 2018, et conclut qu'il n'existe « que peu, voire pas de différence » de complications entre 12 et 14 semaines."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "L'Académie nationale de médecine s'oppose à l'allongement. Selon elle, il « entrainera inéluctablement une augmentation significative des complications à court ou à long terme » et « ne répond à aucune demande légitime des femmes ». Elle déconseille aussi le transfert aux sages-femmes de la pratique chirurgicale de l'IVG, « compte tenu de leur absence actuelle de qualification chirurgicale ».",
+          "sources": [
+            "anm-2020"
+          ]
+        },
+        {
+          "texte": "Le Conseil national de l'Ordre des médecins estime que l'allongement ne permettra pas de « répondre aux difficultés » d'accès à l'IVG, faute d'engagements de l'État sur les moyens de prise en charge. Le CCNE, sans objection de principe, ne saurait « cautionner une mesure prise pour pallier les multiples dysfonctionnements matériels, économiques, juridiques » de cette politique de santé.",
+          "sources": [
+            "cnom-2020",
+            "ccne-2020"
+          ]
+        },
+        {
+          "texte": "Le CCNE relève une limite pratique : dans une enquête du Collège national des gynécologues et obstétriciens français auprès de 783 médecins, 37,3 % déclarent qu'ils pratiqueraient ces IVG si la loi les y autorisait.",
+          "sources": [
+            "ccne-2020"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Décisif : lecture définitive, 23 février 2022 (règle 9). Le sens est lu par rapport au droit au jour du vote : délai de douze semaines de grossesse (règle 4). Un droit : le texte porte plusieurs mesures d'accès, placées dans le résumé, et les sources admises lues se prononcent surtout sur le délai. Les critiques de l'Académie et de l'Ordre, sur le texte de 1re lecture, restent applicables à l'allongement, qui figure au texte final. Leur critique de la suppression de la clause de conscience spécifique ne l'est plus : cette mesure a été retirée en 2e lecture. Aucun amendement clé (règle 11) : la dernière lecture où des suppressions ont été mises aux voix est la nouvelle lecture, et aucune n'y a fait l'objet d'un scrutin public. Le seul amendement à scrutin public de cette lecture (V4404) rétablit un paragraphe de l'article 2, pas l'article. Les suppressions à scrutin public des lectures précédentes (V2947, V4202) ne sont pas retenues.",
+      "sources": {
+        "anm-2020": {
+          "auteur": "Académie nationale de médecine",
+          "titre": "Communiqué de presse sur l'interruption volontaire de grossesse",
+          "date": "2020-10-10",
+          "url": "http://www.academie-medecine.fr/communique-de-presse-sur-linterruption-volontaire-de-grossesse/"
+        },
+        "ccne-2020": {
+          "auteur": "Comité consultatif national d'éthique",
+          "titre": "Opinion du CCNE sur l'allongement du délai légal d'accès à l'IVG de 12 à 14 semaines de grossesse (résumé de la réponse à la saisine du ministre)",
+          "date": "2020-12-08",
+          "url": "https://www.ccne-ethique.fr/sites/default/files/2021-07/CCNE-saisine%20IVG%20-%20R%C3%A9sum%C3%A9%20-%2008.12.20.pdf"
+        },
+        "cnom-2020": {
+          "auteur": "Conseil national de l'Ordre des médecins",
+          "titre": "Clause de conscience spécifique à l'IVG (communiqué de presse)",
+          "date": "2020-10-10",
+          "url": "https://www.conseil-national.medecin.fr/publications/communiques-presse/clause-conscience-livg"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V4414",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (135-47)"
+        },
+        {
+          "id": "VTANR5L15V4405",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, nouvelle lecture (46-13)"
+        },
+        {
+          "id": "VTANR5L15V4204",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 2e lecture (79-36)"
+        },
+        {
+          "id": "VTANR5L15V2952",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (86-59)"
+        },
+        {
+          "id": "VTANR5L15V4198",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 2e lecture (10-82)"
+        },
+        {
+          "id": "VTANR5L15V4413",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, lecture définitive (20-120)"
+        }
+      ]
+    },
+    {
       "id": "droit-visite-lieux-privation-liberte-2026",
       "dossier_an": "DLR5L17N52230",
       "legislature": 17,
@@ -2531,6 +3045,121 @@
         "sources": {},
         "note": "Conclusions de la CMP, votées par les deux chambres."
       }
+    },
+    {
+      "id": "ecole-confiance-2019",
+      "dossier_an": "DLR5L15N37055",
+      "legislature": 15,
+      "titre": "Loi pour une école de la confiance",
+      "resume": "Le texte voté abaisse de six à trois ans l'âge de l'instruction obligatoire et prévoit que l'État compense la hausse des dépenses des communes. Il crée les pôles inclusifs d'accompagnement localisés pour les élèves en situation de handicap, recrute les accompagnants par contrat de trois ans et inscrit dans le code de l'éducation l'exemplarité des personnels. Il remplace aussi le Cnesco par un conseil d'évaluation de l'école et crée les instituts nationaux supérieurs du professorat et de l'éducation.",
+      "droits": [
+        {
+          "code": "enfants",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "ce-396047",
+            "ddd-19-04",
+            "cncph-2019"
+          ],
+          "justification": "L'instruction obligatoire passe de six à trois ans. Pour le Conseil d'État, ces dispositions « confèrent à l’enfant un droit à être scolarisé dès trois ans » et cette durée allongée « contribue à garantir les principes d’égal accès à l’instruction et de droit à l’instruction ». Le Défenseur des droits y est favorable. La commission éducation du CNCPH juge la mesure « importante pour notre public »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Mise en œuvre de l'instruction à trois ans : le Défenseur des droits demande une adaptation renforcée des écoles maternelles aux tout-petits et s'inquiète d'un taux d'encadrement « qui doit être augmenté de manière significative ».",
+          "sources": [
+            "ddd-19-04"
+          ]
+        },
+        {
+          "texte": "Portée de la mesure et financement : le SNUipp-FSU y voit « une mesure assez symbolique a priori », 98 % des enfants de trois ans étant déjà scolarisés selon lui, dont l'effet est d'étendre aux élèves d'âge maternel l'obligation pour les communes de financer les écoles privées sous contrat.",
+          "sources": [
+            "snuipp-2019-02"
+          ]
+        },
+        {
+          "texte": "Exemplarité des personnels (article 1er) : selon le SNUipp-FSU, la rédaction « ouvre la voie à des restrictions de la liberté d'expression des enseignantes et des enseignants ». Le Conseil d'État, sur la version du projet, estime que ces dispositions « ne produisent par elles-mêmes aucun effet de droit ».",
+          "sources": [
+            "snuipp-2019-01",
+            "snuipp-2019-02",
+            "ce-396047"
+          ]
+        },
+        {
+          "texte": "Élèves en situation de handicap : le Défenseur des droits estime qu'il faut veiller à ce que les pôles inclusifs « permettent de développer une réponse globale », adaptée à chaque élève. Il juge que le contrat de trois ans des accompagnants pourrait contribuer à une meilleure stabilité dans l'emploi.",
+          "sources": [
+            "ddd-19-06"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2019-787 DC du 25 juillet 2019. Censure, pour absence de lien avec le projet initial : l'article 33 (information des familles sur les offres d'apprentissage des langues régionales) et l'article 53 (droit de prescription des médecins scolaires, administration de médicaments par les infirmiers). Est conforme l'article 17, seul contesté, sur la compensation par l'État des dépenses des communes liées à l'instruction dès trois ans. Le Conseil ne se prononce pas sur les autres dispositions.",
+      "note": "Décisif : texte de la commission mixte paritaire, 2 juillet 2019. Le texte qualifié est celui soumis à ce vote, censures comprises (règle 6). Motions de rejet préalable affichées, pas comptées (règle 10). Amendements clés : aucun. La 1re lecture est la seule où des suppressions ont été mises aux voix. Article 2 (instruction à trois ans) : les sources ne s'accordent pas, le Défenseur et le Conseil d'État y étant favorables. Article 5 (contrôle de l'instruction en famille) : aucune source admise lue ne met la mesure en cause. Article 6 quater (établissements des savoirs fondamentaux) : mesure absente du texte décisif. Articles 10 et 17 (instituts de formation, ordonnances sur les académies) : mesures d'organisation, sans droit de la grille dans les sources lues (règle 11).",
+      "sources": {
+        "ce-396047": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 396047 sur un projet de loi pour une école de la confiance",
+          "date": "2018-11-29",
+          "url": "https://www.assemblee-nationale.fr/15/pdf/projets/pl1481-ace.pdf"
+        },
+        "cncph-2019": {
+          "auteur": "Conseil national consultatif des personnes handicapées (commission éducation-scolarité)",
+          "titre": "Proposition de contribution sur la loi pour une école de la confiance",
+          "date": "2019-01",
+          "url": "https://www.gouvernement.fr/upload/media/organization/0001/01/sites_default_files_contenu_piece-jointe_2019_01_proposition_de_contribution_ecole_de_la_confiance.pdf"
+        },
+        "ddd-19-04": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 19-04 relatif au projet de loi pour une école de la confiance",
+          "date": "2019-01-28",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=18374"
+        },
+        "ddd-19-06": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 19-06 relatif à l'inclusion des élèves handicapés dans l'école et l'université",
+          "date": "2019-04-10",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=18801"
+        },
+        "snuipp-2019-01": {
+          "auteur": "FSU-SNUipp",
+          "titre": "La liberté d'expression menacée ?",
+          "date": "2019-01-11",
+          "url": "https://www.snuipp.fr/actualites/posts/la-liberte-d-expression-menacee"
+        },
+        "snuipp-2019-02": {
+          "auteur": "FSU-SNUipp",
+          "titre": "Loi Blanquer : une camisole pour l'école",
+          "date": "2019-02-20",
+          "url": "https://www.snuipp.fr/actualites/posts/un-projet-de-loi-qui-en-dit-long"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V2015",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (112-48)"
+        },
+        {
+          "id": "VTANR5L15V1709",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (353-171)"
+        },
+        {
+          "id": "VTANR5L15V1663",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (11-59)"
+        },
+        {
+          "id": "VTANR5L15V2014",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, texte de la CMP (23-87)"
+        }
+      ]
     },
     {
       "id": "ecole-liberte-egalite-laicite-ppl-2023",
@@ -3560,6 +4189,105 @@
       }
     },
     {
+      "id": "gens-du-voyage-2018",
+      "dossier_an": "DLR5L14N36020",
+      "legislature": 15,
+      "titre": "Loi relative à l'accueil des gens du voyage et à la lutte contre les installations illicites",
+      "resume": "Le texte voté double les peines encourues pour l'installation en réunion sur le terrain d'autrui (un an d'emprisonnement et 7 500 euros d'amende), et permet d'éteindre l'action publique par une amende forfaitaire de 500 euros. Il réécrit les conditions dans lesquelles un maire peut interdire le stationnement des résidences mobiles hors des aires. Il permet aussi à une intercommunalité de remplir ses obligations d'accueil en finançant des aires hors de son territoire. L'Assemblée a retiré plusieurs mesures votées par le Sénat, dont l'élargissement de l'évacuation et la saisie des véhicules d'habitation.",
+      "droits": [
+        {
+          "code": "police-justice",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-fiche-32",
+            "ddd-fiche-10",
+            "ddd-18-10",
+            "ddd-25-05"
+          ],
+          "justification": "La loi ouvre au délit d'installation illicite la procédure de l'amende forfaitaire délictuelle. Le Défenseur des droits demande la suppression de cette procédure « qui porte atteinte aux principes généraux du droit pénal et de la procédure pénale » et juge qu'elle « dégrade encore les garanties procédurales des Gens du voyage concernés ». Sur le doublement des peines, il relève dès 2018 que les sanctions en vigueur sont « déjà faiblement prononcées »."
+        },
+        {
+          "code": "discriminations",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-fiche-32",
+            "ddd-25-05",
+            "ddd-18-10"
+          ],
+          "justification": "Selon le Défenseur des droits, cette procédure « a des conséquences discriminatoires à l'encontre des « Gens du voyage » ». Il précise que son extension à l'installation illicite « a donc vocation à s'appliquer spécifiquement » à ces personnes. Son avis sur le texte juge « stigmatisante » une législation spécifique aux gens du voyage."
+        },
+        {
+          "code": "logement",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-18-10"
+          ],
+          "justification": "Une intercommunalité peut remplir ses obligations en finançant des aires hors de son territoire. Le Défenseur des droits relève que les places « restent insuffisantes eu égard aux besoins », et que cette option « accentue » ce qu'un rapport préfectoral de 2013 appelait le « laisser faire faire au voisin »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Le Défenseur des droits rappelle que c'est d'abord « l'insuffisance des aires d'accueil » qui crée les difficultés de stationnement, et il relève que les sanctions ont été renforcées alors que « le manque d'emplacements en nombre suffisant ou en bon état pour stationner est reconnu ».",
+          "sources": [
+            "ddd-18-10",
+            "ddd-fiche-32"
+          ]
+        },
+        {
+          "texte": "L'avis de 2018 porte sur le texte du Sénat. Plusieurs mesures qu'il critique n'ont pas été conservées par l'Assemblée : évacuation élargie (article 5), saisie des véhicules d'habitation, suppression de la consignation des fonds. Le doublement des peines, lui, y a été rétabli en séance.",
+          "sources": [
+            "ddd-18-10"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Décisif : 1re lecture à l'Assemblée, 21 juin 2018. C'est le dernier vote de l'Assemblée : le Sénat a ensuite adopté ce texte sans modification en 2e lecture (règle 9). Le sens se lit sur le texte de ce vote et par rapport au droit alors en vigueur, non par rapport à la version plus sévère du Sénat (règles 4 et 6). Amendements clés (règle 11) : une seule lecture à l'Assemblée. Un article supprimé en commission porte une mesure mise en cause par le Défenseur des droits sur ce projet : l'article 5 (évacuation élargie). Voter son rétablissement va dans le sens restrictif du texte. Ne sont pas retenus : le rétablissement de l'article 2 (fin de la consignation des fonds), article mixte qui conserve aussi un délai de six mois ; les votes sur des alinéas des articles 1er et 6, qui ne rétablissent pas l'article entier ; les rétablissements des articles 3 bis, 7, 8 et 9, faute de source admise lue sur ces mesures. Aucune motion de rejet n'a été mise aux voix.",
+      "sources": {
+        "ddd-18-10": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 18-10 sur la proposition de loi n° 346 relative à l'accueil des gens du voyage et à la lutte contre les installations illicites",
+          "date": "2018-03-27",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=18583"
+        },
+        "ddd-25-05": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis 25-05 du 21 mars 2025 relatif à la proposition de loi n° 906 pour réformer l'accueil des gens du voyage",
+          "date": "2025-03-21",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=22632"
+        },
+        "ddd-fiche-10": {
+          "auteur": "Défenseur des droits",
+          "titre": "Fiche 10, Lutter contre les discriminations et atteintes aux droits subies par les gens du voyage",
+          "date": "2024-04",
+          "url": "https://www.defenseurdesdroits.fr/sites/default/files/2024-04/FICHE10_Gens-du-voyage_20240423.pdf"
+        },
+        "ddd-fiche-32": {
+          "auteur": "Défenseur des droits",
+          "titre": "Fiche réforme n° 32, Les droits des gens du voyage",
+          "date": "2023-07",
+          "url": "https://www.defenseurdesdroits.fr/sites/default/files/2023-12/fiches-reformes_032.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V989",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture à l'Assemblée (40-3)"
+        },
+        {
+          "id": "VTANR5L15V446",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 5 (évacuation élargie), rejeté (9-24)"
+        }
+      ]
+    },
+    {
       "id": "gestion-crise-sanitaire-2021",
       "dossier_an": "DLR5L15N43005",
       "legislature": 15,
@@ -3920,6 +4648,202 @@
         "sources": {},
         "note": "Conclusions de la CMP, votées par les deux chambres."
       }
+    },
+    {
+      "id": "immigration-asile-2018",
+      "dossier_an": "DLR5L15N36410",
+      "legislature": 15,
+      "titre": "Loi pour une immigration maîtrisée, un droit d'asile effectif et une intégration réussie",
+      "resume": "Le texte réduit à 90 jours le délai au-delà duquel une demande d'asile passe en procédure accélérée et supprime l'effet suspensif de certains recours devant la CNDA. Il double la durée maximale de la rétention, portée à 90 jours, et impose la vidéo-audience sans le consentement de l'étranger. Il durcit l'accès à la nationalité des enfants nés à Mayotte et crée un fichier des personnes se déclarant mineures isolées. Il comporte aussi des mesures de protection : réunification familiale, titres de séjour de certaines victimes de violences.",
+      "droits": [
+        {
+          "code": "etrangers",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-18-14",
+            "cncdh-2018",
+            "cimade-2018",
+            "cglpl-2018"
+          ],
+          "justification": "Le Défenseur des droits juge le texte adopté par l'Assemblée « sous-tendu par une logique de suspicion tendant à faire primer des considérations répressives au détriment des droits les plus fondamentaux des étrangers » et recommande d'abandonner le doublement de la rétention et la vidéo-audience sans consentement. La CGLPL y voit « un net recul des libertés ». La CNCDH conteste la vidéo-audience imposée et la prolongation de la rétention. La Cimade, sur le texte définitif, parle d'une « véritable chute de droits pour les personnes étrangères »."
+        },
+        {
+          "code": "enfants",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-18-14",
+            "cimade-2018"
+          ],
+          "justification": "Le Défenseur des droits relève, pour les refus d'entrée à la frontière terrestre, une « régression » des droits des mineurs non accompagnés, « manifestement contraire à leur intérêt supérieur », et regrette que le texte ne mette pas « un terme définitif à la rétention des mineurs ». La Cimade juge « disproportionnée et illégitime » la création d'un fichier des personnes se déclarant mineures isolées."
+        }
+      ],
+      "etiquettes": [
+        "outre-mer"
+      ],
+      "vigilance": [
+        {
+          "texte": "Mesures de sens opposé (règle 4). Le texte élargit la réunification familiale autour d'un mineur réfugié, ce que salue le Défenseur des droits. Il étend le maintien du titre de séjour à des victimes de violences familiales, ce que La Cimade juge insuffisant. Il élargit les exemptions du délit d'aide au séjour, à la suite de la décision du Conseil constitutionnel du 6 juillet 2018, mais La Cimade écrit que ces modifications « ne suffiront pas à mettre fin au délit de solidarité ». La Cimade résume : « Hormis de rares mesures protectrices, cette loi instaure principalement des mesures renforcées de restrictions ».",
+          "sources": [
+            "ddd-18-14",
+            "cimade-2018"
+          ]
+        },
+        {
+          "texte": "Sur le projet initial, le Conseil d'État ne voit pas d'obstacle de principe à la vidéo-audience sans consentement ni à une rétention de 90 jours, mais il « s'interroge néanmoins sur la justification de l'allongement proposé de cette mesure restrictive de liberté ». Il juge contraire au droit d'asile et au droit à la protection de la santé d'allonger la rétention au seul motif d'une demande tardive, et demande de réserver cette possibilité aux demandes présentées « dans le seul but de faire échec à la mesure d'éloignement », ce que le texte voté reprend.",
+          "sources": [
+            "ce-394206"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2018-770 DC du 6 septembre 2018. Censure : le paragraphe I de l'article 15 et le 4° de l'article 52, introduits en nouvelle lecture sans relation directe avec une disposition restant en discussion, ainsi que les articles 42 et 72, sans lien avec le projet de loi. Une réserve : la rétention de 90 jours est conforme dès lors que l'autorité judiciaire conserve la possibilité d'interrompre à tout moment la prolongation du maintien en rétention (article 29). Sont notamment conformes : le délai de 90 jours pour les demandes d'asile (article 6), la vidéo-audience sans consentement (articles 8, 20 et 24), l'absence d'effet suspensif de certains recours (article 12), les règles de nationalité à Mayotte (articles 16 et 17), les dispositions sur les mineurs en zone d'attente et en rétention (articles 21 et 28), la retenue de 24 heures (article 35) et les exemptions du délit d'aide (article 38).",
+      "note": "Décisif : lecture définitive, 1er août 2018. Le texte qualifié est celui soumis à ce vote (règle 6). Texte composite (règle 4) : le sens de `etrangers` et de `enfants` est celui des mesures que les sources citent le plus, les mesures de protection figurant en vigilance. Amendements clés : la nouvelle lecture est la dernière où des suppressions ont été mises aux voix (règle 11). Trois articles y portent une mesure mise en cause par une source et ont fait l'objet d'une suppression mise aux voix : l'article 9 ter (nationalité à Mayotte), l'article 10 (vidéo-audience en zone d'attente) et l'article 26 sexies (fichier des personnes se déclarant mineures). Le rétablissement de l'article 10 AB (réductions tarifaires de transport, absent du texte décisif) n'est pas retenu : aucune source admise lue ne met en cause cette mesure. Les suppressions de 1re lecture ne sont pas retenues (règle 11).",
+      "sources": {
+        "ce-394206": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 394206 sur un projet de loi pour une immigration maîtrisée et un droit d'asile effectif",
+          "date": "2018-02-15",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b0714_avis-conseil-etat"
+        },
+        "cglpl-2018": {
+          "auteur": "Contrôleur général des lieux de privation de liberté",
+          "titre": "Communiqué sur le projet de loi pour une immigration maîtrisée et un droit d'asile effectif",
+          "date": "2018-02-21",
+          "url": "https://www.cglpl.fr/2018/communique-sur-le-projet-de-loi-pour-une-immigration-maitrisee-et-un-droit-dasile-effectif/"
+        },
+        "cimade-2018": {
+          "auteur": "La Cimade",
+          "titre": "Décryptage de la loi asile et immigration (version du 1er août 2018, après adoption définitive)",
+          "date": "2018-08-02",
+          "url": "https://www.lacimade.org/wp-content/uploads/2018/08/Loi_Asile_Immigration_Cimade_02082018.pdf"
+        },
+        "cncdh-2018": {
+          "auteur": "CNCDH",
+          "titre": "Avis sur le projet de loi « Pour une immigration maîtrisée et un droit d'asile effectif »",
+          "date": "2018-05-02",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/180502_Avis%20PJL%20Asile%20et%20Immigration%20pour%20impression_0.pdf"
+        },
+        "ddd-18-14": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 18-14 sur le projet de loi pour une immigration maîtrisée, un droit d'asile effectif et une intégration réussie",
+          "date": "2018-05-17",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=17586"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V1117",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (100-25)"
+        },
+        {
+          "id": "VTANR5L15V1110",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, nouvelle lecture (48-17)"
+        },
+        {
+          "id": "VTANR5L15V578",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (228-139)"
+        },
+        {
+          "id": "VTANR5L15V1093",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, nouvelle lecture (30-132)"
+        },
+        {
+          "id": "VTANR5L15V1095",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 9 ter (nationalité à Mayotte), nouvelle lecture (23-85)"
+        },
+        {
+          "id": "VTANR5L15V1098",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 10 (vidéo-audience en zone d'attente), nouvelle lecture (11-55)"
+        },
+        {
+          "id": "VTANR5L15V1109",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 26 sexies (fichier des personnes se déclarant mineures), nouvelle lecture (24-51)"
+        }
+      ]
+    },
+    {
+      "id": "individus-violents-manifestations-2021",
+      "dossier_an": "DLR5L15N41631",
+      "legislature": 15,
+      "titre": "Proposition de loi visant à lutter contre les individus violents lors de manifestations",
+      "resume": "Proposition de loi du groupe UDI et Indépendants (Pascal Brindeau), rejetée le 25 mars 2021. Son article unique permet au préfet d'interdire par arrêté à une personne de participer à une manifestation, ou à toute manifestation en France pendant dix jours au plus. Il permet aussi de lui imposer de répondre à des convocations pendant la manifestation. La violation est punie de trois ans de prison et de 7 500 euros d'amende. La mesure reprend, en la modifiant, l'interdiction administrative censurée par le Conseil constitutionnel en 2019.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cc-2019-780",
+            "cncdh-sg-2019",
+            "amnesty-2019",
+            "cnb-2019"
+          ],
+          "justification": "Le préfet pourrait priver une personne du droit de manifester, sans condamnation préalable. Ces sources portent sur l'interdiction administrative de 2019, dont le texte reprend le principe avec des conditions nouvelles. Le Conseil constitutionnel juge qu'une telle mesure confère à l'administration « le pouvoir de priver une personne de son droit d'expression collective des idées et des opinions ». Le secrétariat général de la CNCDH y voit une logique qui ne saurait être généralisée « au risque d'engendrer une atteinte disproportionnée à la liberté de manifester »."
+        },
+        {
+          "code": "police-justice",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cnb-2019",
+            "amnesty-2019"
+          ],
+          "justification": "L'interdiction ne passe ni par une condamnation ni par un juge pénal, et sa violation devient un délit puni de trois ans de prison. Sur la mesure de 2019, le CNB rappelle que « l'autorité judiciaire doit pouvoir être saisie et exercer son contrôle ». Amnesty International parle de décisions prises « loin du regard de la justice »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "Pas de décision : texte non adopté. Une mesure voisine, l'article 3 de la loi visant à renforcer et garantir le maintien de l'ordre public lors des manifestations, a été censurée par la décision 2019-780 DC du 4 avril 2019. Le Conseil y juge que l'interdiction porte au droit d'expression collective des idées et des opinions « une atteinte qui n'est pas adaptée, nécessaire et proportionnée ». Il retient aussi que le législateur poursuivait la sauvegarde de l'ordre public. Il censure donc les conditions de la mesure, sans se prononcer sur le texte de 2021.",
+      "note": "Le texte n'a pas fait l'objet d'un vote sur l'ensemble. La commission n'ayant pas adopté de texte, l'Assemblée a discuté la proposition initiale. Le 25/03/2021, elle a adopté l'amendement n° 23 qui supprime l'article unique (V3510, 25-12), puis la proposition a été rejetée. Ce vote tient lieu de scrutin décisif (règle 9) : voter pour, c'est voter contre le texte. Le texte qualifié est l'article unique soumis à ce vote (règle 6), et non le texte vidé après la suppression : la règle 8 ne s'applique pas. Sens (règle 4) : au jour du vote, seul un juge pénal peut interdire de manifester, à titre de peine complémentaire, et l'interdiction administrative de 2019 a été censurée. Les sources portent sur la mesure de 2019, non sur ce texte (règle 7). Aucun amendement clé ni aucune motion de rejet : c'est le seul scrutin public du dossier.",
+      "sources": {
+        "amnesty-2019": {
+          "auteur": "Amnesty International France",
+          "titre": "France : la casse du droit de manifester",
+          "date": "2019-01-30",
+          "url": "https://www.amnesty.fr/actualites/la-casse-du-droit-de-manifester/"
+        },
+        "cc-2019-780": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2019-780 DC du 4 avril 2019, loi visant à renforcer et garantir le maintien de l'ordre public lors des manifestations",
+          "date": "2019-04-04",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2019/2019780DC.htm"
+        },
+        "cnb-2019": {
+          "auteur": "Conseil national des barreaux",
+          "titre": "Loi « anti-casseurs », Christiane Féral-Schuhl écrit à la rapporteure",
+          "date": "2019-02-05",
+          "url": "https://www.cnb.avocat.fr/fr/actualites/loi-anti-casseurs-christiane-feral-schuhl-ecrit-la-rapporteure"
+        },
+        "cncdh-sg-2019": {
+          "auteur": "CNCDH (secrétariat général)",
+          "titre": "Mémoire d'amicus curiae à propos des articles 3, 6 et 7 de la loi visant à renforcer et garantir le maintien de l'ordre public lors des manifestations (affaire 2019-780 DC)",
+          "date": "2019-03-22",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-05/2019_03_21_observations_loi_anti-casseurs_vf.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3510",
+          "role": "decisif",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article unique, valant rejet du texte, 1re lecture, adoptée (25-12)"
+        }
+      ]
     },
     {
       "id": "industrie-verte-2023",
@@ -4509,6 +5433,119 @@
       }
     },
     {
+      "id": "jeunes-majeurs-2019",
+      "dossier_an": "DLR5L15N36719",
+      "legislature": 15,
+      "titre": "Proposition de loi visant à renforcer l'accompagnement des jeunes majeurs vulnérables vers l'autonomie",
+      "resume": "Le texte voté crée un contrat d'accès à l'autonomie jusqu'à 21 ans, sur demande, pour les jeunes confiés à l'aide sociale à l'enfance au moins 18 mois au cours des 24 mois précédant leur majorité, et de plein droit pour les pupilles de l'État. Il permet au mineur de désigner une personne de confiance, prévoit un entretien six mois après la sortie du dispositif et une priorité d'accès au logement social. Le texte n'a pas abouti à une loi.",
+      "droits": [
+        {
+          "code": "enfants",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "cnape-crf-nexem-2019",
+            "ddd-21-15"
+          ],
+          "justification": "Pour la CNAPE, la Croix-Rouge française et Nexem, « Le texte ouvre de nouveaux droits aux jeunes majeurs » : contrat d'accès à l'autonomie, personne de confiance, accès au logement. La Défenseure des droits est favorable, sur la même mesure dans un texte ultérieur, à ce que les adolescents soient accompagnés par une personne de confiance."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "La CNAPE, la Croix-Rouge française et Nexem « ne peuvent se satisfaire de l’exigence d’un accueil à l’ASE d’au moins 18 mois dans les 24 derniers mois avant la majorité » et posent la question des moyens. Ces organisations sont parties prenantes : la première et la dernière fédèrent des associations ou des employeurs du secteur.",
+          "sources": [
+            "cnape-crf-nexem-2019"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Décisif : 1re lecture, 7 mai 2019, seul vote de l'Assemblée sur l'ensemble ; le texte n'a pas abouti à une loi. Pas de motion de rejet. Amendements clés : aucun. Aucun scrutin public ne porte sur la suppression ou le rétablissement d'un article. Les autres scrutins portent sur une réécriture de l'article 1er (non retenue, règle 11) et sur deux votes sans aucune voix contre (47-0 et 38-0).",
+      "sources": {
+        "cnape-crf-nexem-2019": {
+          "auteur": "CNAPE, Croix-Rouge française et Nexem",
+          "titre": "Jeunes majeurs : (des)espoirs ? (communiqué de presse commun)",
+          "date": "2019-05-21",
+          "url": "https://www.cnape.fr/documents/cp-commun-cnape-croix-rouge-francaise-nexem_-jeunes-majeurs-desespoirs"
+        },
+        "ddd-21-15": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 21-15 relatif au projet de loi sur la protection des enfants",
+          "date": "2021-10-15",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=21001"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V1850",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (42-6)"
+        }
+      ]
+    },
+    {
+      "id": "jld-mayotte-2019",
+      "dossier_an": "DLR5L15N37090",
+      "legislature": 15,
+      "titre": "Loi relative au délai d'intervention du juge des libertés et de la détention en rétention administrative à Mayotte",
+      "resume": "Le texte maintient à cinq jours, à Mayotte, le délai au bout duquel le juge des libertés et de la détention intervient sur la rétention d'un étranger, alors que ce délai devait passer à 48 heures le 1er mars 2019, comme sur le reste du territoire. Il prévoit aussi une présentation distincte des données sur l'immigration pour chaque collectivité d'outre-mer.",
+      "droits": [
+        {
+          "code": "etrangers",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-outre-mer-2017",
+            "cncdh-2018",
+            "cglpl-2016"
+          ],
+          "justification": "Au jour du vote, la loi du 10 septembre 2018 devait porter ce délai à 48 heures à Mayotte le 1er mars 2019 : garder cinq jours au-delà de cette échéance restreint le droit (règle 4). La CNCDH recommande que le juge intervienne « dans les 48 heures » à Mayotte « comme dans le reste du territoire français » et regrette que le gouvernement n'ait pas renoncé au délai de 5 jours. La Contrôleure générale juge « nécessaire de préserver sur tout le territoire national, y compris à Mayotte, un délai de 48 heures »."
+        }
+      ],
+      "etiquettes": [
+        "outre-mer"
+      ],
+      "vigilance": [
+        {
+          "texte": "Le Contrôleur général relève qu'un tel délai propre à Mayotte « introduit une inégalité de traitement » et que le caractère massif des placements en rétention sur l'île « devrait au contraire imposer un meilleur contrôle par l'autorité judiciaire ». Cet avis porte sur la même mesure, inscrite en 2017, et non sur ce texte.",
+          "sources": [
+            "cglpl-2016"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision du Conseil constitutionnel sur ce texte.",
+      "note": "Décisif : 1re lecture, seule lecture à l'Assemblée. Le Sénat a adopté le texte sans modification le 14 février 2019. Le texte se présente comme la correction d'une erreur de la loi du 10 septembre 2018, qui avait supprimé la dérogation sans que les deux chambres l'aient voulu. Le sens se lit sur le droit applicable au jour du vote, échéance légale comprise (règle 4). Les sources portent sur la mesure, inscrite en 2017, et sont antérieures au texte (règle 7). Amendements clés : aucun scrutin public sur un amendement dans ce dossier (règle 11).",
+      "sources": {
+        "cglpl-2016": {
+          "auteur": "Contrôleur général des lieux de privation de liberté",
+          "titre": "Rapport d'activité 2016",
+          "date": "2017-04",
+          "url": "https://www.cglpl.fr/app/uploads/2017/04/Rapport-2016-3es_web.pdf"
+        },
+        "cncdh-2018": {
+          "auteur": "CNCDH",
+          "titre": "Avis sur le projet de loi « Pour une immigration maîtrisée et un droit d'asile effectif »",
+          "date": "2018-05-02",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/180502_Avis%20PJL%20Asile%20et%20Immigration%20pour%20impression_0.pdf"
+        },
+        "cncdh-outre-mer-2017": {
+          "auteur": "CNCDH",
+          "titre": "Avis droits des étrangers et droit d'asile dans les Outre-mer. Cas particuliers de la Guyane et Mayotte",
+          "date": "2017-09-26",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/170926_Avis%20droit%20des%20%C3%A9trangers%2C%20droits%20asile%20Outre-mer%20p%C3%A0p.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V1640",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (36-6)"
+        }
+      ]
+    },
+    {
       "id": "jo-2024",
       "dossier_an": "DLR5L16N46918",
       "legislature": 16,
@@ -4995,6 +6032,57 @@
       }
     },
     {
+      "id": "justice-proximite-2021",
+      "dossier_an": "DLR5L15N40640",
+      "legislature": 15,
+      "titre": "Loi améliorant l'efficacité de la justice de proximité et de la réponse pénale",
+      "resume": "Proposition de loi qui élargit les mesures qu'un procureur peut demander à l'auteur de faits avant toute poursuite : se dessaisir d'une chose liée à l'infraction, verser une somme à la victime, ne pas rencontrer la victime ou des complices, s'acquitter d'une « contribution citoyenne » auprès d'une association d'aide aux victimes. Elle confie aussi au directeur du service pénitentiaire d'insertion et de probation, sauf décision contraire du juge, le choix du poste de travail d'intérêt général.",
+      "droits": [
+        {
+          "code": "police-justice",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "sm-2020"
+          ],
+          "justification": "Le Syndicat de la magistrature relève que ces pouvoirs nouveaux du parquet reviennent à « imposer de nouvelles obligations aux mis en cause en dehors de tout contrôle d'un juge ». Il voit dans le dessaisissement et la contribution citoyenne des « confiscations et amendes détournées qui n'en présentent pas les garanties pourtant essentielles pour les justiciables »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Victimes : le Syndicat de la magistrature estime que ces mesures « ne garantissent pas la protection des victimes », aucune mesure coercitive n'étant possible si l'interdiction de contact est violée.",
+          "sources": [
+            "sm-2020"
+          ]
+        },
+        {
+          "texte": "Travail d'intérêt général : le même syndicat juge que le transfert au directeur du service pénitentiaire « ouvre la voie à la déjudiciarisation du travail d'intérêt général ».",
+          "sources": [
+            "sm-2020"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision du Conseil avant la promulgation du 8 avril 2021.",
+      "note": "Scrutin décisif : dernier vote public, sur le texte du 26/11/2020. Le texte de la commission mixte paritaire a été adopté à l'Assemblée le 17/03/2021 sans scrutin public (règle 9). Le sens se lit donc sur le texte de 1re lecture (règle 6). Aucun amendement n'a fait l'objet d'un scrutin public et aucune motion de rejet n'a été mise aux voix.",
+      "sources": {
+        "sm-2020": {
+          "auteur": "Syndicat de la magistrature",
+          "titre": "Observations sur la proposition de loi « améliorant l'efficacité de la justice de proximité et de la réponse pénale »",
+          "date": "2020-11-19",
+          "url": "https://www.syndicat-magistrature.fr/documents/894/observations-ppl-justice-de-proximite.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3264",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, dernier vote public, sur le texte du 26/11/2020 (110-2)"
+        }
+      ]
+    },
+    {
       "id": "kasbarian-berge",
       "dossier_an": "DLR5L16N46484",
       "legislature": 16,
@@ -5219,6 +6307,147 @@
         "sources": {},
         "note": ""
       }
+    },
+    {
+      "id": "lanceurs-alerte-2022",
+      "dossier_an": "DLR5L15N42986",
+      "legislature": 15,
+      "titre": "Loi visant à améliorer la protection des lanceurs d'alerte",
+      "resume": "Le texte transpose la directive européenne de 2019 en allant au-delà. Il élargit la définition du lanceur d'alerte, qui n'a plus à agir de manière désintéressée, mais « sans contrepartie financière directe et de bonne foi ». Il permet de saisir une autorité externe sans passer d'abord par le signalement interne. Il étend la protection aux facilitateurs, dont les associations et les syndicats, et aux proches. Il prévoit une liste des représailles interdites, un aménagement de la preuve et une provision pour frais de justice ou pour subsides.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "ddd-21-16"
+          ],
+          "justification": "Le texte élargit les conditions dans lesquelles une personne peut signaler ou rendre publique une information d'intérêt général sans en subir les conséquences. La Défenseure des droits voit dans la proposition de loi « un progrès démocratique confortant la mise en œuvre effective de la liberté d'expression »."
+        },
+        {
+          "code": "travail-protection-sociale",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "ddd-21-16"
+          ],
+          "justification": "Dans la relation de travail, le texte interdit une liste de représailles. La Défenseure des droits relève que le conseil de prud'hommes pourra « obliger l'employeur à abonder » le compte de formation du salarié."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Risque de détournement : sur la proposition initiale, le Conseil d'État recommande d'évaluer, avant d'élargir la définition, l'impact de ces mesures « notamment en ce qui concerne les risques de détournement du dispositif de protection ». Il estime qu'il peut exister « un risque de dévoiement des garanties apportées aux lanceurs d'alerte » dans les relations du travail. Le texte voté réserve la condition de connaissance personnelle aux informations obtenues hors du cadre professionnel.",
+          "sources": [
+            "ce-404001"
+          ]
+        },
+        {
+          "texte": "Garanties jugées insuffisantes : sur la proposition initiale, la Défenseure des droits relève que le renforcement de la protection est « principalement fondé sur une réparation après la survenue de représailles ». Elle regrette qu'aucune sanction ne vise les organismes qui ne mettent pas en place de procédure de signalement, et aurait préféré un fonds de soutien.",
+          "sources": [
+            "ddd-21-16"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2022-839 DC du 17 mars 2022, sur saisine du Premier ministre, non-conformité partielle, sans réserve. Article 1er du dispositif : « L'article 11 de la loi visant à améliorer la protection des lanceurs d'alerte est contraire à la Constitution. » Cet article permettait au tribunal correctionnel, en cas de relaxe, de condamner à une amende civile la partie civile dont la plainte était abusive ou dilatoire. Il est censuré pour un motif de procédure, sans lien avec le texte initial, le Conseil ne préjugeant pas du fond. Le Conseil n'a soulevé d'office aucune autre question et ne s'est pas prononcé sur les autres dispositions.",
+      "note": "Scrutin décisif : vote du 08/02/2022 sur le texte de la commission mixte paritaire, dernier vote de l'AN sur l'ensemble (règle 9) ; le Sénat l'a adopté ensuite, le 16/02/2022. Trois voix contre : ce vote départage, ce que ne fait pas le vote de 1re lecture (52-0), affiché seulement. Aucun amendement clé et aucune motion de rejet : ces deux votes sont les seuls scrutins publics du dossier. L'avis du Défenseur des droits et celui du Conseil d'État portent sur la proposition initiale, et le sens se lit sur le texte de la CMP (règle 6). La loi organique jumelle sur le rôle du Défenseur des droits relève d'un autre dossier et n'est pas qualifiée ici.",
+      "sources": {
+        "ce-404001": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 404001 sur une proposition de loi visant à améliorer la protection des lanceurs d'alerte",
+          "date": "2021-11-04",
+          "url": "https://www.conseil-etat.fr/content/download/161648/document/404001%20-extrait%20Avis%20PPL.pdf"
+        },
+        "ddd-21-16": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 21-16 du 29 octobre 2021 sur la proposition de loi organique n° 4375 et la proposition de loi n° 4398 visant à améliorer la protection des lanceurs d'alerte",
+          "date": "2021-10-29",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=21034"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V4385",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (57-3)"
+        },
+        {
+          "id": "VTANR5L15V4155",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (52-0)"
+        }
+      ]
+    },
+    {
+      "id": "langues-regionales-2021",
+      "dossier_an": "DLR5L15N38412",
+      "legislature": 15,
+      "titre": "Loi relative à la protection patrimoniale des langues régionales et à leur promotion",
+      "resume": "Au scrutin décisif, le texte inscrit les langues régionales au patrimoine, autorise leur enseignement immersif (article 4) et leurs signes diacritiques à l'état civil (article 9), rend obligatoire un accord de financement entre la commune de résidence et certaines écoles privées enseignant une langue régionale (article 6), en fait une matière de l'horaire normal par convention (article 7) et permet une signalétique traduite. Le Conseil constitutionnel a ensuite censuré les articles 4 et 9.",
+      "droits": [
+        {
+          "code": "discriminations",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "onu-ol-fra-3-2022"
+          ],
+          "justification": "Le texte voté ouvre l'enseignement immersif et l'usage des signes diacritiques à l'état civil. Trois rapporteurs spéciaux de l'ONU estiment que la censure de ces deux mesures « peut porter atteinte à la dignité, à la liberté, à l'égalité et à la non-discrimination » des personnes de langues minoritaires, et rappellent que le Pacte relatif aux droits civils et politiques protège contre toute discrimination, « notamment de langue »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Contrôle de constitutionnalité : le Conseil constitutionnel a censuré les articles 4 et 9. L'enseignement immersif méconnaît selon lui l'article 2 de la Constitution, aux termes duquel la langue de la République est le français. Sa décision n'examine pas le texte au regard de la non-discrimination.",
+          "sources": [
+            "cc-2021-818"
+          ]
+        },
+        {
+          "texte": "Financement des écoles privées (article 6) : la FSU Bretagne relève que le Conseil constitutionnel, en validant cet article, arbitre dans le sens d'une loi dont la finalité est « de mettre sur le même plan le financement des écoles publiques et celui des réseaux privés sous contrat ». Elle défend la priorité au service public d'éducation.",
+          "sources": [
+            "fsu-bretagne-2021"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2021-818 DC du 21 mai 2021, non-conformité partielle : deux articles censurés. Article 1er du dispositif : « Les articles 4 et 9 de la loi relative à la protection patrimoniale des langues régionales et à leur promotion sont contraires à la Constitution. » Article 2 : « Le sixième alinéa de l'article L. 442-5-1 du code de l'éducation, dans sa rédaction résultant de l'article 6 de la même loi, est conforme à la Constitution. »",
+      "note": "Scrutin décisif : 2e lecture, 08/04/2021, dernier vote de l'AN sur l'ensemble ; le texte y devient définitif. On qualifie le texte voté, articles 4 et 9 compris (règle 6) ; leur censure s'affiche à côté. Aucun amendement clé (règle 11). Suppression de l'article 2 ter, devenu l'article 4 : non retenue, les sources ne s'accordent pas sur le sens de l'enseignement immersif, censuré par le Conseil constitutionnel et défendu par les rapporteurs de l'ONU. Rétablissement de l'article 2 quinquies, devenu l'article 6 : non retenu, le Conseil valide cette mesure et aucune source admise lue n'en établit le sens pour un droit de la grille.",
+      "sources": {
+        "cc-2021-818": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2021-818 DC du 21 mai 2021, loi relative à la protection patrimoniale des langues régionales et à leur promotion",
+          "date": "2021-05-21",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2021/2021818DC.htm"
+        },
+        "fsu-bretagne-2021": {
+          "auteur": "FSU Bretagne",
+          "titre": "Décision du Conseil constitutionnel sur la « Loi Molac » (communiqué de presse)",
+          "date": "2021-05-27",
+          "url": "https://bretagne.fsu.fr/wp-content/uploads/sites/32/2021/05/communique-de-presse-FSU-Loi-Molac-au-CC-vdef.pdf"
+        },
+        "onu-ol-fra-3-2022": {
+          "auteur": "Rapporteurs spéciaux de l'ONU sur les minorités, les droits culturels et le droit à l'éducation",
+          "titre": "Communication OL FRA 3/2022 au gouvernement français sur la décision du Conseil constitutionnel du 21 mai 2021",
+          "date": "2022-05-31",
+          "url": "https://www.jornalet.com/documents/lettre-onu-ambassadeurdefranc.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3569",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 2e lecture (247-76)"
+        },
+        {
+          "id": "VTANR5L15V2459",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (46-0)"
+        }
+      ]
     },
     {
       "id": "lapi-2025",
@@ -5840,6 +7069,110 @@
         "sources": {},
         "note": "Conclusions de la CMP, votées par les deux chambres."
       }
+    },
+    {
+      "id": "manipulation-information-2018",
+      "dossier_an": "DLR5L15N36488",
+      "legislature": 15,
+      "titre": "Loi relative à la lutte contre la manipulation de l'information",
+      "resume": "Crée, dans les trois mois précédant une élection générale, un référé permettant au juge de faire cesser la diffusion délibérée, artificielle ou automatisée et massive de fausses informations de nature à altérer la sincérité du scrutin. Permet au CSA de refuser, suspendre ou résilier la convention d'une radio ou d'une télévision contrôlée par un État étranger ou sous son influence. Impose aux grandes plateformes des obligations de transparence en période électorale et de coopération, et complète l'éducation aux médias à l'école.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cc-2018-773",
+            "ce-394641",
+            "rsf-2018",
+            "snjcgt-2018"
+          ],
+          "justification": "Le texte permet de faire cesser une expression en ligne, ou la diffusion d'un média, en raison de sa fausseté supposée. Le Conseil constitutionnel ne valide le référé et la suspension par le CSA que sous réserve : les allégations « ne sauraient, sans que soit méconnue la liberté d'expression et de communication », justifier ces mesures que si leur caractère inexact ou trompeur est manifeste. Le Conseil d'État parle de dispositions « plus attentatoires aux libertés ». Le SNJ-CGT qualifie les propositions de « liberticides », et Reporters sans frontières en juge les solutions « inopérantes voire contre-productives »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Mesure de sens opposé : l'obligation de transparence des plateformes sur les contenus sponsorisés. Le Conseil d'État la juge « pertinente » pour informer les citoyens, et Reporters sans frontières souhaite qu'elle soit permanente.",
+          "sources": [
+            "ce-394641",
+            "rsf-2018"
+          ]
+        },
+        {
+          "texte": "Effet sur la liberté d'expression : le Conseil d'État craint que le devoir de coopération conduise les prestataires techniques à retenir « une acception large des fausses informations, au détriment de la liberté d'expression ».",
+          "sources": [
+            "ce-394641"
+          ]
+        },
+        {
+          "texte": "Efficacité du référé : le Conseil d'État relève que les fausses informations sont « délicats à qualifier juridiquement » en urgence et que la réponse du juge « risque d'intervenir trop tard ». Reporters sans frontières doute de l'efficacité de cette procédure.",
+          "sources": [
+            "ce-394641",
+            "rsf-2018"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2018-773 DC du 20 décembre 2018, conformité avec deux réserves, sans censure. Article 1er du dispositif : « Sont conformes à la Constitution : sous les réserves énoncées au paragraphe 23, l'article L. 163-2 du code électoral, dans sa rédaction issue de l'article 1 er de la loi relative à la manipulation de l'information ; sous les réserves énoncées au paragraphe 51, l'article 33-1-1 de la loi n° 86-1067 du 30 septembre 1986 relative à la liberté de communication, dans sa rédaction issue de l'article 6 de la loi déférée. » Ces réserves exigent que le caractère inexact ou trompeur des allégations, et le risque d'altération de la sincérité du scrutin, soient manifestes. La loi organique jumelle a fait l'objet d'une décision distincte (2018-774 DC).",
+      "note": "Scrutin décisif : lecture définitive du 20/11/2018, dernier vote de l'AN sur l'ensemble. Le sens se lit sur ce texte (règle 6). Texte composite (règle 4) : le sens est celui des mesures que les sources citent le plus, référé et pouvoirs du CSA ; la transparence des plateformes figure en vigilance. Aucun amendement clé (règle 11). La seule suppression mise aux voix (article 1er, 1re lecture, 15-50) n'est pas retenue : cet article réunit le référé, mis en cause, et l'obligation de transparence, jugée pertinente par le Conseil d'État, et son sens n'est donc pas univoque. Les motions de renvoi en commission et le vote sur l'article 9 ter ne sont pas affichés.",
+      "sources": {
+        "cc-2018-773": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2018-773 DC du 20 décembre 2018",
+          "date": "2018-12-20",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2018/2018773DC.htm"
+        },
+        "ce-394641": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n°s 394641-394642 sur les propositions de loi relatives à la lutte contre les fausses informations",
+          "date": "2018-04-19",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b0799_avis-conseil-etat"
+        },
+        "rsf-2018": {
+          "auteur": "Reporters sans frontières",
+          "titre": "Les contre-propositions de RSF à la proposition de loi contre « les manipulations de l'information » en France",
+          "date": "2018-06-05",
+          "url": "https://rsf.org/fr/actualites/les-contre-propositions-de-rsf-la-proposition-de-loi-contre-les-manipulations-de-linformation-en"
+        },
+        "snjcgt-2018": {
+          "auteur": "SNJ-CGT",
+          "titre": "Fakenews : le Sénat rejette la loi liberticide, les députés doivent faire de même",
+          "date": "2018-07-27",
+          "url": "https://snjcgt.fr/wp-content/uploads/sites/11/2018/07/Fakenews.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V1431",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (183-111)"
+        },
+        {
+          "id": "VTANR5L15V1214",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, nouvelle lecture (45-20)"
+        },
+        {
+          "id": "VTANR5L15V998",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (52-22)"
+        },
+        {
+          "id": "VTANR5L15V1210",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, nouvelle lecture (29-69)"
+        },
+        {
+          "id": "VTANR5L15V842",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (15-48)"
+        }
+      ]
     },
     {
       "id": "mariage-sejour-irregulier-2025",
@@ -7112,6 +8445,72 @@
       }
     },
     {
+      "id": "parquet-europeen-2020",
+      "dossier_an": "DLR5L15N38588",
+      "legislature": 15,
+      "titre": "Loi relative au Parquet européen, à la justice environnementale et à la justice pénale spécialisée",
+      "resume": "Adapte la procédure pénale au Parquet européen : ses procureurs délégués enquêtent sans juge d'instruction, selon le cadre de l'enquête ou un cadre proche de l'instruction qu'ils choisissent. Le texte crée aussi une convention judiciaire d'intérêt public en matière d'environnement, qui éteint l'action publique contre une personne morale moyennant une amende et une mise en conformité, ainsi que des juridictions spécialisées dans chaque cour d'appel. Il comporte enfin des dispositions diverses de procédure pénale.",
+      "droits": [
+        {
+          "code": "police-justice",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "sm-2020",
+            "sherpa-2020"
+          ],
+          "justification": "Le Syndicat de la magistrature juge « insuffisamment contradictoire » le cadre de l'enquête sans accès au dossier, laissé au choix du procureur européen délégué, et consacre un point à « un recul des droits des parties », faute de juge d'instruction. Sherpa demande que ce nouvel acteur « ne se traduise pas par un recul des garanties procédurales des parties civiles »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Environnement : le Syndicat de la magistrature juge ces articles « nettement insuffisants » et redoute que la convention judiciaire ne soit « pas dissuasive ». Sherpa demande d'y renoncer, cet outil permettant selon elle aux délinquants « d'acheter leur innocence ». Le Conseil d'État estime au contraire qu'elle est « de nature à contribuer à assurer une plus grande effectivité et un meilleur respect des prescriptions du code de l'environnement ».",
+          "sources": [
+            "sm-2020",
+            "sherpa-2020",
+            "ce-2020"
+          ]
+        },
+        {
+          "texte": "Garanties : le Conseil d'État considère que ces dispositions sur le Parquet européen « ne sont pas contraires aux exigences constitutionnelles », les actes les plus coercitifs restant soumis à l'autorisation du juge des libertés et de la détention.",
+          "sources": [
+            "ce-2020"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision du Conseil avant la promulgation du 24 décembre 2020.",
+      "note": "Scrutin décisif : dernier vote public, sur le texte du 09/12/2020. Le texte de la commission mixte paritaire, modifié par un amendement, a été adopté à l'Assemblée le 16/12/2020 sans scrutin public (règle 9). Le sens se lit donc sur le texte de 1re lecture (règle 6). Le droit à un environnement sain n'est pas qualifié : les sources s'opposent sur la convention judiciaire, et la critique d'insuffisance relève de la vigilance (règle 5). Aucun amendement clé : aucun amendement n'a fait l'objet d'un scrutin public. Aucune motion de rejet n'a été mise aux voix.",
+      "sources": {
+        "ce-2020": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 399314 sur un projet de loi relatif au Parquet européen et à la justice pénale spécialisée",
+          "date": "2020-01-23",
+          "url": "https://conseil-etat.fr/content/download/154312/document/399314.pdf"
+        },
+        "sherpa-2020": {
+          "auteur": "Sherpa",
+          "titre": "Parquet européen et justice pénale spécialisée : nos propositions pour un projet de loi plus ambitieux",
+          "date": "2020-11-18",
+          "url": "https://www.asso-sherpa.org/parquet-europeen-et-justice-penale-specialisee-nos-propositions-pour-un-projet-de-loi-plus-ambitieux"
+        },
+        "sm-2020": {
+          "auteur": "Syndicat de la magistrature",
+          "titre": "Observations sur le projet de loi relatif au parquet européen et à la justice pénale spécialisée",
+          "date": "2020-02-17",
+          "url": "https://www.syndicat-magistrature.fr/documents/363/parquet-europe-en-vd-compressed-1.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3298",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, dernier vote public, sur le texte du 09/12/2020 (81-4)"
+        }
+      ]
+    },
+    {
       "id": "partage-valeur-2023",
       "dossier_an": "DLR5L16N47979",
       "legislature": 16,
@@ -7607,6 +9006,268 @@
         "sources": {},
         "note": "Conclusions de la CMP, votées par les deux chambres."
       }
+    },
+    {
+      "id": "plf-2018",
+      "dossier_an": "DLR5L15N35854",
+      "legislature": 15,
+      "titre": "Loi de finances 2018",
+      "resume": "La loi fixe le budget de l'État pour 2018. Son article 126 (article 52 du projet) supprime de façon graduelle l'aide personnalisée au logement destinée à l'accession à la propriété. Il crée une « réduction de loyer de solidarité », appliquée par les bailleurs sociaux aux locataires dont les ressources sont inférieures à certains plafonds, et réduit l'aide personnalisée au logement d'une fraction de cette réduction, comprise entre 90 % et 98 %.",
+      "droits": [
+        {
+          "code": "logement",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "hclpd-2020-07",
+            "collectif-logement-2020-06"
+          ],
+          "justification": "Pour le Haut Comité pour le logement des personnes défavorisées, la réduction de loyer de solidarité est « un dispositif de taxation des bailleurs sociaux », qui ponctionne leurs fonds propres de 1,3 milliard d'euros par an, en « freinant l’investissement dans la construction sociale et la réhabilitation du parc ». Six associations, dont la Fondation Abbé Pierre et ATD Quart Monde, écrivent que « les coupes dans les APL se sont multipliées » depuis 2017 et que l'aide à l'accession, « qui permettait à des accédants à la propriété modestes de rembourser leur crédit, et de libérer des logements sociaux, a été éteinte ». Ces deux sources sont postérieures au vote et portent sur la mesure telle qu'elle a été votée."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "Décision 2017-758 DC du 28 décembre 2017, non-conformité partielle. Les griefs contre l'article 126 (égalité devant la loi et les charges publiques, liberté contractuelle, garantie des droits, compétence du législateur) sont écartés, et les dispositions contestées déclarées conformes. Sont censurés le second alinéa du A du paragraphe IX de l'article 31 (égalité) et l'article 85 (répartition de la cotisation sur la valeur ajoutée entre la métropole de Lyon et la région Auvergne-Rhône-Alpes). Les articles 32, 127, 145, 150, 152 et 153 sont censurés parce qu'ils n'ont pas leur place dans une loi de finances.",
+      "note": "Scrutin décisif : dernier vote public, sur le texte du 21/11/2017. Les lectures suivantes ne comptent aucun scrutin public sur l'ensemble au catalogue (règle 9). Le sens se lit donc sur le texte de 1re lecture, article 52 compris, tel que modifié par l'amendement du Gouvernement (70-17). Un amendement clé : la suppression de l'article 52, en 1re lecture, seule lecture où des suppressions ont été mises aux voix (règle 11). Voter cette suppression va contre le texte. La baisse forfaitaire de 5 euros de l'aide au logement, en vigueur depuis le 1er octobre 2017, précède ce vote et n'entre pas dans le jugement.",
+      "sources": {
+        "collectif-logement-2020-06": {
+          "auteur": "Habitat et Humanisme, Secours Catholique-Caritas France, Fondation Abbé Pierre, ATD Quart Monde, Solidarités nouvelles pour le logement, Association DALO",
+          "titre": "15 propositions pour permettre l'accès au parc social des ménages à faibles ressources",
+          "date": "2020-06",
+          "url": "https://www.fondationpourlelogement.fr/wp-content/uploads/import/sites/default/files/cahier_de_propositions_web.pdf"
+        },
+        "hclpd-2020-07": {
+          "auteur": "Haut Comité pour le logement des personnes défavorisées",
+          "titre": "Renforcer les aides personnelles au logement à la sortie de la crise sanitaire",
+          "date": "2020-07",
+          "url": "https://www.hclpd.gouv.fr/IMG/pdf/avis_renforcer_les_apl-2.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V272",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, dernier vote public, sur le texte du 21/11/2017 (356-175)"
+        },
+        {
+          "id": "VTANR5L15V146",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (46-104)"
+        },
+        {
+          "id": "VTANR5L15V220",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 52, réduction de loyer de solidarité et baisse de l'aide personnalisée au logement, 1re lecture, rejetée (31-76)"
+        }
+      ]
+    },
+    {
+      "id": "plf-2019",
+      "dossier_an": "DLR5L15N36733",
+      "legislature": 15,
+      "titre": "Loi de finances 2019",
+      "resume": "La loi fixe le budget de l'État pour 2019. Son article 81, dans le texte voté, exige d'un étranger non européen résidant en Guyane quinze ans de détention d'un titre de séjour autorisant à travailler pour bénéficier du revenu de solidarité active, contre cinq ans ailleurs hors Mayotte, et cinq ans pour une personne isolée qui assume la charge d'enfants ou une femme isolée enceinte, à qui aucun délai n'est demandé ailleurs. Son article 210 limite à 0,3 % la revalorisation des aides au logement et supprime celle de la prime d'activité et de l'allocation aux adultes handicapés.",
+      "droits": [
+        {
+          "code": "logement",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "collectif-logement-2020-06",
+            "hclpd-2020-07"
+          ],
+          "justification": "L'article 210 fixe à 0,3 % la revalorisation des paramètres de calcul des aides au logement. Six associations, dont la Fondation Abbé Pierre et ATD Quart Monde, y voient « un quasi-gel à 0,3 % en 2019 et 2020, loin du niveau réel de l’inflation ». Le Haut Comité pour le logement des personnes défavorisées range cette « revalorisation, dite maîtrisée, de 0,3 % » parmi les réductions de ces aides depuis 2017."
+        },
+        {
+          "code": "etrangers",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cc-2018-777"
+          ],
+          "justification": "Le Conseil constitutionnel censure les délais propres à la Guyane : « la différence de traitement instituée pour l'accès au revenu de solidarité active ne saurait être regardée comme justifiée au regard de l'objet de la loi » et elle méconnaît le principe d'égalité devant la loi. Le texte qualifié est celui du vote, mesure comprise (règle 6). Le droit au RSA de ces personnes était soumis à un délai de cinq ans au jour du vote."
+        }
+      ],
+      "etiquettes": [
+        "outre-mer"
+      ],
+      "vigilance": [],
+      "conseil_constitutionnel": "Décision 2018-777 DC du 28 décembre 2018, non-conformité partielle. Les délais propres à la Guyane pour le revenu de solidarité active (troisième à cinquième alinéas du paragraphe I de l'article 81, et les 1° et 2° de son paragraphe IV, qui en sont indissociables) sont censurés pour méconnaissance du principe d'égalité. À l'article 210, les dispositions relatives à 2020 sont censurées parce qu'elles n'ont pas leur place dans la loi de finances pour 2019 ; le reste, relatif à 2019, est déclaré conforme. Les articles 29, 52, 53, 54, 128, 221, 236, 249 et 251, le paragraphe XIV de l'article 83 et le paragraphe III de l'article 130 sont censurés pour le même motif.",
+      "note": "Texte composite : le droit principal est celui de la mesure la plus citée par les sources admises, le quasi-gel des aides au logement (règle 4). Le délai pour le revenu de solidarité active en Guyane ne vise que des étrangers (règle 3). Scrutin décisif : lecture définitive, 20/12/2018. Le sens se lit sur ce texte, article 81 compris, censuré ensuite (règle 6). Aucun amendement clé : la dernière lecture où des suppressions ont été mises aux voix est la nouvelle lecture (règle 11), et ses suppressions portent sur des mesures fiscales (articles 4, 16 decies, 18 bis D, 19, 76). La suppression de l'article 65, futur article 210, n'a été votée qu'en 1re lecture : elle n'est pas retenue.",
+      "sources": {
+        "cc-2018-777": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2018-777 DC",
+          "date": "2018-12-28",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2018/2018777DC.htm"
+        },
+        "collectif-logement-2020-06": {
+          "auteur": "Habitat et Humanisme, Secours Catholique-Caritas France, Fondation Abbé Pierre, ATD Quart Monde, Solidarités nouvelles pour le logement, Association DALO",
+          "titre": "15 propositions pour permettre l'accès au parc social des ménages à faibles ressources",
+          "date": "2020-06",
+          "url": "https://www.fondationpourlelogement.fr/wp-content/uploads/import/sites/default/files/cahier_de_propositions_web.pdf"
+        },
+        "hclpd-2020-07": {
+          "auteur": "Haut Comité pour le logement des personnes défavorisées",
+          "titre": "Renforcer les aides personnelles au logement à la sortie de la crise sanitaire",
+          "date": "2020-07",
+          "url": "https://www.hclpd.gouv.fr/IMG/pdf/avis_renforcer_les_apl-2.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V1596",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (182-52)"
+        },
+        {
+          "id": "VTANR5L15V1595",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, nouvelle lecture (66-27)"
+        },
+        {
+          "id": "VTANR5L15V1429",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (345-200)"
+        },
+        {
+          "id": "VTANR5L15V1574",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, nouvelle lecture (10-51)"
+        }
+      ]
+    },
+    {
+      "id": "plf-2020",
+      "dossier_an": "DLR5L15N37615",
+      "legislature": 15,
+      "titre": "Loi de finances 2020",
+      "resume": "La loi fixe le budget de l'État pour 2020. Son article 154 autorise, à titre expérimental et pour trois ans, les administrations fiscale et douanière à collecter et à exploiter de manière automatisée les contenus publics des plateformes en ligne, dont les réseaux sociaux. Son article 264 permet de subordonner la prise en charge de certains soins programmés et non urgents, au titre de l'aide médicale de l'État, à un délai d'ancienneté d'au plus neuf mois. Son article 200 limite à 0,3 % la revalorisation des aides au logement, de l'allocation aux adultes handicapés et de la prime d'activité.",
+      "droits": [
+        {
+          "code": "vie-privee",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cnil-2019-114",
+            "cc-2019-796",
+            "lqdn-2019-12-23"
+          ],
+          "justification": "La CNIL, saisie du projet, estime qu'« une atteinte particulièrement importante au droit au respect de la vie privée et à la protection des données à caractère personnel est susceptible d'être caractérisée ». Le Conseil constitutionnel relève que le dispositif permet « de collecter de façon indifférenciée d'importants volumes de données, relatives à un grand nombre de personnes » et qu'il porte atteinte à la vie privée ; il en censure une partie comme disproportionnée et valide le reste. La Quadrature du Net y voit « une atteinte manifestement disproportionnée au droit à la vie privée »."
+        },
+        {
+          "code": "libertes",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cnil-2019-114",
+            "cc-2019-796"
+          ],
+          "justification": "La CNIL observe que la collecte « est susceptible de modifier, de manière significative, le comportement des internautes qui pourraient alors ne plus être en mesure de s'exprimer librement ». Le Conseil constitutionnel juge que ces dispositions, « susceptibles de dissuader d'utiliser de tels services », portent atteinte à la liberté d'expression et de communication (règle 3)."
+        },
+        {
+          "code": "logement",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "collectif-logement-2020-06",
+            "hclpd-2020-07"
+          ],
+          "justification": "L'article 200 fixe à 0,3 % la revalorisation des aides au logement pour 2020. Six associations, dont la Fondation Abbé Pierre et ATD Quart Monde, y voient « un quasi-gel à 0,3 % en 2019 et 2020, loin du niveau réel de l’inflation ». Le Haut Comité pour le logement des personnes défavorisées range cette « revalorisation, dite maîtrisée, de 0,3 % » parmi les réductions de ces aides depuis 2017."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "Aide médicale de l'État (article 264) : le délai d'ancienneté ne vise que des étrangers et limite l'accès à certains soins. Avant son dépôt, le Défenseur des droits écrit que « restreindre l’AME revient à freiner l’accès à la médecine de ville, à retarder la prise en charge », et la CNCDH que « restreindre le dispositif de l’AME est donc contraire à une politique de santé publique responsable ». Ces sources de 2019 ne citent pas ce délai. Médecins du Monde le range parmi les limites de l'aide, en 2024.",
+          "sources": [
+            "ddd-19-12",
+            "cncdh-2019-10-02",
+            "mdm-2024-09"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2019-796 DC du 27 décembre 2019, non-conformité partielle. À l'article 154, la collecte est censurée pour la recherche du défaut ou du retard de déclaration après mise en demeure (mots « b et ») : l'administration connaît déjà le manquement, et l'atteinte à la vie privée et à la liberté d'expression n'est pas proportionnée. Le reste du paragraphe I est déclaré conforme, et le Conseil invite le législateur à tirer les conséquences de l'évaluation avant toute pérennisation. L'article 264 (délai d'ancienneté de l'aide médicale de l'État) et l'article 200 (revalorisation) sont déclarés conformes. L'article 217, le paragraphe VIII de l'article 21, les articles 27, 117, 151, 152, 183, 226, 227, 231, 238 et 277, le paragraphe IV de l'article 201, les 1° à 4° de l'article 221, les paragraphes II et III de l'article 40 et le 4° du paragraphe II de l'article 181 sont censurés pour des raisons de procédure, sans examen de leur contenu.",
+      "note": "Texte composite : le droit principal est celui de la mesure que les sources admises mettent le plus en cause (règle 4), la collecte de données sur les plateformes, dispositif expérimental (étiquette). Scrutin décisif : lecture définitive, 19/12/2019. Aucun amendement clé : la dernière lecture où des suppressions ont été mises aux voix est la nouvelle lecture (règle 11), et ses suppressions portent sur les articles 16 (mesure fiscale) et 35 (relations financières entre l'État et la sécurité sociale). La suppression de l'article 57, futur article 154 (21-66), n'a été votée qu'en 1re lecture : elle n'est pas retenue.",
+      "sources": {
+        "cc-2019-796": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2019-796 DC",
+          "date": "2019-12-27",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2019/2019796DC.htm"
+        },
+        "cncdh-2019-10-02": {
+          "auteur": "CNCDH",
+          "titre": "Lettre de la présidence au Premier ministre concernant l'aide médicale de l'État",
+          "date": "2019-10-02",
+          "url": "https://www.cncdh.fr/publications/lettre-de-la-presidence-au-premier-ministre-concernant-laide-medicale-de-letat"
+        },
+        "cnil-2019-114": {
+          "auteur": "CNIL",
+          "titre": "Délibération n° 2019-114 du 12 septembre 2019 portant avis sur le projet d'article 9 du projet de loi de finances pour 2020",
+          "date": "2019-09-12",
+          "url": "https://www.cnil.fr/sites/cnil/files/atoms/files/d2019-114_projet_article_9_plf_vs.pdf"
+        },
+        "collectif-logement-2020-06": {
+          "auteur": "Habitat et Humanisme, Secours Catholique-Caritas France, Fondation Abbé Pierre, ATD Quart Monde, Solidarités nouvelles pour le logement, Association DALO",
+          "titre": "15 propositions pour permettre l'accès au parc social des ménages à faibles ressources",
+          "date": "2020-06",
+          "url": "https://www.fondationpourlelogement.fr/wp-content/uploads/import/sites/default/files/cahier_de_propositions_web.pdf"
+        },
+        "ddd-19-12": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis 19-12 du 9 octobre 2019 relatif au projet de loi de finances pour 2020",
+          "date": "2019-10-09",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=19248"
+        },
+        "hclpd-2020-07": {
+          "auteur": "Haut Comité pour le logement des personnes défavorisées",
+          "titre": "Renforcer les aides personnelles au logement à la sortie de la crise sanitaire",
+          "date": "2020-07",
+          "url": "https://www.hclpd.gouv.fr/IMG/pdf/avis_renforcer_les_apl-2.pdf"
+        },
+        "lqdn-2019-12-23": {
+          "auteur": "La Quadrature du Net",
+          "titre": "Contribution extérieure sur l'article 57 du projet de loi de finances pour 2020 (affaire n° 2019-796 DC)",
+          "date": "2019-12-23",
+          "url": "https://www.laquadrature.net/wp-content/uploads/sites/8/2019/12/plf2020-art57_contribution_exterieure_lqdn.pdf"
+        },
+        "mdm-2024-09": {
+          "auteur": "Médecins du Monde",
+          "titre": "Aide médicale de l'État : un dispositif essentiel de santé publique (argumentaire)",
+          "date": "2024-09-01",
+          "url": "https://www.medecinsdumonde.org/app/uploads/2024/09/Argumentaire-AME-MdM-sept-2024.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V2407",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (77-30)"
+        },
+        {
+          "id": "VTANR5L15V2387",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, nouvelle lecture (36-13)"
+        },
+        {
+          "id": "VTANR5L15V2307",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (354-191)"
+        }
+      ]
     },
     {
       "id": "plf-2023",
@@ -9535,6 +11196,289 @@
       ]
     },
     {
+      "id": "programmation-justice-2019",
+      "dossier_an": "DLR5L15N36626",
+      "legislature": 15,
+      "titre": "Loi de programmation 2018-2022 et de réforme pour la justice",
+      "resume": "Loi de programmation et de réforme de la justice, adoptée en lecture définitive le 18 février 2019. Elle élargit les pouvoirs d'enquête (interceptions, géolocalisation, perquisitions, techniques spéciales), réduit certains contrôles par un magistrat, étend l'amende forfaitaire délictuelle à l'usage de stupéfiants et le recours à la visioconférence, expérimente une cour criminelle sans jury et réécrit l'échelle des peines. Au civil, elle fusionne tribunaux d'instance et de grande instance dans le tribunal judiciaire, supprime la phase de conciliation du divorce et développe le règlement amiable préalable.",
+      "droits": [
+        {
+          "code": "police-justice",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-2018",
+            "ddd-18-22",
+            "cc-2019-778"
+          ],
+          "justification": "La CNCDH juge que « les pouvoirs de la police se voient une nouvelle fois accrus et le rôle du parquet également renforcé » et estime « inacceptable » la réduction du contrôle du parquet sur la prolongation de la garde à vue. Le Défenseur des droits relève « l'augmentation des pouvoirs des enquêteurs et des procureurs avec un effacement du magistrat du siège ». Le Conseil constitutionnel censure notamment plusieurs mesures d'enquête."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-2018",
+            "ddd-18-22",
+            "cc-2019-778"
+          ],
+          "justification": "La CNCDH s'inquiète de l'extension de « mesures policières attentatoires au premier chef à la vie privée » (interceptions, géolocalisation, perquisitions). Sur les écoutes, le Défenseur des droits juge qu'« une mesure aussi intrusive ne peut être autorisée que par un juge offrant des garanties d'indépendance et d'impartialité suffisantes ». Le Conseil censure les interceptions étendues et une perquisition sans autorisation d'un magistrat du siège, au nom de la vie privée ou de l'inviolabilité du domicile."
+        },
+        {
+          "code": "enfants",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-18-22"
+          ],
+          "justification": "Le Défenseur des droits, en sa qualité de Défenseur des enfants, estime que la suppression de la conciliation dans le divorce et le caractère facultatif du recours au juge pour les mesures provisoires présentent « des risques d'atteintes aux droits des parties et plus particulièrement des enfants concernés ». Il met aussi en cause la révision des pensions alimentaires par les caisses, sans examen individualisé des besoins de l'enfant."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Accès au juge civil : le Défenseur des droits estime que « la suppression des tribunaux d'instance posera des difficultés d'accès au juge, en particulier, pour les populations les plus vulnérables ». La CNCDH craint « un accès au juge et à la justice dégradé » du fait de la réforme d'ensemble, mais son avis ne porte que sur le pénal.",
+          "sources": [
+            "ddd-18-22",
+            "cncdh-2018"
+          ]
+        },
+        {
+          "texte": "Mesures de sens opposé (règle 4) : la CNCDH « approuve la simplification du dépôt de plainte », relève que le nouveau recours contre une perquisition « renforce le droit à un recours judiciaire » et « se félicite » de l'obligation de motiver la peine aux assises. Elle ajoute des réserves sur les deux premiers points.",
+          "sources": [
+            "cncdh-2018"
+          ]
+        },
+        {
+          "texte": "Personnes détenues : le Défenseur des droits regrette que le projet de construction de places de prison emporte « un nouveau report du moratoire sur l'encellulement individuel ». La CNCDH regrette que les moyens aillent davantage à la construction de places qu'à la réinsertion.",
+          "sources": [
+            "ddd-18-22",
+            "cncdh-2018-cp"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2019-778 DC du 21 mars 2019, non-conformité partielle avec réserves. Dispositif, article 1er : sont contraires à la Constitution l'article 7 (révision des pensions alimentaires par les caisses) ; les articles 18 et 21 (sans lien avec le projet) ; le 2° du V de l'article 33 (copie des jugements) ; l'article 37 (incompatibilités des magistrats administratifs) ; les II, III et IV de l'article 44 et des mentions liées (interceptions) ; des mots du 2° du III de l'article 46 et son quinzième alinéa ; le VI de l'article 47 ; les I et III de l'article 49 ; le 3° du X de l'article 54 ; des mots du V de l'article 62 ; le 1° de l'article 103 et l'article 104. Article 2 : six réserves d'interprétation, dont l'une sur l'amende forfaitaire délictuelle (article 58). Article 3 : de nombreuses autres dispositions contestées sont déclarées conformes.",
+      "note": "Scrutin décisif : l'ensemble en lecture définitive du 18 février 2019 (31-11). Le texte est composite : le sens de chaque droit suit les mesures que les sources citent le plus (règle 4). Deux amendements clés (règle 11), tous deux en nouvelle lecture, dernière lecture où des suppressions ont été mises aux voix. L'article 6 (révision des pensions alimentaires par les caisses) est mis en cause par le Défenseur des droits et censuré par le Conseil constitutionnel sous le numéro 7 de la loi. L'article 53 (fusion des tribunaux) est mis en cause par le Défenseur des droits. La suppression de l'article 2 (règlement amiable) n'est pas retenue : le Défenseur des droits est favorable au principe, sous garanties. Une motion de rejet préalable est affichée.",
+      "sources": {
+        "cc-2019-778": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2019-778 DC du 21 mars 2019, loi de programmation 2018-2022 et de réforme pour la justice",
+          "date": "2019-03-21",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2019/2019778DC.htm"
+        },
+        "cncdh-2018": {
+          "auteur": "CNCDH",
+          "titre": "Avis sur le projet de loi de programmation 2018-2022 et de réforme de la justice",
+          "date": "2018-11-20",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/181120_Avis%20sur%20le%20projet%20de%20r%C3%A9forme%20de%20la%20justice%20_penal%20pour%20impression_0.pdf"
+        },
+        "cncdh-2018-cp": {
+          "auteur": "CNCDH",
+          "titre": "Réforme de la justice pénale : vers un nouveau recul du respect des droits fondamentaux (communiqué)",
+          "date": "2018-11-20",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/181120_CP%20Avis%20r%C3%A9forme%20de%20justice%20_%20penal.pdf"
+        },
+        "ddd-18-22": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis 18-22 du 27 septembre 2018 relatif au projet de loi n° 463 de programmation 2018-2022 et de réforme pour la justice",
+          "date": "2018-09-27",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=17926"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V1708",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (31-11)"
+        },
+        {
+          "id": "VTANR5L15V1633",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, nouvelle lecture (325-213)"
+        },
+        {
+          "id": "VTANR5L15V1568",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (88-83)"
+        },
+        {
+          "id": "VTANR5L15V1614",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, nouvelle lecture (57-95)"
+        },
+        {
+          "id": "VTANR5L15V1627",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 6, révision des pensions alimentaires par les caisses, nouvelle lecture (28-34)"
+        },
+        {
+          "id": "VTANR5L15V1631",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 53, fusion des tribunaux d'instance et de grande instance, nouvelle lecture (8-21)"
+        }
+      ]
+    },
+    {
+      "id": "programmation-recherche-2020",
+      "dossier_an": "DLR5L15N40171",
+      "legislature": 15,
+      "titre": "Loi de programmation de la recherche pour les années 2021 à 2030 et portant diverses dispositions relatives à la recherche et à l'enseignement supérieur",
+      "resume": "Le texte programme les crédits de la recherche jusqu'en 2030 et modifie les recrutements et les carrières à l'université et dans la recherche. Il crée aussi un délit (article 20 bis AA, devenu l'article 38 de la loi) : pénétrer ou se maintenir sans autorisation dans un établissement d'enseignement supérieur « dans le but de troubler la tranquillité ou le bon ordre de l'établissement ». C'est sur ce délit que porte la qualification : le financement de la recherche n'entre pas dans la grille.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "fsu-2020-11-15",
+            "sud-education-2020-12-23",
+            "snesup-2020-11-19"
+          ],
+          "justification": "Selon ces syndicats, le délit peut viser les mobilisations à l'université. Quatre syndicats de la FSU y voient « une atteinte disproportionnée à la liberté d'expression et aux libertés syndicales ». Pour le SNESUP-FSU, il « remet potentiellement en cause les libertés universitaires, la liberté d'expression et la liberté syndicale ». SUD Éducation parle d'une « mesure liberticide » visant à « criminaliser les mouvements étudiants et de personnels sur les campus »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "Décision 2020-810 DC du 21 décembre 2020, non-conformité partielle, avec une réserve. Article 1er du dispositif : sont contraires à la Constitution « l'article 38 » et « l'article 42 ». L'article 38 (le délit) est censuré pour un motif de procédure, comme sans lien avec le projet initial, « sans que le Conseil constitutionnel ne préjuge de la conformité du contenu de l'article 38 aux autres exigences constitutionnelles ». L'article 42 porte sur l'importation et l'exportation de restes humains à des fins de recherche. Une réserve (article 2 et paragraphe 11) protège l'indépendance des enseignants-chercheurs dans la titularisation.",
+      "note": "Scrutin décisif : vote du 17/11/2020 sur le texte de la commission mixte paritaire, dernier vote de l'AN sur l'ensemble (règle 9). Le sens se lit sur ce texte, délit compris, même s'il a été censuré ensuite (règle 6). Le financement et l'organisation de la recherche sont hors grille (règle 2) : seul le délit fonde la qualification. Sens (règle 4) : au jour du vote, ce délit n'existe pas pour l'enseignement supérieur. Le vote de 1re lecture (48-20) est affiché : le texte ne contenait pas encore le délit. Aucun amendement clé (règle 11) : le délit a été introduit au Sénat, et aucun scrutin public de l'AN ne porte sur sa suppression. Les autres scrutins sur amendement, tous en 1re lecture, ne suppriment ni ne rétablissent un article qui porte une mesure mise en cause. Les votes sur les articles ne sont pas retenus.",
+      "sources": {
+        "fsu-2020-11-15": {
+          "auteur": "SNESUP-FSU, SNCS-FSU, SNASUB-FSU, SNEP-FSU",
+          "titre": "Lettre aux députés sur la loi de programmation de la recherche",
+          "date": "2020-11-15",
+          "url": "https://www.snesup.fr/sites/default/files/article/documents/lettre_aux_deputes-20201115.pdf"
+        },
+        "snesup-2020-11-19": {
+          "auteur": "SNESUP-FSU",
+          "titre": "Lettre flash n° 24, appel de la commission administrative du 19 novembre 2020",
+          "date": "2020-11-19",
+          "url": "https://snesup.fr/sites/default/files/article/documents/lettre-flash_ndeg24-20201119.pdf"
+        },
+        "sud-education-2020-12-23": {
+          "auteur": "Fédération SUD Éducation",
+          "titre": "Le Conseil constitutionnel valide la LPR, mais retoque le délit d'entrave !",
+          "date": "2020-12-23",
+          "url": "https://sudeducation.org/wp-content/uploads/2020/12/CP-LPR-CC-1.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3188",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (188-83)"
+        },
+        {
+          "id": "VTANR5L15V2881",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, sans le délit (48-20)"
+        },
+        {
+          "id": "VTANR5L15V3187",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, texte de la CMP (30-183)"
+        },
+        {
+          "id": "VTANR5L15V2867",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (15-50)"
+        }
+      ]
+    },
+    {
+      "id": "prorogation-etat-urgence-2017",
+      "dossier_an": "DLR5L15N35829",
+      "legislature": 15,
+      "titre": "Loi prorogeant l'application de la loi n° 55-385 du 3 avril 1955 relative à l'état d'urgence",
+      "resume": "Proroge du 16 juillet au 1er novembre 2017 l'état d'urgence déclaré en novembre 2015, avec le pouvoir d'ordonner des perquisitions administratives. Réécrit l'interdiction de séjour, que le Conseil constitutionnel avait déclarée contraire à la Constitution avec effet au 15 juillet 2017 : elle vise désormais toute personne dont le comportement constitue, selon des raisons sérieuses, une menace pour la sécurité et l'ordre publics.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-2016",
+            "amnesty-2017",
+            "cc-2017-635"
+          ],
+          "justification": "Le texte prolonge un régime qui permet d'interdire le séjour, d'assigner à résidence et d'interdire des rassemblements. La CNCDH, sur la prorogation précédente, alerte sur « le risque d'une propagation des restrictions à l'exercice des libertés publiques » et appelle à mettre fin à l'état d'urgence. Amnesty International relève, sur ce texte, que les interdictions individuelles de manifester censurées le 9 juin 2017 « ont été réintroduites » et que les préfets pourront en prendre « sur des bases très vagues et floues »."
+        },
+        {
+          "code": "police-justice",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-2016",
+            "onu-2019"
+          ],
+          "justification": "Ces mesures sont prises par l'administration, sans décision préalable d'un juge. La CNCDH écrit : « Le juge ne décide plus l'ingérence dans les droits de l'individu. Son intervention se fait après coup ». La rapporteuse spéciale de l'ONU relève que les prorogations « ont été marquées par un recours important et fréquent aux pouvoirs exceptionnels », dont plus de 4 000 perquisitions administratives."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "Mise en œuvre : la CNCDH relève que ces mesures touchent « presque exclusivement des personnes de confession musulmane réelle ou supposée ». La rapporteuse spéciale de l'ONU fait état d'« une stigmatisation et une polarisation ».",
+          "sources": [
+            "cncdh-2016",
+            "onu-2019"
+          ]
+        },
+        {
+          "texte": "Usage hors terrorisme : la CNCDH indique que des interdictions de séjour ou des zones de protection « ont ainsi été décidées en dehors de tout risque terroriste ».",
+          "sources": [
+            "cncdh-2016"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision du Conseil sur cette loi avant sa promulgation du 11 juillet 2017. Le texte fait suite à la décision 2017-635 QPC du 9 juin 2017, sur la loi de 1955 : « Le 3 ° de l'article 5 de la loi n° 55-385 du 3 avril 1955 relative à l'état d'urgence est contraire à la Constitution », abrogation reportée au 15 juillet 2017.",
+      "note": "Scrutin décisif : vote de l'AN sur l'ensemble du 06/07/2017, seul scrutin public du dossier. L'AN a adopté sans modification le texte du Sénat, qui devient définitif. Sens et date de référence (règle 4) : au jour du vote, l'état d'urgence prend fin le 15/07/2017, et l'interdiction de séjour est abrogée à la même date. Prolonger ce régime restrictif avant son échéance restreint les droits. Rétablir une mesure abrogée par le Conseil constitutionnel les restreint aussi, même avec des garanties nouvelles. Aucun amendement clé (règle 11) : aucun amendement n'a été mis aux voix par scrutin public. Cette loi compte pour 1, comme chaque loi successive d'une même crise, sans regroupement (règle 18).",
+      "sources": {
+        "amnesty-2017": {
+          "auteur": "Amnesty International France",
+          "titre": "État d'urgence : le tour de passe-passe pour le rendre permanent",
+          "date": "2017-07-11",
+          "url": "https://www.amnesty.fr/actualites/etat-durgence-le-tour-de-passe-passe-pour-le-rendre-permanent/"
+        },
+        "cc-2017-635": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2017-635 QPC du 9 juin 2017",
+          "date": "2017-06-09",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2017/2017635QPC.htm"
+        },
+        "cncdh-2016": {
+          "auteur": "CNCDH",
+          "titre": "Avis « Contre un état d'urgence permanent »",
+          "date": "2016-12-15",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/16.12.15%20Avis%20Contre%20un%20%C3%A9tat%20d%27urgence%20permanent.docx"
+        },
+        "onu-2019": {
+          "auteur": "Rapporteuse spéciale de l'ONU sur les droits de l'homme et la lutte antiterroriste",
+          "titre": "Visite en France, rapport A/HRC/40/52/Add.4",
+          "date": "2019-05-08",
+          "url": "https://documents.un.org/doc/undoc/gen/g19/134/00/pdf/g1913400.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V2",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte définitif (137-13)"
+        }
+      ]
+    },
+    {
       "id": "prorogation-eus-2020-11",
       "dossier_an": "DLR5L15N40751",
       "legislature": 15,
@@ -9928,6 +11872,200 @@
           "role": "motion",
           "pour": "contre-texte",
           "objet": "motion de rejet préalable, 1re lecture (13-130)"
+        }
+      ]
+    },
+    {
+      "id": "protection-donnees-2018",
+      "dossier_an": "DLR5L15N36220",
+      "legislature": 15,
+      "titre": "Loi relative à la protection des données personnelles",
+      "resume": "Adapte la loi Informatique et libertés au règlement européen sur la protection des données (RGPD) et transpose la directive sur les fichiers de la sphère pénale. Le texte renforce les pouvoirs de la CNIL, ouvre l'action de groupe à la réparation des préjudices et fixe à quinze ans l'âge du consentement d'un mineur en ligne. Il supprime aussi des formalités préalables et permet des décisions administratives individuelles prises sur le seul fondement d'un algorithme.",
+      "droits": [
+        {
+          "code": "vie-privee",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "cnil-2017-299",
+            "cnil-2017-12-13"
+          ],
+          "justification": "La CNIL relève que le texte donne corps à un règlement « qui constitue une avancée considérable pour la protection des données à caractère personnel » et qu'il « dote en effet le régulateur des pouvoirs nécessaires à l'exercice de ses missions », dans un contexte de « reconnaissance de nouveaux droits aux citoyens ». Le texte ajoute la réparation des préjudices à l'action de groupe (article 16 A)."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Décisions automatisées : la CNIL juge « particulièrement problématique » de lever l'interdiction des décisions administratives individuelles fondées exclusivement sur un traitement automatisé. Le projet renverse selon elle le « principe général et majeur d'intervention humaine systématique » sans garantir les mesures qu'impose le règlement. Le Conseil constitutionnel a validé ensuite cette mesure, sous les conditions qu'il rappelle.",
+          "sources": [
+            "cnil-2017-299",
+            "cc-2018-765"
+          ]
+        },
+        {
+          "texte": "Fichiers de la sphère pénale et du renseignement : la CNIL relève que le projet « n'apporte aucune garantie supérieure à ce que prévoit la Directive ». La Quadrature du Net soutient que la loi renseignement n'est pas conforme à la directive et que le projet devrait corriger ce point.",
+          "sources": [
+            "cnil-2017-299",
+            "lqdn-2018"
+          ]
+        },
+        {
+          "texte": "Données pénales : le Conseil constitutionnel censure la possibilité de traiter ces données « sous le contrôle de l'autorité publique », faute pour le législateur d'avoir défini qui peut agir et à quelles fins.",
+          "sources": [
+            "cc-2018-765"
+          ]
+        },
+        {
+          "texte": "Recherche en santé : la CNIL émet des réserves sur l'autorisation réputée acceptée en cas de silence et relève que l'information individuelle atténuée des personnes n'est pas conforme aux exigences du règlement.",
+          "sources": [
+            "cnil-2017-299"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2018-765 DC du 12 juin 2018, non-conformité partielle, sans réserve au dispositif. Article 1er du dispositif : « Les mots « sous le contrôle de l'autorité publique ou » figurant au 1 ° de l'article 13 de la loi relative à la protection des données personnelles sont contraires à la Constitution. » Sont déclarés conformes les autres dispositions contestées, dont les décisions administratives fondées sur un algorithme (2° de l'article 10 de la loi de 1978) et les traitements de données pénales par les personnes énumérées à l'article 9 de cette loi. Le Conseil précise que l'administration ne peut pas fonder une décision individuelle exclusivement sur un algorithme dont les principes de fonctionnement ne peuvent être communiqués.",
+      "note": "Scrutin décisif : dernier vote public, sur le texte du 13/02/2018 (règle 9). Les votes ultérieurs de l'AN sur ce texte n'ont pas eu lieu par scrutin public, d'après le catalogue. Le sens se lit donc sur le texte de 1re lecture (règle 6). Texte composite (règle 4) : le sens est celui des mesures que les sources admises citent le plus, le renforcement de la protection et des droits ; les décisions administratives automatisées et les autres mesures critiquées figurent en vigilance. Une grande part de ce progrès vient du règlement européen, applicable de lui-même. Aucun amendement clé (règle 11) : les deux amendements mis aux voix par scrutin public sont des articles additionnels, pas des suppressions ou des rétablissements.",
+      "sources": {
+        "cc-2018-765": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2018-765 DC du 12 juin 2018",
+          "date": "2018-06-12",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2018/2018765dc.htm"
+        },
+        "cnil-2017-12-13": {
+          "auteur": "CNIL",
+          "titre": "La CNIL publie son avis sur le projet de loi relatif à la protection des données personnelles",
+          "date": "2017-12-13",
+          "url": "https://www.cnil.fr/fr/la-cnil-publie-son-avis-sur-le-projet-de-loi-relatif-la-protection-des-donnees-personnelles"
+        },
+        "cnil-2017-299": {
+          "auteur": "CNIL",
+          "titre": "Délibération n° 2017-299 du 30 novembre 2017 portant avis sur un projet de loi d'adaptation au droit de l'Union européenne de la loi n° 78-17 du 6 janvier 1978",
+          "date": "2017-11-30",
+          "url": "https://www.cnil.fr/sites/cnil/files/atoms/files/projet_davis_cnil.pdf"
+        },
+        "lqdn-2018": {
+          "auteur": "La Quadrature du Net",
+          "titre": "Loi données personnelles : corrigeons la loi renseignement",
+          "date": "2018-01-18",
+          "url": "https://www.laquadrature.net/2018/01/18/pjl_rgpd_amendements/"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V389",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, dernier vote public, sur le texte du 13/02/2018 (505-18)"
+        }
+      ]
+    },
+    {
+      "id": "protection-enfants-2022",
+      "dossier_an": "DLR5L15N42608",
+      "legislature": 15,
+      "titre": "Loi relative à la protection des enfants",
+      "resume": "Le texte voté interdit en principe l'hébergement à l'hôtel des enfants confiés à l'aide sociale à l'enfance, sauf urgence et pour deux mois au plus, étend la prise en charge des jeunes majeurs qui lui ont été confiés et renforce le contrôle des antécédents et la représentation de l'enfant par un avocat. Pour les mineurs non accompagnés, il rend obligatoire leur présentation aux services de l'État et l'inscription au fichier d'appui à l'évaluation de la minorité, sauf minorité manifeste, et interdit de réévaluer la minorité d'un mineur déjà confié par le juge.",
+      "droits": [
+        {
+          "code": "enfants",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "cnpe-2021-enfance",
+            "hcfea-2021",
+            "cncdh-d-2021-5",
+            "ddd-21-15"
+          ],
+          "justification": "Le CNPE relève que les dispositions « remportent pour la plupart un avis favorable ». L'interdiction de l'hôtel est pour le HCFEA « une mesure attendue depuis plusieurs années » ; la CNCDH et la Défenseure des droits saluent cette interdiction de principe, et la CNCDH juge que l'évaluation préalable à l'accueil par un service « constitue un progrès »."
+        },
+        {
+          "code": "etrangers",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-d-2021-5",
+            "ddd-21-15",
+            "hcfea-2021",
+            "cnpe-2021-enfance"
+          ],
+          "justification": "La présentation obligatoire aux services de l'État et le fichier d'appui à l'évaluation de la minorité visent les mineurs non accompagnés. La CNCDH y voit un dispositif qui « relève davantage du contrôle migratoire que du droit commun de la protection de l’enfance » ; la Défenseure des droits manifeste son opposition ; le HCFEA et le CNPE sont défavorables."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Hôtels : la dérogation d'urgence subsiste. La Défenseure des droits « réitère sa recommandation visant l’interdiction totale du placement hôtelier » et estime qu'elle ne visera dans les faits que les mineurs non accompagnés. Pour le HCFEA, « Les exceptions contenues à l’article 3 relativisent la portée de cette interdiction ».",
+          "sources": [
+            "ddd-21-15",
+            "hcfea-2021",
+            "cncdh-d-2021-5"
+          ]
+        },
+        {
+          "texte": "Insuffisance d'ensemble : pour la Défenseure des droits, le texte n'est « toujours pas à la hauteur des besoins » en protection de l'enfance.",
+          "sources": [
+            "ddd-21-15"
+          ]
+        },
+        {
+          "texte": "Mesure de sens opposé pour les mineurs étrangers : le texte interdit de réévaluer la minorité d'un mineur déjà orienté ou confié par le juge, ce que la Défenseure des droits demandait, tout en craignant que ces dispositions restent sans effet.",
+          "sources": [
+            "ddd-21-15"
+          ]
+        },
+        {
+          "texte": "Le Conseil d'État estime, à l'inverse, que la présentation obligatoire aux services de l'État « n’a pas d’incidence sur la protection dont doivent bénéficier les personnes mineures ».",
+          "sources": [
+            "ce-402958"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Décisif : texte de la commission mixte paritaire, 25 janvier 2022. Pas de motion de rejet. Amendements clés : aucun. Sur les 13 scrutins d'amendements de 1re lecture, aucun ne supprime ou ne rétablit un article : ils réécrivent un article (n° 625, article 1er), complètent ou réécrivent des alinéas (hôtels, n° 35, 85, 296 et 363) ou ajoutent des articles. Les votes sur les articles (dont l'article 15 sur les mineurs non accompagnés, 33-6) ne sont pas des amendements (règle 11).",
+      "sources": {
+        "ce-402958": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 402.958 sur un projet de loi relatif à la protection des enfants",
+          "date": "2021-06-10",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b4264_avis-conseil-etat"
+        },
+        "cncdh-d-2021-5": {
+          "auteur": "CNCDH",
+          "titre": "Déclaration sur le projet de loi de protection des enfants (D-2021-5)",
+          "date": "2021-07-08",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-09/D%20-%202021%20-%205%20-%20Projet%20de%20loi%20Protection%20des%20enfants%2C%20juillet%202021.pdf"
+        },
+        "cnpe-2021-enfance": {
+          "auteur": "Conseil national de la protection de l'enfance",
+          "titre": "Avis 2021-3 relatif au projet de loi « sur l'enfance »",
+          "date": "2021-06-07",
+          "url": "https://solidarites.gouv.fr/sites/solidarite/files/2025-09/CNPE-Avis-2021-3-Projet-loi-sur-enfance-juin-2021.pdf"
+        },
+        "ddd-21-15": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 21-15 relatif au projet de loi sur la protection des enfants",
+          "date": "2021-10-15",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=21001"
+        },
+        "hcfea-2021": {
+          "auteur": "Haut Conseil de la famille, de l'enfance et de l'âge (Conseil de l'enfance et de l'adolescence)",
+          "titre": "Avis sur le projet de loi relatif à l'enfance, portant sur la protection de l'enfance",
+          "date": "2021-05-31",
+          "url": "https://cnape.fr/documents/hcfea_-conseil-de-lenfance-et-de-ladolescence_-avis-sur-le-projet-de-loi-relatif-a-lenfance"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V4347",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (109-2)"
+        },
+        {
+          "id": "VTANR5L15V3888",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (36-0)"
         }
       ]
     },
@@ -10650,6 +12788,95 @@
         "sources": {},
         "note": "Conclusions de la CMP, votées par les deux chambres."
       }
+    },
+    {
+      "id": "reforme-adoption-2022",
+      "dossier_an": "DLR5L15N39990",
+      "legislature": 15,
+      "titre": "Loi visant à réformer l'adoption",
+      "resume": "Le texte voté ouvre l'adoption aux partenaires de PACS et aux concubins, abaisse l'âge requis à 26 ans et confie le recueil des enfants en France à la seule aide sociale à l'enfance, avec un nouveau délit pour les autres. Il renforce le statut des pupilles de l'État et le bilan préalable à leur projet de vie. Il prévoit aussi, pour trois ans, l'adoption de l'enfant par la femme qui n'a pas accouché après une assistance médicale à la procréation à l'étranger, si la mère refuse la reconnaissance conjointe.",
+      "droits": [
+        {
+          "code": "enfants",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "ddd-20-07",
+            "cnpe-2021-adoption"
+          ],
+          "justification": "La Défenseure des droits « salue la volonté du législateur de faire de la parole de l’enfant un élément essentiel » du texte et approuve que le recueil par un organisme privé disparaisse, parce qu'il privait l'enfant du suivi de l'aide sociale à l'enfance. Le CNPE « salue l’introduction du bilan médical, psychologique et social dans la loi »."
+        },
+        {
+          "code": "discriminations",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "ddd-20-07",
+            "cnpe-2021-adoption"
+          ],
+          "justification": "L'adoption n'est plus réservée aux couples mariés. La Défenseure des droits traite cette ouverture au titre du respect du principe de non-discrimination et « ne peut qu’encourager » cette évolution. Pour le CNPE, elle « correspond à l’évolution du droit de la filiation », qui a consacré l'égalité des filiations."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Le CNPE émet un avis défavorable sur de nombreux articles. Il est notamment « opposé au principe qui consisterait à priver les parents légaux d’un enfant » du droit de consentir à son adoption lors de sa remise. La Défenseure des droits estime que les garanties sur ce consentement ne suffisent pas pour les parents biologiques.",
+          "sources": [
+            "cnpe-2021-adoption",
+            "ddd-20-07"
+          ]
+        },
+        {
+          "texte": "Recueil par la seule aide sociale à l'enfance : « Les membres du CNPE sont partagés », certains y voyant l'atteinte à un choix pour la mère de naissance, d'autres une garantie d'indépendance. La Défenseure des droits y est favorable.",
+          "sources": [
+            "cnpe-2021-adoption",
+            "ddd-20-07"
+          ]
+        },
+        {
+          "texte": "Couples non mariés : le CNPE rappelle que le divorce offre un régime plus protecteur pour l'enfant en cas de séparation, et demande de maintenir deux ans de vie commune. La Défenseure des droits relève un risque de fermeture de certaines voies d'adoption internationale.",
+          "sources": [
+            "cnpe-2021-adoption",
+            "ddd-20-07"
+          ]
+        },
+        {
+          "texte": "Adoption par la femme qui n'a pas accouché (dispositif transitoire) : pour le CNPE, « Cette disposition poursuit un autre but que l’intérêt supérieur de l’enfant ». Le texte voté subordonne l'adoption au constat par le tribunal que le refus de reconnaissance conjointe est contraire à l'intérêt de l'enfant.",
+          "sources": [
+            "cnpe-2021-adoption"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Décisif : lecture définitive, 8 février 2022. Pas de motion de rejet. Amendements clés : aucun. Aucun scrutin public de l'Assemblée ne porte sur la suppression ou le rétablissement d'un article : les amendements mis aux voix portent sur des alinéas (n° 160), un article additionnel (n° 194) ou des sous-amendements (n° 568, 570). Les votes sur les articles 1er, 9 bis et 13 ne sont pas des amendements (règle 11).",
+      "sources": {
+        "cnpe-2021-adoption": {
+          "auteur": "Conseil national de la protection de l'enfance",
+          "titre": "Avis relatif à la proposition de loi n° 3161 visant à réformer l'adoption",
+          "date": "2021-09-07",
+          "url": "https://solidarites.gouv.fr/sites/solidarite/files/2025-09/CNPE-Avis-2021-5-Relatif-a-PPL-sur-adoption-septembre-2021.pdf"
+        },
+        "ddd-20-07": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 20-07 relatif à la proposition de loi visant à réformer l'adoption",
+          "date": "2020-11-25",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=20270"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V4383",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (96-15)"
+        },
+        {
+          "id": "VTANR5L15V4325",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, nouvelle lecture (87-13)"
+        }
+      ]
     },
     {
       "id": "reforme-audiovisuel-public-ppl-2025",
@@ -11774,6 +14001,76 @@
         "sources": {},
         "note": "Conclusions de la CMP, votées par les deux chambres. Vote sans aucune voix contre, affiché et non compté (règle 23)."
       }
+    },
+    {
+      "id": "secret-affaires-2018",
+      "dossier_an": "DLR5L15N36388",
+      "legislature": 15,
+      "titre": "Loi relative à la protection du secret des affaires",
+      "resume": "Transpose la directive européenne de 2016 : crée dans le code de commerce une protection générale du secret des affaires, dont l'atteinte engage la responsabilité civile de son auteur, avec interdictions de divulguer et dommages et intérêts. Le secret n'est pas opposable à l'exercice de la liberté d'expression et d'information, ni à une personne qui révèle de bonne foi une activité illégale dans le but de protéger l'intérêt général. Une amende civile sanctionne les procédures dilatoires ou abusives.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "rsf-2018",
+            "saf-2019"
+          ],
+          "justification": "Le texte crée un secret général opposable à qui divulgue une information d'entreprise, la liberté d'informer devenant une exception à invoquer devant le juge. Reporters sans frontières y voit un texte qui vient « poser le secret comme principe, avec la liberté d'expression comme exception » et craint des procédures « pour harceler et intimider les journalistes ». Deux avocats, dans une publication du Syndicat des avocats de France, estiment que la loi met « en danger trois groupes pourtant essentiels à la vie démocratique : les médias, les lanceurs d'alerte et les associations de défense de l'intérêt général »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Portée de l'exception : Reporters sans frontières reconnaît pour les journalistes « une exception solide et large » et une meilleure protection des lanceurs d'alerte que dans la directive, mais demande qu'elle couvre leurs sources. Le texte voté sanctionne par une amende civile les procédures dilatoires ou abusives, comme l'association le demandait.",
+          "sources": [
+            "rsf-2018"
+          ]
+        },
+        {
+          "texte": "Mise en œuvre : l'article du Syndicat des avocats de France cite un avis de la Commission d'accès aux documents administratifs du 25 octobre 2018, qui refuse à un journal la liste de dispositifs médicaux au nom de ce secret, et en conclut que la liberté de la presse « n'est donc pas protégée du tout ».",
+          "sources": [
+            "saf-2019"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2018-768 DC du 26 juillet 2018, conformité, sans censure ni réserve. Article 1er du dispositif : « Sont conformes à la Constitution les dispositions suivantes du code de commerce, dans sa rédaction résultant de la loi relative à la protection du secret des affaires : l'article L. 151-1 ; l'article L. 151-8 ; les 1 ° et 2 de l'article L. 151-9 ; l'article L. 152-3 ; les mots « Pour prévenir une atteinte imminente ou faire cesser une atteinte illicite à un secret des affaires, la juridiction peut, sur requête ou en référé, ordonner des mesures provisoires et conservatoires » figurant à l'article L. 152-4 ; l'article L. 152-5 ; le mot « commerciale » figurant au premier alinéa de l'article L. 153-1. » Sur la définition du secret, qui tire les conséquences de dispositions inconditionnelles et précises de la directive, le Conseil juge qu'il ne lui appartient pas de se prononcer sur le grief tiré de la liberté d'expression.",
+      "note": "Scrutin décisif : texte de la commission mixte paritaire, 14/06/2018, dernier vote de l'AN sur l'ensemble. Sens et date de référence (règle 4) : au jour du vote, le droit français ne comporte pas de protection générale du secret des affaires ; la loi en crée une, en la limitant par des exceptions. Aucun amendement clé (règle 11) : aucun amendement n'a été mis aux voix par scrutin public, d'après le catalogue.",
+      "sources": {
+        "rsf-2018": {
+          "auteur": "Reporters sans frontières",
+          "titre": "Loi sur le secret des affaires : il est minuit moins une (tribune de Christophe Deloire, Le Monde, 25 mai 2018)",
+          "date": "2018-05-25",
+          "url": "https://rsf.org/fr/actualites/loi-sur-le-secret-des-affaires-il-est-minuit-moins-une"
+        },
+        "saf-2019": {
+          "auteur": "Jérôme Karsenti (SAF Paris, élu CNB) et Élise van Beneden (avocate, secrétaire adjointe d'Anticor), publication du Syndicat des avocats de France",
+          "titre": "Secret des affaires : le secret se propage, la liberté recule",
+          "date": "2019-05-01",
+          "url": "https://lesaf.org/wp-content/uploads/2019/04/12-secret-affaires-JKEVB.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V950",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la commission mixte paritaire (61-21)"
+        },
+        {
+          "id": "VTANR5L15V434",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (46-20)"
+        },
+        {
+          "id": "VTANR5L15V949",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, texte de la commission mixte paritaire (12-52)"
+        }
+      ]
     },
     {
       "id": "securite-globale-2021",
@@ -13756,6 +16053,58 @@
       ]
     },
     {
+      "id": "violences-educatives-2019",
+      "dossier_an": "DLR5L15N36918",
+      "legislature": 15,
+      "titre": "Loi relative à l'interdiction des violences éducatives ordinaires",
+      "resume": "Le texte voté inscrit dans le code civil que l'autorité parentale s'exerce sans violences physiques ou psychologiques. Il ajoute la prévention des violences éducatives ordinaires à la formation des assistants maternels et demande au Gouvernement un rapport sur ces violences et sur le soutien à la parentalité.",
+      "droits": [
+        {
+          "code": "enfants",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "ddd-18-28",
+            "crc-2016"
+          ],
+          "justification": "Le Défenseur des droits est « favorable à ce que la loi civile formule l’interdiction des châtiments corporels » et recommande de compléter le code civil dans le sens du texte. Le Comité des droits de l'enfant de l'ONU avait recommandé à la France « d’interdire expressément les châtiments corporels dans tous les contextes, y compris dans la famille, à l’école »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Critique d'insuffisance : le Défenseur des droits « considère que cela est insuffisant pour garantir le droit des enfants à une éducation non violente dans tous les contextes » et demande d'inscrire aussi l'interdiction dans le code de l'éducation et dans le code de l'action sociale et des familles. Le texte voté ne touche que le code civil et la formation des assistants maternels.",
+          "sources": [
+            "ddd-18-28"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Décisif : 1re lecture, 29 novembre 2018, seul scrutin public de l'Assemblée sur ce texte. Pas de motion de rejet. Amendements clés : aucun, aucun scrutin public ne porte sur un amendement (règle 11). Sur le droit étendu, aucune critique trouvée parmi les sources admises : la seule réserve lue porte sur l'insuffisance du texte.",
+      "sources": {
+        "crc-2016": {
+          "auteur": "Comité des droits de l'enfant (ONU)",
+          "titre": "Observations finales concernant le cinquième rapport périodique de la France (CRC/C/FRA/CO/5)",
+          "date": "2016-02-23",
+          "url": "https://digitallibrary.un.org/record/834948/files/CRC_C_FRA_CO_5-FR.pdf"
+        },
+        "ddd-18-28": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 18-28 relatif à la proposition de loi n° 1331 relative à l'interdiction des violences éducatives ordinaires",
+          "date": "2018-11-19",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=18100"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V1516",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (51-1)"
+        }
+      ]
+    },
+    {
       "id": "violences-sexuelles-sexistes-2025",
       "dossier_an": "DLR5L17N51017",
       "legislature": 17,
@@ -14144,6 +16493,12 @@
       "legislature": 15,
       "titre": "Accord-cadre de coopération sanitaire avec la Suisse et le Luxembourg",
       "motif": "Adopté sans aucune voix contre au scrutin décisif (29-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N36143",
+      "legislature": 15,
+      "titre": "Loi relative à l'orientation et à la réussite des étudiants",
+      "motif": "Aucune source admise n'établit que cette loi restreint l'accès à l'enseignement au titre d'une discrimination : les critiques visent la sélection ou sa mise en œuvre (règle 2)."
     },
     {
       "dossier_an": "DLR5L15N36159",
@@ -14590,10 +16945,22 @@
       "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
     },
     {
+      "dossier_an": "DLR5L15N38325",
+      "legislature": 15,
+      "titre": "Proposition de loi visant à promouvoir la France des accents et à lutter contre les discriminations fondées sur l'accent",
+      "motif": "Aucune source admise ne se prononce sur ce texte ni sur la mesure qu'il inscrit (règle 8)."
+    },
+    {
       "dossier_an": "DLR5L15N38334",
       "legislature": 15,
       "titre": "Protection des victimes de violences conjugales",
       "motif": "Adopté sans aucune voix contre au scrutin décisif (55-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N38369",
+      "legislature": 15,
+      "titre": "Proposition de loi organique visant à permettre l'inscription d'office sur la liste électorale spéciale à la consultation sur l'accession à la pleine souveraineté de la Nouvelle-Calédonie",
+      "motif": "Aucune source admise ne se prononce sur la reconduction de l'inscription d'office (règle 7)."
     },
     {
       "dossier_an": "DLR5L15N38380",
@@ -15082,6 +17449,12 @@
       "motif": "Mémoire historique (réhabilitation des fusillés de 1914-1918) : aucun droit actuel en cause (règle 2)."
     },
     {
+      "dossier_an": "DLR5L15N44108",
+      "legislature": 15,
+      "titre": "Loi portant reconnaissance de la Nation envers les harkis et les autres personnes rapatriées d'Algérie anciennement de statut civil de droit local et réparation des préjudices subis par ceux-ci et leurs familles du fait de l'indignité de leurs conditions d'accueil et de vie dans certaines structures sur le territoire français",
+      "motif": "Aucune source admise ne met cette loi de réparation en relation avec un droit de la grille : les avis et décisions lus n'examinent l'égalité que pour valider le champ du dispositif (règle 2)."
+    },
+    {
       "dossier_an": "DLR5L15N44109",
       "legislature": 15,
       "titre": "Restitution ou remise de certains biens culturels aux ayants droit de leurs propriétaires victimes de persécutions antisémites",
@@ -15140,6 +17513,12 @@
       "legislature": 15,
       "titre": "Aménagement du Rhône",
       "motif": "Adopté sans aucune voix contre au scrutin décisif (55-0) : ce vote ne départage personne (règle 9)."
+    },
+    {
+      "dossier_an": "DLR5L15N44585",
+      "legislature": 15,
+      "titre": "Loi relative au choix du nom issu de la filiation",
+      "motif": "Aucune source admise n'a été trouvée sur ce texte ou sur ses mesures (règle 7)."
     },
     {
       "dossier_an": "DLR5L15N44670",

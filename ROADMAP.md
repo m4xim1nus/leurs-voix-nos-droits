@@ -50,9 +50,9 @@ du lot 1 sont validés par Max** et dans le `data/editorial.json` de la branche.
 6. [x] Tri validé par Max (31/10/2026), fiche `source/relecture-xve-tri.md` : 173 écarts entrés (règle 8 : 33 ; règle 9 : 76,
    sans exception ; hors grille : 64). Restent à qualifier les 74 de la liste A, et 13 lois de finances à passer par une
    recherche courte (écart si rien).
-7. [ ] Qualifications, par lots thématiques. Lot 1 (libertés) et lot 2 (crise sanitaire, 12 textes) : validés, dans
-   `editorial.json`. Lot 3 en cours : reste des libertés et immigration, plus la recherche sur les lois de finances
-   (`source/brouillons-xve-finances/`). Puis justice, enfants, égalité, droits civiques, social, environnement, santé.
+7. [ ] Qualifications, par lots thématiques. Lots 1 à 4 validés par Max, dans `editorial.json` : libertés, crise sanitaire,
+   immigration, lois de finances (3 qualifiées, 10 écartées), justice, enfants, égalité, droits civiques. Lot 5 (social) en
+   cours, puis environnement et santé. Consigne commune aux agents : `source/consigne-xve-agents.md`.
 8. [ ] Ticket restaurant étudiant (DLR5L15N41895) : à qualifier dans le lot social (V3995, 34-14). Sans source admise, l'écart
    reste avec un motif neuf, « faute de source ».
 9. [x] `lvnd download` : sous 20 Ko/s pendant la patience, une source avec plan B y bascule (`sources.DEBIT_MINIMAL`).

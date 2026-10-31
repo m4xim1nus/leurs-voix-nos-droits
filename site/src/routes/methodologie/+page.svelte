@@ -180,7 +180,8 @@
       raisons tactiques. Sur la loi immigration, la motion de rejet a été adoptée avec les voix de groupes
       qui ont ensuite voté le texte. La compter comme une opposition au texte les créditerait d’un vote
       favorable aux droits. Une motion déposée et adoptée par les soutiens du texte, pour l’envoyer directement
-      en commission mixte paritaire, s’affiche dans ce sens : la voter, c’est soutenir le texte.
+      en commission mixte paritaire, s’affiche dans ce sens : la voter, c’est soutenir le texte. Les motions
+      de renvoi en commission ne sont pas affichées.
     </li>
     <li value="11" id="regle-11">
       <strong>Amendements clés.</strong> Seuls comptent les amendements qui suppriment ou rétablissent
