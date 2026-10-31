@@ -78,6 +78,7 @@ export interface Donnees {
   scoresDeputes: Map<string, Map<string, Score>>;
   scoresGroupes: Map<string, Map<string, Score>>;
   scoresDeputesTextes: Map<string, Map<string, Score>>;
+  scoresDeputesLegislatures: Map<string, Map<string, Score>>;
   scoresGroupesTextes: Map<string, Map<string, Score>>;
   participation: Map<string, Participation>;
   /** Votes nominatifs des scrutins retenus : scrutin → député → position. */
@@ -108,7 +109,11 @@ function indexer(lignes: Ligne[], cle: string, sous: string): Map<string, Map<st
 function groupes() {
   const rows = exp('groupes');
   const groupe = new Map<string, GroupeCourt>(
-    rows.map((g) => [g.id!, { id: g.id!, sigle: g.sigle!, nom: g.nom!, couleur: g.couleur! }])
+    rows.map((g) => [
+      g.id!,
+      // L'AN écrit `UDI_I` : la correction ne vaut qu'à l'affichage, le sigle reste tel quel dans les données.
+      { id: g.id!, sigle: g.sigle!.replaceAll('_', '-'), nom: g.nom!, couleur: g.couleur! }
+    ])
   );
   const lignees: Lignee[] = rows
     .filter((g) => g.id === g.lignee)
@@ -614,6 +619,11 @@ function charger(): Donnees {
     scoresDeputes: indexer(exp('scores_deputes'), 'acteur_id', 'droit'),
     scoresGroupes: indexer(exp('scores_groupes'), 'lignee', 'droit'),
     scoresDeputesTextes: indexer(exp('scores_deputes_textes'), 'acteur_id', 'texte_id'),
+    scoresDeputesLegislatures: indexer(
+      exp('scores_deputes_legislatures'),
+      'acteur_id',
+      'legislature'
+    ),
     scoresGroupesTextes: indexer(exp('scores_groupes_textes'), 'lignee', 'texte_id'),
     participation,
     votes: votes([...scrutins.values()])

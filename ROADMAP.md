@@ -56,9 +56,9 @@ du lot 1 sont validés par Max** et dans le `data/editorial.json` de la branche.
    environnement, santé.
 8. [ ] Revoir l'écart du ticket restaurant étudiant (DLR5L15N41895) : écarté pour unanimité, il a un vote disputé en
    XVe (V3995, 34-14), que l'alerte `unanimite_contestee` signale désormais.
-9. [ ] `lvnd download` : un dump qui livre quelques octets relance sans fin le délai d'attente, et ne bascule jamais sur
-   le plan B. Ajouter un débit minimal.
-10. [ ] Fiche député·e : score par législature, à côté du score d'ensemble (règle 19).
+9. [x] `lvnd download` : sous 20 Ko/s pendant la patience, une source avec plan B y bascule (`sources.DEBIT_MINIMAL`).
+10. [x] Fiche député·e : score par législature à partir de deux législatures (règle 19), `scores_deputes_legislatures.csv`,
+    écrit par `lvnd scores`. À revoir avec les qualifications de la XVe, comme l'item 4.
 11. [x] Entrée des textes validés dans le `data/editorial.json` de la branche, sans D1 :
     `uv run lvnd editorial --ajouter ../source/brouillons-xve-lotN` (`--remplacer` pour corriger un texte déjà entré),
     seulement après la réponse explicite de Max, puis `uv run lvnd scores`. Rejouable sans effet.
@@ -66,7 +66,7 @@ du lot 1 sont validés par Max** et dans le `data/editorial.json` de la branche.
     rattachement de la loi ordinaire de 2017 sur la vie politique passe de 2017-753 DC, décision de la loi organique, à
     2017-752 DC : effet sur `textes.csv` au rebuild de A.
 13. [ ] Amendements clés du lot 1 à recontrôler après le plan B ; tout changement repasse par Max.
-14. [ ] Sigles de la XVe à l'affichage (`UDI_I`, tel que l'AN l'écrit).
+14. [x] Sigles de la XVe à l'affichage : `UDI-I` sur le site, `UDI_I` reste dans les données.
 
 ### Reprendre : deux conversations en parallèle
 

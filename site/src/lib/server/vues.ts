@@ -283,6 +283,11 @@ export function vueDepute(slug: string) {
     lignee,
     actuel,
     global: scores.get('global') ?? null,
+    // Règle 19 : le détail n'a de sens qu'à partir de deux législatures.
+    parLegislature: [...(d.scoresDeputesLegislatures.get(dep.id) ?? new Map<string, Score>())]
+      .filter(([, s]) => s.score !== null)
+      .map(([leg, s]) => ({ legislature: Number(leg), score: s }))
+      .sort((a, b) => b.legislature - a.legislature),
     droits: d.droits.flatMap((dr) => {
       const s = scores.get(dr.code);
       return s ? [{ droit: dr, score: s }] : [];

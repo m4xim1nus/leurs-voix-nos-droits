@@ -23,6 +23,7 @@
     'scores_deputes.csv': 'score de chaque député·e, par droit',
     'scores_groupes.csv': 'score de chaque groupe, par droit',
     'scores_deputes_textes.csv': 'score de chaque député·e, par texte',
+    'scores_deputes_legislatures.csv': 'score global de chaque député·e, par législature',
     'scores_groupes_textes.csv': 'score de chaque groupe, par texte',
     'participation.csv': 'participation de chaque député·e aux scrutins comptés',
     'en_cours.csv':

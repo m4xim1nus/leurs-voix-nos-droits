@@ -148,6 +148,14 @@
       {#if data.global.abstentions}{pluriel(data.global.abstentions, 'abstention')}, hors calcul.{/if}
     </p>
   </section>
+  {#if data.parLegislature.length > 1}
+    <p class="par-legislature">
+      Par législature :
+      {#each data.parLegislature as l, i (l.legislature)}{#if i},
+        {/if}<span class="chiffre">{pourcent(l.score.score)}</span> en {legislature(l.legislature)}
+        ({pluriel(l.score.n_textes, 'texte')}){/each}.
+    </p>
+  {/if}
   <Regle
     lignes={[
       {
@@ -376,6 +384,9 @@
     flex-wrap: wrap;
     gap: 0 1.25rem;
     margin-top: 1.5rem;
+  }
+  .par-legislature {
+    margin-top: 0.75rem;
   }
   .grand-chiffre {
     font-size: clamp(4.5rem, 16vw, 8rem);

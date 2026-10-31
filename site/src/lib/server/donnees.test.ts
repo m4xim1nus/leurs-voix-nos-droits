@@ -81,6 +81,21 @@ describe('données du site', () => {
     expect(t.circos[circo].libelle).toContain('Gironde');
   });
 
+  it('détaille le score d’un député par législature sans perdre de vote', () => {
+    // Règle 19 : les votes favorables de chaque législature redonnent ceux du score d’ensemble.
+    for (const dep of d.deputes.slice(0, 200)) {
+      const v = vueDepute(dep.slug);
+      if (!v.global) continue;
+      const total = v.parLegislature.reduce((n, l) => n + l.score.favorables, 0);
+      expect(total, dep.slug).toBe(v.global.favorables);
+    }
+  });
+
+  it('affiche les sigles de l’AN sans tiret bas', () => {
+    expect([...d.groupe.values()].filter((g) => g.sigle.includes('_'))).toEqual([]);
+    expect([...d.groupe.values()].some((g) => g.sigle === 'UDI-I')).toBe(true);
+  });
+
   it('lit les votes d’un député comme les scores publiés', () => {
     // Le nombre de votes favorables affiché sur la fiche redonne celui de scores_deputes.csv.
     for (const dep of d.deputes.slice(0, 200)) {

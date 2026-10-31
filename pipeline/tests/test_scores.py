@@ -124,3 +124,26 @@ def test_senat_ne_change_rien_a_l_an_et_compte_le_seul_decisif():
     sc = scores.calculer(doc, votes, scores.REGLES_SENAT)
     g = next(r for r in sc["scores_deputes"] if r["droit"] == "global")
     assert (g["score"], g["abstentions"], g["n_textes"]) == (50.0, 1, 3)
+
+
+def test_par_legislature_redonne_le_score_d_ensemble():
+    """Un député sur une seule législature a le même score que son score global ; sur deux, chacune garde ses votes."""
+    temoins = {"textes": [
+        {"id": "a", "droits": [{"code": "libertes", "role": "principal", "sens": "restreint"}],
+         "scrutins": [{"id": "S15", "role": "decisif", "pour": "texte"}]},
+        {"id": "b", "droits": [{"code": "libertes", "role": "principal", "sens": "etend"}],
+         "scrutins": [{"id": "S16", "role": "decisif", "pour": "texte"}]},
+    ]}
+    votes = [{"scrutin_id": "S15", "acteur_id": "PA1", "position": "contre"},
+             {"scrutin_id": "S16", "acteur_id": "PA1", "position": "contre"},
+             {"scrutin_id": "S16", "acteur_id": "PA2", "position": "pour"},
+             {"scrutin_id": "S15", "acteur_id": "PA3", "position": "abstention"}]
+    r = scores.par_legislature(temoins, votes, {"S15": 15, "S16": 16})
+    par = {(x["acteur_id"], x["legislature"]): x for x in r}
+    assert par["PA1", 15]["score"] == 100.0 and par["PA1", 16]["score"] == 0.0
+    assert par["PA2", 16]["score"] == 100.0 and ("PA2", 15) not in par
+    assert par["PA3", 15]["score"] is None and par["PA3", 15]["abstentions"] == 1
+    assert par["PA1", 15]["n_textes"] == 1
+    # Le score d'ensemble de PA1 tient entre les deux.
+    glob = {x["acteur_id"]: x for x in scores.calculer(temoins, votes, ventilations=[])["scores_deputes"] if x["droit"] == "global"}
+    assert glob["PA1"]["score"] == 50.0
