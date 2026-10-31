@@ -34,6 +34,10 @@ def main(argv=None) -> int:
     c.add_argument("--sqlite", type=Path, default=SQLITE)
     e = sub.add_parser("editorial", help="écrit data/editorial.json depuis referentiels/temoins.yaml (amorçage)")
     e.add_argument("--force", action="store_true", help="écrase un editorial.json existant")
+    e.add_argument("--ajouter", type=Path, metavar="DOSSIER",
+                   help="ajoute à editorial.json les brouillons DOSSIER/*.yaml validés par Max, sans passer par l'admin")
+    e.add_argument("--remplacer", action="store_true", help="avec --ajouter : remplace un texte déjà présent")
+    e.add_argument("--export", type=Path, default=EXPORT)
     sc = sub.add_parser("scores", help="recalcule les scores depuis data/export/ et data/editorial.json (sans dump)")
     sc.add_argument("--export", type=Path, default=EXPORT)
     an_ = sub.add_parser("annuaire", help="code postal → circonscription et département, courriels des députés → data/annuaire/")
@@ -83,6 +87,25 @@ def main(argv=None) -> int:
         return 0 if ok else 1
     elif args.commande == "editorial":
         from . import editorial, referentiels
+        if args.ajouter:
+            import polars as pl
+            import yaml
+            from . import check
+            brouillons = [yaml.safe_load(f.read_text()) for f in sorted(args.ajouter.glob("*.yaml"))]
+            colonnes = ("id", "dossier_id", "etape", "objet", "pour", "contre")
+            infos = {r["id"]: {**r, "division": None} for r in pl.read_csv(args.export / "scrutins.csv", infer_schema_length=None)
+                     .select(colonnes).iter_rows(named=True)}
+            senat = {r["id"]: r for r in pl.read_csv(args.export / "senat/scrutins.csv", infer_schema_length=None)
+                     .select("id", "dossier_id", "objet", "pour", "contre").iter_rows(named=True)}
+            doc, changes = editorial.ajouter(editorial.charger(), brouillons, infos, senat, args.remplacer)
+            contenu = editorial.serialiser(doc)
+            if trouves := check.termes_interdits(contenu):
+                print(f"{len(trouves)} terme(s) interdit(s) : rien n'est écrit", file=sys.stderr)
+                return 1
+            editorial.CHEMIN.write_text(contenu)
+            print("\n".join(changes) or "rien de nouveau", file=sys.stderr)
+            print(f"{len(changes)} texte(s) écrit(s) dans {editorial.CHEMIN}", file=sys.stderr)
+            return 0
         if editorial.CHEMIN.exists() and not args.force:
             print(f"{editorial.CHEMIN} existe déjà (--force pour l'écraser)", file=sys.stderr)
             return 1

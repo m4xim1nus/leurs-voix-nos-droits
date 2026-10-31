@@ -20,6 +20,8 @@ Tout se passe sur la branche `xve` (worktree `.claude/worktrees/xve`), jamais su
 - Les brouillons sont dans `source/brouillons-xve-*`, les relectures dans `source/relecture-xve-*.md`. Une fois
   validés par Max dans le chat, ils entrent dans le `data/editorial.json` de la branche.
 - `main` est fusionnée régulièrement dans `xve`. `data/export/` ne se fusionne jamais à la main : on le régénère.
+  `data/editorial.json` non plus, l'admin le réécrit sur `main` : on prend celui de `main`, puis on rejoue
+  `lvnd editorial --ajouter` sur chaque `source/brouillons-xve-*`.
 
 ### Décisions de Max du 31/10/2026
 
@@ -28,7 +30,7 @@ date du vote (règle 4) ; lois de finances écartées faute de source (règle 8)
 1, et leur note le dit (règle 18). Le Sénat de 2017-2022 reste hors du cycle (`BACKLOG.md`). La fiche député·e aura le
 détail par législature (règle 19, item 10). Lot 1 : `regime-exception` retirée de terrorisme 2021 et de sécurité globale,
 `vie-privee` principal sur sécurité globale et responsabilité pénale 2022, V3223 affiché, V1642 non retenu. **Les six textes
-du lot 1 restent à valider un par un.**
+du lot 1 sont validés par Max** et dans le `data/editorial.json` de la branche.
 
 ### Items
 
@@ -57,8 +59,14 @@ du lot 1 restent à valider un par un.**
 9. [ ] `lvnd download` : un dump qui livre quelques octets relance sans fin le délai d'attente, et ne bascule jamais sur
    le plan B. Ajouter un débit minimal.
 10. [ ] Fiche député·e : score par législature, à côté du score d'ensemble (règle 19).
-11. [ ] Entrée des textes validés dans le `data/editorial.json` de la branche : commande à écrire, à partir de
-    `sync_admin.validations` (mêmes contrôles, sérialisation `editorial.serialiser`), sans D1.
+11. [x] Entrée des textes validés dans le `data/editorial.json` de la branche, sans D1 :
+    `uv run lvnd editorial --ajouter ../source/brouillons-xve-lotN` (`--remplacer` pour corriger un texte déjà entré),
+    seulement après la réponse explicite de Max, puis `uv run lvnd scores`. Rejouable sans effet.
+12. [ ] Avant la fusion : résumés du Conseil constitutionnel du lot 1. Le champ `conseil_constitutionnel` est **vide** dans
+    `editorial.json`, le site n'affiche que le numéro de la décision et son lien ; le résumé tiré de pages secondaires
+    attend dans `relecture.conseil_a_reprendre` du YAML. Le reprendre sur l'original, puis `--ajouter --remplacer`.
+13. [ ] Amendements clés du lot 1 à recontrôler après le plan B ; tout changement repasse par Max.
+14. [ ] Sigles de la XVe à l'affichage (`UDI_I`, tel que l'AN l'écrit).
 
 ### Reprendre : deux conversations en parallèle
 
@@ -81,15 +89,12 @@ Ordre conseillé pour B :
 1. **Tri (item 6)** : `source/relecture-xve-tri.md`, avec les listes d'écart d'office (règle 8 : 33 ; règle 9 : 76) et les 156
    textes, chacun avec une proposition d'une ligne, plus les 49.3 sans vote final et le ticket restaurant (item 8). Max répond
    en lot. Les YAML d'écart vont dans `source/brouillons-xve-tri/`.
-2. **Lot 1** : soumettre à Max les six textes un par un (`source/relecture-xve-lot1.md`, questions transversales déjà tranchées). Les
-   champs `conseil_constitutionnel` citent des pages secondaires : les reprendre sur l'original, ou demander à Max de coller
-   les décisions, le site étant injoignable d'ici ; retirer la mention « à contrôler ».
-3. **Item 11**, pour que les textes validés apparaissent sur le site de la branche.
-4. **Lots suivants**, selon `docs/QUALIFICATION.md` (cinq textes au plus par agent, dossier neuf `source/brouillons-xve-lotN/`, pas
+2. **Item 12**, si le site du Conseil constitutionnel répond ou si Max colle les décisions.
+3. **Lots suivants**, selon `docs/QUALIFICATION.md` (cinq textes au plus par agent, dossier neuf `source/brouillons-xve-lotN/`, pas
    de bloc `senat`). Prochain lot : crise sanitaire, avec la règle 4 et la règle 18. Rappeler aux agents que `amendement_id` est vide
    (règle 11 d'après le titre du scrutin, à recontrôler), qu'on ne contourne aucun refus de site, et que tout document collectif
    se vérifie sur ses signataires.
-5. **Items 9 et 10** quand le tri laisse du temps.
+4. **Items 9, 10 et 14** quand le tri laisse du temps.
 
 Quand le plan B se termine, A : supprime `seance.parquet` ; `lvnd download --leger` puis `lvnd download an_dossiers_14` (manifeste) ; `lvnd
 build` ; règle le seuil de `lvnd check` pour la XVe si besoin ; `pytest`, tests du site ; mesure la passe quotidienne (item 3) ; commite

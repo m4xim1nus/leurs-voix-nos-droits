@@ -321,3 +321,32 @@ def test_sync_alerte_scrutin_retenu_disparu_ou_deplace():
         "D1 : scrutin retenu V2 rattaché désormais à D2",
         "D1 : scrutin retenu V3 absent du nouveau catalogue",
     ]
+
+
+def _brouillon(**kw):
+    return {**_texte(), "statut": "a-relire", "relecture": {"points_attention": ["x"]}, **kw}
+
+
+def test_ajouter_relit_le_fichier_publie_a_l_identique():
+    doc = editorial.charger()
+    assert editorial.serialiser(editorial.ajouter(doc, [])[0]) == editorial.serialiser(doc)
+
+
+def test_ajouter_trie_et_rejoue_sans_effet():
+    vide = editorial.document([], [])
+    doc, changes = editorial.ajouter(vide, [_brouillon(), {"dossier_an": "DLR5L17N2", "legislature": 17, "titre": "Autre",
+                                                          "statut": "ecarte", "motif_ecart": "règle 8"}])
+    assert changes == ["DLR5L17N1 t", "DLR5L17N2"]
+    assert "relecture" not in doc["textes"][0] and doc["ecartes"][0]["motif"] == "règle 8"
+    assert editorial.ajouter(doc, [_brouillon()])[1] == []
+
+
+def test_ajouter_refuse_une_difference_ou_une_erreur():
+    doc = editorial.ajouter(editorial.document([], []), [_brouillon()])[0]
+    with pytest.raises(SystemExit, match="déjà présent"):
+        editorial.ajouter(doc, [_brouillon(titre="Autre titre")])
+    assert editorial.ajouter(doc, [_brouillon(titre="Autre titre")], remplacer=True)[0]["textes"][0]["titre"] == "Autre titre"
+    with pytest.raises(SystemExit, match="déjà présent"):
+        editorial.ajouter(doc, [{"dossier_an": "DLR5L17N1", "legislature": 17, "titre": "Loi", "statut": "ecarte", "motif_ecart": "m"}])
+    with pytest.raises(SystemExit):
+        editorial.ajouter(editorial.document([], []), [_brouillon(droits=[])])

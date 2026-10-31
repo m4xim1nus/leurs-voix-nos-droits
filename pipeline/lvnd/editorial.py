@@ -143,6 +143,44 @@ def serialiser(doc: dict) -> str:
     return json.dumps(doc, ensure_ascii=False, indent=2) + "\n"
 
 
+def ajouter(doc: dict, brouillons: list[dict], infos: dict[str, dict] | None = None, infos_senat: dict[str, dict] | None = None,
+            remplacer: bool = False) -> tuple[dict, list[str]]:
+    """Document `doc` augmenté de brouillons que Max a validés (format de docs/QUALIFICATION.md), sans passer par l'admin
+    (cycle XVe : rien ne va dans D1 avant la fusion). `statut` dit où va chacun : `ecarte`, `a-suivre`, sinon `textes`. Un
+    brouillon identique à ce qui est là ne change rien, ce qui permet de rejouer l'ajout après avoir repris le fichier de
+    main. Toute autre différence, ou une erreur de `valider`, arrête tout sans `remplacer`. Renvoie aussi ce qui a changé."""
+    textes = {t["dossier_an"]: t for t in doc["textes"]}
+    ecartes = {e["dossier_an"]: e for e in doc.get("ecartes", [])}
+    suivis = {s["dossier_an"]: s for s in doc.get("suivis", [])}
+    changes = []
+    for b in brouillons:
+        d = b["dossier_an"]
+        if b.get("statut") == "ecarte":
+            if not b.get("motif_ecart"):
+                raise SystemExit(f"{d} : texte écarté sans motif")
+            cible, entree, err = ecartes, _ordonner({**b, "motif": b["motif_ecart"]}, CLES_ECARTE), []
+        else:
+            n = normaliser({**b, "droits": b.get("droits") or [], "scrutins": b.get("scrutins") or []})
+            a_suivre = b.get("statut") == "a-suivre"
+            err = (valider_suivi(n) if a_suivre else valider(n, infos, infos_senat))[0]
+            cible, entree = (suivis, suivi(n)) if a_suivre else (textes, n)
+        if err:
+            raise SystemExit(f"{d} ({b.get('id')}) : {' ; '.join(err)}")
+        ailleurs = [c for c in (textes, ecartes, suivis) if c is not cible and d in c]
+        if cible.get(d) == entree and not ailleurs:
+            continue
+        if (d in cible or ailleurs) and not remplacer:
+            raise SystemExit(f"{d} ({b.get('id')}) : déjà présent, différent ; rien n'est écrit. Pour le remplacer : --remplacer")
+        for c in ailleurs:
+            del c[d]
+        cible[d] = entree
+        changes.append(f"{d} {b.get('id') or ''}".strip())
+    ids = [x["id"] for x in (*textes.values(), *suivis.values())]
+    if doubles := sorted({i for i in ids if ids.count(i) > 1}):
+        raise SystemExit(f"identifiants utilisés plusieurs fois : {', '.join(doubles)}")
+    return document(list(textes.values()), list(ecartes.values()), list(suivis.values())), changes
+
+
 def charger(chemin: Path = CHEMIN) -> dict:
     """Qualifications publiées, ou celles des textes témoins tant qu'aucune publication n'existe."""
     if chemin.exists():

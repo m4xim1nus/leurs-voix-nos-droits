@@ -472,6 +472,81 @@
       ]
     },
     {
+      "id": "anti-casseurs-2019",
+      "dossier_an": "DLR5L15N36884",
+      "legislature": 15,
+      "titre": "Loi visant à renforcer et garantir le maintien de l'ordre public lors des manifestations (« anti-casseurs »)",
+      "resume": "Le texte voté par l'Assemblée permet au préfet d'interdire à une personne de manifester, autorise sur réquisition du procureur des fouilles de bagages et de véhicules sur les lieux d'une manifestation et à ses abords, fait de la dissimulation du visage dans une manifestation un délit et étend la peine complémentaire d'interdiction de manifester.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-sg-2019",
+            "amnesty-2019",
+            "cnb-2019"
+          ],
+          "justification": "Interdiction de manifester décidée par le préfet, sans condamnation préalable, et nouveau délit de dissimulation du visage : une « atteinte manifestement disproportionnée » selon le secrétariat général de la CNCDH, « une peine d'interdiction sans infraction » selon Amnesty International."
+        },
+        {
+          "code": "police-justice",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "amnesty-2019",
+            "cnb-2019",
+            "cncdh-sg-2019"
+          ],
+          "justification": "Nouveau délit puni d'un an de prison et extension des peines complémentaires. Amnesty International craint des « arrestations arbitraires » et un renversement de la charge de la preuve."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "",
+      "note": "Décisif : vote sur l'ensemble du 5 février 2019, en 1re lecture à l'Assemblée. Le Sénat a ensuite adopté le texte définitivement le 12 mars 2019, et ce vote de l'Assemblée est le dernier sur l'ensemble (règle 9). Le texte qualifié est celui soumis à ce vote, interdiction administrative comprise, même si elle a été censurée ensuite (règle 6). Un amendement clé : la suppression de l'article 2 du texte alors en discussion, devenu l'article 3 de la loi, mise en cause par les trois sources. L'amendement n° 213 à l'article 1er, qui réécrit cet article, n'est pas une suppression et n'est pas retenu (règle 11).",
+      "sources": {
+        "amnesty-2019": {
+          "auteur": "Amnesty International France",
+          "titre": "France : la casse du droit de manifester",
+          "date": "2019-01-30",
+          "url": "https://www.amnesty.fr/actualites/la-casse-du-droit-de-manifester/"
+        },
+        "cnb-2019": {
+          "auteur": "Conseil national des barreaux",
+          "titre": "Loi « anti-casseurs », Christiane Féral-Schuhl écrit à la rapporteure",
+          "date": "2019-02-05",
+          "url": "https://www.cnb.avocat.fr/fr/actualites/loi-anti-casseurs-christiane-feral-schuhl-ecrit-la-rapporteure"
+        },
+        "cncdh-sg-2019": {
+          "auteur": "CNCDH (secrétariat général)",
+          "titre": "Mémoire d'amicus curiae à propos des articles 3, 6 et 7 de la loi visant à renforcer et garantir le maintien de l'ordre public lors des manifestations (affaire 2019-780 DC)",
+          "date": "2019-03-22",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-05/2019_03_21_observations_loi_anti-casseurs_vf.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V1662",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (387-92)"
+        },
+        {
+          "id": "VTANR5L15V1641",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (21-123)"
+        },
+        {
+          "id": "VTANR5L15V1644",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 2 (interdiction administrative de manifester, article 3 de la loi), 1re lecture (38-91)"
+        }
+      ]
+    },
+    {
       "id": "antisemitisme-enseignement-superieur",
       "dossier_an": "DLR5L17N50724",
       "legislature": 17,
@@ -9923,6 +9998,97 @@
       ]
     },
     {
+      "id": "responsabilite-penale-2022",
+      "dossier_an": "DLR5L15N43025",
+      "legislature": 15,
+      "titre": "Loi relative à la responsabilité pénale et à la sécurité intérieure",
+      "resume": "Autorise les forces de sécurité à filmer par drone, et la vidéosurveillance des cellules de garde à vue. Le texte crée de nouvelles infractions, dont un délit de violences contre les policiers et les gendarmes et des infractions liées à une intoxication volontaire. Il permet le relevé d'empreintes sous contrainte et une décision sur la détention provisoire d'une personne dont la minorité est en cause.",
+      "droits": [
+        {
+          "code": "vie-privee",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-21-12",
+            "amnesty-2021-09"
+          ],
+          "justification": "Techniques de surveillance (règle 3). Pour la Défenseure des droits, l'article 8 sur les drones n'assure pas « une conciliation équilibrée » avec « le droit au respect de la vie privée », et le manque de précision de l'article 7 sur la garde à vue « compromet l'effectivité » de sa limite. Amnesty relève que « les drones autorisent une surveillance particulièrement intrusive »."
+        },
+        {
+          "code": "police-justice",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-21-12"
+          ],
+          "justification": "La Défenseure des droits « s'alarme » du relevé signalétique sous contrainte (article 16), jusque-là sanctionné par un délit autonome, et juge que le délit de violences contre les forces de l'ordre (article 4) est susceptible de dégrader les relations entre la police et la population."
+        },
+        {
+          "code": "libertes",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-21-12",
+            "amnesty-2021-09"
+          ],
+          "justification": "Selon la Défenseure des droits, cette technologie « est susceptible de porter atteinte au droit de manifester si elle est utilisée lors de manifestations ». Amnesty relève qu'être filmé « peut entraver la liberté d'expression »."
+        },
+        {
+          "code": "enfants",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-21-12"
+          ],
+          "justification": "La Défenseure des droits estime que l'article 12 (détention provisoire décidée avant de trancher la minorité) « ne respecte pas l'exigence constitutionnelle de protection de l'intérêt supérieur de l'enfant ». Elle conclut de même pour le relevé sous contrainte des mineurs (article 16)."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "",
+      "note": "Scrutin décisif : dernier vote public, sur le texte du 23/09/2021. Le texte de la commission mixte paritaire a été adopté à l'Assemblée le 13/12/2021 à main levée (règle 9). Le sens se lit donc sur le texte de 1re lecture (règle 6). Vote à faible participation : 48 votants. Texte composite (règle 4) : ses mesures vont dans le même sens selon les sources lues. Aucun amendement clé (règle 11) : aucun amendement de suppression ou de rétablissement d'article n'a été mis aux voix par scrutin public. Les votes sur les articles 4 et 8 sont affichés, non comptés.",
+      "sources": {
+        "amnesty-2021-09": {
+          "auteur": "Amnesty International France",
+          "titre": "Projet de loi « RPSI » sur les drones : insécurité pour les droits humains (déclaration publique)",
+          "date": "2021-09-21",
+          "url": "https://www.amnesty.fr/presse/projet-de-loi-rpsi-drones-inseurite-pour-les-droits-humains-declaration-publique"
+        },
+        "ddd-21-12": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 21-12 sur le projet de loi relatif à la responsabilité pénale et à la sécurité intérieure",
+          "date": "2021-09-20",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=20954"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3969",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, dernier vote public, sur le texte du 23/09/2021 (34-8)"
+        },
+        {
+          "id": "VTANR5L15V3957",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (13-78)"
+        },
+        {
+          "id": "VTANR5L15V3962",
+          "role": "article",
+          "pour": "texte",
+          "objet": "article 4, délit de violences contre les forces de l'ordre, 1re lecture (52-3)"
+        },
+        {
+          "id": "VTANR5L15V3966",
+          "role": "article",
+          "pour": "texte",
+          "objet": "article 8, captation d'images par aéronef, 1re lecture (23-5)"
+        }
+      ]
+    },
+    {
       "id": "retention-2025",
       "dossier_an": "DLR5L17N51429",
       "legislature": 17,
@@ -10763,6 +10929,411 @@
       }
     },
     {
+      "id": "securite-globale-2021",
+      "dossier_an": "DLR5L15N40712",
+      "legislature": 15,
+      "titre": "Loi pour une sécurité globale préservant les libertés",
+      "resume": "Le texte voté autorise l'usage par les forces de l'ordre de caméras sur drones et élargit l'usage des caméras individuelles et l'accès aux images de vidéoprotection. Il crée un délit de provocation à l'identification des policiers et gendarmes, étend à titre expérimental les pouvoirs de police judiciaire des polices municipales, supprime des crédits de réduction de peine et renforce le rôle de la sécurité privée.",
+      "droits": [
+        {
+          "code": "vie-privee",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "ddd-20-05",
+            "cnil-2021-011",
+            "onu-ol-fra-4-2020"
+          ],
+          "justification": "Drones, caméras individuelles et accès élargi aux images : pour la Défenseure des droits, le texte sur les drones « ne contient en aucun cas de garanties suffisantes pour préserver la vie privée ». La CNIL ne juge pas l'ensemble « suffisamment protecteur des droits des personnes »."
+        },
+        {
+          "code": "libertes",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-a-2020-16",
+            "onu-ol-fra-4-2020",
+            "amnesty-2021"
+          ],
+          "justification": "Effet dissuasif des drones sur la liberté de manifester, et délit lié à l'identification des policiers « menace pour la liberté d'information » (CNCDH). Amnesty International maintient cette critique sur la rédaction finale."
+        },
+        {
+          "code": "police-justice",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-a-2020-16",
+            "ddd-20-05"
+          ],
+          "justification": "Pouvoirs de police judiciaire donnés à des agents placés sous l'autorité du maire, et exclusion des crédits de réduction de peine, mise en cause par la Défenseure des droits et la CNCDH au nom de l'individualisation des peines."
+        },
+        {
+          "code": "etrangers",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-20-05"
+          ],
+          "justification": "Condition de cinq ans de titre de séjour pour travailler dans la sécurité privée : « une discrimination fondée sur la nationalité » possible selon la Défenseure des droits."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "",
+      "note": "Décisif : texte de la commission mixte paritaire, 15 avril 2021. Le texte qualifié est celui soumis à ce vote, censures comprises (règle 6). Amendements clés : la 1re lecture est la seule où des suppressions ont été mises aux voix (règle 11). Six articles y portent une mesure mise en cause par une source : 1er, 20, 20 bis, 21, 23 et 24. Non retenus : l'article 20 ter (la CNIL demande seulement de mieux définir sa finalité) et l'article 25 (aucune source admise trouvée). Sur l'article 22 (drones), aucun amendement de suppression n'a été mis aux voix par scrutin public. Les amendements de réécriture et les sous-amendements ne sont pas retenus.",
+      "sources": {
+        "amnesty-2021": {
+          "auteur": "Amnesty International France",
+          "titre": "France : la loi « Sécurité Globale » définitivement adoptée par le Parlement",
+          "date": "2021-04-21",
+          "url": "https://www.amnesty.fr/liberte-d-expression/actualites/france-loi-securite-globale-definitivement-adoptee-par-le-parlement"
+        },
+        "cncdh-a-2020-16": {
+          "auteur": "CNCDH",
+          "titre": "Avis sur la proposition de loi relative à la sécurité globale (A-2020-16)",
+          "date": "2020-11-26",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/A%20-%202020%20-%2016%20-%20PPL%20S%C3%A9curit%C3%A9%20globale%2C%20nov%202020.pdf"
+        },
+        "cnil-2021-011": {
+          "auteur": "CNIL",
+          "titre": "Délibération n° 2021-011 du 26 janvier 2021 portant avis sur une proposition de loi relative à la sécurité globale",
+          "date": "2021-01-26",
+          "url": "https://www.cnil.fr/sites/cnil/files/atoms/files/d-2021-011_pplsecu.pdf"
+        },
+        "ddd-20-05": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 20-05 sur la proposition de loi n° 3452 relative à la sécurité globale",
+          "date": "2020-11-03",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=20175"
+        },
+        "onu-ol-fra-4-2020": {
+          "auteur": "Rapporteurs spéciaux de l'ONU (lutte antiterroriste, liberté d'opinion et d'expression, réunion pacifique et association)",
+          "titre": "Communication OL FRA 4/2020 sur la proposition de loi relative à la sécurité globale",
+          "date": "2020-11-12",
+          "url": "https://spcommreports.ohchr.org/TMResultsBase/DownLoadPublicCommunicationFile?gId=25705"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3658",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, texte de la CMP (75-33)"
+        },
+        {
+          "id": "VTANR5L15V3254",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (388-104)"
+        },
+        {
+          "id": "VTANR5L15V3189",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (41-281)"
+        },
+        {
+          "id": "VTANR5L15V3657",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, CMP (20-74)"
+        },
+        {
+          "id": "VTANR5L15V3223",
+          "role": "article",
+          "pour": "texte",
+          "objet": "article 22 (drones), 1re lecture, affiché et non compté (87-19)"
+        },
+        {
+          "id": "VTANR5L15V3190",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 1er (police judiciaire municipale, expérimentation), 1re lecture (12-192)"
+        },
+        {
+          "id": "VTANR5L15V3205",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 20 (accès des polices municipales aux images de vidéoprotection), 1re lecture (11-81)"
+        },
+        {
+          "id": "VTANR5L15V3207",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 20 bis (transmission aux forces de l'ordre des images des parties communes d'immeubles), 1re lecture (12-97)"
+        },
+        {
+          "id": "VTANR5L15V3211",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 21 (caméras individuelles), 1re lecture (12-118)"
+        },
+        {
+          "id": "VTANR5L15V3224",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 23 (crédits de réduction de peine), 1re lecture (14-105)"
+        },
+        {
+          "id": "VTANR5L15V3213",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 24 (diffusion d'images permettant d'identifier les policiers), 1re lecture (38-159)"
+        }
+      ]
+    },
+    {
+      "id": "separatisme-2021",
+      "dossier_an": "DLR5L15N41074",
+      "legislature": 15,
+      "titre": "Loi confortant le respect des principes de la République (« séparatisme »)",
+      "resume": "Le texte voté impose un contrat d'engagement républicain aux associations subventionnées, élargit les motifs de dissolution administrative, renforce le contrôle des cultes et de leurs associations, et remplace la déclaration de l'instruction en famille par une autorisation. Il crée aussi des délits liés à la diffusion d'informations sur une personne, étend la neutralité aux organismes chargés d'un service public et restreint le séjour des étrangers polygames.",
+      "droits": [
+        {
+          "code": "libertes",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-a-2021-1",
+            "cncdh-a-2021-4",
+            "ddd-21-01",
+            "amnesty-2021"
+          ],
+          "justification": "La CNCDH relève que la liberté d'association, d'expression, d'enseignement et de culte sont « toutes restreintes dans ce projet de loi ». La Défenseure des droits et Amnesty International mettent en cause le contrat d'engagement républicain et l'extension des dissolutions."
+        },
+        {
+          "code": "enfants",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-21-01",
+            "cncdh-a-2021-4",
+            "ce-401549"
+          ],
+          "justification": "L'instruction en famille passe de la déclaration à l'autorisation. La Défenseure des droits craint des motifs sécuritaires « plutôt qu'au regard de l'intérêt supérieur de l'enfant » ; la CNCDH y voit une « restriction importante de la liberté d'enseignement »."
+        },
+        {
+          "code": "etrangers",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-21-01",
+            "cncdh-a-2021-4"
+          ],
+          "justification": "Réserve de polygamie étendue à tous les titres de séjour et peine d'interdiction du territoire, jugée « manifestement disproportionnée » par la CNCDH."
+        },
+        {
+          "code": "discriminations",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "amnesty-2021",
+            "ddd-21-01"
+          ],
+          "justification": "Amnesty International craint une application discriminatoire visant particulièrement les personnes et associations musulmanes. La Défenseure des droits relève un dispositif pénal ciblé « susceptible d'être discriminatoire »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Le texte contient aussi des mesures présentées comme protégeant les femmes : certificats de virginité, mariages forcés, polygamie. La CNCDH juge « légitime » de sanctionner les pressions pour obtenir un certificat, mais estime que l'interdiction faite aux soignants « pourrait être contre-productive » ; la Défenseure des droits ne juge pas la pénalisation opportune.",
+          "sources": [
+            "cncdh-a-2021-4",
+            "ddd-21-01"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Décisif : lecture définitive, 23 juillet 2021. Le texte qualifié est celui soumis à ce vote, censures comprises (règle 6). Amendements clés : la nouvelle lecture est la dernière où des suppressions ont été mises aux voix (règle 11). Deux articles y portent une mesure mise en cause par une source : l'article 6 (contrat d'engagement républicain) et l'article 21 (instruction en famille). Les suppressions de 1re lecture ne sont pas retenues (règle 11). Les amendements de rétablissement de nouvelle lecture (burkini, signes religieux des mineurs, propagande électorale, emblèmes, polygamie) ne le sont pas non plus : aucune source admise lue ne met en cause ces mesures, absentes du texte décisif.",
+      "sources": {
+        "amnesty-2021": {
+          "auteur": "Amnesty International",
+          "titre": "France: Amnesty International's concerns regarding the bill “to strengthen respect for the principles of the Republic” (EUR 21/3912/2021)",
+          "date": "2021-03-29",
+          "url": "https://www.amnesty.org/en/wp-content/uploads/2021/05/EUR2139122021ENGLISH.pdf"
+        },
+        "ce-401549": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 401549 sur un projet de loi confortant le respect, par tous, des principes de la République",
+          "date": "2020-12-03",
+          "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b3649_avis-conseil-etat"
+        },
+        "cncdh-a-2021-1": {
+          "auteur": "CNCDH",
+          "titre": "Avis sur le projet de loi confortant le respect des principes de la République (A-2021-1)",
+          "date": "2021-01-28",
+          "url": "https://cncdh.fr/sites/default/files/2021-05/A%20-%202021%20-%201%20-%20PJL%20Principes%20de%20la%20R%C3%A9publique%2C%20janv%202021.pdf"
+        },
+        "cncdh-a-2021-4": {
+          "auteur": "CNCDH",
+          "titre": "Second avis sur le projet de loi confortant le respect des principes de la République (A-2021-4)",
+          "date": "2021-03-25",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-05/A%20-%202021%20-%204%20-%202nd%20avis%20sur%20le%20PJL%20Principes%20de%20la%20R%C3%A9publique%2C%20mars%202021_0.pdf"
+        },
+        "ddd-21-01": {
+          "auteur": "Défenseur des droits",
+          "titre": "Avis n° 21-01 sur le projet de loi confortant le respect des principes de la République",
+          "date": "2021-01-12",
+          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=20384"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3945",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (49-19)"
+        },
+        {
+          "id": "VTANR5L15V3866",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, nouvelle lecture (23-14)"
+        },
+        {
+          "id": "VTANR5L15V3421",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (347-151)"
+        },
+        {
+          "id": "VTANR5L15V3344",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (4-149)"
+        },
+        {
+          "id": "VTANR5L15V3853",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, nouvelle lecture (9-67)"
+        },
+        {
+          "id": "VTANR5L15V3944",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, lecture définitive (12-55)"
+        },
+        {
+          "id": "VTANR5L15V3862",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 6 (contrat d'engagement républicain), nouvelle lecture (17-55)"
+        },
+        {
+          "id": "VTANR5L15V3865",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 21 (instruction en famille), nouvelle lecture (28-56)"
+        }
+      ]
+    },
+    {
+      "id": "silt-2017",
+      "dossier_an": "DLR5L15N35857",
+      "legislature": 15,
+      "titre": "Loi renforçant la sécurité intérieure et la lutte contre le terrorisme",
+      "resume": "Inscrit dans le code de la sécurité intérieure, pour la prévention du terrorisme, quatre pouvoirs administratifs issus de l'état d'urgence : périmètres de protection, fermeture de lieux de culte, mesures individuelles de surveillance et visites domiciliaires. Le texte étend aussi le suivi des données des passagers, crée un régime de surveillance des communications hertziennes et élargit les contrôles d'identité près des frontières.",
+      "droits": [
+        {
+          "code": "police-justice",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-2017",
+            "ddd-2017",
+            "onu-2019"
+          ],
+          "justification": "Le texte donne aux préfets et au ministre de l'Intérieur des pouvoirs de police administrative fondés sur un soupçon de menace, hors de la procédure pénale. La CNCDH juge ces mesures « aggravées et pérennisées par leur inscription dans le droit ordinaire » ; le Défenseur des droits met en cause « l'équilibre entre rôle de l'autorité administrative et rôle de l'autorité judiciaire »."
+        },
+        {
+          "code": "libertes",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-2017",
+            "hrw-2017"
+          ],
+          "justification": "La CNCDH relève des pouvoirs « susceptibles de porter atteinte à la liberté d'aller et venir, ainsi qu'aux libertés d'expression, de manifestation et de réunion », dont les périmètres de protection et la fermeture de lieux de culte. Human Rights Watch juge les motifs de fermeture « extrêmement larges »."
+        },
+        {
+          "code": "vie-privee",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-2017"
+          ],
+          "justification": "Visites et saisies, y compris au domicile, que la CNCDH assimile matériellement à des perquisitions. Elle cite aussi la pérennisation et l'extension du suivi des données des passagers et la surveillance des communications hertziennes, et range la « vie privée et familiale » parmi les libertés restreintes."
+        }
+      ],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "Mise en œuvre : la CNCDH relève que les mesures de l'état d'urgence ont visé des personnes de confession musulmane sans lien avec le terrorisme et qu'elles « ciblent une partie de la population qui se sent déjà stigmatisée ». La rapporteuse spéciale de l'ONU fait état de préoccupations du même ordre.",
+          "sources": [
+            "cncdh-2017",
+            "onu-2019"
+          ]
+        },
+        {
+          "texte": "Contrôle du juge : la CNCDH juge les « notes blanches » des services de renseignement « parfois imprécis, laconiques ou empreints de subjectivité », et estime que les garanties prévues « ne jouent qu'à la marge ».",
+          "sources": [
+            "cncdh-2017"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "",
+      "note": "Scrutin décisif : dernier vote public, sur le texte du 03/10/2017. Le texte de la commission mixte paritaire a été adopté à l'Assemblée le 11/10/2017 sans scrutin public (règle 9). Le sens se lit donc sur le texte de 1re lecture (règle 6) ; dans ce texte, seules les mesures de surveillance individuelle et les visites sont limitées au 31/12/2020, alors que la commission mixte paritaire étend cette limite aux quatre mesures. Sens et date de référence (règle 4) : au jour du vote, l'état d'urgence est en vigueur et prend fin le 01/11/2017 par l'effet de sa dernière prorogation. Ce droit du jour comprend cette échéance : après elle, ces pouvoirs d'exception auraient disparu. Le texte les inscrit dans le droit commun : il restreint donc les droits, même si ses mesures sont moins contraignantes que celles de l'état d'urgence. Un amendement clé (règle 11) : la suppression de l'article 1er, périmètres de protection, mis en cause par la CNCDH. Aucun autre amendement de suppression n'a été voté par scrutin public. Le vote sur l'article 2 est affiché, non compté.",
+      "sources": {
+        "cncdh-2017": {
+          "auteur": "CNCDH",
+          "titre": "Avis sur le projet de loi renforçant la sécurité intérieure et la lutte contre le terrorisme",
+          "date": "2017-07-06",
+          "url": "https://www.cncdh.fr/sites/default/files/2021-04/170706_avis%20sur%20le%20PJL%20s%C3%A9curit%C3%A9%20int%C3%A9rieure_terrorisme%20p%C3%A0p.pdf"
+        },
+        "ddd-2017": {
+          "auteur": "Défenseur des droits",
+          "titre": "L'avis au Sénat du Défenseur des droits sur le projet de loi renforçant la sécurité intérieure et la lutte contre le terrorisme (présentation de l'avis 17-05 du 7 juillet 2017, reprise par le Réseau européen des médiateurs)",
+          "date": "2017-07-18",
+          "url": "https://eno.ombudsman.europa.eu/home/news/archives-2017/maincontent/lavis-au-senat-du-defenseur-des.html"
+        },
+        "hrw-2017": {
+          "auteur": "Human Rights Watch",
+          "titre": "France : Les pouvoirs exceptionnels ne doivent pas être normalisés",
+          "date": "2017-06-27",
+          "url": "https://www.hrw.org/fr/news/2017/06/27/france-les-pouvoirs-exceptionnels-ne-doivent-pas-etre-normalises"
+        },
+        "onu-2019": {
+          "auteur": "Rapporteuse spéciale de l'ONU sur les droits de l'homme et la lutte antiterroriste",
+          "titre": "Visite en France, rapport A/HRC/40/52/Add.4",
+          "date": "2019-05-08",
+          "url": "https://documents.un.org/doc/undoc/gen/g19/134/00/pdf/g1913400.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V138",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel, dernier vote public, sur le texte du 03/10/2017 (415-127)"
+        },
+        {
+          "id": "VTANR5L15V122",
+          "role": "article",
+          "pour": "texte",
+          "objet": "article 2, fermeture des lieux de culte, 1re lecture (74-10)"
+        },
+        {
+          "id": "VTANR5L15V120",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 1er, périmètres de protection, 1re lecture (18-144)"
+        }
+      ]
+    },
+    {
       "id": "simplification-urbanisme-2025",
       "dossier_an": "DLR5L17N51852",
       "legislature": 17,
@@ -11217,6 +11788,105 @@
         "sources": {},
         "note": "Conclusions de la CMP, votées par les deux chambres."
       }
+    },
+    {
+      "id": "terrorisme-renseignement-2021",
+      "dossier_an": "DLR5L15N42325",
+      "legislature": 15,
+      "titre": "Loi relative à la prévention d'actes de terrorisme et au renseignement",
+      "resume": "Rend permanentes les quatre mesures de la loi de 2017, qui expiraient le 31/07/2021, et les renforce (locaux liés à un lieu de culte fermé, durée des mesures de surveillance). Le texte pérennise la détection par algorithme, qui expirait le 31/12/2021, et l'étend aux adresses internet complètes. Il crée une mesure judiciaire de suivi des condamnés pour terrorisme et étend à titre expérimental l'interception aux communications satellitaires.",
+      "droits": [
+        {
+          "code": "vie-privee",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cnil-2021-040",
+            "amnesty-2021",
+            "lqdn-2021"
+          ],
+          "justification": "Technique de surveillance (règle 3). L'extension aux adresses internet touche des données dont la CNIL rappelle qu'elles « sont susceptibles de faire apparaître des informations relatives au contenu des éléments consultés » ; elle demande de « passer à nouveau, sur ce point, par une expérimentation ». Amnesty y voit « une atteinte disproportionnée au droit à la vie privée »."
+        },
+        {
+          "code": "police-justice",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "amnesty-2021",
+            "ce-2021",
+            "sm-2021"
+          ],
+          "justification": "Mesures administratives rendues permanentes. Le Conseil d'État estime que porter à vingt-quatre mois la durée des mesures de surveillance « soulève une difficulté d'ordre constitutionnel ». Le Syndicat de la magistrature voit dans la mesure judiciaire de suivi « une mesure de sûreté, si ce n'est une peine »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "",
+      "note": "Scrutin décisif : lecture définitive du 22/07/2021. Le sens se lit sur le texte alors soumis au vote (règle 6), qui contient encore la durée de vingt-quatre mois censurée ensuite. Au jour du vote, les mesures de 2017 devaient expirer le 31/07/2021 et l'algorithme le 31/12/2021 : leur inscription permanente restreint les droits par rapport à ce droit applicable, échéance comprise (règle 4). Aucun amendement clé (règle 11) : aucun amendement de suppression ou de rétablissement d'article n'a été mis aux voix par scrutin public. Les votes sur les articles 3 et 5 en 1re lecture sont affichés, non comptés.",
+      "sources": {
+        "amnesty-2021": {
+          "auteur": "Amnesty International France",
+          "titre": "France / Examen PJL « Lutte anti-terrorisme et renseignement ». De nouvelles atteintes aux droits fondamentaux",
+          "date": "2021-06-02",
+          "url": "https://www.amnesty.fr/presse/france--examen-pjl-lutte-anti-terrorisme-et-renseignement"
+        },
+        "ce-2021": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis sur un projet de loi relatif à la prévention d'actes de terrorisme et au renseignement",
+          "date": "2021-04-21",
+          "url": "https://www.conseil-etat.fr/ressources/avis-aux-pouvoirs-publics/derniers-avis-publies/avis-sur-un-projet-de-loi-relatif-a-la-prevention-d-actes-de-terrorisme-et-au-renseignement"
+        },
+        "cnil-2021-040": {
+          "auteur": "CNIL",
+          "titre": "Délibération n° 2021-040 du 8 avril 2021 portant avis sur un projet de loi relatif à la prévention d'actes de terrorisme et au renseignement",
+          "date": "2021-04-08",
+          "url": "https://cnil.fr/sites/cnil/files/atoms/files/deliberation_2021-040_du_8_avril_2021_portant_avis_sur_le_projet_de_loi_relatif_a_la_prevention_dactes_de_terrorisme_et_au_renseignement.pdf"
+        },
+        "lqdn-2021": {
+          "auteur": "La Quadrature du Net",
+          "titre": "Contribution extérieure auprès du Conseil constitutionnel dans l'affaire n° 2021-822 DC",
+          "date": "2021-07-27",
+          "url": "https://www.laquadrature.net/wp-content/uploads/sites/8/2021/07/La-Quadrature-du-Net-Contribution-exterieure-Loi-Terrorisme-Renseignement.pdf"
+        },
+        "sm-2021": {
+          "auteur": "Syndicat de la magistrature",
+          "titre": "Observations sur le projet de loi relatif à la prévention d'actes de terrorisme et au renseignement : mesure judiciaire de prévention de la récidive terroriste et de réinsertion",
+          "date": "2021-05-17",
+          "url": "https://www.syndicat-magistrature.fr/documents/1084/dispositions-relatives-aux-mesures-de-surete.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3917",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (108-20)"
+        },
+        {
+          "id": "VTANR5L15V3798",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (87-10)"
+        },
+        {
+          "id": "VTANR5L15V3793",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (11-154)"
+        },
+        {
+          "id": "VTANR5L15V3794",
+          "role": "article",
+          "pour": "texte",
+          "objet": "article 3, mesures individuelles de surveillance, 1re lecture (80-9)"
+        },
+        {
+          "id": "VTANR5L15V3797",
+          "role": "article",
+          "pour": "texte",
+          "objet": "article 5, mesure judiciaire de suivi des condamnés pour terrorisme, 1re lecture (69-4)"
+        }
+      ]
     },
     {
       "id": "tests-discriminations-2023",
