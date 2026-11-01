@@ -570,4 +570,8 @@ Mesures du 31/10/2026, cycle XVe.
 - **Contrôle croisé.** leurs-votes.fr ne couvre pas 2017-2022. datan.fr, 40 scrutins tirés au sort (graine fixe), 327
   paires scrutin × groupe hors non-inscrits : 322 concordent. Les 5 autres ne sont pas des erreurs : 3 égalités à une
   voix dans un petit groupe, que datan affiche d'un côté, et 2 écarts de libellé sur les organes UDI successifs.
+- **Amendements** (mesure du 01/11/2026). Le dump plafonne à 11 Ko/s : ils viennent du plan B, avec 3 075 scrutins
+  rattachés à leur amendement sur 3 124 (98,4 %, seuil de `lvnd check` à 98 %, contre 99,5 % ailleurs). Les 49 autres n'ont
+  pas d'amendement lisible : 404 sur tous les identifiants essayés, ou numéro factice dans le titre (« n° XXX »). 30 des 32
+  amendements clés retenus sont contrôlés sur leur dispositif ; V446 et V2886 reposent sur le titre et le PDF ou le compte rendu.
 

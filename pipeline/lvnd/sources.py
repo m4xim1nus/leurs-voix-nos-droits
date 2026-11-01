@@ -50,6 +50,7 @@ SOURCES: dict[str, dict] = {
     "an_scrutins_15": {"url": f"{AN}/15/loi/scrutins/Scrutins_XV.json.zip"},
     "an_dossiers_15": {"url": f"{AN}/15/loi/dossiers_legislatifs/Dossiers_Legislatifs_XV.json.zip"},
     "an_amendements_15": {"url": f"{AN}/15/loi/amendements_legis/Amendements_XV.json.zip",
+                          "figee": f"{FIGEES}/an_amendements_15.zip",
                           "secours": {"legislature": 15, "organe": "717460"}},
     # XIVe : quelques dossiers ouverts avant juin 2017, votés en XVe (referentiels/rattachements.yaml).
     "an_dossiers_14": {"url": f"{AN}/14/loi/dossiers_legislatifs/Dossiers_Legislatifs_XIV.json.zip"},

@@ -33,6 +33,8 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [DONNÉES] Catalogue : `cc_sens` vide pour 2021-817 DC ; `textes.csv` titre « 2021 à 2027 » pour la programmation de la recherche, la loi dit 2030. Sans effet à l'affichage (claude, 2026-10-31)
 - [DONNÉES] Catalogue XVe, programmation de la justice (DLR5L15N36626) : V1518 (motion sur le PLFSS 2019) et V1536 (déclaration sur la fiscalité écologique) rattachés à tort. Sans effet sur décisif ni scores (claude, 2026-10-31)
 - [DONNÉES] Catalogue XVe, scrutins mal rattachés : V1941 (déclaration de politique générale) à la LOM, V3838 (programmation militaire) à la révision constitutionnelle, V3518 et V3633 (déclarations du Gouvernement) à climat et résilience ; V45, titre « article 6 », PDF « art. 7 ». Sans effet sur décisif ni scores (claude, 2026-10-31)
+- [DONNÉES] Catalogue XVe, faux rattachements par l'amendement du plan B : V118 (physicien médical), V985 (ÉLAN), V2046 (Centre national de la musique), V2175 (bioéthique), V3948 (sortie de crise), V4319 (vigilance sanitaire). Titres V738, V1612 : article différent de la division de l'amendement. Sans effet sur décisif ni scores ; à corriger avant la fusion, item 16 de la ROADMAP (claude, 2026-11-01)
+- [BUG] `lvnd build` : le rattachement des 13 votes cités par deux dossiers dépend de l'ordre du système de fichiers (`an.dossiers`, `textes.Index`). Présent aussi sur `main`. Item 15 de la ROADMAP (claude, 2026-11-01)
 
 ## Textes à surveiller
 

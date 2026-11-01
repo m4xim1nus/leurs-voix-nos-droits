@@ -36,6 +36,9 @@ DECOMPTES_INCOMPLETS = {f"VTANR5L15V{n}" for n in (1027, 1028, 1029, 2418, 2744,
 
 # Seuils de rattachement (docs/SOURCES.md : 99,9 % des scrutins sur amendement en XVIIe au spike).
 SEUIL_AMENDEMENTS = 0.995
+# XVe : archive figée, 3 075 scrutins rattachés sur 3 124 (98,4 %) par le plan B. Les 49 autres n'ont pas d'amendement
+# lisible en open data (404 sur tous les identifiants essayés) ou portent un numéro factice (« n° XXX ») : docs/SOURCES.md.
+SEUILS_AMENDEMENTS_PAR_LEGISLATURE = {15: 0.98}
 DELAI_AMENDEMENTS = 14  # jours : voir rattachement_amendements
 SEUIL_DOSSIERS = 0.99
 SIEGES_SENAT = 348
@@ -259,7 +262,8 @@ def verifier(chemin: Path) -> tuple[bool, list[str]]:
             out.append(f"info XV{'I' * (leg - 15)}e : {recents} scrutins récents pas encore rattachés, hors du taux "
                        f"(archive des amendements plus ancienne)")
         controle(f"XV{'I' * (leg - 15)}e : scrutins sur amendement rattachés à leur amendement",
-                 ok_amdt / n >= SEUIL_AMENDEMENTS, f"{ok_amdt}/{n} ({ok_amdt / n:.1%})")
+                 ok_amdt / n >= SEUILS_AMENDEMENTS_PAR_LEGISLATURE.get(leg, SEUIL_AMENDEMENTS),
+                 f"{ok_amdt}/{n} ({ok_amdt / n:.1%})")
         out.append(f"info XV{'I' * (leg - 15)}e : {ok_amdt}/{n} ({ok_amdt / n:.1%}) scrutins sur amendement rattachés")
         n, ok_d = _q(con, "select count(*), count(dossier_id) from scrutins where legislature = ?", leg)[0]
         controle(f"XV{'I' * (leg - 15)}e : scrutins rattachés à un dossier", ok_d / n >= SEUIL_DOSSIERS,
