@@ -39,11 +39,11 @@ Vérifier la passe quotidienne du 02/11/2026, première avec la XVe, et nettoyer
    doit se purger seul.
 6. [x] **`lvnd build` en local** : il réécrit les exports de l'AN quand `data/raw/` diffère de la copie de la CI. Le corriger si c'est
    simple, sinon documenter la marche à suivre pour ne changer qu'une partie des exports.
-7. [ ] **Scrutins XVe mal rattachés ou mal situés** : V483 (immigration), V1094 (DLR5L15N36601), V1093 (en AN1, c'est la nouvelle
+7. [x] **Scrutins XVe mal rattachés ou mal situés** : V483 (immigration), V1094 (DLR5L15N36601), V1093 (en AN1, c'est la nouvelle
    lecture), V1518 et V1536 (programmation de la justice), V1941 (LOM), V3838 (révision constitutionnelle), V3518 et V3633 (climat et
    résilience). Titre différent de la division de l'amendement ou du PDF : V45, V738, V1612. Corriger dans les rattachements figés
    quand c'est sûr.
-8. [ ] **Catalogue** : `cc_sens` vide pour 2021-817 DC ; `textes.csv` titre « 2021 à 2027 » pour la programmation de la recherche,
+8. [x] **Catalogue** : `cc_sens` vide pour 2021-817 DC ; `textes.csv` titre « 2021 à 2027 » pour la programmation de la recherche,
    alors que la loi dit 2030.
 9. [ ] **« Prochains votes » de la fiche député·e** (`prochains`, `site/src/lib/server/vues.ts:205`) : y ajouter les textes du seul
    Sénat attendus à l'AN (casseurs-payeurs), exclus pendant le cycle Sénat pour ne pas toucher aux vues de l'AN.

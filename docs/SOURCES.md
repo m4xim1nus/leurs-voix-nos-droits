@@ -580,8 +580,13 @@ Mesures du 31/10/2026, cycle XVe.
   ensuite : 11 d'entre eux portent des votes de la XVe. Ils viennent du dump de la XIVe, arrêté à juin 2017, et leur
   loi est saisie dans `referentiels/rattachements.yaml`, avec le numéro et la date lus dans Dosleg. Ils n'ont pas de
   NOR, donc pas de lien vers Légifrance.
-- **Rattachements figés.** 73 scrutins sans `voteRefs` ni séance exploitable sont rattachés à la main dans ce même
-  référentiel. Il en reste 3 sans dossier : deux déclarations du Gouvernement et une déclaration de politique générale.
+- **Rattachements figés.** 75 scrutins sont rattachés à la main dans ce même référentiel, qui prime sur la proximité dans
+  la séance. Il corrige aussi deux champs du catalogue (`catalogue:`) : le titre de la programmation de la recherche et le sens
+  de la décision 2021-817 DC.
+- **Déclarations du Gouvernement** (art. 49 ou 50-1). Elles ne vont qu'à leur propre dossier (procédure 11), quand il existe :
+  le texte débattu le même jour ne les reçoit plus (règle corrigée le 01/11/2026). Les autres restent sans dossier.
+- **Intitulés.** Pour V45, V738 et V1612, le titre du scrutin ne cite pas le même article que la division de l'amendement (6 et
+  7, 4 et 5, 1 et 2). Les deux viennent de l'open data, rien ne permet de trancher sans lecture, et aucune qualification ne les retient.
 - **Ventilations incomplètes** (`lvnd check`, listes fermées). 13 scrutins dont le décompte officiel dépasse la somme
   des groupes : un groupe manque, le plus souvent le MoDem (46 voix), et rien ne permet de reconstruire ses votes. Le
   seul vote sur l'ensemble touché de façon notable est V2816 (loi organique sur la dette sociale). 17 ventilations

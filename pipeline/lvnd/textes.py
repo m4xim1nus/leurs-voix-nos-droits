@@ -95,6 +95,9 @@ class Index:
                         self.etape_jour.setdefault((uid, jour), e["codeActe"])
 
 
+CODE_DECLARATION = "11"  # procédure « Déclaration du gouvernement avec ou sans vote sans engagement de responsabilité »
+
+
 def _rattachements_fixes() -> dict[str, dict]:
     """scrutin → {dossier_id, etape}, d'après le référentiel (numéros « 57 » ou « 57-84 », de la XVe)."""
     out = {}
@@ -136,6 +139,10 @@ def rattacher(scrutins: list[dict], dossiers: dict[str, dict], titres: dict[str,
                 and notes[0][0] > (note(s, uid) if uid in dossiers else 0))
 
     def par_titre(s: dict, cands: set[str]) -> str | None:
+        # Déclaration du Gouvernement (art. 49 ou 50-1) : débattue le jour d'un texte, sans porter sur lui. Seul son
+        # propre dossier, quand elle en a un, peut la recevoir.
+        if norm(s["titre"]).startswith("la declaration"):
+            cands = {c for c in cands if (dossiers.get(c, {}).get("procedureParlementaire") or {}).get("code") == CODE_DECLARATION}
         notes = classement(s, cands)
         if not notes:
             return None
@@ -156,13 +163,13 @@ def rattacher(scrutins: list[dict], dossiers: dict[str, dict], titres: dict[str,
             uid, how = idx.vote_refs[s["id"]], "voteRefs"
         elif d_amdt and not refuse:
             uid, how = d_amdt, "amendement"
+        elif s["id"] in fixes:  # lu à la main : prime sur la proximité dans la séance
+            out[s["id"]] = {**fixes[s["id"]], "rattachement": "referentiel", "amendement_refuse": refuse}
+            continue
         elif s["seance"] and (u := par_titre(s, idx.par_seance.get(s["seance"], set()))):
             uid, how = u, "seance"
         elif u := par_titre(s, idx.par_jour.get(s["date"], set())):
             uid, how = u, "jour"
-        elif s["id"] in fixes:
-            out[s["id"]] = {**fixes[s["id"]], "rattachement": "referentiel", "amendement_refuse": refuse}
-            continue
         if uid:
             etape = idx.etape.get((uid, s["seance"])) or idx.etape_jour.get((uid, s["date"]))
             out[s["id"]] = {"dossier_id": uid, "etape": etape, "rattachement": how, "amendement_refuse": refuse}
@@ -252,6 +259,7 @@ def catalogue(dossiers: dict[str, dict], scrutins: list[dict], liens: dict[str, 
             "decisif_propose": _decisif(ss, ensembles),
             "premier_scrutin": ss[0]["date"] if ss else None,
             "dernier_scrutin": ss[-1]["date"] if ss else None,
+            **(rattachements().get("catalogue") or {}).get(uid, {}),
         })
     return rows
 

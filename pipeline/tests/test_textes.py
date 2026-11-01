@@ -40,3 +40,21 @@ def test_titre_muet_garde_l_amendement():
     s = scrutin("l'amendement n° 12 de Mme Kuster à l'article 3")
     lien = rattacher([s], DOSSIERS, {}, {"V1": {"amendement_id": "X", "dossier_id": "AUTRE"}})["V1"]
     assert (lien["dossier_id"], lien["amendement_refuse"]) == ("AUTRE", False)
+
+
+def test_declaration_du_gouvernement_hors_du_texte_du_jour():
+    """Art. 50-1 : le seul dossier débattu ce jour-là ne la reçoit pas, sauf s'il est celui de la déclaration."""
+    titre = "la déclaration du Gouvernement relative à la programmation militaire (article 50-1 de la Constitution)."
+    s = {**scrutin(titre), "objet": "declaration"}
+    assert rattacher([s], {"T": dossier("T", "climat et résilience", seance="S1")}, {}, {}) == {}
+    propre = dossier("D", "Déclaration du Gouvernement relative à la programmation militaire", seance="S1")
+    propre["procedureParlementaire"]["code"] = "11"
+    assert rattacher([s], {"D": propre, "T": dossier("T", "climat et résilience", seance="S1")}, {}, {})["V1"]["dossier_id"] == "D"
+
+
+def test_le_referentiel_prime_sur_la_seance():
+    from lvnd.textes import _rattachements_fixes
+    assert _rattachements_fixes()["VTANR5L15V1094"] == {"dossier_id": "DLR5L15N36410", "etape": "ANNLEC"}
+    s = {**scrutin("la motion de renvoi du projet de loi choix de son avenir professionnel", id_="VTANR5L15V1094")}
+    lien = rattacher([s], {"A": dossier("A", "choix de son avenir professionnel", seance="S1")}, {}, {})["VTANR5L15V1094"]
+    assert (lien["dossier_id"], lien["etape"], lien["rattachement"]) == ("DLR5L15N36410", "ANNLEC", "referentiel")
