@@ -13,8 +13,8 @@ celles et ceux qui reprendront le projet reste au cycle Passation.
 
 ### Reste à faire
 
-1. **Publier** les 35 textes validés de la revue, puis trancher les 24 textes à relire (`source/relecture-audit.md`, non versionnée), les valider et publier.
-2. **Déployer l'admin** : `cd admin && npm run deploy` (formulaires du Sénat, alerte `ecart_revote`, liens Aide et Exploitation).
+1. **Publier** les 25 derniers textes validés de la revue (Max).
+2. **Déploiement de l'admin** : fait le 01/11/2026.
 3. **Premier essai du tutoriel** avec le contributeur qui a déjà accès (`docs/TUTORIEL_ADMIN.md`).
 4. **Passe du 02/11/2026** à vérifier, puis suppression des branches (`BACKLOG.md`).
 5. **Bento** : régénérer le PDF après publication (`docs/presentation/README.md`). Clôture du cycle ensuite.

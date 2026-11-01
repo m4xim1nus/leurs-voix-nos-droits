@@ -261,7 +261,7 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
     du texte au scrutin décisif est traité comme un article unique : sa
     suppression ou son rétablissement double le décisif (épandage par
     drones, 2025 : l'article 2, simple gage, a été supprimé). Selon les textes, on compte
-    de 0 (immigration, aide à mourir) à 17 amendements clés (RIPOST).
+    de 0 (immigration, aide à mourir) à 18 amendements clés (RIPOST).
 
 ## Positions de groupe
 
