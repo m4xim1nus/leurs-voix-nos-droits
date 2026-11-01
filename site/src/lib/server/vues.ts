@@ -153,7 +153,9 @@ export function vueDroit(code: string) {
 export function vueTextes() {
   const d = donnees();
   const textes = [...d.textes, ...d.seuls].sort((a, b) => b.date.localeCompare(a.date));
-  return { textes: textes.map(enListe), ecartes: d.ecartes, droits: d.droits };
+  // Les textes du seul Sénat n'ont pas de législature de l'AN : le filtre les écarte déjà.
+  const legislatures = [...new Set(d.textes.map((t) => t.legislature))].sort((a, b) => b - a);
+  return { textes: textes.map(enListe), ecartes: d.ecartes, droits: d.droits, legislatures };
 }
 
 export function vueTexte(id: string) {
