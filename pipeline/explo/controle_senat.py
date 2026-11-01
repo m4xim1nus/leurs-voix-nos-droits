@@ -26,10 +26,10 @@ CACHE = RACINE / "data/raw/senat_pages"
 
 # Les noms changent, pas le code : mots qui désignent le groupe dans les intitulés de la page.
 GROUPES = [("UMP", "republicains"), ("SOC", "socialiste"), ("UC", "union centriste"),
-           ("LREM", "rassemblement des democrates"), ("RDSE", "rassemblement democratique"),
+           ("LREM", "rassemblement des democrates"), ("LREM", "republique en marche"), ("RDSE", "rassemblement democratique"),
            ("RTLI", "independants"), ("CRC", "communiste"), ("GEST", "ecologiste solidarite"),
            ("UNT", "union nationale"), ("NI", "aucun groupe"), ("NI", "non inscrit")]
-BLOC = re.compile(r"(Groupe [^:]{3,160}?|R[ée]union administrative[^:]{3,160}?|S[ée]nateurs? ne figurant[^:]{3,160}?)\s*:\s*\|?\s*"
+BLOC = re.compile(r"(Groupe [^:]{3,160}?|La République En Marche|R[ée]union administrative[^:]{3,160}?|S[ée]nateurs? ne figurant[^:]{3,160}?)\s*:\s*\|?\s*"
                   r"(\d+)\s*\|\s*s[ée]nateurs?\s*\|\s*Pour\s*:\s*\|\s*(\d+)\s*\|\s*Contre\s*:\s*\|\s*(\d+)\s*\|\s*"
                   r"Abstentions?\s*:\s*\|\s*(\d+)\s*\|\s*N.(?:a|ont)\s*\|?\s*pas pris part au vote\s*:\s*\|?\s*(\d+)")
 TOTAL = re.compile(r"(\d+)\s*\|\s*votants\s*\|\s*(\d+)\s*\|\s*suffrages exprimés\s*\|\s*(\d+)\s*\|\s*pour\s*\|\s*(\d+)\s*\|\s*contre")

@@ -11,10 +11,10 @@ from lvnd.cli import EXPORT
 COPIES = {
     "scr": (senat.TABLES["scr"], [["2026", "41", "C1", "sur l\\u0027ensemble", "2026-10-27", "334", "334", "229", "105", "\\N"]]),
     "votsen": (senat.TABLES["votsen"], [["2026", "41", "1A", "1", "0", "\\N", "\\N"], ["2026", "41", "2B", "2", "0", "1A", "*"],
-                                        ["2026", "41", "3C", "4", "8", "\\N", "\\N"], ["2021", "1", "1A", "1", "0", "\\N", "\\N"]]),
+                                        ["2026", "41", "3C", "4", "8", "\\N", "\\N"], ["2015", "1", "1A", "1", "0", "\\N", "\\N"]]),
     "stavot": (senat.TABLES["stavot"], [["0", "Sans statut"], ["8", "Président de séance"]]),
     "corscr": (senat.TABLES["corscr"], [["2026", "41", "1", "M. X aurait souhaité voter contre.\\r\\n", "https://x"],
-                                        ["2026", "41", "0", " ", "\\N"], ["2021", "1", "0", "ancien", "\\N"]]),
+                                        ["2026", "41", "0", " ", "\\N"], ["2015", "1", "0", "ancien", "\\N"]]),
     "typlec": (senat.TABLES["typlec"], [["1", "Première lecture"], ["2", "Deuxième lecture"]]),
     "date_seance": (senat.TABLES["date_seance"], [["C1", "LA1", "2026-10-27 00:00:00"], ["C2", "LA2", "2026-11-20 00:00:00"]]),
     "lecass": (senat.TABLES["lecass"], [["LA1", "L1", "S"], ["LA2", "L2", "S"], ["LA3", "L1", "A"]]),

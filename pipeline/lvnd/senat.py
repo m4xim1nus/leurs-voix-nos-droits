@@ -29,7 +29,8 @@ TABLES = {
     "oritxt": ["oritxtcod", "oritxtlib", "oritxtado"],
 }
 ESC = {"t": "\t", "n": "\n", "r": "\r", "\\": "\\"}
-DEBUT = "2022-06-28"  # début de la XVIe : scrutins publics lus à partir de cette date
+DEBUT = "2017-06-27"  # début de la XVe : scrutins publics lus à partir de cette date
+DEBUT_PERIODE_2 = "2022-06-28"  # règle 26 : seconde période des scores, début de la XVIe
 
 
 def _champ(v: str):
@@ -180,6 +181,9 @@ def scrutins(tables: dict[str, pl.DataFrame]) -> pl.DataFrame:
 POSITIONS = {"1": "pour", "2": "contre", "3": "abstention", "4": "non_votant"}
 SANS_GROUPE = "AUCUN"  # quelques jours après un renouvellement : ni un groupe, ni les non-inscrits (NI)
 FUSION_GROUPE = 10  # jours : deux périodes dans le même groupe, séparées par ce blanc au plus, n'en font qu'une
+# Période absente d'ODSEN_HISTOGROUPES. Le groupe écologiste se dissout le 29/06/2017 : Hervé Poher figure ensuite au
+# groupe socialiste et républicain sur les pages des scrutins, jusqu'à la fin de son mandat (SN2016-104, SN2016-106).
+APPARTENANCES_MANQUANTES = [{"senateur_id": "13002U", "groupe_id": "SOC", "debut": "2017-06-30", "fin": "2017-10-01"}]
 URL_SCRUTIN = "https://www.senat.fr/scrutin-public/{session}/scr{session}-{numero}.html"
 # Circonscriptions du Sénat absentes des mandats de l'AN : autre libellé, ou collectivités que l'AN réunit.
 DEPARTEMENTS_SENAT = {"saint barthelemy": "977", "saint martin": "978", "la reunion": "974", "iles wallis et futuna": "986"}
@@ -207,6 +211,8 @@ def appartenances(raw: Path, date_ref: str) -> pl.DataFrame:
           .select(senateur_id="Matricule", groupe_id="Code du groupe politique",
                   debut=_jour("Date de début d'appartenance"), fin=_jour("Date de fin d'appartenance"))
           .unique().filter(pl.col("groupe_id") != SANS_GROUPE)
+          .pipe(lambda d: pl.concat([d, pl.DataFrame(APPARTENANCES_MANQUANTES, schema=d.schema).filter(
+              pl.col("senateur_id").is_in(d["senateur_id"].to_list()))]))
           .with_columns(pl.when(pl.col("fin") > date_ref).then(None).otherwise(pl.col("fin")).alias("fin"))
           .sort("senateur_id", pl.col("debut").fill_null("")))
     out: list[dict] = []
@@ -301,22 +307,25 @@ def ventilations(v: pl.DataFrame) -> list[dict]:
 
 def completer(s: pl.DataFrame, fiches: list[dict]) -> pl.DataFrame:
     """`scrutins`, plus ceux que Dosleg donne sans fiche (referentiels/scrutins_senat.yaml). Chacun reprend
-    la loi et la lecture de son scrutin `comme` ; le décompte vient ensuite de la liste nominative."""
+    la loi et la lecture de son scrutin `comme`, sauf si `typleccod` donne une autre lecture de la même loi ;
+    le décompte vient ensuite de la liste nominative."""
     par_id = {r["id"]: r for r in s.to_dicts()}
     lignes = []
     for f in fiches:
         frere = par_id.get(f["comme"], {})
         lignes.append({"id": f"SN{f['session']}-{f['numero']}", "numero": f["numero"], "date": str(f["date"]), "titre": f["titre"],
                        "objet": objet_scrutin(f["titre"]), "sort": None, "pour": None, "contre": None,
-                       "loicod": frere.get("loicod"), "typleccod": frere.get("typleccod")})
+                       "loicod": frere.get("loicod"), "typleccod": str(f.get("typleccod") or frere.get("typleccod") or "") or None})
     return pl.concat([s, pl.DataFrame(lignes, schema=s.schema)]).sort("date", "numero")
 
 
 def sans_fiche(tables: dict[str, pl.DataFrame], s: pl.DataFrame) -> list[str]:
     """Scrutins dont `votsen` donne les votes, absents de `s` : à ajouter à referentiels/scrutins_senat.yaml."""
-    ids = (tables["votsen"].filter(pl.col("sesann") >= DEBUT[:4])
+    # La session 2016 court jusqu'en septembre 2017 : DEBUT y tombe.
+    ids = (tables["votsen"].filter(pl.col("sesann") >= str(int(DEBUT[:4]) - 1))
            .select(pl.format("SN{}-{}", "sesann", "scrnum").alias("id")).unique())
-    return sorted(set(ids["id"]) - set(s["id"]))
+    fiches = tables["scr"].select(pl.format("SN{}-{}", "sesann", "scrnum").alias("id"))
+    return sorted(set(ids["id"]) - set(s["id"]) - set(fiches["id"]))
 
 
 def export_scrutins(tables: dict[str, pl.DataFrame], s: pl.DataFrame, v: pl.DataFrame, dossier_de: dict[str, str]) -> pl.DataFrame:

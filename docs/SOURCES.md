@@ -229,13 +229,13 @@ ce dossier n'alimente : `scrutins`, `positions_groupes`, `senateurs`, `groupes`,
 `appartenances`, `mandats`, `mises_au_point`, et les votes
 `votes/<AAAA-MM>.csv`. `lvnd annuaire` y ajoute
 `data/annuaire/cp_departements.csv` (code postal → département). Aucun score
-n'est encore calculé. Au 31/10/2026, depuis le 28/06/2022 : 1 336 scrutins,
-464 719 votes, 514 sénateur·ices dont 348 en poste, 333 courriels publics
+n'est encore calculé. Au 01/11/2026, depuis le 27/06/2017 : 2 243 scrutins,
+780 054 votes, 746 sénateur·ices dont 348 en poste
 (`Non public` n'est pas exporté).
 
-**Scrutins sans fiche.** 15 scrutins depuis 2022 ont leurs votes dans `votsen` et
+**Scrutins sans fiche.** 26 scrutins depuis 2017 ont leurs votes dans `votsen` et
 pas de ligne dans `scr`, dont le vote sur l'ensemble des lois de finances pour
-2023, 2024, 2025 et 2026 (SN2022-94, SN2023-98, SN2024-175, SN2025-125). Le
+2020, 2023, 2024, 2025 et 2026 (SN2019-59, SN2022-94, SN2023-98, SN2024-175, SN2025-125). Le
 contrôle croisé du 31/10/2026, parti de `scr`, ne pouvait pas les voir. Leur date
 et leur intitulé sont lus sur senat.fr et rangés dans
 `referentiels/scrutins_senat.yaml` ; leurs votes restent ceux de Dosleg. `lvnd check`
@@ -262,9 +262,9 @@ doublon, toutes dans un mandat de `ODSEN_ELUSEN`.
   seule depuis 2022, SN2022-131) sont exportés tels quels. Ils ne changent aucun
   décompte (règle 13).
 
-**Décompte : la liste nominative, pas la table `scr`.** Sur 9 scrutins (SN2024-93,
-SN2024-196, SN2025-25, -26, -27, -28, -56, -232 et -293), `scr` s'écarte de
-`votsen` d'une ou deux voix. La page de senat.fr donne chaque fois le chiffre de
+**Décompte : la liste nominative, pas la table `scr`.** Sur 206 scrutins, `scr` s'écarte de
+`votsen` d'une ou deux voix : 197 entre 2017 et 2021, surtout de 2017 à 2019, et 9 depuis (SN2024-93,
+SN2024-196, SN2025-25, -26, -27, -28, -56, -232 et -293). La page de senat.fr donne chaque fois le chiffre de
 la liste nominative (SN2024-93 : 115-205, `scr` 114-206). L'export compte donc
 sur `votsen` et garde `pour_scr` et `contre_scr` pour la trace. Aucun de ces
 écarts ne change le sort du scrutin, ce que `lvnd check` vérifie. `senat.scrutins`,
@@ -280,16 +280,22 @@ n'est ni un groupe ni le groupe des non-inscrits (`NI`) : il est retiré, et les
 périodes qu'il coupe sont réunies. Aucun vote ne tombe dans ces jours-là. Une fin
 d'appartenance postérieure au dump est une erreur de saisie (Fouassin, 27/11/2029) :
 la période reste en cours. UNT, créé le 05/10/2026, ne continue aucun groupe.
+Le groupe écologiste (`ECO`) se dissout le 29/06/2017, sans vote après cette date. Hervé Poher n'a plus
+d'appartenance dans le fichier jusqu'à la fin de son mandat, le 01/10/2017, alors que les pages des
+scrutins le rangent au groupe socialiste : période ajoutée dans `senat.APPARTENANCES_MANQUANTES`.
 
 **Contrôle croisé** (`explo/controle_senat.py`, 31/10/2026) : 70 pages de senat.fr
 (les 9 écarts, SN2022-131, 60 scrutins tirés au sort dont 30 sur l'ensemble) :
 totaux et 635 lignes scrutin × groupe, **aucun écart**. Toutes les délégations de
 SN2022-51 ont aussi été comparées à la page.
+Le 01/11/2026, pour 2017-2022 : 247 pages (les 197 écarts, une note, 60 tirés au sort dont 30 sur
+l'ensemble), totaux et 1 979 lignes scrutin × groupe, **aucun écart** une fois Hervé Poher rattaché.
+Le libellé « La République En Marche », sans « Groupe », a été ajouté au lecteur de pages.
 
 **Rattachement** : scrutin → `date_seance` → lecture → `loi` → signet → dossier AN
 (`senatChemin`), à défaut la date de la loi (`parcours.classer`). Un dossier du
 Sénat peut correspondre à plusieurs dossiers AN : on retient la loi, puis le plus
-avancé (`parcours.dossier_par_loi`). 1 302 scrutins sur 1 336 sont rattachés. Les
+avancé (`parcours.dossier_par_loi`). 2 181 scrutins sur 2 243 sont rattachés. Depuis 2022, les
 34 autres : 4 déclarations du Gouvernement, 25 sur des résolutions (`ppr…`) ou une motion, et 5 sur `pjl25-801`,
 en 1re lecture le 07/07/2026, sans dossier à l'AN au 31/10/2026.
 

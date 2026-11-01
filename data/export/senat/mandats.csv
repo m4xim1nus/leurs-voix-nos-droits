@@ -1,25 +1,59 @@
 senateur_id,debut,fin,motif_debut,motif_fin
+00003C,2000-04-28,2004-09-30,Remplace,Fin de mandat
+00003C,2004-10-01,2011-09-30,Renouvellement 1,Fin de mandat
+00003C,2011-10-01,2017-10-01,Renouvellement 2,Non réélu
+01007L,2001-10-01,2011-09-30,Election,Fin de mandat
+01007L,2011-10-01,2017-07-21,Renouvellement 1,Membre Gouvernement
+01007L,2017-10-02,2017-11-02,Réélection,De droit (membre du Gouvernement)
+01008M,2001-10-01,2011-09-30,Election,Fin de mandat
+01008M,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+01011G,2001-10-01,2011-09-30,Election,Fin de mandat
+01011G,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+01013J,2001-10-01,2011-09-30,Election,Fin de mandat
+01013J,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+01014K,2001-10-01,2011-09-30,Election,Fin de mandat
+01014K,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+01015L,2001-10-01,2011-09-30,Election,Fin de mandat
+01015L,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+01016M,2001-10-01,2011-09-30,Election,Fin de mandat
+01016M,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+01019Q,2001-10-01,2011-09-30,Election,Fin de mandat
+01019Q,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+01022K,2001-10-01,2011-09-30,Election,Fin de mandat
+01022K,2011-10-01,2017-10-01,Renouvellement 1,Non réélu
 01024M,2001-10-01,2011-09-30,Election,Fin de mandat
 01024M,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 01024M,2017-10-02,2023-10-01,Renouvellement 2,Ne se représente pas
 01025N,2001-10-01,2011-09-30,Election,Fin de mandat
 01025N,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 01025N,2017-10-02,2023-10-01,Renouvellement 2,Ne se représente pas
+01027Q,2001-10-01,2011-09-30,Election,Fin de mandat
+01027Q,2011-10-01,2017-10-01,Renouvellement 1,Non réélu
 01028R,2001-10-01,2011-09-30,Election,Fin de mandat
 01028R,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 01028R,2017-10-02,2023-10-01,Renouvellement 2,Ne se représente pas
+01031L,2001-10-01,2011-09-30,Election,Fin de mandat
+01031L,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
 01034P,2001-10-01,2011-09-30,Election,Fin de mandat
 01034P,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 01034P,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 01034P,2023-10-02,2025-08-31,Renouvellement 2,Démissionnaire
+01041N,2001-10-01,2011-09-30,Election,Fin de mandat
+01041N,2011-10-01,2017-10-01,Renouvellement 1,Non réélu
 01043Q,2001-10-01,2007-07-19,Election,Membre Gouvernement
 01043Q,2010-12-14,2011-09-30,Reprise suite à fin fon. membre Gvt,Fin de mandat
 01043Q,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 01043Q,2017-10-02,2023-10-01,Renouvellement 2,Ne se représente pas
+01046T,2001-10-01,2011-09-30,Election,Fin de mandat
+01046T,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+01047U,2001-10-01,2011-09-30,Election,Fin de mandat
+01047U,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
 01048V,2001-10-01,2011-03-27,Election,Démission (Membre Gouvt)
 01048V,2011-10-01,2011-11-01,Renouvellement 1,Membre Gouvernement
 01048V,2012-06-17,2017-10-01,Reprise suite à fin fon. membre Gvt,Fin de mandat
 01048V,2017-10-02,2023-10-01,Renouvellement 2,Ne se représente pas
+01056V,2001-10-01,2011-09-30,Election,Fin de mandat
+01056V,2011-10-01,2017-10-01,Renouvellement 1,Non réélu
 01057W,2001-10-01,2011-09-30,Election,Fin de mandat
 01057W,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 01057W,2017-10-02,2023-10-01,Renouvellement 2,Ne se représente pas
@@ -27,24 +61,44 @@ senateur_id,debut,fin,motif_debut,motif_fin
 01058X,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 01058X,2017-10-02,2023-10-01,Renouvellement 2,Fin de mandat
 01058X,2023-10-02,,Renouvellement 3,En Cours
+01059Y,2001-10-01,2011-09-30,Election,Fin de mandat
+01059Y,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
 01060R,2001-10-01,2011-09-30,Election,Fin de mandat
 01060R,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 01060R,2017-10-02,2023-10-01,Renouvellement 2,Ne se représente pas
+01061S,2001-10-01,2011-09-30,Election,Fin de mandat
+01061S,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
 01062T,2001-10-01,2011-09-30,Election,Fin de mandat
 01062T,2011-10-01,2014-12-21,Renouvellement 1,Membre Gouvernement
 01062T,2017-06-18,2017-10-01,Reprise suite à fin fon. membre Gvt,Fin de mandat
 01062T,2017-10-02,2023-10-01,Renouvellement 2,Ne se représente pas
+02002K,2002-06-07,2004-09-30,Remplace,Fin de mandat
+02002K,2004-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+02002K,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
 02042T,2026-10-01,,Election,En Cours
 04008A,2017-10-02,2023-10-01,Election,Fin de mandat
 04008A,2023-10-02,,Renouvellement 1,En Cours
+04018C,2004-05-01,2004-09-30,Remplace,Ne se représente pas
+04018C,2017-10-02,2020-09-30,Election,Démissionnaire
 04033B,2004-10-01,2014-09-30,Election,Fin de mandat
 04033B,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 04033B,2020-10-01,2024-10-21,Renouvellement 2,De droit (membre du Gouvernement)
 04033B,2025-11-13,2026-09-30,Reprise suite à fin fon. membre Gvt,Fin de mandat
 04033B,2026-10-01,,Renouvellement 1,En Cours
+04034C,2004-10-01,2014-09-30,Election,Fin de mandat
+04034C,2014-10-01,2021-09-30,Renouvellement,Ne se représente pas
 04035D,2004-10-01,2011-09-30,Election,Fin de mandat
 04035D,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 04035D,2017-10-02,2023-10-01,Renouvellement,Ne se représente pas
+04036E,2004-10-01,2011-09-30,Election,Fin de mandat
+04036E,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+04038G,2004-10-01,2014-09-30,Election,Fin de mandat
+04038G,2014-10-01,2020-09-30,Renouvellement 1,Ne se représente pas
+04040A,2004-10-01,2007-07-19,Election,Membre Gouvernement
+04040A,2010-12-14,2014-09-30,Reprise suite à fin fon. membre Gvt,Fin de mandat
+04040A,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+04041B,2004-10-01,2014-09-30,Election,Fin de mandat
+04041B,2014-10-01,2017-09-22,Renouvellement,Démissionnaire
 04042C,2004-10-01,2011-09-30,Election,Fin de mandat
 04042C,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 04042C,2017-10-02,2023-10-01,Renouvellement 2,Fin de mandat
@@ -52,6 +106,8 @@ senateur_id,debut,fin,motif_debut,motif_fin
 04043D,2004-10-01,2011-09-30,Election,Fin de mandat
 04043D,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 04043D,2017-10-02,2023-10-01,Renouvellement 2,Ne se représente pas
+04044E,2004-10-01,2014-09-30,Election,Fin de mandat
+04044E,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
 04045F,2004-10-01,2014-09-30,Election,Fin de mandat
 04045F,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 04045F,2020-10-01,2026-09-30,Renouvellement 2,Ne se représente pas
@@ -59,12 +115,33 @@ senateur_id,debut,fin,motif_debut,motif_fin
 04047H,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 04047H,2020-10-01,2024-10-21,Renouvellement 2,De droit (membre du Gouvernement)
 04047H,2025-11-06,2026-07-22,Reprise suite à fin fon. membre Gvt,Démissionnaire
+04049K,2004-10-01,2014-09-30,Election,Fin de mandat
+04049K,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+04053F,2004-10-01,2011-09-30,Election,Fin de mandat
+04053F,2011-10-01,2012-06-16,Renouvellement 1,Membre Gouvernement
+04053F,2014-05-03,2017-08-06,Reprise suite à fin fon. membre Gvt,Décédé
+04054G,2004-10-01,2011-09-30,Election,Fin de mandat
+04054G,2011-10-01,2017-10-01,Renouvellement,Ne se représente pas
+04055H,2004-10-01,2011-09-30,Election,Fin de mandat
+04055H,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+04056J,2004-10-01,2011-09-30,Election,Fin de mandat
+04056J,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
 04057K,2004-10-01,2011-09-30,Election,Fin de mandat
 04057K,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 04057K,2017-10-02,2023-10-01,Renouvellement 2,Ne se représente pas
 04059M,2004-10-01,2011-09-30,Election,Fin de mandat
 04059M,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 04059M,2017-10-02,2023-10-01,Renouvellement 2,Ne se représente pas
+04061F,2004-10-01,2004-11-26,Election,Annulé par CC
+04061F,2005-02-20,2014-09-30,Election,Fin de mandat
+04061F,2014-10-01,2019-06-23,Renouvellement,Démissionnaire
+04066L,2004-10-01,2011-09-30,Election,Fin de mandat
+04066L,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+04067M,2004-10-01,2011-09-30,Election,Fin de mandat
+04067M,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+04069P,2004-10-01,2004-11-26,Election,Annulé par CC
+04069P,2005-02-21,2014-09-30,Election,Non réélu
+04069P,2019-06-24,2020-09-30,Remplace,Ne se représente pas
 04070G,2004-10-01,2014-09-30,Election,Fin de mandat
 04070G,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 04070G,2020-10-01,2026-09-30,Renouvellement 2,Fin de mandat
@@ -72,12 +149,41 @@ senateur_id,debut,fin,motif_debut,motif_fin
 04071H,2004-10-01,2011-09-30,Election,Fin de mandat
 04071H,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 04071H,2017-10-02,2023-10-01,Renouvellement 2,Ne se représente pas
+04074L,2004-10-01,2011-09-30,Election,Fin de mandat
+04074L,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+04077P,2004-10-01,2011-09-30,Election,Fin de mandat
+04077P,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+04078Q,2004-10-01,2011-09-30,Election,Fin de mandat
+04078Q,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+04079R,2004-10-01,2011-09-30,Election,Fin de mandat
+04079R,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+04080J,2004-10-01,2011-09-30,Election,Fin de mandat
+04080J,2011-10-01,2017-10-01,Renouvellement 1,Non réélu
+04081K,2004-10-01,2011-09-30,Election,Fin de mandat
+04081K,2011-10-01,2017-10-01,Renouvellement 1,Non réélu
 04085P,2004-10-01,2011-09-30,Election,Fin de mandat
 04085P,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 04085P,2017-10-02,2023-10-01,Renouvellement 2,Ne se représente pas
+04086Q,2004-10-01,2011-09-30,Election,Fin de mandat
+04086Q,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
+04086Q,2017-10-02,2021-07-27,Renouvellement 2,Démissionnaire
+04088S,2004-10-01,2014-09-30,Election,Fin de mandat
+04088S,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+04089T,2004-10-01,2014-09-30,Election,Fin de mandat
+04089T,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
 04092N,2004-10-01,2014-09-30,Election,Fin de mandat
 04092N,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 04092N,2020-10-01,2026-09-30,Renouvellement 2,Ne se représente pas
+04094Q,2004-10-01,2011-09-30,Election,Fin de mandat
+04094Q,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+04095R,2004-10-01,2011-09-30,Election,Fin de mandat
+04095R,2011-10-01,2017-10-01,Renouvellement 1,Ne se représente pas
+04097T,2004-10-19,2008-09-30,Remplace,Fin de mandat
+04097T,2008-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+04097T,2014-10-01,2020-09-30,Renouvellement,Non réélu
+05001W,2005-02-24,2011-09-30,Remplace,Non réélu
+05001W,2016-11-13,2017-10-01,Remplace,Non réélu
+05004A,2014-10-01,2017-09-30,Election,Démissionnaire
 05008E,2011-10-01,2017-10-01,Election,Fin de mandat
 05008E,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 05008E,2023-10-02,2025-03-01,Renouvellement 2,Nommé membre CC
@@ -89,6 +195,8 @@ senateur_id,debut,fin,motif_debut,motif_fin
 07004J,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 07004J,2017-10-02,2023-10-01,Renouvellement 2,Fin de mandat
 07004J,2023-10-02,,Renouvellement 3,En Cours
+07026Q,2007-06-29,2011-09-30,Remplace,Fin de mandat
+07026Q,2011-10-01,2017-10-01,Renouvellement 1,Non réélu
 07029T,2007-08-27,2008-09-30,Election,Fin de mandat
 07029T,2008-10-01,2014-09-30,Renouvellement 1,Fin de mandat
 07029T,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
@@ -97,6 +205,9 @@ senateur_id,debut,fin,motif_debut,motif_fin
 07033P,2007-11-30,2011-09-30,Remplace,Non réélu
 07033P,2017-10-02,2023-10-01,Réélection,Fin de mandat
 07033P,2023-10-02,,Renouvellement 1,En Cours
+07034Q,2007-12-17,2008-09-30,Remplace,Fin de mandat
+07034Q,2008-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+07034Q,2014-10-01,2019-03-03,Renouvellement,Nommé membre CC
 08009T,2008-10-01,2014-09-30,Election,Fin de mandat
 08009T,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 08009T,2020-10-01,2026-09-30,Renouvellement 2,Fin de mandat
@@ -113,28 +224,78 @@ senateur_id,debut,fin,motif_debut,motif_fin
 08012N,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 08012N,2020-10-01,2026-09-30,Renouvellement 2,Fin de mandat
 08012N,2026-10-01,,Renouvellement 3,En Cours
+08014Q,2008-10-01,2014-09-30,Election,Fin de mandat
+08014Q,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
 08015R,2008-10-01,2014-09-30,Election,Fin de mandat
 08015R,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 08015R,2020-10-01,2026-09-30,Renouvellement 2,Ne se représente pas
+08016S,2008-10-01,2014-09-30,Election,Fin de mandat
+08016S,2014-10-01,2018-11-16,Renouvellement,Membre Gouvernement
+08016S,2020-08-07,2020-08-07,Reprise suite à fin fon. membre Gvt,Démissionnaire
+08017T,2008-10-01,2014-09-30,Election,Fin de mandat
+08017T,2014-10-01,2021-09-30,Renouvellement,Ne se représente pas
 08018U,2008-10-01,2014-09-30,Election,Fin de mandat
 08018U,2014-10-01,2021-09-30,Renouvellement,Fin de mandat
 08018U,2021-10-01,2026-09-30,Renouvellement,Ne se représente pas
+08019V,2008-10-01,2014-09-30,Election,Fin de mandat
+08019V,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+08020N,2008-10-01,2014-09-30,Election,Non réélu
+08020N,2017-10-01,2020-09-30,Remplace,Ne se représente pas
+08021P,2008-10-01,2014-09-30,Election,Fin de mandat
+08021P,2014-10-01,2019-06-30,Renouvellement,Démissionnaire
+08022Q,2008-10-01,2014-09-30,Election,Fin de mandat
+08022Q,2014-10-01,2017-09-30,Renouvellement,Démissionnaire
+08024S,2008-10-01,2014-09-30,Election,Fin de mandat
+08024S,2014-10-01,2020-09-30,Renouvellement,Non réélu
+08025T,2008-10-01,2014-09-30,Election,Fin de mandat
+08025T,2014-10-01,2017-09-30,Renouvellement,Démissionnaire
 08028W,2008-10-01,2014-09-30,Election,Fin de mandat
 08028W,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 08028W,2020-10-01,2026-09-30,Renouvellement 2,Ne se représente pas
+08031R,2008-10-01,2014-09-30,Election,Fin de mandat
+08031R,2014-10-01,2020-09-30,Renouvellement,Non réélu
 08034U,2008-10-01,2014-09-30,Election,Fin de mandat
 08034U,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 08034U,2020-10-01,2026-09-30,Renouvellement 2,Ne se représente pas
+08035V,2008-10-01,2014-09-30,Election,Fin de mandat
+08035V,2014-10-01,2020-08-03,Renouvellement,De droit (incompatibilité mandats locaux)
+08038Y,2008-10-01,2014-09-30,Election,Fin de mandat
+08038Y,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+08039A,2008-10-01,2014-09-30,Election,Fin de mandat
+08039A,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+08041T,2008-10-01,2014-09-30,Election,Fin de mandat
+08041T,2014-10-01,2020-09-24,Renouvellement,Décédé
+08042U,2008-10-01,2014-09-30,Election,Fin de mandat
+08042U,2014-10-01,2017-09-30,Renouvellement,Démissionnaire
+08043V,2008-10-01,2014-09-30,Election,Fin de mandat
+08043V,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+08044W,2008-10-01,2014-09-30,Election,Fin de mandat
+08044W,2014-10-01,2020-08-02,Renouvellement,Démissionnaire
 08045X,2008-10-01,2014-09-30,Election,Non réélu
 08045X,2017-09-25,2020-09-30,Remplace,Fin de mandat
 08045X,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
 08047A,2008-10-01,2014-09-30,Election,Fin de mandat
 08047A,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 08047A,2020-10-01,2026-09-30,Renouvellement 2,Non réélu
+08048B,2008-10-01,2014-09-30,Election,Fin de mandat
+08048B,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+08049C,2008-10-01,2014-09-30,Election,Non réélu
+08049C,2015-09-07,2020-09-30,Election,Non réélu
+08051V,2008-10-01,2014-09-30,Election,Fin de mandat
+08051V,2014-10-01,2017-06-17,Renouvellement,Membre Gouvernement
+08051V,2018-11-17,2019-03-03,Reprise suite à fin fon. membre Gvt,Nommé membre CC
+08052W,2008-10-01,2014-09-30,Election,Fin de mandat
+08052W,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+08053X,2008-10-01,2014-09-30,Election,Fin de mandat
+08053X,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+08055A,2008-10-01,2014-09-30,Election,Fin de mandat
+08055A,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
 08056B,2008-10-01,2014-09-30,Election,Fin de mandat
 08056B,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 08056B,2020-10-01,2026-09-30,Renouvellement 2,Fin de mandat
 08056B,2026-10-01,,Renouvellement 3,En Cours
+08058D,2008-10-01,2014-09-30,Election,Fin de mandat
+08058D,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
 08060W,2008-10-01,2014-09-30,Election,Fin de mandat
 08060W,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 08060W,2020-10-01,2026-09-30,Renouvellement 2,Fin de mandat
@@ -142,6 +303,12 @@ senateur_id,debut,fin,motif_debut,motif_fin
 08061X,2008-10-01,2014-09-30,Election,Fin de mandat
 08061X,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 08061X,2020-10-01,2026-08-19,Renouvellement 2,Décédé
+08062Y,2008-10-01,2014-09-30,Election,Fin de mandat
+08062Y,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+08065C,2008-10-01,2014-09-30,Election,Fin de mandat
+08065C,2014-10-01,2017-09-24,Renouvellement,Démissionnaire
+08068F,2008-10-01,2014-09-30,Election,Fin de mandat
+08068F,2014-10-01,2020-06-15,Renouvellement,Démissionnaire
 08069G,2008-10-01,2014-09-30,Election,Fin de mandat
 08069G,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 08069G,2020-10-01,2026-09-30,Renouvellement 2,Fin de mandat
@@ -151,6 +318,7 @@ senateur_id,debut,fin,motif_debut,motif_fin
 08073C,2008-10-01,2014-09-30,Election,Fin de mandat
 08073C,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 08073C,2020-10-01,2026-09-30,Renouvellement 2,Ne se représente pas
+09001P,2011-10-01,2017-10-01,Election,Ne se représente pas
 10006L,2010-10-12,2011-09-30,Remplace,Fin de mandat
 10006L,2011-10-01,2017-10-01,Renouvellement 1,Fin de mandat
 10006L,2017-10-02,2023-10-01,Renouvellement 2,Ne se représente pas
@@ -159,42 +327,67 @@ senateur_id,debut,fin,motif_debut,motif_fin
 10015M,2020-10-01,2025-09-30,Renouvellement 2,Démissionnaire
 11010L,2011-10-01,2017-10-01,Election,Fin de mandat
 11010L,2017-10-02,2023-10-01,Renouvellement,Non réélu
+11011M,2011-10-01,2017-10-01,Election,Ne se représente pas
 11012A,2011-10-01,2017-10-01,Election,Fin de mandat
 11012A,2017-10-02,2023-10-01,Renouvellement,Ne se représente pas
+11014C,2011-10-01,2017-10-01,Election,Ne se représente pas
+11015D,2011-10-01,2017-10-01,Election,Ne se représente pas
+11020A,2011-10-01,2017-10-01,Election,Non réélu
+11023D,2011-10-01,2017-10-01,Election,Non réélu
+11025F,2011-10-01,2017-10-01,Election,Ne se représente pas
 11026G,2011-10-01,2017-10-01,Election,Fin de mandat
 11026G,2017-10-02,2023-10-01,Renouvellement,Non réélu
 11027H,2011-10-01,2012-07-21,Election,Membre Gouvernement
 11027H,2014-05-03,2017-10-01,Reprise suite à fin fon. membre Gvt,Fin de mandat
 11027H,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 11027H,2023-10-02,,Renouvellement 2,En Cours
+11029K,2011-10-01,2017-10-01,Election,Ne se représente pas
+11030C,2011-10-01,2017-10-01,Election,Ne se représente pas
 11031D,2011-10-01,2017-10-01,Election,Fin de mandat
 11031D,2017-10-02,2023-10-01,Renouvellement,Ne se représente pas
+11032E,2011-10-01,2017-07-28,Election,Élu député
 11033F,2011-10-01,2017-10-01,Election,Fin de mandat
 11033F,2017-10-02,2023-10-01,Réélection,Ne se représente pas
+11034G,2011-10-01,2017-10-01,Election,Non réélu
+11035H,2011-10-01,2017-10-01,Election,Ne se représente pas
+11036J,2011-10-01,2017-10-01,Election,Non réélu
+11037K,2011-10-01,2017-10-01,Election,Ne se représente pas
+11039M,2011-10-01,2017-10-01,Election,Non réélu
 11040E,2011-10-01,2017-10-01,Election,Fin de mandat
 11040E,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 11040E,2023-10-02,2024-10-31,Renouvellement 2,Démissionnaire
 11041F,2011-10-01,2014-05-11,Election,Membre Gouvernement
 11041F,2017-06-18,2017-10-01,Reprise suite à fin fon. membre Gvt,Fin de mandat
 11041F,2017-10-02,2023-10-01,Renouvellement 1,Ne se représente pas
+11042G,2011-10-01,2017-10-01,Election,Ne se représente pas
 11043H,2011-10-01,2017-10-01,Election,Fin de mandat
 11043H,2017-10-02,2023-10-01,Renouvellement 1,Fin de mandat
 11043H,2023-10-02,2026-09-30,Renouvellement 2,Démissionnaire
+11044J,2011-10-01,2017-10-01,Election,Ne se représente pas
 11045K,2011-10-01,2014-05-11,Election,Membre Gouvernement
 11045K,2017-06-18,2017-10-01,Reprise suite à fin fon. membre Gvt,Fin de mandat
 11045K,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 11045K,2023-10-02,,Réélection,En Cours
+11046L,2011-10-01,2017-10-01,Election,Ne se représente pas
 11048N,2011-10-01,2017-10-01,Election,Fin de mandat
 11048N,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 11048N,2023-10-02,,Renouvellement 2,En Cours
+11049P,2011-10-01,2017-10-01,Election,Fin de mandat
+11049P,2017-10-02,2020-07-13,Renouvellement,Démissionnaire
 11053K,2011-10-01,2017-10-01,Election,Fin de mandat
 11053K,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 11053K,2023-10-02,,Renouvellement 2,En Cours
 11054L,2011-10-01,2017-10-01,Election,Fin de mandat
 11054L,2017-10-02,2023-10-01,Renouvellement,Ne se représente pas
+11055M,2011-10-01,2017-10-01,Election,Ne se représente pas
 11056N,2011-10-01,2017-10-01,Election,Fin de mandat
 11056N,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 11056N,2023-10-02,,Renouvellement 2,En Cours
+11057P,2011-10-01,2017-10-01,Election,Ne se représente pas
+11059R,2011-10-01,2017-10-01,Election,Non réélu
+11061K,2011-10-01,2017-10-01,Election,Non réélu
+11063M,2011-10-01,2017-10-01,Election,Fin de mandat
+11063M,2017-10-02,2018-06-30,Renouvellement,Démissionnaire
 11064N,2011-10-01,2017-10-01,Election,Fin de mandat
 11064N,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 11064N,2023-10-02,2025-10-05,Renouvellement 2,Démissionnaire
@@ -205,9 +398,13 @@ senateur_id,debut,fin,motif_debut,motif_fin
 11066Q,2017-10-02,2023-10-01,Renouvellement,Ne se représente pas
 11067R,2011-10-01,2017-10-01,Election,Fin de mandat
 11067R,2017-10-02,2023-10-01,Renouvellement,Ne se représente pas
+11068S,2011-10-01,2017-10-01,Election,Non réélu
+11069T,2011-10-01,2016-03-11,Election,Membre Gouvernement
+11069T,2017-06-18,2017-10-01,Reprise suite à fin fon. membre Gvt,Ne se représente pas
 11070L,2011-10-01,2017-10-01,Election,Fin de mandat
 11070L,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 11070L,2023-10-02,,Renouvellement 2,En Cours
+11071M,2011-10-01,2017-10-01,Election,Non réélu
 11072N,2011-10-01,2017-10-01,Election,Fin de mandat
 11072N,2017-10-02,2023-10-01,Renouvellement 1,Fin de mandat
 11072N,2023-10-02,2024-10-21,Renouvellement 2,De droit (membre du Gouvernement)
@@ -215,34 +412,56 @@ senateur_id,debut,fin,motif_debut,motif_fin
 11074Q,2011-10-01,2017-10-01,Election,Fin de mandat
 11074Q,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 11074Q,2023-10-02,,Renouvellement 2,En Cours
+11076S,2011-10-01,2017-10-01,Election,Ne se représente pas
 11077T,2011-10-01,2017-10-01,Election,Fin de mandat
 11077T,2017-10-02,2023-10-01,Renouvellement,Ne se représente pas
 11080N,2011-10-01,2017-10-01,Election,Fin de mandat
 11080N,2017-10-02,2023-10-01,Renouvellement 1,Non réélu
+11081P,2011-10-01,2011-12-22,Election,Annulé par CC
+11081P,2012-03-19,2017-10-01,Réélection,Fin de mandat
+11081P,2017-10-02,2020-03-03,Renouvellement,Décédé
+11082Q,2011-10-01,2017-10-01,Election,Non réélu
 11083R,2011-10-01,2017-10-01,Election,Fin de mandat
 11083R,2017-10-02,2023-10-01,Renouvellement 1,Ne se représente pas
+11084S,2011-10-01,2017-10-01,Election,Ne se représente pas
 11085T,2011-10-01,2017-10-01,Election,Fin de mandat
 11085T,2017-10-02,2023-10-01,Renouvellement 1,Fin de mandat
 11085T,2023-10-02,,Renouvellement 2,En Cours
+11088W,2011-10-01,2017-10-01,Election,Ne se représente pas
+11089X,2011-10-01,2017-10-01,Election,Ne se représente pas
 11090Q,2011-10-01,2017-10-01,Election,Fin de mandat
 11090Q,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 11090Q,2023-10-02,2024-10-21,Renouvellement 2,De droit (membre du Gouvernement)
 11090Q,2025-10-10,,Reprise suite à fin fon. membre Gvt,En Cours
+11091R,2011-10-01,2017-10-01,Election,Ne se représente pas
+11093T,2011-10-01,2017-10-01,Election,Ne se représente pas
+11094U,2011-10-01,2017-10-01,Election,Ne se représente pas
+11095V,2011-10-01,2017-10-01,Election,Ne se représente pas
+11096W,2011-10-01,2017-10-01,Election,Non réélu
 11097X,2011-10-01,2017-10-01,Election,Fin de mandat
 11097X,2017-10-02,2023-10-01,Renouvellement 1,Ne se représente pas
+11098Y,2011-10-01,2017-10-01,Election,Non réélu
 11099A,2011-10-01,2017-10-01,Election,Fin de mandat
 11099A,2017-10-02,2023-10-01,Renouvellement,Ne se représente pas
+11100Y,2011-10-01,2017-10-01,Election,Ne se représente pas
 11101A,2011-10-01,2017-10-01,Election,Fin de mandat
 11101A,2017-10-02,2023-10-01,Renouvellement 1,Ne se représente pas
 11103C,2011-10-01,2017-10-01,Election,Fin de mandat
 11103C,2017-10-02,2023-10-01,Renouvellement 1,Ne se représente pas
 11104D,2011-10-01,2017-10-01,Election,Fin de mandat
 11104D,2017-10-02,2023-10-01,Renouvellement,Ne se représente pas
+11105E,2011-10-01,2017-10-01,Election,Ne se représente pas
+11106F,2011-10-01,2017-10-01,Election,Non réélu
+11107G,2011-10-01,2017-10-01,Election,Ne se représente pas
 11109J,2011-10-01,2017-10-01,Election,Fin de mandat
 11109J,2017-10-02,2023-10-01,Renouvellement,Ne se représente pas
 11110B,2011-10-01,2017-10-01,Election,Fin de mandat
 11110B,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 11110B,2023-10-02,,Renouvellement 2,En Cours
+11111C,2011-10-01,2017-10-01,Election,Ne se représente pas
+11112D,2011-10-01,2017-10-01,Election,Non réélu
+11113E,2011-10-01,2017-10-01,Election,Non réélu
+11114F,2011-10-01,2017-10-01,Election,Ne se représente pas
 11115U,2017-10-02,2023-10-01,Election,Fin de mandat
 11115U,2023-10-02,,Renouvellement 1,En Cours
 12016W,2017-10-02,2023-10-01,Election,Fin de mandat
@@ -251,13 +470,19 @@ senateur_id,debut,fin,motif_debut,motif_fin
 12028B,2026-10-01,,Renouvellement 1,En Cours
 12041X,2012-09-20,2017-10-01,Remplace,Fin de mandat
 12041X,2017-10-02,2023-10-01,Renouvellement,Ne se représente pas
+12042Y,2012-12-03,2017-10-01,Election,Non réélu
+13002U,2013-03-01,2017-10-01,Remplace,Ne se représente pas
 14001X,2014-01-01,2014-09-30,Remplace,Fin de mandat
 14001X,2014-10-01,2020-09-30,Renouvellement,Fin de mandat
 14001X,2020-10-01,2026-09-30,Renouvellement 2,Ne se représente pas
+14017T,2014-07-01,2017-10-01,Remplace,Ne se représente pas
+14018U,2014-08-27,2017-10-01,Remplace,Non réélu
 14021P,2017-10-02,2023-10-01,Election,Fin de mandat
 14021P,2023-10-02,,Renouvellement 1,En Cours
 14026U,2014-10-01,2020-09-30,Election,Fin de mandat
 14026U,2020-10-01,2026-09-30,Renouvellement,Non réélu
+14028W,2014-10-01,2020-09-30,Election,Ne se représente pas
+14029X,2017-09-23,2020-09-30,Remplace,Ne se représente pas
 14030Q,2014-10-01,2020-09-30,Election,Fin de mandat
 14030Q,2020-10-01,2026-09-30,Renouvellement,Fin de mandat
 14030Q,2026-10-01,,Renouvellement 2,En Cours
@@ -266,15 +491,19 @@ senateur_id,debut,fin,motif_debut,motif_fin
 14033T,2014-10-01,2020-09-30,Election,Fin de mandat
 14033T,2020-10-01,2026-09-30,Renouvellement,Fin de mandat
 14033T,2026-10-01,,Renouvellement 2,En Cours
+14034U,2014-10-01,2020-09-30,Election,Non réélu
 14037X,2014-10-01,2017-07-22,Election,Membre Gouvernement
 14037X,2020-10-01,2020-11-01,Réélection,De droit (membre du Gouvernement)
 14037X,2022-06-21,2026-09-30,Reprise suite à fin fon. membre Gvt,Fin de mandat
 14037X,2026-10-01,,Renouvellement 1,En Cours
 14038Y,2014-10-01,2020-09-30,Election,Fin de mandat
 14038Y,2020-10-01,2026-09-30,Renouvellement,Non réélu
+14039A,2014-10-01,2020-09-30,Election,Ne se représente pas
+14041T,2014-10-01,2021-09-30,Election,Non réélu
 14042U,2014-09-29,2017-10-01,Election,Fin de mandat
 14042U,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 14042U,2023-10-02,,Renouvellement 2,En Cours
+14051J,2014-10-01,2020-09-30,Election,Non réélu
 14053L,2014-10-01,2020-09-30,Election,Fin de mandat
 14053L,2020-10-01,2024-10-21,Renouvellement,De droit (membre du Gouvernement)
 14053L,2025-01-24,2026-09-30,Reprise suite à fin fon. membre Gvt,Fin de mandat
@@ -283,6 +512,9 @@ senateur_id,debut,fin,motif_debut,motif_fin
 14055N,2020-10-01,2026-09-30,Renouvellement,Non réélu
 14059S,2014-10-01,2020-09-30,Election,Fin de mandat
 14059S,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
+14061L,2014-10-01,2020-09-30,Election,Non réélu
+14063N,2014-10-01,2020-09-30,Election,Ne se représente pas
+14065Q,2014-10-01,2020-09-30,Election,Ne se représente pas
 14069U,2014-10-01,2020-09-30,Election,Fin de mandat
 14069U,2020-10-01,2026-09-30,Renouvellement,Fin de mandat
 14069U,2026-10-01,,Renouvellement 2,En Cours
@@ -291,13 +523,19 @@ senateur_id,debut,fin,motif_debut,motif_fin
 14071N,2026-10-01,,Renouvellement 2,En Cours
 14073Q,2014-10-01,2020-09-30,Election,Fin de mandat
 14073Q,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
+14079W,2014-10-01,2020-09-30,Election,Ne se représente pas
+14081Q,2014-10-01,2020-09-30,Election,Ne se représente pas
 14083S,2014-10-01,2020-09-30,Election,Fin de mandat
 14083S,2020-10-01,2026-09-30,Renouvellement,Fin de mandat
 14083S,2026-10-01,,Renouvellement 2,En Cours
+14085U,2014-10-01,2020-09-30,Election,Ne se représente pas
+14087W,2014-10-01,2020-09-30,Election,Ne se représente pas
 14089Y,2014-10-01,2020-09-30,Election,Fin de mandat
 14089Y,2020-10-01,2024-09-27,Renouvellement,Élu député
+14093U,2014-10-01,2020-09-30,Election,Ne se représente pas
 14097Y,2014-10-01,2020-09-30,Election,Fin de mandat
 14097Y,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
+14103D,2014-10-01,2020-09-30,Election,Ne se représente pas
 14105F,2014-10-01,2020-09-30,Election,Fin de mandat
 14105F,2020-10-01,2025-10-20,Renouvellement,Décédé
 14107H,2014-10-01,2020-09-30,Election,Fin de mandat
@@ -308,6 +546,8 @@ senateur_id,debut,fin,motif_debut,motif_fin
 14111D,2014-10-01,2020-09-30,Election,Fin de mandat
 14111D,2020-10-01,2026-09-30,Renouvellement,Fin de mandat
 14111D,2026-10-01,,Renouvellement 2,En Cours
+14115H,2017-09-23,2020-09-30,Remplace,Ne se représente pas
+14119M,2014-10-01,2020-09-30,Election,Ne se représente pas
 14121F,2014-10-01,2020-09-30,Election,Fin de mandat
 14121F,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
 14123H,2014-10-01,2020-09-30,Election,Fin de mandat
@@ -315,6 +555,7 @@ senateur_id,debut,fin,motif_debut,motif_fin
 14123H,2026-10-01,,Renouvellement 2,En Cours
 14133K,2014-10-01,2020-09-30,Election,Fin de mandat
 14133K,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
+14135M,2014-10-01,2020-09-30,Election,Ne se représente pas
 14137P,2014-10-01,2015-06-11,Election,Démissionné d'office par le Conseil constitutionnel
 14137P,2026-10-01,,Réélection,En Cours
 14147R,2015-06-12,2020-09-30,Remplace,Fin de mandat
@@ -322,6 +563,9 @@ senateur_id,debut,fin,motif_debut,motif_fin
 14147R,2026-10-01,,Renouvellement 2,En Cours
 14151M,2014-10-01,2020-09-30,Election,Fin de mandat
 14151M,2020-10-01,2025-10-06,Renouvellement,De droit (incompatibilité mandats locaux)
+14157T,2014-10-01,2020-09-30,Election,Ne se représente pas
+14159V,2014-10-01,2020-09-30,Election,Non réélu
+14167V,2014-10-01,2017-09-30,Election,Démissionnaire
 14169X,2014-10-01,2020-09-30,Election,Fin de mandat
 14169X,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
 14173T,2014-10-01,2020-09-30,Election,Fin de mandat
@@ -343,11 +587,15 @@ senateur_id,debut,fin,motif_debut,motif_fin
 14193X,2026-10-01,,Renouvellement 2,En Cours
 14195A,2014-10-01,2020-09-30,Election,Fin de mandat
 14195A,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
+14197C,2014-10-01,2020-09-30,Election,Ne se représente pas
+14199E,2014-10-01,2020-06-27,Election,De droit (incompatibilité mandats locaux)
+14201E,2014-10-01,2020-09-30,Election,Ne se représente pas
 14205J,2014-10-01,2020-09-30,Election,Fin de mandat
 14205J,2020-10-01,2026-09-30,Renouvellement,Fin de mandat
 14205J,2026-10-01,,Renouvellement 2,En Cours
 14207L,2014-10-01,2020-09-30,Election,Fin de mandat
 14207L,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
+14209N,2014-10-01,2017-09-30,Election,Démissionnaire
 14211G,2014-10-01,2020-09-30,Election,Fin de mandat
 14211G,2020-10-01,2026-09-30,Renouvellement,Non réélu
 14213J,2014-10-01,2020-09-30,Election,Fin de mandat
@@ -369,17 +617,21 @@ senateur_id,debut,fin,motif_debut,motif_fin
 14223L,2026-10-01,,Renouvellement 2,En Cours
 14225N,2014-10-01,2020-09-30,Election,Fin de mandat
 14225N,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
+14227Q,2014-10-01,2020-09-30,Election,Ne se représente pas
 14229S,2014-10-01,2020-09-30,Election,Fin de mandat
 14229S,2020-10-01,2026-09-30,Renouvellement,Fin de mandat
 14229S,2026-10-01,,Renouvellement 2,En Cours
 14231L,2014-10-01,2020-09-30,Election,Fin de mandat
 14231L,2020-10-01,2024-10-21,Renouvellement,De droit (membre du Gouvernement)
 14231L,2026-10-01,,Réélection,En Cours
+14235Q,2014-10-01,2020-09-30,Election,Ne se représente pas
 14237S,2014-10-01,2020-09-30,Election,Fin de mandat
 14237S,2020-10-01,2026-09-30,Renouvellement,Fin de mandat
 14237S,2026-10-01,,Renouvellement 2,En Cours
+14239U,2014-10-01,2020-08-02,Election,Démissionnaire
 14241N,2014-10-01,2020-09-30,Election,Non réélu
 14241N,2024-03-21,2026-09-30,Remplace,Non réélu
+14247U,2014-10-01,2017-09-30,Election,Démissionnaire
 14249W,2014-10-01,2020-09-30,Election,Non réélu
 14249W,2020-11-02,2026-09-30,Remplace,Ne se représente pas
 14251Q,2014-10-01,2020-09-30,Election,Fin de mandat
@@ -395,12 +647,17 @@ senateur_id,debut,fin,motif_debut,motif_fin
 14259Y,2014-10-01,2020-09-30,Election,Fin de mandat
 14259Y,2020-10-01,2026-09-30,Renouvellement,Fin de mandat
 14259Y,2026-10-01,,Renouvellement 2,En Cours
+14261S,2014-10-01,2020-09-30,Election,Non réélu
+14265W,2014-12-28,2020-09-30,Remplace,Non réélu
 14267Y,2015-01-26,2017-10-01,Election,Fin de mandat
 14267Y,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 14267Y,2023-10-02,,Renouvellement 2,En Cours
+14269B,2015-03-04,2017-10-01,Remplace,Ne se représente pas
+14271U,2015-04-08,2017-10-01,Remplace,Ne se représente pas
 14275Y,2015-05-04,2020-09-30,Election,Fin de mandat
 14275Y,2020-10-01,2026-09-30,Renouvellement,Fin de mandat
 14275Y,2026-10-01,,Renouvellement 2,En Cours
+14277B,2015-05-04,2020-09-30,Election,Non réélu
 14281W,2015-06-12,2020-09-30,Remplace,Fin de mandat
 14281W,2020-10-01,2026-09-30,Renouvellement,Fin de mandat
 14281W,2026-10-01,,Renouvellement 2,En Cours
@@ -418,9 +675,14 @@ senateur_id,debut,fin,motif_debut,motif_fin
 14357A,2016-12-01,2017-10-01,Remplace,Fin de mandat
 14357A,2017-10-02,2023-10-01,Renouvellement,Fin de mandat
 14357A,2023-10-02,,Renouvellement 2,En Cours
+14361V,2016-12-11,2017-10-01,Remplace,Non réélu
+14363X,2017-01-01,2017-10-01,Remplace,Ne se représente pas
+14365A,2017-05-16,2017-10-01,Remplace,Ne se représente pas
 15197G,2023-10-02,,Election,En Cours
+15447F,2017-09-22,2020-09-30,Remplace,Ne se représente pas
 15689X,2026-10-01,,Election,En Cours
 16685X,2017-10-02,2023-10-01,Election,Ne se représente pas
+16813M,2017-06-15,2017-10-01,Remplace,Ne se représente pas
 17023S,2020-10-01,2026-09-30,Election,Fin de mandat
 17023S,2026-10-01,,Renouvellement 1,En Cours
 17229F,2020-10-01,2026-09-30,Election,Fin de mandat
@@ -428,6 +690,7 @@ senateur_id,debut,fin,motif_debut,motif_fin
 17305A,2026-10-01,,Election,En Cours
 17331C,2026-10-01,,Election,En Cours
 17367Q,2020-10-01,2026-09-30,Election,Non réélu
+17583W,2017-10-02,2020-10-31,Election,Démissionnaire
 17589D,2017-10-02,2023-10-01,Election,Non réélu
 17637T,2017-10-02,2023-10-01,Election,Non réélu
 17737W,2020-10-01,2026-09-30,Election,Fin de mandat
@@ -438,6 +701,7 @@ senateur_id,debut,fin,motif_debut,motif_fin
 18045D,2025-09-01,,Remplace,En Cours
 18083K,2017-10-02,2023-10-01,Election,Fin de mandat
 18083K,2023-10-02,,Renouvellement 1,En Cours
+18127E,2017-07-04,2017-10-01,Remplace,Ne se représente pas
 18153G,2026-10-01,,Election,En Cours
 18193Q,2020-10-01,2026-09-30,Election,Fin de mandat
 18193Q,2026-10-01,,Renouvellement 1,En Cours
@@ -452,6 +716,12 @@ senateur_id,debut,fin,motif_debut,motif_fin
 19251M,2017-06-18,2018-11-03,Remplace,Reprise mandat d'ancien membre du Gvt
 19251M,2018-12-06,2020-09-30,Remplace,Fin de mandat
 19251M,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
+19253P,2017-06-18,2018-11-16,Remplace,Reprise mandat d'ancien membre du Gvt
+19253P,2019-03-04,2020-09-30,Remplace,Ne se représente pas
+19265T,2020-10-01,2020-11-01,Election,De droit (membre du Gouvernement)
+19269X,2017-07-22,2020-09-30,Remplace,Ne se représente pas
+19285X,2017-07-29,2017-10-01,Remplace,Ne se représente pas
+19289C,2017-10-02,2022-02-02,Election,Décédé
 19295A,2017-10-02,2023-10-01,Election,Fin de mandat
 19295A,2023-10-02,,Renouvellement 1,En Cours
 19301E,2017-10-02,2023-10-01,Election,Fin de mandat
@@ -487,6 +757,7 @@ senateur_id,debut,fin,motif_debut,motif_fin
 19467C,2017-10-02,2023-10-01,Election,Ne se représente pas
 19479G,2017-10-02,2023-10-01,Election,Fin de mandat
 19479G,2023-10-02,,Renouvellement 1,En Cours
+19483C,2017-10-02,2018-04-13,Election,Annulé par CC
 19489J,2017-10-02,2023-10-01,Election,Fin de mandat
 19489J,2023-10-02,,Renouvellement 1,En Cours
 19503N,2017-10-02,2023-10-01,Election,Non réélu
@@ -494,6 +765,7 @@ senateur_id,debut,fin,motif_debut,motif_fin
 19507S,2023-10-02,,Renouvellement 1,En Cours
 19511N,2017-10-02,2023-10-01,Election,Ne se représente pas
 19515S,2017-10-02,2023-10-01,Election,Ne se représente pas
+19521Q,2017-10-02,2021-12-07,Election,Décédé
 19525U,2017-10-02,2023-10-01,Election,Ne se représente pas
 19527W,2017-10-02,2023-10-01,Election,Non réélu
 19531S,2017-10-02,2023-10-01,Election,Fin de mandat
@@ -558,6 +830,7 @@ senateur_id,debut,fin,motif_debut,motif_fin
 19673G,2017-10-02,2023-10-01,Election,Fin de mandat
 19673G,2023-10-02,,Renouvellement 1,En Cours
 19675J,2017-10-02,2023-10-01,Election,Non réélu
+19677L,2017-10-02,2017-11-24,Election,Démissionnaire
 19679N,2017-10-02,2023-10-01,Election,Fin de mandat
 19679N,2023-10-02,,Renouvellement 1,En Cours
 19681G,2017-10-02,2023-10-01,Election,Fin de mandat
@@ -568,6 +841,7 @@ senateur_id,debut,fin,motif_debut,motif_fin
 19685L,2023-10-02,,Renouvellement 1,En Cours
 19687N,2017-10-02,2023-10-01,Election,Fin de mandat
 19687N,2023-10-02,,Renouvellement 1,En Cours
+19689Q,2017-10-02,2022-07-03,Election,Démissionnaire
 19691J,2017-10-02,2023-10-01,Election,Fin de mandat
 19691J,2023-10-02,,Renouvellement 1,En Cours
 19693L,2017-10-02,2023-10-01,Election,Fin de mandat
@@ -604,11 +878,15 @@ senateur_id,debut,fin,motif_debut,motif_fin
 19723Y,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
 19725B,2017-10-01,2020-09-30,Remplace,Fin de mandat
 19725B,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
+19727D,2017-10-01,2020-06-24,Remplace,De droit (incompatibilité mandats locaux)
 19729F,2017-10-01,2020-09-30,Remplace,Fin de mandat
 19729F,2020-10-01,2026-09-30,Renouvellement,Non réélu
+19731Y,2017-10-01,2020-09-30,Remplace,Non réélu
+19733B,2017-10-01,2020-06-17,Remplace,Démissionnaire
 19735D,2017-10-01,2020-09-30,Remplace,Fin de mandat
 19735D,2020-10-01,2026-09-30,Renouvellement,Fin de mandat
 19735D,2026-10-01,,Renouvellement 2,En Cours
+19737F,2017-10-01,2020-09-30,Remplace,Non réélu
 19739H,2017-11-03,2023-10-01,Remplace,Ne se représente pas
 19741B,2017-11-25,2023-10-01,Remplace,Non réélu
 19745F,2017-12-18,2020-09-30,Election,Fin de mandat
@@ -631,8 +909,10 @@ senateur_id,debut,fin,motif_debut,motif_fin
 19782L,2018-11-17,2020-08-06,Remplace,Reprise mandat d'ancien membre du Gvt
 19782L,2020-08-08,2020-09-30,Remplace,Fin de mandat
 19782L,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
+19794Q,2018-12-31,2020-09-30,Remplace,Ne se représente pas
 19798U,2019-03-04,2020-09-30,Remplace,Fin de mandat
 19798U,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
+19812Y,2019-07-01,2020-09-30,Remplace,Non réélu
 19820Y,2019-08-28,2020-09-30,Remplace,Fin de mandat
 19820Y,2020-10-01,2026-09-30,Renouvellement,Fin de mandat
 19820Y,2026-10-01,,Renouvellement 2,En Cours
@@ -641,9 +921,16 @@ senateur_id,debut,fin,motif_debut,motif_fin
 19826F,2026-10-01,,Renouvellement 2,En Cours
 19866P,2020-03-04,2023-10-01,Remplace,Fin de mandat
 19866P,2023-10-02,,Renouvellement 1,En Cours
+19912C,2020-06-16,2020-09-30,Remplace,Ne se représente pas
+19914E,2020-06-18,2020-09-30,Remplace,Non réélu
 19916G,2026-10-01,,Election,En Cours
+19920C,2020-06-25,2020-06-25,Remplace,Démissionnaire
+19926J,2020-06-26,2020-09-30,Remplace,Ne se représente pas
+19930E,2020-06-28,2020-09-30,Remplace,Ne se représente pas
 19954N,2020-07-14,2023-10-01,Remplace,Fin de mandat
 19954N,2023-10-02,,Renouvellement 1,En Cours
+19966S,2020-08-03,2020-09-30,Remplace,Fin de mandat
+19966S,2020-10-01,2021-07-05,Renouvellement,Décédé
 20016T,2020-10-01,2026-09-30,Election,Non réélu
 20018V,2020-10-01,2026-09-30,Election,Fin de mandat
 20018V,2026-10-01,,Renouvellement 1,En Cours
@@ -764,6 +1051,7 @@ senateur_id,debut,fin,motif_debut,motif_fin
 20172F,2020-11-01,2023-10-01,Remplace,Fin de mandat
 20172F,2023-10-02,2024-10-21,Renouvellement 1,De droit (membre du Gouvernement)
 20172F,2025-01-24,,Reprise suite à fin fon. membre Gvt,En Cours
+20174H,2020-11-02,2022-06-20,Remplace,Reprise mandat d'ancien membre du Gvt
 20180F,2020-12-04,2023-10-01,Remplace,Fin de mandat
 20180F,2023-10-02,,Renouvellement 1,En Cours
 20248J,2021-07-06,2026-09-30,Remplace,Fin de mandat
@@ -935,30 +1223,173 @@ senateur_id,debut,fin,motif_debut,motif_fin
 21728A,2026-10-01,,Election,En Cours
 21730T,2026-10-01,,Election,En Cours
 21732V,2026-10-01,,Remplace,En Cours
+77002U,1977-03-04,1983-10-02,Remplace,Fin de mandat
+77002U,1983-10-03,1992-09-26,Renouvellement 1,Fin de mandat
+77002U,1992-10-02,2001-09-30,Renouvellement 2,Fin de mandat
+77002U,2001-10-01,2011-09-30,Renouvellement 3,Fin de mandat
+77002U,2011-10-01,2017-10-01,Renouvellement 4,Ne se représente pas
+80013X,1980-10-02,1989-10-01,Election,Fin de mandat
+80013X,1989-10-02,1998-09-30,Renouvellement 1,Fin de mandat
+80013X,1998-10-01,2008-09-30,Renouvellement 2,Fin de mandat
+80013X,2008-10-01,2014-09-30,Renouvellement 3,Fin de mandat
+80013X,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+80027E,1980-10-02,1989-10-01,Election,Fin de mandat
+80027E,1989-10-02,1998-09-30,Renouvellement 1,Fin de mandat
+80027E,1998-10-01,2008-09-30,Renouvellement 2,Fin de mandat
+80027E,2008-10-01,2014-09-30,Renouvellement 3,Fin de mandat
+80027E,2014-10-01,2019-08-27,Renouvellement 4,Décédé
+83042R,1983-10-03,1992-10-01,Election,Fin de mandat
+83042R,1992-10-02,1997-07-04,Renouvellement 1,Membre Gouvernement
+83042R,2001-10-01,2011-09-30,Réélection,Non réélu
+83042R,2014-09-01,2017-10-01,Remplace,Ne se représente pas
+83047W,1983-10-03,1992-10-01,Election,Fin de mandat
+83047W,1992-10-02,2001-09-30,Renouvellement 1,Fin de mandat
+83047W,2001-10-01,2011-09-30,Renouvellement 2,Fin de mandat
+83047W,2011-10-01,2017-10-01,Renouvellement 3,Ne se représente pas
 86034E,1986-10-02,1995-10-01,Election,Fin de mandat
 86034E,1995-10-02,2004-04-30,Renouvellement 1,Membre Gouvernement
 86034E,2007-10-01,2011-09-30,Remplace,Fin de mandat
 86034E,2011-10-01,2017-10-01,Renouvellement 2,Fin de mandat
 86034E,2017-10-02,2023-10-01,Renouvellement 3,Fin de mandat
 86034E,2023-10-02,,Renouvellement 4,En Cours
+86044G,1986-10-02,1995-10-01,Election,Fin de mandat
+86044G,1995-10-02,2004-09-30,Renouvellement 1,Fin de mandat
+86044G,2004-10-01,2009-07-23,Renouvellement 2,Membre Gouvernement
+86044G,2012-06-17,2014-09-30,Reprise suite à fin fon. membre Gvt,Fin de mandat
+86044G,2014-10-01,2017-09-30,Renouvellement,Démissionnaire
+87003B,1987-10-01,1995-10-01,Remplace,Fin de mandat
+87003B,1995-10-02,2004-09-30,Renouvellement 1,Fin de mandat
+87003B,2004-10-01,2014-09-30,Renouvellement 2,Non réélu
+87003B,2015-02-13,2020-09-30,Remplace,Non réélu
+88008L,1988-07-31,1995-10-01,Election,Fin de mandat
+88008L,1995-10-02,2004-09-30,Renouvellement 1,Fin de mandat
+88008L,2004-10-01,2014-09-30,Renouvellement 2,Fin de mandat
+88008L,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+89017R,1989-10-02,1998-09-30,Election,Fin de mandat
+89017R,1998-10-01,2008-09-30,Renouvellement 1,Fin de mandat
+89017R,2008-10-01,2014-09-30,Renouvellement 2,Fin de mandat
+89017R,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+89029V,1989-10-02,1995-12-07,Election,Fin de mandat
+89029V,1998-10-01,2008-09-30,Election,Fin de mandat
+89029V,2008-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+89029V,2014-10-01,2017-09-22,Renouvellement 2,Démissionnaire
+90003B,1990-06-15,1998-09-30,Remplace,Fin de mandat
+90003B,1998-10-01,2008-09-30,Renouvellement 1,Fin de mandat
+90003B,2008-10-01,2014-09-30,Renouvellement 2,Fin de mandat
+90003B,2014-10-01,2017-09-30,Renouvellement 3,Démissionnaire
+92015P,1992-10-02,2001-09-30,Election,Fin de mandat
+92015P,2001-10-01,2011-09-30,Renouvellement 1,Fin de mandat
+92015P,2011-10-01,2017-10-01,Renouvellement 2,Ne se représente pas
+92018S,1992-10-02,1997-06-19,Election,Membre Gouvernement
+92018S,2001-10-01,2011-09-30,Réélection,Fin de mandat
+92018S,2011-10-01,2017-10-01,Renouvellement 2,Ne se représente pas
+92020L,1992-10-02,2001-09-30,Election,Fin de mandat
+92020L,2001-10-01,2011-09-30,Renouvellement 1,Fin de mandat
+92020L,2011-10-01,2017-10-01,Renouvellement 2,Ne se représente pas
+92031P,1992-10-02,2001-09-30,Election,Fin de mandat
+92031P,2001-10-01,2011-09-30,Renouvellement 1,Fin de mandat
+92031P,2011-10-01,2017-10-01,Renouvellement 2,Ne se représente pas
+92039X,1992-10-02,2001-09-30,Election,Fin de mandat
+92039X,2001-10-01,2011-09-30,Renouvellement 1,Fin de mandat
+92039X,2011-10-01,2017-10-01,Renouvellement 2,Ne se représente pas
 92040Q,1992-10-02,2001-09-30,Election,Fin de mandat
 92040Q,2001-10-01,2011-09-30,Renouvellement 1,Fin de mandat
 92040Q,2011-10-01,2017-10-01,Renouvellement 2,Fin de mandat
 92040Q,2017-10-02,2022-12-31,Renouvellement 3,Démissionnaire
+92044U,1992-10-02,2001-09-30,Election,Fin de mandat
+92044U,2001-10-01,2011-09-30,Renouvellement 1,Fin de mandat
+92044U,2011-10-01,2017-10-01,Renouvellement 2,Non réélu
+92045V,1992-10-02,2001-09-30,Election,Fin de mandat
+92045V,2001-10-01,2011-09-30,Renouvellement 1,Non réélu
+92045V,2015-01-08,2017-10-01,Remplace,Non réélu
+95015C,1995-10-02,2004-09-30,Election,Fin de mandat
+95015C,2004-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+95015C,2014-10-01,2018-08-06,Renouvellement 2,Démissionnaire
+95030B,1995-10-02,2004-09-30,Election,Fin de mandat
+95030B,2004-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+95030B,2014-10-01,2020-09-30,Renouvellement 2,Ne se représente pas
+95031C,1995-10-02,2002-07-17,Election,Membre Gouvernement
+95031C,2004-10-01,2008-04-18,Election,Membre Gouvernement
+95031C,2010-12-14,2014-09-30,Reprise suite à fin fon. membre Gvt,Fin de mandat
+95031C,2014-10-01,2017-09-21,Renouvellement,Démissionnaire
+95035G,1995-10-02,2004-09-30,Election,Fin de mandat
+95035G,2004-10-01,2011-09-30,Renouvellement 1,Fin de mandat
+95035G,2011-10-01,2017-10-01,Renouvellement 2,Ne se représente pas
+95037J,1995-10-02,1996-05-02,Election,Annulé par CC
+95037J,1996-06-23,2004-09-30,Election,Fin de mandat
+95037J,2004-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+95037J,2014-10-01,2020-09-30,Renouvellement 2,Ne se représente pas
 95041E,1995-10-02,2002-06-18,Election,Élu député
 95041E,2014-10-01,2020-09-30,Réélection,Fin de mandat
 95041E,2020-10-01,2026-09-30,Renouvellement,Ne se représente pas
+95049N,1995-10-02,2004-09-30,Election,Fin de mandat
+95049N,2004-10-01,2009-07-23,Renouvellement 2,Membre Gouvernement
+95049N,2012-06-17,2014-04-22,Reprise suite à fin fon. membre Gvt,Démissionnaire
+95049N,2014-10-01,2017-09-30,Réélection,Démissionnaire
+95059Q,1995-10-02,1995-10-31,Election,Membre Gouvernement
+95059Q,1997-09-21,2002-06-06,Election,Premier ministre
+95059Q,2004-10-01,2004-11-01,Election,Premier ministre
+95059Q,2005-09-19,2014-09-30,Election,Fin de mandat
+95059Q,2014-10-01,2017-10-04,Renouvellement,Démissionnaire
+95062K,1995-10-02,2004-09-30,Election,Fin de mandat
+95062K,2004-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+95062K,2014-10-01,2019-09-30,Renouvellement 2,Démissionnaire
 95063L,1995-10-02,1997-07-04,Election,Membre Gouvernement
 95063L,2011-10-01,2017-10-01,Election,Fin de mandat
 95063L,2017-10-02,2023-10-01,Renouvellement 1,Non réélu
+95067Q,1995-11-02,1997-06-30,Remplace,Démissionnaire
+95067Q,1999-11-14,2004-09-30,Election,Fin de mandat
+95067Q,2004-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+95067Q,2014-10-01,2020-09-30,Renouvellement 2,Ne se représente pas
+96004D,1996-07-07,2001-09-30,Election,Fin de mandat
+96004D,2001-10-01,2011-09-30,Renouvellement 1,Fin de mandat
+96004D,2011-10-01,2017-10-01,Renouvellement 2,Fin de mandat
+96004D,2017-10-02,2020-11-30,Renouvellement 3,Démissionnaire
 97011G,1997-11-19,2001-09-30,Remplace,Fin de mandat
 97011G,2001-10-01,2011-09-30,Renouvellement 1,Fin de mandat
 97011G,2011-10-01,2017-10-01,Renouvellement 2,Fin de mandat
 97011G,2017-10-02,2023-10-01,Renouvellement 3,Ne se représente pas
+98005N,1998-10-01,2008-09-30,Election,Fin de mandat
+98005N,2008-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+98005N,2014-10-01,2020-09-30,Renouvellement,Non réélu
+98018T,1998-10-01,2008-09-30,Election,Fin de mandat
+98018T,2008-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+98018T,2014-10-01,2021-09-30,Renouvellement 2,Ne se représente pas
+98021N,1998-10-01,2008-09-30,Election,Fin de mandat
+98021N,2008-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+98021N,2014-10-01,2017-09-30,Renouvellement 2,Démissionnaire
 98022P,1998-10-01,2008-09-30,Election,Fin de mandat
 98022P,2008-10-01,2014-09-30,Renouvellement 1,Fin de mandat
 98022P,2014-10-01,2020-09-30,Renouvellement 2,Fin de mandat
 98022P,2020-10-01,2024-03-20,Renouvellement 3,Démissionnaire
+98023Q,1998-10-01,2008-09-30,Election,Fin de mandat
+98023Q,2008-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+98023Q,2014-10-01,2018-12-30,Renouvellement,Démissionnaire
+98024R,1998-10-01,2008-09-30,Election,Fin de mandat
+98024R,2008-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+98024R,2014-10-01,2020-09-30,Renouvellement 2,Ne se représente pas
+98029W,1998-10-01,2008-09-30,Election,Fin de mandat
+98029W,2008-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+98029W,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+98035U,1998-10-01,2008-09-30,Election,Fin de mandat
+98035U,2008-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+98035U,2014-10-01,2020-09-30,Renouvellement,Ne se représente pas
+98042T,1998-10-01,2008-09-30,Election,Fin de mandat
+98042T,2008-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+98042T,2014-10-01,2017-09-30,Renouvellement,Démissionnaire
+98046X,1998-10-01,2008-09-30,Election,Fin de mandat
+98046X,2008-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+98046X,2014-10-01,2017-09-24,Renouvellement,Démissionnaire
+98050T,1998-10-01,2008-09-30,Election,Fin de mandat
+98050T,2008-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+98050T,2014-10-01,2020-09-30,Renouvellement 2,Non réélu
+98053W,1998-10-03,2004-09-30,Remplace,Fin de mandat
+98053W,2004-10-01,2014-09-30,Renouvellement 1,Fin de mandat
+98053W,2014-10-01,2018-05-31,Renouvellement 2,Démissionnaire
+99002P,1999-11-02,2004-09-30,Remplace,De droit (incompatibilité mandats locaux)
+99002P,2004-10-01,2014-09-30,Renouvellement 2,Fin de mandat
+99002P,2014-10-01,2017-06-17,Renouvellement,Membre Gouvernement
+99002P,2018-11-04,2018-12-05,Reprise suite à fin fon. membre Gvt,Cessation de mandat
 99004R,1999-12-17,2004-09-30,Remplace,Fin de mandat
 99004R,2004-10-01,2007-06-24,Renouvellement 1,Membre Gouvernement
 99004R,2009-07-24,2009-07-28,Reprise suite à fin fon. membre Gvt,Cessation de mandat
