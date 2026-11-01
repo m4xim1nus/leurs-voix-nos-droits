@@ -54,7 +54,7 @@ Le Sénat de 2017-2022, écarté du cycle XVe (décision de Max, 31/10/2026) : l
 - [→Sénat, suite] Votes du Sénat sur les textes de la XVe (claude, 2026-10-31)
 - [→Sénat, suite] Amendements clés du Sénat (environ 31 suppressions hors budgets et retraites, sur 16 textes) (claude, 2026-10-31)
 - [→Sénat, suite] Cartes partageables des sénateur·ices (claude, 2026-10-31)
-- [→Sénat, suite] Comparer pour le Sénat, et correspondance entre groupes des deux chambres (claude, 2026-10-31)
+- [→Sénat, suite] Comparer pour le Sénat (claude, 2026-10-31)
 
 ### Passation
 
@@ -101,6 +101,7 @@ vient de lui ; un cas non prévu remonte à un humain, sans règle inventée.
 
 ## Refusé
 
+- [refusé] Correspondance entre les groupes des deux chambres : jugement au cas par cas, contraire à la règle fixe et à la règle 28 (décision de Max, 2026-11-01)
 - [refusé] Interroger le catalogue de l'admin en langage naturel : peu d'utilisateurs, des filtres déjà là, et la même raison que l'assistant dans l'admin (user:moi et claude, 2026-11-01)
 - [refusé] Sénat : compter au Sénat un texte écarté à l'AN pour unanimité et disputé au Sénat (nationalisation d'EDF, douane, commission d'évaluation de l'aide, textile, chlordécone, devoir conjugal, accès à l'accompagnement, Territoires zéro chômeur) : un texte écarté l'est pour les deux chambres, règle 28 (décision de Max, 2026-10-31)
 - [refusé] Listes et « Prochains votes » : afficher la date de l'état. Le pied de page donne déjà la date des données sur chaque page (claude, 2026-10-31)

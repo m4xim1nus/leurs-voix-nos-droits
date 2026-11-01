@@ -39,7 +39,7 @@ Le 31/10/2026, pour le Sénat : les règles 23 à 28, et le CESE hors des source
 l'échéance d'un régime restrictif et le droit lu à la seule date du vote (règle 4), les lois de finances (règle 8), les
 lois successives d'une même crise (règle 18), le détail par législature sur la fiche d'un·e député·e (règle 19). Le 01/11/2026, après l'audit de cohérence : le choix du droit
 principal et le décompte des sources (règle 4), le droit `discriminations` et la mesure d'un autre droit (règle 4), la mesure absente
-du texte décisif, le droit secondaire, les sources partagées et la réserve du Conseil constitutionnel (règle 11). Le 01/11/2026, proposé pour le Sénat de 2017-2022 et **en attente de validation** (`docs/A_VALIDER.md`) : deux périodes et des amendements clés (règle 26).
+du texte décisif, le droit secondaire, les sources partagées et la réserve du Conseil constitutionnel (règle 11). Le 01/11/2026, pour le Sénat de 2017-2022 : deux périodes et des amendements clés (règle 26).
 
 ## Grille des droits
 
