@@ -63,6 +63,7 @@ textes:
   ecole-liberte-egalite-laicite-ppl-2023: {termes: [laïcité à l'école, voile, sorties scolaires, signes religieux]}
   ecriture-inclusive-ppl-2023: {termes: [point médian, langue française, iel, école, grammaire]}
   ecriture-inclusive-senat-2023: {termes: [point médian, langue française, iel, grammaire]}
+  egalim-2018: {termes: [Egalim, Egalim 1, agriculteurs, cage, poules, glyphosate, négociations commerciales, cantines]}
   elan-2018: {termes: [ELAN, bail mobilité, encadrement des loyers, logements accessibles, HLM, handicap, littoral, marchands de sommeil, squat, urbanisme]}
   energies-renouvelables-2023: {termes: [éoliennes, panneaux solaires, photovoltaïque, ENR, zones d'accélération, agrivoltaïsme]}
   engrillagement-2023: {termes: [clôtures, grillages, Sologne, chasse, animaux sauvages, forêt]}
@@ -88,6 +89,7 @@ textes:
   ineligibilite-violences-aggravees-2023: {termes: [violences conjugales, violences, élus, condamnation, violences faites aux femmes, inéligibilité obligatoire]}
   information-juridique-retention-ofii-2025: {termes: [CRA, centres de rétention, La Cimade, associations, sans-papiers, avocats, conseil juridique, OFII]}
   ingerences-etrangeres-2024: {termes: [HATVP, lobbying, algorithmes, techniques de renseignement, gel des avoirs, influence étrangère]}
+  inscription-office-nc-ppl-2020: {termes: [Nouvelle-Calédonie, liste électorale spéciale, référendum, consultation, Nouméa]}
   installations-illicites-gens-du-voyage-2026: {termes: [campements illicites, caravanes, aires d'accueil, évacuation, préfet, expulsion]}
   ivg-constitution-2024: {termes: [IVG, avortement, droit à l'avortement, Constitution, Versailles, Congrès, article 34, liberté garantie, IVG dans la Constitution]}
   ivg-constitution-ppl-2022: {termes: [IVG, avortement, droit à l'avortement, Constitution, IVG dans la Constitution, article 66-2]}
@@ -124,6 +126,7 @@ textes:
   nationalite-mayotte-2025: {termes: [droit du sol, Comores, nationalité, migrants, double droit du sol]}
   navigation-aerienne-greve-2023: {termes: [contrôleurs aériens, droit de grève, DGAC, avions, aéroports, service minimum, grèves]}
   neonicotinoides-betteraves-2020: {termes: [betteraves, abeilles, jaunisse, pesticides, sucre, néonicotinoïdes, imidaclopride]}
+  nouvelle-caledonie-bougival-2026: {termes: [Nouvelle-Calédonie, accord de Bougival, Bougival]}
   nucleaire-acceleration-2023: {termes: [EPR, centrales nucléaires, réacteurs, EDF, atome, énergie nucléaire]}
   offre-locative-dpe-ppl-2024: {termes: [DPE, passoires thermiques, propriétaires, locations, rénovation énergétique, logements mal isolés, climat et résilience]}
   organisation-algorithmique-travail-2023: {termes: [algorithme, plateformes, management algorithmique, intelligence artificielle, IA, licenciement, employeur]}
@@ -210,7 +213,6 @@ textes:
   vigilance-sanitaire-2021: {termes: [pass sanitaire, passe sanitaire, covid, prolongation, juillet 2022]}
   violences-educatives-2019: {termes: [fessée, gifle, éducation, punition, autorité parentale, parents, enfants], surnoms: [loi anti-fessée]}
   violences-sexuelles-sexistes-2025: {termes: [contrôle coercitif, emprise, violences conjugales, féminicides, violences faites aux femmes, prescription, MeToo]}
-  visite-parlementaires-essms-ppl-2023: {termes: [Ehpad, foyers, ASE, aide sociale à l'enfance, centres d'hébergement, mineurs isolés, contrôle parlementaire, enfants placés, droit de visite]}
   vote-correspondance-detenus-2025: {termes: [prison, prisonniers, détenus, élections municipales, droit de vote en prison, vote des détenus, prisons, municipales]}
   vsa-commerces-2026: {termes: [VSA, vidéosurveillance algorithmique, supermarchés, caméras, vols à l'étalage, reconnaissance, magasins, intelligence artificielle, IA]}
 
@@ -220,7 +222,6 @@ ecartes:
   DLR5L15N35824: {termes: [moralisation, réserve parlementaire, emplois familiaux]}
   DLR5L15N36143: {termes: [Parcoursup, ORE, université, sélection à la fac]}
   DLR5L15N36159: {termes: [droit à l'erreur, ESSOC]}
-  DLR5L15N36336: {termes: [Egalim, Egalim 1, agriculteurs, cage, poules, glyphosate, négociations commerciales, cantines]}
   DLR5L15N36362: {termes: [LPM, armée, défense, loi de programmation militaire]}
   DLR5L15N36468: {termes: [fake news, infox, désinformation, loi organique]}
   DLR5L15N36496: {termes: [harcèlement de rue, outrage sexiste, âge de consentement, délai de prescription, viol, loi contre les violences], surnoms: [loi Schiappa]}
@@ -246,10 +247,10 @@ ecartes:
   DLR5L15N41126: {termes: [animaux, cirques, delphinarium, visons, abandon, animaleries, zoos]}
   DLR5L15N41193: {termes: [âge de consentement, 15 ans, viol, inceste, 18 ans], surnoms: [loi Billon]}
   DLR5L15N41647: {termes: [terres agricoles, Safer, agriculteurs], surnoms: [loi Sempastous]}
+  DLR5L15N42024: {termes: [quotas, femmes dirigeantes, parité, femmes-hommes, compte bancaire], surnoms: [loi Rixain]}
   DLR5L15N42027: {termes: [proportionnelle, mode de scrutin]}
   DLR5L15N42038: {termes: [publicité]}
   DLR5L15N42044: {termes: [thérapies de conversion, LGBT, homosexualité, transidentité]}
-  DLR5L15N42024: {termes: [quotas, femmes dirigeantes, parité, femmes-hommes, compte bancaire], surnoms: [loi Rixain]}
   DLR5L15N42194: {termes: [Hadopi, Arcom, piratage, streaming, CSA]}
   DLR5L15N42333: {termes: [Egalim, négociations commerciales, grande distribution], surnoms: [Egalim 2, loi Besson-Moreau]}
   DLR5L15N42337: {termes: [retraites agricoles, agriculteurs], surnoms: [loi Chassaigne 2]}
@@ -266,6 +267,7 @@ ecartes:
   DLR5L16N46275: {termes: [ZFE, voitures, Crit'Air, vignette]}
   DLR5L16N46655: {termes: [puffs, cigarette électronique, vape, tabac]}
   DLR5L16N46750: {termes: [Egalim, négociations commerciales, grande distribution], surnoms: [Egalim 3]}
+  DLR5L16N46778: {termes: [Ehpad, foyers, ASE, aide sociale à l'enfance, centres d'hébergement, mineurs isolés, contrôle parlementaire, enfants placés, droit de visite]}
   DLR5L16N46858: {termes: [CROUS, repas à 1 euro, étudiants, précarité étudiante]}
   DLR5L16N46880: {termes: [ZAN, zéro artificialisation nette]}
   DLR5L16N46921: {termes: [EDF, tarif réglementé, nationalisation]}
@@ -285,27 +287,26 @@ ecartes:
   DLR5L17N50692: {termes: [PLM, élections municipales, Paris, Lyon, Marseille], surnoms: [loi PLM]}
   DLR5L17N50715: {termes: [fraude, MaPrimeRénov']}
   DLR5L17N50775: {termes: [crèches, petite enfance]}
+  DLR5L17N50975: {termes: ["49.3", budget, motion de censure]}
   DLR5L17N51002: {termes: [infirmières, infirmiers, soignants]}
   DLR5L17N51215: {termes: [taxe Zucman, impôt sur la fortune, ISF, ultra-riches, milliardaires, Zucman]}
   DLR5L17N51222: {termes: [cyclone Chido, Chido, reconstruction, bidonvilles]}
+  DLR5L17N51425: {termes: ["49.3", budget, motion de censure]}
+  DLR5L17N51427: {termes: ["49.3", budget, motion de censure]}
+  DLR5L17N51462: {termes: ["49.3", budget, motion de censure]}
+  DLR5L17N51475: {termes: ["49.3", budget, motion de censure]}
   DLR5L17N51672: {termes: [fin de vie, soins palliatifs, aide à mourir]}
   DLR5L17N51845: {termes: [enfants de la Creuse, Réunionnais de la Creuse, Creuse]}
   DLR5L17N51962: {termes: [TZCLD, chômeurs de longue durée, Territoires zéro chômeur]}
   DLR5L17N52037: {termes: [Dreyfus, affaire Dreyfus]}
   DLR5L17N52767: {termes: [Code noir, esclavage]}
   DLR5L17N52977: {termes: [ArcelorMittal, sidérurgie, nationalisation, Dunkerque]}
-  DLR5L17N52984: {termes: [Nouvelle-Calédonie, accord de Bougival, Bougival]}
+  DLR5L17N53159: {termes: [AGRASC, avoirs criminels, saisie, confiscation]}
   DLR5L17N53276: {termes: [essais nucléaires, Polynésie, Moruroa, victimes]}
   DLR5L17N53279: {termes: [devoir conjugal, viol conjugal, mariage, divorce]}
   DLR5L17N53359: {termes: [intelligence artificielle, IA, droit d'auteur, artistes, éditeurs]}
-  DLR5L17N53159: {termes: [AGRASC, avoirs criminels, saisie, confiscation]}
-  DLR5L17N54083: {termes: [LPM, armée, défense, loi de programmation militaire]}
-  DLR5L17N54218: {termes: [Corse, autonomie de la Corse, statut de la Corse, révision constitutionnelle]}
-  DLR5L17N50975: {termes: ["49.3", budget, motion de censure]}
-  DLR5L17N51425: {termes: ["49.3", budget, motion de censure]}
-  DLR5L17N51427: {termes: ["49.3", budget, motion de censure]}
-  DLR5L17N51462: {termes: ["49.3", budget, motion de censure]}
-  DLR5L17N51475: {termes: ["49.3", budget, motion de censure]}
   DLR5L17N53597: {termes: ["49.3", budget, motion de censure]}
   DLR5L17N53619: {termes: ["49.3", budget, motion de censure]}
   DLR5L17N53689: {termes: ["49.3", budget, motion de censure]}
+  DLR5L17N54083: {termes: [LPM, armée, défense, loi de programmation militaire]}
+  DLR5L17N54218: {termes: [Corse, autonomie de la Corse, statut de la Corse, révision constitutionnelle]}

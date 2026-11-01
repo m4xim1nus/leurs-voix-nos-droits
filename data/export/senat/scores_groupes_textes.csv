@@ -43,6 +43,7 @@ CRC,mineurs-reseaux-sociaux-2026,0,0,18,0,
 CRC,montagne-vivante-2026,0,18,0,0,0.0
 CRC,nationalite-mayotte-2025,18,0,0,0,100.0
 CRC,navigation-aerienne-greve-2023,15,0,0,0,100.0
+CRC,nouvelle-caledonie-bougival-2026,0,18,0,0,0.0
 CRC,nucleaire-acceleration-2023,0,0,15,0,
 CRC,parite-bloc-communal-2025,0,17,1,0,0.0
 CRC,partage-valeur-2023,0,18,0,0,0.0
@@ -119,6 +120,7 @@ GEST,mineurs-reseaux-sociaux-2026,1,0,15,0,100.0
 GEST,montagne-vivante-2026,16,0,0,0,100.0
 GEST,nationalite-mayotte-2025,16,0,0,0,100.0
 GEST,navigation-aerienne-greve-2023,12,0,0,0,100.0
+GEST,nouvelle-caledonie-bougival-2026,0,16,0,0,0.0
 GEST,nucleaire-acceleration-2023,12,0,0,0,100.0
 GEST,parite-bloc-communal-2025,16,0,0,0,100.0
 GEST,partage-valeur-2023,0,0,17,0,
@@ -195,6 +197,7 @@ LREM,mineurs-reseaux-sociaux-2026,0,19,0,0,0.0
 LREM,montagne-vivante-2026,0,19,0,0,0.0
 LREM,nationalite-mayotte-2025,2,17,0,0,10.5
 LREM,navigation-aerienne-greve-2023,0,24,0,0,0.0
+LREM,nouvelle-caledonie-bougival-2026,13,0,6,0,100.0
 LREM,nucleaire-acceleration-2023,0,24,0,0,0.0
 LREM,parite-bloc-communal-2025,17,0,1,1,100.0
 LREM,partage-valeur-2023,22,0,0,0,100.0
@@ -271,6 +274,7 @@ NI,mineurs-reseaux-sociaux-2026,1,0,3,0,100.0
 NI,montagne-vivante-2026,0,0,0,4,
 NI,nationalite-mayotte-2025,0,0,4,0,
 NI,navigation-aerienne-greve-2023,0,0,0,3,
+NI,nouvelle-caledonie-bougival-2026,0,3,1,0,0.0
 NI,nucleaire-acceleration-2023,0,0,0,3,
 NI,parite-bloc-communal-2025,0,0,3,1,
 NI,partage-valeur-2023,0,0,0,4,
@@ -347,6 +351,7 @@ RDSE,mineurs-reseaux-sociaux-2026,0,17,0,0,0.0
 RDSE,montagne-vivante-2026,0,17,0,0,0.0
 RDSE,nationalite-mayotte-2025,14,0,3,0,100.0
 RDSE,navigation-aerienne-greve-2023,2,11,1,0,15.4
+RDSE,nouvelle-caledonie-bougival-2026,0,1,15,1,0.0
 RDSE,nucleaire-acceleration-2023,0,14,0,0,0.0
 RDSE,parite-bloc-communal-2025,10,4,3,0,71.4
 RDSE,partage-valeur-2023,16,0,0,0,100.0
@@ -423,6 +428,7 @@ RTLI,mineurs-reseaux-sociaux-2026,0,20,0,0,0.0
 RTLI,montagne-vivante-2026,0,20,0,0,0.0
 RTLI,nationalite-mayotte-2025,0,19,0,1,0.0
 RTLI,navigation-aerienne-greve-2023,0,14,0,0,0.0
+RTLI,nouvelle-caledonie-bougival-2026,20,0,0,0,100.0
 RTLI,nucleaire-acceleration-2023,0,14,0,0,0.0
 RTLI,parite-bloc-communal-2025,2,8,8,1,20.0
 RTLI,partage-valeur-2023,18,0,0,0,100.0
@@ -499,6 +505,7 @@ SOC,mineurs-reseaux-sociaux-2026,0,0,64,0,
 SOC,montagne-vivante-2026,0,64,0,0,0.0
 SOC,nationalite-mayotte-2025,65,0,0,0,100.0
 SOC,navigation-aerienne-greve-2023,63,0,0,1,100.0
+SOC,nouvelle-caledonie-bougival-2026,0,2,63,0,0.0
 SOC,nucleaire-acceleration-2023,1,62,0,1,1.6
 SOC,parite-bloc-communal-2025,63,0,2,0,100.0
 SOC,partage-valeur-2023,0,0,63,1,
@@ -575,6 +582,7 @@ UC,mineurs-reseaux-sociaux-2026,0,58,0,1,0.0
 UC,montagne-vivante-2026,0,58,0,1,0.0
 UC,nationalite-mayotte-2025,6,39,13,1,13.3
 UC,navigation-aerienne-greve-2023,0,57,0,0,0.0
+UC,nouvelle-caledonie-bougival-2026,56,1,2,0,98.2
 UC,nucleaire-acceleration-2023,0,57,0,0,0.0
 UC,parite-bloc-communal-2025,31,16,11,1,66.0
 UC,partage-valeur-2023,56,0,0,0,100.0
@@ -651,6 +659,7 @@ UMP,mineurs-reseaux-sociaux-2026,0,129,0,2,0.0
 UMP,montagne-vivante-2026,0,129,0,2,0.0
 UMP,nationalite-mayotte-2025,0,129,0,1,0.0
 UMP,navigation-aerienne-greve-2023,0,144,0,1,0.0
+UMP,nouvelle-caledonie-bougival-2026,126,0,2,2,100.0
 UMP,nucleaire-acceleration-2023,0,144,0,1,0.0
 UMP,parite-bloc-communal-2025,53,66,10,2,44.5
 UMP,partage-valeur-2023,132,0,0,1,100.0

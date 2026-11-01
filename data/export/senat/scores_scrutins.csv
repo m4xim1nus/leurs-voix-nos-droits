@@ -64,6 +64,7 @@ information-juridique-retention-ofii-2025,SN2024-268,decisif,etrangers,principal
 information-juridique-retention-ofii-2025,SN2024-268,decisif,global,principal,restreint,1.0,contre
 installations-illicites-gens-du-voyage-2026,SN2025-186,decisif,logement,principal,restreint,1.0,contre
 installations-illicites-gens-du-voyage-2026,SN2025-186,decisif,police-justice,secondaire,restreint,1.0,contre
+installations-illicites-gens-du-voyage-2026,SN2025-186,decisif,discriminations,secondaire,restreint,1.0,contre
 installations-illicites-gens-du-voyage-2026,SN2025-186,decisif,global,principal,restreint,1.0,contre
 ivg-constitution-2024,SN2023-136,decisif,femmes-lgbti,principal,etend,1.0,pour
 ivg-constitution-2024,SN2023-136,decisif,global,principal,etend,1.0,pour
@@ -117,9 +118,13 @@ montagne-vivante-2026,SN2025-339,decisif,environnement,principal,restreint,1.0,c
 montagne-vivante-2026,SN2025-339,decisif,global,principal,restreint,1.0,contre
 nationalite-mayotte-2025,SN2024-248,decisif,etrangers,principal,restreint,1.0,contre
 nationalite-mayotte-2025,SN2024-248,decisif,enfants,secondaire,restreint,1.0,contre
+nationalite-mayotte-2025,SN2024-248,decisif,discriminations,secondaire,restreint,1.0,contre
 nationalite-mayotte-2025,SN2024-248,decisif,global,principal,restreint,1.0,contre
 navigation-aerienne-greve-2023,SN2022-308,decisif,travail-protection-sociale,principal,restreint,1.0,contre
 navigation-aerienne-greve-2023,SN2022-308,decisif,global,principal,restreint,1.0,contre
+nouvelle-caledonie-bougival-2026,SN2025-201,decisif,citoyennete,principal,etend,1.0,pour
+nouvelle-caledonie-bougival-2026,SN2025-201,decisif,discriminations,secondaire,restreint,1.0,contre
+nouvelle-caledonie-bougival-2026,SN2025-201,decisif,global,principal,etend,1.0,pour
 nucleaire-acceleration-2023,SN2022-281,decisif,environnement,principal,restreint,1.0,contre
 nucleaire-acceleration-2023,SN2022-281,decisif,global,principal,restreint,1.0,contre
 parite-bloc-communal-2025,SN2024-225,decisif,femmes-lgbti,principal,etend,1.0,pour
@@ -140,11 +145,13 @@ plf-2025,SN2024-188,decisif,travail-protection-sociale,principal,restreint,1.0,c
 plf-2025,SN2024-188,decisif,global,principal,restreint,1.0,contre
 plf-2026,SN2025-125,decisif,etrangers,principal,restreint,1.0,contre
 plf-2026,SN2025-125,decisif,logement,secondaire,restreint,1.0,contre
+plf-2026,SN2025-125,decisif,discriminations,secondaire,restreint,1.0,contre
 plf-2026,SN2025-125,decisif,global,principal,restreint,1.0,contre
 plfss-2024,SN2023-56,decisif,travail-protection-sociale,principal,restreint,1.0,contre
 plfss-2024,SN2023-56,decisif,sante,secondaire,etend,1.0,pour
 plfss-2024,SN2023-56,decisif,global,principal,restreint,1.0,contre
 plfss-2025,SN2024-195,decisif,sante,principal,restreint,1.0,contre
+plfss-2025,SN2024-195,decisif,travail-protection-sociale,secondaire,etend,1.0,pour
 plfss-2025,SN2024-195,decisif,global,principal,restreint,1.0,contre
 plfss-2026,SN2025-61,decisif,travail-protection-sociale,principal,restreint,1.0,contre
 plfss-2026,SN2025-61,decisif,global,principal,restreint,1.0,contre
@@ -155,6 +162,7 @@ polices-municipales-2026,SN2025-184,decisif,vie-privee,secondaire,restreint,1.0,
 polices-municipales-2026,SN2025-184,decisif,global,principal,restreint,1.0,contre
 pouvoir-achat-2022,SN2021-152,decisif,discriminations,principal,etend,1.0,pour
 pouvoir-achat-2022,SN2021-152,decisif,environnement,secondaire,restreint,1.0,contre
+pouvoir-achat-2022,SN2021-152,decisif,logement,secondaire,etend,1.0,pour
 pouvoir-achat-2022,SN2021-152,decisif,global,principal,etend,1.0,pour
 rapports-locatifs-2025,SN2026-25,decisif,logement,principal,etend,1.0,pour
 rapports-locatifs-2025,SN2026-25,decisif,global,principal,etend,1.0,pour
@@ -183,6 +191,7 @@ ripost-2026,SN2025-338,decisif,police-justice,principal,restreint,1.0,contre
 ripost-2026,SN2025-338,decisif,vie-privee,secondaire,restreint,1.0,contre
 ripost-2026,SN2025-338,decisif,libertes,secondaire,restreint,1.0,contre
 ripost-2026,SN2025-338,decisif,logement,secondaire,restreint,1.0,contre
+ripost-2026,SN2025-338,decisif,discriminations,secondaire,restreint,1.0,contre
 ripost-2026,SN2025-338,decisif,global,principal,restreint,1.0,contre
 simplification-vie-economique-2026,SN2025-232,decisif,environnement,principal,restreint,1.0,contre
 simplification-vie-economique-2026,SN2025-232,decisif,global,principal,restreint,1.0,contre

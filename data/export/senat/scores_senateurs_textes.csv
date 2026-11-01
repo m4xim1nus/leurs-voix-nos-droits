@@ -207,6 +207,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 01058X,montagne-vivante-2026,0,1,0,0,0.0
 01058X,nationalite-mayotte-2025,0,1,0,0,0.0
 01058X,navigation-aerienne-greve-2023,0,1,0,0,0.0
+01058X,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 01058X,nucleaire-acceleration-2023,0,1,0,0,0.0
 01058X,parite-bloc-communal-2025,0,1,0,0,0.0
 01058X,partage-valeur-2023,1,0,0,0,100.0
@@ -321,6 +322,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04008A,montagne-vivante-2026,0,1,0,0,0.0
 04008A,nationalite-mayotte-2025,0,1,0,0,0.0
 04008A,navigation-aerienne-greve-2023,0,1,0,0,0.0
+04008A,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 04008A,nucleaire-acceleration-2023,0,1,0,0,0.0
 04008A,parite-bloc-communal-2025,0,0,1,0,
 04008A,partage-valeur-2023,1,0,0,0,100.0
@@ -384,6 +386,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04033B,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 04033B,montagne-vivante-2026,0,1,0,0,0.0
 04033B,navigation-aerienne-greve-2023,0,1,0,0,0.0
+04033B,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 04033B,nucleaire-acceleration-2023,0,1,0,0,0.0
 04033B,partage-valeur-2023,1,0,0,0,100.0
 04033B,plein-emploi-2023,0,1,0,0,0.0
@@ -469,6 +472,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04042C,montagne-vivante-2026,0,1,0,0,0.0
 04042C,nationalite-mayotte-2025,0,1,0,0,0.0
 04042C,navigation-aerienne-greve-2023,0,1,0,0,0.0
+04042C,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 04042C,nucleaire-acceleration-2023,0,1,0,0,0.0
 04042C,parite-bloc-communal-2025,1,0,0,0,100.0
 04042C,partage-valeur-2023,1,0,0,0,100.0
@@ -562,6 +566,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04045F,montagne-vivante-2026,0,1,0,0,0.0
 04045F,nationalite-mayotte-2025,0,1,0,0,0.0
 04045F,navigation-aerienne-greve-2023,0,1,0,0,0.0
+04045F,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 04045F,nucleaire-acceleration-2023,0,1,0,0,0.0
 04045F,parite-bloc-communal-2025,1,0,0,0,100.0
 04045F,partage-valeur-2023,1,0,0,0,100.0
@@ -623,6 +628,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04047H,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 04047H,montagne-vivante-2026,0,1,0,0,0.0
 04047H,navigation-aerienne-greve-2023,0,1,0,0,0.0
+04047H,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 04047H,nucleaire-acceleration-2023,0,1,0,0,0.0
 04047H,partage-valeur-2023,1,0,0,0,100.0
 04047H,plein-emploi-2023,0,1,0,0,0.0
@@ -725,6 +731,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04070G,montagne-vivante-2026,0,1,0,0,0.0
 04070G,nationalite-mayotte-2025,0,1,0,0,0.0
 04070G,navigation-aerienne-greve-2023,0,1,0,0,0.0
+04070G,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 04070G,nucleaire-acceleration-2023,0,1,0,0,0.0
 04070G,parite-bloc-communal-2025,0,0,1,0,
 04070G,partage-valeur-2023,1,0,0,0,100.0
@@ -836,6 +843,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04092N,montagne-vivante-2026,0,1,0,0,0.0
 04092N,nationalite-mayotte-2025,0,1,0,0,0.0
 04092N,navigation-aerienne-greve-2023,0,1,0,0,0.0
+04092N,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 04092N,nucleaire-acceleration-2023,0,1,0,0,0.0
 04092N,parite-bloc-communal-2025,0,1,0,0,0.0
 04092N,partage-valeur-2023,1,0,0,0,100.0
@@ -950,6 +958,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 05012A,montagne-vivante-2026,0,1,0,0,0.0
 05012A,nationalite-mayotte-2025,0,1,0,0,0.0
 05012A,navigation-aerienne-greve-2023,0,1,0,0,0.0
+05012A,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 05012A,nucleaire-acceleration-2023,0,1,0,0,0.0
 05012A,parite-bloc-communal-2025,1,0,0,0,100.0
 05012A,partage-valeur-2023,1,0,0,0,100.0
@@ -1025,6 +1034,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 07004J,montagne-vivante-2026,0,1,0,0,0.0
 07004J,nationalite-mayotte-2025,0,1,0,0,0.0
 07004J,navigation-aerienne-greve-2023,0,1,0,0,0.0
+07004J,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 07004J,nucleaire-acceleration-2023,0,1,0,0,0.0
 07004J,parite-bloc-communal-2025,0,1,0,0,0.0
 07004J,partage-valeur-2023,1,0,0,0,100.0
@@ -1101,6 +1111,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 07029T,montagne-vivante-2026,0,1,0,0,0.0
 07029T,nationalite-mayotte-2025,0,1,0,0,0.0
 07029T,navigation-aerienne-greve-2023,0,1,0,0,0.0
+07029T,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 07029T,nucleaire-acceleration-2023,0,1,0,0,0.0
 07029T,parite-bloc-communal-2025,0,1,0,0,0.0
 07029T,partage-valeur-2023,1,0,0,0,100.0
@@ -1177,6 +1188,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 07033P,montagne-vivante-2026,0,1,0,0,0.0
 07033P,nationalite-mayotte-2025,0,1,0,0,0.0
 07033P,navigation-aerienne-greve-2023,0,1,0,0,0.0
+07033P,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 07033P,nucleaire-acceleration-2023,0,1,0,0,0.0
 07033P,parite-bloc-communal-2025,1,0,0,0,100.0
 07033P,partage-valeur-2023,1,0,0,0,100.0
@@ -1253,6 +1265,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08009T,montagne-vivante-2026,0,1,0,0,0.0
 08009T,nationalite-mayotte-2025,0,1,0,0,0.0
 08009T,navigation-aerienne-greve-2023,0,1,0,0,0.0
+08009T,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 08009T,nucleaire-acceleration-2023,0,1,0,0,0.0
 08009T,parite-bloc-communal-2025,1,0,0,0,100.0
 08009T,partage-valeur-2023,1,0,0,0,100.0
@@ -1329,6 +1342,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08010L,montagne-vivante-2026,0,1,0,0,0.0
 08010L,nationalite-mayotte-2025,0,1,0,0,0.0
 08010L,navigation-aerienne-greve-2023,0,1,0,0,0.0
+08010L,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 08010L,nucleaire-acceleration-2023,0,1,0,0,0.0
 08010L,parite-bloc-communal-2025,0,1,0,0,0.0
 08010L,partage-valeur-2023,1,0,0,0,100.0
@@ -1405,6 +1419,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08011M,montagne-vivante-2026,0,1,0,0,0.0
 08011M,nationalite-mayotte-2025,0,1,0,0,0.0
 08011M,navigation-aerienne-greve-2023,0,1,0,0,0.0
+08011M,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 08011M,nucleaire-acceleration-2023,0,1,0,0,0.0
 08011M,parite-bloc-communal-2025,1,0,0,0,100.0
 08011M,partage-valeur-2023,1,0,0,0,100.0
@@ -1481,6 +1496,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08012N,montagne-vivante-2026,0,1,0,0,0.0
 08012N,nationalite-mayotte-2025,1,0,0,0,100.0
 08012N,navigation-aerienne-greve-2023,1,0,0,0,100.0
+08012N,nouvelle-caledonie-bougival-2026,0,0,1,0,
 08012N,nucleaire-acceleration-2023,0,1,0,0,0.0
 08012N,parite-bloc-communal-2025,0,0,1,0,
 08012N,partage-valeur-2023,0,0,1,0,
@@ -1556,6 +1572,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08015R,montagne-vivante-2026,0,1,0,0,0.0
 08015R,nationalite-mayotte-2025,0,1,0,0,0.0
 08015R,navigation-aerienne-greve-2023,0,1,0,0,0.0
+08015R,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 08015R,nucleaire-acceleration-2023,0,1,0,0,0.0
 08015R,parite-bloc-communal-2025,0,1,0,0,0.0
 08015R,partage-valeur-2023,1,0,0,0,100.0
@@ -1630,6 +1647,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08018U,montagne-vivante-2026,0,1,0,0,0.0
 08018U,nationalite-mayotte-2025,0,1,0,0,0.0
 08018U,navigation-aerienne-greve-2023,0,1,0,0,0.0
+08018U,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 08018U,nucleaire-acceleration-2023,0,1,0,0,0.0
 08018U,parite-bloc-communal-2025,1,0,0,0,100.0
 08018U,partage-valeur-2023,1,0,0,0,100.0
@@ -1704,6 +1722,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08028W,montagne-vivante-2026,0,1,0,0,0.0
 08028W,nationalite-mayotte-2025,0,1,0,0,0.0
 08028W,navigation-aerienne-greve-2023,0,1,0,0,0.0
+08028W,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 08028W,nucleaire-acceleration-2023,0,1,0,0,0.0
 08028W,parite-bloc-communal-2025,0,1,0,0,0.0
 08028W,partage-valeur-2023,1,0,0,0,100.0
@@ -1778,6 +1797,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08034U,montagne-vivante-2026,0,1,0,0,0.0
 08034U,nationalite-mayotte-2025,0,1,0,0,0.0
 08034U,navigation-aerienne-greve-2023,0,1,0,0,0.0
+08034U,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 08034U,nucleaire-acceleration-2023,0,1,0,0,0.0
 08034U,parite-bloc-communal-2025,0,1,0,0,0.0
 08034U,partage-valeur-2023,1,0,0,0,100.0
@@ -1852,6 +1872,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08045X,montagne-vivante-2026,0,1,0,0,0.0
 08045X,nationalite-mayotte-2025,1,0,0,0,100.0
 08045X,navigation-aerienne-greve-2023,1,0,0,0,100.0
+08045X,nouvelle-caledonie-bougival-2026,0,0,1,0,
 08045X,nucleaire-acceleration-2023,0,1,0,0,0.0
 08045X,parite-bloc-communal-2025,1,0,0,0,100.0
 08045X,partage-valeur-2023,0,0,1,0,
@@ -1926,6 +1947,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08047A,montagne-vivante-2026,0,1,0,0,0.0
 08047A,nationalite-mayotte-2025,0,1,0,0,0.0
 08047A,navigation-aerienne-greve-2023,0,1,0,0,0.0
+08047A,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 08047A,nucleaire-acceleration-2023,0,1,0,0,0.0
 08047A,parite-bloc-communal-2025,0,0,1,0,
 08047A,partage-valeur-2023,1,0,0,0,100.0
@@ -2001,6 +2023,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08056B,montagne-vivante-2026,0,1,0,0,0.0
 08056B,nationalite-mayotte-2025,0,1,0,0,0.0
 08056B,navigation-aerienne-greve-2023,0,1,0,0,0.0
+08056B,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 08056B,nucleaire-acceleration-2023,0,1,0,0,0.0
 08056B,parite-bloc-communal-2025,0,1,0,0,0.0
 08056B,partage-valeur-2023,1,0,0,0,100.0
@@ -2077,6 +2100,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08060W,montagne-vivante-2026,0,1,0,0,0.0
 08060W,nationalite-mayotte-2025,1,0,0,0,100.0
 08060W,navigation-aerienne-greve-2023,1,0,0,0,100.0
+08060W,nouvelle-caledonie-bougival-2026,0,0,1,0,
 08060W,nucleaire-acceleration-2023,0,1,0,0,0.0
 08060W,parite-bloc-communal-2025,1,0,0,0,100.0
 08060W,partage-valeur-2023,0,0,1,0,
@@ -2152,6 +2176,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08061X,montagne-vivante-2026,0,1,0,0,0.0
 08061X,nationalite-mayotte-2025,0,1,0,0,0.0
 08061X,navigation-aerienne-greve-2023,0,1,0,0,0.0
+08061X,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 08061X,nucleaire-acceleration-2023,0,1,0,0,0.0
 08061X,parite-bloc-communal-2025,1,0,0,0,100.0
 08061X,partage-valeur-2023,1,0,0,0,100.0
@@ -2227,6 +2252,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08069G,montagne-vivante-2026,0,1,0,0,0.0
 08069G,nationalite-mayotte-2025,0,1,0,0,0.0
 08069G,navigation-aerienne-greve-2023,0,1,0,0,0.0
+08069G,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 08069G,nucleaire-acceleration-2023,0,1,0,0,0.0
 08069G,parite-bloc-communal-2025,0,1,0,0,0.0
 08069G,partage-valeur-2023,1,0,0,0,100.0
@@ -2304,6 +2330,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08073C,montagne-vivante-2026,0,1,0,0,0.0
 08073C,nationalite-mayotte-2025,1,0,0,0,100.0
 08073C,navigation-aerienne-greve-2023,0,1,0,0,0.0
+08073C,nouvelle-caledonie-bougival-2026,0,0,1,0,
 08073C,nucleaire-acceleration-2023,0,1,0,0,0.0
 08073C,parite-bloc-communal-2025,1,0,0,0,100.0
 08073C,partage-valeur-2023,1,0,0,0,100.0
@@ -2507,6 +2534,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11027H,montagne-vivante-2026,0,1,0,0,0.0
 11027H,nationalite-mayotte-2025,1,0,0,0,100.0
 11027H,navigation-aerienne-greve-2023,1,0,0,0,100.0
+11027H,nouvelle-caledonie-bougival-2026,0,0,1,0,
 11027H,nucleaire-acceleration-2023,0,1,0,0,0.0
 11027H,parite-bloc-communal-2025,1,0,0,0,100.0
 11027H,partage-valeur-2023,0,0,1,0,
@@ -2671,6 +2699,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11043H,montagne-vivante-2026,0,1,0,0,0.0
 11043H,nationalite-mayotte-2025,0,1,0,0,0.0
 11043H,navigation-aerienne-greve-2023,0,1,0,0,0.0
+11043H,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 11043H,nucleaire-acceleration-2023,0,1,0,0,0.0
 11043H,parite-bloc-communal-2025,1,0,0,0,100.0
 11043H,partage-valeur-2023,1,0,0,0,100.0
@@ -2746,6 +2775,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11045K,montagne-vivante-2026,0,1,0,0,0.0
 11045K,nationalite-mayotte-2025,1,0,0,0,100.0
 11045K,navigation-aerienne-greve-2023,0,0,0,1,
+11045K,nouvelle-caledonie-bougival-2026,0,0,1,0,
 11045K,nucleaire-acceleration-2023,0,0,0,1,
 11045K,parite-bloc-communal-2025,1,0,0,0,100.0
 11045K,partage-valeur-2023,0,0,1,0,
@@ -2822,6 +2852,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11048N,montagne-vivante-2026,0,1,0,0,0.0
 11048N,nationalite-mayotte-2025,0,1,0,0,0.0
 11048N,navigation-aerienne-greve-2023,0,1,0,0,0.0
+11048N,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 11048N,nucleaire-acceleration-2023,0,1,0,0,0.0
 11048N,parite-bloc-communal-2025,0,1,0,0,0.0
 11048N,partage-valeur-2023,1,0,0,0,100.0
@@ -2898,6 +2929,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11053K,montagne-vivante-2026,0,1,0,0,0.0
 11053K,nationalite-mayotte-2025,0,1,0,0,0.0
 11053K,navigation-aerienne-greve-2023,0,1,0,0,0.0
+11053K,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 11053K,nucleaire-acceleration-2023,0,1,0,0,0.0
 11053K,parite-bloc-communal-2025,1,0,0,0,100.0
 11053K,partage-valeur-2023,1,0,0,0,100.0
@@ -2992,6 +3024,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11056N,montagne-vivante-2026,0,1,0,0,0.0
 11056N,nationalite-mayotte-2025,1,0,0,0,100.0
 11056N,navigation-aerienne-greve-2023,1,0,0,0,100.0
+11056N,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 11056N,nucleaire-acceleration-2023,0,0,1,0,
 11056N,parite-bloc-communal-2025,0,1,0,0,0.0
 11056N,partage-valeur-2023,0,1,0,0,0.0
@@ -3124,6 +3157,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11065P,montagne-vivante-2026,1,0,0,0,100.0
 11065P,nationalite-mayotte-2025,1,0,0,0,100.0
 11065P,navigation-aerienne-greve-2023,1,0,0,0,100.0
+11065P,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 11065P,nucleaire-acceleration-2023,1,0,0,0,100.0
 11065P,parite-bloc-communal-2025,1,0,0,0,100.0
 11065P,partage-valeur-2023,0,0,1,0,
@@ -3236,6 +3270,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11070L,montagne-vivante-2026,0,1,0,0,0.0
 11070L,nationalite-mayotte-2025,0,1,0,0,0.0
 11070L,navigation-aerienne-greve-2023,0,1,0,0,0.0
+11070L,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 11070L,nucleaire-acceleration-2023,0,1,0,0,0.0
 11070L,parite-bloc-communal-2025,1,0,0,0,100.0
 11070L,partage-valeur-2023,1,0,0,0,100.0
@@ -3299,6 +3334,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11072N,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 11072N,montagne-vivante-2026,0,1,0,0,0.0
 11072N,navigation-aerienne-greve-2023,0,1,0,0,0.0
+11072N,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 11072N,nucleaire-acceleration-2023,0,1,0,0,0.0
 11072N,partage-valeur-2023,1,0,0,0,100.0
 11072N,plein-emploi-2023,0,1,0,0,0.0
@@ -3366,6 +3402,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11074Q,montagne-vivante-2026,0,1,0,0,0.0
 11074Q,nationalite-mayotte-2025,1,0,0,0,100.0
 11074Q,navigation-aerienne-greve-2023,1,0,0,0,100.0
+11074Q,nouvelle-caledonie-bougival-2026,0,0,1,0,
 11074Q,nucleaire-acceleration-2023,0,1,0,0,0.0
 11074Q,parite-bloc-communal-2025,1,0,0,0,100.0
 11074Q,partage-valeur-2023,0,0,1,0,
@@ -3496,6 +3533,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11085T,montagne-vivante-2026,0,1,0,0,0.0
 11085T,nationalite-mayotte-2025,0,1,0,0,0.0
 11085T,navigation-aerienne-greve-2023,0,1,0,0,0.0
+11085T,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 11085T,nucleaire-acceleration-2023,0,1,0,0,0.0
 11085T,parite-bloc-communal-2025,1,0,0,0,100.0
 11085T,partage-valeur-2023,1,0,0,0,100.0
@@ -3559,6 +3597,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11090Q,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 11090Q,montagne-vivante-2026,0,1,0,0,0.0
 11090Q,navigation-aerienne-greve-2023,0,1,0,0,0.0
+11090Q,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 11090Q,nucleaire-acceleration-2023,0,1,0,0,0.0
 11090Q,partage-valeur-2023,1,0,0,0,100.0
 11090Q,plein-emploi-2023,0,1,0,0,0.0
@@ -3734,6 +3773,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11110B,montagne-vivante-2026,0,1,0,0,0.0
 11110B,nationalite-mayotte-2025,1,0,0,0,100.0
 11110B,navigation-aerienne-greve-2023,1,0,0,0,100.0
+11110B,nouvelle-caledonie-bougival-2026,0,0,1,0,
 11110B,nucleaire-acceleration-2023,0,1,0,0,0.0
 11110B,parite-bloc-communal-2025,1,0,0,0,100.0
 11110B,partage-valeur-2023,0,0,1,0,
@@ -3810,6 +3850,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11115U,montagne-vivante-2026,0,1,0,0,0.0
 11115U,nationalite-mayotte-2025,0,1,0,0,0.0
 11115U,navigation-aerienne-greve-2023,0,1,0,0,0.0
+11115U,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 11115U,nucleaire-acceleration-2023,0,1,0,0,0.0
 11115U,parite-bloc-communal-2025,0,1,0,0,0.0
 11115U,partage-valeur-2023,1,0,0,0,100.0
@@ -3886,6 +3927,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 12016W,montagne-vivante-2026,0,1,0,0,0.0
 12016W,nationalite-mayotte-2025,1,0,0,0,100.0
 12016W,navigation-aerienne-greve-2023,1,0,0,0,100.0
+12016W,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 12016W,nucleaire-acceleration-2023,0,1,0,0,0.0
 12016W,parite-bloc-communal-2025,1,0,0,0,100.0
 12016W,partage-valeur-2023,0,0,1,0,
@@ -3962,6 +4004,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 12028B,montagne-vivante-2026,0,1,0,0,0.0
 12028B,nationalite-mayotte-2025,1,0,0,0,100.0
 12028B,navigation-aerienne-greve-2023,1,0,0,0,100.0
+12028B,nouvelle-caledonie-bougival-2026,0,0,1,0,
 12028B,nucleaire-acceleration-2023,0,1,0,0,0.0
 12028B,parite-bloc-communal-2025,1,0,0,0,100.0
 12028B,partage-valeur-2023,0,0,1,0,
@@ -4055,6 +4098,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14001X,montagne-vivante-2026,0,1,0,0,0.0
 14001X,nationalite-mayotte-2025,1,0,0,0,100.0
 14001X,navigation-aerienne-greve-2023,1,0,0,0,100.0
+14001X,nouvelle-caledonie-bougival-2026,0,0,1,0,
 14001X,nucleaire-acceleration-2023,1,0,0,0,100.0
 14001X,parite-bloc-communal-2025,1,0,0,0,100.0
 14001X,partage-valeur-2023,0,0,1,0,
@@ -4130,6 +4174,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14021P,montagne-vivante-2026,0,1,0,0,0.0
 14021P,nationalite-mayotte-2025,1,0,0,0,100.0
 14021P,navigation-aerienne-greve-2023,1,0,0,0,100.0
+14021P,nouvelle-caledonie-bougival-2026,0,0,1,0,
 14021P,nucleaire-acceleration-2023,0,1,0,0,0.0
 14021P,parite-bloc-communal-2025,1,0,0,0,100.0
 14021P,partage-valeur-2023,0,0,1,0,
@@ -4205,6 +4250,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14026U,montagne-vivante-2026,0,1,0,0,0.0
 14026U,nationalite-mayotte-2025,0,1,0,0,0.0
 14026U,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14026U,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14026U,nucleaire-acceleration-2023,0,1,0,0,0.0
 14026U,parite-bloc-communal-2025,0,1,0,0,0.0
 14026U,partage-valeur-2023,1,0,0,0,100.0
@@ -4280,6 +4326,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14030Q,montagne-vivante-2026,0,1,0,0,0.0
 14030Q,nationalite-mayotte-2025,1,0,0,0,100.0
 14030Q,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14030Q,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14030Q,nucleaire-acceleration-2023,0,1,0,0,0.0
 14030Q,parite-bloc-communal-2025,1,0,0,0,100.0
 14030Q,partage-valeur-2023,1,0,0,0,100.0
@@ -4355,6 +4402,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14031R,montagne-vivante-2026,0,0,0,1,
 14031R,nationalite-mayotte-2025,0,1,0,0,0.0
 14031R,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14031R,nouvelle-caledonie-bougival-2026,0,0,0,1,
 14031R,nucleaire-acceleration-2023,0,1,0,0,0.0
 14031R,parite-bloc-communal-2025,1,0,0,0,100.0
 14031R,partage-valeur-2023,1,0,0,0,100.0
@@ -4430,6 +4478,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14033T,montagne-vivante-2026,0,1,0,0,0.0
 14033T,nationalite-mayotte-2025,0,1,0,0,0.0
 14033T,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14033T,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14033T,nucleaire-acceleration-2023,0,1,0,0,0.0
 14033T,parite-bloc-communal-2025,0,1,0,0,0.0
 14033T,partage-valeur-2023,1,0,0,0,100.0
@@ -4506,6 +4555,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14037X,montagne-vivante-2026,0,1,0,0,0.0
 14037X,nationalite-mayotte-2025,0,1,0,0,0.0
 14037X,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14037X,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14037X,nucleaire-acceleration-2023,0,1,0,0,0.0
 14037X,parite-bloc-communal-2025,1,0,0,0,100.0
 14037X,partage-valeur-2023,1,0,0,0,100.0
@@ -4581,6 +4631,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14038Y,montagne-vivante-2026,0,1,0,0,0.0
 14038Y,nationalite-mayotte-2025,0,1,0,0,0.0
 14038Y,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14038Y,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14038Y,nucleaire-acceleration-2023,0,1,0,0,0.0
 14038Y,parite-bloc-communal-2025,0,1,0,0,0.0
 14038Y,partage-valeur-2023,1,0,0,0,100.0
@@ -4656,6 +4707,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14042U,montagne-vivante-2026,0,1,0,0,0.0
 14042U,nationalite-mayotte-2025,0,0,1,0,
 14042U,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14042U,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14042U,nucleaire-acceleration-2023,0,1,0,0,0.0
 14042U,parite-bloc-communal-2025,1,0,0,0,100.0
 14042U,partage-valeur-2023,1,0,0,0,100.0
@@ -4731,6 +4783,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14053L,montagne-vivante-2026,0,1,0,0,0.0
 14053L,nationalite-mayotte-2025,0,1,0,0,0.0
 14053L,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14053L,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14053L,nucleaire-acceleration-2023,0,1,0,0,0.0
 14053L,parite-bloc-communal-2025,1,0,0,0,100.0
 14053L,partage-valeur-2023,1,0,0,0,100.0
@@ -4806,6 +4859,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14055N,montagne-vivante-2026,0,0,0,1,
 14055N,nationalite-mayotte-2025,0,0,1,0,
 14055N,navigation-aerienne-greve-2023,0,0,0,1,
+14055N,nouvelle-caledonie-bougival-2026,0,0,1,0,
 14055N,nucleaire-acceleration-2023,0,0,0,1,
 14055N,parite-bloc-communal-2025,0,0,0,1,
 14055N,partage-valeur-2023,0,0,0,1,
@@ -4880,6 +4934,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14059S,montagne-vivante-2026,0,1,0,0,0.0
 14059S,nationalite-mayotte-2025,0,1,0,0,0.0
 14059S,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14059S,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14059S,nucleaire-acceleration-2023,0,1,0,0,0.0
 14059S,parite-bloc-communal-2025,0,1,0,0,0.0
 14059S,partage-valeur-2023,1,0,0,0,100.0
@@ -4955,6 +5010,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14069U,montagne-vivante-2026,0,1,0,0,0.0
 14069U,nationalite-mayotte-2025,0,1,0,0,0.0
 14069U,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14069U,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14069U,nucleaire-acceleration-2023,0,1,0,0,0.0
 14069U,parite-bloc-communal-2025,1,0,0,0,100.0
 14069U,partage-valeur-2023,1,0,0,0,100.0
@@ -5031,6 +5087,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14071N,montagne-vivante-2026,0,1,0,0,0.0
 14071N,nationalite-mayotte-2025,0,1,0,0,0.0
 14071N,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14071N,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14071N,nucleaire-acceleration-2023,0,1,0,0,0.0
 14071N,parite-bloc-communal-2025,0,1,0,0,0.0
 14071N,partage-valeur-2023,1,0,0,0,100.0
@@ -5106,6 +5163,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14073Q,montagne-vivante-2026,0,1,0,0,0.0
 14073Q,nationalite-mayotte-2025,1,0,0,0,100.0
 14073Q,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14073Q,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14073Q,nucleaire-acceleration-2023,0,1,0,0,0.0
 14073Q,parite-bloc-communal-2025,1,0,0,0,100.0
 14073Q,partage-valeur-2023,1,0,0,0,100.0
@@ -5181,6 +5239,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14083S,montagne-vivante-2026,0,1,0,0,0.0
 14083S,nationalite-mayotte-2025,1,0,0,0,100.0
 14083S,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14083S,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14083S,nucleaire-acceleration-2023,0,1,0,0,0.0
 14083S,parite-bloc-communal-2025,0,0,0,1,
 14083S,partage-valeur-2023,1,0,0,0,100.0
@@ -5290,6 +5349,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14097Y,montagne-vivante-2026,0,1,0,0,0.0
 14097Y,nationalite-mayotte-2025,1,0,0,0,100.0
 14097Y,navigation-aerienne-greve-2023,1,0,0,0,100.0
+14097Y,nouvelle-caledonie-bougival-2026,0,0,1,0,
 14097Y,nucleaire-acceleration-2023,0,1,0,0,0.0
 14097Y,parite-bloc-communal-2025,1,0,0,0,100.0
 14097Y,partage-valeur-2023,0,0,1,0,
@@ -5421,6 +5481,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14107H,montagne-vivante-2026,0,1,0,0,0.0
 14107H,nationalite-mayotte-2025,1,0,0,0,100.0
 14107H,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14107H,nouvelle-caledonie-bougival-2026,0,0,1,0,
 14107H,nucleaire-acceleration-2023,0,1,0,0,0.0
 14107H,parite-bloc-communal-2025,0,1,0,0,0.0
 14107H,partage-valeur-2023,1,0,0,0,100.0
@@ -5496,6 +5557,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14109K,montagne-vivante-2026,0,1,0,0,0.0
 14109K,nationalite-mayotte-2025,1,0,0,0,100.0
 14109K,navigation-aerienne-greve-2023,1,0,0,0,100.0
+14109K,nouvelle-caledonie-bougival-2026,0,0,1,0,
 14109K,nucleaire-acceleration-2023,0,1,0,0,0.0
 14109K,parite-bloc-communal-2025,1,0,0,0,100.0
 14109K,partage-valeur-2023,0,0,1,0,
@@ -5571,6 +5633,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14111D,montagne-vivante-2026,0,1,0,0,0.0
 14111D,nationalite-mayotte-2025,0,1,0,0,0.0
 14111D,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14111D,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14111D,nucleaire-acceleration-2023,0,1,0,0,0.0
 14111D,parite-bloc-communal-2025,1,0,0,0,100.0
 14111D,partage-valeur-2023,1,0,0,0,100.0
@@ -5646,6 +5709,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14121F,montagne-vivante-2026,0,1,0,0,0.0
 14121F,nationalite-mayotte-2025,1,0,0,0,100.0
 14121F,navigation-aerienne-greve-2023,1,0,0,0,100.0
+14121F,nouvelle-caledonie-bougival-2026,0,0,1,0,
 14121F,nucleaire-acceleration-2023,0,1,0,0,0.0
 14121F,parite-bloc-communal-2025,1,0,0,0,100.0
 14121F,partage-valeur-2023,0,0,1,0,
@@ -5721,6 +5785,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14123H,montagne-vivante-2026,0,1,0,0,0.0
 14123H,nationalite-mayotte-2025,0,1,0,0,0.0
 14123H,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14123H,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14123H,nucleaire-acceleration-2023,0,1,0,0,0.0
 14123H,parite-bloc-communal-2025,0,1,0,0,0.0
 14123H,partage-valeur-2023,1,0,0,0,100.0
@@ -5796,6 +5861,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14133K,montagne-vivante-2026,0,1,0,0,0.0
 14133K,nationalite-mayotte-2025,0,1,0,0,0.0
 14133K,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14133K,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14133K,nucleaire-acceleration-2023,0,1,0,0,0.0
 14133K,parite-bloc-communal-2025,1,0,0,0,100.0
 14133K,partage-valeur-2023,1,0,0,0,100.0
@@ -5873,6 +5939,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14147R,montagne-vivante-2026,0,1,0,0,0.0
 14147R,nationalite-mayotte-2025,0,1,0,0,0.0
 14147R,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14147R,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14147R,nucleaire-acceleration-2023,0,1,0,0,0.0
 14147R,parite-bloc-communal-2025,1,0,0,0,100.0
 14147R,partage-valeur-2023,1,0,0,0,100.0
@@ -6004,6 +6071,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14169X,montagne-vivante-2026,0,1,0,0,0.0
 14169X,nationalite-mayotte-2025,0,1,0,0,0.0
 14169X,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14169X,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14169X,nucleaire-acceleration-2023,0,1,0,0,0.0
 14169X,parite-bloc-communal-2025,1,0,0,0,100.0
 14169X,partage-valeur-2023,1,0,0,0,100.0
@@ -6079,6 +6147,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14173T,montagne-vivante-2026,0,1,0,0,0.0
 14173T,nationalite-mayotte-2025,0,1,0,0,0.0
 14173T,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14173T,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14173T,nucleaire-acceleration-2023,0,1,0,0,0.0
 14173T,parite-bloc-communal-2025,0,1,0,0,0.0
 14173T,partage-valeur-2023,1,0,0,0,100.0
@@ -6155,6 +6224,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14179A,montagne-vivante-2026,0,1,0,0,0.0
 14179A,nationalite-mayotte-2025,0,0,0,1,
 14179A,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14179A,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14179A,nucleaire-acceleration-2023,0,1,0,0,0.0
 14179A,parite-bloc-communal-2025,1,0,0,0,100.0
 14179A,partage-valeur-2023,1,0,0,0,100.0
@@ -6231,6 +6301,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14187A,montagne-vivante-2026,0,1,0,0,0.0
 14187A,nationalite-mayotte-2025,0,1,0,0,0.0
 14187A,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14187A,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14187A,nucleaire-acceleration-2023,0,1,0,0,0.0
 14187A,parite-bloc-communal-2025,0,1,0,0,0.0
 14187A,partage-valeur-2023,1,0,0,0,100.0
@@ -6307,6 +6378,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14189C,montagne-vivante-2026,0,1,0,0,0.0
 14189C,nationalite-mayotte-2025,0,1,0,0,0.0
 14189C,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14189C,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14189C,nucleaire-acceleration-2023,0,1,0,0,0.0
 14189C,parite-bloc-communal-2025,1,0,0,0,100.0
 14189C,partage-valeur-2023,1,0,0,0,100.0
@@ -6383,6 +6455,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14191V,montagne-vivante-2026,0,1,0,0,0.0
 14191V,nationalite-mayotte-2025,0,1,0,0,0.0
 14191V,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14191V,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14191V,nucleaire-acceleration-2023,0,1,0,0,0.0
 14191V,parite-bloc-communal-2025,0,1,0,0,0.0
 14191V,partage-valeur-2023,1,0,0,0,100.0
@@ -6459,6 +6532,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14193X,montagne-vivante-2026,0,1,0,0,0.0
 14193X,nationalite-mayotte-2025,0,1,0,0,0.0
 14193X,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14193X,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14193X,nucleaire-acceleration-2023,0,1,0,0,0.0
 14193X,parite-bloc-communal-2025,0,1,0,0,0.0
 14193X,partage-valeur-2023,1,0,0,0,100.0
@@ -6534,6 +6608,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14195A,montagne-vivante-2026,0,1,0,0,0.0
 14195A,nationalite-mayotte-2025,0,1,0,0,0.0
 14195A,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14195A,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14195A,nucleaire-acceleration-2023,0,1,0,0,0.0
 14195A,parite-bloc-communal-2025,0,0,1,0,
 14195A,partage-valeur-2023,1,0,0,0,100.0
@@ -6609,6 +6684,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14205J,montagne-vivante-2026,0,1,0,0,0.0
 14205J,nationalite-mayotte-2025,1,0,0,0,100.0
 14205J,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14205J,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14205J,nucleaire-acceleration-2023,0,1,0,0,0.0
 14205J,parite-bloc-communal-2025,0,1,0,0,0.0
 14205J,partage-valeur-2023,1,0,0,0,100.0
@@ -6684,6 +6760,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14207L,montagne-vivante-2026,0,1,0,0,0.0
 14207L,nationalite-mayotte-2025,1,0,0,0,100.0
 14207L,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14207L,nouvelle-caledonie-bougival-2026,0,0,1,0,
 14207L,nucleaire-acceleration-2023,0,1,0,0,0.0
 14207L,parite-bloc-communal-2025,1,0,0,0,100.0
 14207L,partage-valeur-2023,1,0,0,0,100.0
@@ -6758,6 +6835,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14211G,montagne-vivante-2026,0,1,0,0,0.0
 14211G,nationalite-mayotte-2025,0,1,0,0,0.0
 14211G,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14211G,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14211G,nucleaire-acceleration-2023,0,1,0,0,0.0
 14211G,parite-bloc-communal-2025,0,1,0,0,0.0
 14211G,partage-valeur-2023,1,0,0,0,100.0
@@ -6833,6 +6911,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14213J,montagne-vivante-2026,0,1,0,0,0.0
 14213J,nationalite-mayotte-2025,0,1,0,0,0.0
 14213J,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14213J,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14213J,nucleaire-acceleration-2023,0,1,0,0,0.0
 14213J,parite-bloc-communal-2025,0,1,0,0,0.0
 14213J,partage-valeur-2023,1,0,0,0,100.0
@@ -6909,6 +6988,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14215L,montagne-vivante-2026,0,1,0,0,0.0
 14215L,nationalite-mayotte-2025,0,1,0,0,0.0
 14215L,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14215L,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14215L,nucleaire-acceleration-2023,0,1,0,0,0.0
 14215L,parite-bloc-communal-2025,1,0,0,0,100.0
 14215L,partage-valeur-2023,1,0,0,0,100.0
@@ -6984,6 +7064,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14217N,montagne-vivante-2026,0,1,0,0,0.0
 14217N,nationalite-mayotte-2025,0,1,0,0,0.0
 14217N,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14217N,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14217N,nucleaire-acceleration-2023,0,1,0,0,0.0
 14217N,parite-bloc-communal-2025,0,1,0,0,0.0
 14217N,partage-valeur-2023,1,0,0,0,100.0
@@ -7059,6 +7140,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14219Q,montagne-vivante-2026,0,1,0,0,0.0
 14219Q,nationalite-mayotte-2025,1,0,0,0,100.0
 14219Q,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14219Q,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14219Q,nucleaire-acceleration-2023,0,1,0,0,0.0
 14219Q,parite-bloc-communal-2025,0,1,0,0,0.0
 14219Q,partage-valeur-2023,1,0,0,0,100.0
@@ -7135,6 +7217,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14221J,montagne-vivante-2026,0,1,0,0,0.0
 14221J,nationalite-mayotte-2025,0,1,0,0,0.0
 14221J,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14221J,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14221J,nucleaire-acceleration-2023,0,1,0,0,0.0
 14221J,parite-bloc-communal-2025,0,1,0,0,0.0
 14221J,partage-valeur-2023,1,0,0,0,100.0
@@ -7211,6 +7294,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14223L,montagne-vivante-2026,0,1,0,0,0.0
 14223L,nationalite-mayotte-2025,0,1,0,0,0.0
 14223L,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14223L,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14223L,nucleaire-acceleration-2023,0,1,0,0,0.0
 14223L,parite-bloc-communal-2025,0,1,0,0,0.0
 14223L,partage-valeur-2023,1,0,0,0,100.0
@@ -7286,6 +7370,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14225N,montagne-vivante-2026,0,1,0,0,0.0
 14225N,nationalite-mayotte-2025,1,0,0,0,100.0
 14225N,navigation-aerienne-greve-2023,1,0,0,0,100.0
+14225N,nouvelle-caledonie-bougival-2026,0,0,1,0,
 14225N,nucleaire-acceleration-2023,0,1,0,0,0.0
 14225N,parite-bloc-communal-2025,1,0,0,0,100.0
 14225N,partage-valeur-2023,0,0,1,0,
@@ -7361,6 +7446,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14229S,montagne-vivante-2026,0,1,0,0,0.0
 14229S,nationalite-mayotte-2025,1,0,0,0,100.0
 14229S,navigation-aerienne-greve-2023,1,0,0,0,100.0
+14229S,nouvelle-caledonie-bougival-2026,0,0,1,0,
 14229S,nucleaire-acceleration-2023,0,1,0,0,0.0
 14229S,parite-bloc-communal-2025,1,0,0,0,100.0
 14229S,partage-valeur-2023,0,0,0,1,
@@ -7473,6 +7559,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14237S,montagne-vivante-2026,0,1,0,0,0.0
 14237S,nationalite-mayotte-2025,0,1,0,0,0.0
 14237S,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14237S,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14237S,nucleaire-acceleration-2023,0,1,0,0,0.0
 14237S,parite-bloc-communal-2025,1,0,0,0,100.0
 14237S,partage-valeur-2023,1,0,0,0,100.0
@@ -7531,6 +7618,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14241N,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 14241N,montagne-vivante-2026,0,1,0,0,0.0
 14241N,nationalite-mayotte-2025,0,0,1,0,
+14241N,nouvelle-caledonie-bougival-2026,0,0,1,0,
 14241N,parite-bloc-communal-2025,0,1,0,0,0.0
 14241N,plf-2025,0,0,1,0,
 14241N,plf-2026,0,0,1,0,
@@ -7592,6 +7680,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14249W,montagne-vivante-2026,0,1,0,0,0.0
 14249W,nationalite-mayotte-2025,0,1,0,0,0.0
 14249W,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14249W,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14249W,nucleaire-acceleration-2023,0,1,0,0,0.0
 14249W,parite-bloc-communal-2025,1,0,0,0,100.0
 14249W,partage-valeur-2023,1,0,0,0,100.0
@@ -7667,6 +7756,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14251Q,montagne-vivante-2026,0,1,0,0,0.0
 14251Q,nationalite-mayotte-2025,0,1,0,0,0.0
 14251Q,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14251Q,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14251Q,nucleaire-acceleration-2023,0,1,0,0,0.0
 14251Q,parite-bloc-communal-2025,0,0,1,0,
 14251Q,partage-valeur-2023,1,0,0,0,100.0
@@ -7742,6 +7832,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14253S,montagne-vivante-2026,0,1,0,0,0.0
 14253S,nationalite-mayotte-2025,0,1,0,0,0.0
 14253S,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14253S,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14253S,nucleaire-acceleration-2023,0,1,0,0,0.0
 14253S,parite-bloc-communal-2025,0,0,1,0,
 14253S,partage-valeur-2023,1,0,0,0,100.0
@@ -7817,6 +7908,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14255U,montagne-vivante-2026,0,1,0,0,0.0
 14255U,nationalite-mayotte-2025,0,1,0,0,0.0
 14255U,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14255U,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14255U,nucleaire-acceleration-2023,0,1,0,0,0.0
 14255U,parite-bloc-communal-2025,1,0,0,0,100.0
 14255U,partage-valeur-2023,1,0,0,0,100.0
@@ -7892,6 +7984,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14257W,montagne-vivante-2026,0,1,0,0,0.0
 14257W,nationalite-mayotte-2025,1,0,0,0,100.0
 14257W,navigation-aerienne-greve-2023,1,0,0,0,100.0
+14257W,nouvelle-caledonie-bougival-2026,0,0,1,0,
 14257W,nucleaire-acceleration-2023,0,1,0,0,0.0
 14257W,parite-bloc-communal-2025,0,0,1,0,
 14257W,partage-valeur-2023,0,0,1,0,
@@ -7967,6 +8060,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14259Y,montagne-vivante-2026,0,1,0,0,0.0
 14259Y,nationalite-mayotte-2025,0,1,0,0,0.0
 14259Y,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14259Y,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14259Y,nucleaire-acceleration-2023,0,1,0,0,0.0
 14259Y,parite-bloc-communal-2025,0,1,0,0,0.0
 14259Y,partage-valeur-2023,1,0,0,0,100.0
@@ -8043,6 +8137,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14267Y,montagne-vivante-2026,0,1,0,0,0.0
 14267Y,nationalite-mayotte-2025,0,0,1,0,
 14267Y,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14267Y,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14267Y,nucleaire-acceleration-2023,0,1,0,0,0.0
 14267Y,parite-bloc-communal-2025,0,0,1,0,
 14267Y,partage-valeur-2023,1,0,0,0,100.0
@@ -8119,6 +8214,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14275Y,montagne-vivante-2026,0,1,0,0,0.0
 14275Y,nationalite-mayotte-2025,0,1,0,0,0.0
 14275Y,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14275Y,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14275Y,nucleaire-acceleration-2023,0,1,0,0,0.0
 14275Y,parite-bloc-communal-2025,1,0,0,0,100.0
 14275Y,partage-valeur-2023,1,0,0,0,100.0
@@ -8195,6 +8291,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14281W,montagne-vivante-2026,0,1,0,0,0.0
 14281W,nationalite-mayotte-2025,1,0,0,0,100.0
 14281W,navigation-aerienne-greve-2023,1,0,0,0,100.0
+14281W,nouvelle-caledonie-bougival-2026,0,0,1,0,
 14281W,nucleaire-acceleration-2023,0,1,0,0,0.0
 14281W,parite-bloc-communal-2025,1,0,0,0,100.0
 14281W,partage-valeur-2023,0,0,1,0,
@@ -8271,6 +8368,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14327T,montagne-vivante-2026,0,1,0,0,0.0
 14327T,nationalite-mayotte-2025,0,1,0,0,0.0
 14327T,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14327T,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14327T,nucleaire-acceleration-2023,0,1,0,0,0.0
 14327T,parite-bloc-communal-2025,1,0,0,0,100.0
 14327T,partage-valeur-2023,1,0,0,0,100.0
@@ -8347,6 +8445,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14329V,montagne-vivante-2026,0,1,0,0,0.0
 14329V,nationalite-mayotte-2025,0,1,0,0,0.0
 14329V,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14329V,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14329V,nucleaire-acceleration-2023,0,1,0,0,0.0
 14329V,parite-bloc-communal-2025,0,1,0,0,0.0
 14329V,partage-valeur-2023,1,0,0,0,100.0
@@ -8423,6 +8522,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14331P,montagne-vivante-2026,0,1,0,0,0.0
 14331P,nationalite-mayotte-2025,0,1,0,0,0.0
 14331P,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14331P,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14331P,nucleaire-acceleration-2023,0,1,0,0,0.0
 14331P,parite-bloc-communal-2025,0,1,0,0,0.0
 14331P,partage-valeur-2023,1,0,0,0,100.0
@@ -8498,6 +8598,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14355X,montagne-vivante-2026,0,1,0,0,0.0
 14355X,nationalite-mayotte-2025,0,1,0,0,0.0
 14355X,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14355X,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14355X,nucleaire-acceleration-2023,0,1,0,0,0.0
 14355X,parite-bloc-communal-2025,0,1,0,0,0.0
 14355X,partage-valeur-2023,1,0,0,0,100.0
@@ -8573,6 +8674,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14357A,montagne-vivante-2026,0,1,0,0,0.0
 14357A,nationalite-mayotte-2025,0,1,0,0,0.0
 14357A,navigation-aerienne-greve-2023,0,1,0,0,0.0
+14357A,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 14357A,nucleaire-acceleration-2023,0,1,0,0,0.0
 14357A,parite-bloc-communal-2025,0,1,0,0,0.0
 14357A,partage-valeur-2023,1,0,0,0,100.0
@@ -8638,6 +8740,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 15197G,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 15197G,montagne-vivante-2026,0,1,0,0,0.0
 15197G,nationalite-mayotte-2025,0,1,0,0,0.0
+15197G,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 15197G,parite-bloc-communal-2025,0,0,1,0,
 15197G,partage-valeur-2023,1,0,0,0,100.0
 15197G,plein-emploi-2023,0,1,0,0,0.0
@@ -8727,6 +8830,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 17023S,montagne-vivante-2026,0,1,0,0,0.0
 17023S,nationalite-mayotte-2025,0,1,0,0,0.0
 17023S,navigation-aerienne-greve-2023,0,1,0,0,0.0
+17023S,nouvelle-caledonie-bougival-2026,0,0,1,0,
 17023S,nucleaire-acceleration-2023,0,1,0,0,0.0
 17023S,parite-bloc-communal-2025,1,0,0,0,100.0
 17023S,partage-valeur-2023,1,0,0,0,100.0
@@ -8803,6 +8907,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 17229F,montagne-vivante-2026,0,1,0,0,0.0
 17229F,nationalite-mayotte-2025,0,1,0,0,0.0
 17229F,navigation-aerienne-greve-2023,0,1,0,0,0.0
+17229F,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 17229F,nucleaire-acceleration-2023,0,1,0,0,0.0
 17229F,parite-bloc-communal-2025,0,1,0,0,0.0
 17229F,partage-valeur-2023,1,0,0,0,100.0
@@ -8882,6 +8987,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 17367Q,montagne-vivante-2026,0,1,0,0,0.0
 17367Q,nationalite-mayotte-2025,0,1,0,0,0.0
 17367Q,navigation-aerienne-greve-2023,0,1,0,0,0.0
+17367Q,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 17367Q,nucleaire-acceleration-2023,0,1,0,0,0.0
 17367Q,parite-bloc-communal-2025,0,1,0,0,0.0
 17367Q,partage-valeur-2023,1,0,0,0,100.0
@@ -8993,6 +9099,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 17737W,montagne-vivante-2026,0,1,0,0,0.0
 17737W,nationalite-mayotte-2025,0,1,0,0,0.0
 17737W,navigation-aerienne-greve-2023,0,1,0,0,0.0
+17737W,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 17737W,nucleaire-acceleration-2023,0,1,0,0,0.0
 17737W,parite-bloc-communal-2025,1,0,0,0,100.0
 17737W,partage-valeur-2023,1,0,0,0,100.0
@@ -9069,6 +9176,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 17779H,montagne-vivante-2026,0,1,0,0,0.0
 17779H,nationalite-mayotte-2025,1,0,0,0,100.0
 17779H,navigation-aerienne-greve-2023,1,0,0,0,100.0
+17779H,nouvelle-caledonie-bougival-2026,0,0,1,0,
 17779H,nucleaire-acceleration-2023,0,1,0,0,0.0
 17779H,parite-bloc-communal-2025,1,0,0,0,100.0
 17779H,partage-valeur-2023,0,0,1,0,
@@ -9144,6 +9252,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 17965H,montagne-vivante-2026,0,1,0,0,0.0
 17965H,nationalite-mayotte-2025,1,0,0,0,100.0
 17965H,navigation-aerienne-greve-2023,1,0,0,0,100.0
+17965H,nouvelle-caledonie-bougival-2026,0,0,1,0,
 17965H,nucleaire-acceleration-2023,0,1,0,0,0.0
 17965H,parite-bloc-communal-2025,1,0,0,0,100.0
 17965H,partage-valeur-2023,0,0,1,0,
@@ -9186,6 +9295,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 18045D,justice-criminelle-2026,0,1,0,0,0.0
 18045D,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 18045D,montagne-vivante-2026,0,1,0,0,0.0
+18045D,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 18045D,plf-2026,0,1,0,0,0.0
 18045D,plfss-2026,0,1,0,0,0.0
 18045D,polices-municipales-2026,0,1,0,0,0.0
@@ -9239,6 +9349,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 18083K,montagne-vivante-2026,0,1,0,0,0.0
 18083K,nationalite-mayotte-2025,0,1,0,0,0.0
 18083K,navigation-aerienne-greve-2023,0,1,0,0,0.0
+18083K,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 18083K,nucleaire-acceleration-2023,0,1,0,0,0.0
 18083K,parite-bloc-communal-2025,0,1,0,0,0.0
 18083K,partage-valeur-2023,1,0,0,0,100.0
@@ -9317,6 +9428,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 18193Q,montagne-vivante-2026,0,1,0,0,0.0
 18193Q,nationalite-mayotte-2025,1,0,0,0,100.0
 18193Q,navigation-aerienne-greve-2023,1,0,0,0,100.0
+18193Q,nouvelle-caledonie-bougival-2026,0,0,1,0,
 18193Q,nucleaire-acceleration-2023,0,1,0,0,0.0
 18193Q,parite-bloc-communal-2025,1,0,0,0,100.0
 18193Q,partage-valeur-2023,0,0,1,0,
@@ -9382,6 +9494,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 18207D,mineurs-reseaux-sociaux-2026,0,0,1,0,
 18207D,montagne-vivante-2026,0,1,0,0,0.0
 18207D,nationalite-mayotte-2025,1,0,0,0,100.0
+18207D,nouvelle-caledonie-bougival-2026,0,0,1,0,
 18207D,parite-bloc-communal-2025,1,0,0,0,100.0
 18207D,partage-valeur-2023,0,0,1,0,
 18207D,plein-emploi-2023,1,0,0,0,100.0
@@ -9440,6 +9553,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 18231D,mineurs-reseaux-sociaux-2026,0,0,1,0,
 18231D,montagne-vivante-2026,0,1,0,0,0.0
 18231D,nationalite-mayotte-2025,1,0,0,0,100.0
+18231D,nouvelle-caledonie-bougival-2026,0,0,1,0,
 18231D,parite-bloc-communal-2025,1,0,0,0,100.0
 18231D,partage-valeur-2023,0,0,1,0,
 18231D,plein-emploi-2023,1,0,0,0,100.0
@@ -9500,6 +9614,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 18395Y,mineurs-reseaux-sociaux-2026,0,0,1,0,
 18395Y,montagne-vivante-2026,0,1,0,0,0.0
 18395Y,nationalite-mayotte-2025,1,0,0,0,100.0
+18395Y,nouvelle-caledonie-bougival-2026,0,0,1,0,
 18395Y,parite-bloc-communal-2025,1,0,0,0,100.0
 18395Y,partage-valeur-2023,0,0,1,0,
 18395Y,plein-emploi-2023,1,0,0,0,100.0
@@ -9572,6 +9687,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19057M,montagne-vivante-2026,0,1,0,0,0.0
 19057M,nationalite-mayotte-2025,0,1,0,0,0.0
 19057M,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19057M,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19057M,nucleaire-acceleration-2023,0,1,0,0,0.0
 19057M,parite-bloc-communal-2025,1,0,0,0,100.0
 19057M,partage-valeur-2023,1,0,0,0,100.0
@@ -9636,6 +9752,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19111A,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 19111A,montagne-vivante-2026,0,1,0,0,0.0
 19111A,nationalite-mayotte-2025,0,1,0,0,0.0
+19111A,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19111A,parite-bloc-communal-2025,1,0,0,0,100.0
 19111A,partage-valeur-2023,1,0,0,0,100.0
 19111A,plein-emploi-2023,0,1,0,0,0.0
@@ -9704,6 +9821,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19251M,montagne-vivante-2026,0,1,0,0,0.0
 19251M,nationalite-mayotte-2025,1,0,0,0,100.0
 19251M,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19251M,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19251M,nucleaire-acceleration-2023,0,1,0,0,0.0
 19251M,parite-bloc-communal-2025,1,0,0,0,100.0
 19251M,partage-valeur-2023,0,0,1,0,
@@ -9779,6 +9897,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19295A,montagne-vivante-2026,0,1,0,0,0.0
 19295A,nationalite-mayotte-2025,1,0,0,0,100.0
 19295A,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19295A,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19295A,nucleaire-acceleration-2023,0,1,0,0,0.0
 19295A,parite-bloc-communal-2025,1,0,0,0,100.0
 19295A,partage-valeur-2023,0,0,1,0,
@@ -9855,6 +9974,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19301E,montagne-vivante-2026,0,1,0,0,0.0
 19301E,nationalite-mayotte-2025,0,1,0,0,0.0
 19301E,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19301E,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19301E,nucleaire-acceleration-2023,0,1,0,0,0.0
 19301E,parite-bloc-communal-2025,0,0,0,1,
 19301E,partage-valeur-2023,1,0,0,0,100.0
@@ -9956,6 +10076,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19331L,mineurs-reseaux-sociaux-2026,0,0,1,0,
 19331L,montagne-vivante-2026,0,1,0,0,0.0
 19331L,nationalite-mayotte-2025,1,0,0,0,100.0
+19331L,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19331L,parite-bloc-communal-2025,1,0,0,0,100.0
 19331L,partage-valeur-2023,1,0,0,0,100.0
 19331L,plein-emploi-2023,0,1,0,0,0.0
@@ -10043,6 +10164,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19335Q,montagne-vivante-2026,0,1,0,0,0.0
 19335Q,nationalite-mayotte-2025,0,1,0,0,0.0
 19335Q,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19335Q,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19335Q,nucleaire-acceleration-2023,0,1,0,0,0.0
 19335Q,parite-bloc-communal-2025,0,1,0,0,0.0
 19335Q,partage-valeur-2023,1,0,0,0,100.0
@@ -10119,6 +10241,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19347U,montagne-vivante-2026,1,0,0,0,100.0
 19347U,nationalite-mayotte-2025,1,0,0,0,100.0
 19347U,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19347U,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 19347U,nucleaire-acceleration-2023,1,0,0,0,100.0
 19347U,parite-bloc-communal-2025,1,0,0,0,100.0
 19347U,partage-valeur-2023,0,0,1,0,
@@ -10195,6 +10318,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19349W,montagne-vivante-2026,0,1,0,0,0.0
 19349W,nationalite-mayotte-2025,0,1,0,0,0.0
 19349W,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19349W,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19349W,nucleaire-acceleration-2023,0,1,0,0,0.0
 19349W,parite-bloc-communal-2025,1,0,0,0,100.0
 19349W,partage-valeur-2023,1,0,0,0,100.0
@@ -10271,6 +10395,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19367Y,montagne-vivante-2026,0,1,0,0,0.0
 19367Y,nationalite-mayotte-2025,0,1,0,0,0.0
 19367Y,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19367Y,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19367Y,nucleaire-acceleration-2023,0,1,0,0,0.0
 19367Y,parite-bloc-communal-2025,0,1,0,0,0.0
 19367Y,partage-valeur-2023,1,0,0,0,100.0
@@ -10365,6 +10490,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19383Y,montagne-vivante-2026,0,1,0,0,0.0
 19383Y,nationalite-mayotte-2025,0,1,0,0,0.0
 19383Y,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19383Y,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19383Y,nucleaire-acceleration-2023,0,1,0,0,0.0
 19383Y,parite-bloc-communal-2025,1,0,0,0,100.0
 19383Y,partage-valeur-2023,1,0,0,0,100.0
@@ -10441,6 +10567,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19387D,montagne-vivante-2026,0,1,0,0,0.0
 19387D,nationalite-mayotte-2025,1,0,0,0,100.0
 19387D,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19387D,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19387D,nucleaire-acceleration-2023,0,1,0,0,0.0
 19387D,parite-bloc-communal-2025,1,0,0,0,100.0
 19387D,partage-valeur-2023,1,0,0,0,100.0
@@ -10517,6 +10644,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19399H,montagne-vivante-2026,0,1,0,0,0.0
 19399H,nationalite-mayotte-2025,0,1,0,0,0.0
 19399H,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19399H,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19399H,nucleaire-acceleration-2023,0,1,0,0,0.0
 19399H,parite-bloc-communal-2025,0,1,0,0,0.0
 19399H,partage-valeur-2023,1,0,0,0,100.0
@@ -10593,6 +10721,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19413M,montagne-vivante-2026,0,1,0,0,0.0
 19413M,nationalite-mayotte-2025,1,0,0,0,100.0
 19413M,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19413M,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19413M,nucleaire-acceleration-2023,0,1,0,0,0.0
 19413M,parite-bloc-communal-2025,1,0,0,0,100.0
 19413M,partage-valeur-2023,0,0,1,0,
@@ -10687,6 +10816,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19421M,montagne-vivante-2026,0,1,0,0,0.0
 19421M,nationalite-mayotte-2025,0,1,0,0,0.0
 19421M,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19421M,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19421M,nucleaire-acceleration-2023,0,1,0,0,0.0
 19421M,parite-bloc-communal-2025,0,1,0,0,0.0
 19421M,partage-valeur-2023,1,0,0,0,100.0
@@ -10799,6 +10929,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19447X,montagne-vivante-2026,0,1,0,0,0.0
 19447X,nationalite-mayotte-2025,0,1,0,0,0.0
 19447X,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19447X,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19447X,nucleaire-acceleration-2023,0,1,0,0,0.0
 19447X,parite-bloc-communal-2025,1,0,0,0,100.0
 19447X,partage-valeur-2023,1,0,0,0,100.0
@@ -10893,6 +11024,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19479G,montagne-vivante-2026,0,1,0,0,0.0
 19479G,nationalite-mayotte-2025,0,0,1,0,
 19479G,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19479G,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19479G,nucleaire-acceleration-2023,0,1,0,0,0.0
 19479G,parite-bloc-communal-2025,0,1,0,0,0.0
 19479G,partage-valeur-2023,1,0,0,0,100.0
@@ -10969,6 +11101,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19489J,montagne-vivante-2026,0,1,0,0,0.0
 19489J,nationalite-mayotte-2025,1,0,0,0,100.0
 19489J,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19489J,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19489J,nucleaire-acceleration-2023,0,1,0,0,0.0
 19489J,parite-bloc-communal-2025,1,0,0,0,100.0
 19489J,partage-valeur-2023,0,0,1,0,
@@ -11063,6 +11196,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19507S,montagne-vivante-2026,0,1,0,0,0.0
 19507S,nationalite-mayotte-2025,0,1,0,0,0.0
 19507S,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19507S,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19507S,nucleaire-acceleration-2023,0,1,0,0,0.0
 19507S,parite-bloc-communal-2025,1,0,0,0,100.0
 19507S,partage-valeur-2023,1,0,0,0,100.0
@@ -11211,6 +11345,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19531S,montagne-vivante-2026,0,1,0,0,0.0
 19531S,nationalite-mayotte-2025,1,0,0,0,100.0
 19531S,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19531S,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19531S,nucleaire-acceleration-2023,0,1,0,0,0.0
 19531S,parite-bloc-communal-2025,1,0,0,0,100.0
 19531S,partage-valeur-2023,0,0,1,0,
@@ -11287,6 +11422,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19533U,montagne-vivante-2026,0,1,0,0,0.0
 19533U,nationalite-mayotte-2025,0,1,0,0,0.0
 19533U,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19533U,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19533U,nucleaire-acceleration-2023,0,1,0,0,0.0
 19533U,parite-bloc-communal-2025,1,0,0,0,100.0
 19533U,partage-valeur-2023,1,0,0,0,100.0
@@ -11381,6 +11517,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19545Y,montagne-vivante-2026,0,1,0,0,0.0
 19545Y,nationalite-mayotte-2025,0,1,0,0,0.0
 19545Y,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19545Y,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19545Y,nucleaire-acceleration-2023,0,1,0,0,0.0
 19545Y,parite-bloc-communal-2025,0,0,1,0,
 19545Y,partage-valeur-2023,1,0,0,0,100.0
@@ -11475,6 +11612,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19551W,montagne-vivante-2026,0,1,0,0,0.0
 19551W,nationalite-mayotte-2025,1,0,0,0,100.0
 19551W,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19551W,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19551W,nucleaire-acceleration-2023,0,1,0,0,0.0
 19551W,parite-bloc-communal-2025,1,0,0,0,100.0
 19551W,partage-valeur-2023,0,0,1,0,
@@ -11543,6 +11681,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19553Y,mineurs-questionnement-genre-senat-2024,1,0,0,0,100.0
 19553Y,nationalite-mayotte-2025,0,0,1,0,
 19553Y,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19553Y,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19553Y,nucleaire-acceleration-2023,0,1,0,0,0.0
 19553Y,parite-bloc-communal-2025,1,0,0,0,100.0
 19553Y,partage-valeur-2023,1,0,0,0,100.0
@@ -11613,6 +11752,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19563B,montagne-vivante-2026,0,1,0,0,0.0
 19563B,nationalite-mayotte-2025,0,0,1,0,
 19563B,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19563B,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19563B,nucleaire-acceleration-2023,0,1,0,0,0.0
 19563B,parite-bloc-communal-2025,0,1,0,0,0.0
 19563B,partage-valeur-2023,1,0,0,0,100.0
@@ -11689,6 +11829,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19565D,montagne-vivante-2026,0,1,0,0,0.0
 19565D,nationalite-mayotte-2025,1,0,0,0,100.0
 19565D,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19565D,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 19565D,nucleaire-acceleration-2023,0,0,1,0,
 19565D,parite-bloc-communal-2025,0,1,0,0,0.0
 19565D,partage-valeur-2023,0,1,0,0,0.0
@@ -11765,6 +11906,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19569H,montagne-vivante-2026,0,1,0,0,0.0
 19569H,nationalite-mayotte-2025,0,1,0,0,0.0
 19569H,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19569H,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19569H,nucleaire-acceleration-2023,0,1,0,0,0.0
 19569H,parite-bloc-communal-2025,1,0,0,0,100.0
 19569H,partage-valeur-2023,1,0,0,0,100.0
@@ -11841,6 +11983,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19573D,montagne-vivante-2026,0,1,0,0,0.0
 19573D,nationalite-mayotte-2025,0,1,0,0,0.0
 19573D,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19573D,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19573D,nucleaire-acceleration-2023,0,1,0,0,0.0
 19573D,parite-bloc-communal-2025,0,1,0,0,0.0
 19573D,partage-valeur-2023,1,0,0,0,100.0
@@ -11917,6 +12060,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19575F,montagne-vivante-2026,0,1,0,0,0.0
 19575F,nationalite-mayotte-2025,0,1,0,0,0.0
 19575F,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19575F,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19575F,nucleaire-acceleration-2023,0,1,0,0,0.0
 19575F,parite-bloc-communal-2025,0,0,1,0,
 19575F,partage-valeur-2023,1,0,0,0,100.0
@@ -12047,6 +12191,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19585H,montagne-vivante-2026,0,1,0,0,0.0
 19585H,nationalite-mayotte-2025,0,1,0,0,0.0
 19585H,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19585H,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19585H,nucleaire-acceleration-2023,0,1,0,0,0.0
 19585H,parite-bloc-communal-2025,0,0,1,0,
 19585H,partage-valeur-2023,1,0,0,0,100.0
@@ -12123,6 +12268,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19591F,montagne-vivante-2026,0,1,0,0,0.0
 19591F,nationalite-mayotte-2025,0,1,0,0,0.0
 19591F,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19591F,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19591F,nucleaire-acceleration-2023,0,1,0,0,0.0
 19591F,parite-bloc-communal-2025,1,0,0,0,100.0
 19591F,partage-valeur-2023,1,0,0,0,100.0
@@ -12199,6 +12345,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19593H,montagne-vivante-2026,0,1,0,0,0.0
 19593H,nationalite-mayotte-2025,1,0,0,0,100.0
 19593H,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19593H,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 19593H,nucleaire-acceleration-2023,0,0,1,0,
 19593H,parite-bloc-communal-2025,0,1,0,0,0.0
 19593H,partage-valeur-2023,0,1,0,0,0.0
@@ -12293,6 +12440,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19611R,montagne-vivante-2026,0,1,0,0,0.0
 19611R,nationalite-mayotte-2025,0,1,0,0,0.0
 19611R,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19611R,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19611R,nucleaire-acceleration-2023,0,1,0,0,0.0
 19611R,parite-bloc-communal-2025,1,0,0,0,100.0
 19611R,partage-valeur-2023,1,0,0,0,100.0
@@ -12369,6 +12517,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19619A,montagne-vivante-2026,0,1,0,0,0.0
 19619A,nationalite-mayotte-2025,0,1,0,0,0.0
 19619A,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19619A,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19619A,nucleaire-acceleration-2023,0,1,0,0,0.0
 19619A,parite-bloc-communal-2025,1,0,0,0,100.0
 19619A,partage-valeur-2023,1,0,0,0,100.0
@@ -12445,6 +12594,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19621T,montagne-vivante-2026,0,1,0,0,0.0
 19621T,nationalite-mayotte-2025,0,1,0,0,0.0
 19621T,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19621T,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19621T,nucleaire-acceleration-2023,0,1,0,0,0.0
 19621T,parite-bloc-communal-2025,1,0,0,0,100.0
 19621T,partage-valeur-2023,1,0,0,0,100.0
@@ -12521,6 +12671,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19629C,montagne-vivante-2026,0,1,0,0,0.0
 19629C,nationalite-mayotte-2025,1,0,0,0,100.0
 19629C,navigation-aerienne-greve-2023,0,0,1,0,
+19629C,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19629C,nucleaire-acceleration-2023,0,1,0,0,0.0
 19629C,parite-bloc-communal-2025,0,1,0,0,0.0
 19629C,partage-valeur-2023,1,0,0,0,100.0
@@ -12597,6 +12748,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19631V,montagne-vivante-2026,0,1,0,0,0.0
 19631V,nationalite-mayotte-2025,1,0,0,0,100.0
 19631V,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19631V,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19631V,nucleaire-acceleration-2023,0,1,0,0,0.0
 19631V,parite-bloc-communal-2025,1,0,0,0,100.0
 19631V,partage-valeur-2023,0,0,1,0,
@@ -12709,6 +12861,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19647E,montagne-vivante-2026,0,1,0,0,0.0
 19647E,nationalite-mayotte-2025,1,0,0,0,100.0
 19647E,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19647E,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19647E,nucleaire-acceleration-2023,0,1,0,0,0.0
 19647E,parite-bloc-communal-2025,1,0,0,0,100.0
 19647E,partage-valeur-2023,0,0,1,0,
@@ -12785,6 +12938,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19649G,montagne-vivante-2026,0,1,0,0,0.0
 19649G,nationalite-mayotte-2025,1,0,0,0,100.0
 19649G,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19649G,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19649G,nucleaire-acceleration-2023,0,1,0,0,0.0
 19649G,parite-bloc-communal-2025,1,0,0,0,100.0
 19649G,partage-valeur-2023,0,0,1,0,
@@ -12879,6 +13033,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19657G,montagne-vivante-2026,0,1,0,0,0.0
 19657G,nationalite-mayotte-2025,0,1,0,0,0.0
 19657G,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19657G,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19657G,nucleaire-acceleration-2023,0,1,0,0,0.0
 19657G,parite-bloc-communal-2025,1,0,0,0,100.0
 19657G,partage-valeur-2023,1,0,0,0,100.0
@@ -12991,6 +13146,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19667J,montagne-vivante-2026,0,1,0,0,0.0
 19667J,nationalite-mayotte-2025,0,1,0,0,0.0
 19667J,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19667J,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19667J,nucleaire-acceleration-2023,0,1,0,0,0.0
 19667J,parite-bloc-communal-2025,0,1,0,0,0.0
 19667J,partage-valeur-2023,1,0,0,0,100.0
@@ -13067,6 +13223,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19669L,montagne-vivante-2026,0,1,0,0,0.0
 19669L,nationalite-mayotte-2025,1,0,0,0,100.0
 19669L,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19669L,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19669L,nucleaire-acceleration-2023,0,1,0,0,0.0
 19669L,parite-bloc-communal-2025,1,0,0,0,100.0
 19669L,partage-valeur-2023,0,0,1,0,
@@ -13161,6 +13318,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19673G,montagne-vivante-2026,0,1,0,0,0.0
 19673G,nationalite-mayotte-2025,0,1,0,0,0.0
 19673G,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19673G,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19673G,nucleaire-acceleration-2023,0,1,0,0,0.0
 19673G,parite-bloc-communal-2025,0,1,0,0,0.0
 19673G,partage-valeur-2023,1,0,0,0,100.0
@@ -13255,6 +13413,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19679N,montagne-vivante-2026,0,1,0,0,0.0
 19679N,nationalite-mayotte-2025,0,1,0,0,0.0
 19679N,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19679N,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19679N,nucleaire-acceleration-2023,0,1,0,0,0.0
 19679N,parite-bloc-communal-2025,0,1,0,0,0.0
 19679N,partage-valeur-2023,1,0,0,0,100.0
@@ -13331,6 +13490,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19681G,montagne-vivante-2026,0,1,0,0,0.0
 19681G,nationalite-mayotte-2025,1,0,0,0,100.0
 19681G,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19681G,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 19681G,nucleaire-acceleration-2023,0,1,0,0,0.0
 19681G,parite-bloc-communal-2025,0,1,0,0,0.0
 19681G,partage-valeur-2023,0,1,0,0,0.0
@@ -13407,6 +13567,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19683J,montagne-vivante-2026,0,1,0,0,0.0
 19683J,nationalite-mayotte-2025,1,0,0,0,100.0
 19683J,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19683J,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 19683J,nucleaire-acceleration-2023,0,1,0,0,0.0
 19683J,parite-bloc-communal-2025,1,0,0,0,100.0
 19683J,partage-valeur-2023,0,0,1,0,
@@ -13483,6 +13644,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19685L,montagne-vivante-2026,0,0,0,1,
 19685L,nationalite-mayotte-2025,0,1,0,0,0.0
 19685L,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19685L,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19685L,nucleaire-acceleration-2023,0,1,0,0,0.0
 19685L,parite-bloc-communal-2025,0,1,0,0,0.0
 19685L,partage-valeur-2023,1,0,0,0,100.0
@@ -13559,6 +13721,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19687N,montagne-vivante-2026,0,1,0,0,0.0
 19687N,nationalite-mayotte-2025,1,0,0,0,100.0
 19687N,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19687N,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 19687N,nucleaire-acceleration-2023,0,0,1,0,
 19687N,parite-bloc-communal-2025,0,1,0,0,0.0
 19687N,partage-valeur-2023,0,1,0,0,0.0
@@ -13635,6 +13798,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19691J,montagne-vivante-2026,0,1,0,0,0.0
 19691J,nationalite-mayotte-2025,0,1,0,0,0.0
 19691J,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19691J,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19691J,nucleaire-acceleration-2023,0,1,0,0,0.0
 19691J,parite-bloc-communal-2025,0,1,0,0,0.0
 19691J,partage-valeur-2023,1,0,0,0,100.0
@@ -13711,6 +13875,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19693L,montagne-vivante-2026,0,1,0,0,0.0
 19693L,nationalite-mayotte-2025,0,1,0,0,0.0
 19693L,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19693L,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19693L,nucleaire-acceleration-2023,0,1,0,0,0.0
 19693L,parite-bloc-communal-2025,0,1,0,0,0.0
 19693L,partage-valeur-2023,1,0,0,0,100.0
@@ -13787,6 +13952,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19695N,montagne-vivante-2026,0,1,0,0,0.0
 19695N,nationalite-mayotte-2025,1,0,0,0,100.0
 19695N,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19695N,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 19695N,nucleaire-acceleration-2023,0,0,1,0,
 19695N,parite-bloc-communal-2025,0,1,0,0,0.0
 19695N,partage-valeur-2023,0,1,0,0,0.0
@@ -13863,6 +14029,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19697Q,montagne-vivante-2026,0,1,0,0,0.0
 19697Q,nationalite-mayotte-2025,0,1,0,0,0.0
 19697Q,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19697Q,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19697Q,nucleaire-acceleration-2023,0,1,0,0,0.0
 19697Q,parite-bloc-communal-2025,1,0,0,0,100.0
 19697Q,partage-valeur-2023,1,0,0,0,100.0
@@ -13939,6 +14106,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19699S,montagne-vivante-2026,0,1,0,0,0.0
 19699S,nationalite-mayotte-2025,0,0,1,0,
 19699S,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19699S,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19699S,nucleaire-acceleration-2023,0,1,0,0,0.0
 19699S,parite-bloc-communal-2025,1,0,0,0,100.0
 19699S,partage-valeur-2023,1,0,0,0,100.0
@@ -14015,6 +14183,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19701S,montagne-vivante-2026,0,1,0,0,0.0
 19701S,nationalite-mayotte-2025,0,1,0,0,0.0
 19701S,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19701S,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19701S,nucleaire-acceleration-2023,0,1,0,0,0.0
 19701S,parite-bloc-communal-2025,0,1,0,0,0.0
 19701S,partage-valeur-2023,1,0,0,0,100.0
@@ -14091,6 +14260,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19703U,montagne-vivante-2026,0,1,0,0,0.0
 19703U,nationalite-mayotte-2025,0,1,0,0,0.0
 19703U,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19703U,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19703U,nucleaire-acceleration-2023,0,1,0,0,0.0
 19703U,parite-bloc-communal-2025,0,1,0,0,0.0
 19703U,partage-valeur-2023,1,0,0,0,100.0
@@ -14167,6 +14337,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19705W,montagne-vivante-2026,0,1,0,0,0.0
 19705W,nationalite-mayotte-2025,0,1,0,0,0.0
 19705W,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19705W,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19705W,nucleaire-acceleration-2023,0,1,0,0,0.0
 19705W,parite-bloc-communal-2025,1,0,0,0,100.0
 19705W,partage-valeur-2023,1,0,0,0,100.0
@@ -14277,6 +14448,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19709B,montagne-vivante-2026,0,1,0,0,0.0
 19709B,nationalite-mayotte-2025,0,1,0,0,0.0
 19709B,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19709B,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19709B,nucleaire-acceleration-2023,0,1,0,0,0.0
 19709B,parite-bloc-communal-2025,1,0,0,0,100.0
 19709B,partage-valeur-2023,1,0,0,0,100.0
@@ -14353,6 +14525,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19711U,montagne-vivante-2026,0,1,0,0,0.0
 19711U,nationalite-mayotte-2025,0,1,0,0,0.0
 19711U,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19711U,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19711U,nucleaire-acceleration-2023,0,1,0,0,0.0
 19711U,parite-bloc-communal-2025,1,0,0,0,100.0
 19711U,partage-valeur-2023,1,0,0,0,100.0
@@ -14429,6 +14602,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19713W,montagne-vivante-2026,0,1,0,0,0.0
 19713W,nationalite-mayotte-2025,0,1,0,0,0.0
 19713W,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19713W,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19713W,nucleaire-acceleration-2023,0,1,0,0,0.0
 19713W,parite-bloc-communal-2025,0,1,0,0,0.0
 19713W,partage-valeur-2023,1,0,0,0,100.0
@@ -14528,6 +14702,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19719D,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 19719D,montagne-vivante-2026,0,1,0,0,0.0
 19719D,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19719D,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19719D,nucleaire-acceleration-2023,0,1,0,0,0.0
 19719D,partage-valeur-2023,1,0,0,0,100.0
 19719D,plein-emploi-2023,0,1,0,0,0.0
@@ -14594,6 +14769,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19721W,montagne-vivante-2026,0,1,0,0,0.0
 19721W,nationalite-mayotte-2025,0,1,0,0,0.0
 19721W,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19721W,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19721W,nucleaire-acceleration-2023,0,1,0,0,0.0
 19721W,parite-bloc-communal-2025,1,0,0,0,100.0
 19721W,partage-valeur-2023,1,0,0,0,100.0
@@ -14668,6 +14844,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19723Y,montagne-vivante-2026,0,1,0,0,0.0
 19723Y,nationalite-mayotte-2025,0,1,0,0,0.0
 19723Y,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19723Y,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19723Y,nucleaire-acceleration-2023,0,1,0,0,0.0
 19723Y,parite-bloc-communal-2025,1,0,0,0,100.0
 19723Y,partage-valeur-2023,1,0,0,0,100.0
@@ -14742,6 +14919,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19725B,montagne-vivante-2026,0,1,0,0,0.0
 19725B,nationalite-mayotte-2025,1,0,0,0,100.0
 19725B,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19725B,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19725B,nucleaire-acceleration-2023,0,1,0,0,0.0
 19725B,parite-bloc-communal-2025,1,0,0,0,100.0
 19725B,partage-valeur-2023,0,0,1,0,
@@ -14816,6 +14994,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19729F,montagne-vivante-2026,0,1,0,0,0.0
 19729F,nationalite-mayotte-2025,0,1,0,0,0.0
 19729F,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19729F,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19729F,nucleaire-acceleration-2023,0,1,0,0,0.0
 19729F,parite-bloc-communal-2025,1,0,0,0,100.0
 19729F,partage-valeur-2023,1,0,0,0,100.0
@@ -14891,6 +15070,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19735D,montagne-vivante-2026,0,1,0,0,0.0
 19735D,nationalite-mayotte-2025,0,1,0,0,0.0
 19735D,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19735D,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19735D,nucleaire-acceleration-2023,0,1,0,0,0.0
 19735D,parite-bloc-communal-2025,1,0,0,0,100.0
 19735D,partage-valeur-2023,1,0,0,0,100.0
@@ -15002,6 +15182,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19745F,montagne-vivante-2026,0,1,0,0,0.0
 19745F,nationalite-mayotte-2025,0,0,1,0,
 19745F,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19745F,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19745F,nucleaire-acceleration-2023,0,1,0,0,0.0
 19745F,parite-bloc-communal-2025,0,0,1,0,
 19745F,partage-valeur-2023,1,0,0,0,100.0
@@ -15103,6 +15284,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19749K,montagne-vivante-2026,0,1,0,0,0.0
 19749K,nationalite-mayotte-2025,0,1,0,0,0.0
 19749K,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19749K,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19749K,nucleaire-acceleration-2023,0,1,0,0,0.0
 19749K,parite-bloc-communal-2025,1,0,0,0,100.0
 19749K,partage-valeur-2023,1,0,0,0,100.0
@@ -15179,6 +15361,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19758L,montagne-vivante-2026,0,1,0,0,0.0
 19758L,nationalite-mayotte-2025,1,0,0,0,100.0
 19758L,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19758L,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 19758L,nucleaire-acceleration-2023,0,0,1,0,
 19758L,parite-bloc-communal-2025,0,1,0,0,0.0
 19758L,partage-valeur-2023,0,1,0,0,0.0
@@ -15255,6 +15438,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19760E,montagne-vivante-2026,0,1,0,0,0.0
 19760E,nationalite-mayotte-2025,1,0,0,0,100.0
 19760E,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19760E,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 19760E,nucleaire-acceleration-2023,0,0,1,0,
 19760E,parite-bloc-communal-2025,0,1,0,0,0.0
 19760E,partage-valeur-2023,0,1,0,0,0.0
@@ -15367,6 +15551,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19768N,montagne-vivante-2026,0,1,0,0,0.0
 19768N,nationalite-mayotte-2025,0,1,0,0,0.0
 19768N,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19768N,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19768N,nucleaire-acceleration-2023,0,1,0,0,0.0
 19768N,parite-bloc-communal-2025,1,0,0,0,100.0
 19768N,partage-valeur-2023,1,0,0,0,100.0
@@ -15442,6 +15627,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19782L,montagne-vivante-2026,0,1,0,0,0.0
 19782L,nationalite-mayotte-2025,0,1,0,0,0.0
 19782L,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19782L,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19782L,nucleaire-acceleration-2023,0,1,0,0,0.0
 19782L,parite-bloc-communal-2025,1,0,0,0,100.0
 19782L,partage-valeur-2023,1,0,0,0,100.0
@@ -15516,6 +15702,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19798U,montagne-vivante-2026,0,1,0,0,0.0
 19798U,nationalite-mayotte-2025,0,1,0,0,0.0
 19798U,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19798U,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19798U,nucleaire-acceleration-2023,0,1,0,0,0.0
 19798U,parite-bloc-communal-2025,1,0,0,0,100.0
 19798U,partage-valeur-2023,1,0,0,0,100.0
@@ -15591,6 +15778,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19820Y,montagne-vivante-2026,0,1,0,0,0.0
 19820Y,nationalite-mayotte-2025,1,0,0,0,100.0
 19820Y,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19820Y,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19820Y,nucleaire-acceleration-2023,0,1,0,0,0.0
 19820Y,parite-bloc-communal-2025,1,0,0,0,100.0
 19820Y,partage-valeur-2023,0,0,1,0,
@@ -15667,6 +15855,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19826F,montagne-vivante-2026,0,1,0,0,0.0
 19826F,nationalite-mayotte-2025,0,0,1,0,
 19826F,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19826F,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19826F,nucleaire-acceleration-2023,0,1,0,0,0.0
 19826F,parite-bloc-communal-2025,0,0,1,0,
 19826F,partage-valeur-2023,1,0,0,0,100.0
@@ -15743,6 +15932,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19866P,montagne-vivante-2026,0,1,0,0,0.0
 19866P,nationalite-mayotte-2025,1,0,0,0,100.0
 19866P,navigation-aerienne-greve-2023,1,0,0,0,100.0
+19866P,nouvelle-caledonie-bougival-2026,0,0,1,0,
 19866P,nucleaire-acceleration-2023,0,1,0,0,0.0
 19866P,parite-bloc-communal-2025,1,0,0,0,100.0
 19866P,partage-valeur-2023,1,0,0,0,100.0
@@ -15821,6 +16011,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19954N,montagne-vivante-2026,0,1,0,0,0.0
 19954N,nationalite-mayotte-2025,0,1,0,0,0.0
 19954N,navigation-aerienne-greve-2023,0,1,0,0,0.0
+19954N,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 19954N,nucleaire-acceleration-2023,0,1,0,0,0.0
 19954N,parite-bloc-communal-2025,1,0,0,0,100.0
 19954N,partage-valeur-2023,1,0,0,0,100.0
@@ -15896,6 +16087,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20016T,montagne-vivante-2026,0,1,0,0,0.0
 20016T,nationalite-mayotte-2025,0,1,0,0,0.0
 20016T,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20016T,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20016T,nucleaire-acceleration-2023,0,1,0,0,0.0
 20016T,parite-bloc-communal-2025,1,0,0,0,100.0
 20016T,partage-valeur-2023,1,0,0,0,100.0
@@ -15971,6 +16163,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20018V,montagne-vivante-2026,0,1,0,0,0.0
 20018V,nationalite-mayotte-2025,1,0,0,0,100.0
 20018V,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20018V,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20018V,nucleaire-acceleration-2023,0,1,0,0,0.0
 20018V,parite-bloc-communal-2025,1,0,0,0,100.0
 20018V,partage-valeur-2023,0,0,1,0,
@@ -16047,6 +16240,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20020P,montagne-vivante-2026,0,1,0,0,0.0
 20020P,nationalite-mayotte-2025,0,1,0,0,0.0
 20020P,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20020P,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20020P,nucleaire-acceleration-2023,0,1,0,0,0.0
 20020P,parite-bloc-communal-2025,0,1,0,0,0.0
 20020P,partage-valeur-2023,1,0,0,0,100.0
@@ -16123,6 +16317,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20022R,montagne-vivante-2026,0,1,0,0,0.0
 20022R,nationalite-mayotte-2025,0,1,0,0,0.0
 20022R,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20022R,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20022R,nucleaire-acceleration-2023,0,1,0,0,0.0
 20022R,parite-bloc-communal-2025,1,0,0,0,100.0
 20022R,partage-valeur-2023,1,0,0,0,100.0
@@ -16199,6 +16394,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20024T,montagne-vivante-2026,0,1,0,0,0.0
 20024T,nationalite-mayotte-2025,0,1,0,0,0.0
 20024T,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20024T,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20024T,nucleaire-acceleration-2023,0,1,0,0,0.0
 20024T,parite-bloc-communal-2025,1,0,0,0,100.0
 20024T,partage-valeur-2023,1,0,0,0,100.0
@@ -16275,6 +16471,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20026V,montagne-vivante-2026,0,1,0,0,0.0
 20026V,nationalite-mayotte-2025,0,1,0,0,0.0
 20026V,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20026V,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20026V,nucleaire-acceleration-2023,0,1,0,0,0.0
 20026V,parite-bloc-communal-2025,0,0,1,0,
 20026V,partage-valeur-2023,1,0,0,0,100.0
@@ -16351,6 +16548,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20028X,montagne-vivante-2026,0,1,0,0,0.0
 20028X,nationalite-mayotte-2025,1,0,0,0,100.0
 20028X,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20028X,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20028X,nucleaire-acceleration-2023,0,1,0,0,0.0
 20028X,parite-bloc-communal-2025,1,0,0,0,100.0
 20028X,partage-valeur-2023,0,0,1,0,
@@ -16427,6 +16625,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20030R,montagne-vivante-2026,0,1,0,0,0.0
 20030R,nationalite-mayotte-2025,1,0,0,0,100.0
 20030R,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20030R,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20030R,nucleaire-acceleration-2023,0,1,0,0,0.0
 20030R,parite-bloc-communal-2025,1,0,0,0,100.0
 20030R,partage-valeur-2023,0,0,1,0,
@@ -16503,6 +16702,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20032T,montagne-vivante-2026,0,1,0,0,0.0
 20032T,nationalite-mayotte-2025,0,1,0,0,0.0
 20032T,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20032T,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20032T,nucleaire-acceleration-2023,0,1,0,0,0.0
 20032T,parite-bloc-communal-2025,1,0,0,0,100.0
 20032T,partage-valeur-2023,1,0,0,0,100.0
@@ -16579,6 +16779,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20034V,montagne-vivante-2026,0,1,0,0,0.0
 20034V,nationalite-mayotte-2025,0,1,0,0,0.0
 20034V,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20034V,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20034V,nucleaire-acceleration-2023,0,1,0,0,0.0
 20034V,parite-bloc-communal-2025,0,1,0,0,0.0
 20034V,partage-valeur-2023,1,0,0,0,100.0
@@ -16655,6 +16856,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20036X,montagne-vivante-2026,0,1,0,0,0.0
 20036X,nationalite-mayotte-2025,0,1,0,0,0.0
 20036X,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20036X,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 20036X,nucleaire-acceleration-2023,1,0,0,0,100.0
 20036X,parite-bloc-communal-2025,0,0,1,0,
 20036X,partage-valeur-2023,0,0,1,0,
@@ -16730,6 +16932,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20038A,montagne-vivante-2026,0,1,0,0,0.0
 20038A,nationalite-mayotte-2025,0,1,0,0,0.0
 20038A,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20038A,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20038A,nucleaire-acceleration-2023,0,1,0,0,0.0
 20038A,parite-bloc-communal-2025,1,0,0,0,100.0
 20038A,partage-valeur-2023,1,0,0,0,100.0
@@ -16805,6 +17008,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20040T,montagne-vivante-2026,0,1,0,0,0.0
 20040T,nationalite-mayotte-2025,1,0,0,0,100.0
 20040T,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20040T,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20040T,nucleaire-acceleration-2023,0,1,0,0,0.0
 20040T,parite-bloc-communal-2025,0,0,1,0,
 20040T,partage-valeur-2023,1,0,0,0,100.0
@@ -16881,6 +17085,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20042V,montagne-vivante-2026,0,1,0,0,0.0
 20042V,nationalite-mayotte-2025,0,1,0,0,0.0
 20042V,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20042V,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20042V,nucleaire-acceleration-2023,0,1,0,0,0.0
 20042V,parite-bloc-communal-2025,0,0,1,0,
 20042V,partage-valeur-2023,1,0,0,0,100.0
@@ -16957,6 +17162,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20044X,montagne-vivante-2026,0,1,0,0,0.0
 20044X,nationalite-mayotte-2025,0,1,0,0,0.0
 20044X,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20044X,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20044X,nucleaire-acceleration-2023,0,1,0,0,0.0
 20044X,parite-bloc-communal-2025,1,0,0,0,100.0
 20044X,partage-valeur-2023,1,0,0,0,100.0
@@ -17033,6 +17239,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20046A,montagne-vivante-2026,0,1,0,0,0.0
 20046A,nationalite-mayotte-2025,1,0,0,0,100.0
 20046A,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20046A,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 20046A,nucleaire-acceleration-2023,0,0,1,0,
 20046A,parite-bloc-communal-2025,0,1,0,0,0.0
 20046A,partage-valeur-2023,0,1,0,0,0.0
@@ -17109,6 +17316,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20048C,montagne-vivante-2026,0,1,0,0,0.0
 20048C,nationalite-mayotte-2025,0,1,0,0,0.0
 20048C,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20048C,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20048C,nucleaire-acceleration-2023,0,1,0,0,0.0
 20048C,parite-bloc-communal-2025,1,0,0,0,100.0
 20048C,partage-valeur-2023,1,0,0,0,100.0
@@ -17185,6 +17393,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20050V,montagne-vivante-2026,0,1,0,0,0.0
 20050V,nationalite-mayotte-2025,0,1,0,0,0.0
 20050V,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20050V,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20050V,nucleaire-acceleration-2023,0,1,0,0,0.0
 20050V,parite-bloc-communal-2025,0,1,0,0,0.0
 20050V,partage-valeur-2023,1,0,0,0,100.0
@@ -17261,6 +17470,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20052X,montagne-vivante-2026,0,1,0,0,0.0
 20052X,nationalite-mayotte-2025,0,0,1,0,
 20052X,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20052X,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20052X,nucleaire-acceleration-2023,0,1,0,0,0.0
 20052X,parite-bloc-communal-2025,1,0,0,0,100.0
 20052X,partage-valeur-2023,1,0,0,0,100.0
@@ -17337,6 +17547,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20054A,montagne-vivante-2026,0,1,0,0,0.0
 20054A,nationalite-mayotte-2025,0,1,0,0,0.0
 20054A,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20054A,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20054A,nucleaire-acceleration-2023,0,1,0,0,0.0
 20054A,parite-bloc-communal-2025,0,1,0,0,0.0
 20054A,partage-valeur-2023,1,0,0,0,100.0
@@ -17413,6 +17624,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20056C,montagne-vivante-2026,0,1,0,0,0.0
 20056C,nationalite-mayotte-2025,0,1,0,0,0.0
 20056C,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20056C,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20056C,nucleaire-acceleration-2023,0,1,0,0,0.0
 20056C,parite-bloc-communal-2025,0,1,0,0,0.0
 20056C,partage-valeur-2023,1,0,0,0,100.0
@@ -17489,6 +17701,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20058E,montagne-vivante-2026,0,1,0,0,0.0
 20058E,nationalite-mayotte-2025,0,1,0,0,0.0
 20058E,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20058E,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20058E,nucleaire-acceleration-2023,0,1,0,0,0.0
 20058E,parite-bloc-communal-2025,0,1,0,0,0.0
 20058E,partage-valeur-2023,1,0,0,0,100.0
@@ -17565,6 +17778,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20060X,montagne-vivante-2026,0,1,0,0,0.0
 20060X,nationalite-mayotte-2025,1,0,0,0,100.0
 20060X,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20060X,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20060X,nucleaire-acceleration-2023,0,1,0,0,0.0
 20060X,parite-bloc-communal-2025,1,0,0,0,100.0
 20060X,partage-valeur-2023,0,0,1,0,
@@ -17641,6 +17855,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20062A,montagne-vivante-2026,0,1,0,0,0.0
 20062A,nationalite-mayotte-2025,0,1,0,0,0.0
 20062A,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20062A,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20062A,nucleaire-acceleration-2023,0,1,0,0,0.0
 20062A,parite-bloc-communal-2025,0,1,0,0,0.0
 20062A,partage-valeur-2023,1,0,0,0,100.0
@@ -17717,6 +17932,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20064C,montagne-vivante-2026,0,1,0,0,0.0
 20064C,nationalite-mayotte-2025,1,0,0,0,100.0
 20064C,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20064C,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20064C,nucleaire-acceleration-2023,0,1,0,0,0.0
 20064C,parite-bloc-communal-2025,1,0,0,0,100.0
 20064C,partage-valeur-2023,0,0,1,0,
@@ -17792,6 +18008,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20066E,montagne-vivante-2026,0,1,0,0,0.0
 20066E,nationalite-mayotte-2025,0,1,0,0,0.0
 20066E,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20066E,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20066E,nucleaire-acceleration-2023,0,1,0,0,0.0
 20066E,parite-bloc-communal-2025,0,1,0,0,0.0
 20066E,partage-valeur-2023,1,0,0,0,100.0
@@ -17866,6 +18083,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20068G,montagne-vivante-2026,0,1,0,0,0.0
 20068G,nationalite-mayotte-2025,0,1,0,0,0.0
 20068G,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20068G,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20068G,nucleaire-acceleration-2023,0,1,0,0,0.0
 20068G,parite-bloc-communal-2025,0,1,0,0,0.0
 20068G,partage-valeur-2023,1,0,0,0,100.0
@@ -17941,6 +18159,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20070A,montagne-vivante-2026,0,1,0,0,0.0
 20070A,nationalite-mayotte-2025,1,0,0,0,100.0
 20070A,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20070A,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20070A,nucleaire-acceleration-2023,0,1,0,0,0.0
 20070A,parite-bloc-communal-2025,1,0,0,0,100.0
 20070A,partage-valeur-2023,0,0,1,0,
@@ -18016,6 +18235,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20072C,montagne-vivante-2026,0,1,0,0,0.0
 20072C,nationalite-mayotte-2025,1,0,0,0,100.0
 20072C,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20072C,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20072C,nucleaire-acceleration-2023,0,1,0,0,0.0
 20072C,parite-bloc-communal-2025,1,0,0,0,100.0
 20072C,partage-valeur-2023,1,0,0,0,100.0
@@ -18091,6 +18311,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20074E,montagne-vivante-2026,0,1,0,0,0.0
 20074E,nationalite-mayotte-2025,0,1,0,0,0.0
 20074E,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20074E,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20074E,nucleaire-acceleration-2023,0,1,0,0,0.0
 20074E,parite-bloc-communal-2025,0,0,1,0,
 20074E,partage-valeur-2023,1,0,0,0,100.0
@@ -18166,6 +18387,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20076G,montagne-vivante-2026,0,1,0,0,0.0
 20076G,nationalite-mayotte-2025,0,1,0,0,0.0
 20076G,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20076G,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20076G,nucleaire-acceleration-2023,0,1,0,0,0.0
 20076G,parite-bloc-communal-2025,1,0,0,0,100.0
 20076G,partage-valeur-2023,1,0,0,0,100.0
@@ -18240,6 +18462,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20078J,montagne-vivante-2026,0,1,0,0,0.0
 20078J,nationalite-mayotte-2025,0,1,0,0,0.0
 20078J,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20078J,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20078J,nucleaire-acceleration-2023,0,1,0,0,0.0
 20078J,parite-bloc-communal-2025,1,0,0,0,100.0
 20078J,partage-valeur-2023,1,0,0,0,100.0
@@ -18315,6 +18538,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20080C,montagne-vivante-2026,0,1,0,0,0.0
 20080C,nationalite-mayotte-2025,1,0,0,0,100.0
 20080C,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20080C,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20080C,nucleaire-acceleration-2023,0,1,0,0,0.0
 20080C,parite-bloc-communal-2025,1,0,0,0,100.0
 20080C,partage-valeur-2023,0,0,1,0,
@@ -18391,6 +18615,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20082E,montagne-vivante-2026,0,1,0,0,0.0
 20082E,nationalite-mayotte-2025,1,0,0,0,100.0
 20082E,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20082E,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20082E,nucleaire-acceleration-2023,0,1,0,0,0.0
 20082E,parite-bloc-communal-2025,1,0,0,0,100.0
 20082E,partage-valeur-2023,0,0,1,0,
@@ -18466,6 +18691,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20084G,montagne-vivante-2026,0,1,0,0,0.0
 20084G,nationalite-mayotte-2025,1,0,0,0,100.0
 20084G,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20084G,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20084G,nucleaire-acceleration-2023,0,1,0,0,0.0
 20084G,parite-bloc-communal-2025,1,0,0,0,100.0
 20084G,partage-valeur-2023,0,0,1,0,
@@ -18541,6 +18767,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20086J,montagne-vivante-2026,0,1,0,0,0.0
 20086J,nationalite-mayotte-2025,0,1,0,0,0.0
 20086J,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20086J,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20086J,nucleaire-acceleration-2023,0,1,0,0,0.0
 20086J,parite-bloc-communal-2025,1,0,0,0,100.0
 20086J,partage-valeur-2023,1,0,0,0,100.0
@@ -18617,6 +18844,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20088L,montagne-vivante-2026,0,1,0,0,0.0
 20088L,nationalite-mayotte-2025,1,0,0,0,100.0
 20088L,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20088L,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20088L,nucleaire-acceleration-2023,0,1,0,0,0.0
 20088L,parite-bloc-communal-2025,1,0,0,0,100.0
 20088L,partage-valeur-2023,0,0,1,0,
@@ -18693,6 +18921,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20090E,montagne-vivante-2026,0,1,0,0,0.0
 20090E,nationalite-mayotte-2025,0,1,0,0,0.0
 20090E,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20090E,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20090E,nucleaire-acceleration-2023,0,1,0,0,0.0
 20090E,parite-bloc-communal-2025,0,1,0,0,0.0
 20090E,partage-valeur-2023,1,0,0,0,100.0
@@ -18769,6 +18998,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20092G,montagne-vivante-2026,1,0,0,0,100.0
 20092G,nationalite-mayotte-2025,1,0,0,0,100.0
 20092G,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20092G,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 20092G,nucleaire-acceleration-2023,1,0,0,0,100.0
 20092G,parite-bloc-communal-2025,1,0,0,0,100.0
 20092G,partage-valeur-2023,0,0,1,0,
@@ -18845,6 +19075,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20094J,montagne-vivante-2026,0,1,0,0,0.0
 20094J,nationalite-mayotte-2025,1,0,0,0,100.0
 20094J,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20094J,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20094J,nucleaire-acceleration-2023,0,1,0,0,0.0
 20094J,parite-bloc-communal-2025,1,0,0,0,100.0
 20094J,partage-valeur-2023,0,0,1,0,
@@ -18921,6 +19152,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20096L,montagne-vivante-2026,0,1,0,0,0.0
 20096L,nationalite-mayotte-2025,0,1,0,0,0.0
 20096L,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20096L,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20096L,nucleaire-acceleration-2023,0,1,0,0,0.0
 20096L,parite-bloc-communal-2025,0,1,0,0,0.0
 20096L,partage-valeur-2023,1,0,0,0,100.0
@@ -18997,6 +19229,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20098N,montagne-vivante-2026,0,1,0,0,0.0
 20098N,nationalite-mayotte-2025,0,1,0,0,0.0
 20098N,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20098N,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20098N,nucleaire-acceleration-2023,0,1,0,0,0.0
 20098N,parite-bloc-communal-2025,0,1,0,0,0.0
 20098N,partage-valeur-2023,1,0,0,0,100.0
@@ -19072,6 +19305,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20100N,montagne-vivante-2026,1,0,0,0,100.0
 20100N,nationalite-mayotte-2025,1,0,0,0,100.0
 20100N,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20100N,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 20100N,nucleaire-acceleration-2023,1,0,0,0,100.0
 20100N,parite-bloc-communal-2025,1,0,0,0,100.0
 20100N,partage-valeur-2023,0,0,1,0,
@@ -19147,6 +19381,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20102Q,montagne-vivante-2026,0,1,0,0,0.0
 20102Q,nationalite-mayotte-2025,1,0,0,0,100.0
 20102Q,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20102Q,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 20102Q,nucleaire-acceleration-2023,0,0,1,0,
 20102Q,parite-bloc-communal-2025,0,1,0,0,0.0
 20102Q,partage-valeur-2023,0,1,0,0,0.0
@@ -19223,6 +19458,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20104S,montagne-vivante-2026,0,1,0,0,0.0
 20104S,nationalite-mayotte-2025,0,1,0,0,0.0
 20104S,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20104S,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20104S,nucleaire-acceleration-2023,0,1,0,0,0.0
 20104S,parite-bloc-communal-2025,0,1,0,0,0.0
 20104S,partage-valeur-2023,1,0,0,0,100.0
@@ -19299,6 +19535,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20106U,montagne-vivante-2026,0,1,0,0,0.0
 20106U,nationalite-mayotte-2025,0,1,0,0,0.0
 20106U,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20106U,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20106U,nucleaire-acceleration-2023,0,1,0,0,0.0
 20106U,parite-bloc-communal-2025,1,0,0,0,100.0
 20106U,partage-valeur-2023,1,0,0,0,100.0
@@ -19374,6 +19611,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20108W,montagne-vivante-2026,0,1,0,0,0.0
 20108W,nationalite-mayotte-2025,0,1,0,0,0.0
 20108W,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20108W,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20108W,nucleaire-acceleration-2023,0,1,0,0,0.0
 20108W,parite-bloc-communal-2025,0,0,1,0,
 20108W,partage-valeur-2023,1,0,0,0,100.0
@@ -19449,6 +19687,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20110Q,montagne-vivante-2026,1,0,0,0,100.0
 20110Q,nationalite-mayotte-2025,1,0,0,0,100.0
 20110Q,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20110Q,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 20110Q,nucleaire-acceleration-2023,1,0,0,0,100.0
 20110Q,parite-bloc-communal-2025,1,0,0,0,100.0
 20110Q,partage-valeur-2023,0,0,1,0,
@@ -19525,6 +19764,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20112S,montagne-vivante-2026,0,1,0,0,0.0
 20112S,nationalite-mayotte-2025,1,0,0,0,100.0
 20112S,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20112S,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 20112S,nucleaire-acceleration-2023,0,0,1,0,
 20112S,parite-bloc-communal-2025,0,1,0,0,0.0
 20112S,partage-valeur-2023,0,1,0,0,0.0
@@ -19601,6 +19841,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20114U,montagne-vivante-2026,0,1,0,0,0.0
 20114U,nationalite-mayotte-2025,1,0,0,0,100.0
 20114U,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20114U,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20114U,nucleaire-acceleration-2023,0,1,0,0,0.0
 20114U,parite-bloc-communal-2025,1,0,0,0,100.0
 20114U,partage-valeur-2023,0,0,1,0,
@@ -19676,6 +19917,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20116W,montagne-vivante-2026,0,1,0,0,0.0
 20116W,nationalite-mayotte-2025,1,0,0,0,100.0
 20116W,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20116W,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20116W,nucleaire-acceleration-2023,0,1,0,0,0.0
 20116W,parite-bloc-communal-2025,1,0,0,0,100.0
 20116W,partage-valeur-2023,1,0,0,0,100.0
@@ -19751,6 +19993,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20118Y,montagne-vivante-2026,0,1,0,0,0.0
 20118Y,nationalite-mayotte-2025,0,1,0,0,0.0
 20118Y,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20118Y,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20118Y,nucleaire-acceleration-2023,0,1,0,0,0.0
 20118Y,parite-bloc-communal-2025,0,1,0,0,0.0
 20118Y,partage-valeur-2023,1,0,0,0,100.0
@@ -19827,6 +20070,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20120S,montagne-vivante-2026,0,1,0,0,0.0
 20120S,nationalite-mayotte-2025,0,1,0,0,0.0
 20120S,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20120S,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20120S,nucleaire-acceleration-2023,0,1,0,0,0.0
 20120S,parite-bloc-communal-2025,1,0,0,0,100.0
 20120S,partage-valeur-2023,1,0,0,0,100.0
@@ -19902,6 +20146,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20122U,montagne-vivante-2026,0,1,0,0,0.0
 20122U,nationalite-mayotte-2025,0,1,0,0,0.0
 20122U,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20122U,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20122U,nucleaire-acceleration-2023,0,1,0,0,0.0
 20122U,parite-bloc-communal-2025,0,1,0,0,0.0
 20122U,partage-valeur-2023,1,0,0,0,100.0
@@ -19977,6 +20222,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20124W,montagne-vivante-2026,0,1,0,0,0.0
 20124W,nationalite-mayotte-2025,0,1,0,0,0.0
 20124W,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20124W,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20124W,nucleaire-acceleration-2023,0,1,0,0,0.0
 20124W,parite-bloc-communal-2025,1,0,0,0,100.0
 20124W,partage-valeur-2023,1,0,0,0,100.0
@@ -20053,6 +20299,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20126Y,montagne-vivante-2026,0,1,0,0,0.0
 20126Y,nationalite-mayotte-2025,0,1,0,0,0.0
 20126Y,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20126Y,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20126Y,nucleaire-acceleration-2023,0,1,0,0,0.0
 20126Y,parite-bloc-communal-2025,0,1,0,0,0.0
 20126Y,partage-valeur-2023,1,0,0,0,100.0
@@ -20129,6 +20376,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20128B,montagne-vivante-2026,0,1,0,0,0.0
 20128B,nationalite-mayotte-2025,0,1,0,0,0.0
 20128B,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20128B,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20128B,nucleaire-acceleration-2023,0,1,0,0,0.0
 20128B,parite-bloc-communal-2025,0,0,1,0,
 20128B,partage-valeur-2023,1,0,0,0,100.0
@@ -20204,6 +20452,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20130U,montagne-vivante-2026,1,0,0,0,100.0
 20130U,nationalite-mayotte-2025,1,0,0,0,100.0
 20130U,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20130U,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 20130U,nucleaire-acceleration-2023,1,0,0,0,100.0
 20130U,parite-bloc-communal-2025,1,0,0,0,100.0
 20130U,partage-valeur-2023,0,0,1,0,
@@ -20279,6 +20528,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20132W,montagne-vivante-2026,0,1,0,0,0.0
 20132W,nationalite-mayotte-2025,1,0,0,0,100.0
 20132W,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20132W,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20132W,nucleaire-acceleration-2023,0,1,0,0,0.0
 20132W,parite-bloc-communal-2025,1,0,0,0,100.0
 20132W,partage-valeur-2023,1,0,0,0,100.0
@@ -20355,6 +20605,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20134Y,montagne-vivante-2026,1,0,0,0,100.0
 20134Y,nationalite-mayotte-2025,1,0,0,0,100.0
 20134Y,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20134Y,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 20134Y,nucleaire-acceleration-2023,1,0,0,0,100.0
 20134Y,parite-bloc-communal-2025,1,0,0,0,100.0
 20134Y,partage-valeur-2023,0,0,1,0,
@@ -20466,6 +20717,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20138D,montagne-vivante-2026,0,1,0,0,0.0
 20138D,nationalite-mayotte-2025,0,1,0,0,0.0
 20138D,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20138D,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20138D,nucleaire-acceleration-2023,0,1,0,0,0.0
 20138D,parite-bloc-communal-2025,0,0,1,0,
 20138D,partage-valeur-2023,1,0,0,0,100.0
@@ -20541,6 +20793,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20140W,montagne-vivante-2026,0,1,0,0,0.0
 20140W,nationalite-mayotte-2025,0,1,0,0,0.0
 20140W,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20140W,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20140W,nucleaire-acceleration-2023,0,1,0,0,0.0
 20140W,parite-bloc-communal-2025,0,1,0,0,0.0
 20140W,partage-valeur-2023,1,0,0,0,100.0
@@ -20615,6 +20868,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20142Y,montagne-vivante-2026,1,0,0,0,100.0
 20142Y,nationalite-mayotte-2025,1,0,0,0,100.0
 20142Y,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20142Y,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 20142Y,nucleaire-acceleration-2023,1,0,0,0,100.0
 20142Y,parite-bloc-communal-2025,1,0,0,0,100.0
 20142Y,partage-valeur-2023,0,0,1,0,
@@ -20689,6 +20943,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20144B,montagne-vivante-2026,0,1,0,0,0.0
 20144B,nationalite-mayotte-2025,0,0,1,0,
 20144B,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20144B,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20144B,nucleaire-acceleration-2023,0,1,0,0,0.0
 20144B,parite-bloc-communal-2025,0,1,0,0,0.0
 20144B,partage-valeur-2023,1,0,0,0,100.0
@@ -20763,6 +21018,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20146D,montagne-vivante-2026,0,1,0,0,0.0
 20146D,nationalite-mayotte-2025,1,0,0,0,100.0
 20146D,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20146D,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20146D,nucleaire-acceleration-2023,0,1,0,0,0.0
 20146D,parite-bloc-communal-2025,1,0,0,0,100.0
 20146D,partage-valeur-2023,1,0,0,0,100.0
@@ -20837,6 +21093,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20148F,montagne-vivante-2026,0,1,0,0,0.0
 20148F,nationalite-mayotte-2025,0,1,0,0,0.0
 20148F,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20148F,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20148F,nucleaire-acceleration-2023,0,1,0,0,0.0
 20148F,parite-bloc-communal-2025,1,0,0,0,100.0
 20148F,partage-valeur-2023,1,0,0,0,100.0
@@ -20911,6 +21168,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20150Y,montagne-vivante-2026,0,1,0,0,0.0
 20150Y,nationalite-mayotte-2025,0,1,0,0,0.0
 20150Y,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20150Y,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20150Y,nucleaire-acceleration-2023,0,1,0,0,0.0
 20150Y,parite-bloc-communal-2025,0,0,1,0,
 20150Y,partage-valeur-2023,1,0,0,0,100.0
@@ -21003,6 +21261,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20172F,montagne-vivante-2026,0,1,0,0,0.0
 20172F,nationalite-mayotte-2025,0,1,0,0,0.0
 20172F,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20172F,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20172F,nucleaire-acceleration-2023,0,1,0,0,0.0
 20172F,parite-bloc-communal-2025,0,1,0,0,0.0
 20172F,partage-valeur-2023,1,0,0,0,100.0
@@ -21079,6 +21338,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20180F,montagne-vivante-2026,0,1,0,0,0.0
 20180F,nationalite-mayotte-2025,0,1,0,0,0.0
 20180F,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20180F,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20180F,nucleaire-acceleration-2023,0,1,0,0,0.0
 20180F,parite-bloc-communal-2025,0,1,0,0,0.0
 20180F,partage-valeur-2023,1,0,0,0,100.0
@@ -21155,6 +21415,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20248J,montagne-vivante-2026,0,1,0,0,0.0
 20248J,nationalite-mayotte-2025,0,1,0,0,0.0
 20248J,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20248J,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20248J,nucleaire-acceleration-2023,0,1,0,0,0.0
 20248J,parite-bloc-communal-2025,0,0,1,0,
 20248J,partage-valeur-2023,1,0,0,0,100.0
@@ -21231,6 +21492,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20252E,montagne-vivante-2026,0,1,0,0,0.0
 20252E,nationalite-mayotte-2025,0,1,0,0,0.0
 20252E,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20252E,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20252E,nucleaire-acceleration-2023,0,1,0,0,0.0
 20252E,parite-bloc-communal-2025,1,0,0,0,100.0
 20252E,partage-valeur-2023,1,0,0,0,100.0
@@ -21307,6 +21569,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20264J,montagne-vivante-2026,0,1,0,0,0.0
 20264J,nationalite-mayotte-2025,1,0,0,0,100.0
 20264J,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20264J,nouvelle-caledonie-bougival-2026,0,0,1,0,
 20264J,nucleaire-acceleration-2023,0,1,0,0,0.0
 20264J,parite-bloc-communal-2025,1,0,0,0,100.0
 20264J,partage-valeur-2023,0,0,1,0,
@@ -21383,6 +21646,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20266L,montagne-vivante-2026,1,0,0,0,100.0
 20266L,nationalite-mayotte-2025,1,0,0,0,100.0
 20266L,navigation-aerienne-greve-2023,1,0,0,0,100.0
+20266L,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 20266L,nucleaire-acceleration-2023,1,0,0,0,100.0
 20266L,parite-bloc-communal-2025,1,0,0,0,100.0
 20266L,partage-valeur-2023,0,0,1,0,
@@ -21459,6 +21723,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20286Q,montagne-vivante-2026,0,1,0,0,0.0
 20286Q,nationalite-mayotte-2025,0,1,0,0,0.0
 20286Q,navigation-aerienne-greve-2023,0,1,0,0,0.0
+20286Q,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 20286Q,nucleaire-acceleration-2023,0,1,0,0,0.0
 20286Q,parite-bloc-communal-2025,1,0,0,0,100.0
 20286Q,partage-valeur-2023,1,0,0,0,100.0
@@ -21579,6 +21844,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21029D,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21029D,montagne-vivante-2026,0,1,0,0,0.0
 21029D,nationalite-mayotte-2025,0,1,0,0,0.0
+21029D,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21029D,parite-bloc-communal-2025,0,1,0,0,0.0
 21029D,partage-valeur-2023,1,0,0,0,100.0
 21029D,plein-emploi-2023,0,1,0,0,0.0
@@ -21637,6 +21903,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21030V,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21030V,montagne-vivante-2026,0,1,0,0,0.0
 21030V,nationalite-mayotte-2025,1,0,0,0,100.0
+21030V,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21030V,parite-bloc-communal-2025,0,1,0,0,0.0
 21030V,partage-valeur-2023,0,1,0,0,0.0
 21030V,plein-emploi-2023,1,0,0,0,100.0
@@ -21695,6 +21962,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21031W,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21031W,montagne-vivante-2026,0,1,0,0,0.0
 21031W,nationalite-mayotte-2025,1,0,0,0,100.0
+21031W,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21031W,parite-bloc-communal-2025,1,0,0,0,100.0
 21031W,partage-valeur-2023,0,0,1,0,
 21031W,plein-emploi-2023,1,0,0,0,100.0
@@ -21740,6 +22008,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21032X,mineurs-questionnement-genre-senat-2024,1,0,0,0,100.0
 21032X,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21032X,montagne-vivante-2026,0,1,0,0,0.0
+21032X,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21032X,partage-valeur-2023,1,0,0,0,100.0
 21032X,plein-emploi-2023,0,1,0,0,0.0
 21032X,plf-2024,0,0,1,0,
@@ -21789,6 +22058,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21033Y,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21033Y,montagne-vivante-2026,0,1,0,0,0.0
 21033Y,nationalite-mayotte-2025,0,1,0,0,0.0
+21033Y,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21033Y,parite-bloc-communal-2025,1,0,0,0,100.0
 21033Y,partage-valeur-2023,1,0,0,0,100.0
 21033Y,plein-emploi-2023,0,1,0,0,0.0
@@ -21847,6 +22117,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21034A,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21034A,montagne-vivante-2026,0,1,0,0,0.0
 21034A,nationalite-mayotte-2025,1,0,0,0,100.0
+21034A,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21034A,parite-bloc-communal-2025,0,1,0,0,0.0
 21034A,partage-valeur-2023,0,1,0,0,0.0
 21034A,plein-emploi-2023,1,0,0,0,100.0
@@ -21905,6 +22176,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21035B,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21035B,montagne-vivante-2026,0,1,0,0,0.0
 21035B,nationalite-mayotte-2025,1,0,0,0,100.0
+21035B,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21035B,parite-bloc-communal-2025,1,0,0,0,100.0
 21035B,partage-valeur-2023,0,0,1,0,
 21035B,plein-emploi-2023,1,0,0,0,100.0
@@ -21963,6 +22235,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21036C,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21036C,montagne-vivante-2026,0,1,0,0,0.0
 21036C,nationalite-mayotte-2025,0,1,0,0,0.0
+21036C,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21036C,parite-bloc-communal-2025,1,0,0,0,100.0
 21036C,partage-valeur-2023,1,0,0,0,100.0
 21036C,plein-emploi-2023,0,1,0,0,0.0
@@ -22021,6 +22294,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21037D,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21037D,montagne-vivante-2026,1,0,0,0,100.0
 21037D,nationalite-mayotte-2025,1,0,0,0,100.0
+21037D,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21037D,parite-bloc-communal-2025,1,0,0,0,100.0
 21037D,partage-valeur-2023,0,0,1,0,
 21037D,plein-emploi-2023,1,0,0,0,100.0
@@ -22079,6 +22353,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21038E,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21038E,montagne-vivante-2026,0,1,0,0,0.0
 21038E,nationalite-mayotte-2025,0,1,0,0,0.0
+21038E,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21038E,parite-bloc-communal-2025,1,0,0,0,100.0
 21038E,partage-valeur-2023,1,0,0,0,100.0
 21038E,plein-emploi-2023,0,1,0,0,0.0
@@ -22137,6 +22412,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21039F,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21039F,montagne-vivante-2026,0,1,0,0,0.0
 21039F,nationalite-mayotte-2025,0,1,0,0,0.0
+21039F,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21039F,parite-bloc-communal-2025,0,1,0,0,0.0
 21039F,partage-valeur-2023,1,0,0,0,100.0
 21039F,plein-emploi-2023,0,1,0,0,0.0
@@ -22195,6 +22471,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21040X,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21040X,montagne-vivante-2026,0,1,0,0,0.0
 21040X,nationalite-mayotte-2025,1,0,0,0,100.0
+21040X,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21040X,parite-bloc-communal-2025,0,0,1,0,
 21040X,partage-valeur-2023,1,0,0,0,100.0
 21040X,plein-emploi-2023,0,1,0,0,0.0
@@ -22253,6 +22530,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21041Y,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21041Y,montagne-vivante-2026,0,1,0,0,0.0
 21041Y,nationalite-mayotte-2025,1,0,0,0,100.0
+21041Y,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21041Y,parite-bloc-communal-2025,0,0,1,0,
 21041Y,partage-valeur-2023,1,0,0,0,100.0
 21041Y,plein-emploi-2023,0,1,0,0,0.0
@@ -22311,6 +22589,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21042A,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21042A,montagne-vivante-2026,0,1,0,0,0.0
 21042A,nationalite-mayotte-2025,0,1,0,0,0.0
+21042A,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21042A,parite-bloc-communal-2025,1,0,0,0,100.0
 21042A,partage-valeur-2023,1,0,0,0,100.0
 21042A,plein-emploi-2023,0,1,0,0,0.0
@@ -22369,6 +22648,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21043B,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21043B,montagne-vivante-2026,0,1,0,0,0.0
 21043B,nationalite-mayotte-2025,0,1,0,0,0.0
+21043B,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21043B,parite-bloc-communal-2025,0,1,0,0,0.0
 21043B,partage-valeur-2023,1,0,0,0,100.0
 21043B,plein-emploi-2023,0,1,0,0,0.0
@@ -22427,6 +22707,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21044C,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21044C,montagne-vivante-2026,0,1,0,0,0.0
 21044C,nationalite-mayotte-2025,0,1,0,0,0.0
+21044C,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21044C,parite-bloc-communal-2025,1,0,0,0,100.0
 21044C,partage-valeur-2023,1,0,0,0,100.0
 21044C,plein-emploi-2023,0,1,0,0,0.0
@@ -22485,6 +22766,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21045D,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21045D,montagne-vivante-2026,0,1,0,0,0.0
 21045D,nationalite-mayotte-2025,1,0,0,0,100.0
+21045D,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21045D,parite-bloc-communal-2025,1,0,0,0,100.0
 21045D,partage-valeur-2023,0,0,1,0,
 21045D,plein-emploi-2023,1,0,0,0,100.0
@@ -22543,6 +22825,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21046E,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21046E,montagne-vivante-2026,0,1,0,0,0.0
 21046E,nationalite-mayotte-2025,0,1,0,0,0.0
+21046E,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21046E,parite-bloc-communal-2025,0,0,1,0,
 21046E,partage-valeur-2023,1,0,0,0,100.0
 21046E,plein-emploi-2023,0,1,0,0,0.0
@@ -22601,6 +22884,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21047F,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21047F,montagne-vivante-2026,0,1,0,0,0.0
 21047F,nationalite-mayotte-2025,0,1,0,0,0.0
+21047F,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21047F,parite-bloc-communal-2025,0,1,0,0,0.0
 21047F,partage-valeur-2023,1,0,0,0,100.0
 21047F,plein-emploi-2023,0,1,0,0,0.0
@@ -22659,6 +22943,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21048G,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21048G,montagne-vivante-2026,1,0,0,0,100.0
 21048G,nationalite-mayotte-2025,1,0,0,0,100.0
+21048G,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21048G,parite-bloc-communal-2025,1,0,0,0,100.0
 21048G,partage-valeur-2023,0,0,1,0,
 21048G,plein-emploi-2023,1,0,0,0,100.0
@@ -22717,6 +23002,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21049H,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21049H,montagne-vivante-2026,0,1,0,0,0.0
 21049H,nationalite-mayotte-2025,1,0,0,0,100.0
+21049H,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21049H,parite-bloc-communal-2025,0,1,0,0,0.0
 21049H,partage-valeur-2023,0,1,0,0,0.0
 21049H,plein-emploi-2023,1,0,0,0,100.0
@@ -22775,6 +23061,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21050A,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21050A,montagne-vivante-2026,0,1,0,0,0.0
 21050A,nationalite-mayotte-2025,0,0,1,0,
+21050A,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21050A,parite-bloc-communal-2025,1,0,0,0,100.0
 21050A,partage-valeur-2023,1,0,0,0,100.0
 21050A,plein-emploi-2023,0,1,0,0,0.0
@@ -22833,6 +23120,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21051B,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21051B,montagne-vivante-2026,0,1,0,0,0.0
 21051B,nationalite-mayotte-2025,1,0,0,0,100.0
+21051B,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21051B,parite-bloc-communal-2025,1,0,0,0,100.0
 21051B,partage-valeur-2023,0,0,1,0,
 21051B,plein-emploi-2023,1,0,0,0,100.0
@@ -22891,6 +23179,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21052C,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21052C,montagne-vivante-2026,0,1,0,0,0.0
 21052C,nationalite-mayotte-2025,0,1,0,0,0.0
+21052C,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21052C,parite-bloc-communal-2025,0,1,0,0,0.0
 21052C,partage-valeur-2023,1,0,0,0,100.0
 21052C,plein-emploi-2023,0,1,0,0,0.0
@@ -22949,6 +23238,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21053D,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21053D,montagne-vivante-2026,0,1,0,0,0.0
 21053D,nationalite-mayotte-2025,0,0,1,0,
+21053D,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21053D,parite-bloc-communal-2025,1,0,0,0,100.0
 21053D,partage-valeur-2023,1,0,0,0,100.0
 21053D,plein-emploi-2023,0,1,0,0,0.0
@@ -23007,6 +23297,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21054E,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21054E,montagne-vivante-2026,0,1,0,0,0.0
 21054E,nationalite-mayotte-2025,0,1,0,0,0.0
+21054E,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21054E,parite-bloc-communal-2025,0,0,1,0,
 21054E,partage-valeur-2023,1,0,0,0,100.0
 21054E,plein-emploi-2023,0,1,0,0,0.0
@@ -23065,6 +23356,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21055F,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21055F,montagne-vivante-2026,0,1,0,0,0.0
 21055F,nationalite-mayotte-2025,0,1,0,0,0.0
+21055F,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21055F,parite-bloc-communal-2025,0,1,0,0,0.0
 21055F,partage-valeur-2023,1,0,0,0,100.0
 21055F,plein-emploi-2023,0,1,0,0,0.0
@@ -23123,6 +23415,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21056G,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21056G,montagne-vivante-2026,0,1,0,0,0.0
 21056G,nationalite-mayotte-2025,1,0,0,0,100.0
+21056G,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21056G,parite-bloc-communal-2025,1,0,0,0,100.0
 21056G,partage-valeur-2023,0,0,1,0,
 21056G,plein-emploi-2023,1,0,0,0,100.0
@@ -23181,6 +23474,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21057H,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21057H,montagne-vivante-2026,0,1,0,0,0.0
 21057H,nationalite-mayotte-2025,1,0,0,0,100.0
+21057H,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21057H,parite-bloc-communal-2025,1,0,0,0,100.0
 21057H,partage-valeur-2023,0,0,1,0,
 21057H,plein-emploi-2023,1,0,0,0,100.0
@@ -23239,6 +23533,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21058J,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21058J,montagne-vivante-2026,0,1,0,0,0.0
 21058J,nationalite-mayotte-2025,0,1,0,0,0.0
+21058J,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21058J,parite-bloc-communal-2025,0,1,0,0,0.0
 21058J,partage-valeur-2023,1,0,0,0,100.0
 21058J,plein-emploi-2023,0,1,0,0,0.0
@@ -23297,6 +23592,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21059K,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21059K,montagne-vivante-2026,0,1,0,0,0.0
 21059K,nationalite-mayotte-2025,1,0,0,0,100.0
+21059K,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21059K,parite-bloc-communal-2025,1,0,0,0,100.0
 21059K,partage-valeur-2023,0,0,1,0,
 21059K,plein-emploi-2023,1,0,0,0,100.0
@@ -23355,6 +23651,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21060C,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21060C,montagne-vivante-2026,0,1,0,0,0.0
 21060C,nationalite-mayotte-2025,1,0,0,0,100.0
+21060C,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21060C,parite-bloc-communal-2025,1,0,0,0,100.0
 21060C,partage-valeur-2023,0,0,1,0,
 21060C,plein-emploi-2023,1,0,0,0,100.0
@@ -23413,6 +23710,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21061D,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21061D,montagne-vivante-2026,0,1,0,0,0.0
 21061D,nationalite-mayotte-2025,0,1,0,0,0.0
+21061D,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21061D,parite-bloc-communal-2025,0,0,0,1,
 21061D,partage-valeur-2023,1,0,0,0,100.0
 21061D,plein-emploi-2023,0,1,0,0,0.0
@@ -23471,6 +23769,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21062E,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21062E,montagne-vivante-2026,0,1,0,0,0.0
 21062E,nationalite-mayotte-2025,1,0,0,0,100.0
+21062E,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21062E,parite-bloc-communal-2025,1,0,0,0,100.0
 21062E,partage-valeur-2023,0,0,1,0,
 21062E,plein-emploi-2023,1,0,0,0,100.0
@@ -23529,6 +23828,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21063F,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21063F,montagne-vivante-2026,0,1,0,0,0.0
 21063F,nationalite-mayotte-2025,0,1,0,0,0.0
+21063F,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21063F,parite-bloc-communal-2025,0,1,0,0,0.0
 21063F,partage-valeur-2023,1,0,0,0,100.0
 21063F,plein-emploi-2023,0,1,0,0,0.0
@@ -23587,6 +23887,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21064G,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21064G,montagne-vivante-2026,0,1,0,0,0.0
 21064G,nationalite-mayotte-2025,0,0,1,0,
+21064G,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21064G,parite-bloc-communal-2025,0,1,0,0,0.0
 21064G,partage-valeur-2023,1,0,0,0,100.0
 21064G,plein-emploi-2023,0,1,0,0,0.0
@@ -23645,6 +23946,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21065H,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21065H,montagne-vivante-2026,0,1,0,0,0.0
 21065H,nationalite-mayotte-2025,0,1,0,0,0.0
+21065H,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21065H,parite-bloc-communal-2025,0,1,0,0,0.0
 21065H,partage-valeur-2023,1,0,0,0,100.0
 21065H,plein-emploi-2023,0,1,0,0,0.0
@@ -23703,6 +24005,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21066J,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21066J,montagne-vivante-2026,0,1,0,0,0.0
 21066J,nationalite-mayotte-2025,1,0,0,0,100.0
+21066J,nouvelle-caledonie-bougival-2026,0,0,0,1,
 21066J,parite-bloc-communal-2025,1,0,0,0,100.0
 21066J,partage-valeur-2023,1,0,0,0,100.0
 21066J,plein-emploi-2023,0,1,0,0,0.0
@@ -23761,6 +24064,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21067K,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21067K,montagne-vivante-2026,0,1,0,0,0.0
 21067K,nationalite-mayotte-2025,1,0,0,0,100.0
+21067K,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21067K,parite-bloc-communal-2025,1,0,0,0,100.0
 21067K,partage-valeur-2023,0,0,1,0,
 21067K,plein-emploi-2023,1,0,0,0,100.0
@@ -23819,6 +24123,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21068L,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21068L,montagne-vivante-2026,0,1,0,0,0.0
 21068L,nationalite-mayotte-2025,0,1,0,0,0.0
+21068L,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21068L,parite-bloc-communal-2025,1,0,0,0,100.0
 21068L,partage-valeur-2023,1,0,0,0,100.0
 21068L,plein-emploi-2023,0,1,0,0,0.0
@@ -23877,6 +24182,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21069M,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21069M,montagne-vivante-2026,0,0,0,1,
 21069M,nationalite-mayotte-2025,0,0,1,0,
+21069M,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21069M,parite-bloc-communal-2025,0,0,1,0,
 21069M,partage-valeur-2023,0,0,0,1,
 21069M,plein-emploi-2023,0,0,0,1,
@@ -23935,6 +24241,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21070E,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21070E,montagne-vivante-2026,0,1,0,0,0.0
 21070E,nationalite-mayotte-2025,0,1,0,0,0.0
+21070E,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21070E,parite-bloc-communal-2025,0,0,1,0,
 21070E,partage-valeur-2023,1,0,0,0,100.0
 21070E,plein-emploi-2023,0,1,0,0,0.0
@@ -23993,6 +24300,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21071F,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21071F,montagne-vivante-2026,0,1,0,0,0.0
 21071F,nationalite-mayotte-2025,0,1,0,0,0.0
+21071F,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21071F,parite-bloc-communal-2025,0,1,0,0,0.0
 21071F,partage-valeur-2023,1,0,0,0,100.0
 21071F,plein-emploi-2023,0,1,0,0,0.0
@@ -24051,6 +24359,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21072G,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21072G,montagne-vivante-2026,0,1,0,0,0.0
 21072G,nationalite-mayotte-2025,0,1,0,0,0.0
+21072G,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21072G,parite-bloc-communal-2025,0,1,0,0,0.0
 21072G,partage-valeur-2023,1,0,0,0,100.0
 21072G,plein-emploi-2023,0,1,0,0,0.0
@@ -24109,6 +24418,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21073H,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21073H,montagne-vivante-2026,1,0,0,0,100.0
 21073H,nationalite-mayotte-2025,1,0,0,0,100.0
+21073H,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21073H,parite-bloc-communal-2025,1,0,0,0,100.0
 21073H,partage-valeur-2023,0,0,1,0,
 21073H,plein-emploi-2023,1,0,0,0,100.0
@@ -24167,6 +24477,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21074J,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21074J,montagne-vivante-2026,0,0,0,1,
 21074J,nationalite-mayotte-2025,0,0,1,0,
+21074J,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21074J,parite-bloc-communal-2025,0,0,1,0,
 21074J,partage-valeur-2023,0,0,0,1,
 21074J,plein-emploi-2023,0,0,0,1,
@@ -24225,6 +24536,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21075K,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21075K,montagne-vivante-2026,0,1,0,0,0.0
 21075K,nationalite-mayotte-2025,1,0,0,0,100.0
+21075K,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21075K,parite-bloc-communal-2025,0,0,1,0,
 21075K,partage-valeur-2023,0,1,0,0,0.0
 21075K,plein-emploi-2023,1,0,0,0,100.0
@@ -24283,6 +24595,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21076L,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21076L,montagne-vivante-2026,0,1,0,0,0.0
 21076L,nationalite-mayotte-2025,0,1,0,0,0.0
+21076L,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21076L,parite-bloc-communal-2025,1,0,0,0,100.0
 21076L,partage-valeur-2023,1,0,0,0,100.0
 21076L,plein-emploi-2023,0,1,0,0,0.0
@@ -24341,6 +24654,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21077M,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21077M,montagne-vivante-2026,0,1,0,0,0.0
 21077M,nationalite-mayotte-2025,1,0,0,0,100.0
+21077M,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21077M,parite-bloc-communal-2025,1,0,0,0,100.0
 21077M,partage-valeur-2023,0,0,1,0,
 21077M,plein-emploi-2023,1,0,0,0,100.0
@@ -24399,6 +24713,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21078N,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21078N,montagne-vivante-2026,0,1,0,0,0.0
 21078N,nationalite-mayotte-2025,1,0,0,0,100.0
+21078N,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21078N,parite-bloc-communal-2025,1,0,0,0,100.0
 21078N,partage-valeur-2023,1,0,0,0,100.0
 21078N,plein-emploi-2023,0,1,0,0,0.0
@@ -24457,6 +24772,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21079P,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21079P,montagne-vivante-2026,1,0,0,0,100.0
 21079P,nationalite-mayotte-2025,1,0,0,0,100.0
+21079P,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21079P,parite-bloc-communal-2025,1,0,0,0,100.0
 21079P,partage-valeur-2023,0,0,1,0,
 21079P,plein-emploi-2023,1,0,0,0,100.0
@@ -24515,6 +24831,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21080G,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21080G,montagne-vivante-2026,0,1,0,0,0.0
 21080G,nationalite-mayotte-2025,0,1,0,0,0.0
+21080G,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21080G,parite-bloc-communal-2025,0,0,1,0,
 21080G,partage-valeur-2023,1,0,0,0,100.0
 21080G,plein-emploi-2023,0,1,0,0,0.0
@@ -24573,6 +24890,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21081H,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21081H,montagne-vivante-2026,0,1,0,0,0.0
 21081H,nationalite-mayotte-2025,0,1,0,0,0.0
+21081H,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21081H,parite-bloc-communal-2025,1,0,0,0,100.0
 21081H,partage-valeur-2023,1,0,0,0,100.0
 21081H,plein-emploi-2023,0,1,0,0,0.0
@@ -24631,6 +24949,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21082J,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21082J,montagne-vivante-2026,0,1,0,0,0.0
 21082J,nationalite-mayotte-2025,1,0,0,0,100.0
+21082J,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21082J,parite-bloc-communal-2025,1,0,0,0,100.0
 21082J,partage-valeur-2023,0,0,1,0,
 21082J,plein-emploi-2023,1,0,0,0,100.0
@@ -24689,6 +25008,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21083K,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21083K,montagne-vivante-2026,0,1,0,0,0.0
 21083K,nationalite-mayotte-2025,0,1,0,0,0.0
+21083K,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21083K,parite-bloc-communal-2025,0,1,0,0,0.0
 21083K,partage-valeur-2023,1,0,0,0,100.0
 21083K,plein-emploi-2023,0,1,0,0,0.0
@@ -24747,6 +25067,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21084L,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21084L,montagne-vivante-2026,0,1,0,0,0.0
 21084L,nationalite-mayotte-2025,1,0,0,0,100.0
+21084L,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21084L,parite-bloc-communal-2025,0,1,0,0,0.0
 21084L,partage-valeur-2023,0,1,0,0,0.0
 21084L,plein-emploi-2023,1,0,0,0,100.0
@@ -24805,6 +25126,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21085M,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21085M,montagne-vivante-2026,0,0,0,1,
 21085M,nationalite-mayotte-2025,0,0,1,0,
+21085M,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21085M,parite-bloc-communal-2025,0,0,1,0,
 21085M,partage-valeur-2023,0,0,0,1,
 21085M,plein-emploi-2023,0,0,0,1,
@@ -24863,6 +25185,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21086N,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21086N,montagne-vivante-2026,0,1,0,0,0.0
 21086N,nationalite-mayotte-2025,0,1,0,0,0.0
+21086N,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21086N,parite-bloc-communal-2025,0,0,1,0,
 21086N,partage-valeur-2023,1,0,0,0,100.0
 21086N,plein-emploi-2023,0,1,0,0,0.0
@@ -24921,6 +25244,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21087P,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21087P,montagne-vivante-2026,0,1,0,0,0.0
 21087P,nationalite-mayotte-2025,0,1,0,0,0.0
+21087P,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21087P,parite-bloc-communal-2025,0,0,1,0,
 21087P,partage-valeur-2023,1,0,0,0,100.0
 21087P,plein-emploi-2023,0,1,0,0,0.0
@@ -24979,6 +25303,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21088Q,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21088Q,montagne-vivante-2026,0,1,0,0,0.0
 21088Q,nationalite-mayotte-2025,1,0,0,0,100.0
+21088Q,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21088Q,parite-bloc-communal-2025,0,1,0,0,0.0
 21088Q,partage-valeur-2023,0,1,0,0,0.0
 21088Q,plein-emploi-2023,1,0,0,0,100.0
@@ -25037,6 +25362,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21089R,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21089R,montagne-vivante-2026,0,1,0,0,0.0
 21089R,nationalite-mayotte-2025,1,0,0,0,100.0
+21089R,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21089R,parite-bloc-communal-2025,1,0,0,0,100.0
 21089R,partage-valeur-2023,0,0,1,0,
 21089R,plein-emploi-2023,1,0,0,0,100.0
@@ -25094,6 +25420,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21090J,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21090J,montagne-vivante-2026,0,1,0,0,0.0
 21090J,nationalite-mayotte-2025,0,1,0,0,0.0
+21090J,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21090J,parite-bloc-communal-2025,1,0,0,0,100.0
 21090J,partage-valeur-2023,1,0,0,0,100.0
 21090J,plein-emploi-2023,0,1,0,0,0.0
@@ -25152,6 +25479,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21091K,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21091K,montagne-vivante-2026,0,1,0,0,0.0
 21091K,nationalite-mayotte-2025,0,1,0,0,0.0
+21091K,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21091K,parite-bloc-communal-2025,1,0,0,0,100.0
 21091K,partage-valeur-2023,1,0,0,0,100.0
 21091K,plein-emploi-2023,0,1,0,0,0.0
@@ -25210,6 +25538,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21092L,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21092L,montagne-vivante-2026,1,0,0,0,100.0
 21092L,nationalite-mayotte-2025,1,0,0,0,100.0
+21092L,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21092L,parite-bloc-communal-2025,1,0,0,0,100.0
 21092L,partage-valeur-2023,0,0,1,0,
 21092L,plein-emploi-2023,1,0,0,0,100.0
@@ -25268,6 +25597,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21093M,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21093M,montagne-vivante-2026,1,0,0,0,100.0
 21093M,nationalite-mayotte-2025,1,0,0,0,100.0
+21093M,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21093M,parite-bloc-communal-2025,1,0,0,0,100.0
 21093M,partage-valeur-2023,0,0,1,0,
 21093M,plein-emploi-2023,1,0,0,0,100.0
@@ -25326,6 +25656,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21094N,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21094N,montagne-vivante-2026,1,0,0,0,100.0
 21094N,nationalite-mayotte-2025,1,0,0,0,100.0
+21094N,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21094N,parite-bloc-communal-2025,1,0,0,0,100.0
 21094N,partage-valeur-2023,0,0,1,0,
 21094N,plein-emploi-2023,1,0,0,0,100.0
@@ -25384,6 +25715,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21095P,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21095P,montagne-vivante-2026,0,1,0,0,0.0
 21095P,nationalite-mayotte-2025,0,1,0,0,0.0
+21095P,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21095P,parite-bloc-communal-2025,0,1,0,0,0.0
 21095P,partage-valeur-2023,1,0,0,0,100.0
 21095P,plein-emploi-2023,0,1,0,0,0.0
@@ -25442,6 +25774,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21096Q,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21096Q,montagne-vivante-2026,0,1,0,0,0.0
 21096Q,nationalite-mayotte-2025,0,1,0,0,0.0
+21096Q,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21096Q,parite-bloc-communal-2025,1,0,0,0,100.0
 21096Q,partage-valeur-2023,1,0,0,0,100.0
 21096Q,plein-emploi-2023,0,1,0,0,0.0
@@ -25500,6 +25833,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21097R,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21097R,montagne-vivante-2026,0,1,0,0,0.0
 21097R,nationalite-mayotte-2025,0,1,0,0,0.0
+21097R,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21097R,parite-bloc-communal-2025,1,0,0,0,100.0
 21097R,partage-valeur-2023,1,0,0,0,100.0
 21097R,plein-emploi-2023,0,1,0,0,0.0
@@ -25552,6 +25886,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21125C,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21125C,montagne-vivante-2026,0,1,0,0,0.0
 21125C,nationalite-mayotte-2025,0,1,0,0,0.0
+21125C,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21125C,parite-bloc-communal-2025,0,1,0,0,0.0
 21125C,plf-2025,0,1,0,0,0.0
 21125C,plf-2026,0,1,0,0,0.0
@@ -25599,6 +25934,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21404G,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21404G,montagne-vivante-2026,0,1,0,0,0.0
 21404G,nationalite-mayotte-2025,1,0,0,0,100.0
+21404G,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21404G,parite-bloc-communal-2025,1,0,0,0,100.0
 21404G,plf-2025,1,0,0,0,100.0
 21404G,plf-2026,0,0,1,0,
@@ -25641,6 +25977,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21415K,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21415K,montagne-vivante-2026,0,1,0,0,0.0
 21415K,nationalite-mayotte-2025,0,1,0,0,0.0
+21415K,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21415K,parite-bloc-communal-2025,1,0,0,0,100.0
 21415K,plf-2025,0,1,0,0,0.0
 21415K,plf-2026,0,1,0,0,0.0
@@ -25729,6 +26066,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21421H,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21421H,montagne-vivante-2026,0,1,0,0,0.0
 21421H,nationalite-mayotte-2025,0,0,1,0,
+21421H,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21421H,parite-bloc-communal-2025,1,0,0,0,100.0
 21421H,plf-2025,0,1,0,0,0.0
 21421H,plf-2026,0,1,0,0,0.0
@@ -25837,6 +26175,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21460Q,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21460Q,montagne-vivante-2026,0,1,0,0,0.0
 21460Q,nationalite-mayotte-2025,1,0,0,0,100.0
+21460Q,nouvelle-caledonie-bougival-2026,0,1,0,0,0.0
 21460Q,parite-bloc-communal-2025,0,1,0,0,0.0
 21460Q,plf-2025,1,0,0,0,100.0
 21460Q,plf-2026,1,0,0,0,100.0
@@ -25891,6 +26230,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21470S,loi-orientation-agricole-2025,0,1,0,0,0.0
 21470S,mariage-sejour-irregulier-2025,0,1,0,0,0.0
 21470S,nationalite-mayotte-2025,0,1,0,0,0.0
+21470S,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21470S,parite-bloc-communal-2025,0,1,0,0,0.0
 21470S,plf-2025,0,1,0,0,0.0
 21470S,plf-2026,0,1,0,0,0.0
@@ -25925,6 +26265,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21486B,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21486B,montagne-vivante-2026,0,1,0,0,0.0
 21486B,nationalite-mayotte-2025,0,1,0,0,0.0
+21486B,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21486B,parite-bloc-communal-2025,1,0,0,0,100.0
 21486B,plf-2026,0,1,0,0,0.0
 21486B,plfss-2026,0,1,0,0,0.0
@@ -25952,6 +26293,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21510H,justice-criminelle-2026,0,1,0,0,0.0
 21510H,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21510H,montagne-vivante-2026,0,1,0,0,0.0
+21510H,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21510H,plf-2026,0,1,0,0,0.0
 21510H,plfss-2026,0,1,0,0,0.0
 21510H,polices-municipales-2026,0,1,0,0,0.0
@@ -25972,6 +26314,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21512K,justice-criminelle-2026,1,0,0,0,100.0
 21512K,mineurs-reseaux-sociaux-2026,0,0,1,0,
 21512K,montagne-vivante-2026,0,1,0,0,0.0
+21512K,nouvelle-caledonie-bougival-2026,0,0,1,0,
 21512K,plf-2026,1,0,0,0,100.0
 21512K,plfss-2026,1,0,0,0,100.0
 21512K,polices-municipales-2026,0,1,0,0,0.0
@@ -25992,6 +26335,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21514M,justice-criminelle-2026,0,1,0,0,0.0
 21514M,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21514M,montagne-vivante-2026,0,1,0,0,0.0
+21514M,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21514M,plf-2026,0,1,0,0,0.0
 21514M,plfss-2026,0,1,0,0,0.0
 21514M,polices-municipales-2026,0,1,0,0,0.0
@@ -26012,6 +26356,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 21534R,justice-criminelle-2026,0,1,0,0,0.0
 21534R,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 21534R,montagne-vivante-2026,0,1,0,0,0.0
+21534R,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 21534R,plf-2026,0,1,0,0,0.0
 21534R,plfss-2026,0,1,0,0,0.0
 21534R,polices-municipales-2026,0,1,0,0,0.0
@@ -26186,6 +26531,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 86034E,montagne-vivante-2026,0,0,0,1,
 86034E,nationalite-mayotte-2025,0,0,0,1,
 86034E,navigation-aerienne-greve-2023,0,0,0,1,
+86034E,nouvelle-caledonie-bougival-2026,0,0,0,1,
 86034E,nucleaire-acceleration-2023,0,0,0,1,
 86034E,parite-bloc-communal-2025,0,0,0,1,
 86034E,partage-valeur-2023,0,0,0,1,
@@ -26268,6 +26614,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 95041E,montagne-vivante-2026,0,1,0,0,0.0
 95041E,nationalite-mayotte-2025,0,1,0,0,0.0
 95041E,navigation-aerienne-greve-2023,0,1,0,0,0.0
+95041E,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 95041E,nucleaire-acceleration-2023,0,1,0,0,0.0
 95041E,parite-bloc-communal-2025,1,0,0,0,100.0
 95041E,partage-valeur-2023,1,0,0,0,100.0
@@ -26409,6 +26756,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 99004R,montagne-vivante-2026,0,1,0,0,0.0
 99004R,nationalite-mayotte-2025,0,1,0,0,0.0
 99004R,navigation-aerienne-greve-2023,0,1,0,0,0.0
+99004R,nouvelle-caledonie-bougival-2026,1,0,0,0,100.0
 99004R,nucleaire-acceleration-2023,0,1,0,0,0.0
 99004R,parite-bloc-communal-2025,1,0,0,0,100.0
 99004R,partage-valeur-2023,1,0,0,0,100.0
