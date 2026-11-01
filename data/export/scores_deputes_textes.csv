@@ -809,6 +809,7 @@ PA2940,deserts-medicaux-garot,2,0,0,0,100.0
 PA2940,duplomb-2025,1,0,0,0,100.0
 PA2940,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA2940,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA2940,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA2940,justice-criminelle-2026,2,0,2,0,100.0
 PA2940,justice-mineurs,4,0,0,0,100.0
 PA2940,loi-orientation-agricole-2025,1,0,0,0,100.0
@@ -1357,6 +1358,7 @@ PA335054,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA335054,duplomb-2025,1,0,0,0,100.0
 PA335054,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA335054,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA335054,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA335054,immigration-2024,1,0,0,0,100.0
 PA335054,industrie-verte-2023,0,0,1,0,
 PA335054,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -1416,6 +1418,7 @@ PA335612,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA335612,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA335612,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA335612,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA335612,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA335612,immigration-2024,1,0,0,0,100.0
 PA335612,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
 PA335612,ivg-constitution-2024,1,0,0,0,100.0
@@ -2594,6 +2597,7 @@ PA607553,energies-renouvelables-2023,0,1,0,0,0.0
 PA607553,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA607553,familles-enfants-malades-2023,1,0,0,0,100.0
 PA607553,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA607553,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA607553,immigration-2024,1,0,0,0,100.0
 PA607553,industrie-verte-2023,0,0,1,0,
 PA607553,ineligibilite-violences-aggravees-2023,0,0,1,0,
@@ -2733,6 +2737,7 @@ PA608172,execution-peines-ferme-2025,1,0,0,0,100.0
 PA608172,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA608172,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA608172,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA608172,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA608172,immigration-2024,1,0,0,0,100.0
 PA608172,industrie-verte-2023,0,0,1,0,
 PA608172,ivg-constitution-2024,1,0,0,0,100.0
@@ -3008,6 +3013,7 @@ PA610002,duplomb-2025,1,0,0,0,100.0
 PA610002,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA610002,fin-regimes-exception-covid-2022,0,0,1,0,
 PA610002,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA610002,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA610002,immigration-2024,1,0,0,0,100.0
 PA610002,industrie-verte-2023,1,0,0,0,100.0
 PA610002,ivg-constitution-2024,1,0,0,0,100.0
@@ -3060,6 +3066,7 @@ PA610654,familles-enfants-malades-2023,1,0,0,0,100.0
 PA610654,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA610654,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA610654,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA610654,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA610654,immigration-2024,1,0,0,0,100.0
 PA610654,industrie-verte-2023,1,0,0,0,100.0
 PA610654,ivg-constitution-2024,1,0,0,0,100.0
@@ -3110,6 +3117,7 @@ PA610968,duplomb-2025,1,0,0,0,100.0
 PA610968,execution-peines-ferme-2025,1,0,0,0,100.0
 PA610968,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA610968,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA610968,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA610968,jo-2030,4,0,0,0,100.0
 PA610968,justice-criminelle-2026,3,1,0,0,75.0
 PA610968,justice-mineurs,5,0,0,0,100.0
@@ -3713,6 +3721,7 @@ PA643184,duplomb-2025,0,1,0,0,0.0
 PA643184,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA643184,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA643184,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA643184,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA643184,immigration-2024,0,1,0,0,0.0
 PA643184,industrie-verte-2023,0,1,0,0,0.0
 PA643184,ingerences-etrangeres-2024,0,1,0,0,0.0
@@ -4108,6 +4117,7 @@ PA718674,derives-sectaires-2024,0,1,0,0,0.0
 PA718674,ecriture-inclusive-ppl-2023,1,0,0,0,100.0
 PA718674,engrillagement-2023,1,0,0,0,100.0
 PA718674,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA718674,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA718674,immigration-2024,0,1,0,0,0.0
 PA718674,industrie-verte-2023,0,1,0,0,0.0
 PA718674,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
@@ -4335,6 +4345,7 @@ PA718884,delit-sejour-irregulier-ppl-2025,0,1,0,0,0.0
 PA718884,duplomb-2025,0,1,0,0,0.0
 PA718884,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA718884,fraudes-sociales-fiscales-2026,0,4,0,0,0.0
+PA718884,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA718884,immigration-2024,0,1,0,0,0.0
 PA718884,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
 PA718884,ivg-constitution-2024,1,0,0,0,100.0
@@ -5752,6 +5763,7 @@ PA719550,familles-enfants-malades-2023,1,0,0,0,100.0
 PA719550,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA719550,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA719550,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA719550,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA719550,immigration-2024,0,1,0,0,0.0
 PA719550,ivg-constitution-2024,1,0,0,0,100.0
 PA719550,ivg-constitution-ppl-2022,1,0,0,0,100.0
@@ -5819,6 +5831,7 @@ PA719558,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA719558,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA719558,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA719558,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA719558,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA719558,immigration-2024,1,0,0,0,100.0
 PA719558,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
 PA719558,ingerences-etrangeres-2024,0,1,0,0,0.0
@@ -6017,6 +6030,7 @@ PA719640,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA719640,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA719640,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA719640,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA719640,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA719640,immigration-2024,0,1,0,0,0.0
 PA719640,industrie-verte-2023,0,1,0,0,0.0
 PA719640,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -7413,6 +7427,7 @@ PA720230,execution-provisoire-ineligibilite-ppl-2025,0,0,1,0,
 PA720230,familles-enfants-malades-2023,1,0,0,0,100.0
 PA720230,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA720230,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA720230,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA720230,immigration-2024,0,1,0,0,0.0
 PA720230,industrie-verte-2023,0,1,0,0,0.0
 PA720230,ingerences-etrangeres-2024,0,1,0,0,0.0
@@ -7547,6 +7562,7 @@ PA720334,energies-renouvelables-2023,0,1,0,0,0.0
 PA720334,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA720334,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA720334,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA720334,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA720334,immigration-2024,1,0,0,0,100.0
 PA720334,industrie-verte-2023,0,1,0,0,0.0
 PA720334,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -8688,6 +8704,7 @@ PA720838,familles-enfants-malades-2023,1,0,0,0,100.0
 PA720838,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA720838,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA720838,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA720838,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA720838,immigration-2024,1,0,0,0,100.0
 PA720838,industrie-verte-2023,0,0,1,0,
 PA720838,ivg-constitution-2024,1,0,0,0,100.0
@@ -8831,6 +8848,7 @@ PA720892,execution-peines-ferme-2025,2,0,0,0,100.0
 PA720892,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA720892,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA720892,fraudes-sociales-fiscales-2026,3,0,0,0,100.0
+PA720892,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA720892,immigration-2024,1,0,0,0,100.0
 PA720892,industrie-verte-2023,1,0,0,0,100.0
 PA720892,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -9074,6 +9092,7 @@ PA720992,definition-viol-2025,1,0,0,0,100.0
 PA720992,duplomb-2025,1,0,0,0,100.0
 PA720992,familles-enfants-malades-2023,1,0,0,0,100.0
 PA720992,fin-regimes-exception-covid-2022,1,0,0,0,100.0
+PA720992,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA720992,ivg-constitution-2024,1,0,0,0,100.0
 PA720992,jo-2030,0,1,0,0,0.0
 PA720992,justice-mineurs,1,0,0,0,100.0
@@ -9152,6 +9171,7 @@ PA721024,energies-renouvelables-2023,0,1,0,0,0.0
 PA721024,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA721024,familles-enfants-malades-2023,0,1,0,0,0.0
 PA721024,fin-regimes-exception-covid-2022,0,1,0,0,0.0
+PA721024,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA721024,immigration-2024,0,1,0,0,0.0
 PA721024,industrie-verte-2023,0,1,0,0,0.0
 PA721024,ivg-constitution-2024,1,0,0,0,100.0
@@ -9648,6 +9668,7 @@ PA721270,execution-peines-ferme-2025,2,0,0,0,100.0
 PA721270,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA721270,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA721270,fraudes-sociales-fiscales-2026,2,0,0,0,100.0
+PA721270,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA721270,immigration-2024,1,0,0,0,100.0
 PA721270,ivg-constitution-2024,1,0,0,0,100.0
 PA721270,ivg-constitution-ppl-2022,1,0,0,0,100.0
@@ -10325,6 +10346,7 @@ PA721632,ecriture-inclusive-ppl-2023,1,0,0,0,100.0
 PA721632,engrillagement-2023,1,0,0,0,100.0
 PA721632,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA721632,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA721632,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA721632,immigration-2024,0,1,0,0,0.0
 PA721632,industrie-verte-2023,0,1,0,0,0.0
 PA721632,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
@@ -10512,6 +10534,7 @@ PA721764,definition-viol-2025,1,0,0,0,100.0
 PA721764,delit-sejour-irregulier-ppl-2025,1,0,0,0,100.0
 PA721764,duplomb-2025,0,1,0,0,0.0
 PA721764,fraudes-sociales-fiscales-2026,0,2,0,0,0.0
+PA721764,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA721764,jo-2030,0,1,0,0,0.0
 PA721764,justice-criminelle-2026,0,4,0,0,0.0
 PA721764,justice-mineurs,0,2,0,0,0.0
@@ -10643,6 +10666,7 @@ PA721844,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA721844,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA721844,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA721844,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA721844,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA721844,immigration-2024,0,1,0,0,0.0
 PA721844,industrie-verte-2023,0,1,0,0,0.0
 PA721844,ingerences-etrangeres-2024,0,1,0,0,0.0
@@ -10712,6 +10736,7 @@ PA721852,energies-renouvelables-2023,0,1,0,0,0.0
 PA721852,execution-peines-ferme-2025,0,1,1,0,0.0
 PA721852,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA721852,fraudes-sociales-fiscales-2026,0,2,0,0,0.0
+PA721852,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA721852,immigration-2024,0,1,0,0,0.0
 PA721852,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA721852,jo-2024,0,1,0,0,0.0
@@ -10843,6 +10868,7 @@ PA721908,execution-peines-ferme-2025,0,0,0,2,
 PA721908,execution-provisoire-ineligibilite-ppl-2025,0,0,0,1,
 PA721908,financement-audiovisuel-public-lo-2024,0,0,0,1,
 PA721908,fraudes-sociales-fiscales-2026,0,0,0,5,
+PA721908,hydrocarbures-outre-mer-2026,0,0,0,1,
 PA721908,immigration-2024,0,1,0,0,0.0
 PA721908,ivg-constitution-2024,1,0,0,0,100.0
 PA721908,jo-2030,0,0,0,4,
@@ -10901,6 +10927,7 @@ PA721916,familles-enfants-malades-2023,1,0,0,0,100.0
 PA721916,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA721916,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA721916,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA721916,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA721916,immigration-2024,0,1,0,0,0.0
 PA721916,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
 PA721916,ingerences-etrangeres-2024,0,1,0,0,0.0
@@ -10960,6 +10987,7 @@ PA721932,femmes-fonction-publique-2023,0,1,0,0,0.0
 PA721932,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA721932,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA721932,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA721932,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA721932,immigration-2024,0,1,0,0,0.0
 PA721932,industrie-verte-2023,0,1,0,0,0.0
 PA721932,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -11376,6 +11404,7 @@ PA722134,duplomb-2025,1,0,0,0,100.0
 PA722134,ecriture-inclusive-ppl-2023,1,0,0,0,100.0
 PA722134,energies-renouvelables-2023,0,1,0,0,0.0
 PA722134,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA722134,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA722134,immigration-2024,0,1,0,0,0.0
 PA722134,ivg-constitution-2024,1,0,0,0,100.0
 PA722134,jo-2030,0,4,0,0,0.0
@@ -11583,6 +11612,7 @@ PA722190,duplomb-2025,0,1,0,0,0.0
 PA722190,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA722190,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA722190,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA722190,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA722190,justice-criminelle-2026,0,1,0,0,0.0
 PA722190,justice-mineurs,1,4,0,0,12.5
 PA722190,loi-orientation-agricole-2025,0,1,0,0,0.0
@@ -11933,6 +11963,7 @@ PA722374,deserts-medicaux-garot,0,1,0,0,0.0
 PA722374,duplomb-2025,1,0,0,0,100.0
 PA722374,energies-renouvelables-2023,0,1,0,0,0.0
 PA722374,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA722374,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA722374,immigration-2024,0,1,0,0,0.0
 PA722374,industrie-verte-2023,0,1,0,0,0.0
 PA722374,ingerences-etrangeres-2024,0,1,0,0,0.0
@@ -12370,6 +12401,7 @@ PA774962,familles-enfants-malades-2023,1,0,0,0,100.0
 PA774962,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA774962,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA774962,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA774962,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA774962,immigration-2024,1,0,0,0,100.0
 PA774962,industrie-verte-2023,0,0,1,0,
 PA774962,ingerences-etrangeres-2024,1,0,0,0,100.0
@@ -12756,6 +12788,7 @@ PA793134,duplomb-2025,0,1,0,0,0.0
 PA793134,ecriture-inclusive-ppl-2023,0,1,0,0,0.0
 PA793134,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA793134,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA793134,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA793134,immigration-2024,0,1,0,0,0.0
 PA793134,industrie-verte-2023,0,1,0,0,0.0
 PA793134,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -12820,6 +12853,7 @@ PA793146,femmes-fonction-publique-2023,0,1,0,0,0.0
 PA793146,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA793146,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA793146,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA793146,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA793146,immigration-2024,0,1,0,0,0.0
 PA793146,industrie-verte-2023,0,1,0,0,0.0
 PA793146,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -12882,6 +12916,7 @@ PA793158,duplomb-2025,0,1,0,0,0.0
 PA793158,ecriture-inclusive-ppl-2023,0,1,0,0,0.0
 PA793158,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA793158,fin-regimes-exception-covid-2022,1,0,0,0,100.0
+PA793158,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA793158,immigration-2024,0,1,0,0,0.0
 PA793158,ivg-constitution-2024,1,0,0,0,100.0
 PA793158,ivg-constitution-ppl-2022,1,0,0,0,100.0
@@ -13048,6 +13083,7 @@ PA793182,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA793182,femmes-fonction-publique-2023,0,1,0,0,0.0
 PA793182,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA793182,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA793182,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA793182,immigration-2024,0,1,0,0,0.0
 PA793182,industrie-verte-2023,0,1,0,0,0.0
 PA793182,ivg-constitution-2024,0,0,1,0,
@@ -13304,6 +13340,7 @@ PA793230,ecriture-inclusive-ppl-2023,0,1,0,0,0.0
 PA793230,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA793230,femmes-fonction-publique-2023,0,1,0,0,0.0
 PA793230,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA793230,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA793230,immigration-2024,0,1,0,0,0.0
 PA793230,industrie-verte-2023,0,1,0,0,0.0
 PA793230,ivg-constitution-ppl-2022,0,1,0,0,0.0
@@ -13538,6 +13575,7 @@ PA793262,deserts-medicaux-garot,1,0,0,0,100.0
 PA793262,duplomb-2025,1,0,0,0,100.0
 PA793262,familles-enfants-malades-2023,1,0,0,0,100.0
 PA793262,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA793262,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA793262,immigration-2024,1,0,0,0,100.0
 PA793262,industrie-verte-2023,1,0,0,0,100.0
 PA793262,ivg-constitution-2024,1,0,0,0,100.0
@@ -13611,6 +13649,7 @@ PA793270,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA793270,familles-enfants-malades-2023,1,0,0,0,100.0
 PA793270,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA793270,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA793270,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA793270,immigration-2024,0,1,0,0,0.0
 PA793270,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
 PA793270,ivg-constitution-2024,1,0,0,0,100.0
@@ -13856,6 +13895,7 @@ PA793322,delit-sejour-irregulier-ppl-2025,0,1,0,0,0.0
 PA793322,duplomb-2025,0,1,0,0,0.0
 PA793322,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA793322,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA793322,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA793322,immigration-2024,0,1,0,0,0.0
 PA793322,ivg-constitution-2024,0,1,0,0,0.0
 PA793322,jo-2024,0,1,0,0,0.0
@@ -13925,6 +13965,7 @@ PA793334,aide-a-mourir,0,1,0,0,0.0
 PA793334,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
 PA793334,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
 PA793334,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA793334,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA793334,justice-criminelle-2026,0,1,0,0,0.0
 PA793334,mineurs-reseaux-sociaux-2026,0,0,1,0,
 PA793334,montagne-vivante-2026,0,1,0,0,0.0
@@ -14426,6 +14467,7 @@ PA793444,ecriture-inclusive-ppl-2023,1,0,0,0,100.0
 PA793444,execution-peines-ferme-2025,1,0,0,0,100.0
 PA793444,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA793444,fin-regimes-exception-covid-2022,1,0,0,0,100.0
+PA793444,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA793444,immigration-2024,1,0,0,0,100.0
 PA793444,ivg-constitution-2024,1,0,0,0,100.0
 PA793444,ivg-constitution-ppl-2022,1,0,0,0,100.0
@@ -15021,6 +15063,7 @@ PA793592,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA793592,familles-enfants-malades-2023,1,0,0,0,100.0
 PA793592,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA793592,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA793592,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA793592,immigration-2024,0,1,0,0,0.0
 PA793592,industrie-verte-2023,0,1,0,0,0.0
 PA793592,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -15338,6 +15381,7 @@ PA793656,familles-enfants-malades-2023,1,0,0,0,100.0
 PA793656,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA793656,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA793656,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA793656,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA793656,immigration-2024,0,1,0,0,0.0
 PA793656,industrie-verte-2023,0,1,0,0,0.0
 PA793656,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -15663,6 +15707,7 @@ PA793708,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA793708,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA793708,fin-regimes-exception-covid-2022,0,0,1,0,
 PA793708,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA793708,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA793708,immigration-2024,1,0,0,0,100.0
 PA793708,industrie-verte-2023,1,0,0,0,100.0
 PA793708,ineligibilite-violences-aggravees-2023,0,0,1,0,
@@ -16233,6 +16278,7 @@ PA793832,familles-enfants-malades-2023,1,0,0,0,100.0
 PA793832,femmes-fonction-publique-2023,0,1,0,0,0.0
 PA793832,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA793832,financement-audiovisuel-public-lo-2024,0,0,1,0,
+PA793832,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA793832,immigration-2024,0,1,0,0,0.0
 PA793832,industrie-verte-2023,0,1,0,0,0.0
 PA793832,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -16415,6 +16461,7 @@ PA793872,ecriture-inclusive-ppl-2023,1,0,0,0,100.0
 PA793872,energies-renouvelables-2023,1,0,0,0,100.0
 PA793872,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA793872,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA793872,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA793872,immigration-2024,1,0,0,0,100.0
 PA793872,industrie-verte-2023,1,0,0,0,100.0
 PA793872,ivg-constitution-2024,1,0,0,0,100.0
@@ -16689,6 +16736,7 @@ PA793928,familles-enfants-malades-2023,1,0,0,0,100.0
 PA793928,femmes-fonction-publique-2023,0,1,0,0,0.0
 PA793928,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA793928,fraudes-sociales-fiscales-2026,0,2,0,0,0.0
+PA793928,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA793928,immigration-2024,0,1,0,0,0.0
 PA793928,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
 PA793928,ingerences-etrangeres-2024,0,1,0,0,0.0
@@ -16808,6 +16856,7 @@ PA793948,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA793948,duplomb-2025,1,0,0,0,100.0
 PA793948,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA793948,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA793948,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA793948,immigration-2024,1,0,0,0,100.0
 PA793948,industrie-verte-2023,1,0,0,0,100.0
 PA793948,ineligibilite-violences-aggravees-2023,0,0,1,0,
@@ -16889,6 +16938,7 @@ PA793980,energies-renouvelables-2023,0,0,1,0,
 PA793980,engrillagement-2023,0,0,1,0,
 PA793980,execution-peines-ferme-2025,1,0,0,0,100.0
 PA793980,fin-regimes-exception-covid-2022,0,0,1,0,
+PA793980,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA793980,immigration-2024,1,0,0,0,100.0
 PA793980,industrie-verte-2023,1,0,0,0,100.0
 PA793980,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -17016,6 +17066,7 @@ PA794008,ecriture-inclusive-ppl-2023,1,0,0,0,100.0
 PA794008,energies-renouvelables-2023,0,0,1,0,
 PA794008,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA794008,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA794008,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA794008,immigration-2024,1,0,0,0,100.0
 PA794008,industrie-verte-2023,1,0,0,0,100.0
 PA794008,ineligibilite-violences-aggravees-2023,0,0,1,0,
@@ -17316,6 +17367,7 @@ PA794082,execution-peines-ferme-2025,1,0,0,0,100.0
 PA794082,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA794082,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA794082,fraudes-sociales-fiscales-2026,2,0,0,0,100.0
+PA794082,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA794082,immigration-2024,1,0,0,0,100.0
 PA794082,industrie-verte-2023,1,0,0,0,100.0
 PA794082,ivg-constitution-2024,1,0,0,0,100.0
@@ -17381,6 +17433,7 @@ PA794094,familles-enfants-malades-2023,1,0,0,0,100.0
 PA794094,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA794094,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA794094,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA794094,hydrocarbures-outre-mer-2026,0,0,1,0,
 PA794094,immigration-2024,1,0,0,0,100.0
 PA794094,industrie-verte-2023,0,0,1,0,
 PA794094,ivg-constitution-2024,1,0,0,0,100.0
@@ -17663,6 +17716,7 @@ PA794138,familles-enfants-malades-2023,1,0,0,0,100.0
 PA794138,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA794138,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA794138,fraudes-sociales-fiscales-2026,2,0,0,0,100.0
+PA794138,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA794138,immigration-2024,1,0,0,0,100.0
 PA794138,industrie-verte-2023,1,0,0,0,100.0
 PA794138,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -17733,6 +17787,7 @@ PA794146,execution-peines-ferme-2025,2,0,0,0,100.0
 PA794146,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA794146,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA794146,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA794146,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA794146,immigration-2024,1,0,0,0,100.0
 PA794146,ineligibilite-violences-aggravees-2023,0,0,1,0,
 PA794146,ivg-constitution-2024,1,0,0,0,100.0
@@ -17789,6 +17844,7 @@ PA794154,duplomb-2025,1,0,0,0,100.0
 PA794154,ecriture-inclusive-ppl-2023,1,0,0,0,100.0
 PA794154,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA794154,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA794154,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA794154,immigration-2024,1,0,0,0,100.0
 PA794154,ineligibilite-violences-aggravees-2023,0,0,1,0,
 PA794154,ivg-constitution-2024,1,0,0,0,100.0
@@ -17850,6 +17906,7 @@ PA794166,delit-sejour-irregulier-ppl-2025,1,0,0,0,100.0
 PA794166,duplomb-2025,1,0,0,0,100.0
 PA794166,ecriture-inclusive-ppl-2023,1,0,0,0,100.0
 PA794166,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA794166,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA794166,immigration-2024,1,0,0,0,100.0
 PA794166,industrie-verte-2023,1,0,0,0,100.0
 PA794166,ivg-constitution-2024,1,0,0,0,100.0
@@ -18030,6 +18087,7 @@ PA794206,energies-renouvelables-2023,0,1,0,0,0.0
 PA794206,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA794206,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA794206,fraudes-sociales-fiscales-2026,0,4,0,0,0.0
+PA794206,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA794206,immigration-2024,0,1,0,0,0.0
 PA794206,industrie-verte-2023,0,1,0,0,0.0
 PA794206,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
@@ -18353,6 +18411,7 @@ PA794322,familles-enfants-malades-2023,1,0,0,0,100.0
 PA794322,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA794322,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA794322,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA794322,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA794322,immigration-2024,0,1,0,0,0.0
 PA794322,industrie-verte-2023,0,1,0,0,0.0
 PA794322,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -18417,6 +18476,7 @@ PA794330,familles-enfants-malades-2023,1,0,0,0,100.0
 PA794330,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA794330,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA794330,fraudes-sociales-fiscales-2026,0,4,0,0,0.0
+PA794330,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA794330,immigration-2024,0,1,0,0,0.0
 PA794330,industrie-verte-2023,0,1,0,0,0.0
 PA794330,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
@@ -18600,6 +18660,7 @@ PA794418,energies-renouvelables-2023,1,0,0,0,100.0
 PA794418,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA794418,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA794418,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA794418,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA794418,immigration-2024,0,1,0,0,0.0
 PA794418,industrie-verte-2023,0,1,0,0,0.0
 PA794418,ingerences-etrangeres-2024,0,1,0,0,0.0
@@ -19217,6 +19278,7 @@ PA794518,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
 PA794518,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA794518,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA794518,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA794518,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA794518,justice-criminelle-2026,0,4,0,0,0.0
 PA794518,meubles-tourisme-2024,1,0,0,0,100.0
 PA794518,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
@@ -19436,6 +19498,7 @@ PA794570,familles-enfants-malades-2023,1,0,0,0,100.0
 PA794570,femmes-fonction-publique-2023,0,1,0,0,0.0
 PA794570,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA794570,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA794570,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA794570,immigration-2024,0,1,0,0,0.0
 PA794570,industrie-verte-2023,0,1,0,0,0.0
 PA794570,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -19510,6 +19573,7 @@ PA794582,femmes-fonction-publique-2023,0,0,1,0,
 PA794582,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA794582,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA794582,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA794582,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA794582,immigration-2024,0,1,0,0,0.0
 PA794582,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
 PA794582,ingerences-etrangeres-2024,0,1,0,0,0.0
@@ -19569,6 +19633,7 @@ PA794590,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA794590,familles-enfants-malades-2023,1,0,0,0,100.0
 PA794590,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA794590,fraudes-sociales-fiscales-2026,0,2,0,0,0.0
+PA794590,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA794590,immigration-2024,0,1,0,0,0.0
 PA794590,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
 PA794590,ivg-constitution-2024,1,0,0,0,100.0
@@ -19817,6 +19882,7 @@ PA794670,familles-enfants-malades-2023,1,0,0,0,100.0
 PA794670,femmes-fonction-publique-2023,0,1,0,0,0.0
 PA794670,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA794670,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA794670,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA794670,immigration-2024,0,1,0,0,0.0
 PA794670,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
 PA794670,ivg-constitution-2024,0,0,1,0,
@@ -20342,6 +20408,7 @@ PA794778,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA794778,fin-regimes-exception-covid-2022,0,0,1,0,
 PA794778,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA794778,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA794778,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA794778,immigration-2024,1,0,0,0,100.0
 PA794778,industrie-verte-2023,1,0,0,0,100.0
 PA794778,ivg-constitution-2024,1,0,0,0,100.0
@@ -20422,6 +20489,7 @@ PA794786,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA794786,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA794786,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA794786,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA794786,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA794786,immigration-2024,1,0,0,0,100.0
 PA794786,industrie-verte-2023,1,0,0,0,100.0
 PA794786,ivg-constitution-2024,1,0,0,0,100.0
@@ -20555,6 +20623,7 @@ PA794802,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA794802,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA794802,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA794802,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA794802,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA794802,immigration-2024,0,1,0,0,0.0
 PA794802,industrie-verte-2023,0,1,0,0,0.0
 PA794802,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
@@ -20843,6 +20912,7 @@ PA794854,familles-enfants-malades-2023,1,0,0,0,100.0
 PA794854,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA794854,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA794854,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA794854,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA794854,immigration-2024,1,0,0,0,100.0
 PA794854,industrie-verte-2023,0,0,1,0,
 PA794854,ivg-constitution-2024,1,0,0,0,100.0
@@ -20911,6 +20981,7 @@ PA794870,execution-peines-ferme-2025,1,0,0,0,100.0
 PA794870,familles-enfants-malades-2023,1,0,0,0,100.0
 PA794870,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA794870,fraudes-sociales-fiscales-2026,2,0,0,0,100.0
+PA794870,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA794870,immigration-2024,1,0,0,0,100.0
 PA794870,industrie-verte-2023,1,0,0,0,100.0
 PA794870,ivg-constitution-2024,1,0,0,0,100.0
@@ -21006,6 +21077,7 @@ PA794886,ecriture-inclusive-ppl-2023,0,1,0,0,0.0
 PA794886,energies-renouvelables-2023,1,0,0,0,100.0
 PA794886,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA794886,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA794886,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA794886,immigration-2024,0,1,0,0,0.0
 PA794886,industrie-verte-2023,0,1,0,0,0.0
 PA794886,ivg-constitution-2024,1,0,0,0,100.0
@@ -21066,6 +21138,7 @@ PA794894,familles-enfants-malades-2023,1,0,0,0,100.0
 PA794894,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA794894,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA794894,fraudes-sociales-fiscales-2026,0,2,0,0,0.0
+PA794894,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA794894,immigration-2024,0,1,0,0,0.0
 PA794894,industrie-verte-2023,0,1,0,0,0.0
 PA794894,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -21237,6 +21310,7 @@ PA794938,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA794938,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA794938,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA794938,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA794938,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA794938,immigration-2024,1,0,0,0,100.0
 PA794938,industrie-verte-2023,1,0,0,0,100.0
 PA794938,ivg-constitution-2024,1,0,0,0,100.0
@@ -21822,6 +21896,7 @@ PA795076,energies-renouvelables-2023,0,0,1,0,
 PA795076,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA795076,fin-regimes-exception-covid-2022,0,0,1,0,
 PA795076,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA795076,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795076,immigration-2024,1,0,0,0,100.0
 PA795076,ineligibilite-violences-aggravees-2023,0,0,1,0,
 PA795076,ivg-constitution-2024,1,0,0,0,100.0
@@ -22276,6 +22351,7 @@ PA795164,energies-renouvelables-2023,1,0,0,0,100.0
 PA795164,execution-peines-ferme-2025,1,0,0,0,100.0
 PA795164,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA795164,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA795164,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795164,immigration-2024,1,0,0,0,100.0
 PA795164,industrie-verte-2023,1,0,0,0,100.0
 PA795164,ivg-constitution-2024,1,0,0,0,100.0
@@ -22627,6 +22703,7 @@ PA795258,engrillagement-2023,1,0,0,0,100.0
 PA795258,execution-peines-ferme-2025,0,2,0,0,0.0
 PA795258,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA795258,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA795258,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA795258,ivg-constitution-2024,1,0,0,0,100.0
 PA795258,jo-2024,0,1,0,0,0.0
 PA795258,jo-2030,0,1,0,0,0.0
@@ -22808,6 +22885,7 @@ PA795298,execution-peines-ferme-2025,1,0,0,0,100.0
 PA795298,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA795298,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA795298,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA795298,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795298,immigration-2024,1,0,0,0,100.0
 PA795298,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
 PA795298,ivg-constitution-2024,1,0,0,0,100.0
@@ -22869,6 +22947,7 @@ PA795310,execution-peines-ferme-2025,1,0,0,0,100.0
 PA795310,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA795310,familles-enfants-malades-2023,1,0,0,0,100.0
 PA795310,fin-regimes-exception-covid-2022,1,0,0,0,100.0
+PA795310,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795310,immigration-2024,1,0,0,0,100.0
 PA795310,ivg-constitution-2024,1,0,0,0,100.0
 PA795310,ivg-constitution-ppl-2022,1,0,0,0,100.0
@@ -22932,6 +23011,7 @@ PA795318,ecriture-inclusive-ppl-2023,1,0,0,0,100.0
 PA795318,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA795318,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA795318,fraudes-sociales-fiscales-2026,4,0,0,0,100.0
+PA795318,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795318,immigration-2024,1,0,0,0,100.0
 PA795318,industrie-verte-2023,1,0,0,0,100.0
 PA795318,ivg-constitution-2024,1,0,0,0,100.0
@@ -22975,6 +23055,7 @@ PA795326,constitutionnaliser-securite-sociale-2024,0,1,0,0,0.0
 PA795326,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 PA795326,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
 PA795326,derives-sectaires-2024,0,1,0,0,0.0
+PA795326,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795326,immigration-2024,0,0,1,0,
 PA795326,industrie-verte-2023,0,1,0,0,0.0
 PA795326,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
@@ -23123,6 +23204,7 @@ PA795362,energies-renouvelables-2023,0,0,1,0,
 PA795362,engrillagement-2023,0,0,1,0,
 PA795362,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA795362,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA795362,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795362,immigration-2024,1,0,0,0,100.0
 PA795362,ivg-constitution-2024,1,0,0,0,100.0
 PA795362,ivg-constitution-ppl-2022,1,0,0,0,100.0
@@ -23350,6 +23432,7 @@ PA795410,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA795410,familles-enfants-malades-2023,1,0,0,0,100.0
 PA795410,femmes-fonction-publique-2023,0,1,0,0,0.0
 PA795410,fin-regimes-exception-covid-2022,1,0,0,0,100.0
+PA795410,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA795410,immigration-2024,0,1,0,0,0.0
 PA795410,ivg-constitution-ppl-2022,0,1,0,0,0.0
 PA795410,jo-2024,0,1,0,0,0.0
@@ -23406,6 +23489,7 @@ PA795422,deserts-medicaux-garot,2,0,0,0,100.0
 PA795422,duplomb-2025,1,0,0,0,100.0
 PA795422,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA795422,fin-regimes-exception-covid-2022,1,0,0,0,100.0
+PA795422,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795422,immigration-2024,1,0,0,0,100.0
 PA795422,industrie-verte-2023,1,0,0,0,100.0
 PA795422,ivg-constitution-2024,1,0,0,0,100.0
@@ -23746,6 +23830,7 @@ PA795516,execution-peines-ferme-2025,2,0,0,0,100.0
 PA795516,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA795516,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA795516,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA795516,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795516,immigration-2024,1,0,0,0,100.0
 PA795516,industrie-verte-2023,1,0,0,0,100.0
 PA795516,ivg-constitution-2024,1,0,0,0,100.0
@@ -23990,6 +24075,7 @@ PA795588,execution-peines-ferme-2025,1,0,0,0,100.0
 PA795588,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA795588,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA795588,fraudes-sociales-fiscales-2026,2,0,0,0,100.0
+PA795588,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795588,immigration-2024,1,0,0,0,100.0
 PA795588,industrie-verte-2023,1,0,0,0,100.0
 PA795588,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -24048,6 +24134,7 @@ PA795596,energies-renouvelables-2023,1,0,0,0,100.0
 PA795596,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA795596,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA795596,fraudes-sociales-fiscales-2026,3,0,0,0,100.0
+PA795596,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795596,immigration-2024,1,0,0,0,100.0
 PA795596,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
 PA795596,ivg-constitution-2024,1,0,0,0,100.0
@@ -24191,6 +24278,7 @@ PA795636,execution-peines-ferme-2025,1,0,0,0,100.0
 PA795636,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA795636,familles-enfants-malades-2023,1,0,0,0,100.0
 PA795636,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA795636,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795636,immigration-2024,1,0,0,0,100.0
 PA795636,ivg-constitution-2024,1,0,0,0,100.0
 PA795636,ivg-constitution-ppl-2022,1,0,0,0,100.0
@@ -24593,6 +24681,7 @@ PA795746,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA795746,familles-enfants-malades-2023,1,0,0,0,100.0
 PA795746,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA795746,fraudes-sociales-fiscales-2026,3,0,0,0,100.0
+PA795746,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795746,immigration-2024,1,0,0,0,100.0
 PA795746,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
 PA795746,ivg-constitution-2024,1,0,0,0,100.0
@@ -24776,6 +24865,7 @@ PA795786,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA795786,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA795786,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA795786,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA795786,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA795786,immigration-2024,0,1,0,0,0.0
 PA795786,ivg-constitution-2024,0,1,0,0,0.0
 PA795786,jo-2030,0,1,0,0,0.0
@@ -24845,6 +24935,7 @@ PA795808,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA795808,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA795808,fin-regimes-exception-covid-2022,0,0,1,0,
 PA795808,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA795808,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795808,immigration-2024,1,0,0,0,100.0
 PA795808,ineligibilite-violences-aggravees-2023,0,0,1,0,
 PA795808,ivg-constitution-2024,1,0,0,0,100.0
@@ -25126,6 +25217,7 @@ PA795868,deserts-medicaux-garot,1,0,0,0,100.0
 PA795868,duplomb-2025,1,0,0,0,100.0
 PA795868,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA795868,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA795868,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA795868,immigration-2024,1,0,0,0,100.0
 PA795868,ivg-constitution-2024,1,0,0,0,100.0
 PA795868,ivg-constitution-ppl-2022,1,0,0,0,100.0
@@ -25166,6 +25258,7 @@ PA795876,deserts-medicaux-garot,1,0,0,0,100.0
 PA795876,duplomb-2025,1,0,0,0,100.0
 PA795876,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA795876,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA795876,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA795876,immigration-2024,1,0,0,0,100.0
 PA795876,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA795876,justice-mineurs,1,0,0,0,100.0
@@ -25202,6 +25295,7 @@ PA795884,ecriture-inclusive-ppl-2023,1,0,0,0,100.0
 PA795884,energies-renouvelables-2023,0,1,0,0,0.0
 PA795884,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 PA795884,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA795884,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795884,immigration-2024,0,1,0,0,0.0
 PA795884,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
 PA795884,ivg-constitution-2024,1,0,0,0,100.0
@@ -25269,6 +25363,7 @@ PA795900,femmes-fonction-publique-2023,0,1,0,0,0.0
 PA795900,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA795900,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA795900,fraudes-sociales-fiscales-2026,0,4,0,0,0.0
+PA795900,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA795900,immigration-2024,0,1,0,0,0.0
 PA795900,industrie-verte-2023,0,1,0,0,0.0
 PA795900,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -25591,6 +25686,7 @@ PA795954,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
 PA795954,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
 PA795954,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA795954,fraudes-sociales-fiscales-2026,0,2,0,0,0.0
+PA795954,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795954,jo-2030,0,3,0,0,0.0
 PA795954,justice-criminelle-2026,0,1,0,0,0.0
 PA795954,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
@@ -25805,6 +25901,7 @@ PA795982,familles-enfants-malades-2023,1,0,0,0,100.0
 PA795982,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA795982,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA795982,fraudes-sociales-fiscales-2026,4,0,0,0,100.0
+PA795982,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA795982,immigration-2024,1,0,0,0,100.0
 PA795982,industrie-verte-2023,1,0,0,0,100.0
 PA795982,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -25949,6 +26046,7 @@ PA796010,deserts-medicaux-garot,1,0,0,0,100.0
 PA796010,duplomb-2025,1,0,0,0,100.0
 PA796010,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA796010,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA796010,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA796010,immigration-2024,1,0,0,0,100.0
 PA796010,ingerences-etrangeres-2024,1,0,0,0,100.0
 PA796010,ivg-constitution-2024,1,0,0,0,100.0
@@ -25995,6 +26093,7 @@ PA796018,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA796018,femmes-fonction-publique-2023,1,0,0,0,100.0
 PA796018,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA796018,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA796018,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA796018,immigration-2024,1,0,0,0,100.0
 PA796018,ingerences-etrangeres-2024,1,0,0,0,100.0
 PA796018,ivg-constitution-2024,1,0,0,0,100.0
@@ -26109,6 +26208,7 @@ PA796034,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA796034,familles-enfants-malades-2023,1,0,0,0,100.0
 PA796034,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA796034,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA796034,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA796034,immigration-2024,0,1,0,0,0.0
 PA796034,industrie-verte-2023,0,1,0,0,0.0
 PA796034,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
@@ -26988,6 +27088,7 @@ PA840143,drones-epandage-2025,0,1,0,0,0.0
 PA840143,duplomb-2025,0,1,0,0,0.0
 PA840143,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA840143,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA840143,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA840143,jo-2030,0,1,0,0,0.0
 PA840143,justice-criminelle-2026,0,1,0,0,0.0
 PA840143,justice-mineurs,0,1,0,0,0.0
@@ -27069,6 +27170,7 @@ PA840175,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA840175,aide-a-mourir,1,0,0,0,100.0
 PA840175,chomage-ruptures-conventionnelles-2026,1,0,0,0,100.0
 PA840175,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA840175,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA840175,justice-criminelle-2026,1,0,0,0,100.0
 PA840175,mineurs-reseaux-sociaux-2026,0,0,1,0,
 PA840175,montagne-vivante-2026,0,1,0,0,0.0
@@ -27413,6 +27515,7 @@ PA840773,execution-peines-ferme-2025,0,2,0,0,0.0
 PA840773,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA840773,financement-audiovisuel-public-lo-2024,0,1,0,0,0.0
 PA840773,fraudes-sociales-fiscales-2026,0,2,0,0,0.0
+PA840773,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA840773,jo-2030,0,3,0,0,0.0
 PA840773,justice-criminelle-2026,0,2,1,0,0.0
 PA840773,justice-mineurs,0,4,0,0,0.0
@@ -27453,6 +27556,7 @@ PA840781,deserts-medicaux-garot,0,1,0,0,0.0
 PA840781,duplomb-2025,0,1,0,0,0.0
 PA840781,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA840781,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA840781,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA840781,jo-2030,0,1,0,0,0.0
 PA840781,justice-mineurs,0,4,0,0,0.0
 PA840781,loi-orientation-agricole-2025,0,1,0,0,0.0
@@ -27488,6 +27592,7 @@ PA840793,deserts-medicaux-garot,1,0,0,0,100.0
 PA840793,duplomb-2025,1,0,0,0,100.0
 PA840793,execution-peines-ferme-2025,2,0,0,0,100.0
 PA840793,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA840793,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA840793,jo-2030,1,0,0,0,100.0
 PA840793,justice-mineurs,3,0,0,0,100.0
 PA840793,mineurs-isoles-sans-abrisme-2025,1,0,0,0,100.0
@@ -27521,6 +27626,7 @@ PA840801,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA840801,duplomb-2025,0,1,0,0,0.0
 PA840801,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA840801,fraudes-sociales-fiscales-2026,0,2,0,0,0.0
+PA840801,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA840801,jo-2030,0,1,0,0,0.0
 PA840801,justice-criminelle-2026,0,1,0,0,0.0
 PA840801,justice-mineurs,0,5,0,0,0.0
@@ -27771,6 +27877,7 @@ PA840889,execution-peines-ferme-2025,0,1,0,0,0.0
 PA840889,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA840889,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA840889,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA840889,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA840889,jo-2030,0,1,0,0,0.0
 PA840889,justice-criminelle-2026,0,1,0,0,0.0
 PA840889,justice-mineurs,0,1,0,0,0.0
@@ -28148,6 +28255,7 @@ PA841023,duplomb-2025,1,0,0,0,100.0
 PA841023,execution-peines-ferme-2025,1,0,0,0,100.0
 PA841023,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA841023,fraudes-sociales-fiscales-2026,2,0,0,0,100.0
+PA841023,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA841023,jo-2030,1,0,0,0,100.0
 PA841023,justice-criminelle-2026,1,0,0,0,100.0
 PA841023,justice-mineurs,3,0,0,0,100.0
@@ -28232,6 +28340,7 @@ PA841067,duplomb-2025,0,1,0,0,0.0
 PA841067,execution-peines-ferme-2025,0,2,0,0,0.0
 PA841067,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841067,fraudes-sociales-fiscales-2026,0,2,0,0,0.0
+PA841067,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA841067,jo-2030,0,1,0,0,0.0
 PA841067,justice-criminelle-2026,0,1,1,0,0.0
 PA841067,justice-mineurs,0,1,0,0,0.0
@@ -28348,6 +28457,7 @@ PA841107,duplomb-2025,1,0,0,0,100.0
 PA841107,execution-peines-ferme-2025,2,0,0,0,100.0
 PA841107,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA841107,fraudes-sociales-fiscales-2026,3,0,1,0,100.0
+PA841107,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA841107,jo-2030,2,1,1,0,40.0
 PA841107,justice-criminelle-2026,6,0,0,0,100.0
 PA841107,justice-mineurs,3,0,0,0,100.0
@@ -28391,6 +28501,7 @@ PA841131,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA841131,duplomb-2025,0,1,0,0,0.0
 PA841131,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841131,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA841131,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA841131,jo-2030,0,3,0,0,0.0
 PA841131,justice-criminelle-2026,0,1,0,0,0.0
 PA841131,justice-mineurs,0,1,0,0,0.0
@@ -28610,6 +28721,7 @@ PA841215,duplomb-2025,1,0,0,0,100.0
 PA841215,execution-peines-ferme-2025,1,0,0,0,100.0
 PA841215,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA841215,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA841215,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA841215,jo-2030,3,0,0,0,100.0
 PA841215,justice-criminelle-2026,6,0,0,0,100.0
 PA841215,justice-mineurs,3,0,0,0,100.0
@@ -28794,6 +28906,7 @@ PA841315,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
 PA841315,deserts-medicaux-garot,1,0,0,0,100.0
 PA841315,duplomb-2025,1,0,0,0,100.0
 PA841315,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA841315,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA841315,jo-2030,2,1,1,0,40.0
 PA841315,justice-criminelle-2026,5,0,0,0,100.0
 PA841315,justice-mineurs,1,0,0,0,100.0
@@ -29059,6 +29172,7 @@ PA841395,duplomb-2025,0,1,0,0,0.0
 PA841395,execution-peines-ferme-2025,0,2,0,0,0.0
 PA841395,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841395,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA841395,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA841395,jo-2030,0,1,0,0,0.0
 PA841395,justice-criminelle-2026,0,1,0,0,0.0
 PA841395,justice-mineurs,0,1,0,0,0.0
@@ -29294,6 +29408,7 @@ PA841479,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA841479,duplomb-2025,0,1,0,0,0.0
 PA841479,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841479,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA841479,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA841479,jo-2030,0,1,0,0,0.0
 PA841479,justice-criminelle-2026,0,2,1,0,0.0
 PA841479,justice-mineurs,0,1,0,0,0.0
@@ -29367,6 +29482,7 @@ PA841495,definition-viol-2025,0,1,0,0,0.0
 PA841495,delit-sejour-irregulier-ppl-2025,0,1,0,0,0.0
 PA841495,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841495,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA841495,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA841495,jo-2030,0,1,0,0,0.0
 PA841495,justice-criminelle-2026,0,1,0,0,0.0
 PA841495,justice-mineurs,0,4,0,0,0.0
@@ -29437,6 +29553,7 @@ PA841515,chomage-ruptures-conventionnelles-2026,1,0,0,0,100.0
 PA841515,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
 PA841515,delit-sejour-irregulier-ppl-2025,1,0,0,0,100.0
 PA841515,duplomb-2025,1,0,0,0,100.0
+PA841515,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA841515,justice-criminelle-2026,3,0,0,0,100.0
 PA841515,justice-mineurs,1,0,0,0,100.0
 PA841515,loi-orientation-agricole-2025,1,0,0,0,100.0
@@ -29552,6 +29669,7 @@ PA841563,execution-peines-ferme-2025,0,1,0,0,0.0
 PA841563,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841563,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA841563,fraudes-sociales-fiscales-2026,0,5,0,0,0.0
+PA841563,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA841563,jo-2030,0,4,0,0,0.0
 PA841563,justice-criminelle-2026,0,3,0,0,0.0
 PA841563,justice-mineurs,0,5,0,0,0.0
@@ -29591,6 +29709,7 @@ PA841575,delit-sejour-irregulier-ppl-2025,0,1,0,0,0.0
 PA841575,duplomb-2025,0,1,0,0,0.0
 PA841575,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841575,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA841575,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA841575,jo-2030,0,1,0,0,0.0
 PA841575,justice-criminelle-2026,0,1,0,0,0.0
 PA841575,justice-mineurs,0,1,0,0,0.0
@@ -29626,6 +29745,7 @@ PA841587,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA841587,duplomb-2025,0,1,0,0,0.0
 PA841587,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA841587,fraudes-sociales-fiscales-2026,0,4,0,0,0.0
+PA841587,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA841587,jo-2030,0,4,0,0,0.0
 PA841587,justice-criminelle-2026,0,1,0,0,0.0
 PA841587,justice-mineurs,0,2,0,0,0.0
@@ -29723,6 +29843,7 @@ PA841613,execution-peines-ferme-2025,0,2,0,0,0.0
 PA841613,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841613,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA841613,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA841613,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA841613,jo-2030,0,1,0,0,0.0
 PA841613,justice-criminelle-2026,0,4,0,0,0.0
 PA841613,justice-mineurs,0,5,0,0,0.0
@@ -29832,6 +29953,7 @@ PA841645,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA841645,duplomb-2025,0,1,0,0,0.0
 PA841645,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841645,fraudes-sociales-fiscales-2026,0,3,0,0,0.0
+PA841645,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA841645,jo-2030,0,3,0,0,0.0
 PA841645,justice-criminelle-2026,0,1,0,0,0.0
 PA841645,justice-mineurs,0,2,0,0,0.0
@@ -29867,6 +29989,7 @@ PA841657,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
 PA841657,deserts-medicaux-garot,2,0,0,0,100.0
 PA841657,duplomb-2025,1,0,0,0,100.0
 PA841657,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA841657,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA841657,justice-criminelle-2026,2,0,0,0,100.0
 PA841657,justice-mineurs,1,0,0,0,100.0
 PA841657,loi-orientation-agricole-2025,1,0,0,0,100.0
@@ -29985,6 +30108,7 @@ PA841701,duplomb-2025,1,0,0,0,100.0
 PA841701,execution-peines-ferme-2025,2,0,0,0,100.0
 PA841701,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA841701,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA841701,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA841701,justice-criminelle-2026,4,0,0,0,100.0
 PA841701,justice-mineurs,1,0,0,0,100.0
 PA841701,loi-orientation-agricole-2025,1,0,0,0,100.0
@@ -30236,6 +30360,7 @@ PA841761,delit-sejour-irregulier-ppl-2025,0,1,0,0,0.0
 PA841761,duplomb-2025,0,1,0,0,0.0
 PA841761,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841761,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA841761,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA841761,jo-2030,0,1,0,0,0.0
 PA841761,justice-criminelle-2026,0,1,0,0,0.0
 PA841761,justice-mineurs,0,1,0,0,0.0
@@ -30448,6 +30573,7 @@ PA841845,duplomb-2025,1,0,0,0,100.0
 PA841845,execution-peines-ferme-2025,1,0,0,0,100.0
 PA841845,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA841845,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA841845,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA841845,jo-2030,1,0,0,0,100.0
 PA841845,justice-criminelle-2026,3,0,0,0,100.0
 PA841845,justice-mineurs,3,0,0,0,100.0
@@ -30781,6 +30907,7 @@ PA841955,execution-peines-ferme-2025,0,1,0,0,0.0
 PA841955,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841955,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA841955,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA841955,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA841955,justice-criminelle-2026,0,2,0,0,0.0
 PA841955,justice-mineurs,0,3,0,0,0.0
 PA841955,loi-orientation-agricole-2025,0,1,0,0,0.0
@@ -30953,6 +31080,7 @@ PA842029,duplomb-2025,1,0,0,0,100.0
 PA842029,execution-peines-ferme-2025,1,0,0,0,100.0
 PA842029,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA842029,fraudes-sociales-fiscales-2026,2,0,0,0,100.0
+PA842029,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA842029,jo-2030,2,0,0,0,100.0
 PA842029,justice-criminelle-2026,1,0,0,0,100.0
 PA842029,justice-mineurs,2,0,0,0,100.0
@@ -30993,6 +31121,7 @@ PA842037,droit-visite-lieux-privation-liberte-2026,0,1,0,0,0.0
 PA842037,duplomb-2025,1,0,0,0,100.0
 PA842037,execution-peines-ferme-2025,1,0,0,0,100.0
 PA842037,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA842037,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA842037,jo-2030,3,0,0,0,100.0
 PA842037,justice-criminelle-2026,1,0,0,0,100.0
 PA842037,justice-mineurs,5,0,0,0,100.0
@@ -31040,6 +31169,7 @@ PA842045,duplomb-2025,1,0,0,0,100.0
 PA842045,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA842045,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA842045,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA842045,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA842045,jo-2030,1,0,0,0,100.0
 PA842045,justice-criminelle-2026,4,0,0,0,100.0
 PA842045,justice-mineurs,5,0,0,0,100.0
@@ -31189,6 +31319,7 @@ PA842105,droit-visite-lieux-privation-liberte-2026,0,1,0,0,0.0
 PA842105,duplomb-2025,1,0,0,0,100.0
 PA842105,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA842105,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA842105,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA842105,jo-2030,1,0,0,0,100.0
 PA842105,justice-criminelle-2026,2,0,0,0,100.0
 PA842105,justice-mineurs,1,0,0,0,100.0
@@ -31264,6 +31395,7 @@ PA842125,drones-epandage-2025,1,0,0,0,100.0
 PA842125,duplomb-2025,1,0,0,0,100.0
 PA842125,execution-peines-ferme-2025,0,2,0,0,0.0
 PA842125,fraudes-sociales-fiscales-2026,0,3,0,0,0.0
+PA842125,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA842125,jo-2030,0,1,0,0,0.0
 PA842125,justice-criminelle-2026,0,1,0,0,0.0
 PA842125,justice-mineurs,0,1,0,0,0.0
@@ -31380,6 +31512,7 @@ PA842183,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
 PA842183,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
 PA842183,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA842183,fraudes-sociales-fiscales-2026,0,4,0,0,0.0
+PA842183,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA842183,jo-2030,0,3,0,0,0.0
 PA842183,justice-criminelle-2026,0,6,0,0,0.0
 PA842183,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
@@ -31410,6 +31543,7 @@ PA842187,duplomb-2025,1,0,0,0,100.0
 PA842187,execution-peines-ferme-2025,2,0,0,0,100.0
 PA842187,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA842187,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA842187,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA842187,jo-2030,4,0,0,0,100.0
 PA842187,justice-criminelle-2026,6,0,0,0,100.0
 PA842187,justice-mineurs,3,0,0,0,100.0
@@ -31447,6 +31581,7 @@ PA842195,duplomb-2025,1,0,0,0,100.0
 PA842195,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA842195,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA842195,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA842195,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA842195,jo-2030,0,1,0,0,0.0
 PA842195,justice-mineurs,2,0,0,0,100.0
 PA842195,loi-orientation-agricole-2025,1,0,0,0,100.0
@@ -31516,6 +31651,7 @@ PA842227,delit-sejour-irregulier-ppl-2025,0,1,0,0,0.0
 PA842227,duplomb-2025,0,1,0,0,0.0
 PA842227,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA842227,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA842227,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA842227,jo-2030,0,1,0,0,0.0
 PA842227,justice-criminelle-2026,0,3,0,0,0.0
 PA842227,justice-mineurs,0,1,0,0,0.0
@@ -31594,6 +31730,7 @@ PA842263,duplomb-2025,1,0,0,0,100.0
 PA842263,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA842263,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA842263,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA842263,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA842263,justice-criminelle-2026,2,0,0,0,100.0
 PA842263,justice-mineurs,1,0,0,0,100.0
 PA842263,loi-orientation-agricole-2025,1,0,0,0,100.0
@@ -31654,6 +31791,7 @@ PA842279,delit-sejour-irregulier-ppl-2025,0,1,0,0,0.0
 PA842279,deserts-medicaux-garot,0,1,0,0,0.0
 PA842279,duplomb-2025,0,1,0,0,0.0
 PA842279,fraudes-sociales-fiscales-2026,1,2,0,0,16.7
+PA842279,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA842279,jo-2030,0,1,0,0,0.0
 PA842279,justice-criminelle-2026,0,1,0,0,0.0
 PA842279,justice-mineurs,0,2,0,0,0.0
@@ -31682,6 +31820,7 @@ PA842299,chomage-ruptures-conventionnelles-2026,1,0,0,0,100.0
 PA842299,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
 PA842299,duplomb-2025,1,0,0,0,100.0
 PA842299,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
+PA842299,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA842299,jo-2030,0,0,1,0,
 PA842299,mineurs-reseaux-sociaux-2026,0,0,1,0,
 PA842299,montagne-vivante-2026,0,1,0,0,0.0
@@ -31757,6 +31896,7 @@ PA870009,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
 PA870009,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
 PA870009,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA870009,fraudes-sociales-fiscales-2026,0,3,0,0,0.0
+PA870009,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA870009,jo-2030,0,3,0,0,0.0
 PA870009,justice-criminelle-2026,0,3,0,0,0.0
 PA870009,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0

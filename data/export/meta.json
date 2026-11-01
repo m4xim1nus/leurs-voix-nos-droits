@@ -1,19 +1,19 @@
 {
- "genere_le": "2026-10-31T05:07:58+00:00",
+ "genere_le": "2026-11-01T05:08:38+00:00",
  "sources": {
   "an_scrutins_17": {
    "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/loi/scrutins/Scrutins.json.zip",
-   "last_modified": "Fri, 30 Oct 2026 23:25:29 GMT",
+   "last_modified": "Sat, 31 Oct 2026 17:25:51 GMT",
    "taille": 29359093,
-   "sha256": "1546e1920d6ebe52c34a7e166717c5ce75730bfb1f4b9ffd701012d652c9e5fd",
-   "telecharge_le": "2026-10-31T05:06:41+00:00"
+   "sha256": "aaef42844c60e9e5f373b5b5439c0fb0557640e00a142dd4ae3c3033e9a68e07",
+   "telecharge_le": "2026-11-01T05:07:00+00:00"
   },
   "an_dossiers_17": {
    "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/loi/dossiers_legislatifs/Dossiers_Legislatifs.json.zip",
-   "last_modified": "Sat, 31 Oct 2026 01:16:28 GMT",
-   "taille": 11113736,
-   "sha256": "572d4476fd6b4ed9397b869905335fa9cddb4a0c8a811a99cb1fe43608bb689a",
-   "telecharge_le": "2026-10-31T05:06:42+00:00"
+   "last_modified": "Sun, 01 Nov 2026 01:16:30 GMT",
+   "taille": 11113719,
+   "sha256": "6f7d942353f83d255f2094b0ed1a31e50be9e3662a2acdda39d47eac2a7d12b1",
+   "telecharge_le": "2026-11-01T05:07:01+00:00"
   },
   "an_amendements_17": {
    "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/loi/amendements_div_legis/Amendements.json.zip",
@@ -53,21 +53,42 @@
   },
   "an_agenda_17": {
    "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/vp/reunions/Agenda.json.zip",
-   "last_modified": "Fri, 30 Oct 2026 23:40:51 GMT",
-   "taille": 8587487,
-   "sha256": "8819fbba897a031aa8fe8e8e96bdf40440ab0237f9a640823c729de0178bca31",
-   "telecharge_le": "2026-10-31T05:06:55+00:00"
+   "last_modified": "Sat, 31 Oct 2026 23:40:50 GMT",
+   "taille": 8587590,
+   "sha256": "d5118692aa00b051f9359b87cf62993015f632472b20d0a913a29fb0a2660ed8",
+   "telecharge_le": "2026-11-01T05:07:20+00:00"
   },
   "senat_dosleg": {
    "url": "https://data.senat.fr/data/dosleg/dosleg.zip",
-   "last_modified": "Sat, 31 Oct 2026 02:14:19 GMT",
-   "taille": 16115431,
-   "sha256": "a2ec6970ac0f6e344321fdc6c4229121883c69737e37d417db6db16fc8bfaf7b",
-   "telecharge_le": "2026-10-31T05:07:13+00:00"
+   "last_modified": "Sun, 01 Nov 2026 02:21:02 GMT",
+   "taille": 16115460,
+   "sha256": "0cad687317632d1c90fec263277bf84bb3bad2c4c12b43b9efd7d5ee31bb4a4f",
+   "telecharge_le": "2026-11-01T05:07:38+00:00"
+  },
+  "senat_senateurs": {
+   "url": "https://data.senat.fr/data/senateurs/ODSEN_GENERAL.csv",
+   "last_modified": "Sun, 01 Nov 2026 02:44:38 GMT",
+   "taille": 443318,
+   "sha256": "d2fd003c426616a1933a3c76ad1150d02b7db795c5a642218ca9dd57cdb7359e",
+   "telecharge_le": "2026-11-01T05:07:39+00:00"
+  },
+  "senat_groupes": {
+   "url": "https://data.senat.fr/data/senateurs/ODSEN_HISTOGROUPES.csv",
+   "last_modified": "Sun, 01 Nov 2026 02:44:38 GMT",
+   "taille": 567288,
+   "sha256": "b9ad31b18979fe4265c1ff1585a6ec532288bc0f842d62148d79a428352dab18",
+   "telecharge_le": "2026-11-01T05:07:40+00:00"
+  },
+  "senat_mandats": {
+   "url": "https://data.senat.fr/data/senateurs/ODSEN_ELUSEN.csv",
+   "last_modified": "Sun, 01 Nov 2026 02:44:38 GMT",
+   "taille": 513163,
+   "sha256": "926bd63f3f878f59500256ab7bd585ac216ae5cfe313f639434d713359d5d562",
+   "telecharge_le": "2026-11-01T05:07:40+00:00"
   }
  },
  "comptes": {
-  "textes": 559,
+  "textes": 608,
   "scrutins": 13564,
   "positions_groupes": 158651,
   "amendements": 15993,
@@ -76,17 +97,26 @@
   "mandats": 1316,
   "appartenances": 2729,
   "mises_au_point": 5228,
-  "scores_scrutins": 616,
+  "scores_scrutins": 618,
   "scores_deputes": 10358,
   "scores_groupes": 299,
   "en_cours": 207,
   "en_cours_lectures": 249,
   "en_cours_evenements": 75,
-  "en_cours_etats": 559,
+  "en_cours_etats": 608,
   "en_cours_agenda": 89,
-  "en_cours_alertes": 3,
+  "en_cours_alertes": 4,
   "votes": 2011738,
-  "fichiers_votes": 44
+  "fichiers_votes": 44,
+  "senat_scrutins": 1336,
+  "senat_positions_groupes": 12069,
+  "senat_senateurs": 514,
+  "senat_groupes": 10,
+  "senat_appartenances": 565,
+  "senat_mandats": 966,
+  "senat_mises_au_point": 595,
+  "senat_votes": 464719,
+  "senat_fichiers_votes": 42
  },
  "votes_codes": {
   "P": "pour",
@@ -369,7 +399,7 @@
   }
  },
  "en_cours": {
-  "date_reference": "2026-10-31",
+  "date_reference": "2026-11-01",
   "inactivite_mois": 12,
   "debut": "2024-07-18"
  }
