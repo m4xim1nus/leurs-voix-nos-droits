@@ -40,6 +40,9 @@
     name="description"
     content="Votes enregistrés au nom de {nom} au Sénat sur les textes qui touchent aux droits et libertés."
   />
+  {#if data.global?.score != null}
+    <meta property="og:image" content="{URL_SITE}/cartes/senateurs/{s.slug}.png" />
+  {/if}
 </svelte:head>
 
 {#snippet vote(v: VoteSenateur)}
@@ -86,10 +89,19 @@
       Sur {pluriel(nComptes, 'vote compté', 'votes comptés')}{data.global.abstentions
         ? `, et ${pluriel(data.global.abstentions, 'abstention')} hors calcul`
         : ''}.
-      {#if data.scoreGroupe?.score != null && data.groupeActuel}Son groupe actuel : {pourcent(
-          data.scoreGroupe.score
-        )}.{/if}
     </p>
+    {#if data.periodes.length}
+      <ul class="periodes">
+        {#each data.periodes as p (p.id)}
+          <li>
+            {p.libelle} :
+            <strong>{pourcent(p.score.score)}</strong
+            >{#if p.groupe && p.scoreGroupe?.score != null}, son groupe {p.groupe.sigle} sur cette période
+              : {pourcent(p.scoreGroupe.score)}{/if}.
+          </li>
+        {/each}
+      </ul>
+    {/if}
     <p class="petit discret">
       Un vote enregistré ne dit pas qui était présent, et il peut ne pas refléter un choix
       individuel : voir le <a href="/methodologie#regle-27">vote de groupe</a>. Ce score ne se
@@ -113,6 +125,21 @@
 <p class="actions">
   {#if mailto}<a class="bouton" href={mailto}>Lui écrire</a>{/if}
   {#if s.courriel}<span class="discret petit">{s.courriel}</span>{/if}
+  {#if data.global?.score != null}
+    <a class="bouton secondaire" href="/cartes/senateurs/{s.slug}.png" download="{s.slug}.png"
+      >Télécharger l’image</a
+    >
+    <a class="petit" href="/cartes/portrait/senateurs/{s.slug}.png" download="{s.slug}-portrait.png"
+      >format portrait, pour les réseaux</a
+    >
+    {#if data.groupeActuel && data.periodes[0]?.scoreGroupe}
+      <a
+        class="petit"
+        href="/senat/comparer?a=s:{s.slug}&b=g:{data.groupeActuel.id}:{data.periodes[0].id}"
+        >Comparer avec son groupe</a
+      >
+    {/if}
+  {/if}
 </p>
 
 <section>
@@ -145,12 +172,15 @@
         {g.groupe.sigle}{g.groupe.nom !== g.groupe.sigle ? ` (${g.groupe.nom})` : ''}, {periode(g)}
       </li>
     {:else}
-      <li>Aucun groupe enregistré depuis juin 2022.</li>
+      <li>Aucun groupe enregistré depuis juin 2017.</li>
     {/each}
   </ul>
 </section>
 
 <style>
+  .periodes {
+    margin: 0.5rem 0;
+  }
   .score {
     font-size: 1.3rem;
     margin-bottom: 0.25rem;

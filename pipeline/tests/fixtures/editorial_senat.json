@@ -493,7 +493,7 @@
      "scrutins": [
       {
        "id": "SN1",
-       "role": "amendement",
+       "role": "partie",
        "pour": "a-trancher",
        "objet": "x"
       },
@@ -507,7 +507,7 @@
     }
    },
    "erreurs": [
-    "Sénat : SN1 : rôle inconnu (amendement)",
+    "Sénat : SN1 : rôle inconnu (partie)",
     "Sénat : SN2 : sens inconnu (y)"
    ],
    "avertissements": [

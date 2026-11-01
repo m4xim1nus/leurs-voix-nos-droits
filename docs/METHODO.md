@@ -379,12 +379,14 @@ ci-dessous remplacent, pour le Sénat, les règles 9 à 11 et 15 à 19.
     l'ancien décisif reste compté et le nouveau vote porte la mention « pas encore qualifié ».
     Un décisif du Sénat sur un texte encore en navette porte la mention « vote de 1re lecture
     au Sénat, texte encore en navette » (la lecture est celle du scrutin).
-26. **Scores du Sénat.** Chaque texte pèse 1 et ne compte que son décisif : pas d'amendements
-    clés. Un texte adopté par le 49.3 à l'Assemblée compte au Sénat s'il y a eu un vote sur
+26. **Scores du Sénat.** Chaque texte pèse 1, partagé entre son décisif et ses amendements clés comme à
+    l'Assemblée (règle 18). Les amendements clés suivent les conditions de la règle 11, sur la dernière lecture
+    du Sénat où des suppressions ont été mises aux voix. Un texte adopté par le 49.3 à l'Assemblée compte au Sénat s'il y a eu un vote sur
     l'ensemble (règles 23 et 24). Abstentions et non-votants sont hors calcul. Le calcul du
     score par droit, le groupe du jour du vote et l'agrégation des votes dans le score d'un
-    groupe sont ceux des règles 15 et 19. Il n'y a qu'une **période** : depuis le 28/06/2022,
-    sans découpage, puisque le Sénat n'a pas de législature et se renouvelle par moitié. Le
+    groupe sont ceux des règles 15 et 19. Il y a deux **périodes**, coupées au 28/06/2022 : de juin 2017
+    à juin 2022, et depuis. Un texte compte dans la période de son décisif. Les scores d'un groupe se lisent par
+    période ; celui d'un·e sénateur·ice réunit tous ses votes, et se lit aussi par période. Le
     nombre de votes comptés s'affiche à côté du score : un·e élu·e récent·e en a peu.
 27. **Vote de groupe.** Sur presque chaque scrutin public du Sénat, un vote est enregistré pour
     presque tous les sièges, et il suit presque toujours la majorité du groupe. Le règlement du

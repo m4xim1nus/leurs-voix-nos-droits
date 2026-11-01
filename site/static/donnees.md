@@ -176,7 +176,7 @@ Ces fichiers n'entrent dans aucun score (règle 20).
 
 ## Sénat
 
-Fichiers à part, sous `senat/`, depuis juin 2022. Aucune correspondance avec les groupes de l'Assemblée (règle 28). Votes enregistrés au nom de chaque sénateur·ice, qui ne disent pas qui était présent (règle 27).
+Fichiers à part, sous `senat/`, depuis juin 2017. Aucune correspondance avec les groupes de l'Assemblée (règle 28). Votes enregistrés au nom de chaque sénateur·ice, qui ne disent pas qui était présent (règle 27).
 
 ### `senat/scrutins.csv`
 
@@ -216,13 +216,17 @@ Fichiers à part, sous `senat/`, depuis juin 2022. Aucune correspondance avec le
 
 - `senateur_id`, `droit`, et les colonnes communes
 
+### `senat/scores_senateurs_periodes.csv`
+
+- `senateur_id`, `periode` (`2017-2022` ou `depuis-2022`), `droit`, et les colonnes communes
+
 ### `senat/scores_senateurs_textes.csv`
 
 - `senateur_id`, `texte_id`, et les colonnes communes
 
 ### `senat/scores_groupes.csv`
 
-- `groupe_id`, `droit`, et les colonnes communes
+- `groupe_id`, `periode` (`2017-2022` ou `depuis-2022`), `droit`, et les colonnes communes
 
 ### `senat/scores_groupes_textes.csv`
 

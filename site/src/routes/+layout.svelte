@@ -26,7 +26,14 @@
         { href: '/comparer', libelle: 'Comparer' }
       ]
     },
-    { href: '/senat', libelle: 'Sénat', sous: [] },
+    {
+      href: '/senat',
+      libelle: 'Sénat',
+      sous: [
+        { href: '/senat', libelle: 'Groupes et sénateur·ices' },
+        { href: '/senat/comparer', libelle: 'Comparer' }
+      ]
+    },
     {
       href: '/methodologie',
       libelle: 'Méthode',

@@ -48,7 +48,10 @@ export interface BaseSenat {
   senateurs: Senateur[];
   senateurParId: Map<string, Senateur>;
   scoresSenateurs: Map<string, Map<string, Score>>;
-  scoresGroupes: Map<string, Map<string, Score>>;
+  /** Règle 26 : période → groupe → droit. */
+  scoresGroupes: Map<string, Map<string, Map<string, Score>>>;
+  /** Règle 26 : sénateur → période → droit. */
+  scoresSenateursPeriodes: Map<string, Map<string, Map<string, Score>>>;
   scoresSenateursTextes: Map<string, Map<string, Score>>;
   scoresGroupesTextes: Map<string, Map<string, Score>>;
   scrutins: Map<string, Ligne>;
@@ -76,6 +79,18 @@ function indexer(nom: string, cle: string, sous: string): Map<string, Map<string
   for (const r of lire(nom)) {
     if (!out.has(r[cle]!)) out.set(r[cle]!, new Map());
     out.get(r[cle]!)!.set(r[sous]!, score(r));
+  }
+  return out;
+}
+
+/** Index à deux niveaux : `premier` → `second` → droit. */
+function indexerPeriodes(nom: string, premier: string, second: string) {
+  const out = new Map<string, Map<string, Map<string, Score>>>();
+  for (const r of lire(nom)) {
+    if (!out.has(r[premier]!)) out.set(r[premier]!, new Map());
+    const m = out.get(r[premier]!)!;
+    if (!m.has(r[second]!)) m.set(r[second]!, new Map());
+    m.get(r[second]!)!.set(r.droit!, score(r));
   }
   return out;
 }
@@ -187,7 +202,8 @@ function chargerBase(): BaseSenat {
     senateurs,
     senateurParId: new Map(senateurs.map((s) => [s.id, s])),
     scoresSenateurs: indexer('scores_senateurs', 'senateur_id', 'droit'),
-    scoresGroupes: indexer('scores_groupes', 'groupe_id', 'droit'),
+    scoresGroupes: indexerPeriodes('scores_groupes', 'periode', 'groupe_id'),
+    scoresSenateursPeriodes: indexerPeriodes('scores_senateurs_periodes', 'senateur_id', 'periode'),
     scoresSenateursTextes: indexer('scores_senateurs_textes', 'senateur_id', 'texte_id'),
     scoresGroupesTextes: indexer('scores_groupes_textes', 'groupe_id', 'texte_id'),
     scrutins,
@@ -217,7 +233,7 @@ export interface BlocSenat {
   note: string;
 }
 
-const ORDRE: RoleSenat[] = ['decisif', 'ensemble', 'motion'];
+const ORDRE: RoleSenat[] = ['decisif', 'amendement', 'ensemble', 'motion'];
 const rang = (s: Ligne) => `${s.date}\t${String(s.numero).padStart(6, '0')}`;
 
 /** Dernier vote du Sénat sur l'ensemble d'un dossier, s'il y en a un. */

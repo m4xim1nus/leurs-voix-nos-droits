@@ -346,13 +346,16 @@
       (la lecture est celle du scrutin).
     </li>
     <li value="26" id="regle-26">
-      <strong>Scores du Sénat.</strong> Chaque texte pèse 1 et ne compte que son décisif : pas d’amendements
-      clés. Un texte adopté par le 49.3 à l’Assemblée compte au Sénat s’il y a eu un vote sur l’ensemble
-      (règles 23 et 24). Abstentions et non-votants sont hors calcul. Le calcul du score par droit, le
-      groupe du jour du vote et l’agrégation des votes dans le score d’un groupe sont ceux des règles
-      15 et 19. Il n’y a qu’une période : depuis le 28/06/2022, sans découpage, puisque le Sénat n’a pas
-      de législature et se renouvelle par moitié. Le nombre de votes comptés s’affiche à côté du score :
-      un·e élu·e récent·e en a peu.
+      <strong>Scores du Sénat.</strong> Chaque texte pèse 1, partagé entre son décisif et ses
+      amendements clés comme à l’Assemblée (règle 18). Les amendements clés suivent les conditions
+      de la règle 11, sur la dernière lecture du Sénat où des suppressions ont été mises aux voix.
+      Un texte adopté par le 49.3 à l’Assemblée compte au Sénat s’il y a eu un vote sur l’ensemble
+      (règles 23 et 24). Abstentions et non-votants sont hors calcul. Le calcul du score par droit,
+      le groupe du jour du vote et l’agrégation des votes dans le score d’un groupe sont ceux des
+      règles 15 et 19. Il y a deux <strong>périodes</strong>, coupées au 28/06/2022 : de juin 2017 à
+      juin 2022, et depuis. Un texte compte dans la période de son décisif. Les scores d’un groupe
+      se lisent par période ; celui d’un·e sénateur·ice réunit tous ses votes, et se lit aussi par
+      période. Le nombre de votes comptés s’affiche à côté du score : un·e élu·e récent·e en a peu.
     </li>
     <li value="27" id="regle-27">
       <strong>Vote de groupe.</strong> Sur presque chaque scrutin public du Sénat, un vote est enregistré
@@ -380,7 +383,7 @@
     Les votes viennent uniquement de l’open data officiel de l’Assemblée nationale et du Sénat :
     scrutins, votes nominatifs, dossiers législatifs, élu·es et groupes. D’autres sites (datan.fr,
     leurs-votes.fr) servent à vérifier les décomptes, jamais de source. À l’Assemblée, le périmètre
-    couvre les XVe, XVIe et XVIIe législatures, depuis juin 2017 ; au Sénat, il part de juin 2022.
+    couvre les XVe, XVIe et XVIIe législatures, depuis juin 2017, et le Sénat aussi.
   </p>
   <p>
     <strong>Code postal.</strong> Il n’existe pas de table officielle qui relie un code postal à une circonscription.

@@ -19,6 +19,18 @@ import type {
 import { donnees, RACINE } from './donnees';
 import { baseSenat } from './senat';
 
+/** Règle 26 : de la plus récente à la plus ancienne. Un texte compte dans la période de son décisif. */
+export const PERIODES = [
+  {
+    id: 'depuis-2022',
+    libelle: 'Depuis juin 2022',
+    court: 'depuis juin 2022',
+    debut: '2022-06-28'
+  },
+  { id: '2017-2022', libelle: 'De juin 2017 à juin 2022', court: '2017-2022', debut: '' }
+];
+export const periodeDu = (date: string) => PERIODES.find((p) => date >= p.debut)!;
+
 const groupeDuJour = (s: Senateur, date: string): GroupeCourt | null =>
   s.groupes.find((g) => (g.debut ?? '') <= date && (g.fin === null || date <= g.fin))?.groupe ??
   null;
@@ -70,16 +82,23 @@ export const tableDepartements = (prefixe: string) => tablesDepartements().get(p
 export function vueSenat() {
   const d = donnees();
   const b = baseSenat();
-  const groupes = b.groupes
-    .filter((g) => b.scoresGroupes.has(g.id))
-    .map((g) => ({
-      groupe: g,
-      global: b.scoresGroupes.get(g.id)!.get('global') ?? null,
-      droits: Object.fromEntries(
-        d.droits.map((dr) => [dr.code, b.scoresGroupes.get(g.id)!.get(dr.code) ?? null])
-      )
-    }))
-    .sort((x, y) => (y.global?.score ?? -1) - (x.global?.score ?? -1));
+  const periodes = PERIODES.map((p) => {
+    const scores = b.scoresGroupes.get(p.id) ?? new Map<string, Map<string, Score>>();
+    return {
+      ...p,
+      n_textes: textesComptes().filter((t) => periodeDu(t.scrutin.date).id === p.id).length,
+      groupes: b.groupes
+        .filter((g) => scores.has(g.id))
+        .map((g) => ({
+          groupe: g,
+          global: scores.get(g.id)!.get('global') ?? null,
+          droits: Object.fromEntries(
+            d.droits.map((dr) => [dr.code, scores.get(g.id)!.get(dr.code) ?? null])
+          )
+        }))
+        .sort((x, y) => (y.global?.score ?? -1) - (x.global?.score ?? -1))
+    };
+  }).filter((p) => p.groupes.length);
   const parDepartement = new Map<
     string,
     { code: string; nom: string; senateurs: (EntreeIndex & { score: Score | null })[] }
@@ -100,7 +119,7 @@ export function vueSenat() {
   }
   return {
     droits: d.droits,
-    groupes,
+    periodes,
     n_textes: textesComptes().length,
     departements: [...parDepartement.values()]
       .map((c) => ({ ...c, senateurs: c.senateurs.sort((x, y) => x.tri.localeCompare(y.tri)) }))
@@ -179,7 +198,22 @@ export function vueSenateur(slug: string) {
     }),
     votes,
     ecarts: votes.filter((v) => v.ecart),
-    scoreGroupe: actuel ? (b.scoresGroupes.get(actuel.id)?.get('global') ?? null) : null
+    periodes: PERIODES.flatMap((p) => {
+      const score = b.scoresSenateursPeriodes.get(s.id)?.get(p.id)?.get('global');
+      if (!score) return [];
+      // Son groupe sur cette période : celui de son dernier vote compté, du plus récent au plus ancien.
+      const groupe = votes.find((v) => periodeDu(v.scrutin.date).id === p.id)?.groupe ?? null;
+      return [
+        {
+          ...p,
+          score,
+          groupe,
+          scoreGroupe: groupe
+            ? (b.scoresGroupes.get(p.id)?.get(groupe.id)?.get('global') ?? null)
+            : null
+        }
+      ];
+    })
   };
 }
 
