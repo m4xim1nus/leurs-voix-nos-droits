@@ -3,6 +3,37 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Les tags `v*` du dépôt suivent ces versions.
 
+## [1.6.0] — 2026-11-01
+
+Cycle Recherche : on peut désormais chercher un texte, et plus seulement un·e élu·e. Aucune qualification,
+aucun score ni décisif modifié ; `editorial.json` est inchangé.
+
+### Ajouté
+
+- Case de recherche dans l'en-tête, sur toutes les pages : élu·es, code postal, pays, textes qualifiés et à
+  suivre, textes écartés avec leur motif. Menu au clavier, et page `/recherche?q=…` pour tous les résultats.
+- Index statiques `textes.json` et `pays.json`, chargés avec ceux des élu·es à la première frappe. Le moteur
+  tourne dans le navigateur : aucune requête ne dit ce que l'on cherche.
+- `pipeline/referentiels/termes_recherche.yaml` : environ 1 780 termes courants et surnoms d'usage public
+  (« APL », « loi Duplomb »), cherchés et jamais affichés, publics dans `termes_recherche.csv`. `lvnd check`
+  refuse une clé inconnue et les termes de la liste privée, et signale un texte qualifié sans terme.
+- `pipeline/referentiels/pays_circonscriptions.yaml` : 194 pays et territoires → circonscription des Français
+  établis hors de France (code électoral, tableau n° 1 ter), publics dans `pays_circonscriptions.csv`.
+- Méthodologie : paragraphes « Français établis hors de France » et « Recherche ».
+
+### Modifié
+
+- Case de l'accueil : elle trouve aussi un pays et donne le ou la député·e de la circonscription.
+
+### Limites connues
+
+- Aucune tolérance aux fautes de frappe ; la case de `/senat` ne cherche que les sénateur·ices.
+- Six pays et territoires absents du tableau de 2009 (Serbie, Monténégro, Kosovo, Territoires palestiniens,
+  Soudan du Sud, Taïwan) sont rattachés d'après le poste consulaire et Wikipédia, et le site le signale.
+- Un texte nouvellement qualifié n'a pas de termes tant qu'on ne les ajoute pas au YAML, hors de l'admin. Il
+  reste trouvable par son titre et son résumé.
+- Essayé dans Chromium seulement, sur bureau et mobile : ni Firefox, ni Safari, ni lecteur d'écran.
+
 ## [1.5.0] — 2026-11-01
 
 Cycle Relecture XVe : relecture de ce que la v1.4.0 a publié, reliquats d'outillage et de

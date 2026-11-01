@@ -23,10 +23,11 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] Admin, version `autre` du Sénat : droits, vigilance et sources se saisissent en JSON sur la fiche, pas avec les formulaires habituels (claude, 2026-10-31)
 - [ ] Cycle Sénat, hors cycle : amendements clés du Sénat (environ 31 suppressions hors budgets et retraites, sur 16 textes), cartes partageables des sénateur·ices, Comparer pour le Sénat, correspondance entre groupes des deux chambres (claude, 2026-10-31)
 - [ ] Vérifier le 02/11/2026 que la passe quotidienne (`donnees-quotidien.yml`, 5 h UTC) tourne bien : première avec la XVe et avec la v1.5.0. Attendu : plus d'attente de 20 minutes sur le dump des amendements (copie de la release, ou archive du cache), passe finie sous le plafond de 60 minutes, sync de l'admin sans erreur, build Cloudflare réussi, site à jour. Si elle échoue, rien n'est commité et le site garde les données de la veille : corriger, relancer à la main, et ne pas supprimer les branches (user:moi, 2026-11-01)
-- [ ] Une fois la passe du 02/11/2026 vérifiée : supprimer les branches `xve`, `worktree-textes-en-cours` et `relecture-xve`, fusionnées dans `main`, en local et sur GitHub, et les worktrees `.claude/worktrees/xve` et `textes-en-cours`. Tant qu'une branche existe sur GitHub, un push y lance un build d'aperçu Cloudflare (claude, 2026-11-01)
+- [ ] Une fois la passe du 02/11/2026 vérifiée : supprimer les branches `xve`, `worktree-textes-en-cours`, `relecture-xve` et `recherche`, fusionnées dans `main`, en local et sur GitHub, et les worktrees `.claude/worktrees/xve` et `textes-en-cours`. Tant qu'une branche existe sur GitHub, un push y lance un build d'aperçu Cloudflare (claude, 2026-11-01)
 - [ ] `/comparer` : un·e député·e y garde son score global face à un groupe sur sa seule législature, alors que la fiche compare désormais sur la même législature (règle 19). Le libellé du groupe dit la législature ; à aligner ou non (claude, 2026-11-01)
 - [ ] Recherche : tolérance aux fautes de frappe (« Kasbarien »), non prévue au cycle Recherche ; le moteur n'accepte que des mots justes, sans accents ni casse (claude, 2026-11-01)
 - [ ] Recherche sur `/senat` : la case de la page ne cherche ni pays ni textes. Sans objet pour les pays, les sénateur·ices des Français de l'étranger n'ayant pas de circonscription par pays ; à voir si la fusionner avec la case de l'en-tête (claude, 2026-11-01)
+- [ ] `/textes` : combiner un mot et les filtres (« pass sanitaire » en XVe). La case de l'en-tête suffit pour l'instant ; si le besoin apparaît, réutiliser le même moteur et les mêmes termes plutôt qu'une seconde recherche sur le titre (user:moi et claude, 2026-11-01)
 
 ## Textes à surveiller
 
@@ -40,16 +41,6 @@ Ce que les alertes de `lvnd check` et d'« À traiter » ne signalent pas. Le re
 ## Cycles candidats
 
 Un cycle à la fois, choisi et nommé au moment de l'ouvrir.
-
-### Recherche
-
-Une case de recherche sur tout le site. Aujourd'hui, on ne cherche que des élu·es, par nom ou code postal ; aucune recherche ne porte sur les textes. Index statique chargé à la demande (titres, résumés et étiquettes des textes qualifiés : 141 Ko, 44 Ko compressés), sans serveur : aucune requête ne quitte le navigateur. Relecture XVe étant close, rien ne bloque plus ce cycle.
-
-- [→Recherche] Une case dans l'en-tête, sur toutes les pages : élu·es, textes qualifiés et textes écartés avec leur motif. Hors index : les 18 000 scrutins et les justifications détaillées, sources de bruit (user:moi, 2026-11-01)
-- [→Recherche] Termes courants par texte (« APL », « reconnaissance faciale »), générés hors ligne et relus. Sur 20 termes testés, plusieurs ne donnent rien même avec les résumés (squat, APL, loi Duplomb) et les titres ne suffisent presque jamais (claude, 2026-10-30)
-- [→Recherche] Table pays → circonscription des Français de l'étranger (code électoral, art. L. 330-1) à saisir en référentiel : le code postal ne les couvre pas (claude, 2026-10-29)
-- [creuser] Où stocker les termes courants : YAML dans `pipeline/referentiels/` (recommandé, ne touche ni la sérialisation d'`editorial.json`, ni l'admin, ni D1, mais pas de saisie dans l'admin avant la passation) ou champ d'`editorial.json`. À trancher à l'ouverture du cycle (claude, 2026-11-01)
-- [creuser] Surnoms de lois (« loi Duplomb », « loi Darmanin ») : recommandation, seulement ceux d'usage public, comme clé de recherche sans affichage, pour rester factuel. À trancher à l'ouverture du cycle (claude, 2026-11-01)
 
 ### Sénat 2017-2022
 

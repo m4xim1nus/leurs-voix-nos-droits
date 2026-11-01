@@ -440,6 +440,10 @@ tourne dans le navigateur. Aucune requête ne dit ce que l'on cherche, pas même
 - **Pays** : la case de l'accueil et celle de l'en-tête donnent le ou la député·e de la circonscription. Un pays absent du tableau du
   code électoral le dit (`pays_circonscriptions.csv`, colonne `hors_tableau`).
 
+Choix validés par Max le 01/11/2026 : termes en YAML et hors de l'admin, surnoms jamais affichés sur les pages mais publics dans le
+CSV, six rattachements hors tableau signalés à côté du résultat, 103 Ko compressés pour `textes.json`. Pas de seconde case sur
+`/textes` : celle de l'en-tête couvre les mêmes textes.
+
 ### Code postal
 
 Saisie de cinq chiffres, puis résultat sans rechargement depuis la table

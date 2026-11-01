@@ -1,7 +1,7 @@
 # Clés de la recherche du site : ce que les gens tapent et que les titres officiels ne disent pas.
 #
 # Ces mots ne sont jamais affichés, ne jugent rien et n'entrent dans aucun score. Préparés hors ligne par Claude à partir
-# du titre et du résumé de chaque texte (cycle Recherche, 2026-11-01). Relecture de Max : voir docs/A_VALIDER.md.
+# du titre et du résumé de chaque texte (cycle Recherche, 2026-11-01). Relus et validés par Max le 01/11/2026.
 #
 # - `termes` : sigles et mots courants, chacun décrit par le texte lui-même ;
 # - `surnoms` : uniquement les noms d'usage public de la loi (« loi Duplomb »), jamais une formule militante ;
