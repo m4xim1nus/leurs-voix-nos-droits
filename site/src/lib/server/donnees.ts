@@ -81,6 +81,8 @@ export interface Donnees {
   scoresGroupes: Map<string, Map<string, Score>>;
   scoresDeputesTextes: Map<string, Map<string, Score>>;
   scoresDeputesLegislatures: Map<string, Map<string, Score>>;
+  /** Par député, puis par « législature|droit ». */
+  scoresDeputesDroitsLegislatures: Map<string, Map<string, Score>>;
   scoresGroupesTextes: Map<string, Map<string, Score>>;
   participation: Map<string, Participation>;
   /** Votes nominatifs des scrutins retenus : scrutin → député → position. */
@@ -627,6 +629,14 @@ function charger(): Donnees {
       exp('scores_deputes_legislatures'),
       'acteur_id',
       'legislature'
+    ),
+    scoresDeputesDroitsLegislatures: indexer(
+      exp('scores_deputes_droits_legislatures').map((r) => ({
+        ...r,
+        cle: `${r.legislature}|${r.droit}`
+      })),
+      'acteur_id',
+      'cle'
     ),
     scoresGroupesTextes: indexer(exp('scores_groupes_textes'), 'lignee', 'texte_id'),
     participation,

@@ -21,6 +21,7 @@ export const GET = () => {
       nom: `Groupe ${l.sigle}, ${legislature(l.legislature)}`,
       sigle: l.sigle,
       couleur: l.couleur,
+      legislature: l.legislature,
       lien: `/groupes/${l.slug}`,
       global: d.scoresGroupes.get(l.id)!.get('global')?.score ?? null,
       droits: valeurs(d.scoresGroupes.get(l.id), droits),
@@ -30,6 +31,17 @@ export const GET = () => {
     .filter((dep) => d.scoresDeputes.has(dep.id))
     .map((dep) => {
       const e = entree(d, dep);
+      const parDroit = d.scoresDeputesDroitsLegislatures.get(dep.id);
+      // Règle 19 : face à un groupe, le député est lu sur la seule législature de ce groupe.
+      const legislatures = Object.fromEntries(
+        [...(d.scoresDeputesLegislatures.get(dep.id) ?? [])].map(([leg, s]) => [
+          leg,
+          {
+            global: s.score,
+            droits: droits.map((c) => parDroit?.get(`${leg}|${c}`)?.score ?? null)
+          }
+        ])
+      );
       return {
         cle: `d:${dep.slug}`,
         nom: e.nom,
@@ -38,6 +50,7 @@ export const GET = () => {
         lien: `/deputes/${dep.slug}`,
         global: d.scoresDeputes.get(dep.id)!.get('global')?.score ?? null,
         droits: valeurs(d.scoresDeputes.get(dep.id), droits),
+        legislatures,
         textes: valeurs(d.scoresDeputesTextes.get(dep.id), textes)
       };
     })

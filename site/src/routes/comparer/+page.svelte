@@ -4,24 +4,16 @@
   premier en haut (curseur plein), le second en bas (curseur creux) ; un bandeau fixe les rappelle
   quand les grands chiffres sortent de l'écran. Données chargées à la demande
   (/comparer/donnees.json) ; le choix est gardé dans l'adresse (?a=…&b=…) pour être partagé.
+  Un député face à un groupe se lit sur la législature de ce groupe (règle 19, $lib/comparer).
 -->
 <script lang="ts">
   import { onMount } from 'svelte';
   import { replaceState } from '$app/navigation';
   import { page } from '$app/state';
-  import { pourcent } from '$lib/format';
+  import { faceA, legislatureCommune, type Entite } from '$lib/comparer';
+  import { legislature, pourcent } from '$lib/format';
   import { NOM } from '$lib/site';
 
-  interface Entite {
-    cle: string;
-    nom: string;
-    sigle: string;
-    couleur: string;
-    lien: string;
-    global: number | null;
-    droits: (number | null)[];
-    textes: (number | null)[];
-  }
   interface Donnees {
     droits: { code: string; court: string }[];
     textes: { id: string; titre: string; etat: string }[];
@@ -36,7 +28,12 @@
   const choisies = $derived(
     saisies.map((s) => donnees?.entites.find((e) => libelle(e) === s.trim()) ?? null)
   );
-  const [a, b] = $derived(choisies);
+  const [a, b] = $derived(
+    choisies[0] && choisies[1]
+      ? [faceA(choisies[0], choisies[1]), faceA(choisies[1], choisies[0])]
+      : choisies
+  );
+  const commune = $derived(a && b ? legislatureCommune(a, b) : null);
 
   const droits = $derived(
     a && b && donnees
@@ -161,8 +158,13 @@
       {/each}
     </section>
     <p class="petit discret">
-      Part des votes favorables aux droits, sur l’ensemble des textes qualifiés. Sur chaque ligne
-      ci-dessous, le premier en haut (curseur plein), le second en bas (curseur creux).
+      Part des votes favorables aux droits, {commune === null
+        ? 'sur l’ensemble des textes qualifiés'
+        : `sur les textes de la ${legislature(commune)} législature, celle de ce groupe`}.
+      {#if commune !== null && (a.global === null || b.global === null)}
+        Aucun vote compté pour {(a.legislatures ? a : b).nom} sur cette législature.
+      {/if}
+      Sur chaque ligne ci-dessous, le premier en haut (curseur plein), le second en bas (curseur creux).
     </p>
     <div class="bandeau" class:visible={!faceVisible} aria-hidden="true">
       <div>

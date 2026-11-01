@@ -473,7 +473,8 @@ attendant la table pays → circonscription (`BACKLOG.md`).
   lance les tests du site et un build complet.
 - Les scores par texte (fiche texte, fiche député) viennent aussi de
   `lvnd scores` (`scores_groupes_textes.csv`, `scores_deputes_textes.csv`). Le détail par législature de la fiche
-  député·e (règle 19) : `scores_deputes_legislatures.csv`.
+  député·e (règle 19) : `scores_deputes_legislatures.csv` ; le détail par droit pour `/comparer` :
+  `scores_deputes_droits_legislatures.csv`.
   Un test du site vérifie que les votes favorables relus vote par vote sur
   une fiche redonnent ceux de `scores_deputes.csv`.
 

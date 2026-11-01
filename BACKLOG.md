@@ -20,55 +20,47 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 
 ## À trier
 
-- [ ] Admin, version `autre` du Sénat : droits, vigilance et sources se saisissent en JSON sur la fiche, pas avec les formulaires habituels (claude, 2026-10-31)
-- [ ] Cycle Sénat, hors cycle : amendements clés du Sénat (environ 31 suppressions hors budgets et retraites, sur 16 textes), cartes partageables des sénateur·ices, Comparer pour le Sénat, correspondance entre groupes des deux chambres (claude, 2026-10-31)
 - [ ] Vérifier le 02/11/2026 que la passe quotidienne (`donnees-quotidien.yml`, 5 h UTC) tourne bien : première avec la XVe et avec la v1.5.0. Attendu : plus d'attente de 20 minutes sur le dump des amendements (copie de la release, ou archive du cache), passe finie sous le plafond de 60 minutes, sync de l'admin sans erreur, build Cloudflare réussi, site à jour. Si elle échoue, rien n'est commité et le site garde les données de la veille : corriger, relancer à la main, et ne pas supprimer les branches (user:moi, 2026-11-01)
-- [ ] Une fois la passe du 02/11/2026 vérifiée : supprimer les branches `xve`, `worktree-textes-en-cours`, `relecture-xve` et `recherche`, fusionnées dans `main`, en local et sur GitHub, et les worktrees `.claude/worktrees/xve` et `textes-en-cours`. Tant qu'une branche existe sur GitHub, un push y lance un build d'aperçu Cloudflare (claude, 2026-11-01)
-- [ ] `/comparer` : un·e député·e y garde son score global face à un groupe sur sa seule législature, alors que la fiche compare désormais sur la même législature (règle 19). Le libellé du groupe dit la législature ; à aligner ou non (claude, 2026-11-01)
-- [ ] Recherche : tolérance aux fautes de frappe (« Kasbarien »), non prévue au cycle Recherche ; le moteur n'accepte que des mots justes, sans accents ni casse (claude, 2026-11-01)
-- [ ] Recherche sur `/senat` : la case de la page ne cherche ni pays ni textes. Sans objet pour les pays, les sénateur·ices des Français de l'étranger n'ayant pas de circonscription par pays ; à voir si la fusionner avec la case de l'en-tête (claude, 2026-11-01)
-- [ ] `/textes` : combiner un mot et les filtres (« pass sanitaire » en XVe). La case de l'en-tête suffit pour l'instant ; si le besoin apparaît, réutiliser le même moteur et les mêmes termes plutôt qu'une seconde recherche sur le titre (user:moi et claude, 2026-11-01)
+- [ ] Une fois la passe du 02/11/2026 vérifiée : supprimer les branches `xve`, `worktree-textes-en-cours`, `relecture-xve` et `recherche`, fusionnées dans `main`, et les worktrees `.claude/worktrees/xve` et `textes-en-cours`. Seules les deux premières sont encore sur GitHub, où un push lance un build d'aperçu Cloudflare (claude, 2026-11-01)
 
 ## Textes à surveiller
 
 Ce que les alertes de `lvnd check` et d'« À traiter » ne signalent pas. Le reste se traite à l'alerte, un texte à la fois (« Au fil de l'eau » de `docs/QUALIFICATION.md`).
 
 - [ ] Territoires zéro chômeur (DLR5L17N51962, écarté à 96-0) : commission le 10/11, 2e lecture inscrite le 19/11/2026 ; alerte seulement si le vote n'est plus unanime. Règle 7 : un comité national de la CGT (privés d'emploi) vaut-il fédération ? Aucune source récente lue, à trancher si une position paraît (claude, 2026-10-30)
-- [ ] Réforme de l'audiovisuel public (DLR5L16N47697) : à l'arrêt depuis juillet 2025, à suivre avant tout vote final, fiche de suivi possible (user:moi, 2026-10-29)
-- [ ] Fiche de suivi prête dans `source/brouillons-suivi-attente/`, à charger dès l'inscription : ingérences étrangères (DLR5L17N54703). Casseurs-payeurs (DLR5L17N54925) est qualifié au cycle Sénat, sans fiche (décision de Max, 31/10/2026) (claude, 2026-10-30)
-- [ ] AGRASC (DLR5L17N53159, écarté au lot 6) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart. Au prochain passage, actualiser le motif, qui ne cite pas les articles 5 et 5 bis A (décision de Max, 30/10/2026) (claude, 2026-10-29)
+- [ ] Réforme de l'audiovisuel public (DLR5L16N47697) : à l'arrêt depuis juillet 2025, déjà qualifiée. `vote_posterieur` signale un vote final en scrutin public ; seul un vote sans scrutin public passerait inaperçu (user:moi, 2026-10-29)
+- [ ] Fiche de suivi prête dans `source/brouillons-suivi-attente/`, à charger dès l'inscription : ingérences étrangères (DLR5L17N54703). L'alerte `inscrit` se déclenchera, mais ne sait pas qu'une fiche est prête (claude, 2026-10-30)
+- [ ] AGRASC (DLR5L17N53159, écarté au lot 6, faute de source) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart. Aucune alerte ne le signale aujourd'hui (voir le cycle Prise en main). Au prochain passage, actualiser le motif, qui ne cite pas les articles 5 et 5 bis A (décision de Max, 30/10/2026) (claude, 2026-10-29)
 
 ## Cycles candidats
 
 Un cycle à la fois, choisi et nommé au moment de l'ouvrir.
 
-### Sénat 2017-2022
+### Sénat, suite
 
-Écarté du cycle XVe (décision de Max, 31/10/2026) : lire chaque version votée, et redécouper la période unique de la règle 26.
+Le Sénat de 2017-2022, écarté du cycle XVe (décision de Max, 31/10/2026) : lire chaque version votée, et redécouper la période unique de la règle 26. Et les compléments laissés hors du cycle Sénat.
 
-- [→Sénat 2017-2022] Votes du Sénat sur les textes de la XVe (claude, 2026-10-31)
+- [→Sénat, suite] Votes du Sénat sur les textes de la XVe (claude, 2026-10-31)
+- [→Sénat, suite] Amendements clés du Sénat (environ 31 suppressions hors budgets et retraites, sur 16 textes) (claude, 2026-10-31)
+- [→Sénat, suite] Cartes partageables des sénateur·ices (claude, 2026-10-31)
+- [→Sénat, suite] Comparer pour le Sénat, et correspondance entre groupes des deux chambres (claude, 2026-10-31)
 
 ### Passation
 
-Réécriture éditoriale, domaine définitif, comptes d'édition, transfert du
+Ce qui ne se fait qu'avec celles et ceux qui reprennent le projet : réécriture éditoriale, domaine définitif, comptes d'édition, transfert du
 compte Cloudflare et du dépôt.
 
-- [creuser] Le nom « Leurs voix, nos droits » fait écho à « Leurs votes » (Bon Pote) : filiation assumée ou risque de confusion, à trancher avant la passation ; recherche INPI non faite (claude, 2026-10-29)
+- [creuser] Le nom « Leurs voix, nos droits » fait écho à « Leurs votes » (Bon Pote) : filiation assumée ou risque de confusion, à trancher à la passation ; la recherche INPI se fait au cycle Prise en main (claude, 2026-10-29)
 - [creuser] Règle 7 : admettre les syndicats nationaux membres de Solidaires, qui y tiennent lieu de fédérations (SNJ) ? Retiré de la loi organique sur l'audiovisuel public au lot 6, à trancher à la passation (claude, 2026-10-29)
-- [→Passation] Une fois tout qualifié : réécrire pour le public les notes de méthode et les motifs d'écart des qualifications, qui citent les règles par leur numéro (≈ 60 notes, ≈ 50 motifs). Le site les replie déjà sous « Comment ce texte a été qualifié », numéros liés à la méthodologie (user:moi, 2026-10-29)
-- [→Passation] Revoir les qualifications politiquement sensibles, tranchées par une règle fixe ou par défaut :
-  - choix du droit principal qui inverse les groupes favorables et défavorables : antisemitisme-enseignement-superieur (discriminations étend contre libertes restreint), abrogation-obligation-vaccinale-2023 (travail-protection-sociale étend, retenu, contre sante restreint) ;
-  - energies-renouvelables-2023 et nucleaire-acceleration-2023, toutes deux `environnement` restreint par la règle 2 (choix d'énergie hors grille) : sur les renouvelables, RN, LR, LFI et GDR, qui ont voté contre, sont comptés favorables ;
-  - exécution provisoire de l'inéligibilité (RN, UDR et DR comptés favorables), peine d'inéligibilité (DLR5L16N47056), corps électoral de Nouvelle-Calédonie (2024 et 2026), droit de visite des parlementaires dans les établissements sociaux et médico-sociaux (RN compté favorable) ;
-  - purge des nullités (`restreint` par la règle 4 : seul LFI compté favorable), mortalité infantile (`sante` restreint sur les sociétés savantes : seuls 4 EPR comptés favorables)
-  (user:moi et claude, 2026-10-29)
+- [→Passation] Réécrire pour le public les notes de méthode et les motifs d'écart des qualifications, qui citent les règles par leur numéro (181 notes et 512 motifs au 01/11/2026). Le site les replie déjà sous « Comment ce texte a été qualifié », numéros liés à la méthodologie. Bon candidat à un traitement par LLM, relu (user:moi, 2026-10-29)
 - [→Passation] Rôles d'édition dans l'admin (rédacteur, valideur) : utile dès qu'il y a plusieurs personnes (un contributeur a accès à l'admin depuis le 29/10/2026) (claude, 2026-10-29)
-- [→Passation] Tutoriel de l'admin pour les futur·es rédacteur·ices (connexion par Access, qualifier un texte, contrôles, brouillon et publication) (user:moi, 2026-10-29)
-- [→Passation] Présentation du projet et des choix de méthode retenus : page « bento » ou PDF (user:moi, 2026-10-29)
+- [→Passation] Revoir l'exclusion de sources posée le 29/10/2026 (`CLAUDE.md`, règles dures) : la lever ou la garder, et ce que cela change pour les qualifications (claude, 2026-11-01)
+- [→Passation] Accord sur l'usage du fournisseur LLM (voir le cycle Pré-qualification), et transfert de la clé API (claude, 2026-11-01)
+- [creuser] Quiz « qui vote comme vous ? » sur de vrais scrutins, comme leurs-votes.fr : à discuter à la passation, pour la campagne de 2027 (claude, 2026-10-29)
 
 ### Pré-qualification automatique
 
-Non prioritaire, cycle à part. Les Actions appellent un LLM par API : les
+Après le cycle Prise en main. Son vrai gain vient quand le projet tourne sans Claude Code. Les Actions appellent un LLM par API : les
 nouveaux textes et les nouvelles sources arrivent dans « À traiter » avec une
 proposition, et la relecture ne part plus d'une feuille blanche. L'admin change
 peu : mêmes écrans, même validation, même bouton « Publier ». Garde-fous : le
@@ -83,23 +75,22 @@ vient de lui ; un cas non prévu remonte à un humain, sans règle inventée.
 - [→Pré-qualification] Contrôles sans LLM avant toute proposition : `editorial.valider`, décomptes, termes interdits, chaque extrait présent dans le document, URL qui répond. Un échec écarte la proposition et le dit (claude, 2026-10-30)
 - [→Pré-qualification] Exclusions de sources : prompt sans aucun nom, via la liste privée ; ce filtre ne repère pas un texte cosigné qui ne reprend pas les noms exclus, à contrôler à part (lire les signataires) (claude, 2026-10-30)
 - [→Pré-qualification] Clé API : secret GitHub de l'Action, workspace dédié, plafond de dépense ; un dépassement arrête les propositions, sans faire échouer la passe de données ; transfert à prévoir à la passation (claude, 2026-10-30)
-- [→Pré-qualification] Audit de cohérence : repérer les cas similaires tranchés différemment, avant la revue des qualifications sensibles (claude, 2026-10-30)
 - [→Pré-qualification] Mettre à jour « Qui qualifie, et comment » sur la page Méthodologie quand les propositions automatiques tournent, et confirmer auprès des futur·es utilisateur·ices que l'usage de ce fournisseur est accepté (claude, 2026-10-30)
+- [→Pré-qualification] Étendre la veille des sources aux textes écartés faute de source : c'est là qu'une source nouvelle change la décision (user:moi et claude, 2026-11-01)
+- [→Pré-qualification] Proposer les termes de recherche d'un texte nouvellement qualifié, ajoutés aujourd'hui à la main dans le YAML, hors de l'admin (claude, 2026-11-01)
+- [→Pré-qualification] Relire `mots_cles.yaml` (brouillon), qui présélectionne les textes à suivre : motifs larges, sources de faux positifs (« eau », « soins », « violences », « justice »), dont chacun coûterait un appel et une relecture (claude, 2026-10-29)
+- [→Pré-qualification] Résumés « facile à lire et à comprendre » des textes qualifiés, générés hors ligne par LLM et relus avant publication : nouveau champ d'`editorial.json`, à sérialiser à l'identique dans le pipeline et l'admin (claude, 2026-10-30)
 
 ## À creuser
 
-- [creuser] Rattachement scrutin → dossier : V6758 (loi d'urgence agricole) à la loi organique « natifs » de Nouvelle-Calédonie (DLR5L17N52104), lu dans `objet.dossierLegislatif`. Non retenu, sans effet sur les scores ; d'autres scrutins sont-ils touchés ? (claude, 2026-10-29)
-- [creuser] Relire `mots_cles.yaml` (brouillon), qui présélectionne les textes à suivre : motifs larges, sources de faux positifs (« eau », « soins », « violences », « justice ») (claude, 2026-10-29)
-- [creuser] Quiz « qui vote comme vous ? » sur de vrais scrutins, comme leurs-votes.fr (claude, 2026-10-29)
+- [creuser] `/textes` : combiner un mot et les filtres (« pass sanitaire » en XVe). La case de l'en-tête suffit pour l'instant ; si le besoin apparaît, réutiliser le même moteur et les mêmes termes plutôt qu'une seconde recherche sur le titre (user:moi et claude, 2026-11-01)
 - [creuser] Eurodéputés (HowTheyVote.eu) : hors périmètre national, à garder en tête (claude, 2026-10-29)
 - [creuser] Après la session close le 28/02/2027 : en cas de dissolution, une XVIIIe à ouvrir (`LEGISLATURES`, textes pendants à l'AN, à vérifier), et un bilan de la XVIIe pour la campagne (claude, 2026-10-30)
-- [creuser] Résumés « facile à lire et à comprendre » des textes qualifiés, générés hors ligne par LLM et relus avant publication : nouveau champ d'`editorial.json`, à sérialiser à l'identique dans le pipeline et l'admin (claude, 2026-10-30)
-- [creuser] `llms.txt` et documentation des données : pour interroger le site avec son propre outil, à ses frais (claude, 2026-10-30)
 - [creuser] Routeur public de questions, seulement si un besoin en direct apparaît : renvoi vers des fiches ou des filtres d'une liste fermée, aucune phrase rédigée sur un élu (claude, 2026-10-30)
-- [creuser] Interroger le catalogue de l'admin en langage naturel : peu d'utilisateurs et des filtres déjà là, intérêt à démontrer (user:moi, 2026-10-30)
 
 ## Refusé
 
+- [refusé] Interroger le catalogue de l'admin en langage naturel : peu d'utilisateurs, des filtres déjà là, et la même raison que l'assistant dans l'admin (user:moi et claude, 2026-11-01)
 - [refusé] Sénat : compter au Sénat un texte écarté à l'AN pour unanimité et disputé au Sénat (nationalisation d'EDF, douane, commission d'évaluation de l'aide, textile, chlordécone, devoir conjugal, accès à l'accompagnement, Territoires zéro chômeur) : un texte écarté l'est pour les deux chambres, règle 28 (décision de Max, 2026-10-31)
 - [refusé] Listes et « Prochains votes » : afficher la date de l'état. Le pied de page donne déjà la date des données sur chaque page (claude, 2026-10-31)
 - [refusé] « Non conforme » affiché pour une non-conformité partielle (2026-911 DC) : libellé de l'open data, absent du site, où la fiche dit « non-conformité partielle » (claude, 2026-10-31)

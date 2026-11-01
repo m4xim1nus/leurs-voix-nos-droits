@@ -147,3 +147,18 @@ def test_par_legislature_redonne_le_score_d_ensemble():
     # Le score d'ensemble de PA1 tient entre les deux.
     glob = {x["acteur_id"]: x for x in scores.calculer(temoins, votes, ventilations=[])["scores_deputes"] if x["droit"] == "global"}
     assert glob["PA1"]["score"] == 50.0
+
+
+def test_par_droit_legislature_separe_droits_et_legislatures():
+    temoins = {"textes": [
+        {"id": "a", "droits": [{"code": "libertes", "role": "principal", "sens": "restreint"}],
+         "scrutins": [{"id": "S15", "role": "decisif", "pour": "texte"}]},
+        {"id": "b", "droits": [{"code": "libertes", "role": "principal", "sens": "etend"},
+                               {"code": "sante", "role": "secondaire", "sens": "restreint"}],
+         "scrutins": [{"id": "S16", "role": "decisif", "pour": "texte"}]},
+    ]}
+    votes = [{"scrutin_id": "S15", "acteur_id": "PA1", "position": "contre"},
+             {"scrutin_id": "S16", "acteur_id": "PA1", "position": "contre"}]
+    r = scores.par_droit_legislature(temoins, votes, {"S15": 15, "S16": 16})
+    par = {(x["legislature"], x["droit"]): x["score"] for x in r}
+    assert par == {(15, "libertes"): 100.0, (16, "libertes"): 0.0, (16, "sante"): 100.0}

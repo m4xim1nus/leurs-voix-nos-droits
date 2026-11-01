@@ -306,7 +306,7 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
     ventilation officielle de l'AN. La fiche d'un député réunit tous ses
     votes, quelle que soit la législature, en donne le détail par législature et liste
     ses groupes successifs. Elle ne compare l'élu à son groupe que sur la législature de ce groupe
-    (décision de Max, 01/11/2026). Un groupe qui change de nom
+    (décision de Max, 01/11/2026), et `/comparer` fait de même face à tout groupe, score global et droit par droit. Un groupe qui change de nom
     (nouvel organe à l'AN) forme une seule **lignée**, sous son nom le plus
     récent : SOC → SOC-A en XVIe, À Droite → UDR → UDDPLR en XVIIe
     (`pipeline/referentiels/groupes.yaml`). Le score d'un

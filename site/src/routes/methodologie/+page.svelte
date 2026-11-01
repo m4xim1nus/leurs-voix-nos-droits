@@ -254,8 +254,9 @@
       <strong>Changement de groupe.</strong> Chaque vote compte pour le groupe où siégeait l’élu·e ce
       jour-là, d’après le décompte officiel de l’Assemblée. La fiche d’un·e député·e réunit tous ses votes,
       toutes législatures confondues, avec le détail par législature ; elle ne compare l’élu·e à son groupe
-      que sur la législature de ce groupe. Un groupe qui change de nom reste un seul groupe, sous son
-      nom le plus récent. Le score d’un groupe réunit les votes de ses membres, pas ses positions.
+      que sur la législature de ce groupe, et la page Comparer fait de même face à tout groupe. Un groupe
+      qui change de nom reste un seul groupe, sous son nom le plus récent. Le score d’un groupe réunit
+      les votes de ses membres, pas ses positions.
     </li>
   </ol>
   <p class="petit discret">

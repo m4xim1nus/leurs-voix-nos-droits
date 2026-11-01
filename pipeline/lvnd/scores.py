@@ -201,10 +201,22 @@ def par_legislature(temoins: dict, votes: list[dict], legislatures: dict[str, in
             for r in _agreger(lignes_dep, "acteur_id")]
 
 
+def par_droit_legislature(temoins: dict, votes: list[dict], legislatures: dict[str, int], regles: dict | None = None) -> list[dict]:
+    """Score de chaque député sur chaque droit, pour chaque législature où il a voté : /comparer le confronte à un
+    groupe sur la seule législature de ce groupe (règle 19). Mêmes poids que `par_legislature`."""
+    regles = {**REGLES, **(regles or {})}
+    comptes = [{**c, "droit": f"{legislatures[c['scrutin_id']]}|{c['droit']}"} for c in scrutins_comptes(temoins, regles)
+               if c["droit"] != "global"]
+    lignes_dep, _ = _lignes(comptes, votes, regles, [])
+    return [{"acteur_id": r["acteur_id"], "legislature": int(r["droit"].split("|")[0]), "droit": r["droit"].split("|")[1],
+             **{k: v for k, v in r.items() if k not in ("acteur_id", "droit")}}
+            for r in _agreger(lignes_dep, "acteur_id")]
+
+
 # --- lvnd scores : depuis data/export/ (sans dump) -----------------------------------------------
 
 FICHIERS = ("scores_scrutins", "scores_deputes", "scores_groupes", "scores_deputes_textes", "scores_groupes_textes",
-            "scores_deputes_legislatures", "participation")
+            "scores_deputes_legislatures", "scores_deputes_droits_legislatures", "participation")
 
 
 def _votes_export(export: Path, scrutins: pl.DataFrame) -> pl.DataFrame:
@@ -259,6 +271,7 @@ def depuis_export(export: Path, qualif: dict) -> dict[str, list[dict]]:
     sc = calculer(qualif, votes.to_dicts(), ventilations=ventil.to_dicts())
     sc |= par_texte(qualif, votes.to_dicts(), ventilations=ventil.to_dicts())
     sc["scores_deputes_legislatures"] = par_legislature(qualif, votes.to_dicts(), dict(utiles.select("id", "legislature").iter_rows()))
+    sc["scores_deputes_droits_legislatures"] = par_droit_legislature(qualif, votes.to_dicts(), dict(utiles.select("id", "legislature").iter_rows()))
     mandats = pl.read_csv(export / "mandats.csv", infer_schema=False).with_columns(pl.col("legislature").cast(pl.Int64))
     sc["participation"] = participation(sc["scores_scrutins"], scrutins, votes, mandats)
     return sc
