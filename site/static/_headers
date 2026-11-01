@@ -18,6 +18,17 @@
   Cache-Control: public, max-age=3600
   Access-Control-Allow-Origin: *
 
+# Pour interroger le site avec son propre outil (llms.txt).
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
+
+/donnees.md
+  Content-Type: text/markdown; charset=utf-8
+  Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
+
 /recherche/*
   Cache-Control: public, max-age=3600
 
