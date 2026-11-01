@@ -32,6 +32,7 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] LOPJ 2023, SN2022-297 : les conseils de l'ordre de Paris, Lyon et Marseille contestent une « atteinte au droit d'accès à un juge », sans droit de la grille pour la justice commerciale. Statut de ces conseils au regard de la règle 7, à trancher (claude, 2026-11-01)
 - [ ] LOM 2019 : la note publiée dit « faute de source admise lue » sur le contrôle automatisé, alors que l'avis n° 395539 du Conseil d'État en parle (risques d'atteinte, mais dispositif admis). Corriger la note (claude, 2026-11-01)
 - [ ] Amendements clés des budgets au Sénat : 52 candidats non lus (claude, 2026-11-01)
+- [ ] Fiche d'un groupe NI : presque tous les député·es y figurent en « anciens membres » (630 en XVIIe, dont 4 seulement ont voté comme NI), car l'open data les inscrit NI entre l'élection et la formation des groupes. N'y lister que les personnes qui ont voté sous ce groupe, comme règle fixe. (claude, signalé par Max, 2026-11-01)
 - [ ] Présentation : PDF au texte sélectionnable, et chiffres à relire à chaque évolution de la méthode (claude, 2026-11-01)
 
 ## Textes à surveiller
