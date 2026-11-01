@@ -362,7 +362,7 @@ lignes précédentes sont inchangées.
 - `sync-admin` : 82 lignes de plus au premier sync incrémental, 0 ensuite à
   export égal.
 
-**Alertes** (`lvnd/alertes.py`, `en_cours_alertes.csv`). Quatre avertissements,
+**Alertes** (`lvnd/alertes.py`, `en_cours_alertes.csv`). Des avertissements,
 affichés par `lvnd check` et par la file « À traiter » de l'admin. Ils ne font
 jamais échouer le contrôle : un nouveau vote ne doit pas bloquer l'Action.
 
@@ -371,6 +371,7 @@ jamais échouer le contrôle : un nouveau vote ne doit pas bloquer l'Action.
 | `vote_posterieur` | vote sur l'ensemble après le décisif (ou la motion de censure) retenu d'un texte qualifié | 0 |
 | `unanimite_contestee` | texte écarté pour unanimité dont le décisif proposé a des voix des deux côtés | 0 |
 | `premier_decisif` | décisif proposé sur un texte ni qualifié ni écarté | 0 |
+| `vote_sans_decisif` | lecture de l'AN close sans décisif proposé sur un texte ni qualifié, ni écarté, ni à l'arrêt : rejet d'une partie, vote sans scrutin public | 3 (01/11/2026) |
 | `inscrit` | texte ni qualifié ni écarté, inscrit **en séance** (pas en commission) | 14 |
 
 L'admin retire ce que D1 a déjà pris en compte, même avant publication : une
@@ -384,11 +385,25 @@ navette ». Les lectures du Sénat n'ont ni scrutin ni mode (`NON_RENSEIGNE`) :
 ses votes sont dans `data/export/senat/`. Les 49.3 de la XVIe n'ont pas de scrutin miroir
 ici (motions sans `voteRefs`) : leur mode reste `ART_49_3`.
 
+## Build local et exports
+
+`lvnd build` est déterministe : sur les dumps qui ont produit les exports versionnés, il les redonne à l'octet près, sauf
+`meta.json` (vérifié le 01/11/2026 sur les 97 fichiers de votes et le reste). Les écarts viennent donc de `data/raw/`, dont la
+date diffère de celle du cache de la CI. Cette différence est normale : aucun code ne la corrige. Pour ne changer qu'une partie
+des exports :
+
+1. `lvnd download --leger`, pour rapprocher `data/raw/` de la CI, puis `lvnd build` et `lvnd check` ;
+2. `git diff --stat data/export/` : l'écart doit s'expliquer par le changement voulu et par les votes parus depuis la dernière passe ;
+3. commiter en nommant les fichiers voulus, puis `git restore data/export/` pour le reste, `meta.json` compris : la passe
+   quotidienne suivante rattrape les données du jour.
+
+Tout écart sur `scores_*.csv` ou `participation.csv` sans qualification nouvelle est à comprendre avant de commiter.
+
 ## Mise à jour : passe quotidienne et données figées
 
 Deux Actions. `donnees-quotidien.yml` (chaque jour, 5 h UTC) rafraîchit les dossiers
 de la XVIIe, ses scrutins, l'agenda et Dosleg avec `lvnd download --leger`. Les autres archives
-viennent du cache de l'Action. `donnees.yml` (lundi) rafraîchit le reste ; si un dump
+viennent du cache de l'Action, ou de la release `donnees-figees` si elles manquent, sans attendre le dump de l'AN. `donnees.yml` (lundi) rafraîchit le reste ; si un dump
 d'amendements est injoignable, l'archive précédente sert, sans échec ; à défaut, voir
 ci-dessous.
 
@@ -565,8 +580,13 @@ Mesures du 31/10/2026, cycle XVe.
   ensuite : 11 d'entre eux portent des votes de la XVe. Ils viennent du dump de la XIVe, arrêté à juin 2017, et leur
   loi est saisie dans `referentiels/rattachements.yaml`, avec le numéro et la date lus dans Dosleg. Ils n'ont pas de
   NOR, donc pas de lien vers Légifrance.
-- **Rattachements figés.** 73 scrutins sans `voteRefs` ni séance exploitable sont rattachés à la main dans ce même
-  référentiel. Il en reste 3 sans dossier : deux déclarations du Gouvernement et une déclaration de politique générale.
+- **Rattachements figés.** 75 scrutins sont rattachés à la main dans ce même référentiel, qui prime sur la proximité dans
+  la séance. Il corrige aussi deux champs du catalogue (`catalogue:`) : le titre de la programmation de la recherche et le sens
+  de la décision 2021-817 DC.
+- **Déclarations du Gouvernement** (art. 49 ou 50-1). Elles ne vont qu'à leur propre dossier (procédure 11), quand il existe :
+  le texte débattu le même jour ne les reçoit plus (règle corrigée le 01/11/2026). Les autres restent sans dossier.
+- **Intitulés.** Pour V45, V738 et V1612, le titre du scrutin ne cite pas le même article que la division de l'amendement (6 et
+  7, 4 et 5, 1 et 2). Les deux viennent de l'open data, rien ne permet de trancher sans lecture, et aucune qualification ne les retient.
 - **Ventilations incomplètes** (`lvnd check`, listes fermées). 13 scrutins dont le décompte officiel dépasse la somme
   des groupes : un groupe manque, le plus souvent le MoDem (46 voix), et rien ne permet de reconstruire ses votes. Le
   seul vote sur l'ensemble touché de façon notable est V2816 (loi organique sur la dette sociale). 17 ventilations

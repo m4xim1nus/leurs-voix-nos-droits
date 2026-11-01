@@ -33,6 +33,11 @@ dossiers_xiv:
   DLR5L14N35702: null  # défense, Nigéria
   DLR5L14N35350: null  # compétence judiciaire, Saint-Barthélemy, Saint-Pierre-et-Miquelon, Wallis-et-Futuna
 
+# Champs du catalogue faux ou vides dans le dump de la XVe, corrigés d'après la loi ou la décision.
+catalogue:
+  DLR5L15N40171: { titre: "Programmation de la recherche pour les années 2021 à 2030" }  # dump : « 2021 à 2027 » ; titreLoi : 2030
+  DLR5L15N40712: { cc_sens: "Partiellement conforme" }  # 2021-817 DC, statutConclusion vide dans le dump
+
 scrutins:
   - { numeros: "57-84", dossier: DLR5L14N35825, etape: AN1 }       # confiance dans la vie publique, loi ordinaire
   - { numeros: "145 147", dossier: DLR5L15N35984, etape: AN1 }     # programmation des finances publiques 2018-2022
@@ -43,7 +48,8 @@ scrutins:
   - { numeros: "413", dossier: DLR5L14N33686, etape: AN1 }
   - { numeros: "438", dossier: DLR5L15N36497 }                     # commission spéciale, AAH et revenus du conjoint
   - { numeros: "442-446 984-989", dossier: DLR5L14N36020, etape: AN1 }  # gens du voyage (Sénat, ppl16-557)
-  - { numeros: "1093", dossier: DLR5L15N36410, etape: AN1 }        # immigration, asile, intégration
+  - { numeros: "1093 1094", dossier: DLR5L15N36410, etape: ANNLEC }  # immigration, asile, intégration : motions de nouvelle lecture
+  - { numeros: "1518", dossier: DLR5L15N36892, etape: ANLDEF }     # PLFSS 2019 : motion de renvoi, lecture définitive
   - { numeros: "1820", dossier: DLR5L14N33655, etape: AN1 }        # droit des sociétés
   - { numeros: "1821", dossier: DLR5L14N35831, etape: AN1 }
   - { numeros: "1823", dossier: DLR5L14N35702, etape: AN1 }

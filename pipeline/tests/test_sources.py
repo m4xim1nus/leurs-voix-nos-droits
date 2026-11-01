@@ -87,6 +87,31 @@ def test_fichier_distant_change_on_repart_de_zero(tmp_path):
     assert cible.read_bytes() == DONNEES
 
 
+def test_partiel_trop_long_repart_de_zero(tmp_path):
+    """Même date, même taille annoncée, mais un partiel plus long : il ne peut venir que d'une autre version."""
+    cible = tmp_path / "a.zip"
+    part, etat = sources._etat(cible)
+    part.write_bytes(b"x" * (len(DONNEES) + 10))
+    etat.write_text(json.dumps({"url": "https://an/a.zip", "last_modified": LM, "taille": len(DONNEES)}))
+    transport, _ = serveur(len(DONNEES), [])
+    with httpx.Client(transport=transport) as c:
+        sources.telecharger(c, "https://an/a.zip", cible)
+    assert cible.read_bytes() == DONNEES
+
+
+def test_taille_inattendue_purge_le_partiel(tmp_path):
+    """Le GET livre une autre version que celle annoncée par le HEAD : erreur, et rien à supprimer à la main."""
+    def gerer(req):
+        h = {"last-modified": LM, "content-length": "10"}
+        return httpx.Response(200, headers=h, content=b"" if req.method == "HEAD" else b"y" * 25)
+
+    cible = tmp_path / "a.zip"
+    with httpx.Client(transport=httpx.MockTransport(gerer)) as c, pytest.raises(SystemExit, match="attendu 10"):
+        sources.telecharger(c, "https://an/a.zip", cible)
+    part, etat = sources._etat(cible)
+    assert not part.exists() and not etat.exists() and not cible.exists()
+
+
 def test_abandon_sans_progres(tmp_path, monkeypatch):
     transport, _ = serveur(100, [0] * 10_000)
     t = iter(range(0, 10**9, 1000))
@@ -324,10 +349,45 @@ def test_chaine_leger_sans_archive_prend_la_copie(tmp_path, monkeypatch):
     copie = tmp_path / "copie.zip"
     _zip(copie)
     raw = tmp_path / "raw"
-    _chaine(tmp_path, monkeypatch, release=copie)
+    appels = _chaine(tmp_path, monkeypatch, release=copie)
     monkeypatch.setattr(sources, "LEGERES", ())
     sources.download(raw, leger=True)
     assert (raw / "am/x/json/a/b/c.json").exists()
+    assert not any("an/" in a for a in appels)  # sans attendre le dump de l'AN
+
+
+def test_chaine_leger_sans_copie_retente_le_dump(tmp_path, monkeypatch):
+    dump = tmp_path / "dump.zip"
+    _zip(dump)
+    raw = tmp_path / "raw"
+    _chaine(tmp_path, monkeypatch, an=dump)
+    monkeypatch.setattr(sources, "LEGERES", ())
+    sources.download(raw, leger=True)
+    assert (raw / "am/x/json/a/b/c.json").exists()
+
+
+def test_chaine_leger_reutilise_un_plan_b_acheve(tmp_path, monkeypatch):
+    raw = tmp_path / "raw"
+    fichier = raw / "am/unitaire/json/d/t/a.json"
+    fichier.parent.mkdir(parents=True)
+    fichier.write_text("{}")
+    appels = _chaine(tmp_path, monkeypatch)
+    monkeypatch.setattr(sources, "LEGERES", ())
+    (raw / "manifeste.json").write_text(json.dumps({"am": {"mode": "secours"}}))
+    sources.download(raw, leger=True)
+    assert appels == [] and fichier.exists()
+
+
+def test_chaine_leger_ne_prend_pas_un_plan_b_inacheve(tmp_path, monkeypatch):
+    """Sans ligne au manifeste, le plan B est inachevé : la copie de la release le remplace."""
+    copie = tmp_path / "copie.zip"
+    _zip(copie)
+    raw = tmp_path / "raw"
+    (raw / "am/unitaire/json/d").mkdir(parents=True)
+    appels = _chaine(tmp_path, monkeypatch, release=copie)
+    monkeypatch.setattr(sources, "LEGERES", ())
+    sources.download(raw, leger=True)
+    assert any("gh" in a for a in appels) and (raw / "am/x/json/a/b/c.json").exists()
 
 
 def test_url_decision_sans_prefixe_repete():

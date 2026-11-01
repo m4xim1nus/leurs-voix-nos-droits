@@ -53,15 +53,15 @@
     Part des votes favorables aux droits sur les textes qualifiés de la législature, au sens du
     droit principal de chaque texte. Législature en cours (XVIIe, depuis juillet 2024).
   </p>
-  <Regle lignes={lignes(17)} />
+  <Regle comptes lignes={lignes(17)} />
   <details>
     <summary>XVIe législature (2022-2024)</summary>
-    <Regle lignes={lignes(16)} legende={false} />
+    <Regle comptes lignes={lignes(16)} legende={false} />
   </details>
   {#if lignes(15).length}
     <details>
       <summary>XVe législature (2017-2022)</summary>
-      <Regle lignes={lignes(15)} legende={false} />
+      <Regle comptes lignes={lignes(15)} legende={false} />
     </details>
   {/if}
   <p><a href="/groupes">Les groupes droit par droit</a></p>

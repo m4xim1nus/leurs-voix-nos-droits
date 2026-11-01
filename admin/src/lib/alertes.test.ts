@@ -22,6 +22,9 @@ describe('resteATraiter', () => {
   it('fiche de suivi : répond à l’inscription, pas au vote qui suit', () => {
     expect(resteATraiter(alerte('inscrit'), 'a-suivre', '{}')).toBe(false);
     expect(resteATraiter(alerte('premier_decisif'), 'a-suivre', '{}')).toBe(true);
+    expect(resteATraiter(alerte('vote_sans_decisif'), 'a-suivre', '{}')).toBe(true);
+    expect(resteATraiter(alerte('vote_sans_decisif'), null, null)).toBe(true);
+    expect(resteATraiter(alerte('vote_sans_decisif'), 'ecarte', '{}')).toBe(false);
   });
 
   it('vote postérieur : traité quand la qualification retient ce scrutin', () => {

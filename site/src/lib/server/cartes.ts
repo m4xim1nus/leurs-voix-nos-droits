@@ -168,13 +168,20 @@ export function carteDepute(slug: string): Carte {
       ? 'Ancienne députée'
       : 'Ancien député';
   const reperes: Repere[] = [];
-  if (v.global?.score != null)
-    reperes.push({ libelle: d.nom, couleur: v.groupe?.couleur ?? ENCRE, score: v.global.score });
-  if (v.lignee && v.scoreGroupe?.score != null)
+  const c = v.comparaison;
+  const suffixe = c?.plusieurs ? `, ${legislature(c.legislature)}` : '';
+  const scoreDepute = c?.depute.score ?? v.global?.score;
+  if (scoreDepute != null)
     reperes.push({
-      libelle: `groupe ${v.lignee.sigle}`,
+      libelle: `${d.nom}${suffixe}`,
+      couleur: v.groupe?.couleur ?? ENCRE,
+      score: scoreDepute
+    });
+  if (v.lignee && c?.groupe.score != null)
+    reperes.push({
+      libelle: `groupe ${v.lignee.sigle}${suffixe}`,
       couleur: v.lignee.couleur,
-      score: v.scoreGroupe.score
+      score: c.groupe.score
     });
   return {
     titre: `${d.prenom} ${d.nom}`,

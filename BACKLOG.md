@@ -22,14 +22,14 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 
 - [ ] Admin, version `autre` du Sénat : droits, vigilance et sources se saisissent en JSON sur la fiche, pas avec les formulaires habituels (claude, 2026-10-31)
 - [ ] Cycle Sénat, hors cycle : amendements clés du Sénat (environ 31 suppressions hors budgets et retraites, sur 16 textes), cartes partageables des sénateur·ices, Comparer pour le Sénat, correspondance entre groupes des deux chambres (claude, 2026-10-31)
-- [ ] Vérifier le 02/11/2026 que la passe quotidienne (`donnees-quotidien.yml`, 5 h UTC) tourne bien : première avec la XVe. Attendu : environ 20 minutes d'attente sur le dump des amendements avant la copie de la release, passe finie sous le plafond de 60 minutes, sync de l'admin sans erreur, build Cloudflare réussi, site à jour (user:moi, 2026-11-01)
-- [ ] Une fois la passe du 02/11/2026 vérifiée : supprimer les branches `xve` et `worktree-textes-en-cours`, fusionnées dans `main`, et leurs worktrees. Tant qu'une branche existe, un push y lance un build d'aperçu Cloudflare (claude, 2026-11-01)
+- [ ] Vérifier le 02/11/2026 que la passe quotidienne (`donnees-quotidien.yml`, 5 h UTC) tourne bien : première avec la XVe et avec la v1.5.0. Attendu : plus d'attente de 20 minutes sur le dump des amendements (copie de la release, ou archive du cache), passe finie sous le plafond de 60 minutes, sync de l'admin sans erreur, build Cloudflare réussi, site à jour. Si elle échoue, rien n'est commité et le site garde les données de la veille : corriger, relancer à la main, et ne pas supprimer les branches (user:moi, 2026-11-01)
+- [ ] Une fois la passe du 02/11/2026 vérifiée : supprimer les branches `xve`, `worktree-textes-en-cours` et `relecture-xve`, fusionnées dans `main`, en local et sur GitHub, et les worktrees `.claude/worktrees/xve` et `textes-en-cours`. Tant qu'une branche existe sur GitHub, un push y lance un build d'aperçu Cloudflare (claude, 2026-11-01)
+- [ ] `/comparer` : un·e député·e y garde son score global face à un groupe sur sa seule législature, alors que la fiche compare désormais sur la même législature (règle 19). Le libellé du groupe dit la législature ; à aligner ou non (claude, 2026-11-01)
 
 ## Textes à surveiller
 
 Ce que les alertes de `lvnd check` et d'« À traiter » ne signalent pas. Le reste se traite à l'alerte, un texte à la fois (« Au fil de l'eau » de `docs/QUALIFICATION.md`).
 
-- [ ] PLFSS 2027 (DLR5L17N54951) : rejeté à l'AN par le rejet d'une partie, aucune alerte tant que celle du cycle Relecture XVe n'existe pas (claude, 2026-10-30)
 - [ ] Territoires zéro chômeur (DLR5L17N51962, écarté à 96-0) : commission le 10/11, 2e lecture inscrite le 19/11/2026 ; alerte seulement si le vote n'est plus unanime. Règle 7 : un comité national de la CGT (privés d'emploi) vaut-il fédération ? Aucune source récente lue, à trancher si une position paraît (claude, 2026-10-30)
 - [ ] Réforme de l'audiovisuel public (DLR5L16N47697) : à l'arrêt depuis juillet 2025, à suivre avant tout vote final, fiche de suivi possible (user:moi, 2026-10-29)
 - [ ] Fiche de suivi prête dans `source/brouillons-suivi-attente/`, à charger dès l'inscription : ingérences étrangères (DLR5L17N54703). Casseurs-payeurs (DLR5L17N54925) est qualifié au cycle Sénat, sans fiche (décision de Max, 31/10/2026) (claude, 2026-10-30)
@@ -39,23 +39,9 @@ Ce que les alertes de `lvnd check` et d'« À traiter » ne signalent pas. Le re
 
 Un cycle à la fois, choisi et nommé au moment de l'ouvrir.
 
-### Relecture XVe
-
-Cycle ouvert le 01/11/2026 (décision de Max), détail dans `ROADMAP.md` : relire ce que la v1.4.0 a publié et solder les reliquats d'outillage et de catalogue.
-
-- [→Relecture XVe] Filtre Législature de `/textes` : options XVIIe et XVIe en dur, pas de XVe, et « Les deux » pour trois législatures (`site/src/routes/textes/+page.svelte:51`) (claude, 2026-11-01)
-- [→Relecture XVe] Revoir le site avec les qualifications de la XVe : vues par législature, fiche député·e et score par législature (règle 19), jamais relus avec de vraies données (claude, 2026-11-01)
-- [→Relecture XVe] Alertes : aucune ne signale un texte rejeté par le rejet d'une partie (PLFSS 2027, V9097) ni un vote sur l'ensemble sans scrutin public ; `etat` les suit, pas `lvnd check` (claude, 2026-10-30)
-- [→Relecture XVe] `lvnd check` : le délai de 14 jours (`DELAI_AMENDEMENTS`) retire à tort du taux de la XVIe ses derniers scrutins (3 041/3 053 affichés, au lieu de 3 159/3 173), alors que cette législature est figée (claude, 2026-10-30)
-- [→Relecture XVe] `lvnd download --leger` en local : pour les amendements XVe et XVIe issus du plan B ou de la copie de la release (sans zip du dump), il retente le dump de l'AN et reste bloqué jusqu'à 20 minutes. En CI, seulement quand l'archive manque au cache. Un `.part` repris alors que l'AN a publié un nouveau fichier échoue (« taille X, attendu Y ») et reste à supprimer à la main (claude, 2026-11-01)
-- [→Relecture XVe] `lvnd build` en local réécrit les exports de l'AN quand `data/raw/` diffère de la copie de la CI. Pour ne changer que le Sénat, restaurer ces fichiers avant de commiter (claude, 2026-10-31)
-- [→Relecture XVe] Catalogue XVe, scrutins mal rattachés ou mal situés, sans effet sur décisif ni scores : V483 à l'immigration, V1094 à DLR5L15N36601, V1093 en AN1 alors que c'est la nouvelle lecture, V1518 et V1536 à la programmation de la justice, V1941 à la LOM, V3838 à la révision constitutionnelle, V3518 et V3633 à climat et résilience. Titre différent de la division de l'amendement ou du PDF : V45, V738, V1612 (claude, 2026-11-01)
-- [→Relecture XVe] Catalogue : `cc_sens` vide pour 2021-817 DC ; `textes.csv` titre « 2021 à 2027 » pour la programmation de la recherche, la loi dit 2030. Sans effet à l'affichage (claude, 2026-10-31)
-- [→Relecture XVe] Fiche député·e : « Prochains votes » ne liste pas les textes du seul Sénat attendus à l'AN (casseurs-payeurs), pour ne rien changer aux vues de l'AN pendant le cycle Sénat (claude, 2026-10-31)
-
 ### Recherche
 
-Une case de recherche sur tout le site. Aujourd'hui, on ne cherche que des élu·es, par nom ou code postal ; aucune recherche ne porte sur les textes. Index statique chargé à la demande (titres, résumés et étiquettes des textes qualifiés : 141 Ko, 44 Ko compressés), sans serveur : aucune requête ne quitte le navigateur. À faire après Relecture XVe, car elle enverra les lecteurs vers ces pages.
+Une case de recherche sur tout le site. Aujourd'hui, on ne cherche que des élu·es, par nom ou code postal ; aucune recherche ne porte sur les textes. Index statique chargé à la demande (titres, résumés et étiquettes des textes qualifiés : 141 Ko, 44 Ko compressés), sans serveur : aucune requête ne quitte le navigateur. Relecture XVe étant close, rien ne bloque plus ce cycle.
 
 - [→Recherche] Une case dans l'en-tête, sur toutes les pages : élu·es, textes qualifiés et textes écartés avec leur motif. Hors index : les 18 000 scrutins et les justifications détaillées, sources de bruit (user:moi, 2026-11-01)
 - [→Recherche] Termes courants par texte (« APL », « reconnaissance faciale »), générés hors ligne et relus. Sur 20 termes testés, plusieurs ne donnent rien même avec les résumés (squat, APL, loi Duplomb) et les titres ne suffisent presque jamais (claude, 2026-10-30)

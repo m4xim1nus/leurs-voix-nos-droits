@@ -48,9 +48,8 @@
   <label>
     Législature
     <select bind:value={leg}>
-      <option value="">Les deux</option>
-      <option value="17">{legislature(17)}</option>
-      <option value="16">{legislature(16)}</option>
+      <option value="">Toutes</option>
+      {#each data.legislatures as l (l)}<option value={String(l)}>{legislature(l)}</option>{/each}
     </select>
   </label>
   <label>

@@ -45,6 +45,11 @@
       : null
   );
 
+  // Règle 19 : à partir de deux législatures, la règle dit sur laquelle se fait la comparaison.
+  const suffixe = $derived(
+    data.comparaison?.plusieurs ? `, ${legislature(data.comparaison.legislature)}` : ''
+  );
+
   const seancesDe = (p: (typeof data.prochains)[number]) =>
     p.seances.length ? p.seances : p.date_inscrite ? [p.date_inscrite] : [];
   const mailtoProchain = (p: (typeof data.prochains)[number]) => {
@@ -143,7 +148,9 @@
           'scrutin compté',
           'scrutins comptés'
         )}
-        tenus pendant son mandat ({pourcent(data.participation.taux)}).
+        tenus pendant {data.depute.mandats.length > 1 ? 'ses mandats' : 'son mandat'} ({pourcent(
+          data.participation.taux
+        )}).
       {/if}
       {#if data.global.abstentions}{pluriel(data.global.abstentions, 'abstention')}, hors calcul.{/if}
     </p>
@@ -151,8 +158,10 @@
   {#if data.parLegislature.length > 1}
     <p class="par-legislature">
       Par législature :
-      {#each data.parLegislature as l, i (l.legislature)}{#if i},
-        {/if}<span class="chiffre">{pourcent(l.score.score)}</span> en {legislature(l.legislature)}
+      {#each data.parLegislature as l, i (l.legislature)}{#if i},{' '}{/if}<span class="chiffre"
+          >{pourcent(l.score.score)}</span
+        >
+        en {legislature(l.legislature)}
         ({pluriel(l.score.n_textes, 'texte')}){/each}.
     </p>
   {/if}
@@ -160,19 +169,19 @@
     lignes={[
       {
         cle: 'depute',
-        libelle: d.nom,
-        score: data.global.score,
+        libelle: `${d.nom}${suffixe}`,
+        score: data.comparaison?.depute.score ?? data.global.score,
         avant: true,
         couleur: data.groupe?.couleur
       },
-      ...(data.lignee && data.scoreGroupe
+      ...(data.lignee && data.comparaison
         ? [
             {
               cle: 'groupe',
-              libelle: `Groupe ${data.lignee.sigle}`,
+              libelle: `Groupe ${data.lignee.sigle}${suffixe}`,
               href: `/groupes/${data.lignee.slug}`,
               couleur: data.lignee.couleur,
-              score: data.scoreGroupe.score
+              score: data.comparaison.groupe.score
             }
           ]
         : [])

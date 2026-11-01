@@ -16,7 +16,8 @@ Pour une source qui a une copie dans la release `donnees-figees` du dépôt (`ar
 chaîne est : dump de l'AN, puis cette copie, puis le plan B. Le dump reste tenté à chaque
 lancement complet et remplace tout dès qu'il passe.
 `download --leger` (passe quotidienne) ne rafraîchit que `LEGERES` et réutilise
-les archives déjà là.
+ce qui est déjà là, archive ou plan B achevé. Si rien n'est là, il part de la copie
+de la release sans attendre le dump de l'AN.
 """
 
 import fcntl
@@ -166,7 +167,9 @@ def telecharger(client: httpx.Client, url: str, cible: Path, patience: int = 360
             and cible.stat().st_size == taille == connu.get("taille")):
         print("  inchangé depuis le dernier téléchargement", file=sys.stderr)
         return modifie
-    if part.exists() and etat.exists() and json.loads(etat.read_text()) == attendu and modifie and taille:
+    # Un partiel plus long que le fichier annoncé vient d'une autre version : il ne peut pas reprendre.
+    if (part.exists() and etat.exists() and json.loads(etat.read_text()) == attendu and modifie and taille
+            and part.stat().st_size <= taille):
         recu = part.stat().st_size
         print(f"  reprise à {recu:,} / {taille:,} o", file=sys.stderr)
     else:
@@ -216,7 +219,10 @@ def telecharger(client: httpx.Client, url: str, cible: Path, patience: int = 360
                 time.sleep(attente)
                 attente = min(2 * attente, 120)
     if taille is not None and part.stat().st_size != taille:
-        raise SystemExit(f"{url} : taille {part.stat().st_size:,} o, attendu {taille:,} o")
+        recu = part.stat().st_size
+        part.unlink()  # périmé (le fichier a changé entre le HEAD et le GET) : le prochain lancement repart de zéro
+        etat.unlink(missing_ok=True)
+        raise SystemExit(f"{url} : taille {recu:,} o, attendu {taille:,} o")
     part.replace(cible)
     etat.unlink(missing_ok=True)
     return modifie
@@ -243,8 +249,8 @@ def archiver(raw: Path, cle: str, sortie: Path) -> tuple[int, str]:
 def download(raw: Path, cles: list[str] | None = None, secours_max: int | None = None, leger: bool = False) -> None:
     """Télécharge chaque source, l'extrait et met à jour le manifeste. `secours_max` : durée maximale
     du plan B, en secondes (ce qui est récupéré reste acquis pour le lancement suivant). `leger` : ne
-    rafraîchit que `LEGERES` ; les autres archives servent telles quelles, téléchargées seulement si
-    elles manquent, et sans plan B."""
+    rafraîchit que `LEGERES` ; les autres sources servent telles quelles (archive ou plan B achevé),
+    téléchargées seulement si elles manquent, d'abord depuis la release, et sans plan B."""
     raw.mkdir(parents=True, exist_ok=True)
     with (raw / ".download.lock").open("w") as verrou:
         try:  # deux processus écriraient dans le même fichier partiel
@@ -294,11 +300,18 @@ def _download(raw: Path, cles: list[str] | None, secours_max: int | None, leger:
             dossier.mkdir(parents=True, exist_ok=True)
             cible = dossier / src["url"].rsplit("/", 1)[1]
             archive = next((c for c in (cible, dossier / COPIE_FIGEE) if c.exists()), None)
-            if leger and cle not in LEGERES and archive:
-                print(f"{cle} : archive déjà là, réutilisée", file=sys.stderr)
-                if src.get("zip", True) and not extraits(raw, cle).exists():
-                    _extraire(raw, cle, archive)
-                continue
+            if leger and cle not in LEGERES:
+                if archive:
+                    print(f"{cle} : archive déjà là, réutilisée", file=sys.stderr)
+                    if src.get("zip", True) and not extraits(raw, cle).exists():
+                        _extraire(raw, cle, archive)
+                    continue
+                # Le manifeste ne note le plan B qu'à sa fin : une récupération partielle ne passe pas ici.
+                if (manifeste.get(cle) or {}).get("mode") == "secours" and (unitaire(raw, cle) / "json").exists():
+                    print(f"{cle} : plan B déjà là, réutilisé", file=sys.stderr)
+                    continue
+                if _figee(client, raw, cle, manifeste):  # sans attendre le dump (20 minutes s'il est injoignable)
+                    continue
             print(f"{cle} : téléchargement de {src['url']}", file=sys.stderr)
             avant = manifeste.get(cle)
             try:

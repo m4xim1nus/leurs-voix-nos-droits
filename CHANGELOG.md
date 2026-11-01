@@ -3,6 +3,44 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Les tags `v*` du dépôt suivent ces versions.
 
+## [1.5.0] — 2026-11-01
+
+Cycle Relecture XVe : relecture de ce que la v1.4.0 a publié, reliquats d'outillage et de
+catalogue. Aucune nouvelle qualification, aucun score ni décisif modifié.
+
+### Ajouté
+
+- Alerte `vote_sans_decisif` : lecture de l'AN close sans décisif proposé (rejet d'une partie, vote
+  sans scrutin public), sur un texte ni qualifié, ni écarté, ni à l'arrêt. 3 à la sortie, dont le PLFSS 2027.
+- Fiche député·e : les textes du seul Sénat attendus à l'AN dans « Prochains votes ».
+- Nombre de textes écrit sur `/groupes`, `/droits/<code>` et l'accueil.
+
+### Modifié
+
+- Règle 19 : la fiche et la carte d'un·e député·e ne le comparent à son groupe que sur la législature de
+  ce groupe (décision de Max). Le score global reste le chiffre principal.
+- Filtre Législature de `/textes` tiré des données, XVe comprise, « Toutes » par défaut.
+- Le compteur de l'accueil compte les textes en cours du seul Sénat : 27 au lieu de 16, comme `/en-cours`.
+- `lvnd check` : plus de délai sur le taux d'amendements d'une législature close (XVIe : 3 159/3 173).
+- `lvnd download --leger` : réutilise un plan B achevé et, si rien n'est là, part de la release sans
+  attendre le dump de l'AN. Un fichier partiel périmé se purge seul.
+- Marche à suivre du build local dans `docs/SOURCES.md` : il redonne les exports à l'octet près, sauf
+  `meta.json`, à dumps identiques.
+
+### Corrigé
+
+- Déclarations du Gouvernement rattachées au texte du jour : elles ne vont plus qu'à leur propre dossier,
+  aussi en XVIIe (V4698). Rattachements figés prioritaires sur la séance : V1093, V1094, V1518.
+- Catalogue : titre de la programmation de la recherche (2030), sens de la décision 2021-817 DC.
+- Fiches : espaces manquantes, libellé « Travail et protection sociale » tronqué, « ses mandats ».
+
+### Limites connues
+
+- Passe quotidienne pas encore observée avec la XVe ni avec ce code, à vérifier le 02/11/2026 (`BACKLOG.md`).
+- Relecture faite sans Max, sur un échantillon de pages : pas de relecture commune à l'écran.
+- `/comparer` confronte encore le score global d'un·e député·e au score d'un groupe sur sa législature.
+- V45, V738 et V1612 : le titre et l'amendement citent deux articles différents, sans lecture pour trancher.
+
 ## [1.4.0] — 2026-11-01
 
 Cycle XVe : la législature 2017-2022 entre sur le site d'un seul déploiement, données et

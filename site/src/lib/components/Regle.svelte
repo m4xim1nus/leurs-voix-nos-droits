@@ -21,11 +21,14 @@
   let {
     lignes,
     legende = true,
+    comptes = false,
     choisie = null,
     onchoisir
   }: {
     lignes: Ligne[];
     legende?: boolean;
+    /** Écrit le nombre de textes de chaque ligne à côté de son libellé. */
+    comptes?: boolean;
     /** Ligne retenue comme filtre ; les autres s'estompent. */
     choisie?: string | null;
     onchoisir?: (cle: string) => void;
@@ -52,6 +55,9 @@
         <a href={l.href} class:sigle={l.couleur} style:--c={l.couleur}>{l.libelle}</a>
       {:else}
         <span class:sigle={l.couleur} style:--c={l.couleur}>{l.libelle}</span>
+      {/if}
+      {#if comptes && l.n_textes !== undefined}
+        <span class="compte" aria-hidden="true">{pluriel(l.n_textes, 'texte')}</span>
       {/if}
     </span>
     <span class="piste" aria-hidden="true">
@@ -99,7 +105,7 @@
 <style>
   .regle {
     /* Largeur fixe : chaque ligne est sa propre grille, les colonnes doivent s'aligner. */
-    --nom: clamp(6rem, 32%, 14rem);
+    --nom: clamp(6rem, 32%, 16rem);
     margin: 1rem 0 1.5rem;
   }
   ul {
@@ -131,6 +137,13 @@
   }
   .nom a {
     text-decoration: none;
+  }
+  .compte {
+    display: inline-block; /* « 7 textes » passe à la ligne d'un bloc */
+    margin-left: 0.35rem;
+    color: var(--ardoise, currentColor);
+    font-size: 0.8em;
+    font-weight: 400;
   }
   /* Sur téléphone, le libellé passe à la ligne plutôt que d'être tronqué. */
   @media (max-width: 40rem) {

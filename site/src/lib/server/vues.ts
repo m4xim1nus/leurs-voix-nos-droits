@@ -117,16 +117,15 @@ export function vueAccueil() {
     })),
     derniers: d.textes.slice(0, 6).map(court),
     enCours: {
-      total: d.enCours.length,
-      inscrits: d.enCours.filter((t) => t.echeance === 'inscrit').length
+      total: d.enCoursTous.length,
+      inscrits: d.enCoursTous.filter((t) => t.echeance === 'inscrit').length
     }
   };
 }
 
 export function vueEnCours() {
   const d = donnees();
-  const textes = [...d.enCours, ...d.enCoursSeuls];
-  return { textes, dateEtat: d.dateEtat };
+  return { textes: d.enCoursTous, dateEtat: d.dateEtat };
 }
 
 // --- Droits et textes -------------------------------------------------------------------------
@@ -153,7 +152,9 @@ export function vueDroit(code: string) {
 export function vueTextes() {
   const d = donnees();
   const textes = [...d.textes, ...d.seuls].sort((a, b) => b.date.localeCompare(a.date));
-  return { textes: textes.map(enListe), ecartes: d.ecartes, droits: d.droits };
+  // Les textes du seul Sénat n'ont pas de législature de l'AN : le filtre les écarte déjà.
+  const legislatures = [...new Set(d.textes.map((t) => t.legislature))].sort((a, b) => b - a);
+  return { textes: textes.map(enListe), ecartes: d.ecartes, droits: d.droits, legislatures };
 }
 
 export function vueTexte(id: string) {
@@ -201,9 +202,9 @@ function groupeDuJour(dep: Depute, date: string): GroupeCourt | null {
   );
 }
 
-/** Textes retenus attendus à l'AN et, à la lecture précédente, le vote du député et de son groupe. */
+/** Textes retenus attendus à l'AN, ceux du seul Sénat compris, et, à la lecture précédente, le vote du député et de son groupe. */
 function prochains(d: Donnees, dep: Depute) {
-  return d.enCours
+  return d.enCoursTous
     .filter((t) => t.echeance === 'AN' || (t.echeance === 'inscrit' && estInscritAN(t)))
     .map((t) => {
       const v = t.dernier_vote;
@@ -232,6 +233,18 @@ function prochains(d: Donnees, dep: Depute) {
 
 /** Inscrit à l'AN : l'agenda de l'AN le porte, ou la chambre attendue est l'AN. */
 const estInscritAN = (t: TexteEnCours) => t.seances.length > 0 || t.chambre === 'AN';
+
+/** Le député et son groupe, sur la seule législature de ce groupe. Null si l'un n'y a pas de score. */
+function comparaison(d: Donnees, dep: Depute, lignee: Lignee | null) {
+  if (!lignee) return null;
+  const parLegislature = d.scoresDeputesLegislatures.get(dep.id);
+  const depute = parLegislature?.get(String(lignee.legislature));
+  const groupe = d.scoresGroupes.get(lignee.id)?.get('global');
+  if (depute?.score == null || groupe?.score == null) return null;
+  const plusieurs =
+    [...(parLegislature?.values() ?? [])].filter((s) => s.score !== null).length > 1;
+  return { legislature: lignee.legislature, plusieurs, depute, groupe };
+}
 
 export function vueDepute(slug: string) {
   const d = donnees();
@@ -295,8 +308,8 @@ export function vueDepute(slug: string) {
     participation: d.participation.get(dep.id) ?? null,
     textes,
     unanimes,
-    // Pour situer le député : son groupe actuel sur la même règle.
-    scoreGroupe: lignee ? (d.scoresGroupes.get(lignee.id)?.get('global') ?? null) : null
+    // Pour situer le député (règle 19) : son score et celui de son groupe sur la législature de ce groupe.
+    comparaison: comparaison(d, dep, lignee)
   };
 }
 

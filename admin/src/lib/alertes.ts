@@ -7,6 +7,7 @@ export type TypeAlerte =
   | 'vote_posterieur'
   | 'unanimite_contestee'
   | 'premier_decisif'
+  | 'vote_sans_decisif'
   | 'inscrit'
   | 'senat_premier_vote'
   | 'senat_vote_posterieur';
@@ -15,6 +16,7 @@ export const LIBELLES_ALERTE: Record<TypeAlerte, string> = {
   vote_posterieur: 'Vote sur l’ensemble après le décisif',
   unanimite_contestee: 'Écarté pour unanimité, vote contesté',
   premier_decisif: 'Décisif d’un texte non traité',
+  vote_sans_decisif: 'Lecture close sans décisif proposé',
   inscrit: 'Texte non traité, inscrit en séance',
   senat_premier_vote: 'Vote du Sénat sur l’ensemble, à lire',
   senat_vote_posterieur: 'Nouveau vote du Sénat sur l’ensemble'
@@ -47,6 +49,7 @@ export function resteATraiter(a: Alerte, statut: Statut | null, doc: string | nu
     return !senat?.scrutins.some((s) => s.id === a.scrutin_id);
   }
   // Une fiche de suivi répond à l'inscription, pas au vote : celui-ci reste à qualifier.
-  if (a.type === 'premier_decisif') return statut === null || statut === 'a-suivre';
+  if (a.type === 'premier_decisif' || a.type === 'vote_sans_decisif')
+    return statut === null || statut === 'a-suivre';
   return statut === null;
 }

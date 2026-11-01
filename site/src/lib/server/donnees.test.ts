@@ -57,7 +57,7 @@ describe('données du site', () => {
 
   it('ne propose aux députés en cours que les textes attendus à l’Assemblée', () => {
     const attendus = new Set(
-      d.enCours
+      [...d.enCours, ...d.enCoursSeuls]
         .filter((t) => t.echeance === 'AN' || t.seances.length > 0 || t.chambre === 'AN')
         .map((t) => t.id)
     );
@@ -66,6 +66,19 @@ describe('données du site', () => {
     expect(v.prochains.map((p) => p.id).sort()).toEqual([...attendus].sort());
     const ancien = d.deputes.find((x) => !situation(x).actuel)!;
     expect(vueDepute(ancien.slug).prochains).toEqual([]);
+  });
+
+  it('compare un député à son groupe sur la législature de ce groupe (règle 19)', () => {
+    const dep = d.deputes.find((x) => {
+      const v = vueDepute(x.slug);
+      return v.actuel && v.comparaison?.plusieurs;
+    })!;
+    const v = vueDepute(dep.slug);
+    expect(v.comparaison!.legislature).toBe(v.lignee!.legislature);
+    expect(v.comparaison!.depute).toEqual(
+      d.scoresDeputesLegislatures.get(dep.id)!.get(String(v.lignee!.legislature))
+    );
+    expect(v.comparaison!.groupe).toEqual(d.scoresGroupes.get(v.lignee!.id)!.get('global'));
   });
 
   it('donne des slugs de députés uniques', () => {
