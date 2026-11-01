@@ -1329,7 +1329,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2021-821 DC du 29 juillet 2021, conformité. Article 1er du dispositif : « Sont conformes à la Constitution les dispositions suivantes » : des dispositions des articles 5, 20, 23 et 25 de la loi (commission d'accès aux données, recherche sur l'embryon, modification d'un embryon par adjonction de cellules d'autres espèces, information prénatale). Les députés contestaient « certaines dispositions de ses articles 3, 5, 20, 23 et 25 » : l'ouverture de l'assistance médicale à la procréation, à l'article 1er, n'est pas contestée.",
-      "note": "Scrutin décisif : lecture définitive du 29/06/2021, dernier vote de l'AN sur l'ensemble. Sens et date de référence (règle 4) : au jour du vote, l'assistance médicale à la procréation est réservée aux couples formés d'un homme et d'une femme, sur indication médicale. Droit principal (règle 4) : la mesure que les sources citent le plus est l'ouverture à toutes les femmes, qui relève des droits des femmes et des personnes LGBTI plutôt que de la santé. Le droit étendu est contesté : la critique figure en vigilance (règle 7). Aucun amendement clé (règle 11) : aucune suppression n'a fait l'objet d'un scrutin public en nouvelle lecture. En 2e lecture, celles de l'article 1er et de l'article 4 portent sur des mesures où les sources admises ne s'accordent pas, et celle de l'article 19 bis, adoptée, sur un article absent du texte voté.",
+      "note": "Scrutin décisif : lecture définitive du 29/06/2021, dernier vote de l'AN sur l'ensemble. Sens et date de référence (règle 4) : au jour du vote, l'assistance médicale à la procréation est réservée aux couples formés d'un homme et d'une femme, sur indication médicale. Droit principal (règle 4) : la mesure que les sources citent le plus est l'ouverture à toutes les femmes, qui relève des droits des femmes et des personnes LGBTI plutôt que de la santé. Le droit étendu est contesté : la critique figure en vigilance (règle 7). Aucun amendement clé (règle 11) : la dernière lecture où des suppressions d'article ont été mises aux voix est la 2e lecture (juillet 2020). Les suppressions des articles 1er et 4 portent sur des mesures où les sources admises ne s'accordent pas ; celle de l'article 19 bis, adoptée, sur un article absent du texte voté ; celles des articles 14 et 15 (recherche sur les cellules souches embryonnaires et pluripotentes induites), et les rétablissements de l'article 1er A (« Nul n'a de droit à l'enfant »), sur des mesures qu'aucune source admise ne met en cause.",
       "sources": {
         "anm-2019": {
           "auteur": "Académie nationale de médecine",
@@ -7693,7 +7693,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2019-794 DC du 20 décembre 2019, non-conformité partielle, sans réserve. Censure, à l'article 44, des mots qui empêchaient le juge de retenir le respect des engagements de la charte pour caractériser un lien de subordination : le législateur a méconnu l'étendue de sa compétence. Le reste des dispositions contestées sur la charte est conforme. Sont aussi censurés l'article 33, le II de l'article 83, le IX de l'article 98 et le V de l'article 113, qui habilitaient le Gouvernement à légiférer par ordonnance, et, comme cavaliers, les articles 7, 49, 104, 109 et 110.",
-      "note": "Scrutin décisif : ensemble, lecture définitive, 19/11/2019. Texte composite : le droit principal suit la seule mesure sur laquelle une source admise a été lue, la charte des plateformes (règle 4). Les zones à faibles émissions et le contrôle automatisé figurent dans le résumé sans droit associé, faute de source admise lue qui se prononce sur ces mesures dans ce texte. Aucun amendement clé (règle 11) : aucun scrutin public ne porte sur la suppression ou le rétablissement de l'article 20. Aucune motion de rejet préalable n'a été soumise à un scrutin public.",
+      "note": "Scrutin décisif : ensemble, lecture définitive, 19/11/2019. Texte composite : le droit principal suit la seule mesure sur laquelle une source admise a été lue, la charte des plateformes (règle 4). Les zones à faibles émissions et le contrôle automatisé figurent dans le résumé sans droit associé, faute de source admise lue qui se prononce sur ces mesures dans ce texte. Amendement clé (règle 11) : le rétablissement de l'article 20, qui porte la charte des plateformes, en 1re lecture le 07/06/2019 (amendement n° 2900, adopté 34-3). Voter pour, c'est voter la mesure mise en cause, même si la rédaction rétablie comporte aussi des droits présentés comme renforcés. Aucune motion de rejet préalable n'a été soumise à un scrutin public.",
       "sources": {
         "cc-2019-794": {
           "auteur": "Conseil constitutionnel",
@@ -7726,6 +7726,12 @@
           "role": "ensemble",
           "pour": "texte",
           "objet": "ensemble, 1re lecture (372-40)"
+        },
+        {
+          "id": "VTANR5L15V1932",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 20 (charte des plateformes), 1re lecture (34-3)"
         }
       ]
     },
@@ -9454,7 +9460,7 @@
         }
       ],
       "conseil_constitutionnel": "Pas de décision du Conseil avant la promulgation du 27 juin 2018.",
-      "note": "Réforme de structure qualifiée parce que des sources admises la mettent en cause au nom des droits des salariés (règle 8). Scrutin décisif : texte de la commission mixte paritaire, 13/06/2018, dernier vote de l'AN sur l'ensemble. Ce texte habilite le Gouvernement à prendre des ordonnances : il compte pour 1, et les lois qui les ratifient compteraient chacune pour 1 (règle 18). Motions de rejet préalable affichées, pas comptées (règle 10). Aucun amendement clé : aucun amendement de suppression ou de rétablissement d'un article n'a fait l'objet d'un scrutin public (règle 11).",
+      "note": "Réforme de structure qualifiée parce que des sources admises la mettent en cause au nom des droits des salariés (règle 8). Scrutin décisif : texte de la commission mixte paritaire, 13/06/2018, dernier vote de l'AN sur l'ensemble. Ce texte habilite le Gouvernement à prendre des ordonnances : il compte pour 1, et les lois qui les ratifient compteraient chacune pour 1 (règle 18). Motions de rejet préalable affichées, pas comptées (règle 10). Aucun amendement clé (règle 11) : la seule suppression d'article mise aux voix (article 2 quater, amendement de cohérence) ne vise pas une mesure mise en cause.",
       "sources": {
         "cgt-cheminots-2018": {
           "auteur": "Fédération CGT des cheminots",
@@ -19021,6 +19027,12 @@
       "motif": "Adopté sans aucune voix contre au scrutin décisif (64-0) : ce vote ne départage personne (règle 9)."
     },
     {
+      "dossier_an": "DLR5L15N38970",
+      "legislature": 15,
+      "titre": "Engagement de responsabilité du Gouvernement sur le projet de loi instituant un système universel de retraite",
+      "motif": "Engagement de responsabilité (article 49, alinéa 3) sur le projet de loi instituant un système universel de retraite : dossier sans mesure propre, ses motions de censure sont affichées avec le texte qualifié, ce projet de loi."
+    },
+    {
       "dossier_an": "DLR5L15N39144",
       "legislature": 15,
       "titre": "Loi de finances rectificative 2020",
@@ -21169,6 +21181,12 @@
       "motif": "Résolution (article 34-1 de la Constitution) : elle exprime un avis de l'Assemblée et ne modifie aucun droit (règle 8)."
     },
     {
+      "dossier_an": "DLR5L17N51425",
+      "legislature": 17,
+      "titre": "Engagement de la responsabilité du Gouvernement sur l'ensemble du projet de loi de finances pour 2025",
+      "motif": "Engagement de responsabilité (article 49, alinéa 3) sur la version CMP du PLF 2025 : dossier sans mesure propre, ses motions de censure sont affichées avec le texte qualifié, la loi de finances pour 2025."
+    },
+    {
       "dossier_an": "DLR5L17N51427",
       "legislature": 17,
       "titre": "Engagement de la responsabilité du Gouvernement sur l'article liminaire et la première partie du projet de loi de financement de la sécurité sociale pour 2025",
@@ -21811,10 +21829,22 @@
       "motif": "Le texte change le régime juridique de l'hydroélectricité : les concessions de plus de 4 500 kilowatts sont résiliées et remplacées par un droit réel et une autorisation, et une partie des capacités d'EDF est ouverte à ses concurrents. C'est un choix d'organisation du secteur de l'énergie, hors de la grille (règle 2). Aucune source admise ne met en cause une garantie des personnes (information, participation du public, protection des milieux) dans ce texte."
     },
     {
+      "dossier_an": "DLR5L17N53597",
+      "legislature": 17,
+      "titre": "Engagement de la responsabilité du Gouvernement sur la première partie du projet de loi de finances pour 2026",
+      "motif": "Engagement de responsabilité (article 49, alinéa 3) sur la première partie du PLF 2026 : dossier sans mesure propre, ses motions de censure sont affichées avec le texte qualifié, la loi de finances pour 2026."
+    },
+    {
       "dossier_an": "DLR5L17N53600",
       "legislature": 17,
       "titre": "Projet de loi portant habilitation de l’assemblée de Martinique à fixer elle-même des règles applicables sur son territoire en application de l’article 73 de la Constitution en matière d’énergie, d’eau et d’assainissement",
       "motif": "Texte d'organisation administrative d'une collectivité d'outre-mer, sans mesure touchant un droit de la grille (règle 8)."
+    },
+    {
+      "dossier_an": "DLR5L17N53619",
+      "legislature": 17,
+      "titre": "Engagement de la responsabilité du Gouvernement sur la deuxième partie et l'ensemble du projet de loi de finances pour 2026",
+      "motif": "Engagement de responsabilité (article 49, alinéa 3) sur la deuxième partie et l'ensemble du PLF 2026 : dossier sans mesure propre, ses motions de censure sont affichées avec le texte qualifié, la loi de finances pour 2026."
     },
     {
       "dossier_an": "DLR5L17N53656",

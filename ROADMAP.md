@@ -37,7 +37,7 @@ du lot 1 sont validés par Max** et dans le `data/editorial.json` de la branche.
 1. [x] Sources XVe et XIVe, `LEGISLATURES`, rattachements figés, lignées de groupes, anomalies du dump dans `lvnd check`.
    Sur les mêmes dumps, rien ne change pour les XVIe, XVIIe et le Sénat, sauf 5 lignes de `textes.csv` enrichies de
    leurs votes XVe (aucun décisif modifié).
-2. [x] Amendements XVe : plan B terminé le 01/11/2026, 3 071 amendements, 3 075 scrutins rattachés sur 3 124 (98,4 %),
+2. [x] Amendements XVe : plan B terminé le 01/11/2026, 3 071 amendements, 3 069 scrutins rattachés sur 3 124 (98,2 %, après l'item 16),
    `data/export/` reconstruit et commité, seuil de `lvnd check` à 98 % pour la XVe. **Reste, avant la fusion :** copie
    dans la release `donnees-figees` (`lvnd archiver an_amendements_15 --sortie …`, 7,6 Mo) : sans elle, la passe
    quotidienne échouerait, faute de pouvoir récupérer l'archive.
@@ -64,18 +64,17 @@ du lot 1 sont validés par Max** et dans le `data/editorial.json` de la branche.
 12. [x] Résumés du Conseil constitutionnel du lot 1, repris sur l'original et entrés dans `editorial.json`. Le
     rattachement de la loi ordinaire de 2017 sur la vie politique passe de 2017-753 DC, décision de la loi organique, à
     2017-752 DC : effet sur `textes.csv` au rebuild de A.
-13. [ ] Amendements clés des lots 1 à 6 : recontrôle fait, 30 sur 32 confirmés, 2 sans amendement dans l'open data. Fiche
-    `source/relecture-xve-item13.md`, quatre questions pour Max (LOM, bioéthique, pacte ferroviaire, suppressions non citées).
+13. [x] Amendements clés des lots 1 à 6 : recontrôle fait, 30 sur 32 confirmés, 2 sans amendement dans l'open data (gardés).
+    Décisions de Max du 01/11/2026 : LOM, V1932 retenu et note corrigée ; bioéthique, rien de retenu et motif de la note corrigé
+    après relecture des sources ; pacte ferroviaire, note corrigée ; suppressions non citées, rien de retenu. Fiche
+    `source/relecture-xve-item13.md`.
 14. [x] Sigles de la XVe à l'affichage : `UDI-I` sur le site, `UDI_I` reste dans les données.
-15. [ ] **Bloquant avant la fusion : rattachement des motions de censure, instable.** `an.dossiers` lit les fichiers sans les
-    trier, et `textes.Index` garde le premier dossier qui cite un vote. 13 votes sont cités par deux dossiers (le texte et son
-    engagement de responsabilité), donc leur rattachement dépend du système de fichiers : 10 diffèrent entre le build local et
-    celui de GitHub Actions. D'où 4 écartés sans état (DLR5L17N51427, 51462, 51475, 53689) et `donnees.test.ts` au rouge.
-    Scores identiques. Reco, à valider par Max : trier, et faire passer le dossier d'engagement (procédure 13) en premier.
-    Simulé hors dépôt : plus aucun écarté sans état, `lvnd check` vert, mêmes scores. Il faudra alors écarter 4 dossiers
-    d'engagement : DLR5L17N53597, 53619, 51425, DLR5L15N38970.
-16. [ ] **Avant la fusion : 6 scrutins XVe faussement rattachés par leur amendement** (V118, V985, V2046, V2175, V3948, V4319),
-    voir la fiche de l'item 13. Aucun retenu dans une qualification, pas d'effet sur les scores.
+15. [x] Rattachement des motions de censure, validé par Max le 01/11/2026 : lecture triée, et le dossier d'engagement
+    (procédure 13) passe en premier. Plus aucun écarté sans état, `donnees.test.ts` au vert. 4 dossiers d'engagement écartés :
+    DLR5L17N53597, 53619, 51425, DLR5L15N38970. À la fusion, le même correctif touche les XVIe et XVIIe de `main`.
+16. [x] Amendements faussement rattachés, validé par Max le 01/11/2026 : `textes.rattacher` refuse un amendement contredit par
+    le référentiel ou par un titre nettement plus proche. 6 scrutins XVe corrigés (V118, V985, V2046, V2175, V3948, V4319) et
+    2 de la XVIIe (V4239, V5726), aucun retenu dans une qualification.
 
 ### Reprendre : deux conversations en parallèle
 

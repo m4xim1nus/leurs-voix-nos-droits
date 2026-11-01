@@ -192,7 +192,7 @@ def scrutins(raw: Path, legislature: int) -> dict[str, list[dict]]:
 def dossiers(raw: Path, legislature: int) -> dict[str, dict]:
     """uid → dossierParlementaire."""
     d = extraits(raw, f"an_dossiers_{legislature}") / "json/dossierParlementaire"
-    return {p.stem: json.loads(p.read_text())["dossierParlementaire"] for p in d.glob("*.json")}
+    return {p.stem: json.loads(p.read_text())["dossierParlementaire"] for p in sorted(d.glob("*.json"))}
 
 
 def dossiers_xiv(raw: Path, lois: dict[str, dict | None]) -> dict[str, dict]:

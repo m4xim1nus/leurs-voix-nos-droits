@@ -36,8 +36,9 @@ DECOMPTES_INCOMPLETS = {f"VTANR5L15V{n}" for n in (1027, 1028, 1029, 2418, 2744,
 
 # Seuils de rattachement (docs/SOURCES.md : 99,9 % des scrutins sur amendement en XVIIe au spike).
 SEUIL_AMENDEMENTS = 0.995
-# XVe : archive figée, 3 075 scrutins rattachés sur 3 124 (98,4 %) par le plan B. Les 49 autres n'ont pas d'amendement
-# lisible en open data (404 sur tous les identifiants essayés) ou portent un numéro factice (« n° XXX ») : docs/SOURCES.md.
+# XVe : archive figée, 3 069 scrutins rattachés sur 3 124 (98,2 %) par le plan B. Les 55 autres n'ont pas d'amendement
+# lisible en open data (404 sur tous les identifiants essayés), portent un numéro factice (« n° XXX ») ou ont un amendement
+# refusé, car il vient d'un autre texte (`textes.rattacher`) : docs/SOURCES.md.
 SEUILS_AMENDEMENTS_PAR_LEGISLATURE = {15: 0.98}
 DELAI_AMENDEMENTS = 14  # jours : voir rattachement_amendements
 SEUIL_DOSSIERS = 0.99

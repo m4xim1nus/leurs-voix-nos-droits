@@ -190,8 +190,12 @@ est le même que pour la XVIIe.
 
 1. `objet.dossierLegislatif` (depuis mars 2026) ;
 2. `voteRefs` d'une décision du dossier (rare : 260 scrutins de la XVIIe
-   sur 9 200) ;
-3. l'amendement mis aux voix ;
+   sur 9 200). Une motion de censure citée à la fois par le texte et par son
+   engagement de responsabilité va à l'engagement, dossier sans mesure propre ;
+   le texte qualifié l'affiche avec le rôle `censure` ;
+3. l'amendement mis aux voix, sauf s'il est contredit par le référentiel, ou
+   par un autre dossier débattu ce jour-là dont le titre est nettement plus
+   proche : le même numéro existe dans un autre texte, l'amendement est refusé ;
 4. la séance du scrutin, parmi les dossiers qui y sont débattus. Quand
    plusieurs dossiers partagent la séance, on départage par le titre (au
    moins la moitié des mots significatifs) et par la mention « loi
@@ -570,8 +574,9 @@ Mesures du 31/10/2026, cycle XVe.
 - **Contrôle croisé.** leurs-votes.fr ne couvre pas 2017-2022. datan.fr, 40 scrutins tirés au sort (graine fixe), 327
   paires scrutin × groupe hors non-inscrits : 322 concordent. Les 5 autres ne sont pas des erreurs : 3 égalités à une
   voix dans un petit groupe, que datan affiche d'un côté, et 2 écarts de libellé sur les organes UDI successifs.
-- **Amendements** (mesure du 01/11/2026). Le dump plafonne à 11 Ko/s : ils viennent du plan B, avec 3 075 scrutins
-  rattachés à leur amendement sur 3 124 (98,4 %, seuil de `lvnd check` à 98 %, contre 99,5 % ailleurs). Les 49 autres n'ont
-  pas d'amendement lisible : 404 sur tous les identifiants essayés, ou numéro factice dans le titre (« n° XXX »). 30 des 32
-  amendements clés retenus sont contrôlés sur leur dispositif ; V446 et V2886 reposent sur le titre et le PDF ou le compte rendu.
+- **Amendements** (mesure du 01/11/2026). Le dump plafonne à 11 Ko/s : ils viennent du plan B, avec 3 069 scrutins
+  rattachés à leur amendement sur 3 124 (98,2 %, seuil de `lvnd check` à 98 %, contre 99,5 % ailleurs). 49 des 55 autres n'ont
+  pas d'amendement lisible : 404 sur tous les identifiants essayés, ou numéro factice dans le titre (« n° XXX »). Pour les 6
+  derniers, l'amendement trouvé portait le même numéro dans un autre texte : il est refusé. Les amendements clés retenus sont
+  contrôlés sur leur dispositif, sauf V446 et V2886, qui reposent sur le titre et le PDF ou le compte rendu.
 

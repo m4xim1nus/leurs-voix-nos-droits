@@ -151,6 +151,8 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
     liens = textes.rattacher(scr, dossiers, titres, par_amdt)
     for s in scr:
         lien = liens.get(s["id"], {})
+        if lien.get("amendement_refuse"):
+            del par_amdt[s["id"]]
         s["dossier_id"] = lien.get("dossier_id")
         s["etape"] = lien.get("etape")
         s["rattachement"] = lien.get("rattachement")
