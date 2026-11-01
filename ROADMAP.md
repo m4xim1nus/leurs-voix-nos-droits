@@ -11,16 +11,13 @@ de tenue : `CLAUDE.md`, section « Suivi ».
 projet soit prêt à être montré. Les supports produits servent d'abord à cela ; ce qui demande de discuter avec
 celles et ceux qui reprendront le projet reste au cycle Passation.
 
-Avant d'ouvrir le travail : vérifier la passe du 02/11/2026 et supprimer les branches (`BACKLOG.md`, « À trier »).
+### Reste à faire
 
-### Reste à faire, avec Max
-
-1. **Revue des qualifications sensibles et de l'audit de cohérence** : fiche préparée, `source/revue-prise-en-main.md` (non versionnée). Puis requalifications par le circuit habituel, et règles nouvelles dans `docs/METHODO.md`.
-2. **Premier essai du tutoriel** avec le contributeur qui a déjà accès (`docs/TUTORIEL_ADMIN.md`).
-3. **Relecture commune à l'écran**, dont l'en-tête à cinq rubriques (proposition à valider), et essais Firefox, Safari et lecteur d'écran (limites de la v1.6.0).
-4. **Recherche INPI** sur le nom, à la main : la base bloque les accès automatisés.
-5. **Présentation** : à revoir après la revue, qui peut changer des choix qu'elle résume.
-6. **Après fusion dans `main`** : `cd admin && npm run deploy`, car l'admin ne se déploie pas seule (formulaires du Sénat, alerte `ecart_revote`, lien Aide).
+1. **Publier** les 35 textes validés de la revue, puis trancher les 24 textes à relire (`source/relecture-audit.md`, non versionnée), les valider et publier.
+2. **Déployer l'admin** : `cd admin && npm run deploy` (formulaires du Sénat, alerte `ecart_revote`, liens Aide et Exploitation).
+3. **Premier essai du tutoriel** avec le contributeur qui a déjà accès (`docs/TUTORIEL_ADMIN.md`).
+4. **Passe du 02/11/2026** à vérifier, puis suppression des branches (`BACKLOG.md`).
+5. **Bento** : régénérer le PDF après publication (`docs/presentation/README.md`). Clôture du cycle ensuite.
 
 ### Déjà fait dans ce cycle
 
@@ -31,5 +28,8 @@ Avant d'ouvrir le travail : vérifier la passe du 02/11/2026 et supprimer les br
 - **Recherche** : repli sur la saisie corrigée quand rien ne correspond (« Kasbarien »), signalé à l'écran.
 - **`llms.txt` et dictionnaire des données** (`/donnees.md`), avec un test qui échoue si une colonne y manque.
 - **Alerte `ecart_revote`** sur un texte écarté revoté. **Rattachement** : V6758 corrigé, seul cas trouvé, sans effet sur les scores.
+- **Revue avec Max** des qualifications sensibles et de l'audit : règles 4 et 11 précisées (`docs/METHODO.md`).
+- **Relecture commune à l'écran**, dont l'en-tête, et **recherche INPI** sur le nom, sans résultat (Max, 01/11/2026).
+- **Présentation** : bento A4 en PDF, `docs/presentation/`, hors du site et de l'admin.
 - `/comparer` : un·e député·e face à un groupe se lit sur la seule législature de ce groupe, score global et droit par
   droit (règle 19, décision de Max du 01/11/2026). Nouvel export `scores_deputes_droits_legislatures.csv`.
