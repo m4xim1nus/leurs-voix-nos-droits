@@ -117,16 +117,15 @@ export function vueAccueil() {
     })),
     derniers: d.textes.slice(0, 6).map(court),
     enCours: {
-      total: d.enCours.length,
-      inscrits: d.enCours.filter((t) => t.echeance === 'inscrit').length
+      total: d.enCoursTous.length,
+      inscrits: d.enCoursTous.filter((t) => t.echeance === 'inscrit').length
     }
   };
 }
 
 export function vueEnCours() {
   const d = donnees();
-  const textes = [...d.enCours, ...d.enCoursSeuls];
-  return { textes, dateEtat: d.dateEtat };
+  return { textes: d.enCoursTous, dateEtat: d.dateEtat };
 }
 
 // --- Droits et textes -------------------------------------------------------------------------

@@ -24,6 +24,8 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] Cycle Sénat, hors cycle : amendements clés du Sénat (environ 31 suppressions hors budgets et retraites, sur 16 textes), cartes partageables des sénateur·ices, Comparer pour le Sénat, correspondance entre groupes des deux chambres (claude, 2026-10-31)
 - [ ] Vérifier le 02/11/2026 que la passe quotidienne (`donnees-quotidien.yml`, 5 h UTC) tourne bien : première avec la XVe. Attendu : environ 20 minutes d'attente sur le dump des amendements avant la copie de la release, passe finie sous le plafond de 60 minutes, sync de l'admin sans erreur, build Cloudflare réussi, site à jour (user:moi, 2026-11-01)
 - [ ] Une fois la passe du 02/11/2026 vérifiée : supprimer les branches `xve` et `worktree-textes-en-cours`, fusionnées dans `main`, et leurs worktrees. Tant qu'une branche existe, un push y lance un build d'aperçu Cloudflare (claude, 2026-11-01)
+- [ ] Fiche député·e : la règle compare un score toutes législatures (Alain David, 75 textes) à celui de son groupe sur la seule XVIIe (SOC, 56 textes), et les cartes partageables reprennent sans doute la même comparaison, à vérifier. Recommandation : comparer le score de la XVIIe de l'élu·e à celui du groupe, ou écrire « Groupe SOC, XVIIe ». Choix d'affichage de score, à trancher par Max (claude, 2026-11-01)
+- [ ] `/groupes` et `/droits/<code>` : un petit groupe s'affiche en tête sans le nombre de textes (EDS, XVe : 100 %, 4 textes, 39 votes). Recommandation : afficher le nombre de textes, sans seuil ni masquage, pour ne pas ajouter de règle. À trancher par Max (claude, 2026-11-01)
 
 ## Textes à surveiller
 

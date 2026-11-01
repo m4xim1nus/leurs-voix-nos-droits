@@ -143,7 +143,9 @@
           'scrutin compté',
           'scrutins comptés'
         )}
-        tenus pendant son mandat ({pourcent(data.participation.taux)}).
+        tenus pendant {data.depute.mandats.length > 1 ? 'ses mandats' : 'son mandat'} ({pourcent(
+          data.participation.taux
+        )}).
       {/if}
       {#if data.global.abstentions}{pluriel(data.global.abstentions, 'abstention')}, hors calcul.{/if}
     </p>
@@ -151,8 +153,10 @@
   {#if data.parLegislature.length > 1}
     <p class="par-legislature">
       Par législature :
-      {#each data.parLegislature as l, i (l.legislature)}{#if i},
-        {/if}<span class="chiffre">{pourcent(l.score.score)}</span> en {legislature(l.legislature)}
+      {#each data.parLegislature as l, i (l.legislature)}{#if i},{' '}{/if}<span class="chiffre"
+          >{pourcent(l.score.score)}</span
+        >
+        en {legislature(l.legislature)}
         ({pluriel(l.score.n_textes, 'texte')}){/each}.
     </p>
   {/if}

@@ -99,7 +99,7 @@
 <style>
   .regle {
     /* Largeur fixe : chaque ligne est sa propre grille, les colonnes doivent s'aligner. */
-    --nom: clamp(6rem, 32%, 14rem);
+    --nom: clamp(6rem, 32%, 16rem);
     margin: 1rem 0 1.5rem;
   }
   ul {

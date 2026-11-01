@@ -29,7 +29,9 @@ Vérifier la passe quotidienne du 02/11/2026, première avec la XVe, et nettoyer
    choix par défaut (« Toutes »), et chercher le même défaut ailleurs.
 2. [ ] **Relecture du site avec la XVe**, à l'écran et avec Max : vues par législature (`/droits`, groupes, accueil), fiche
    député·e et score par législature (règle 19), député·e présent·e sur plusieurs législatures, page Méthodologie. Ce qui en sort
-   s'ajoute ici s'il s'agit d'une correction simple, à la fin d'« À trier » sinon.
+   s'ajoute ici s'il s'agit d'une correction simple, à la fin d'« À trier » sinon. Première passe faite le 01/11/2026 sur le build
+   complet, sans Max (accueil, `/textes`, `/groupes`, `/droits/libertes`, un groupe et une fiche à l'écran ; une fiche XVe en texte ; Méthodologie
+   par recherche dans le code ; ni Comparer, ni mobile, ni filtres cliqués) : défauts d'affichage corrigés, deux questions de méthode à « À trier ». Reste la relecture avec Max.
 3. [x] **Alertes** (`pipeline/lvnd/alertes.py`) : signaler un texte rejeté par le rejet d'une partie (PLFSS 2027, V9097) et un vote
    sur l'ensemble sans scrutin public, que `etat` suit déjà. Ensuite, retirer la réserve correspondante de « Textes à surveiller ».
 4. [x] **`lvnd check`** : `DELAI_AMENDEMENTS` (`pipeline/lvnd/check.py:43`) ne s'applique plus à une législature figée. La XVIe

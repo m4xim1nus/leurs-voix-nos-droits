@@ -38,8 +38,7 @@
 <p class="discret"><a href="/groupes">Groupes</a>, {legislature(g.legislature)} législature</p>
 <h1><span class="sigle" style:--c={g.couleur}>{g.sigle}</span></h1>
 <p class="chapo">
-  {g.nom}{#if !g.actif}
-    (groupe dissous ou renommé){/if}.
+  {g.nom}{#if !g.actif}{' '}(groupe dissous ou renommé){/if}.
 </p>
 
 {#if data.global}
