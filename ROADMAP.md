@@ -38,9 +38,8 @@ du lot 1 sont validés par Max** et dans le `data/editorial.json` de la branche.
    Sur les mêmes dumps, rien ne change pour les XVIe, XVIIe et le Sénat, sauf 5 lignes de `textes.csv` enrichies de
    leurs votes XVe (aucun décisif modifié).
 2. [x] Amendements XVe : plan B terminé le 01/11/2026, 3 071 amendements, 3 069 scrutins rattachés sur 3 124 (98,2 %, après l'item 16),
-   `data/export/` reconstruit et commité, seuil de `lvnd check` à 98 % pour la XVe. **Reste, avant la fusion :** copie
-   dans la release `donnees-figees` (`lvnd archiver an_amendements_15 --sortie …`, 7,6 Mo) : sans elle, la passe
-   quotidienne échouerait, faute de pouvoir récupérer l'archive.
+   `data/export/` reconstruit et commité, seuil de `lvnd check` à 98 % pour la XVe. Copie versée dans la release
+   `donnees-figees` (7,6 Mo), relais contrôlé à froid.
 3. [ ] Passe quotidienne : mesuré en local, `lvnd build` à froid 32 s, `build.sh` 73 s (53 s sur `main`), site de 882 Mo et
    8 022 fichiers (611 Mo et 6 326), pic de mémoire de 13,9 Go (10,1 Go sur `main`). Marge large sur les 60 min. Garde-fous
    relus, compatibles. Reste à confirmer sur la première passe réelle et le premier build Cloudflare, à cause de la mémoire.
