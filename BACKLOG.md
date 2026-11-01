@@ -2,7 +2,7 @@
 
 File d'attente : les cycles à venir, les idées et les tâches refusées.
 **Rien de ce qui est livré** : ce qui est fait sort d'ici (l'historique est
-dans `CHANGELOG.md`, le cycle en cours dans `ROADMAP.md`). Une ligne par
+dans `CHANGELOG.md`, le cycle en cours, s'il y en a un, dans `ROADMAP.md`). Une ligne par
 item :
 
 ```
@@ -22,18 +22,16 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 
 - [ ] Alertes : aucune ne signale un texte rejeté par le rejet d'une partie (PLFSS 2027, V9097) ni un vote sur l'ensemble sans scrutin public ; `etat` les suit, pas `lvnd check` (claude, 2026-10-30)
 - [ ] `lvnd check` : le délai de 14 jours (`DELAI_AMENDEMENTS`) retire à tort du taux de la XVIe ses derniers scrutins (3 041/3 053 affichés, au lieu de 3 159/3 173), alors que cette législature est figée (claude, 2026-10-30)
-- [ ] `lvnd download` : `--leger` retente le dump de l'AN pour les amendements de la XVIe quand ils viennent du plan B (mode `secours`, pas de zip local), jusqu'à 20 minutes de blocage ; un `.part` repris alors que l'AN a publié un nouveau fichier échoue (« taille X, attendu Y ») et reste à supprimer à la main (claude, 2026-10-30)
-- [ ] `lvnd download --leger` en local, quand les amendements de la XVIe ne viennent que du plan B (`unitaire`, sans zip) : il retente le dump de l'AN au lieu de réutiliser ce qui est là, et reste bloqué. Sans effet en CI, qui a la copie de la release (claude, 2026-10-31)
+- [ ] `lvnd download --leger` en local : pour les amendements XVe et XVIe issus du plan B ou de la copie de la release (sans zip du dump), il retente le dump de l'AN et reste bloqué jusqu'à 20 minutes. En CI, seulement quand l'archive manque au cache. Un `.part` repris alors que l'AN a publié un nouveau fichier échoue (« taille X, attendu Y ») et reste à supprimer à la main (claude, 2026-11-01)
 - [ ] Sénat : `lvnd build` en local réécrit les exports de l'AN quand `data/raw/` diffère de la copie de la CI. Pour ne changer que le Sénat, restaurer ces fichiers avant de commiter (claude, 2026-10-31)
 - [ ] Admin, version `autre` du Sénat : droits, vigilance et sources se saisissent en JSON sur la fiche, pas avec les formulaires habituels (claude, 2026-10-31)
 - [ ] Fiche député·e : « Prochains votes » ne liste pas les textes du seul Sénat attendus à l'AN (casseurs-payeurs), pour ne rien changer aux vues de l'AN pendant le cycle Sénat (claude, 2026-10-31)
-- [ ] Vérifier le 01/11/2026 que la passe quotidienne (`donnees-quotidien.yml`, 5 h UTC) tourne bien : première avec le Sénat publié. Garde-fou du Sénat, sync de l'admin, alertes du Sénat ramenées à une dans « À traiter » (ingérences étrangères). Correction après le cycle si besoin (user:moi, 2026-10-31)
 - [ ] Cycle Sénat, hors cycle : amendements clés du Sénat (environ 31 suppressions hors budgets et retraites, sur 16 textes), cartes partageables des sénateur·ices, Comparer pour le Sénat, correspondance entre groupes des deux chambres (claude, 2026-10-31)
-- [DONNÉES] Catalogue XVe, dossier immigration 2018 : V483 (programme de stabilité) rattaché à tort à DLR5L15N36410, V1094 (motion de renvoi de ce texte) rattaché à DLR5L15N36601, V1093 en étape AN1 alors que c'est la nouvelle lecture. Sans effet sur décisif ni scores (claude, 2026-10-31)
-- [DONNÉES] Catalogue : `cc_sens` vide pour 2021-817 DC ; `textes.csv` titre « 2021 à 2027 » pour la programmation de la recherche, la loi dit 2030. Sans effet à l'affichage (claude, 2026-10-31)
-- [DONNÉES] Catalogue XVe, programmation de la justice (DLR5L15N36626) : V1518 (motion sur le PLFSS 2019) et V1536 (déclaration sur la fiscalité écologique) rattachés à tort. Sans effet sur décisif ni scores (claude, 2026-10-31)
-- [DONNÉES] Catalogue XVe, scrutins mal rattachés : V1941 (déclaration de politique générale) à la LOM, V3838 (programmation militaire) à la révision constitutionnelle, V3518 et V3633 (déclarations du Gouvernement) à climat et résilience ; V45, titre « article 6 », PDF « art. 7 ». Sans effet sur décisif ni scores (claude, 2026-10-31)
-- [DONNÉES] Catalogue XVe, titres V738, V1612 : article différent de la division de l'amendement. Sans effet sur décisif ni scores (claude, 2026-11-01)
+- [ ] Catalogue : `cc_sens` vide pour 2021-817 DC ; `textes.csv` titre « 2021 à 2027 » pour la programmation de la recherche, la loi dit 2030. Sans effet à l'affichage (claude, 2026-10-31)
+- [ ] Catalogue XVe, scrutins mal rattachés ou mal situés, sans effet sur décisif ni scores : V483 à l'immigration, V1094 à DLR5L15N36601, V1093 en AN1 alors que c'est la nouvelle lecture, V1518 et V1536 à la programmation de la justice, V1941 à la LOM, V3838 à la révision constitutionnelle, V3518 et V3633 à climat et résilience. Titre différent de la division de l'amendement ou du PDF : V45, V738, V1612 (claude, 2026-11-01)
+- [ ] Vérifier le 02/11/2026 que la passe quotidienne (`donnees-quotidien.yml`, 5 h UTC) tourne bien : première avec la XVe. Attendu : environ 20 minutes d'attente sur le dump des amendements avant la copie de la release, passe finie sous le plafond de 60 minutes, sync de l'admin sans erreur, build Cloudflare réussi, site à jour (user:moi, 2026-11-01)
+- [ ] Revoir le site avec les qualifications de la XVe : vues par législature, fiche député·e et score par législature (règle 19), jamais relus avec de vraies données (claude, 2026-11-01)
+- [ ] Une fois la passe du 02/11/2026 vérifiée : supprimer la branche `xve` et son worktree. Tant qu'elle existe, un push y lance un build d'aperçu Cloudflare (claude, 2026-11-01)
 
 ## Textes à surveiller
 
@@ -48,12 +46,6 @@ Ce que les alertes de `lvnd check` et d'« À traiter » ne signalent pas. Le re
 ## Cycles candidats
 
 Un cycle à la fois, choisi et nommé au moment de l'ouvrir.
-
-### XVe
-
-2017-2022 : sécurité globale, séparatisme, état d'urgence sanitaire.
-
-- [→XVe] Ouvrir le cycle par les textes `libertes` (séparatisme, sécurité globale, anti-casseurs) (user:moi, 2026-10-29)
 
 ### Sénat 2017-2022
 
@@ -101,7 +93,7 @@ vient de lui ; un cas non prévu remonte à un humain, sans règle inventée.
 
 ## À creuser
 
-- [creuser] Rattachement scrutin → dossier : V6758 (loi d'urgence agricole) à la loi organique « natifs » de Nouvelle-Calédonie (DLR5L17N52104). Non retenus, sans effet sur les scores ; d'autres scrutins sont-ils touchés ? (claude, 2026-10-29)
+- [creuser] Rattachement scrutin → dossier : V6758 (loi d'urgence agricole) à la loi organique « natifs » de Nouvelle-Calédonie (DLR5L17N52104), lu dans `objet.dossierLegislatif`. Non retenu, sans effet sur les scores ; d'autres scrutins sont-ils touchés ? (claude, 2026-10-29)
 - [creuser] Table pays → circonscription des Français de l'étranger (code électoral, art. L. 330-1) à saisir en référentiel (claude, 2026-10-29)
 - [creuser] Relire `mots_cles.yaml` (brouillon), qui présélectionne les textes à suivre : motifs larges, sources de faux positifs (« eau », « soins », « violences », « justice ») (claude, 2026-10-29)
 - [creuser] Quiz « qui vote comme vous ? » sur de vrais scrutins, comme leurs-votes.fr (claude, 2026-10-29)

@@ -3,6 +3,52 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Les tags `v*` du dépôt suivent ces versions.
 
+## [1.4.0] — 2026-11-01
+
+Cycle XVe : la législature 2017-2022 entre sur le site d'un seul déploiement, données et
+qualifications : sécurité globale, séparatisme, anti-casseurs, crise sanitaire. 199 textes
+qualifiés au total, dont 70 de la XVe, et 620 écartés. Le Sénat de 2017-2022 reste à part.
+
+### Ajouté
+
+- **Données** : 4 417 scrutins et 472 631 votes nominatifs de la XVe, 413 textes au catalogue,
+  dossiers de la XIVe votés en XVe, rattachements figés, lignées de groupes. Amendements : le
+  dump plafonne à 11 Ko/s, 3 071 amendements viennent du plan B et d'une copie dans la release
+  `donnees-figees`.
+- **Qualifications** : 70 textes en six lots thématiques, 33 amendements clés, 199 textes de la
+  XVe écartés au tri, dont les lois de finances sans source. Positions de groupe contrôlées
+  contre datan.fr : aucun écart réel.
+- **Méthode** : échéance d'un régime restrictif et droit lu à la seule date du vote (règle 4), lois
+  de finances (règle 8), lois successives d'une même crise (règle 18), détail par législature
+  (règle 19).
+- **Site** : vues par législature, score par législature sur la fiche député·e à partir de deux
+  législatures, `scores_deputes_legislatures.csv`, périmètre et limites sur la page Méthodologie.
+
+### Modifié
+
+- `lvnd download` : sous 20 Ko/s pendant la patience, une source avec plan B y bascule.
+- Rendu des cartes PNG dans un fil recyclé : resvg retenait environ 5 Mo de mémoire native par
+  carte, jusqu'à faire tuer le build de Cloudflare. Pic de 13,9 Go à 2,6 Go, mêmes images.
+- 4 dossiers d'engagement de responsabilité écartés, dont 3 de la XVIIe.
+
+### Corrigé
+
+- Rattachement des motions de censure, qui dépendait de l'ordre du système de fichiers : une
+  motion citée par un texte et par son engagement de responsabilité va à l'engagement, le texte
+  qualifié continuant de l'afficher. Vaut aussi pour les XVIe et XVIIe.
+- Un amendement contredit par le référentiel ou par un titre nettement plus proche est refusé, car
+  il vient d'un autre texte portant le même numéro : 6 scrutins de la XVe et 2 de la XVIIe (V4239,
+  V5726) changent de dossier.
+
+### Limites connues
+
+- 55 scrutins sur amendement de la XVe sur 3 124 n'ont pas d'amendement (98,2 % de rattachés,
+  seuil de `lvnd check` à 98 %). V446 et V2886 restent retenus d'après le titre et le PDF ou le
+  compte rendu, sans dispositif contrôlable.
+- Passe quotidienne pas encore observée avec la XVe, à vérifier le 02/11/2026.
+- Vues par législature et fiche député·e pas encore relues avec les qualifications de la XVe.
+- Quelques scrutins de la XVe restent mal rattachés, sans effet sur décisif ni scores (`BACKLOG.md`).
+
 ## [1.3.0] — 2026-10-31
 
 Cycle Sénat : le second vote de chaque texte. Le site montre comment les groupes du
