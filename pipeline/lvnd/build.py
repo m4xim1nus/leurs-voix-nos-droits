@@ -9,7 +9,7 @@ from pathlib import Path
 
 import polars as pl
 
-from . import agenda, alertes, amendements, an, candidats, editorial, encours, parcours, positions, referentiels, scores, senat, textes
+from . import agenda, alertes, amendements, an, candidats, editorial, encours, parcours, positions, recherche, referentiels, scores, senat, textes
 from .sources import lire_manifeste, racine
 from .texte import norm
 
@@ -241,6 +241,7 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
     for nom, df in dfs_senat.items():
         df.write_csv(export / "senat" / f"{nom}.csv")
     n_senat = _ecrire_votes_senat(export / "senat", votes_senat)
+    recherche.ecrire(export)
     meta = {
         "genere_le": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "sources": lire_manifeste(raw),

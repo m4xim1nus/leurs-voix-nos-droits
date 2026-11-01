@@ -9,7 +9,7 @@ Chaque texte retenu est qualifié à la main : droits touchés, sens
 avec les votes des groupes et des députés de l'Assemblée nationale
 depuis 2017, et, à part, avec ceux du Sénat depuis 2022. La méthodologie et les données sont publiques.
 
-**État** : v1.5.0 en ligne sur [lvnd.technoperchoir.fr](https://lvnd.technoperchoir.fr)
+**État** : v1.6.0 en ligne sur [lvnd.technoperchoir.fr](https://lvnd.technoperchoir.fr)
 (Assemblée nationale, XVe, XVIe et XVIIe législatures ; Sénat depuis juin 2022). Voir
 [`CHANGELOG.md`](CHANGELOG.md) et [`ROADMAP.md`](ROADMAP.md).
 

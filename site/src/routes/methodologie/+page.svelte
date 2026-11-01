@@ -382,6 +382,22 @@
     tous les député·es possibles.
   </p>
   <p>
+    <strong>Français établis hors de France.</strong> Le pays donne la circonscription, d’après le tableau
+    n° 1 ter annexé au code électoral (article L. 330-1), qui date de 2009. Six pays et territoires qu’il
+    ne nomme pas (Kosovo, Monténégro, Serbie, Soudan du Sud, Taïwan, Territoires palestiniens) sont rattachés
+    d’après le poste consulaire qui les couvre, et le site le signale.
+  </p>
+  <p>
+    <strong>Recherche.</strong> Elle se fait dans votre navigateur, sur des fichiers statiques : ce
+    que vous tapez n’est envoyé nulle part. Elle porte sur les noms des élu·es, les pays, les
+    titres, résumés et étiquettes des textes qualifiés, et les titres des textes écartés. Elle ne
+    porte ni sur les scrutins, ni sur les justifications. S’y ajoutent des termes courants (« APL »,
+    « squat ») et des surnoms d’usage public (« loi Duplomb »), préparés avec le même assistant et
+    relus. Ces mots servent seulement à trouver un texte : ils ne sont pas affichés, ne jugent rien
+    et n’entrent dans aucun score. La
+    <a href="/donnees/termes_recherche.csv">liste complète</a> est publique.
+  </p>
+  <p>
     Tout est <a href="/donnees">téléchargeable</a> : qualifications, scores, votes nominatifs.
     Données à jour du {data.genereLe.slice(0, 10).split('-').reverse().join('/')}.
   </p>

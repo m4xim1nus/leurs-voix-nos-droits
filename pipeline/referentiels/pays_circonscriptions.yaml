@@ -1,0 +1,224 @@
+# Pays → circonscription des député·es des Français établis hors de France.
+#
+# Source : code électoral, annexe, tableau n° 1 ter (art. L. 330-1), créé par l'ordonnance n° 2009-935 du 29 juillet
+# 2009, en vigueur depuis le 1er août 2009 ; relu sur Légifrance le 01/11/2026 :
+# https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006070239/LEGISCTA000020936532/
+#
+# `circonscriptions` suit le tableau, sous le nom courant du pays quand le tableau date (République tchèque → Tchéquie,
+# ancienne République yougoslave de Macédoine → Macédoine du Nord, Swaziland → Eswatini).
+# `hors_tableau` : pays et territoires que le tableau ne nomme pas, rattachés d'après le poste consulaire qui les
+# couvre et la pratique électorale. Le site le dit à côté du résultat.
+# `alias` : autres façons de chercher le même pays. Ce sont des clés de recherche, jamais affichées.
+
+circonscriptions:
+  1: [Canada, États-Unis]
+  2:
+    - Antigua-et-Barbuda
+    - Argentine
+    - Bahamas
+    - Barbade
+    - Belize
+    - Bolivie
+    - Brésil
+    - Chili
+    - Colombie
+    - Costa Rica
+    - Cuba
+    - Dominique
+    - Équateur
+    - Grenade
+    - Guatemala
+    - Guyana
+    - Haïti
+    - Honduras
+    - Jamaïque
+    - Mexique
+    - Nicaragua
+    - Panama
+    - Paraguay
+    - Pérou
+    - République dominicaine
+    - Saint-Christophe-et-Niévès
+    - Sainte-Lucie
+    - Saint-Vincent-et-les-Grenadines
+    - Salvador
+    - Suriname
+    - Trinité-et-Tobago
+    - Uruguay
+    - Venezuela
+  3: [Danemark, Estonie, Finlande, Irlande, Islande, Lettonie, Lituanie, Norvège, Royaume-Uni, Suède]
+  4: [Belgique, Luxembourg, Pays-Bas]
+  5: [Andorre, Espagne, Monaco, Portugal]
+  6: [Liechtenstein, Suisse]
+  7:
+    - Albanie
+    - Allemagne
+    - Autriche
+    - Bosnie-Herzégovine
+    - Bulgarie
+    - Croatie
+    - Hongrie
+    - Macédoine du Nord
+    - Pologne
+    - Roumanie
+    - Slovaquie
+    - Slovénie
+    - Tchéquie
+  8: [Chypre, Grèce, Israël, Italie, Malte, Saint-Marin, Saint-Siège, Turquie]
+  9:
+    - Algérie
+    - Burkina Faso
+    - Cap-Vert
+    - Côte d'Ivoire
+    - Gambie
+    - Guinée
+    - Guinée-Bissau
+    - Liberia
+    - Libye
+    - Mali
+    - Maroc
+    - Mauritanie
+    - Niger
+    - Sénégal
+    - Sierra Leone
+    - Tunisie
+  10:
+    - Afrique du Sud
+    - Angola
+    - Arabie saoudite
+    - Bahreïn
+    - Bénin
+    - Botswana
+    - Burundi
+    - Cameroun
+    - Comores
+    - Congo
+    - Djibouti
+    - Égypte
+    - Émirats arabes unis
+    - Érythrée
+    - Eswatini
+    - Éthiopie
+    - Gabon
+    - Ghana
+    - Guinée équatoriale
+    - Irak
+    - Jordanie
+    - Kenya
+    - Koweït
+    - Lesotho
+    - Liban
+    - Madagascar
+    - Malawi
+    - Maurice
+    - Mozambique
+    - Namibie
+    - Nigeria
+    - Oman
+    - Ouganda
+    - Qatar
+    - République centrafricaine
+    - République démocratique du Congo
+    - Rwanda
+    - Sao Tomé-et-Principe
+    - Seychelles
+    - Somalie
+    - Soudan
+    - Syrie
+    - Tanzanie
+    - Tchad
+    - Togo
+    - Yémen
+    - Zambie
+    - Zimbabwe
+  11:
+    - Afghanistan
+    - Arménie
+    - Australie
+    - Azerbaïdjan
+    - Bangladesh
+    - Biélorussie
+    - Birmanie
+    - Brunei
+    - Cambodge
+    - Chine
+    - Corée du Sud
+    - Fidji
+    - Géorgie
+    - Inde
+    - Indonésie
+    - Iran
+    - Japon
+    - Kazakhstan
+    - Kirghizistan
+    - Kiribati
+    - Laos
+    - Malaisie
+    - Maldives
+    - Marshall
+    - Micronésie
+    - Moldavie
+    - Mongolie
+    - Nauru
+    - Népal
+    - Nouvelle-Zélande
+    - Ouzbékistan
+    - Pakistan
+    - Palaos
+    - Papouasie-Nouvelle-Guinée
+    - Philippines
+    - Russie
+    - Salomon
+    - Samoa
+    - Singapour
+    - Sri Lanka
+    - Tadjikistan
+    - Thaïlande
+    - Timor oriental
+    - Tonga
+    - Turkménistan
+    - Tuvalu
+    - Ukraine
+    - Vanuatu
+    - Vietnam
+
+hors_tableau:
+  # Le tableau de 2009 nomme encore la Serbie-et-Monténégro, à laquelle appartenait aussi le Kosovo.
+  7: [Kosovo, Monténégro, Serbie]
+  # Indépendant du Soudan depuis 2011.
+  10: [Soudan du Sud]
+  # Consulat général de Jérusalem.
+  8: [Territoires palestiniens]
+  # Bureau français de Taipei.
+  11: [Taïwan]
+
+alias:
+  États-Unis: [USA, Etats-Unis d'Amérique]
+  Royaume-Uni: [Angleterre, Écosse, Pays de Galles, Grande-Bretagne, Irlande du Nord]
+  Pays-Bas: [Hollande]
+  Tchéquie: [République tchèque]
+  Macédoine du Nord: [Macédoine, ancienne République yougoslave de Macédoine]
+  Eswatini: [Swaziland]
+  Saint-Siège: [Vatican]
+  Birmanie: [Myanmar]
+  Biélorussie: [Bélarus]
+  Timor oriental: [Timor-Leste]
+  Vietnam: [Viêt Nam]
+  Kirghizistan: [Kirghizstan]
+  Marshall: [Îles Marshall]
+  Salomon: [Îles Salomon]
+  Fidji: [Îles Fidji]
+  Micronésie: [États fédérés de Micronésie]
+  Maurice: [Île Maurice]
+  Chine: [Hong Kong, Macao]
+  Corée du Sud: [Corée]
+  République démocratique du Congo: [RDC]
+  Congo: [République du Congo]
+  République centrafricaine: [Centrafrique, RCA]
+  Émirats arabes unis: [Émirats, EAU]
+  Saint-Christophe-et-Niévès: [Saint-Kitts-et-Nevis]
+  Sao Tomé-et-Principe: [São Tomé]
+  Cap-Vert: [Cabo Verde]
+  Territoires palestiniens: [Palestine, Cisjordanie, Gaza, Jérusalem]
+  Espagne: [Canaries, Baléares]
+  Portugal: [Açores, Madère]

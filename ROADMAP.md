@@ -7,4 +7,4 @@ de tenue : `CLAUDE.md`, section « Suivi ».
 
 ## Aucun cycle en cours
 
-Le cycle Relecture XVe est clos (v1.5.0). Le suivant sera choisi par Max parmi les cycles candidats de `BACKLOG.md`.
+Le cycle Recherche est clos (v1.6.0). Le suivant sera choisi par Max parmi les cycles candidats de `BACKLOG.md`.

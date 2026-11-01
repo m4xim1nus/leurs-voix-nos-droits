@@ -547,9 +547,12 @@ s'expliquent tous par des fusions de communes.
 - Outre-mer : complet. Les codes de l'AN (971 à 977, 986 à 988) sont
   alignés sur l'Insee, et Saint-Barthélemy et Saint-Martin partagent la
   circo 977.
-- Français de l'étranger : 11 circos (code AN `099`), sans code postal.
-  La table pays → circo (code électoral, art. L. 330-1) sera à saisir dans
-  un référentiel.
+- Français de l'étranger : 11 circos (code AN `099`), sans code postal. La
+  table pays → circo est dans `pipeline/referentiels/pays_circonscriptions.yaml`,
+  d'après le tableau n° 1 ter annexé au code électoral (art. L. 330-1), inchangé
+  depuis l'ordonnance n° 2009-935 d'après Légifrance (relu le 01/11/2026). Le
+  tableau date : Serbie, Monténégro, Kosovo, Soudan du Sud, Taïwan et Territoires
+  palestiniens n'y sont pas nommés, et sont rattachés d'après le poste consulaire.
 - Circo → député (AMO) : 577 sur 577 pour la XVIe comme pour la XVIIe,
   sur la clé `(numDepartement, numCirco)`. Les codes département de l'AN
   ont deux chiffres en métropole, plus `2A`, `2B`, `971` à `977`, `986` à
