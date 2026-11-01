@@ -37,7 +37,9 @@ consultatives (règle 7). Toujours le 30/10/2026, au stock des lois de finances 
 formation professionnelle (règle 2), les unions confédérales de retraités (règle 7).
 Le 31/10/2026, pour le Sénat : les règles 23 à 28, et le CESE hors des sources (règle 7). Le même jour, pour la XVe :
 l'échéance d'un régime restrictif et le droit lu à la seule date du vote (règle 4), les lois de finances (règle 8), les
-lois successives d'une même crise (règle 18), le détail par législature sur la fiche d'un·e député·e (règle 19).
+lois successives d'une même crise (règle 18), le détail par législature sur la fiche d'un·e député·e (règle 19). Le 01/11/2026, après l'audit de cohérence : le choix du droit
+principal et le décompte des sources (règle 4), le droit `discriminations` et la mesure d'un autre droit (règle 4), la mesure absente
+du texte décisif, le droit secondaire, les sources partagées et la réserve du Conseil constitutionnel (règle 11).
 
 ## Grille des droits
 
@@ -112,6 +114,12 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
    admises citent le plus souvent. La mesure de sens opposé s'affiche en
    vigilance (PLFSS 2026 : arrêts de travail limités, `restreint` ;
    suspension de la réforme des retraites, en vigilance).
+   Pour ce décompte, une source compte quand elle met la mesure en cause ou qu'elle la défend, et chaque organisation compte une fois.
+   Le **droit principal** est celui de la mesure que les sources admises citent le plus souvent, décompté de la même façon. À égalité,
+   c'est le droit de l'objet du texte. Une mesure qui touche **un autre droit** reçoit ce droit en secondaire, si une source admise
+   se prononce sur elle : la vigilance est réservée aux mesures de sens opposé pour un même droit (règle 4) et à la mise en œuvre (règle 5).
+   Quand une source admise voit dans une mesure une **discrimination**, le texte reçoit `discriminations` en secondaire. Sinon, un risque
+   évoqué sans ce constat s'affiche en vigilance. L'inégalité de revenu reste hors de ce droit (règle 2).
    Le sens d'une mesure sur le **corps électoral** se lit, pour
    `citoyennete`, sur le droit de vote des personnes qu'elle ajoute à la
    liste ou en retire. Quand une source admise y voit une atteinte aux
@@ -233,7 +241,10 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
     l'article et non d'après la nature de l'amendement. Un article dont le
     sens n'est pas univoque n'est pas retenu, y compris quand les sources
     admises ne s'accordent pas sur ce sens (primes de partage de la valeur,
-    2023 : mises en cause par la CGT, soutenues par la CFDT et FO). Sur la justice des
+    2023 : mises en cause par la CGT, soutenues par la CFDT et FO). N'est pas retenu non plus : un article portant une mesure
+    **absente du texte soumis au scrutin décisif** (règle 6), ni un article retenu pour une critique qui ne vise qu'un **droit secondaire** :
+    le scrutin compterait au score global dans le sens du droit principal, à rebours de cette critique. Une **réserve du Conseil
+    constitutionnel** ne vaut mise en cause que si elle censure ou neutralise la mesure. Sur la justice des
     mineurs, le RN propose de supprimer l'article 7, qui ajoute une
     garantie (rapport éducatif avant toute détention provisoire). Voter
     cette suppression va donc dans le sens du texte. **Un seul scrutin par

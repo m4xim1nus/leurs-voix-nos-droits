@@ -29,6 +29,11 @@
       rel="external noopener"
       target="_blank">Aide</a
     >
+    <a
+      href="https://github.com/m4xim1nus/leurs-voix-nos-droits/blob/main/docs/EXPLOITATION.md"
+      rel="external noopener"
+      target="_blank">Exploitation</a
+    >
   </nav>
   <p class="discret">
     {data.email}

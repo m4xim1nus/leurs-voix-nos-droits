@@ -84,11 +84,16 @@
       régime restrictif, ou en inscrire les pouvoirs dans le droit commun, le restreint, même si le texte
       allège ce régime. Une évolution postérieure au vote n’entre pas dans le jugement. Dans un texte
       dont les mesures vont en sens opposés pour un même droit, ce droit prend le sens des mesures que
-      les sources citent le plus souvent, et la mesure de sens opposé s’affiche en point de vigilance.
-      Une mesure sur le corps électoral se lit, pour les droits civiques, sur le droit de vote des personnes
-      qu’elle ajoute à la liste ou en retire ; quand une source y voit une atteinte aux droits d’un peuple
-      autochtone, le texte reçoit aussi le droit à l’égalité et à la non-discrimination, au sens « restreint ».
-      Les deux lectures sont alors comptées.
+      les sources mettent en cause ou défendent le plus souvent, chaque organisation comptant une fois,
+      et la mesure de sens opposé s’affiche en point de vigilance. Le droit principal est celui de la
+      mesure la plus citée ainsi ; à égalité, celui de l’objet du texte. Une mesure qui touche un autre
+      droit reçoit ce droit en secondaire, si une source admise se prononce sur elle. Quand une source
+      admise voit dans une mesure une discrimination, le texte reçoit le droit à l’égalité et à la non-discrimination
+      en secondaire ; un simple risque s’affiche en vigilance. Une mesure sur le corps électoral se lit,
+      pour les droits civiques, sur le droit de vote des personnes qu’elle ajoute à la liste ou en retire
+      ; quand une source y voit une atteinte aux droits d’un peuple autochtone, le texte reçoit aussi
+      le droit à l’égalité et à la non-discrimination, au sens « restreint ». Les deux lectures sont alors
+      comptées.
     </li>
     <li value="5" id="regle-5">
       <strong>Points de vigilance.</strong> Les critiques sourcées sur la mise en œuvre ou sur l’insuffisance
@@ -190,10 +195,14 @@
       : une source antérieure et générale ne suffit pas. Leur sens se fixe d’après le contenu de l’article,
       pas d’après la nature de l’amendement : supprimer un article qui ajoute une garantie va contre les
       droits. Un article dont le sens n’est pas univoque n’est pas retenu, y compris quand les sources
-      ne s’accordent pas sur ce sens. Un seul scrutin par article (celui qui en a fixé le sort), et une
-      seule lecture : la dernière où des suppressions ont été mises aux voix. Ne comptent pas : la suppression
-      de l’article unique d’un texte (elle double le vote décisif), ou de l’article qui est le seul du
-      texte au vote décisif, et un scrutin sans aucune voix d’un côté (il ne départage personne).
+      ne s’accordent pas sur ce sens. N’est pas retenu non plus un article dont la mesure a disparu du
+      texte soumis au vote décisif, ni un article retenu pour une critique qui ne vise qu’un droit secondaire
+      : le vote compterait au score global à rebours de cette critique. Une réserve du Conseil constitutionnel
+      ne vaut mise en cause que si elle censure ou neutralise la mesure. Un seul scrutin par article (celui
+      qui en a fixé le sort), et une seule lecture : la dernière où des suppressions ont été mises aux
+      voix. Ne comptent pas : la suppression de l’article unique d’un texte (elle double le vote décisif),
+      ou de l’article qui est le seul du texte au vote décisif, et un scrutin sans aucune voix d’un côté
+      (il ne départage personne).
     </li>
   </ol>
 </section>
