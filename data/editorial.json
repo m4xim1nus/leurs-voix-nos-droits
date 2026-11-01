@@ -2780,7 +2780,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2026-905 DC du 28 mai 2026 : conforme, sans réserve. Le Conseil constitutionnel juge que l'ajout des natifs au corps électoral, « sans remettre en cause son caractère restreint », ne méconnaît pas les orientations de l'accord de Nouméa.",
-      "note": "Proposition de loi organique déposée au Sénat, qui l'a adoptée en premier. L'Assemblée l'a votée sans modification en 1re lecture : ce vote sur l'ensemble est le scrutin décisif (règle 9). Le sens est lu par rapport au droit en vigueur au jour du vote, le corps électoral « gelé » depuis 2007 et jugé conforme par le Conseil constitutionnel en 2025 (règle 4). Les critiques de l'ONU portent sur la procédure (consentement du peuple kanak) et sur l'ensemble des réformes du corps électoral, pas sur les seuls natifs : elles sont affichées en vigilance. Aucun amendement clé (règle 11). La suppression de l'article 1er (V6748) visait bien la mesure, mais aucune source admise ne met en cause l'inscription des natifs en particulier. L'amendement du Gouvernement qui ajoutait les conjoints d'électeurs (V6751, rejeté 163-164) créait un article nouveau : ce n'est ni une suppression ni un rétablissement. Aucune motion de rejet n'a été mise aux voix.",
+      "note": "Proposition de loi organique déposée au Sénat, qui l'a adoptée en premier. L'Assemblée l'a votée sans modification en 1re lecture : ce vote sur l'ensemble est le scrutin décisif (règle 9). Le sens est lu par rapport au droit en vigueur au jour du vote, le corps électoral « gelé » depuis 2007 et jugé conforme par le Conseil constitutionnel en 2025 (règle 4). La déclaration du Comité de l'ONU (30 avril 2026) ne nomme pas cette loi organique et ne se prononce pas sur l'inscription des natifs. Elle vise le projet de loi de 2024, la réforme constitutionnelle rejetée et un processus décidé sans le consentement du peuple kanak. Elle est donc affichée en vigilance, et `discriminations` n'est pas ajouté, à la différence de 2024 (règle 4). Aucun amendement clé (règle 11). La suppression de l'article 1er (V6748) visait bien la mesure, mais aucune source admise ne met en cause l'inscription des natifs en particulier. L'amendement du Gouvernement qui ajoutait les conjoints d'électeurs (V6751, rejeté 163-164) créait un article nouveau : ce n'est ni une suppression ni un rétablissement. Aucune motion de rejet n'a été mise aux voix.",
       "sources": {
         "cc-2025-1163-qpc": {
           "auteur": "Conseil constitutionnel",
@@ -3950,6 +3950,116 @@
         "sources": {},
         "note": "Pas de vote sur l'ensemble à l'Assemblée. État : à l'arrêt, dernier acte le 23/07/2024. Sens lu sur le texte adopté le 30/10/2023."
       }
+    },
+    {
+      "id": "egalim-2018",
+      "dossier_an": "DLR5L15N36336",
+      "legislature": 15,
+      "titre": "Loi pour l'équilibre des relations commerciales dans le secteur agricole et alimentaire et une alimentation saine, durable et accessible à tous",
+      "resume": "Loi composite. Elle porte surtout sur les prix et les contrats agricoles et sur la restauration collective. Elle interdit aussi en 2025 les contenants alimentaires en plastique de cuisson, de réchauffe et de service dans les cantines scolaires et universitaires et dans les structures de la petite enfance, ainsi que d'autres objets en plastique à usage unique. Elle suspend la mise sur le marché de l'additif E171 (dioxyde de titane). Elle ouvre une expérimentation de la pulvérisation de produits par drones sur les parcelles en forte pente, et subordonne l'usage de pesticides près des habitations à des mesures de protection fixées par des chartes.",
+      "droits": [
+        {
+          "code": "sante",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "ong-cantines-2026-04",
+            "anses-2019-sa-0036"
+          ],
+          "justification": "La mesure de la grille la plus citée par les sources admises est l'interdiction des contenants en plastique dans les cantines. Cinq associations écrivent que ces plastiques « libèrent des substances chimiques vers les aliments et mettent en danger la santé des enfants », et défendent cette interdiction de l'article 28. Sur l'additif E171, dont le texte suspend la mise sur le marché, l'ANSES dit en 2019 que les données « ne permettent pas de lever les incertitudes sur l'innocuité » et rappelle sa recommandation de limiter l'exposition aux nanomatériaux."
+        },
+        {
+          "code": "environnement",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "ong-cantines-2026-06"
+          ],
+          "justification": "Selon les mêmes associations, sur la même interdiction précisée en 2026, limiter le plastique en cantine permet de « lutter contre la pollution plastique en limitant l'utilisation de ce matériau désormais omniprésent dans l'environnement »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [
+        {
+          "texte": "Mesure de sens opposé : le texte déroge à l'interdiction de la pulvérisation aérienne, à titre d'expérimentation. Sur ces essais, l'ANSES relève que la dérive aérienne d'un drone est, près du sol, « 4 à 10 fois supérieures » à celle du chenillard de référence, et que les données ne permettent pas « de dégager des conclusions générales robustes ». Elle juge aussi le drone « une solution intéressante » dans certaines conditions et note une exposition des opérateurs « très inférieure ». Générations Futures, qui s'oppose aux textes de 2024 autorisant l'épandage par drone, rappelle que l'ANSES conclut « sur la nécessité de disposer de plus de données ».",
+          "sources": [
+            "anses-2022-ast-0026",
+            "gf-li-67"
+          ]
+        },
+        {
+          "texte": "Protection des riverains : le Conseil constitutionnel a censuré en 2021, sur question de Générations Futures et d'autres, la concertation prévue pour les chartes d'engagements, qui « ne satisfait pas les exigences d'une participation de « toute personne » » imposée par la Charte de l'environnement.",
+          "sources": [
+            "cc-2021-891-qpc"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Décision 2018-771 DC du 25 octobre 2018 : 23 articles censurés, sans lien avec le projet initial (articles 12, 21, 22, 31 à 37, 39 à 43, 49, 56, 58 à 60, 78, 86 et 87). L'extension de l'interdiction à d'autres objets en plastique et l'article 82 sur les drones sont jugés conformes. Décision 2021-891 QPC du 19 mars 2021 : censure de la concertation prévue pour les chartes de l'article 83.",
+      "note": "Le scrutin décisif est le vote sur l'ensemble en lecture définitive (règle 9). Texte composite : le sens et le droit principal sont ceux des mesures que les sources admises mettent en cause ou défendent le plus (règle 4). Les articles 28 (plastiques), 53 (E171), 82 (drones) et 83 (pesticides près des habitations) figurent au texte voté le 2 octobre 2018 (T.A. n° 177). Ces sources sont postérieures au vote et portent sur les mesures (règle 7). Elles ne portent pas sur le volet commercial du texte, qui n'est pas qualifié. Aucune critique de l'interdiction des plastiques n'a été trouvée parmi les sources admises. Aucun amendement clé (règle 11) : la suppression de l'article 14 sexies, devenu l'article 82 (V1144, 17-28), n'est pas retenue, car les constats de l'ANSES sur les drones vont dans les deux sens. Les rétablissements de l'article 11 septies A (V1134, V1135) ne portent sur aucune mesure citée. Motion de renvoi en commission non affichée (règle 10).",
+      "sources": {
+        "anses-2019-sa-0036": {
+          "auteur": "ANSES",
+          "titre": "Avis relatif aux risques liés à l'ingestion de l'additif alimentaire E171 (saisine n° 2019-SA-0036)",
+          "date": "2019-04-12",
+          "url": "https://www.anses.fr/fr/system/files/ERCA2019SA0036.pdf"
+        },
+        "anses-2022-ast-0026": {
+          "auteur": "ANSES",
+          "titre": "Note d'appui scientifique et technique relative à l'expérimentation de l'utilisation de drones pour la pulvérisation de produits phytopharmaceutiques (demande n° 2022-AST-0026)",
+          "date": "2022-07-01",
+          "url": "https://www.anses.fr/fr/system/files/PHYTO2022AST0026.pdf"
+        },
+        "cc-2021-891-qpc": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2021-891 QPC du 19 mars 2021 (association Générations futures et autres)",
+          "date": "2021-03-19",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2021/2021891QPC.htm"
+        },
+        "gf-li-67": {
+          "auteur": "Générations Futures",
+          "titre": "Lettre d'information n° 67 : « À l'Assemblée nationale : une nouvelle proposition de loi pour autoriser la pulvérisation de pesticides par drones »",
+          "date": "2024-12",
+          "url": "https://generations-futures.fr/wp-content/uploads/2024/12/li-n67.pdf"
+        },
+        "ong-cantines-2026-04": {
+          "auteur": "Cantine sans Plastique France, No Plastic In My Sea, Surfrider Foundation Europe, Zero Waste France et Women Engage for a Common Future",
+          "titre": "Les ONG somment le gouvernement de mettre la proposition de loi sur les cantines sans plastique à l'agenda parlementaire (communiqué)",
+          "date": "2026-04-23",
+          "url": "https://wecf-france.org/wp-content/uploads/2026/04/CP-plastique-dans-les-cantines.pdf"
+        },
+        "ong-cantines-2026-06": {
+          "auteur": "Cantine sans Plastique France, No Plastic In My Sea, Surfrider Foundation Europe, Zero Waste France et Women Engage for a Common Future",
+          "titre": "Interdiction de la vaisselle en plastique dans les cantines : les ONG se félicitent d'une première victoire à l'Assemblée nationale (communiqué)",
+          "date": "2026-06-05",
+          "url": "https://wecf-france.org/wp-content/uploads/2026/06/Communique-de-Presse-Interdiction-plastique-dans-les-cantines-victoire-a-lAN.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V1181",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (227-136)"
+        },
+        {
+          "id": "VTANR5L15V1156",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, nouvelle lecture (33-11)"
+        },
+        {
+          "id": "VTANR5L15V729",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (339-84)"
+        },
+        {
+          "id": "VTANR5L15V1119",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, nouvelle lecture (35-60)"
+        }
+      ]
     },
     {
       "id": "elan-2018",
@@ -6064,6 +6174,53 @@
       ]
     },
     {
+      "id": "inscription-office-nc-ppl-2020",
+      "dossier_an": "DLR5L15N38369",
+      "legislature": 15,
+      "titre": "Proposition de loi organique visant à permettre l'inscription d'office sur la liste électorale spéciale à la consultation sur l'accession à la pleine souveraineté de la Nouvelle-Calédonie",
+      "resume": "Proposition de loi organique examinée le 30 janvier 2020 et rejetée. Elle visait à permettre l'inscription d'office sur la liste électorale spéciale à la consultation sur l'accession à la pleine souveraineté de la Nouvelle-Calédonie. L'Assemblée a rejeté son article unique (22-40).",
+      "droits": [
+        {
+          "code": "citoyennete",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "cc-2018-764",
+            "ce-393830"
+          ],
+          "justification": "Le texte facilite l'inscription sur la liste de la consultation et, par elle, l'exercice du droit de vote. Sur l'inscription d'office créée en 2018, le Conseil constitutionnel relève que le législateur « a entendu favoriser la participation la plus large possible à la consultation », et le Conseil d'État parle de « la nécessité de favoriser la plus large participation possible des électeurs au scrutin concerné ». Ces sources portent sur la mesure (règle 7)."
+        }
+      ],
+      "etiquettes": [
+        "outre-mer"
+      ],
+      "vigilance": [],
+      "conseil_constitutionnel": "",
+      "note": "Le texte n'a pas fait l'objet d'un vote sur l'ensemble : le vote sur l'article unique (V2433, 22-40), rejeté, tient lieu de scrutin décisif (règle 9). Voter pour, c'est voter pour le texte. Les sources sont antérieures et portent sur l'inscription d'office de la loi organique de 2018 (règle 7). Aucune critique trouvée parmi les sources admises. Aucun amendement clé (règle 11). Aucune motion n'a été mise aux voix.",
+      "sources": {
+        "cc-2018-764": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2018-764 DC du 19 avril 2018 (loi organique relative à l'organisation de la consultation sur l'accession à la pleine souveraineté de la Nouvelle-Calédonie)",
+          "date": "2018-04-19",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2018/2018764DC.htm"
+        },
+        "ce-393830": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 393830 sur un projet de loi organique relatif à l'organisation de la consultation sur l'accession à la pleine souveraineté de la Nouvelle-Calédonie",
+          "date": "2017-11-30",
+          "url": "https://www.senat.fr/leg/pjl17-152-avis-ce.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V2433",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "article unique, valant vote sur l'ensemble, 1re lecture, rejeté (22-40)"
+        }
+      ]
+    },
+    {
       "id": "installations-illicites-gens-du-voyage-2026",
       "dossier_an": "DLR5L17N53358",
       "legislature": 17,
@@ -6089,12 +6246,22 @@
             "ddd-26-04"
           ],
           "justification": "L'amende forfaitaire passe à 1 000 euros, et la consignation exigée pour la contester augmente avec elle. La Défenseure des droits y voit un « obstacle injustifié et disproportionné au droit d’accès au juge » et rend un avis défavorable."
+        },
+        {
+          "code": "discriminations",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-fiche-32",
+            "ddd-25-05"
+          ],
+          "justification": "Le texte relève l'amende forfaitaire pour installation illicite. Le Défenseur des droits demande la suppression de cette procédure, qui « a des conséquences discriminatoires à l'encontre des « Gens du voyage » ». La Défenseure précise que son extension à ce délit « a donc vocation à s'appliquer spécifiquement » à ces personnes."
         }
       ],
       "etiquettes": [],
       "vigilance": [
         {
-          "texte": "La Défenseure des droits relève que cette hausse de l'amende « est susceptible de caractériser une discrimination indirecte fondée sur la particulière vulnérabilité résultant de la situation économique », et que l'amende forfaitaire pour installation illicite a « vocation à s’appliquer spécifiquement aux « Gens du voyage » ».",
+          "texte": "La Défenseure des droits relève aussi que cette hausse de l'amende « est susceptible de caractériser une discrimination indirecte fondée sur la particulière vulnérabilité résultant de la situation économique » : ce risque, fondé sur le revenu, reste en vigilance (règles 2 et 4).",
           "sources": [
             "ddd-25-05"
           ]
@@ -6115,7 +6282,7 @@
         }
       ],
       "conseil_constitutionnel": "",
-      "note": "Vote de 1re lecture au Sénat, texte encore en navette, attendu à l'Assemblée. Pas de vote à l'Assemblée : le texte ne compte que dans les scores du Sénat (règle 25). Le sens se lit sur le texte adopté par le Sénat le 10/02/2026 (T.A. n° 55, 2025-2026 ; règle 24). Aucune source admise n'a été trouvée sur ce texte lui-même : les deux avis de la Défenseure des droits portent sur des mesures identiques ou proches, inscrites dans d'autres textes (règle 7). Ils ne valent pas pour les mesures de ce texte qu'ils n'examinent pas. Texte composite : son sens est celui des mesures que les sources citent, les autres vont en vigilance (règle 4).",
+      "note": "Vote de 1re lecture au Sénat, texte encore en navette, attendu à l'Assemblée. Pas de vote à l'Assemblée : le texte ne compte que dans les scores du Sénat (règle 25). Le sens se lit sur le texte adopté par le Sénat le 10/02/2026 (T.A. n° 55, 2025-2026 ; règle 24). Aucune source admise n'a été trouvée sur ce texte lui-même : les deux avis de la Défenseure des droits portent sur des mesures identiques ou proches, inscrites dans d'autres textes (règle 7). Ils ne valent pas pour les mesures de ce texte qu'ils n'examinent pas. Le droit `discriminations` repose sur le constat du Défenseur des droits sur cette procédure d'amende forfaitaire (fiche de réforme n° 32, règle 4). Texte composite : son sens est celui des mesures que les sources citent, les autres vont en vigilance (règle 4).",
       "sources": {
         "ddd-25-05": {
           "auteur": "Défenseur des droits",
@@ -6128,6 +6295,12 @@
           "titre": "Avis 26-04 sur le projet de loi visant à offrir des réponses immédiates aux phénomènes troublant l'ordre public, la sécurité et la tranquillité de nos concitoyens",
           "date": "2026-06-16",
           "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=23255"
+        },
+        "ddd-fiche-32": {
+          "auteur": "Défenseur des droits",
+          "titre": "Fiche réforme n° 32, Les droits des gens du voyage",
+          "date": "2023-07",
+          "url": "https://www.defenseurdesdroits.fr/sites/default/files/2023-12/fiches-reformes_032.pdf"
         }
       },
       "scrutins": [],
@@ -9005,7 +9178,7 @@
           "sources": [
             "ddd-25-04"
           ],
-          "justification": "Durcit le régime dérogatoire d'accès à la nationalité propre à Mayotte ; la Défenseure des droits y voit une discrimination (art. 14 CEDH combiné à l'art. 8) et recommande l'alignement sur le droit commun."
+          "justification": "Durcit le régime dérogatoire d'accès à la nationalité propre à Mayotte ; la Défenseure des droits recommande l'alignement sur le droit commun."
         },
         {
           "code": "enfants",
@@ -9015,14 +9188,30 @@
             "ddd-25-04"
           ],
           "justification": "L'enfant est traité « uniquement comme le descendant » de parents dont la situation administrative décide de son accès à la nationalité : contraire à l'intérêt supérieur de l'enfant (art. 3-1 CIDE) selon la Défenseure des droits."
+        },
+        {
+          "code": "discriminations",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-25-04"
+          ],
+          "justification": "Exiger la résidence régulière des deux parents exclut l'enfant qui n'a qu'une seule filiation. La Défenseure des droits considère que le texte « constitue une discrimination au sens de l'article 14 de la Conv. EDH, combiné à son article 8 »."
         }
       ],
       "etiquettes": [
         "outre-mer"
       ],
-      "vigilance": [],
+      "vigilance": [
+        {
+          "texte": "Le Conseil constitutionnel juge que le texte s'applique à tous les enfants nés à Mayotte de parents étrangers, quelle que soit leur nationalité ou leur origine, et qu'il n'institue « aucune discrimination » à ce titre. La Défenseure des droits se fonde sur un autre critère, la situation de famille.",
+          "sources": [
+            "cc-2025-881"
+          ]
+        }
+      ],
       "conseil_constitutionnel": "Décision 2025-881 DC du 7 mai 2025 : conforme, sous une réserve. Les conditions plus restrictives propres à Mayotte sont jugées justifiées par les « caractéristiques et contraintes particulières » de l'archipel. Réserve : l'exigence d'un passeport biométrique ne fait pas obstacle à la production d'un autre document d'identité.",
-      "note": "Scrutin décisif : vote de l'AN sur le texte de la CMP (8 avril 2025), dernier vote de l'AN sur l'ensemble (règle 9). Amendement clé : la suppression de l'article unique en 1re lecture, seule lecture de l'AN où des suppressions ont été mises aux voix (règle 11) ; l'article unique porte toute la mesure mise en cause par la Défenseure des droits. Les autres amendements de 1re lecture (rédactions globales, modifications, titre) ne sont pas des suppressions ou des rétablissements et ne sont pas retenus. La suppression de l'article unique (V695) n'est pas comptée : elle double le scrutin décisif (règle 11).",
+      "note": "Scrutin décisif : vote de l'AN sur le texte de la CMP (8 avril 2025), dernier vote de l'AN sur l'ensemble (règle 9). Aucun amendement clé : la suppression de l'article unique en 1re lecture (V695) n'est pas comptée, car elle double le scrutin décisif (règle 11). Les autres amendements de 1re lecture (rédactions globales, modifications, titre) ne sont pas des suppressions ou des rétablissements et ne sont pas retenus. Le droit `discriminations` repose sur ce constat de la Défenseure des droits (règle 4). Le jugement du Conseil constitutionnel, qui porte sur un autre critère, s'affiche en vigilance.",
       "sources": {
         "cc-2025-881": {
           "auteur": "Conseil constitutionnel",
@@ -9233,6 +9422,103 @@
           "objet": "suppression de l'article 1er, dérogation aux néonicotinoïdes, 1re lecture (34-88)"
         }
       ]
+    },
+    {
+      "id": "nouvelle-caledonie-bougival-2026",
+      "dossier_an": "DLR5L17N52984",
+      "legislature": 17,
+      "titre": "Projet de loi constitutionnelle relatif à la Nouvelle-Calédonie",
+      "resume": "Le texte voté par le Sénat le 24 février 2026 met en œuvre l'accord de Bougival et l'accord complémentaire Élysée-Oudinot. Il soumet ces accords à une consultation, crée un « État de la Nouvelle-Calédonie » doté d'une Loi fondamentale et d'une nationalité calédonienne, et ouvre la première élection de ses assemblées aux électeurs de la liste générale nés sur le territoire ou qui y résident depuis au moins quinze ans. Les scrutins suivants sont réservés aux personnes de nationalité calédonienne. L'Assemblée l'a rejeté le 2 avril 2026 par une motion de rejet préalable.",
+      "droits": [
+        {
+          "code": "citoyennete",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "ce-409985",
+            "cc-2025-1163-qpc",
+            "cc-2026-905"
+          ],
+          "justification": "Le texte ouvre le droit de vote aux élections provinciales à des électeurs qui en sont privés. Le Conseil d'État, saisi de ce projet, y voit un « dégel partiel du corps électoral » pour ces personnes. Le Conseil constitutionnel a jugé en 2025 que le gel en vigueur « procède d'une dérogation aux principes d'égalité et d'universalité du suffrage ». En 2026, à propos des seuls natifs, il relève que leur ajout vise à « atténuer ainsi l'ampleur qu'ont prise, avec l'écoulement du temps, les dérogations » à ces principes."
+        },
+        {
+          "code": "discriminations",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cerd-declaration-3-2026"
+          ],
+          "justification": "Le Comité de l'ONU pour l'élimination de la discrimination raciale y voit une atteinte aux droits du peuple kanak, peuple autochtone. Il vise un projet de loi constitutionnelle fondé sur l'accord de Bougival, « n'ayant fait l'objet d'aucune négociation préalable et ne respectant pas le droit au consentement libre, préalable et éclairé du Peuple Autochtone Kanak ». Il relève que l'accord Élysée-Oudinot « continue de remettre en cause le principe d'irréversibilité de l'Accord de Nouméa ». Il situe ces évolutions dans une « discrimination raciale persistante et structurelle »."
+        }
+      ],
+      "etiquettes": [
+        "outre-mer"
+      ],
+      "vigilance": [
+        {
+          "texte": "L'ouverture reste partielle. Le Conseil d'État parle d'un corps électoral « toujours partiellement restreint » pour les élections futures, et l'inscription dépendra ensuite de la nationalité calédonienne, attribuée sur demande. Le corps électoral de la consultation sur les accords, lui, reste limité : selon le Conseil d'État, ce choix déroge « aux principes d'égalité et d'universalité du suffrage », mais n'entre « en contradiction avec aucun des engagements internationaux de la France ».",
+          "sources": [
+            "ce-409985"
+          ]
+        }
+      ],
+      "conseil_constitutionnel": "Pas de décision : le texte n'a pas été adopté par les deux assemblées.",
+      "note": "Pas de vote sur l'ensemble à l'Assemblée : elle a adopté une motion de rejet préalable le 02/04/2026 (190-107), non comptée (règles 10 et 25). Vote de 1re lecture au Sénat, texte encore en navette : il est retourné au Sénat le 03/04/2026 pour une 2e lecture. Le scrutin décisif compte seulement dans les scores du Sénat (règle 25). Le sens est lu sur le texte adopté par le Sénat (T.A. n° 68) et par rapport au droit du jour du vote, le corps électoral « gelé » depuis 2007 (règles 4 et 24). Le droit de vote est jugé étendu, puisque le texte l'ouvre à des électeurs qui en étaient privés. Le Comité de l'ONU y voit une atteinte aux droits du peuple kanak : le texte reçoit aussi le droit « discriminations », au sens restreint. Les deux lectures sont comptées, chacune pour son droit (règle 4). Les deux motions du Sénat sont affichées, pas comptées (règle 23). L'amendement voté au Sénat n'est pas retenu (règles 23 et 26).",
+      "sources": {
+        "cc-2025-1163-qpc": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2025-1163/1167 QPC du 19 septembre 2025 (corps électoral pour les élections au congrès et aux assemblées de province)",
+          "date": "2025-09-19",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2025/20251163_1167QPC.htm"
+        },
+        "cc-2026-905": {
+          "auteur": "Conseil constitutionnel",
+          "titre": "Décision n° 2026-905 DC du 28 mai 2026 (loi organique portant régularisation des natifs dans le corps électoral)",
+          "date": "2026-05-28",
+          "url": "https://www.conseil-constitutionnel.fr/decision/2026/2026905DC.htm"
+        },
+        "ce-409985": {
+          "auteur": "Conseil d'État",
+          "titre": "Avis n° 409985 sur un projet de loi constitutionnelle portant création et organisation politique et institutionnelle de l'État de la Nouvelle-Calédonie",
+          "date": "2025-10-01",
+          "url": "https://conseil-etat.fr/content/download/232560/document/409985%20-%20EXTRAIT%20Avis.pdf"
+        },
+        "cerd-declaration-3-2026": {
+          "auteur": "Comité pour l'élimination de la discrimination raciale (ONU)",
+          "titre": "Déclaration 3 (2026), France - Territoire non autonome de la Nouvelle-Calédonie (procédure d'alerte précoce et d'action urgente)",
+          "date": "2026-04-30",
+          "url": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCERD%2FSWA%2FFRA%2F11508&Lang=en"
+        }
+      },
+      "scrutins": [],
+      "senat": {
+        "version": "seul",
+        "scrutins": [
+          {
+            "id": "SN2025-201",
+            "role": "decisif",
+            "pour": "texte",
+            "objet": "ensemble, 1re lecture (215-41)"
+          },
+          {
+            "id": "SN2025-198",
+            "role": "motion",
+            "pour": "contre-texte",
+            "objet": "exception d'irrecevabilité, 1re lecture (34-310)"
+          },
+          {
+            "id": "SN2025-199",
+            "role": "motion",
+            "pour": "contre-texte",
+            "objet": "question préalable, 1re lecture (34-310)"
+          }
+        ],
+        "droits": [],
+        "etiquettes": [],
+        "vigilance": [],
+        "sources": {},
+        "note": ""
+      }
     },
     {
       "id": "nucleaire-acceleration-2023",
@@ -9985,22 +10271,22 @@
       "resume": "La loi interdit, à partir du 1er janvier 2026, la fabrication, l'importation, l'exportation et la mise sur le marché de cosmétiques, de farts, de vêtements et de chaussures qui contiennent des PFAS (« polluants éternels »), avec des exceptions pour les équipements de protection. Tous les textiles sont visés à partir de 2030, sauf les textiles techniques à usage industriel. Elle fixe l'objectif de mettre fin aux rejets aqueux de PFAS des installations industrielles dans un délai de cinq ans et crée une redevance sur ces rejets (100 euros par tranche de 100 grammes). Elle intègre les PFAS au contrôle sanitaire de l'eau potable, avec publication des résultats par les agences régionales de santé, et demande au Gouvernement un plan de financement de la dépollution de l'eau potable.",
       "droits": [
         {
-          "code": "environnement",
+          "code": "sante",
           "role": "principal",
           "sens": "etend",
           "sources": [
             "gf-2025-02"
           ],
-          "justification": "Le texte réduit l'exposition de la population à des polluants persistants : interdictions de produits, trajectoire de fin des rejets industriels dans l'eau, redevance selon le principe pollueur-payeur, contrôle et information du public sur l'eau potable. Générations Futures y voit « une étape fondamentale dans le combat contre les polluants éternels »."
+          "justification": "Le texte vise à protéger la population des risques liés aux PFAS. Il interdit des produits qui en contiennent, les intègre au contrôle sanitaire de l'eau destinée à la consommation humaine, et les agences régionales de santé publient leurs analyses. Générations Futures range ce contrôle parmi les acquis du texte, et y voit « une étape fondamentale dans le combat contre les polluants éternels »."
         },
         {
-          "code": "sante",
+          "code": "environnement",
           "role": "secondaire",
           "sens": "etend",
           "sources": [
             "gf-2025-02"
           ],
-          "justification": "Les PFAS sont intégrés au contrôle sanitaire de l'eau destinée à la consommation humaine, et les agences régionales de santé publient leurs analyses. Générations Futures range ce contrôle parmi les acquis du texte."
+          "justification": "Trajectoire de fin des rejets industriels dans l'eau et redevance selon le principe pollueur-payeur. Générations Futures salue une action « orientée vers la réduction des émissions à la source »."
         }
       ],
       "etiquettes": [],
@@ -10013,7 +10299,7 @@
         }
       ],
       "conseil_constitutionnel": "La loi n'a pas été déférée au Conseil constitutionnel.",
-      "note": "Le scrutin décisif est le vote de l'Assemblée sur l'ensemble en 2e lecture, le 20 février 2025 (règle 9). Il a adopté sans modification le texte du Sénat, ce qui vaut adoption définitive. Le vote de 1re lecture (4 avril 2024, XVIe législature) est affiché, pas compté. Aucun amendement clé. La 2e lecture est la dernière lecture de l'Assemblée où des suppressions ont été mises aux voix (règle 11). Elle visait l'article 2 (redevance sur les rejets, V850) et l'article 2 bis (publication des analyses par les agences régionales de santé, V851). Aucune source admise ne met en cause ces mesures. Aucune motion de rejet n'a été mise aux voix. Aucune critique du droit étendu n'a été trouvée parmi les sources admises : la seule réserve publiée (vigilance) porte sur l'insuffisance du texte.",
+      "note": "Le scrutin décisif est le vote de l'Assemblée sur l'ensemble en 2e lecture, le 20 février 2025 (règle 9). Il a adopté sans modification le texte du Sénat, ce qui vaut adoption définitive. Le vote de 1re lecture (4 avril 2024, XVIe législature) est affiché, pas compté. Aucun amendement clé. La 2e lecture est la dernière lecture de l'Assemblée où des suppressions ont été mises aux voix (règle 11). Elle visait l'article 2 (redevance sur les rejets, V850) et l'article 2 bis (publication des analyses par les agences régionales de santé, V851). Aucune source admise ne met en cause ces mesures. Aucune motion de rejet n'a été mise aux voix. Aucune critique du droit étendu n'a été trouvée parmi les sources admises : la seule réserve publiée (vigilance) porte sur l'insuffisance du texte. Droit principal (règle 4) : une seule organisation s'est prononcée, sur les deux droits. À égalité vaut le droit de l'objet du texte, protéger la population : `sante`.",
       "sources": {
         "gf-2025-02": {
           "auteur": "Générations Futures",
@@ -10976,6 +11262,16 @@
             "fpl-2026-02-03"
           ],
           "justification": "Pour la Fondation pour le logement des défavorisés, la suppression des aides au logement des étudiants étrangers non boursiers constitue « une attaque grave au droit au logement ». Elle rappelle que le Gouvernement a renoncé au gel des aides au logement mais « a conservé la suppression des APL des étudiants étrangers extra-communautaires non-boursiers »."
+        },
+        {
+          "code": "discriminations",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "fpl-2025-10-21",
+            "fpl-2026-02-03"
+          ],
+          "justification": "La loi réserve les aides au logement, parmi les étudiants hors Union européenne, à ceux qui remplissent les conditions d'une bourse. La Fondation pour le logement des défavorisés juge cette mesure « discriminante et injuste » et y voit « une forme de préférence nationale ». La critique porte sur la nationalité, non sur le revenu (règle 2)."
         }
       ],
       "etiquettes": [],
@@ -10994,7 +11290,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2026-901 DC du 19 février 2026, non-conformité partielle. Huit séries de dispositions sont censurées, presque toutes comme cavaliers budgétaires, sans examen de leur contenu, dont la réforme de la réduction de loyer de solidarité (paragraphes I à III de l'article 180). Deux réserves d'interprétation : le juge qui condamne doit apprécier si les frais de justice mis à la charge de la personne condamnée sont proportionnés à sa situation économique (article 144) ; le pouvoir réglementaire doit fixer les critères des bourses, qui conditionnent désormais les aides au logement des étudiants étrangers hors Union européenne, dans le respect des dixième et onzième alinéas du Préambule de 1946 (article 179). Sont déclarés conformes la hausse des taxes de séjour et du droit de timbre de la naturalisation et la contribution de 50 euros pour l'aide juridique (article 128), ainsi que le plafonnement des frais de procédure devant la Cour nationale du droit d'asile (article 188). Le grief tiré de l'insincérité de la loi et les griefs de procédure sont écartés.",
-      "note": "Texte composite, adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score. Le droit principal est celui des mesures que les sources admises mettent le plus en cause, la suppression des aides au logement des étudiants étrangers non boursiers et la hausse des taxes de séjour, qui ne visent que des étrangers (règles 3 et 4). En 1re lecture, l'Assemblée a rejeté la première partie le 21 novembre 2025 (1-404), sans voter sur l'ensemble. Ce vote porte sur une partie du texte et non sur l'ensemble : il n'est pas retenu (règle 9). En nouvelle lecture, le Gouvernement a engagé sa responsabilité sur la première partie, puis sur la seconde partie et l'ensemble. En lecture définitive, il l'a engagée sur l'ensemble. Les six motions de censure qui ont suivi, des 23 et 27 janvier et du 2 février 2026, sont affichées groupe par groupe (rôle censure). Quatre sont rattachées dans les données de l'Assemblée aux dossiers d'engagement de responsabilité. La motion de rejet préalable de 1re lecture est affichée, pas comptée (règle 10). Aucun amendement clé (règle 11). La nouvelle lecture est la dernière lecture où des suppressions ont été mises aux voix. Elle s'est interrompue à l'article 24 bis, et ses suppressions ne portent que sur des impôts, des dotations aux collectivités ou l'article liminaire. Les articles qui portaient les mesures mises en cause n'y ont pas été mis aux voix.",
+      "note": "Texte composite, adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score. Le droit principal est celui des mesures que les sources admises mettent le plus en cause, la suppression des aides au logement des étudiants étrangers non boursiers et la hausse des taxes de séjour, qui ne visent que des étrangers (règles 3 et 4). En 1re lecture, l'Assemblée a rejeté la première partie le 21 novembre 2025 (1-404), sans voter sur l'ensemble. Ce vote porte sur une partie du texte et non sur l'ensemble : il n'est pas retenu (règle 9). En nouvelle lecture, le Gouvernement a engagé sa responsabilité sur la première partie, puis sur la seconde partie et l'ensemble. En lecture définitive, il l'a engagée sur l'ensemble. Les six motions de censure qui ont suivi, des 23 et 27 janvier et du 2 février 2026, sont affichées groupe par groupe (rôle censure). Quatre sont rattachées dans les données de l'Assemblée aux dossiers d'engagement de responsabilité. La motion de rejet préalable de 1re lecture est affichée, pas comptée (règle 10). Aucun amendement clé (règle 11). La nouvelle lecture est la dernière lecture où des suppressions ont été mises aux voix. Elle s'est interrompue à l'article 24 bis, et ses suppressions ne portent que sur des impôts, des dotations aux collectivités ou l'article liminaire. Les articles qui portaient les mesures mises en cause n'y ont pas été mis aux voix. Le droit `discriminations` repose sur le constat de la Fondation pour le logement des défavorisés (règle 4).",
       "sources": {
         "cc-2026-901": {
           "auteur": "Conseil constitutionnel",
@@ -11127,6 +11423,16 @@
               "fpl-2026-02-03"
             ],
             "justification": "Pour la Fondation pour le logement des défavorisés, la suppression des aides au logement des étudiants étrangers non boursiers constitue « une attaque grave au droit au logement ». Le texte voté par le Sénat maintient en outre le gel des aides au logement de tous les allocataires pour 2026 (article 67, II). La Fondation relève que ces aides « contribuent massivement à la lutte contre la pauvreté »."
+          },
+          {
+            "code": "discriminations",
+            "role": "secondaire",
+            "sens": "restreint",
+            "sources": [
+              "fpl-2025-10-21",
+              "fpl-2026-02-03"
+            ],
+            "justification": "L'article 67 réserve les aides au logement, parmi les étudiants hors Union européenne, à ceux qui remplissent les conditions d'une bourse. La Fondation pour le logement des défavorisés juge cette mesure « discriminante et injuste » et y voit « une forme de préférence nationale ». La critique porte sur la nationalité, non sur le revenu (règle 2)."
           }
         ],
         "etiquettes": [],
@@ -11170,7 +11476,7 @@
             "url": "https://www.snesup.fr/sites/default/files/2026-04/20260421-cp-snesup-fu-extracommunautaires_0.pdf"
           }
         },
-        "note": "Le Sénat a voté sa propre version, en 1re lecture, le 15 décembre 2025 (texte n° 29). Elle diffère de la loi promulguée. Adopté par l'article 49, alinéa 3, à l'Assemblée, le texte compte au Sénat puisqu'il y a eu un vote sur l'ensemble (règles 23, 24 et 26). Les parties, les crédits de mission et les motions sont affichés et non comptés (règle 23). Le droit principal est le même qu'à l'Assemblée, celui des mesures que les sources admises mettent le plus en cause (règles 3 et 4). Le sens est le même, mais le texte voté par le Sénat va plus loin que la loi sur deux points : il porte aussi à 300 euros la taxe de renouvellement d'un titre de séjour (200 euros dans la loi), et il maintient le gel des aides au logement pour 2026, auquel le Gouvernement a renoncé en janvier 2026. Aucune source admise n'a été retenue pour les autres dispositions qui touchent les personnes (contribution de 50 euros pour l'aide juridique à l'article 30, frais de justice pénale à l'article 46, frais de procédure devant la Cour nationale du droit d'asile à l'article 71 bis A, réduction de loyer de solidarité à l'article 67 bis) : elles ne sont pas qualifiées."
+        "note": "Le Sénat a voté sa propre version, en 1re lecture, le 15 décembre 2025 (texte n° 29). Elle diffère de la loi promulguée. Adopté par l'article 49, alinéa 3, à l'Assemblée, le texte compte au Sénat puisqu'il y a eu un vote sur l'ensemble (règles 23, 24 et 26). Les parties, les crédits de mission et les motions sont affichés et non comptés (règle 23). Le droit principal est le même qu'à l'Assemblée, celui des mesures que les sources admises mettent le plus en cause (règles 3 et 4). Le sens est le même, mais le texte voté par le Sénat va plus loin que la loi sur deux points : il porte aussi à 300 euros la taxe de renouvellement d'un titre de séjour (200 euros dans la loi), et il maintient le gel des aides au logement pour 2026, auquel le Gouvernement a renoncé en janvier 2026. Aucune source admise n'a été retenue pour les autres dispositions qui touchent les personnes (contribution de 50 euros pour l'aide juridique à l'article 30, frais de justice pénale à l'article 46, frais de procédure devant la Cour nationale du droit d'asile à l'article 71 bis A, réduction de loyer de solidarité à l'article 67 bis) : elles ne sont pas qualifiées. Le droit `discriminations` repose sur le constat de la Fondation pour le logement des défavorisés (règle 4)."
       }
     },
     {
@@ -11448,7 +11754,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2021-912/913/914 QPC du 4 juin 2021, non-conformité. Article 1er du dispositif : « Les troisième et sixième alinéas du paragraphe II de l'article L. 3222-5-1 du code de la santé publique, dans leur rédaction résultant de la loi n° 2020-1576 du 14 décembre 2020 de financement pour la sécurité sociale, sont contraires à la Constitution ». L'abrogation est reportée au 31 décembre 2021 (paragraphe 22). Le Conseil a statué après la loi, sur question prioritaire de constitutionnalité.",
-      "note": "Texte composite. Le droit principal est celui de la mesure que les sources admises mettent le plus en cause, le forfait urgences (règle 4). L'isolement et la contention sont qualifiés à part, dans un autre droit. Sens au jour du vote (règle 4) : le Conseil constitutionnel avait déclaré l'article L. 3222-5-1 contraire à la Constitution en 2020, avec abrogation reportée au 31 décembre 2020 ; le texte rétablit la possibilité de ces mesures et de leur prolongation, sans le contrôle systématique du juge, ce qui restreint le droit. La décision de 2021 porte sur ce texte et s'affiche à côté (règle 6). Le doublement du congé de paternité n'est pas qualifié : aucune source admise n'a pu être lue sur cette mesure. Scrutin décisif : lecture définitive du 30 novembre 2020, dernier vote de l'AN sur l'ensemble (règle 9). Le vote de 1re lecture et les trois motions de rejet préalable sont affichés sans être comptés (règle 10). Aucun amendement clé (règle 11) : en nouvelle lecture, dernière lecture où des suppressions ont été mises aux voix, aucune ne porte sur le forfait urgences ni sur l'isolement et la contention.",
+      "note": "Texte composite. Droit principal (règle 4) : le décompte est égal entre le forfait urgences (France Assos Santé et la CGT le mettent en cause, UFC-Que Choisir le relativise) et l'isolement et la contention (Conseil national des barreaux, Conseil constitutionnel, Union syndicale de la psychiatrie). À égalité vaut le droit de l'objet du texte, le financement de la sécurité sociale : `sante`. L'isolement et la contention sont qualifiés à part, dans un autre droit. Sens au jour du vote (règle 4) : le Conseil constitutionnel avait déclaré l'article L. 3222-5-1 contraire à la Constitution en 2020, avec abrogation reportée au 31 décembre 2020 ; le texte rétablit la possibilité de ces mesures et de leur prolongation, sans le contrôle systématique du juge, ce qui restreint le droit. La décision de 2021 porte sur ce texte et s'affiche à côté (règle 6). Le doublement du congé de paternité n'est pas qualifié : aucune source admise n'a pu être lue sur cette mesure. Scrutin décisif : lecture définitive du 30 novembre 2020, dernier vote de l'AN sur l'ensemble (règle 9). Le vote de 1re lecture et les trois motions de rejet préalable sont affichés sans être comptés (règle 10). Aucun amendement clé (règle 11) : en nouvelle lecture, dernière lecture où des suppressions ont été mises aux voix, aucune ne porte sur le forfait urgences ni sur l'isolement et la contention.",
       "sources": {
         "cc-2021-912": {
           "auteur": "Conseil constitutionnel",
@@ -11543,6 +11849,15 @@
             "cgt-ucr-2023-09"
           ],
           "justification": "Les mesures du texte que les sources citent le plus sont celles de prévention et d'accès aux soins. La CFDT constate des « mesures positives » : « le rendez-vous de prévention à trois âges clés de la vie, l'élargissement de la prise en charge de la contraception d'urgence et de la détection des maladies sexuellement transmissibles, l'extension des compétences vaccinales aux infirmiers, sages-femmes et pharmaciens ». France Assos Santé accueille « très favorablement les différentes mesures permettant de renforcer la prévention ». Un an plus tard, l'Union confédérale des retraités CGT juge ces mêmes mesures « certes intéressantes », tout en estimant qu'elles « sont loin de dessiner une « révolution de la prévention » »."
+        },
+        {
+          "code": "travail-protection-sociale",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cc-2022-845"
+          ],
+          "justification": "L'article 101 privait d'indemnités journalières l'assuré dont l'arrêt de travail avait été prescrit en téléconsultation par un autre médecin que son médecin traitant ou qu'un médecin l'ayant reçu depuis moins d'un an. Le Conseil constitutionnel l'a censuré sur le fond : cette circonstance « ne permet pas d'établir que l'arrêt de travail aurait été indûment prescrit », et la mesure pouvait priver l'assuré des indemnités « alors même qu'un médecin a constaté son incapacité physique de continuer ou de reprendre le travail »."
         }
       ],
       "etiquettes": [],
@@ -11562,13 +11877,7 @@
           ]
         },
         {
-          "texte": "Le même texte restreignait un volet de la protection sociale. Son article 101 privait d'indemnités journalières l'assuré dont l'arrêt de travail avait été prescrit en téléconsultation par un autre médecin que son médecin traitant ou qu'un médecin l'ayant reçu depuis moins d'un an. Le Conseil constitutionnel l'a censuré sur le fond : cette circonstance « ne permet pas d'établir que l'arrêt de travail aurait été indûment prescrit », et la mesure pouvait priver l'assuré des indemnités « alors même qu'un médecin a constaté son incapacité physique de continuer ou de reprendre le travail ».",
-          "sources": [
-            "cc-2022-845"
-          ]
-        },
-        {
-          "texte": "L'article 90 obligeait l'employeur à garantir au salarié le versement d'une somme au moins égale aux indemnités journalières de maternité et de paternité. La CFDT avait accueilli la mesure « avec une grande satisfaction ». Le Conseil constitutionnel l'a censurée comme cavalier social, sans examiner son contenu.",
+          "texte": "Mesure de sens opposé pour ce droit : l'article 90 obligeait l'employeur à garantir au salarié le versement d'une somme au moins égale aux indemnités journalières de maternité et de paternité. La CFDT avait accueilli la mesure « avec une grande satisfaction ». Le Conseil constitutionnel l'a censurée comme cavalier social, sans examiner son contenu.",
           "sources": [
             "cfdt-2022-10-11",
             "cc-2022-845"
@@ -11576,7 +11885,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2022-845 DC du 20 décembre 2022, non-conformité partielle. Une disposition est censurée sur le fond : la privation d'indemnités journalières pour certains arrêts de travail prescrits en téléconsultation (2° et 3° du I de l'article 101), au regard du onzième alinéa du Préambule de 1946. Onze autres sont censurées comme cavaliers sociaux, sans examen de leur contenu : les articles 39, 42 (limitation du recours à l'intérim), 43, 45, 50, 52, 74, 77, 89 et 90 (garantie par l'employeur des indemnités de maternité et de paternité), et le IV de l'article 54. Sont déclarés conformes, sans réserve, l'article 4, le II de l'article 18, le III de l'article 51, les articles 106 et 115 (objectifs de dépenses) et le 6° du II de l'article L. 138-10 du code de la sécurité sociale. Les griefs de procédure, dont le recours à l'article 49, alinéa 3, et le grief d'insincérité sont écartés. La décision ne se prononce pas sur les mesures de prévention.",
-      "note": "Texte composite, adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score. Le droit principal et le sens sont ceux des mesures que les sources admises citent le plus, la prévention et l'accès aux soins ; la mesure de sens opposé s'affiche en vigilance (règle 4). Le Gouvernement a engagé sa responsabilité cinq fois : le 20 octobre 2022 sur la troisième partie et le 26 octobre sur la quatrième partie et l'ensemble (1re lecture), le 21 novembre sur la troisième partie et le 25 novembre sur la quatrième partie et l'ensemble (nouvelle lecture), le 30 novembre sur l'ensemble (lecture définitive). Les six motions de censure qui ont suivi sont affichées groupe par groupe (rôle censure). Une seule est rattachée à ce dossier dans les données de l'Assemblée ; les cinq autres le sont d'après la page officielle du dossier. Les trois motions de rejet préalable sont affichées, pas comptées (règle 10). Les votes sur une partie (première partie rejetée le 20 octobre 2022, 72-98 ; deuxième partie adoptée le 21 novembre, 91-21) et sur les articles portent sur une partie du texte et ne sont pas retenus (règle 9). Aucun amendement clé (règle 11) : aucune suppression ni aucun rétablissement d'article n'a été mis aux voix par scrutin public. Les deux amendements de la nouvelle lecture modifient des tableaux de chiffres, ceux de la 1re lecture réécrivent des articles ou en ajoutent. Aucune source admise ne se prononce non plus sur les articles 1er et 4, rejetés par scrutin en 1re lecture.",
+      "note": "Texte composite, adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score. Le droit principal et le sens sont ceux des mesures que les sources admises citent le plus : la prévention et l'accès aux soins, défendus par la CFDT, France Assos Santé et l'Union confédérale des retraités CGT, contre le seul Conseil constitutionnel pour l'article 101 (règle 4). Cet article, qui touche un autre droit, reçoit `travail-protection-sociale` en secondaire ; l'article 90, de sens opposé pour ce droit, s'affiche en vigilance. Le Gouvernement a engagé sa responsabilité cinq fois : le 20 octobre 2022 sur la troisième partie et le 26 octobre sur la quatrième partie et l'ensemble (1re lecture), le 21 novembre sur la troisième partie et le 25 novembre sur la quatrième partie et l'ensemble (nouvelle lecture), le 30 novembre sur l'ensemble (lecture définitive). Les six motions de censure qui ont suivi sont affichées groupe par groupe (rôle censure). Une seule est rattachée à ce dossier dans les données de l'Assemblée ; les cinq autres le sont d'après la page officielle du dossier. Les trois motions de rejet préalable sont affichées, pas comptées (règle 10). Les votes sur une partie (première partie rejetée le 20 octobre 2022, 72-98 ; deuxième partie adoptée le 21 novembre, 91-21) et sur les articles portent sur une partie du texte et ne sont pas retenus (règle 9). Aucun amendement clé (règle 11) : aucune suppression ni aucun rétablissement d'article n'a été mis aux voix par scrutin public. Les deux amendements de la nouvelle lecture modifient des tableaux de chiffres, ceux de la 1re lecture réécrivent des articles ou en ajoutent. Aucune source admise ne se prononce non plus sur les articles 1er et 4, rejetés par scrutin en 1re lecture.",
       "sources": {
         "cc-2022-845": {
           "auteur": "Conseil constitutionnel",
@@ -11993,6 +12302,15 @@
             "cc-2025-875"
           ],
           "justification": "Les mesures du texte adopté que les sources mettent en cause conditionnent le remboursement des soins. Jusque-là, un prescripteur qui ne respectait pas certaines obligations devait reverser un indu. Désormais, en l'absence du document requis, le patient n'est pas remboursé (article 48). France Assos Santé relève que « la seule conséquence sera la suppression du remboursement pour l'assuré » et juge « inacceptable que le patient soit sanctionné en cas de défaut du professionnel de santé ». Elle s'oppose aussi au conditionnement du remboursement des dispositifs numériques à leur usage. L'UNAF, dont le statut est institutionnel, craint que ces dispositifs « contribuent à une dégradation de l'offre de soins et de services ». Le texte adopté permettait en outre d'exiger une pénalité pour un rendez-vous non honoré, et une préautorisation bancaire pour prendre rendez-vous : le Conseil constitutionnel a censuré cette mesure, qui a « privé de garanties légales » la protection de la santé garantie par le Préambule de 1946."
+        },
+        {
+          "code": "travail-protection-sociale",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "cfdt-2024-10-16"
+          ],
+          "justification": "Le texte transpose l'accord des partenaires sociaux sur les accidents du travail et les maladies professionnelles, dont l'indemnisation de l'incapacité permanente. La CFDT salue cette transposition, qui reprend « les nouvelles protections prévues pour toutes les victimes »."
         }
       ],
       "etiquettes": [],
@@ -12011,12 +12329,6 @@
           ]
         },
         {
-          "texte": "Le texte étend un autre volet de la protection sociale. La CFDT salue la transposition de l'accord sur les accidents du travail et les maladies professionnelles, qui reprend « les nouvelles protections prévues pour toutes les victimes ».",
-          "sources": [
-            "cfdt-2024-10-16"
-          ]
-        },
-        {
           "texte": "Plusieurs mesures que ces sources contestaient ne figurent pas dans le texte adopté : la baisse du remboursement des consultations, les hausses de franchises et la baisse de l'indemnisation des arrêts de travail relevaient de la voie réglementaire, et le gel des pensions a été retiré. Elles n'entrent donc pas dans ce jugement.",
           "sources": [
             "fas-2024-10-17",
@@ -12025,7 +12337,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2025-875 DC du 28 février 2025, non-conformité partielle. Censure sur le fond de l'article 52 : en s'abstenant de définir la nature de la pénalité pour rendez-vous non honoré et d'encadrer son montant et sa mise en œuvre, le législateur a « privé de garanties légales les exigences constitutionnelles découlant du onzième alinéa du Préambule de la Constitution de 1946 ». Treize autres articles sont censurés comme cavaliers sociaux, sans examen de leur contenu (articles 34, 36, 42, 44, 49, 50, 51, 53, 58, 60, 74, 84 et 94). Deux réserves d'interprétation portent sur l'article 48 (remboursement subordonné à un document du prescripteur). Sont déclarés conformes les objectifs de dépenses d'assurance maladie (articles 2 et 97) et l'assujettissement à la CSG et à la CRDS de la part de la rémunération des apprentis qui dépasse 50 % du Smic (article 22).",
-      "note": "Texte composite, adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score. Le texte qualifié est celui de la nouvelle lecture, sur lequel le Gouvernement a engagé sa responsabilité les 3, 5 et 10 février 2025. Le droit principal est celui des mesures du texte adopté que les sources admises citent le plus, le conditionnement du remboursement des soins (règle 4). Les mesures de protection sociale que les mêmes sources critiquent le plus ne sont pas dans le texte adopté. Quatre motions de censure sont affichées groupe par groupe (rôle censure). La première, adoptée le 4 décembre 2024 par 331 voix, a renversé le Gouvernement et fait tomber le texte de la commission mixte paritaire : elle porte donc sur une version antérieure du texte, et non sur la loi promulguée. Une seconde motion déposée le 2 décembre 2024, par 140 députés, n'a pas été votée. Les trois suivantes, rejetées, portent sur le texte de la nouvelle lecture. En 1re lecture, l'Assemblée n'a pas achevé l'examen du texte, parti au Sénat sans vote sur l'ensemble. Le vote sur la deuxième partie (126-98) et les votes sur les articles ne sont pas retenus (règle 9). L'Assemblée n'a voté sur aucune motion de rejet préalable. La 1re lecture est la seule lecture où des suppressions ont été mises aux voix (règle 11). Un amendement clé est retenu, pour mémoire puisqu'il n'est pas compté : la suppression de l'article 16, devenu l'article 48 de la loi, mesure mise en cause par France Assos Santé et l'UNAF. Ne sont pas retenues les suppressions de l'article liminaire et des articles 1er, 2, 10 et 11 (équilibre des comptes, objectifs de dépenses), des articles 4 et 6 (exonérations de cotisations des employeurs) et de l'article 7 : cet article réunissait la mesure sur les apprentis et des exonérations d'employeurs, et aucune source admise lue ne le met en cause. La mesure sur le remboursement des dispositifs médicaux n'a pas été mise aux voix : l'examen s'est arrêté avant.",
+      "note": "Texte composite, adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score. Le texte qualifié est celui de la nouvelle lecture, sur lequel le Gouvernement a engagé sa responsabilité les 3, 5 et 10 février 2025. Le droit principal est celui des mesures du texte adopté que les sources admises citent le plus, le conditionnement du remboursement des soins (règle 4). Les mesures de protection sociale que les mêmes sources critiquent le plus ne sont pas dans le texte adopté. La transposition de l'accord sur les accidents du travail, qui y figure, reçoit `travail-protection-sociale` en secondaire (règle 4) ; aucune critique trouvée parmi les sources admises lues (règle 7). Quatre motions de censure sont affichées groupe par groupe (rôle censure). La première, adoptée le 4 décembre 2024 par 331 voix, a renversé le Gouvernement et fait tomber le texte de la commission mixte paritaire : elle porte donc sur une version antérieure du texte, et non sur la loi promulguée. Une seconde motion déposée le 2 décembre 2024, par 140 députés, n'a pas été votée. Les trois suivantes, rejetées, portent sur le texte de la nouvelle lecture. En 1re lecture, l'Assemblée n'a pas achevé l'examen du texte, parti au Sénat sans vote sur l'ensemble. Le vote sur la deuxième partie (126-98) et les votes sur les articles ne sont pas retenus (règle 9). L'Assemblée n'a voté sur aucune motion de rejet préalable. La 1re lecture est la seule lecture où des suppressions ont été mises aux voix (règle 11). Un amendement clé est retenu, pour mémoire puisqu'il n'est pas compté : la suppression de l'article 16, devenu l'article 48 de la loi, mesure mise en cause par France Assos Santé et l'UNAF. Ne sont pas retenues les suppressions de l'article liminaire et des articles 1er, 2, 10 et 11 (équilibre des comptes, objectifs de dépenses), des articles 4 et 6 (exonérations de cotisations des employeurs) et de l'article 7 : cet article réunissait la mesure sur les apprentis et des exonérations d'employeurs, et aucune source admise lue ne le met en cause. La mesure sur le remboursement des dispositifs médicaux n'a pas été mise aux voix : l'examen s'est arrêté avant.",
       "sources": {
         "cc-2025-875": {
           "auteur": "Conseil constitutionnel",
@@ -12592,6 +12904,15 @@
             "cc-2022-843"
           ],
           "justification": "Le texte prévoit des « dérogations procédurales, notamment au code de l'environnement », pour installer un terminal méthanier flottant au Havre, et permet de rehausser le plafond d'émissions de gaz à effet de serre des centrales électriques à combustibles fossiles. Le Conseil constitutionnel juge que les dispositions permettant ce rehaussement « portent atteinte à l'environnement » et que le terminal est « susceptible de porter atteinte à l'environnement ». Il limite les deux mesures au cas d'une « menace grave » sur la sécurité d'approvisionnement."
+        },
+        {
+          "code": "logement",
+          "role": "secondaire",
+          "sens": "etend",
+          "sources": [
+            "fondation-logement-reml-2024"
+          ],
+          "justification": "Le texte plafonne à 3,5 % la hausse annuelle de l'indice de référence des loyers. La Fondation pour le logement des défavorisés range ce plafonnement parmi les formes d'encadrement des loyers : « Pour limiter les effets de l'inflation sur les locataires, la loi Pouvoir d'achat du 16 août 2022 a par ailleurs plafonné l'augmentation des loyers à 3,5 % pour un an »."
         }
       ],
       "etiquettes": [],
@@ -12607,10 +12928,16 @@
           "sources": [
             "cgt-2022-07-25"
           ]
+        },
+        {
+          "texte": "La Fondation pour le logement des défavorisés relève qu'un allocataire dont le loyer et l'aide au logement augmentent tous deux de 3,5 % « verra tout de même son taux d'effort s'accroître ».",
+          "sources": [
+            "fondation-logement-reml-2023"
+          ]
         }
       ],
       "conseil_constitutionnel": "Décision 2022-843 DC du 12 août 2022, non-conformité partielle avec réserves. Censure de l'article 46 (rapport sur l'usage des huiles alimentaires usagées comme carburant) comme cavalier législatif. Réserves : le terminal méthanier flottant (articles 29 et 30) et le rehaussement du plafond d'émissions des centrales à combustibles fossiles (article 36) ne peuvent s'appliquer qu'en cas de « menace grave » sur la sécurité d'approvisionnement, en vertu de l'article 1er de la Charte de l'environnement. Les dispositions sur l'accès régulé à l'électricité nucléaire historique (articles 39 à 41) sont conformes. La déconjugalisation de l'AAH et les mesures sur les loyers n'étaient pas contestées.",
-      "note": "Texte composite (règle 4) : ses mesures touchent plusieurs droits, dans des sens différents. La déconjugalisation de l'AAH étend des droits ; le terminal méthanier et le rehaussement du plafond d'émissions portent atteinte à l'environnement selon le Conseil constitutionnel. Le droit principal retenu est celui de la mesure que les sources admises citent le plus, la déconjugalisation de l'AAH (`discriminations`, handicap). Le scrutin décisif est le vote sur le texte de la CMP, le 3 août 2022, dernier vote de l'AN sur l'ensemble (règle 9). Le vote de 1re lecture est affiché sans être compté, comme la motion de rejet préalable (règle 10). Aucun amendement clé. La 1re lecture est la seule lecture de l'AN où des suppressions ont été mises aux voix (règle 11). Elles portaient sur le terminal méthanier (articles 13 et 14 du projet), les centrales à charbon (articles 15 et 16) et l'accès régulé à l'électricité nucléaire historique (article 19). Sur ces mesures, la seule source admise trouvée est le Conseil constitutionnel, qui les valide sous réserve, ce qui ne suffit pas (règle 11). La déconjugalisation a été insérée par un amendement adopté en 1re lecture (428-1), qui n'est ni une suppression ni un rétablissement d'article.",
+      "note": "Texte composite (règle 4) : ses mesures touchent plusieurs droits, dans des sens différents. La déconjugalisation de l'AAH étend des droits ; le terminal méthanier et le rehaussement du plafond d'émissions portent atteinte à l'environnement selon le Conseil constitutionnel. Le droit principal retenu est celui de la mesure que les sources admises citent le plus, la déconjugalisation de l'AAH (`discriminations`, handicap). Le plafonnement des loyers reçoit `logement` en secondaire (règle 4). Le scrutin décisif est le vote sur le texte de la CMP, le 3 août 2022, dernier vote de l'AN sur l'ensemble (règle 9). Le vote de 1re lecture est affiché sans être compté, comme la motion de rejet préalable (règle 10). Aucun amendement clé. La 1re lecture est la seule lecture de l'AN où des suppressions ont été mises aux voix (règle 11). Elles portaient sur le terminal méthanier (articles 13 et 14 du projet), les centrales à charbon (articles 15 et 16) et l'accès régulé à l'électricité nucléaire historique (article 19). Sur ces mesures, la seule source admise trouvée est le Conseil constitutionnel, qui les valide sous réserve, ce qui ne suffit pas (règle 11). La déconjugalisation a été insérée par un amendement adopté en 1re lecture (428-1), qui n'est ni une suppression ni un rétablissement d'article.",
       "sources": {
         "cc-2022-843": {
           "auteur": "Conseil constitutionnel",
@@ -12635,6 +12962,18 @@
           "titre": "Déconjugalisation de l'AAH : des paroles aux actes mais des ombres au tableau ! (communiqué)",
           "date": "2022-07-21",
           "url": "https://hebdo.force-ouvriere.fr/IMG/pdf/cp_-_fo_-_deconjugalisation_de_l_aah_des_paroles_aux_actes_mais_des_ombres_au_tableau.pdf"
+        },
+        "fondation-logement-reml-2023": {
+          "auteur": "Fondation pour le logement des défavorisés",
+          "titre": "L'état du mal-logement en France 2023 (28e rapport)",
+          "date": "2023-02-01",
+          "url": "https://www.fondationpourlelogement.fr/wp-content/uploads/2025/06/28e-rapport-sur-letat-du-mal-logement-en-france.pdf"
+        },
+        "fondation-logement-reml-2024": {
+          "auteur": "Fondation pour le logement des défavorisés",
+          "titre": "L'état du mal-logement en France 2024 (29e rapport), tableau de bord, « Les difficultés pour se maintenir dans son logement »",
+          "date": "2024-02-01",
+          "url": "https://www.fondationpourlelogement.fr/wp-content/uploads/2025/06/29e-rapport-sur-letat-du-mal-logement-en-france-2024.pdf"
         }
       },
       "scrutins": [
@@ -13040,6 +13379,15 @@
             "cncdh-2020-d7"
           ],
           "justification": "L'habilitation permet au Gouvernement de déroger de nouveau à des règles d'organisation judiciaire et de procédure pénale, « restreignant ainsi les garanties de procès équitable (contradictoire, publicité, droits de la défense) » (CNCDH)."
+        },
+        {
+          "code": "travail-protection-sociale",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "cncdh-2020-d7"
+          ],
+          "justification": "L'habilitation permet de remettre en vigueur, de prolonger ou d'adapter par ordonnances des mesures prises au printemps 2020. La CNCDH est « préoccupée également par les atteintes aux droits sociaux », notamment celles qui peuvent en résulter, et regrette « l'absence d'un véritable dialogue social »."
         }
       ],
       "etiquettes": [
@@ -13053,12 +13401,6 @@
           ]
         },
         {
-          "texte": "Droits sociaux : la CNCDH est « préoccupée également par les atteintes aux droits sociaux », notamment celles qui peuvent résulter de l'habilitation à légiférer par ordonnances, et regrette l'absence d'un véritable dialogue social.",
-          "sources": [
-            "cncdh-2020-d7"
-          ]
-        },
-        {
           "texte": "Durée : la Défenseure des droits alerte sur les risques de la reconduction de l'état d'urgence sanitaire, parmi lesquels « la banalisation du régime » et « la pérennisation des mesures ».",
           "sources": [
             "ddd-2020-10"
@@ -13066,7 +13408,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2020-808 DC du 13 novembre 2020 : aucune censure. « Sous les réserves énoncées au paragraphe 24, sont conformes à la Constitution » les mots « tard, jusqu'au 1er avril 2021 » et deux passages du paragraphe III de l'article 11 de la loi du 11 mai 2020, dans la rédaction issue de l'article 5 (fichiers de suivi : accès des professionnels qui réalisent les examens de dépistage, et des organismes d'accompagnement social). Ce paragraphe 24 reprend les réserves des paragraphes 73 et 74 de la décision du 11 mai 2020. « Sont conformes à la Constitution » l'article 1er, le 1° du paragraphe I et le paragraphe II de l'article 2, et le paragraphe I de l'article 10. Le Conseil ne s'est pas prononcé sur les autres dispositions.",
-      "note": "Scrutin décisif : lecture définitive, dernier vote de l'Assemblée sur l'ensemble (07/11/2020). Sens et date de référence (règle 4) : au jour du vote, l'état d'urgence déclaré par décret ne pouvait se prolonger au-delà d'un mois sans une loi, et le terme du régime de sortie, fixé au 30/10/2020, était passé. Le droit du jour comprend ces échéances : prolonger ces régimes restreint les droits. Règle 18 : les lois successives de la crise sanitaire comptent chacune pour 1, sans regroupement ; celle-ci pèse donc 1 dans les scores, comme chacune des autres. Aucun amendement clé (règle 11) : la suppression de l'article 2, qui proroge le régime de sortie, n'est pas retenue, car aucune source admise ne met en cause cette prorogation sur ce projet, et le Conseil d'État la juge justifiée. Les autres scrutins sur amendement, sur les commerces, les lieux de culte ou des alinéas, ne suppriment aucun article.",
+      "note": "Scrutin décisif : lecture définitive, dernier vote de l'Assemblée sur l'ensemble (07/11/2020). Sens et date de référence (règle 4) : au jour du vote, l'état d'urgence déclaré par décret ne pouvait se prolonger au-delà d'un mois sans une loi, et le terme du régime de sortie, fixé au 30/10/2020, était passé. Le droit du jour comprend ces échéances : prolonger ces régimes restreint les droits. Règle 18 : les lois successives de la crise sanitaire comptent chacune pour 1, sans regroupement ; celle-ci pèse donc 1 dans les scores, comme chacune des autres. Aucun amendement clé (règle 11) : la suppression de l'article 2, qui proroge le régime de sortie, n'est pas retenue, car aucune source admise ne met en cause cette prorogation sur ce projet, et le Conseil d'État la juge justifiée. Les autres scrutins sur amendement, sur les commerces, les lieux de culte ou des alinéas, ne suppriment aucun article. `travail-protection-sociale` et `police-justice` : la CNCDH se prononce sur l'habilitation dans une déclaration postérieure au vote, sur la mesure votée (règle 7).",
       "sources": {
         "cc-2020-808": {
           "auteur": "Conseil constitutionnel",
@@ -13620,7 +13962,7 @@
             "sm-2026-08",
             "ce-411110"
           ],
-          "justification": "Perpétuité pour certains viols sur mineurs de quinze ans, imprescriptibilité des crimes sur mineurs, cumul des peines sans confusion, période de sûreté portée à trente ans, exclusion de la libération sous contrainte de plein droit. Le Syndicat de la magistrature y voit des mesures « qui fragilisent les fondements de notre droit pénal »."
+          "justification": "Perpétuité pour certains viols sur mineurs de quinze ans et imprescriptibilité des crimes sur mineurs. Le Syndicat de la magistrature dénonce des mesures « sans effet sur la protection effective des enfants, qui fragilisent les fondements de notre droit pénal ». Le Conseil d'État ne voit pas d'obstacle à la perpétuité, mais invite à « rechercher une plus grande cohérence dans l'échelle des peines en matière de viol »."
         }
       ],
       "etiquettes": [],
@@ -13654,7 +13996,7 @@
         }
       ],
       "conseil_constitutionnel": "",
-      "note": "Projet de loi adopté en 1re lecture par l'AN le 21 juillet 2026 (procédure accélérée), puis transmis au Sénat, dont la commission a adopté son texte le 21 octobre 2026. Le scrutin décisif est ce vote de 1re lecture (règle 9). LFI, les socialistes et les écologistes se sont abstenus : ils sortent du calcul pour ce vote (règle 16). Amendements clés (1re lecture, seule lecture de l'AN, règle 11) : suppression de l'article 6 (V8281) et de l'article 2 (V8322), puis rétablissement de l'article 11 en seconde délibération (V8429). Ce dernier vote a fixé le sort de l'article ; le rejet de sa suppression (V8393) et le rejet de l'article lui-même (V8399) ne sont donc pas retenus. Faute de source admise qui mette la mesure en cause, quatre scrutins sont écartés : les suppressions des articles 11 bis (cumul des peines, V8400), 11 ter (période de sûreté, V8401) et 12 (libération sous contrainte, V8403), et le rétablissement de l'article 14 (V8360). L'article 14 informe les parents de l'identité des intervenants périscolaires ; le Conseil d'État en estime l'utilité faible, mais juge la mesure justifiée. L'imprescriptibilité (article 11 bis A) vient d'un article additionnel (V8308) : ce n'est ni une suppression ni un rétablissement. Les autres scrutins (sous-amendements, amendements de rédaction, votes sur articles) ne sont pas retenus. Aucune motion de rejet n'a été mise aux voix.",
+      "note": "Projet de loi adopté en 1re lecture par l'AN le 21 juillet 2026 (procédure accélérée), puis transmis au Sénat, dont la commission a adopté son texte le 21 octobre 2026. Le scrutin décisif est ce vote de 1re lecture (règle 9). LFI, les socialistes et les écologistes se sont abstenus : ils sortent du calcul pour ce vote (règle 16). Amendement clé (1re lecture, seule lecture de l'AN, règle 11) : suppression de l'article 6, ordonnance de protection de l'enfant en urgence (V8281). La suppression de l'article 2 (V8322, adoptée 60-59) n'est pas retenue : sa mesure ne figure pas dans le texte soumis au scrutin décisif (règle 11). Le rétablissement de l'article 11, perpétuité pour certains viols sur mineurs de quinze ans, en seconde délibération (V8429, 258-84), n'est pas retenu : la critique de cette mesure ne vise que le droit secondaire, les garanties face à la justice pénale (règle 11). Ce vote a fixé le sort de l'article ; le rejet de sa suppression (V8393) et le rejet de l'article lui-même (V8399) ne sont pas retenus non plus. Faute de source admise qui mette la mesure en cause, quatre scrutins sont écartés : les suppressions des articles 11 bis (cumul des peines, V8400), 11 ter (période de sûreté, V8401) et 12 (libération sous contrainte, V8403), et le rétablissement de l'article 14 (V8360). Le Syndicat de la magistrature ne cite pas ces trois premiers articles, et le Conseil d'État juge l'exclusion de la libération sous contrainte de plein droit sans obstacle constitutionnel. L'article 14 informe les parents de l'identité des intervenants périscolaires ; le Conseil d'État en estime l'utilité faible, mais juge la mesure justifiée. L'imprescriptibilité (article 11 bis A) vient d'un article additionnel (V8308) : ce n'est ni une suppression ni un rétablissement. Les autres scrutins (sous-amendements, amendements de rédaction, votes sur articles) ne sont pas retenus. Aucune motion de rejet n'a été mise aux voix.",
       "sources": {
         "ce-410836": {
           "auteur": "Conseil d'État",
@@ -13699,18 +14041,6 @@
           "role": "amendement",
           "pour": "contre-texte",
           "objet": "suppression de l'article 6, ordonnance de protection de l'enfant en urgence (6-144)"
-        },
-        {
-          "id": "VTANR5L17V8322",
-          "role": "amendement",
-          "pour": "a-trancher",
-          "objet": "suppression de l'article 2, délaissement parental accéléré, accueil de suppléance parentale et adoption simple sans consentement, adoptée (60-59)"
-        },
-        {
-          "id": "VTANR5L17V8429",
-          "role": "amendement",
-          "pour": "texte",
-          "objet": "rétablissement de l'article 11, perpétuité pour certains viols sur mineurs de quinze ans, seconde délibération, adopté (258-84)"
         }
       ]
     },
@@ -13986,7 +14316,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2018-761 DC du 21 mars 2018, non-conformité partielle. Article 1er du dispositif : sont contraires à la Constitution « le 9 ° de l'article 6 ; les articles 9, 12, 14 et 20 ». Le 9° de l'article 6 dispensait l'employeur d'élections partielles après l'annulation d'élections pour méconnaissance de la représentation équilibrée des femmes et des hommes. Les articles 9, 12, 14 et 20 sont censurés comme sans lien avec le projet déposé, sans examen de leur contenu. Réserve du paragraphe 35, sur le délai de recours contre les parties non publiées d'un accord collectif. Sont déclarés conformes, notamment, les alinéas du barème (article L. 1235-3 du code du travail), le périmètre d'appréciation du motif économique (article L. 1233-3) et des règles sur la primauté des accords.",
-      "note": "Règle 18 : la loi d'habilitation et la loi qui ratifie ses ordonnances comptent chacune pour 1, sans regroupement, et leur note le dit. Scrutin décisif : texte de la commission mixte paritaire, le 6 février 2018 (règle 9). Le sens se lit sur ce texte (règle 6). Le vote sur l'ensemble de 1re lecture est affiché, pas compté. La motion de rejet préalable est affichée, pas comptée (règle 10). La 1re lecture est la seule où des suppressions ont été mises aux voix (règle 11). Deux amendements clés sont retenus : la suppression de l'article 5, qui ratifie l'ordonnance portant le barème, mise en cause par la CGT et FO, et celle de l'article 3, qui ratifie l'ordonnance sur le comité social et économique, mise en cause par la CGT. Ne sont pas retenues les suppressions de l'article 1er (ordonnance sur la négociation collective), sur laquelle la CGT et FO ne s'accordent pas, et de l'article 9 (ordonnance sur le compte de prévention), qu'aucune source admise lue ne met en cause sur ce texte.",
+      "note": "Règle 18 : la loi d'habilitation et la loi qui ratifie ses ordonnances comptent chacune pour 1, sans regroupement, et leur note le dit. Scrutin décisif : texte de la commission mixte paritaire, le 6 février 2018 (règle 9). Le sens se lit sur ce texte (règle 6). Le vote sur l'ensemble de 1re lecture est affiché, pas compté. La motion de rejet préalable est affichée, pas comptée (règle 10). La 1re lecture est la seule où des suppressions ont été mises aux voix (règle 11). Un amendement clé est retenu : la suppression de l'article 3, qui ratifie l'ordonnance sur le comité social et économique, mise en cause par la CGT. La suppression de l'article 5 (V292) n'est pas retenue : il ratifie toute l'ordonnance, dont le barème mis en cause par la CGT et FO, mais aussi, selon FO, une « augmentation de l'indemnité légale », et son sens n'est pas univoque (règle 11). Ne sont pas retenues non plus les suppressions de l'article 1er (ordonnance sur la négociation collective), sur laquelle la CGT et FO ne s'accordent pas, et de l'article 9 (ordonnance sur le compte de prévention), qu'aucune source admise lue ne met en cause sur ce texte.",
       "sources": {
         "cc-2018-761": {
           "auteur": "Conseil constitutionnel",
@@ -14055,12 +14385,6 @@
           "role": "amendement",
           "pour": "contre-texte",
           "objet": "suppression de l'article 3 (ratification de l'ordonnance sur le comité social et économique), 1re lecture, rejetée (12-59)"
-        },
-        {
-          "id": "VTANR5L15V292",
-          "role": "amendement",
-          "pour": "contre-texte",
-          "objet": "suppression de l'article 5 (ratification de l'ordonnance relative à la prévisibilité et à la sécurisation des relations de travail, dont le barème), 1re lecture, rejetée (13-63)"
         }
       ]
     },
@@ -14919,17 +15243,17 @@
             "tdf-2026-04",
             "cc-2026-906"
           ],
-          "justification": "Rétention de sûreté terroriste après la peine, injonction préfectorale d'examen psychiatrique, maintien des mesures de surveillance annulées : une loi qui « étend et crée des mesures administratives de privation de liberté » selon l'association Toutes des Femmes ; le Conseil pose des réserves (pas d'application rétroactive de la rétention de sûreté, motivation de l'injonction psychiatrique)."
+          "justification": "Rétention de sûreté terroriste après la peine, injonction préfectorale d'examen psychiatrique, maintien des mesures de surveillance annulées. L'association Toutes des Femmes voit dans le texte une loi qui « étend et crée des mesures administratives de privation de liberté », sans détailler ces mesures. Le Conseil pose des réserves (pas d'application rétroactive de la rétention de sûreté, motivation de l'injonction psychiatrique)."
         },
         {
           "code": "etrangers",
           "role": "secondaire",
           "sens": "restreint",
           "sources": [
-            "cimade-2026-07",
-            "cc-2026-906"
+            "cc-2026-906",
+            "cncdh-lettre-2025-06"
           ],
-          "justification": "Rétention jusqu'à 210 jours pour de nouvelles catégories d'étrangers et placements successifs : jusqu'à 540 jours cumulés selon La Cimade et les associations présentes en rétention."
+          "justification": "Rétention jusqu'à 210 jours pour de nouvelles catégories d'étrangers et placements successifs, validés par le Conseil constitutionnel (360 jours cumulés, 540 dans certains cas). La CNCDH jugeait « inutile », « dangereux » et « indigne » le texte de 2025 qui allongeait déjà cette rétention : elle se prononce sur la mesure (règle 7)."
         },
         {
           "code": "sante",
@@ -14957,7 +15281,7 @@
       ],
       "vigilance": [],
       "conseil_constitutionnel": "Décision 2026-906 DC du 23 juillet 2026 : aucune censure, plusieurs réserves. Injonction d'examen psychiatrique : le préfet doit motiver précisément sa décision, et l'avis du psychiatre doit être écrit et motivé. Rétention de sûreté terroriste : inapplicable aux personnes condamnées avant la loi, ou après pour des faits antérieurs. Information du préfet sur les soins psychiatriques : ni avis ni certificats médicaux. Rétention de 210 jours, placements successifs (360 jours cumulés, 540 dans certains cas) et changement de nom : validés.",
-      "note": "Scrutin décisif : vote de l'AN sur le texte de la CMP (16 juin 2026), dernier vote de l'AN sur l'ensemble ; le Sénat avait voté le texte de la CMP la veille (règle 9). Amendements clés (1re lecture, seule lecture de l'AN où des suppressions ont été votées, règle 11) : articles du texte de l'AN dont la mesure est mise en cause par une source. Article 1er, injonction psychiatrique (USP, CLE Autistes, réserve du Conseil constitutionnel) ; article 2, rétention de sûreté (réserve du Conseil constitutionnel) ; article 6, changement de nom et de prénom (CLE Autistes, Toutes des Femmes) ; article 8, rétention de 210 jours étendue aux personnes jugées très dangereuses pour l'ordre public (La Cimade). L'article 8 a été vidé de sa portée par l'amendement écologiste 173 (84-77), puis réécrit en seconde délibération (V6317) : ce scrutin a fixé son sort. Article 8 bis, placements successifs (La Cimade) : suppression rejetée, puis article rejeté (V6281, 45-91) et rétabli par le Sénat. Écartés faute de source : article 3 (V6213), article 4 (V6217, information du préfet), article 5 (V6225, MICAS), article 7 (V6243, 210 jours pour les condamnés terroristes). Les deux amendements du Gouvernement sur le texte de la CMP (V7403, V7404) ne sont pas des suppressions.",
+      "note": "Scrutin décisif : vote de l'AN sur le texte de la CMP (16 juin 2026), dernier vote de l'AN sur l'ensemble ; le Sénat avait voté le texte de la CMP la veille (règle 9). Amendements clés (1re lecture, seule lecture de l'AN où des suppressions ont été votées, règle 11) : articles du texte de l'AN dont la mesure est mise en cause par une source. Article 1er, injonction psychiatrique (USP, CLE Autistes) ; article 6, changement de nom et de prénom (CLE Autistes, Toutes des Femmes). La suppression de l'article 2, rétention de sûreté (V6201, 48-67), n'est pas retenue : la réserve du Conseil constitutionnel, qui en exclut l'application aux faits antérieurs à la loi, ne censure ni ne neutralise la mesure (règle 11). Les suppressions des articles 8 (210 jours pour de nouvelles catégories, V6256, 51-59) et 8 bis (placements successifs, V6270, 53-98) ne sont pas retenues : la source admise lue vise un texte antérieur, non ce projet (règle 11). L'article 8 a aussi été vidé de sa portée par l'amendement écologiste 173 (84-77), puis réécrit en seconde délibération (V6317, 161-67) : cette réécriture n'est ni une suppression ni un rétablissement, et n'est pas retenue. Écartés faute de source qui les vise : article 3 (V6213), article 4 (V6217, information du préfet), article 5 (V6225, MICAS, que Toutes des Femmes ne cite pas), article 7 (V6243, 210 jours pour les condamnés terroristes). Les deux amendements du Gouvernement sur le texte de la CMP (V7403, V7404) ne sont pas des suppressions.",
       "sources": {
         "cc-2026-906": {
           "auteur": "Conseil constitutionnel",
@@ -14965,17 +15289,17 @@
           "date": "2026-07-23",
           "url": "https://www.conseil-constitutionnel.fr/decision/2026/2026906DC.htm"
         },
-        "cimade-2026-07": {
-          "auteur": "La Cimade",
-          "titre": "Le Conseil constitutionnel entérine l'allongement de la durée maximale de rétention à 210 jours : une loi aussi inefficace que dangereuse pour les personnes enfermées",
-          "date": "2026-07-29",
-          "url": "https://www.lacimade.org/presse/le-conseil-constitutionnel-enterine-lallongement-de-la-duree-maximale-de-retention-a-210-jours-une-loi-aussi-inefficace-que-dangereuse-pour-les-personnes-enfermees/"
-        },
         "cle-autistes-2026-04": {
           "auteur": "CLE Autistes",
           "titre": "Loi Rodwell : une attaque directe envers les droits des personnes trans et des personnes psychiatrisées (communiqué)",
           "date": "2026-04-13",
           "url": "https://asso.cle-autistes.fr/loi-rodwell-une-attaque-directe-envers-les-droits-des-personnes-trans-et-des-personnes-psychiatrisees/"
+        },
+        "cncdh-lettre-2025-06": {
+          "auteur": "CNCDH",
+          "titre": "Lettre du président aux députés sur la proposition de loi visant à faciliter le maintien en rétention",
+          "date": "2025-06-26",
+          "url": "https://www.cncdh.fr/sites/default/files/2025-06/Lettre%20PSDT%20PPL%20r%C3%A9tention%20adm%2027.06.25.pdf"
         },
         "tdf-2026-04": {
           "auteur": "Toutes des Femmes",
@@ -15022,28 +15346,10 @@
           "objet": "suppression de l'article 1er, injonction d'examen psychiatrique (65-78)"
         },
         {
-          "id": "VTANR5L17V6201",
-          "role": "amendement",
-          "pour": "contre-texte",
-          "objet": "suppression de l'article 2, rétention de sûreté terroriste (48-67)"
-        },
-        {
           "id": "VTANR5L17V6230",
           "role": "amendement",
           "pour": "contre-texte",
           "objet": "suppression de l'article 6, changement de nom et de prénom (48-67)"
-        },
-        {
-          "id": "VTANR5L17V6317",
-          "role": "amendement",
-          "pour": "texte",
-          "objet": "réécriture de l'article 8 en seconde délibération, rétention de 210 jours étendue, adoptée (161-67)"
-        },
-        {
-          "id": "VTANR5L17V6270",
-          "role": "amendement",
-          "pour": "contre-texte",
-          "objet": "suppression de l'article 8 bis, placements successifs en rétention (53-98)"
         }
       ],
       "senat": {
@@ -15244,6 +15550,16 @@
             "cc-2026-915"
           ],
           "justification": "Expulsion administrative sans juge étendue aux locaux professionnels et aux meublés de tourisme (réserve du Conseil constitutionnel), expulsions des gens du voyage facilitées ; la Défenseure des droits recommande le retrait ou la suppression de ces dispositions."
+        },
+        {
+          "code": "discriminations",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-fiche-32",
+            "ddd-26-04"
+          ],
+          "justification": "L'article 5 septies relève l'amende forfaitaire pour installation illicite. Le Défenseur des droits demande la suppression de cette procédure, qui « a des conséquences discriminatoires à l'encontre des « Gens du voyage » ». La Défenseure rappelle que son extension à ce délit « a donc vocation à s'appliquer spécifiquement » à ces personnes, et rend un avis défavorable à la hausse."
         }
       ],
       "etiquettes": [
@@ -15262,7 +15578,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2026-915 DC du 14 août 2026, non-conformité partielle avec réserves. Censures au fond : fermeture administrative des commerces d'articles pyrotechniques (art. 1er, I), une amende forfaitaire délictuelle (art. 1er, III), deux dispositions sur les véhicules (art. 7), extension des délits de maintien dans le domicile d'autrui (art. 14, II), interdiction des permissions de sortir en quartier de lutte contre la criminalité organisée (art. 39, 4°), pseudonymisation des enquêteurs (art. 46, I), caméras individuelles des agents des gestionnaires routiers (art. 47, II). Cinq articles censurés comme cavaliers (10, 18, 26, 41, 65). Réserves sur la location de matériel de sonorisation (art. 3), l'interdiction de paraître lors des manifestations sportives (art. 12), l'expulsion administrative des locaux professionnels (art. 14), les drones en urgence (art. 42) et la vidéosurveillance algorithmique (art. 50). Validés notamment : délits d'organisation et de participation aux rassemblements festifs, contrôles en zone douanière (art. 35), lecture des plaques (art. 44 et 45), fin de l'enregistrement en cellule de garde à vue (art. 54).",
-      "note": "Scrutin décisif : texte de la CMP, dernier vote de l'AN sur l'ensemble (21/07/2026). Amendements clés de 1re lecture, seule lecture de l'AN où des suppressions et rétablissements ont été mis aux voix (règle 11) ; numéros d'articles du texte examiné en séance (texte du Sénat, dont la commission des lois de l'AN avait supprimé de nombreux articles, rétablis en séance par le Gouvernement). Un scrutin par article : l'amendement adopté, sinon le dernier mis aux voix. Mesures et sources : art. 2, 3, 5 septies, 6 et 7 (amende forfaitaire, délit de participation aux rave-parties) : Défenseure des droits ; art. 4 (interdictions de stade), 5 (expulsions), 5 nonies et 5 undecies (gens du voyage), 12 (aménagements de peine), 16 (pseudonymisation), 19 (VSA), 20 (agents privés), 22 (enregistrement en garde à vue) : Défenseure des droits ; art. 9 (zone douanière) : Défenseure des droits et La Quadrature du Net ; art. 14 (drones), 15 et 15 bis (lecture des plaques), 17 (caméras douanes et gestionnaires routiers) : La Quadrature du Net, et Conseil constitutionnel pour l'art. 17. Écartés, faute de source qui les mette en cause : suppressions des articles 2 ter, 3 quater, 3 quinquies, 4 bis A, 5 ter, 5 quater, 5 nonies A, 6 bis, 6 ter, 6 quater, 10, 11, 11 ter, 13, 13 bis ; rétablissements des articles 1er (pas de scrutin public sur l'amendement adopté), 2 bis, 3 bis, 4 bis, 5 bis, 5 sexies, 5 decies, 5 quaterdecies, 5 quindecies, 7 bis, 14 bis (caméras frontales des trains, décrites sans être mises en cause), 18, 18 bis, 20 bis, 23, 24 ; les 78 sous-amendements. V8200 (article 22, 0-46) n'est pas compté : un amendement clé doit avoir au moins un vote de chaque côté (règle 11).",
+      "note": "Scrutin décisif : texte de la CMP, dernier vote de l'AN sur l'ensemble (21/07/2026). Amendements clés de 1re lecture, seule lecture de l'AN où des suppressions et rétablissements ont été mis aux voix (règle 11) ; numéros d'articles du texte examiné en séance (texte du Sénat, dont la commission des lois de l'AN avait supprimé de nombreux articles, rétablis en séance par le Gouvernement). Un scrutin par article : l'amendement adopté, sinon le dernier mis aux voix. Mesures et sources : art. 2, 3, 5 septies et 7 (amende forfaitaire, délit de participation aux rave-parties) : Défenseure des droits ; art. 4 (interdictions de stade), 5 (expulsions), 5 nonies et 5 undecies (gens du voyage), 12 (aménagements de peine), 16 (pseudonymisation), 19 (VSA), 20 (agents privés), 22 (enregistrement en garde à vue) : Défenseure des droits ; art. 9 (zone douanière) : Défenseure des droits et La Quadrature du Net ; art. 14 (drones), 15 et 15 bis (lecture des plaques), 17 (caméras douanes et gestionnaires routiers) : La Quadrature du Net, et Conseil constitutionnel pour l'art. 17. Art. 6 (amende forfaitaire pour usage de stupéfiants, V8131, rejeté 22-30) : la mesure figure au texte du décisif et la Défenseure des droits la met en cause : voter son rétablissement va dans le sens du texte (règle 11). Écartés, faute de source qui les mette en cause : suppressions des articles 2 ter, 3 quater, 3 quinquies, 4 bis A, 5 ter, 5 quater, 5 nonies A, 6 bis, 6 ter, 6 quater, 10, 11, 11 ter, 13, 13 bis ; rétablissements des articles 1er (pas de scrutin public sur l'amendement adopté), 2 bis, 3 bis, 4 bis, 5 bis, 5 sexies, 5 decies, 5 quaterdecies, 5 quindecies, 7 bis, 14 bis (caméras frontales des trains, décrites sans être mises en cause), 18, 18 bis, 20 bis, 23, 24 ; les 78 sous-amendements. Le droit `discriminations` repose sur le constat du Défenseur des droits sur l'amende forfaitaire pour installation illicite (fiche de réforme n° 32, règle 4). V8200 (article 22, 0-46) n'est pas compté : un amendement clé doit avoir au moins un vote de chaque côté (règle 11).",
       "sources": {
         "cc-2026-915": {
           "auteur": "Conseil constitutionnel",
@@ -15275,6 +15591,12 @@
           "titre": "Avis 26-04 sur le projet de loi visant à offrir des réponses immédiates aux phénomènes troublant l'ordre public, la sécurité et la tranquillité de nos concitoyens",
           "date": "2026-06-16",
           "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=23255"
+        },
+        "ddd-fiche-32": {
+          "auteur": "Défenseur des droits",
+          "titre": "Fiche réforme n° 32, Les droits des gens du voyage",
+          "date": "2023-07",
+          "url": "https://www.defenseurdesdroits.fr/sites/default/files/2023-12/fiches-reformes_032.pdf"
         },
         "lqdn-2026-09": {
           "auteur": "La Quadrature du Net",
@@ -15353,7 +15675,7 @@
         {
           "id": "VTANR5L17V8131",
           "role": "amendement",
-          "pour": "a-trancher",
+          "pour": "texte",
           "objet": "rétablissement de l'article 6, amende forfaitaire pour usage de stupéfiants relevée (22-30)"
         },
         {
@@ -15855,13 +16177,22 @@
           "sources": [
             "ddd-20-05"
           ],
-          "justification": "Condition de cinq ans de titre de séjour pour travailler dans la sécurité privée : « une discrimination fondée sur la nationalité » possible selon la Défenseure des droits."
+          "justification": "Condition de cinq ans de titre de séjour pour travailler dans la sécurité privée, exigible des seuls étrangers. Pour la Défenseure des droits, ces modifications « ne paraissent pas poursuivre un but légitime ni être objectivement justifiées »."
         }
       ],
-      "etiquettes": [],
-      "vigilance": [],
+      "etiquettes": [
+        "regime-exception"
+      ],
+      "vigilance": [
+        {
+          "texte": "Risque de discrimination : selon la Défenseure des droits, les modifications sur le titre de séjour « sont susceptibles de constituer une discrimination fondée sur la nationalité ». Le Conseil constitutionnel déclare cet article conforme.",
+          "sources": [
+            "ddd-20-05"
+          ]
+        }
+      ],
       "conseil_constitutionnel": "Décision du 20 mai 2021. Censure au fond : pouvoirs de police judiciaire des polices municipales (article 1er), vidéosurveillance en garde à vue et en rétention (article 41), drones des services de sécurité de l'État et des polices municipales (dispositions de l'article 47), caméras embarquées (article 48), provocation à l'identification (I de l'article 52). Censure de procédure : le I de l'article 2 (peines de violation de domicile) et les articles 26, 57, 63, 68 et 69, sans lien avec le texte initial. Le mot « notamment » de l'article 38 (ordonnance) est aussi censuré. Quatre réserves : palpations sans discrimination (article 4), surveillance itinérante des agents privés limitée aux abords immédiats (article 29), accès des polices municipales aux seules images de leur territoire (article 40), intégrité et traçabilité des images des caméras individuelles (article 45). Sont notamment conformes les articles 23 (titre de séjour des agents privés), 50 (crédits de réduction de peine) et 53 (arme hors service).",
-      "note": "Décisif : texte de la commission mixte paritaire, 15 avril 2021. Le texte qualifié est celui soumis à ce vote, censures comprises (règle 6). Amendements clés : la 1re lecture est la seule où des suppressions ont été mises aux voix (règle 11). Six articles y portent une mesure mise en cause par une source : 1er, 20, 20 bis, 21, 23 et 24. Non retenus : l'article 20 ter (la CNIL demande seulement de mieux définir sa finalité) et l'article 25 (aucune source admise trouvée). Sur l'article 22 (drones), aucun amendement de suppression n'a été mis aux voix par scrutin public. Les amendements de réécriture et les sous-amendements ne sont pas retenus.",
+      "note": "Décisif : texte de la commission mixte paritaire, 15 avril 2021. Le texte qualifié est celui soumis à ce vote, censures comprises (règle 6). Amendements clés : la 1re lecture est la seule où des suppressions ont été mises aux voix (règle 11). Six articles y portent une mesure mise en cause par une source : 1er, 20, 20 bis, 21, 23 et 24. Non retenus : l'article 20 ter (la CNIL demande seulement de mieux définir sa finalité) et l'article 25 (aucune source admise trouvée). Sur l'article 22 (drones), aucun amendement de suppression n'a été mis aux voix par scrutin public. Les amendements de réécriture et les sous-amendements ne sont pas retenus. L'étiquette « régimes d'exception » tient à l'expérimentation des pouvoirs de police judiciaire des polices municipales, présente dans le texte voté même si elle a été censurée ensuite (règle 6).",
       "sources": {
         "amnesty-2021": {
           "auteur": "Amnesty International France",
@@ -16002,16 +16333,6 @@
             "cncdh-a-2021-4"
           ],
           "justification": "Réserve de polygamie étendue à tous les titres de séjour et peine d'interdiction du territoire, jugée « manifestement disproportionnée » par la CNCDH."
-        },
-        {
-          "code": "discriminations",
-          "role": "secondaire",
-          "sens": "restreint",
-          "sources": [
-            "amnesty-2021",
-            "ddd-21-01"
-          ],
-          "justification": "Amnesty International craint une application discriminatoire visant particulièrement les personnes et associations musulmanes. La Défenseure des droits relève un dispositif pénal ciblé « susceptible d'être discriminatoire »."
         }
       ],
       "etiquettes": [],
@@ -16020,6 +16341,13 @@
           "texte": "Le texte contient aussi des mesures présentées comme protégeant les femmes : certificats de virginité, mariages forcés, polygamie. La CNCDH juge « légitime » de sanctionner les pressions pour obtenir un certificat, mais estime que l'interdiction faite aux soignants « pourrait être contre-productive » ; la Défenseure des droits ne juge pas la pénalisation opportune.",
           "sources": [
             "cncdh-a-2021-4",
+            "ddd-21-01"
+          ]
+        },
+        {
+          "texte": "Risque de discrimination : Amnesty International craint une application discriminatoire visant particulièrement les personnes et associations musulmanes. Selon la Défenseure des droits, le cumul des dispositions laisse penser à un dispositif pénal ciblé, « susceptible d'être discriminatoire ». Aucune de ces deux sources ne constate une discrimination dans une mesure du texte voté (règle 4).",
+          "sources": [
+            "amnesty-2021",
             "ddd-21-01"
           ]
         }
@@ -16994,12 +17322,23 @@
             "sm-2021"
           ],
           "justification": "Mesures administratives rendues permanentes. Le Conseil d'État estime que porter à vingt-quatre mois la durée des mesures de surveillance « soulève une difficulté d'ordre constitutionnel ». Le Syndicat de la magistrature voit dans la mesure judiciaire de suivi « une mesure de sûreté, si ce n'est une peine »."
+        },
+        {
+          "code": "libertes",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "amnesty-2021"
+          ],
+          "justification": "Mesures de 2017 rendues permanentes, dont les périmètres de sécurité et la fermeture des lieux de culte. Pour Amnesty International, leur renforcement risque de contribuer à des « violations des droits à la liberté de mouvement », et la mesure sur les lieux de culte « soulève des questions concernant le respect du droit à la liberté de religion »."
         }
       ],
-      "etiquettes": [],
+      "etiquettes": [
+        "regime-exception"
+      ],
       "vigilance": [],
       "conseil_constitutionnel": "Décision du 30 juillet 2021, sur saisine de sénateurs, limitée à des dispositions des articles 4, 6 et 25. Censure de l'allongement à vingt-quatre mois de la durée cumulée des mesures individuelles de surveillance, pour certains condamnés (article 4, durée maintenue à douze mois), et d'un délai de jugement de « soixante-douze heures », jugé inintelligible (article 4). Sont conformes l'interdiction de paraître dans certains lieux (article 4) et la mesure judiciaire de suivi des condamnés pour terrorisme (article 6). Deux réserves sur l'allongement des délais d'accès aux archives (article 25). Le Conseil ne s'est pas prononcé sur les autres dispositions, dont l'inscription permanente des mesures de 2017 et la détection par algorithme.",
-      "note": "Scrutin décisif : lecture définitive du 22/07/2021. Le sens se lit sur le texte alors soumis au vote (règle 6), qui contient encore la durée de vingt-quatre mois censurée ensuite. Au jour du vote, les mesures de 2017 devaient expirer le 31/07/2021 et l'algorithme le 31/12/2021 : leur inscription permanente restreint les droits par rapport à ce droit applicable, échéance comprise (règle 4). Aucun amendement clé (règle 11) : aucun amendement de suppression ou de rétablissement d'article n'a été mis aux voix par scrutin public. Les votes sur les articles 3 et 5 en 1re lecture sont affichés, non comptés.",
+      "note": "Scrutin décisif : lecture définitive du 22/07/2021. Le sens se lit sur le texte alors soumis au vote (règle 6), qui contient encore la durée de vingt-quatre mois censurée ensuite. Au jour du vote, les mesures de 2017 devaient expirer le 31/07/2021 et l'algorithme le 31/12/2021 : leur inscription permanente restreint les droits par rapport à ce droit applicable, échéance comprise (règle 4). Aucun amendement clé (règle 11) : aucun amendement de suppression ou de rétablissement d'article n'a été mis aux voix par scrutin public. Les votes sur les articles 3 et 5 en 1re lecture sont affichés, non comptés. L'étiquette « régimes d'exception » tient à l'extension du droit antiterroriste (mesure judiciaire de suivi des condamnés) et à l'expérimentation de l'interception des communications satellitaires, non à l'inscription permanente des mesures de 2017. Droit principal (règle 4) : décompte égal entre la détection par algorithme (CNIL, Amnesty International, La Quadrature du Net) et les mesures de surveillance de 2017 (Amnesty International, Conseil d'État, Conseil constitutionnel). À égalité vaut le droit de l'objet du texte, dont le titre vise à la fois le terrorisme et le renseignement : `vie-privee` reste principal.",
       "sources": {
         "amnesty-2021": {
           "auteur": "Amnesty International France",
@@ -17895,6 +18234,15 @@
             "anm-2021-10-28"
           ],
           "justification": "Prolongation des fichiers de suivi de l'épidémie, qui traitent des données de santé le cas échéant sans consentement, et accès des directeurs d'école à des données médicales des élèves. Le Conseil constitutionnel juge que ce dernier porte « une atteinte disproportionnée au droit au respect de la vie privée ». L'Académie nationale de médecine y voit « une nouvelle dérogation au secret médical ». La CNIL alerte sur le « risque d'accoutumance et de banalisation de tels dispositifs attentatoires à la vie privée »."
+        },
+        {
+          "code": "travail-protection-sociale",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ddd-21-11"
+          ],
+          "justification": "Le texte maintient jusqu'au 31 juillet 2022 un passe sanitaire qui peut être exigé des personnels des lieux concernés, sous peine de suspension du contrat de travail ou des fonctions. Sur cette obligation, la Défenseure des droits écrit que « le caractère proportionné de cette nouvelle obligation soulève plusieurs interrogations »."
         }
       ],
       "etiquettes": [
@@ -17922,7 +18270,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2021-828 DC du 9 novembre 2021, non-conformité partielle, sans réserve. Article 1er du dispositif : « Sont contraires à la Constitution les dispositions suivantes de la loi portant diverses dispositions de vigilance sanitaire : l'article 9 ; les troisième à cinquième alinéas, les mots « ordonnances et les » figurant au sixième alinéa et le septième alinéa de l'article 13 ; les paragraphes I, III et IV de l'article 14. » L'article 9 (données médicales des élèves) porte « une atteinte disproportionnée au droit au respect de la vie privée ». Les articles 13 et 14 (habilitations à légiférer par ordonnance) sont censurés pour un motif de procédure, l'article 38 de la Constitution. Sont déclarés conformes les reports au 31 juillet 2022 des articles 1er, 2 et 6 : cadre de l'état d'urgence sanitaire, régime de sortie de crise et passe, fichiers.",
-      "note": "Règle 18 : chaque loi de la crise sanitaire compte pour 1, sans regroupement ; celle-ci pèse donc 1, comme chacune des autres. Scrutin décisif : lecture définitive du 05/11/2021, dernier vote de l'AN sur l'ensemble. Le sens se lit sur ce texte (règle 6), article 9 compris, censuré ensuite. Sens et date de référence (règle 4) : au jour du vote, le régime de sortie de crise et le passe s'éteignent le 15/11/2021, le cadre de l'état d'urgence sanitaire et les fichiers le 31/12/2021. Prolonger ces régimes avant leur échéance restreint les droits, même si le texte ajoute une condition sanitaire au passe et des rapports au Parlement. Un amendement clé (règle 11), en nouvelle lecture, dernière lecture de l'AN où des suppressions ont été mises aux voix : suppression de l'article 4 ter (données médicales des élèves, article 9 de la loi), dont la mesure est mise en cause par des sources. Non retenues : la suppression de l'article 1er (cadre de l'état d'urgence sanitaire), de l'article 2 (régime de sortie de crise et passe) et de l'article 4 (fichiers), faute de source admise qui mette en cause précisément leur prolongation. Les suppressions de 1re lecture ne sont pas comptées (une seule lecture).",
+      "note": "Règle 18 : chaque loi de la crise sanitaire compte pour 1, sans regroupement ; celle-ci pèse donc 1, comme chacune des autres. Scrutin décisif : lecture définitive du 05/11/2021, dernier vote de l'AN sur l'ensemble. Le sens se lit sur ce texte (règle 6), article 9 compris, censuré ensuite. Sens et date de référence (règle 4) : au jour du vote, le régime de sortie de crise et le passe s'éteignent le 15/11/2021, le cadre de l'état d'urgence sanitaire et les fichiers le 31/12/2021. Prolonger ces régimes avant leur échéance restreint les droits, même si le texte ajoute une condition sanitaire au passe et des rapports au Parlement. Un amendement clé (règle 11), en nouvelle lecture, dernière lecture de l'AN où des suppressions ont été mises aux voix : suppression de l'article 4 ter (données médicales des élèves, article 9 de la loi), dont la mesure est mise en cause par des sources. Non retenues : la suppression de l'article 1er (cadre de l'état d'urgence sanitaire), de l'article 2 (régime de sortie de crise et passe) et de l'article 4 (fichiers), faute de source admise qui mette en cause précisément leur prolongation. Les suppressions de 1re lecture ne sont pas comptées (une seule lecture). `travail-protection-sociale` : la Défenseure des droits se prononce sur la mesure que le texte prolonge, dans son avis de juillet 2021 (règles 4 et 7).",
       "sources": {
         "anm-2021-10-28": {
           "auteur": "Académie nationale de médecine",
@@ -18393,7 +18741,7 @@
       "dossier_an": "DLR5L15N36143",
       "legislature": 15,
       "titre": "Loi relative à l'orientation et à la réussite des étudiants",
-      "motif": "Aucune source admise n'établit que cette loi restreint l'accès à l'enseignement au titre d'une discrimination : les critiques visent la sélection ou sa mise en œuvre (règle 2)."
+      "motif": "Aucune source admise ne constate une discrimination dans la mesure votée (règles 4 et 7). Le SNESUP-FSU qualifie la loi de « discriminante » en visant la sélection, et le Défenseur des droits, qui vise la mise en œuvre de Parcoursup, écrit qu'un critère « peut être assimilé à une pratique discriminatoire » sous condition. Les critiques de la sélection elle-même ne sont rattachées à aucun droit de la grille par une source admise."
     },
     {
       "dossier_an": "DLR5L15N36159",
@@ -18424,12 +18772,6 @@
       "legislature": 15,
       "titre": "Accord de coopération entre l’UE et la Nouvelle-Zélande",
       "motif": "Autorisation de ratifier ou d'approuver une convention internationale : le vote ne porte sur aucune mesure de droit interne touchant un droit de la grille (règle 8)."
-    },
-    {
-      "dossier_an": "DLR5L15N36336",
-      "legislature": 15,
-      "titre": "Equilibre des relations commerciales dans le secteur agro-alimentaire (EGALIM)",
-      "motif": "Relations commerciales agricoles : objet principal hors de la grille (règle 2)."
     },
     {
       "dossier_an": "DLR5L15N36343",
@@ -18874,12 +19216,6 @@
       "legislature": 15,
       "titre": "Protection des victimes de violences conjugales",
       "motif": "Adopté sans aucune voix contre au scrutin décisif (55-0) : ce vote ne départage personne (règle 9)."
-    },
-    {
-      "dossier_an": "DLR5L15N38369",
-      "legislature": 15,
-      "titre": "Proposition de loi organique visant à permettre l'inscription d'office sur la liste électorale spéciale à la consultation sur l'accession à la pleine souveraineté de la Nouvelle-Calédonie",
-      "motif": "Aucune source admise ne se prononce sur la reconduction de l'inscription d'office (règle 7)."
     },
     {
       "dossier_an": "DLR5L15N38380",
@@ -19563,7 +19899,7 @@
       "dossier_an": "DLR5L16N46116",
       "legislature": 16,
       "titre": "Proposition de loi visant à lutter contre les plastiques dangereux pour l'environnement et la santé",
-      "motif": "Aucune source admise (règle 7) qui analyse ce texte n'a pu être lue : ni autorité indépendante ni ONG. La critique d'une association environnementale, qui dénonce une « dénaturation » du texte, n'est connue que par une dépêche de presse. La proposition, adoptée par l'Assemblée en 1re lecture, n'a jamais été examinée par le Sénat ni déférée au Conseil constitutionnel."
+      "motif": "Aucune source admise n'établit le sens de ce texte : les critiques publiées portent sur son insuffisance, sans dire s'il étend le droit (règle 7)."
     },
     {
       "dossier_an": "DLR5L16N46127",
@@ -19671,7 +20007,7 @@
       "dossier_an": "DLR5L16N46473",
       "legislature": 16,
       "titre": "Assouplir les conditions d’expulsion des étrangers constituant une menace grave pour l’ordre public",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+      "motif": "Article unique supprimé par amendement (V655, 120-61), puis texte rejeté. Aucune source admise ne se prononce sur la mesure de ce texte : l'avis lu sur les protections contre l'éloignement vise un autre projet, à la rédaction différente (règle 7)."
     },
     {
       "dossier_an": "DLR5L16N46485",
@@ -19821,7 +20157,7 @@
       "dossier_an": "DLR5L16N46880",
       "legislature": 16,
       "titre": "Loi visant à faciliter la mise en œuvre des objectifs de lutte contre l'artificialisation des sols et à renforcer l'accompagnement des élus locaux",
-      "motif": "Aucune source admise (règle 7) mettant en cause une mesure du texte n'a pu être lue. La critique de France Nature Environnement n'est connue que par la presse, et son site a refusé l'accès automatisé. Le texte n'a pas été déféré au Conseil constitutionnel. Il conserve l'objectif de zéro artificialisation nette et en aménage la mise en œuvre."
+      "motif": "Aucune source admise ne se prononce sur le texte soumis au scrutin décisif : la seule lue porte sur une rédaction de 1re lecture, modifiée ensuite en commission mixte paritaire (règles 6 et 7)."
     },
     {
       "dossier_an": "DLR5L16N46888",
@@ -21532,12 +21868,6 @@
       "legislature": 17,
       "titre": "Nationalisation d'ArcelorMittal France",
       "motif": "Nationalisation d'ArcelorMittal France : politique industrielle, hors de la grille des droits (règle 2)."
-    },
-    {
-      "dossier_an": "DLR5L17N52984",
-      "legislature": 17,
-      "titre": "Projet de loi constitutionnelle relatif à la Nouvelle-Calédonie",
-      "motif": "Rejeté par l'Assemblée sans vote sur l'ensemble, par l'adoption d'une motion de rejet préalable (190-107) : aucun scrutin ne tient lieu de décisif (règle 9), et les motions ne sont pas comptées (règle 10). Écarté d'abord comme hors grille v0 (corps électoral de Nouvelle-Calédonie), il relèverait aujourd'hui du droit « citoyenneté » de la grille v1."
     },
     {
       "dossier_an": "DLR5L17N53005",
