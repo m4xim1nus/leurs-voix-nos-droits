@@ -33,11 +33,28 @@ export interface CircoTrouvee {
   depute: EntreeIndex | null;
 }
 
-export type ResultatCP = { erreur: string } | { cp: string; circos: CircoTrouvee[] };
+export type ResultatCP =
+  { erreur: string } | { cp: string; circos: CircoTrouvee[]; senateurs: EntreeIndex[] };
 
 const tables = new Map<string, TableCodesPostaux>();
+let indexSenateurs: Promise<EntreeIndex[]> | null = null;
 
-/** Députés d'un code postal : une circonscription, ou plusieurs avec leurs communes (docs/CONCEPTION.md). */
+/** Sénateur·ices en poste des départements d'un code postal. Un échec ne prive pas du résultat des député·es. */
+async function senateursDuCode(cp: string): Promise<EntreeIndex[]> {
+  try {
+    const parCode = await json<Record<string, string[]>>(
+      `/recherche/departements/${cp.slice(0, 2)}.json`
+    );
+    const deps = parCode[cp] ?? [];
+    indexSenateurs ??= json<EntreeIndex[]>('/recherche/senateurs.json');
+    return (await indexSenateurs).filter((e) => e.actuel && deps.includes(e.circo));
+  } catch {
+    indexSenateurs = null;
+    return [];
+  }
+}
+
+/** Élu·es d'un code postal : une circonscription, ou plusieurs avec leurs communes (docs/CONCEPTION.md), et les sénateur·ices du département. */
 export async function chercherCodePostal(saisie: string): Promise<ResultatCP> {
   const q = saisie.trim();
   const prefixe = q.slice(0, 2);
@@ -53,6 +70,7 @@ export async function chercherCodePostal(saisie: string): Promise<ResultatCP> {
   const ids = [...new Set(lignes.map((l) => l.circo))];
   return {
     cp: q,
+    senateurs: await senateursDuCode(q),
     circos: ids.map((id) => ({
       id,
       libelle: t.circos[id].libelle,

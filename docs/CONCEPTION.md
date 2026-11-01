@@ -296,6 +296,9 @@ vie privée », avec la source à côté, jamais « texte liberticide ».
 
 ### Pages
 
+L'en-tête a cinq rubriques, en liens simples : Droits, Textes (sous-onglets Textes qualifiés et En cours), Groupes (Groupes et
+Comparer), Sénat, Méthode (Méthodologie et Données). Les adresses ne changent pas.
+
 | Page | Adresse | Contenu |
 |---|---|---|
 | Accueil | `/` | recherche (code postal, pays, nom), score global des groupes de la XVIIe, les onze droits, derniers textes qualifiés |
@@ -308,9 +311,9 @@ vie privée », avec la source à côté, jamais « texte liberticide ».
 | Groupes | `/groupes` | par législature : tableau groupe × droit, effectifs |
 | Fiche groupe | `/groupes/<sigle>-<législature>` | score global, par droit et par texte (un clic sur un droit filtre ses textes), textes adoptés sans opposition, membres et leur score |
 | Comparer | `/comparer?a=…&b=…` | deux députés, deux groupes, ou un député et son groupe : score, droit par droit, textes où ils s'écartent le plus ; deux règles par ligne (le premier en haut, curseur plein ; le second en bas, curseur creux), bandeau fixe qui les rappelle au défilement |
-| Sénat | `/senat` | les groupes d'abord, droit par droit ; le vote de groupe expliqué ; recherche par code postal ou nom ; sénateur·ices en poste par département |
+| Sénat | `/senat` | les groupes d'abord, droit par droit ; le vote de groupe expliqué ; sénateur·ices en poste par département (code postal ou nom : case de l'en-tête) |
 | Fiche sénateur·ice | `/senat/<slug>` | département, groupes successifs, score « d'après les votes enregistrés à son nom », écarts au groupe, votes comptés, « Lui écrire » ; **aucun taux de participation** (règle 27) |
-| Recherche | `/recherche?q=…` | tous les résultats d'une recherche : élu·es, code postal, pays, textes qualifiés, textes écartés et leur motif |
+| Recherche | `/recherche?q=…` | tous les résultats d'une recherche : élu·es, code postal (député·es et sénateur·ices du département), pays, textes qualifiés, textes écartés et leur motif |
 | Méthodologie | `/methodologie` | grille, règles 1 à 28, préparation des qualifications, code postal, sources |
 | Données | `/donnees` | `editorial.json`, exports CSV, votes nominatifs, licence |
 
@@ -434,7 +437,7 @@ tourne dans le navigateur. Aucune requête ne dit ce que l'on cherche, pas même
   hors d'`editorial.json`, de l'admin et de D1. Ils se cherchent et ne s'affichent jamais. Ni victime, ni personne mise en cause, ni
   formule militante. `lvnd check` refuse une clé inconnue et les termes de la liste privée.
 - **Correspondance** : tous les mots saisis doivent se trouver, sans accents ni casse, au singulier ; un mot de trois lettres ou
-  moins doit être entier (« APL » ne trouve pas « aplomb »), un mot plus long se complète. Pas de tolérance aux fautes de frappe.
+  moins doit être entier (« APL » ne trouve pas « aplomb »), un mot plus long se complète. **Fautes de frappe** : en repli, seulement quand rien ne correspond, chaque mot est remplacé par ses voisins les plus proches (une faute jusqu'à 7 lettres, deux au-delà, aucune sous 4 lettres ; une inversion compte pour une faute), et la page dit que ces résultats sont approchés.
 - **Classement** : clé exacte, puis expression dans une clé ou le titre, puis mots dans les clés, le titre, les étiquettes, le
   résumé ; à égalité, le plus récent. Élu·es en poste d'abord.
 - **Pays** : la case de l'accueil et celle de l'en-tête donnent le ou la député·e de la circonscription. Un pays absent du tableau du

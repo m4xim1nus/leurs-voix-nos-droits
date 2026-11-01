@@ -24,7 +24,9 @@
   let requete = 0;
 
   const q = $derived(saisie.trim());
-  const total = $derived(nombreResultats(r) + (cp && 'cp' in cp ? cp.circos.length : 0));
+  const total = $derived(
+    nombreResultats(r) + (cp && 'cp' in cp ? cp.circos.length + cp.senateurs.length : 0)
+  );
 
   async function chercher() {
     const n = ++requete;

@@ -7,18 +7,40 @@
 
   let { data, children } = $props();
 
+  // Cinq rubriques ; celles qui regroupent deux pages ont des sous-onglets, sans menu déroulant.
   const MENU = [
-    { href: '/droits', libelle: 'Droits' },
-    { href: '/textes', libelle: 'Textes' },
-    { href: '/en-cours', libelle: 'En cours' },
-    { href: '/groupes', libelle: 'Groupes' },
-    { href: '/comparer', libelle: 'Comparer' },
-    { href: '/senat', libelle: 'Sénat' },
-    { href: '/methodologie', libelle: 'Méthodologie' },
-    { href: '/donnees', libelle: 'Données' }
+    { href: '/droits', libelle: 'Droits', sous: [] },
+    {
+      href: '/textes',
+      libelle: 'Textes',
+      sous: [
+        { href: '/textes', libelle: 'Textes qualifiés' },
+        { href: '/en-cours', libelle: 'En cours' }
+      ]
+    },
+    {
+      href: '/groupes',
+      libelle: 'Groupes',
+      sous: [
+        { href: '/groupes', libelle: 'Groupes' },
+        { href: '/comparer', libelle: 'Comparer' }
+      ]
+    },
+    { href: '/senat', libelle: 'Sénat', sous: [] },
+    {
+      href: '/methodologie',
+      libelle: 'Méthode',
+      sous: [
+        { href: '/methodologie', libelle: 'Méthodologie' },
+        { href: '/donnees', libelle: 'Données' }
+      ]
+    }
   ];
-  const actif = (href: string) =>
+  const dans = (href: string) =>
     page.url.pathname === href || page.url.pathname.startsWith(`${href}/`);
+  const rubrique = $derived(
+    MENU.find((m) => dans(m.href) || m.sous.some((s) => dans(s.href))) ?? null
+  );
 </script>
 
 <a class="evitement" href="#contenu">Aller au contenu</a>
@@ -37,11 +59,20 @@
     <ul>
       {#each MENU as m (m.href)}
         <li>
-          <a href={m.href} aria-current={actif(m.href) ? 'page' : undefined}>{m.libelle}</a>
+          <a href={m.href} aria-current={m === rubrique ? 'true' : undefined}>{m.libelle}</a>
         </li>
       {/each}
     </ul>
   </nav>
+  {#if rubrique?.sous.length}
+    <nav class="sous" aria-label={rubrique.libelle}>
+      <ul>
+        {#each rubrique.sous as s (s.href)}
+          <li><a href={s.href} aria-current={dans(s.href) ? 'page' : undefined}>{s.libelle}</a></li>
+        {/each}
+      </ul>
+    </nav>
+  {/if}
 </header>
 
 <main id="contenu" class="page">
@@ -117,9 +148,21 @@
     font-weight: 600;
   }
   nav a:hover,
-  nav a[aria-current='page'] {
+  nav a[aria-current] {
     text-decoration: underline;
     text-decoration-thickness: 2px;
+  }
+  .sous {
+    flex: 1 0 100%;
+    font-size: 0.95rem;
+  }
+  .sous a {
+    font-weight: 500;
+    color: var(--ardoise);
+  }
+  .sous a[aria-current] {
+    font-weight: 650;
+    color: var(--encre);
   }
   footer {
     border-top: 1px solid var(--filet);

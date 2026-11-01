@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import {
   creerMoteur,
+  distance,
   estCodePostal,
   motCorrespond,
   motsCherches,
+  motsProches,
   nombreResultats
 } from './recherche';
 import type { EntreeIndex, EcarteIndex, PaysIndex, TexteIndex } from './types';
@@ -185,5 +187,47 @@ describe('saisies limites', () => {
     expect(estCodePostal(' 33000 ')).toBe(true);
     expect(estCodePostal('3300')).toBe(false);
     expect(estCodePostal('2024-42')).toBe(false);
+  });
+});
+
+describe('tolérance aux fautes de frappe', () => {
+  it('compte une inversion de lettres pour une faute', () => {
+    expect(distance('kasbarien', 'kasbarian')).toBe(1);
+    expect(distance('logmeent', 'logement')).toBe(1);
+    expect(distance('abc', 'abc')).toBe(0);
+  });
+  it('tolère une faute jusqu’à 7 lettres, deux au-delà, aucune sous 4 lettres', () => {
+    const voc = ['logement', 'marine', 'mariage', 'apl'];
+    expect(motsProches('logemant', voc)).toEqual(['logement']);
+    expect(motsProches('lagemant', voc)).toEqual(['logement']);
+    expect(motsProches('mariae', voc)).toEqual(['marine', 'mariage']);
+    expect(motsProches('mariage', voc)).toEqual(['mariage']);
+    expect(motsProches('morige', voc)).toEqual([]);
+    expect(motsProches('apk', voc)).toEqual([]);
+  });
+  const m = creerMoteur({
+    elus: [elu('Guillaume Kasbarian')],
+    pays: [],
+    ecartes: [ecarte('D2', 'Protection des logements')],
+    textes: [texte('squat', 'Loi contre l’occupation illicite', { cles: ['loi Kasbarian'] })]
+  });
+  it('se replie sur la saisie corrigée quand rien ne correspond, et le signale', () => {
+    const r = m.chercher('Kasbarien');
+    expect(r.approche).toBe(true);
+    expect(r.elus.map((e) => e.nom)).toEqual(['Guillaume Kasbarian']);
+    expect(r.textes.map((t) => t.id)).toEqual(['squat']);
+  });
+  it('ne se replie pas dès qu’une recherche exacte donne un résultat', () => {
+    const r = m.chercher('Kasbarian');
+    expect(r.approche).toBeUndefined();
+  });
+  it('corrige chaque mot, tous les mots restant exigés', () => {
+    expect(m.chercher('occupaton illicite').textes.map((t) => t.id)).toEqual(['squat']);
+    expect(m.chercher('occupaton zzzzzz').textes).toEqual([]);
+  });
+  it('ne renvoie rien, sans le signaler, quand aucune correction n’existe', () => {
+    const r = m.chercher('zzzzzz');
+    expect(nombreResultats(r)).toBe(0);
+    expect(r.approche).toBeUndefined();
   });
 });

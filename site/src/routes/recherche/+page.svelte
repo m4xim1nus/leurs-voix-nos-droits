@@ -17,7 +17,9 @@
   let cherche = $state('');
   let requete = 0;
 
-  const total = $derived(nombreResultats(r) + (cp && 'cp' in cp ? cp.circos.length : 0));
+  const total = $derived(
+    nombreResultats(r) + (cp && 'cp' in cp ? cp.circos.length + cp.senateurs.length : 0)
+  );
 
   async function lancer(q: string) {
     const n = ++requete;
