@@ -3,6 +3,19 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Les tags `v*` du dépôt suivent ces versions.
 
+## [1.7.1] — 2026-11-01
+
+Fin du cycle Prise en main : la page d'aide, restée hors du commit de la v1.7.0.
+
+### Ajouté
+
+- Page d'aide dans l'admin (`/aide`) : captures numérotées de chaque écran, tableau des alertes, premier essai à cocher.
+  Elle remplace `docs/TUTORIEL_ADMIN.md`, retiré dès la v1.7.0.
+
+### Limites connues
+
+- Elle n'a pas encore été essayée par un·e rédacteur·ice, et ses captures sont à refaire si un écran change.
+
 ## [1.7.0] — 2026-11-01
 
 Cycle Prise en main : audit de cohérence et revue des qualifications sensibles, supports pour reprendre le projet,
@@ -11,7 +24,6 @@ sur des textes écartés.
 
 ### Ajouté
 
-- Page d'aide dans l'admin (`/aide`) : captures numérotées de chaque écran, tableau des alertes, premier essai à cocher.
 - Lien « Exploitation » dans l'admin vers `docs/EXPLOITATION.md` : ce qui tourne quand, ce qui bloque un commit, quoi faire
   en cas d'échec.
 - Présentation du projet, `docs/presentation/` : 19 slides avec notes, source Bento éditable et PDF, hors du site et de l'admin.
@@ -42,7 +54,6 @@ sur des textes écartés.
 - La passe du 02/11/2026 n'a pas tourné au moment du tag (`BACKLOG.md`, « À trier »).
 - L'audit a comparé les fiches, sans relire toutes les sources. Ses écarts de forme ne sont pas tous traités (`BACKLOG.md`).
 - Le PDF de la présentation est fait de captures : son texte ne se sélectionne pas. Ses chiffres se mettent à jour à la main.
-- La page d'aide n'a pas encore été essayée par un·e rédacteur·ice, et ses captures sont à refaire si un écran change.
 - Sites refusant la lecture automatique (France Nature Environnement, Générations Futures, Légifrance) : ZAN 2023 et plastiques dangereux restent écartés faute d'avoir pu lire ces pages.
 
 ## [1.6.0] — 2026-11-01
