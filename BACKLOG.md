@@ -21,7 +21,14 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 ## À trier
 
 - [ ] Vérifier le 02/11/2026 que la passe quotidienne (`donnees-quotidien.yml`, 5 h UTC) tourne bien : première avec la XVe et avec la v1.5.0. Attendu : plus d'attente de 20 minutes sur le dump des amendements (copie de la release, ou archive du cache), passe finie sous le plafond de 60 minutes, sync de l'admin sans erreur, build Cloudflare réussi, site à jour. Si elle échoue, rien n'est commité et le site garde les données de la veille : corriger, relancer à la main, et ne pas supprimer les branches (user:moi, 2026-11-01)
-- [ ] Une fois la passe du 02/11/2026 vérifiée : supprimer les branches `xve`, `worktree-textes-en-cours`, `relecture-xve` et `recherche`, fusionnées dans `main`, et les worktrees `.claude/worktrees/xve` et `textes-en-cours`. Seules les deux premières sont encore sur GitHub, où un push lance un build d'aperçu Cloudflare (claude, 2026-11-01)
+- [ ] Une fois la passe du 02/11/2026 vérifiée : supprimer les branches `xve`, `worktree-textes-en-cours`, `relecture-xve`, `recherche` et `prise-en-main`, fusionnées dans `main`, et les worktrees `.claude/worktrees/xve` et `textes-en-cours`. Seules les deux premières sont encore sur GitHub, où un push lance un build d'aperçu Cloudflare (claude, 2026-11-01)
+- [ ] Premier essai de `/aide` avec le contributeur qui a déjà accès à l'admin, et corrections qu'il fait remonter (user:moi, 2026-11-01)
+- [ ] Écarts de forme de l'audit non traités (`source/audit-coherence/`) : mention « aucune critique trouvée » absente de plusieurs notes, `regime-exception` sur les textes à mesure temporaire non centrale, vigilances de sens opposé, formules des motifs, résumés des fiches témoins (claude, 2026-11-01)
+- [ ] ZAN 2023 et plastiques dangereux : lire à la main les pages de FNE et de Générations Futures, refusées à la lecture automatique. Une critique sur le texte voté rouvre l'écart (claude, 2026-11-01)
+- [ ] Une publication peut remettre un ancien motif quand `editorial.json` a été commité sans passer par D1 (DLR5L15N41895, 01/11/2026). Comparer D1 et le fichier dans `lvnd check`, ou au moment de publier (claude, 2026-11-01)
+- [ ] Une publication qui change le statut d'un texte cité dans `termes_recherche.yaml` fait échouer les tests et `lvnd check`, donc bloque la passe de données suivante (01/11/2026, corrigé à la main). Rendre ce contrôle non bloquant, ou faire suivre les clés (claude, 2026-11-01)
+- [ ] `sync-admin --brouillons --simuler` écrit quand même dans D1 : refuser la combinaison (claude, 2026-11-01)
+- [ ] Présentation : PDF au texte sélectionnable, et chiffres à relire à chaque évolution de la méthode (claude, 2026-11-01)
 
 ## Textes à surveiller
 
@@ -30,7 +37,7 @@ Ce que les alertes de `lvnd check` et d'« À traiter » ne signalent pas. Le re
 - [ ] Territoires zéro chômeur (DLR5L17N51962, écarté à 96-0) : commission le 10/11, 2e lecture inscrite le 19/11/2026 ; alerte seulement si le vote n'est plus unanime. Règle 7 : un comité national de la CGT (privés d'emploi) vaut-il fédération ? Aucune source récente lue, à trancher si une position paraît (claude, 2026-10-30)
 - [ ] Réforme de l'audiovisuel public (DLR5L16N47697) : à l'arrêt depuis juillet 2025, déjà qualifiée. `vote_posterieur` signale un vote final en scrutin public ; seul un vote sans scrutin public passerait inaperçu (user:moi, 2026-10-29)
 - [ ] Fiche de suivi prête dans `source/brouillons-suivi-attente/`, à charger dès l'inscription : ingérences étrangères (DLR5L17N54703). L'alerte `inscrit` se déclenchera, mais ne sait pas qu'une fiche est prête (claude, 2026-10-30)
-- [ ] AGRASC (DLR5L17N53159, écarté au lot 6, faute de source) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart. Aucune alerte ne le signale aujourd'hui (voir le cycle Prise en main). Au prochain passage, actualiser le motif, qui ne cite pas les articles 5 et 5 bis A (décision de Max, 30/10/2026) (claude, 2026-10-29)
+- [ ] AGRASC (DLR5L17N53159, écarté au lot 6, faute de source) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart. L'alerte `ecart_revote` le signale désormais. Au prochain passage, actualiser le motif, qui ne cite pas les articles 5 et 5 bis A (décision de Max, 30/10/2026) (claude, 2026-10-29)
 
 ## Cycles candidats
 
@@ -50,7 +57,7 @@ Le Sénat de 2017-2022, écarté du cycle XVe (décision de Max, 31/10/2026) : l
 Ce qui ne se fait qu'avec celles et ceux qui reprennent le projet : réécriture éditoriale, domaine définitif, comptes d'édition, transfert du
 compte Cloudflare et du dépôt.
 
-- [creuser] Le nom « Leurs voix, nos droits » fait écho à « Leurs votes » (Bon Pote) : filiation assumée ou risque de confusion, à trancher à la passation ; la recherche INPI se fait au cycle Prise en main (claude, 2026-10-29)
+- [creuser] Le nom « Leurs voix, nos droits » fait écho à « Leurs votes » (Bon Pote) : filiation assumée ou risque de confusion, à trancher à la passation ; recherche INPI faite par Max le 01/11/2026, sans résultat (claude, 2026-10-29)
 - [creuser] Règle 7 : admettre les syndicats nationaux membres de Solidaires, qui y tiennent lieu de fédérations (SNJ) ? Retiré de la loi organique sur l'audiovisuel public au lot 6, à trancher à la passation (claude, 2026-10-29)
 - [→Passation] Réécrire pour le public les notes de méthode et les motifs d'écart des qualifications, qui citent les règles par leur numéro (181 notes et 512 motifs au 01/11/2026). Le site les replie déjà sous « Comment ce texte a été qualifié », numéros liés à la méthodologie. Bon candidat à un traitement par LLM, relu (user:moi, 2026-10-29)
 - [→Passation] Rôles d'édition dans l'admin (rédacteur, valideur) : utile dès qu'il y a plusieurs personnes (un contributeur a accès à l'admin depuis le 29/10/2026) (claude, 2026-10-29)
@@ -60,7 +67,7 @@ compte Cloudflare et du dépôt.
 
 ### Pré-qualification automatique
 
-Après le cycle Prise en main. Son vrai gain vient quand le projet tourne sans Claude Code. Les Actions appellent un LLM par API : les
+Son vrai gain vient quand le projet tourne sans Claude Code. Les Actions appellent un LLM par API : les
 nouveaux textes et les nouvelles sources arrivent dans « À traiter » avec une
 proposition, et la relecture ne part plus d'une feuille blanche. L'admin change
 peu : mêmes écrans, même validation, même bouton « Publier ». Garde-fous : le

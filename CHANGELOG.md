@@ -3,6 +3,48 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Les tags `v*` du dépôt suivent ces versions.
 
+## [1.7.0] — 2026-11-01
+
+Cycle Prise en main : audit de cohérence et revue des qualifications sensibles, supports pour reprendre le projet,
+finitions avant de le montrer. Les scores changent, surtout en XVe et XVIe : amendements clés retirés et cinq décisions
+sur des textes écartés.
+
+### Ajouté
+
+- Page d'aide dans l'admin (`/aide`) : captures numérotées de chaque écran, tableau des alertes, premier essai à cocher.
+- Lien « Exploitation » dans l'admin vers `docs/EXPLOITATION.md` : ce qui tourne quand, ce qui bloque un commit, quoi faire
+  en cas d'échec.
+- Présentation du projet, `docs/presentation/` : 19 slides avec notes, source Bento éditable et PDF, hors du site et de l'admin.
+- `/llms.txt` et dictionnaire des données (`/donnees.md`), avec un test qui échoue si une colonne y manque.
+- Alerte `ecart_revote` : un texte écarté pour un autre motif que l'unanimité, revoté à l'Assemblée.
+- Section `corrections:` de `rattachements.yaml`, qui prime sur le dump, et `pipeline/explo/rattachement_objet.py`.
+
+### Modifié
+
+- Règle 4 : décompte des sources, choix du droit principal, mesure d'un autre droit en secondaire, constat de discrimination.
+- Règle 11 : mesure absente du texte décisif, critique visant seulement un droit secondaire de sens opposé, réserve du
+  Conseil constitutionnel.
+- Qualifications : audit de 199 textes et 620 écarts, puis 61 fiches relues sur décision de Max. Amendements clés alignés sur
+  la règle 11, droits secondaires ajoutés ou retirés, motifs d'écart corrigés. RIPOST compte 18 amendements clés.
+  Nouveaux qualifiés : EGalim, révision constitutionnelle de Nouvelle-Calédonie (Sénat seul), inscription d'office en
+  Nouvelle-Calédonie. Écarté : droit de visite des parlementaires dans les établissements sociaux et médico-sociaux.
+- En-tête du site à cinq rubriques (Droits, Textes, Groupes, Sénat, Méthode), avec sous-onglets. Les adresses ne changent pas.
+- Recherche : repli sur la saisie corrigée quand rien ne correspond, signalé à l'écran. Le code postal donne aussi les
+  sénateur·ices du département, et la case de `/senat` disparaît.
+- Admin : la version `autre` du Sénat se saisit aux formulaires habituels, sans JSON.
+
+### Corrigé
+
+- V6758 (loi d'urgence agricole) était rattaché à la loi organique sur les natifs de Nouvelle-Calédonie. Sans effet sur les scores.
+
+### Limites connues
+
+- La passe du 02/11/2026 n'a pas tourné au moment du tag (`BACKLOG.md`, « À trier »).
+- L'audit a comparé les fiches, sans relire toutes les sources. Ses écarts de forme ne sont pas tous traités (`BACKLOG.md`).
+- Le PDF de la présentation est fait de captures : son texte ne se sélectionne pas. Ses chiffres se mettent à jour à la main.
+- La page d'aide n'a pas encore été essayée par un·e rédacteur·ice, et ses captures sont à refaire si un écran change.
+- Sites refusant la lecture automatique (France Nature Environnement, Générations Futures, Légifrance) : ZAN 2023 et plastiques dangereux restent écartés faute d'avoir pu lire ces pages.
+
 ## [1.6.0] — 2026-11-01
 
 Cycle Recherche : on peut désormais chercher un texte, et plus seulement un·e élu·e. Aucune qualification,
