@@ -41,8 +41,9 @@ du lot 1 sont validés par Max** et dans le `data/editorial.json` de la branche.
    `data/export/` reconstruit et commité, seuil de `lvnd check` à 98 % pour la XVe. Copie versée dans la release
    `donnees-figees` (7,6 Mo), relais contrôlé à froid.
 3. [ ] Passe quotidienne : mesuré en local, `lvnd build` à froid 32 s, `build.sh` 73 s (53 s sur `main`), site de 882 Mo et
-   8 022 fichiers (611 Mo et 6 326), pic de mémoire de 13,9 Go (10,1 Go sur `main`). Marge large sur les 60 min. Garde-fous
-   relus, compatibles. Reste à confirmer sur la première passe réelle et le premier build Cloudflare, à cause de la mémoire.
+   8 022 fichiers (611 Mo et 6 326). Le premier build Cloudflare a été tué par manque de mémoire (13,9 Go) : resvg retenait
+   environ 5 Mo par carte. Le rendu passe dans un fil recyclé (`cartes.ts`) : pic à 2,6 Go, images identiques. Reste à
+   confirmer sur la première passe réelle : sans XVe en cache, environ 20 min d'attente sur le dump avant la release.
 4. [x] Site : vues par législature, XVe affichée dès qu'un de ses textes est qualifié ; périmètre et limites sur la
    page Méthodologie. À revoir avec de vraies qualifications, fiche député·e comprise.
 5. [x] Contrôle croisé des positions XVe avec datan.fr (leurs-votes.fr ne couvre pas 2017-2022) : aucun écart réel.

@@ -3,8 +3,9 @@
 // ici, rendu en PNG par resvg au prérendu, avec les polices du site en TTF statique
 // (scripts/polices/ : resvg ne lit ni le WOFF2 ni les axes variables).
 
+import { createRequire } from 'node:module';
 import { resolve } from 'node:path';
-import { Resvg } from '@resvg/resvg-js';
+import { MessageChannel, receiveMessageOnPort, Worker } from 'node:worker_threads';
 import { circonscription, depute, legislature, pluriel, pourcent } from '$lib/format';
 import { URL_SITE } from '$lib/site';
 import { vueDepute, vueGroupe } from './vues';
@@ -208,13 +209,69 @@ export function carteGroupe(slug: string): Carte {
 export const reponsePng = (svg: string) =>
   new Response(Buffer.from(png(svg)), { headers: { 'content-type': 'image/png' } });
 
+// resvg garde en mémoire native ce que le ramasse-miettes de Node ne voit pas : environ 5 Mo par
+// carte, jusqu'à la fin du processus, assez pour faire tuer le build de Cloudflare. Le rendu se
+// fait donc dans un fil dédié, remplacé toutes les RENDUS_PAR_FIL cartes, ce qui rend cette mémoire.
+const RENDUS_PAR_FIL = 100;
+const DELAI_RENDU = 60_000;
+const CODE_FIL = `
+  const { workerData } = require('node:worker_threads');
+  const { Resvg } = require(workerData.resvg);
+  workerData.port.on('message', ({ svg, options }) => {
+    let reponse;
+    try {
+      reponse = { png: new Resvg(svg, options).render().asPng() };
+    } catch (e) {
+      reponse = { erreur: String(e) };
+    }
+    workerData.port.postMessage(reponse);
+    Atomics.store(workerData.signal, 0, 1);
+    Atomics.notify(workerData.signal, 0);
+  });
+`;
+
+type PortFil = InstanceType<typeof MessageChannel>['port1'];
+let fil: { worker: Worker; port: PortFil; signal: Int32Array; rendus: number } | null = null;
+
+function filDeRendu() {
+  if (fil && fil.rendus >= RENDUS_PAR_FIL) {
+    void fil.worker.terminate();
+    fil = null;
+  }
+  if (!fil) {
+    const { port1, port2 } = new MessageChannel();
+    const signal = new Int32Array(new SharedArrayBuffer(4));
+    const resvg = createRequire(resolve(process.cwd(), 'package.json')).resolve('@resvg/resvg-js');
+    const worker = new Worker(CODE_FIL, {
+      eval: true,
+      workerData: { port: port2, signal, resvg },
+      transferList: [port2]
+    });
+    worker.unref();
+    port1.unref();
+    fil = { worker, port: port1, signal, rendus: 0 };
+  }
+  fil.rendus++;
+  return fil;
+}
+
 export function png(svg: string): Uint8Array {
-  return new Resvg(svg, {
+  const { worker, port, signal } = filDeRendu();
+  const options = {
     font: { fontFiles: POLICES, loadSystemFonts: false, defaultFontFamily: 'Archivo' },
     fitTo: { mode: 'original' }
-  })
-    .render()
-    .asPng();
+  };
+  Atomics.store(signal, 0, 0);
+  port.postMessage({ svg, options });
+  if (Atomics.wait(signal, 0, 0, DELAI_RENDU) === 'timed-out') {
+    void worker.terminate();
+    fil = null;
+    throw new Error('rendu de la carte : pas de réponse de resvg');
+  }
+  const reponse = receiveMessageOnPort(port)?.message as
+    { png: Uint8Array; erreur?: undefined } | { erreur: string; png?: undefined };
+  if (!reponse?.png) throw new Error(`rendu de la carte : ${reponse?.erreur ?? 'réponse vide'}`);
+  return reponse.png;
 }
 
 /**
