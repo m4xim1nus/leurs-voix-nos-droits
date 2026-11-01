@@ -43,6 +43,7 @@
     {#if data.groupes[leg].length}
       <h3>{legislature(leg)} législature</h3>
       <Regle
+        comptes
         lignes={lignes(leg)}
         legende={leg === [17, 16, 15].find((l) => data.groupes[l as 17 | 16 | 15].length)}
       />

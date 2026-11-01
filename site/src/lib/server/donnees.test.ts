@@ -68,6 +68,19 @@ describe('données du site', () => {
     expect(vueDepute(ancien.slug).prochains).toEqual([]);
   });
 
+  it('compare un député à son groupe sur la législature de ce groupe (règle 19)', () => {
+    const dep = d.deputes.find((x) => {
+      const v = vueDepute(x.slug);
+      return v.actuel && v.comparaison?.plusieurs;
+    })!;
+    const v = vueDepute(dep.slug);
+    expect(v.comparaison!.legislature).toBe(v.lignee!.legislature);
+    expect(v.comparaison!.depute).toEqual(
+      d.scoresDeputesLegislatures.get(dep.id)!.get(String(v.lignee!.legislature))
+    );
+    expect(v.comparaison!.groupe).toEqual(d.scoresGroupes.get(v.lignee!.id)!.get('global'));
+  });
+
   it('donne des slugs de députés uniques', () => {
     const slugs = d.deputes.map((x) => x.slug);
     expect(new Set(slugs).size).toBe(slugs.length);

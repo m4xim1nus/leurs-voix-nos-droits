@@ -45,6 +45,11 @@
       : null
   );
 
+  // Règle 19 : à partir de deux législatures, la règle dit sur laquelle se fait la comparaison.
+  const suffixe = $derived(
+    data.comparaison?.plusieurs ? `, ${legislature(data.comparaison.legislature)}` : ''
+  );
+
   const seancesDe = (p: (typeof data.prochains)[number]) =>
     p.seances.length ? p.seances : p.date_inscrite ? [p.date_inscrite] : [];
   const mailtoProchain = (p: (typeof data.prochains)[number]) => {
@@ -164,19 +169,19 @@
     lignes={[
       {
         cle: 'depute',
-        libelle: d.nom,
-        score: data.global.score,
+        libelle: `${d.nom}${suffixe}`,
+        score: data.comparaison?.depute.score ?? data.global.score,
         avant: true,
         couleur: data.groupe?.couleur
       },
-      ...(data.lignee && data.scoreGroupe
+      ...(data.lignee && data.comparaison
         ? [
             {
               cle: 'groupe',
-              libelle: `Groupe ${data.lignee.sigle}`,
+              libelle: `Groupe ${data.lignee.sigle}${suffixe}`,
               href: `/groupes/${data.lignee.slug}`,
               couleur: data.lignee.couleur,
-              score: data.scoreGroupe.score
+              score: data.comparaison.groupe.score
             }
           ]
         : [])

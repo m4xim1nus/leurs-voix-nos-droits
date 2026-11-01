@@ -28,6 +28,7 @@
           <tr>
             <th scope="col">Groupe</th>
             <th scope="col" class="nombre">Ensemble</th>
+            <th scope="col" class="nombre">Textes</th>
             {#each data.droits as d (d.code)}<th scope="col" class="nombre"
                 ><a href="/droits/{d.code}">{d.court}</a></th
               >{/each}
@@ -47,6 +48,7 @@
               <td class="nombre fort" style:background={fond(g.global?.score ?? null)}
                 >{pourcent(g.global?.score ?? null)}</td
               >
+              <td class="nombre">{g.global?.n_textes ?? ''}</td>
               {#each data.droits as d (d.code)}
                 {@const s = g.droits[d.code]}
                 <td

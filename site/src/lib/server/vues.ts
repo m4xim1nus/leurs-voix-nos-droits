@@ -234,6 +234,18 @@ function prochains(d: Donnees, dep: Depute) {
 /** Inscrit à l'AN : l'agenda de l'AN le porte, ou la chambre attendue est l'AN. */
 const estInscritAN = (t: TexteEnCours) => t.seances.length > 0 || t.chambre === 'AN';
 
+/** Le député et son groupe, sur la seule législature de ce groupe. Null si l'un n'y a pas de score. */
+function comparaison(d: Donnees, dep: Depute, lignee: Lignee | null) {
+  if (!lignee) return null;
+  const parLegislature = d.scoresDeputesLegislatures.get(dep.id);
+  const depute = parLegislature?.get(String(lignee.legislature));
+  const groupe = d.scoresGroupes.get(lignee.id)?.get('global');
+  if (depute?.score == null || groupe?.score == null) return null;
+  const plusieurs =
+    [...(parLegislature?.values() ?? [])].filter((s) => s.score !== null).length > 1;
+  return { legislature: lignee.legislature, plusieurs, depute, groupe };
+}
+
 export function vueDepute(slug: string) {
   const d = donnees();
   const dep = d.deputes.find((x) => x.slug === slug);
@@ -296,8 +308,8 @@ export function vueDepute(slug: string) {
     participation: d.participation.get(dep.id) ?? null,
     textes,
     unanimes,
-    // Pour situer le député : son groupe actuel sur la même règle.
-    scoreGroupe: lignee ? (d.scoresGroupes.get(lignee.id)?.get('global') ?? null) : null
+    // Pour situer le député (règle 19) : son score et celui de son groupe sur la législature de ce groupe.
+    comparaison: comparaison(d, dep, lignee)
   };
 }
 
