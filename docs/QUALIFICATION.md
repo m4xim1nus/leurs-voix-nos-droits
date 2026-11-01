@@ -82,6 +82,7 @@ changent pas, ni la validation par Max.
    | `vote_posterieur` | le nouveau vote devient le décisif (règle 9) : relire le sens sur le texte voté (règle 6) |
    | `unanimite_contestee` | revoir l'écart (règle 9) : qualifier, ou garder l'écart avec un motif à jour |
    | `premier_decisif` | qualifier, ou écarter avec son motif |
+   | `vote_sans_decisif` | la lecture est close sans décisif proposé (rejet d'une partie, vote sans scrutin public) : lire le dossier, puis qualifier ou écarter avec son motif |
    | `inscrit` | rien à qualifier : le vote n'a pas eu lieu. On repère les sources utiles et on revient après le vote |
 
    Le mot est « inscrit », jamais « sera voté ». Aucun scrutin n'est retenu

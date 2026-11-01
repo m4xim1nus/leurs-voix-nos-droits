@@ -107,9 +107,11 @@ def termes_interdits(texte: str, chemin: Path = TERMES_INTERDITS) -> list[str]:
 def rattachement_amendements(con, leg: int) -> tuple[int, int, int]:
     """Scrutins sur amendement, ceux rattachés, et ceux des `DELAI_AMENDEMENTS` derniers jours pas encore
     rattachés. L'archive des amendements peut dater de plus d'une semaine (passe quotidienne), et ces
-    derniers ne comptent pas dans le taux ; si elle reste bloquée plus longtemps, le contrôle échoue."""
+    derniers ne comptent pas dans le taux ; si elle reste bloquée plus longtemps, le contrôle échoue.
+    Une législature close est figée : aucun délai, tous ses scrutins comptent."""
     objets = "objet in ('amendement', 'suppression_article_unique')"
-    limite = _un(con, f"select date(max(date), '-{DELAI_AMENDEMENTS} days') from scrutins where legislature = ?", leg)
+    delai = DELAI_AMENDEMENTS if leg == max(an.LEGISLATURES) else 0
+    limite = _un(con, f"select date(max(date), '-{delai} days') from scrutins where legislature = ?", leg)
     n, ok = _q(con, f"select count(*), count(amendement_id) from scrutins where legislature = ? and date <= ? and {objets}",
                leg, limite)[0]
     recents = _un(con, f"select count(*) from scrutins where legislature = ? and date > ? and amendement_id is null and {objets}",
@@ -154,7 +156,9 @@ def _alertes(con) -> list[dict]:
     return alertes.calculer(lignes("select id, titre, decisif_propose from textes"),
                             lignes("select id, dossier_id, date, numero, objet, sort, pour, contre from scrutins"),
                             lignes("select dossier_id, date, instance from en_cours_agenda"), editorial.charger(),
-                            lignes("select id, dossier_id, date, numero, objet, pour, contre from senat_scrutins"))
+                            lignes("select id, dossier_id, date, numero, objet, pour, contre from senat_scrutins"),
+                            lignes("select l.texte_id, l.etape, l.chambre, l.date, l.issue, l.mode_adoption, l.scrutin_id, "
+                                   "e.motif_ecart from en_cours_lectures l join en_cours e on e.id = l.texte_id"))
 
 
 def _senat(con, controle, out) -> None:

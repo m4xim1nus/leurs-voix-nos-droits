@@ -1,4 +1,4 @@
-"""Alertes : quatre avertissements, jamais un échec de `lvnd check`."""
+"""Alertes : des avertissements, jamais un échec de `lvnd check`."""
 
 import polars as pl
 import pytest
@@ -95,6 +95,43 @@ def test_inscrit():
     assert types(r) == [("premier_decisif", "D", "S1")]
 
 
+def lecture(dossier="D", etape="AN1", chambre="AN", date="2026-10-23", issue="rejete", mode="SCRUTIN_ORDINAIRE",
+            scrutin=None, motif=None):
+    return {"texte_id": dossier, "etape": etape, "chambre": chambre, "date": date, "issue": issue, "mode_adoption": mode,
+            "scrutin_id": scrutin, "motif_ecart": motif}
+
+
+def test_vote_sans_decisif():
+    # Rejet d'une partie (PLFSS 2027, V9097) : un scrutin, mais pas de décisif proposé.
+    partie = [scrutin("V9097", objet="partie", pour=1, contre=115, sort="rejete", date="2026-10-23")]
+    r = alertes.calculer([texte()], partie, [], qualif(), lectures=[lecture(scrutin="V9097")])
+    assert types(r) == [("vote_sans_decisif", "D", "V9097")]
+    assert r[0]["id"] == "vote_sans_decisif:D:AN1" and "partie" in r[0]["detail"] and "1-115" in r[0]["detail"]
+    # Vote sur l'ensemble sans scrutin public : la dernière lecture de l'AN, une seule alerte.
+    mains = [lecture(issue="adopte", mode="MAIN_LEVEE", date="2026-10-05"),
+             lecture(etape="AN2", issue="adopte", mode="MAIN_LEVEE", date="2026-10-29")]
+    r = alertes.calculer([texte()], [], [], qualif(), lectures=mains)
+    assert types(r) == [("vote_sans_decisif", "D", None)] and r[0]["id"].endswith(":AN2")
+    assert "MAIN_LEVEE" in r[0]["detail"]
+    # Une fiche de suivi ne répond pas au vote.
+    suivi = {**qualif(), "suivis": [{"dossier_an": "D"}]}
+    assert types(alertes.calculer([texte()], [], [], suivi, lectures=mains))[0][0] == "vote_sans_decisif"
+
+
+def test_vote_sans_decisif_hors_champ():
+    l = lecture(issue="adopte", mode="MAIN_LEVEE")
+    calc = lambda t, q, ls: alertes.calculer([t], [], [], q, lectures=ls)
+    assert calc(texte(), qualif([qualifie("D")]), [l]) == []  # qualifié
+    assert calc(texte(), qualif(ecartes=[{"dossier_an": "D", "motif": "m"}]), [l]) == []  # écarté
+    assert calc(texte(), qualif(), [lecture(motif="inactif", issue="adopte")]) == []  # à l'arrêt
+    assert calc(texte(), qualif(), [lecture(chambre="SN")]) == []  # Sénat
+    assert calc(texte(), qualif(), [lecture(issue=None)]) == []  # lecture ouverte
+    assert calc(texte("AUTRE"), qualif(), [l]) == []  # hors catalogue
+    # Un décisif proposé : c'est `premier_decisif` qui parle.
+    r = alertes.calculer([texte(decisif="S1")], [scrutin("S1")], [], qualif(), lectures=[l])
+    assert types(r) == [("premier_decisif", "D", "S1")]
+
+
 def test_scrutins_recents_hors_du_taux_de_rattachement():
     import sqlite3
     con = sqlite3.connect(":memory:")
@@ -107,6 +144,10 @@ def test_scrutins_recents_hors_du_taux_de_rattachement():
     # L'archive bloquée depuis plus de 14 jours : ces scrutins comptent de nouveau, et le taux baisse.
     con.execute("insert into scrutins values (17, '2026-12-01', 'ensemble', null)")
     assert check.rattachement_amendements(con, 17) == (4, 2, 0)
+    # Législature close : ni délai ni scrutin « récent ».
+    con.execute("update scrutins set legislature = 16")
+    con.execute("delete from scrutins where date = '2026-12-01'")
+    assert check.rattachement_amendements(con, 16) == (4, 2, 0)
 
 
 def test_identifiants_uniques():
@@ -132,7 +173,7 @@ def test_les_alertes_ne_font_pas_echouer_check(base, monkeypatch):
     """Tout simuler comme non traité : le résultat de `check` ne change pas."""
     ok, lignes = check.verifier(base)
     vraies = alertes.calculer
-    monkeypatch.setattr(alertes, "calculer", lambda t, s, p, q, sn=(): vraies(t, s, p, {"textes": [], "ecartes": []}, sn))
+    monkeypatch.setattr(alertes, "calculer", lambda t, s, p, q, sn=(), l=(): vraies(t, s, p, {"textes": [], "ecartes": []}, sn, l))
     ok2, lignes2 = check.verifier(base)
     assert ok2 == ok
     assert sum(l.startswith("AVERTISSEMENT") for l in lignes2) > sum(l.startswith("AVERTISSEMENT") for l in lignes)

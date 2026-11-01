@@ -203,6 +203,7 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
            if amdts else pl.DataFrame())
     scr_df = _df(scr)
     votes_df = _df(votes)
+    motifs_ec = {t["id"]: t["motif_ecart"] for t in en_cours}
     dfs = {
         "textes": _df(cat),
         "scrutins": scr_df,
@@ -220,7 +221,9 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
         "en_cours_evenements": _df(evt_ec),
         "en_cours_etats": _df(etats),
         "en_cours_agenda": _df(points, agenda.COLONNES),
-        "en_cours_alertes": _df(alertes.calculer(cat, scr, points, qualif, dfs_senat["scrutins"].to_dicts()), alertes.COLONNES),
+        "en_cours_alertes": _df(alertes.calculer(cat, scr, points, qualif, dfs_senat["scrutins"].to_dicts(),
+                                                 [{**l, "motif_ecart": motifs_ec[l["texte_id"]]} for l in lect_ec]),
+                                alertes.COLONNES),
     }
 
     _log("== Écriture")

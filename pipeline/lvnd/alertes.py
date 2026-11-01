@@ -9,6 +9,9 @@ l'admin, qui retire ceux que D1 a déjà traités (admin/src/lib/alertes.ts).
   des voix des deux côtés ;
 - `premier_decisif` : décisif proposé sur un texte ni qualifié ni écarté (une fiche de suivi n'y change
   rien : le vote attendu a eu lieu, il reste à qualifier) ;
+- `vote_sans_decisif` : lecture de l'AN close sur un texte ni qualifié ni écarté, sans décisif proposé : rejet
+  d'une partie d'un texte financier, ou vote sur l'ensemble sans scrutin public. Hors textes à l'arrêt ou écartés
+  (`motif_ecart`), et hors Sénat, dont les lectures n'ont ni scrutin ni mode ;
 - `inscrit` : texte ni qualifié, ni écarté, ni suivi, inscrit à l'ordre du jour d'une séance. Inscrit ne
   veut pas dire voté ;
 - `senat_premier_vote` : vote du Sénat en scrutin public sur l'ensemble d'un texte ni écarté ni lu pour
@@ -33,19 +36,22 @@ def _cle(s: dict) -> tuple:
 
 
 def calculer(textes: list[dict], scrutins: list[dict], points: list[dict], qualif: dict,
-             scrutins_senat: list[dict] = ()) -> list[dict]:
+             scrutins_senat: list[dict] = (), lectures: list[dict] = ()) -> list[dict]:
     """`textes` : id, titre, decisif_propose. `scrutins` : id, dossier_id, date, numero, objet, sort, pour,
     contre. `points` : dossier_id, date, instance (`agenda.points`). `qualif` : `editorial.charger`.
-    `scrutins_senat` : id, dossier_id, date, numero, objet, pour, contre."""
+    `scrutins_senat` : id, dossier_id, date, numero, objet, pour, contre. `lectures` : texte_id, etape, chambre,
+    date, issue, mode_adoption, scrutin_id, motif_ecart (`en_cours_lectures` et `en_cours`)."""
     titre = {t["id"]: t["titre"] for t in textes}
     scr = {s["id"]: s for s in scrutins}
     qualifies = {t["dossier_an"]: t for t in qualif["textes"]}
     ecartes = {e["dossier_an"]: e for e in qualif.get("ecartes", [])}
     suivis = {s["dossier_an"] for s in qualif.get("suivis", [])}
+    sans_propose = {t["id"] for t in textes if not t["decisif_propose"]}
     out = []
 
-    def ajouter(type_: str, dossier: str, scrutin: str | None, date: str, detail: str) -> None:
-        out.append({"id": f"{type_}:{dossier}" + (f":{scrutin}" if scrutin else ""), "type": type_, "dossier_id": dossier,
+    def ajouter(type_: str, dossier: str, scrutin: str | None, date: str, detail: str, suffixe: str | None = None) -> None:
+        suffixe = suffixe or scrutin
+        out.append({"id": f"{type_}:{dossier}" + (f":{suffixe}" if suffixe else ""), "type": type_, "dossier_id": dossier,
                     "scrutin_id": scrutin, "date": date, "titre": titre.get(dossier), "detail": detail})
 
     finals: dict[str, list[dict]] = {}
@@ -71,6 +77,18 @@ def calculer(textes: list[dict], scrutins: list[dict], points: list[dict], quali
             ajouter("unanimite_contestee", d, s["id"], s["date"], f"écarté pour unanimité, décisif proposé : {_decompte(s)}")
         elif d not in qualifies and d not in ecartes:
             ajouter("premier_decisif", d, s["id"], s["date"], f"décisif proposé : {_decompte(s)}")
+
+    sans_decisif: dict[str, dict] = {}
+    for l in lectures:
+        d = l["texte_id"]
+        if (l["chambre"] == "AN" and l["issue"] and not l["motif_ecart"] and d not in qualifies and d not in ecartes
+                and d in sans_propose and (d not in sans_decisif or (l["date"], l["etape"]) > (sans_decisif[d]["date"], sans_decisif[d]["etape"]))):
+            sans_decisif[d] = l
+    for d, l in sans_decisif.items():
+        s = scr.get(l["scrutin_id"])
+        vote = f"{s['objet']}, {_decompte(s)}" if s else f"sans scrutin public ({l['mode_adoption']})"
+        ajouter("vote_sans_decisif", d, s["id"] if s else None, l["date"], f"{l['etape']} {l['issue']} le {l['date']}, {vote}",
+                suffixe=l["etape"])
 
     inscrits: dict[str, str] = {}
     for p in points:
