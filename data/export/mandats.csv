@@ -1,111 +1,240 @@
 id,acteur_id,legislature,departement,num_departement,num_circo,debut,fin,cause_mandat,cause_fin
 PM796623,PA1008,16,Gironde,33,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722704,PA1008,15,Gironde,33,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842621,PA1008,17,Gironde,33,4,2024-07-07,,élections générales,
+PM722418,PA1012,15,Ain,01,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722516,PA1029,15,Bouches-du-Rhône,13,9,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722532,PA1198,15,Calvados,14,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723354,PA1206,15,Essonne,91,8,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797637,PA1206,16,Essonne,91,8,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723052,PA1276,15,Puy-de-Dôme,63,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722762,PA1327,15,Indre,36,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796632,PA1327,16,Indre,36,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842747,PA1327,17,Indre,36,2,2024-07-07,2025-11-12,élections générales,Nomination comme membre du Gouvernement
+PM723396,PA1498,15,Paris,75,14,2017-06-18,2020-05-28,élections générales,Décès
 PM797631,PA1567,16,Essonne,91,6,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843572,PA1567,17,Essonne,91,6,2024-07-07,,élections générales,
 PM843260,PA1592,17,Pyrénées-Atlantiques,64,3,2024-07-07,,élections générales,
+PM723060,PA1592,15,Pyrénées-Atlantiques,64,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797160,PA1592,16,Pyrénées-Atlantiques,64,3,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM797487,PA1630,16,Val-de-Marne,94,8,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723232,PA1630,15,Val-de-Marne,94,8,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843638,PA1630,17,Val-de-Marne,94,8,2024-07-07,,élections générales,
 PM842510,PA1654,17,Corrèze,19,1,2024-07-07,,élections générales,
+PM723322,PA1695,15,Seine-et-Marne,77,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722556,PA1809,15,Charente,16,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723068,PA1838,15,Pyrénées-Atlantiques,64,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796383,PA1874,16,Côtes-d'Armor,22,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722598,PA1874,15,Côtes-d'Armor,22,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722810,PA1960,15,Loir-et-Cher,41,3,2017-06-18,2019-01-09,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723450,PA2086,15,Essonne,91,2,2017-06-18,2020-08-04,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM722506,PA2150,15,Bouches-du-Rhône,13,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722490,PA2155,15,Aube,10,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722458,PA223837,15,Alpes-Maritimes,06,8,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM874597,PA227089,17,Nord,59,21,2024-07-07,,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,
 PM843131,PA227089,17,Nord,59,21,2024-07-07,2024-10-21,élections générales,Nomination comme membre du Gouvernement
+PM723550,PA2377,15,Rhône,69,9,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723036,PA2449,15,Pas-de-Calais,62,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797046,PA2449,16,Pas-de-Calais,62,5,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722566,PA2492,15,Charente-Maritime,17,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723234,PA2529,15,Haut-Rhin,68,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723526,PA266774,15,Bas-Rhin,67,6,2017-06-18,2020-06-27,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723542,PA266776,15,Bas-Rhin,67,8,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796788,PA266788,16,Lozère,48,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722914,PA266788,15,Lozère,48,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796317,PA266793,16,Cantal,15,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722550,PA266793,15,Cantal,15,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842402,PA266793,17,Cantal,15,2,2024-07-07,,élections générales,
 PM796812,PA266797,16,Manche,50,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722884,PA266797,15,Manche,50,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843071,PA266797,17,Manche,50,1,2024-07-07,,élections générales,
+PM723264,PA266808,15,Savoie,73,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843347,PA266808,17,Savoie,73,2,2024-07-07,,élections générales,
 PM797313,PA266808,16,Savoie,73,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM796932,PA267042,16,Mayenne,53,3,2022-06-12,2024-06-09,élections générales,Fin de législature
+PM722910,PA267042,15,Mayenne,53,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843044,PA267042,17,Mayenne,53,3,2024-07-07,,élections générales,
+PM722974,PA267200,15,Nord,59,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843098,PA267200,17,Nord,59,5,2024-07-07,,élections générales,
+PM722794,PA267204,15,Jura,39,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723500,PA267233,15,Seine-Maritime,76,5,2017-06-18,2020-06-17,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723304,PA267241,15,Somme,80,5,2017-06-11,2020-09-30,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM722476,PA267260,15,Ardennes,08,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842900,PA267285,17,Haute-Loire,43,1,2024-07-07,,élections générales,
+PM722854,PA267289,15,Loiret,45,4,2017-06-18,2017-12-18,élections générales,Annulation de l'élection sur décision du Conseil constitutionnel
+PM754301,PA267289,15,Loiret,45,4,2018-03-25,2022-06-21,"élection partielle, suite à l'annulation de l'élection d'un député",Fin de législature
+PM723054,PA267306,15,Puy-de-Dôme,63,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843251,PA267306,17,Puy-de-Dôme,63,5,2024-07-07,2025-03-31,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
 PM797073,PA267306,16,Puy-de-Dôme,63,5,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723260,PA267318,15,Sarthe,72,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797307,PA267318,16,Sarthe,72,5,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843341,PA267318,17,Sarthe,72,5,2024-07-07,,élections générales,
 PM797538,PA267324,16,Vosges,88,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723292,PA267324,15,Vosges,88,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723392,PA267330,15,Territoire de Belfort,90,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722434,PA267336,15,Hautes-Alpes,05,2,2017-06-18,2020-08-26,élections générales,Nomination comme membre du Gouvernement
 PM796152,PA267336,16,Hautes-Alpes,05,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM791897,PA267336,15,Hautes-Alpes,05,2,2017-06-18,2022-06-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
+PM774491,PA267337,15,Hautes-Alpes,05,2,2017-06-18,2022-06-20,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM723524,PA267355,15,Bas-Rhin,67,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723344,PA267378,15,Var,83,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796722,PA267429,16,Loire,42,4,2022-06-19,2023-11-30,élections générales,Démission
+PM722818,PA267429,15,Loire,42,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722522,PA267440,15,Bouches-du-Rhône,13,12,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722586,PA267450,15,Côte-d'Or,21,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723274,PA267527,15,Haute-Savoie,74,3,2017-06-18,2021-07-31,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
 PM843521,PA267561,17,Tarn-et-Garonne,82,1,2024-07-07,2025-07-11,élections générales,Démission d'office sur décision du Conseil constitutionnel
+PM722978,PA267585,15,Nord,59,7,2017-06-18,2020-06-22,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723448,PA267622,15,Essonne,91,1,2017-06-18,2018-10-03,élections générales,Démission
+PM723306,PA267673,15,Tarn,81,1,2017-06-18,2020-09-30,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM722852,PA267735,15,Loiret,45,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843125,PA267763,17,Nord,59,15,2024-07-07,,élections générales,
 PM796980,PA267766,16,Nord,59,18,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722970,PA267766,15,Nord,59,18,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723504,PA267780,15,Seine-Maritime,76,7,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797388,PA267780,16,Seine-Maritime,76,7,2022-06-19,2022-08-04,élections générales,Nomination comme membre du Gouvernement
 PM843395,PA267780,17,Seine-Maritime,76,7,2024-07-07,,élections générales,
 PM834858,PA267780,16,Seine-Maritime,76,7,2022-06-19,2024-06-09,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
+PM723310,PA267785,15,Yonne,89,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796272,PA267794,16,Alpes-Maritimes,06,9,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842348,PA267794,17,Alpes-Maritimes,06,9,2024-07-07,,élections générales,
+PM722468,PA267794,15,Alpes-Maritimes,06,9,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723320,PA267801,15,Seine-et-Marne,77,3,2017-06-18,2018-07-15,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
 PM797841,PA267901,16,Mayotte,976,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723166,PA267901,15,Mayotte,976,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723092,PA268019,15,Seine-Saint-Denis,93,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722870,PA2792,15,Maine-et-Loire,49,3,2017-06-18,2020-07-31,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM722510,PA2796,15,Bouches-du-Rhône,13,6,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722540,PA2828,15,Calvados,14,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842531,PA2940,17,Doubs,25,2,2024-07-07,,élections générales,
+PM722480,PA2952,15,Ardennes,08,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796206,PA2952,16,Ardennes,08,3,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842414,PA2952,17,Ardennes,08,3,2024-07-07,,élections générales,
 PM843140,PA2960,17,Oise,60,4,2024-07-07,2026-03-01,élections générales,Prolongation de mission temporaire
 PM797001,PA2960,16,Oise,60,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723006,PA2960,15,Oise,60,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797403,PA309643,16,Vendée,85,4,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843545,PA309643,17,Vendée,85,4,2024-07-07,,élections générales,
+PM722416,PA330008,15,Ain,01,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796158,PA330008,16,Ain,01,1,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842366,PA330008,17,Ain,01,1,2024-07-07,,élections générales,
 PM796155,PA330240,16,Alpes-Maritimes,06,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722492,PA330240,15,Alpes-Maritimes,06,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842357,PA330240,17,Alpes-Maritimes,06,1,2024-07-07,,élections générales,
 PM796194,PA330357,16,Ardèche,07,2,2022-06-19,2022-07-22,élections générales,Nomination comme membre du Gouvernement
 PM834855,PA330357,16,Ardèche,07,2,2022-06-19,2024-06-09,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
+PM722472,PA330357,15,Ardèche,07,2,2017-06-18,2017-12-24,élections générales,Nomination comme membre du Gouvernement
+PM722528,PA330684,15,Bouches-du-Rhône,13,1,2017-06-18,2020-09-30,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM722570,PA330788,15,Bouches-du-Rhône,13,15,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722548,PA330909,15,Cantal,15,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796314,PA330909,16,Cantal,15,1,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842399,PA330909,17,Cantal,15,1,2024-07-07,,élections générales,
+PM722626,PA331481,15,Eure,27,1,2017-06-18,2017-07-21,élections générales,Nomination comme membre du Gouvernement
+PM722644,PA331567,15,Eure-et-Loir,28,3,2017-06-18,2021-01-21,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
 PM834864,PA331582,16,Eure-et-Loir,28,4,2022-06-19,2024-06-09,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
+PM722646,PA331582,15,Eure-et-Loir,28,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796455,PA331582,16,Eure-et-Loir,28,4,2022-06-19,2023-08-20,élections générales,Nomination comme membre du Gouvernement
 PM842639,PA331582,17,Eure-et-Loir,28,4,2024-07-07,,élections générales,
+PM722688,PA331835,15,Haute-Garonne,31,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796518,PA331835,16,Haute-Garonne,31,6,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842624,PA331973,17,Gironde,33,5,2024-07-07,,élections générales,
 PM796704,PA332228,16,Ille-et-Vilaine,35,6,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722754,PA332228,15,Ille-et-Vilaine,35,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842816,PA332228,17,Ille-et-Vilaine,35,6,2024-07-07,,élections générales,
 PM796683,PA332523,16,Jura,39,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842858,PA332523,17,Jura,39,2,2024-07-07,2025-02-13,élections générales,Annulation de l'élection sur décision du Conseil constitutionnel
 PM868378,PA332523,17,Jura,39,2,2025-04-06,,"élection partielle, suite à l'annulation de l'élection d'un député",
+PM722792,PA332523,15,Jura,39,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722812,PA332614,15,Loire,42,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722798,PA332747,15,Loire-Atlantique,44,1,2017-06-18,2018-10-05,élections générales,Nomination comme membre du Gouvernement
+PM766920,PA332747,15,Loire-Atlantique,44,1,2017-06-18,2022-06-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
 PM796926,PA333285,16,Mayenne,53,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722906,PA333285,15,Mayenne,53,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843038,PA333285,17,Mayenne,53,1,2024-07-07,,élections générales,
 PM796881,PA333421,16,Meuse,55,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722920,PA333421,15,Meuse,55,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722990,PA333818,15,Nord,59,13,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723030,PA334116,15,Pas-de-Calais,62,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797037,PA334116,16,Pas-de-Calais,62,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723034,PA334149,15,Pas-de-Calais,62,4,2017-06-18,2020-08-04,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723566,PA334654,15,Haut-Rhin,68,1,2017-06-18,2020-07-28,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723548,PA334768,15,Rhône,69,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723534,PA334843,15,Rhône,69,8,2017-06-18,2020-06-17,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723254,PA335054,15,Sarthe,72,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797298,PA335054,16,Sarthe,72,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843332,PA335054,17,Sarthe,72,2,2024-07-07,,élections générales,
+PM723416,PA335532,15,Paris,75,15,2017-06-18,2020-11-20,élections générales,Démission
+PM723506,PA335612,15,Seine-Maritime,76,8,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797391,PA335612,16,Seine-Maritime,76,8,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843398,PA335612,17,Seine-Maritime,76,8,2024-07-07,,élections générales,
 PM797469,PA335758,16,Seine-et-Marne,77,5,2022-06-19,2022-07-22,élections générales,Nomination comme membre du Gouvernement
 PM843437,PA335758,17,Seine-et-Marne,77,5,2024-07-07,2026-04-16,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723338,PA335758,15,Seine-et-Marne,77,5,2017-06-18,2018-11-16,élections générales,Nomination comme membre du Gouvernement
+PM723480,PA335999,15,Deux-Sèvres,79,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843494,PA335999,17,Deux-Sèvres,79,2,2024-07-07,,élections générales,
 PM797655,PA335999,16,Deux-Sèvres,79,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723328,PA336175,15,Tarn-et-Garonne,82,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723406,PA336316,15,Vaucluse,84,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723488,PA336439,15,Vienne,86,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723140,PA337483,15,Martinique,972,3,2017-06-18,2021-07-01,élections générales,Démission
+PM723178,PA337633,15,Saint-Pierre-et-Miquelon,975,1,2017-06-18,2017-07-21,élections générales,Nomination comme membre du Gouvernement
+PM791895,PA337633,15,Saint-Pierre-et-Miquelon,975,1,2017-06-18,2022-06-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
 PM796275,PA340343,16,Ardèche,07,1,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842351,PA340343,17,Ardèche,07,1,2024-07-07,,élections générales,
+PM722470,PA340343,15,Ardèche,07,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM747435,PA340357,15,Ardèche,07,2,2017-06-18,2022-06-21,remplacement d'un député nommé au Gouvernement,Fin de législature
 PM796335,PA340643,16,Bouches-du-Rhône,13,6,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722534,PA340853,15,Calvados,14,3,2017-06-18,2020-07-27,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
 PM842822,PA341981,17,Gironde,33,6,2024-07-07,,élections générales,
 PM796695,PA342196,16,Ille-et-Vilaine,35,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM770372,PA342196,15,Ille-et-Vilaine,35,3,2017-06-18,2022-06-21,remplacement d'un député décédé,Fin de législature
 PM842807,PA342196,17,Ille-et-Vilaine,35,3,2024-07-07,,élections générales,
 PM796707,PA342240,16,Ille-et-Vilaine,35,7,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842819,PA342240,17,Ille-et-Vilaine,35,7,2024-07-07,,élections générales,
+PM774296,PA342240,15,Ille-et-Vilaine,35,7,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM796656,PA342384,16,Isère,38,3,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842771,PA342384,17,Isère,38,3,2024-07-07,,élections générales,
 PM796659,PA342415,16,Isère,38,4,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842774,PA342415,17,Isère,38,4,2024-07-07,,élections générales,
+PM722826,PA342415,15,Isère,38,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM761932,PA342601,15,Loir-et-Cher,41,3,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM722856,PA342935,15,Loiret,45,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722938,PA343493,15,Morbihan,56,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM818321,PA344201,16,Pas-de-Calais,62,8,2023-01-29,2024-06-09,"élection partielle, remplacement d'un député déchu de son mandat",Fin de législature
 PM797085,PA344201,16,Pas-de-Calais,62,8,2022-06-19,2022-12-02,élections générales,Annulation de l'élection sur décision du Conseil constitutionnel
+PM723428,PA345722,15,Hauts-de-Seine,92,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797718,PA345722,16,Hauts-de-Seine,92,6,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843650,PA345722,17,Hauts-de-Seine,92,6,2024-07-07,,élections générales,
 PM797679,PA346054,16,Somme,80,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723510,PA346054,15,Somme,80,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723348,PA346218,15,Var,83,3,2017-06-18,2020-08-02,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
 PM797691,PA346782,16,Hauts-de-Seine,92,3,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM840426,PA346782,17,Hauts-de-Seine,92,3,2024-06-30,,élections générales,
+PM723496,PA346876,15,Hauts-de-Seine,92,9,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM873126,PA368,17,Paris,75,2,2025-09-28,,"élection partielle, remplacement d'un député démissionnaire d'office",
+PM723118,PA405480,15,Val-d'Oise,95,8,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843662,PA408578,17,Hauts-de-Seine,92,12,2024-07-07,2026-03-26,élections générales,Nomination comme membre du Gouvernement
 PM797544,PA421348,16,Yonne,89,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723312,PA421348,15,Yonne,89,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723104,PA429893,15,Val-de-Marne,94,9,2017-06-18,2020-06-23,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723152,PA441,15,Réunion,974,2,2017-06-18,2020-07-07,élections générales,Démission
+PM722736,PA508,15,Gers,32,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723424,PA563,15,Vaucluse,84,4,2017-06-18,2017-08-21,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
 PM843512,PA569,17,Tarn,81,1,2024-07-07,,élections générales,
 PM840450,PA588884,17,Seine-Saint-Denis,93,11,2024-06-30,,élections générales,
 PM797373,PA588884,16,Seine-Saint-Denis,93,11,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723226,PA588884,15,Seine-Saint-Denis,93,11,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723258,PA588886,15,Sarthe,72,4,2017-06-18,2018-07-11,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM774354,PA604,15,Essonne,91,2,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM796170,PA605036,16,Ain,01,5,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722444,PA605036,15,Ain,01,5,2017-06-18,2022-06-20,élections générales,Nomination comme membre du Gouvernement
+PM722424,PA605069,15,Aisne,02,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796179,PA605069,16,Aisne,02,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722428,PA605084,15,Aisne,02,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM774339,PA605131,15,Alpes-de-Haute-Provence,04,2,2017-06-18,2022-06-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
+PM722430,PA605131,15,Alpes-de-Haute-Provence,04,2,2017-06-18,2017-07-21,élections générales,Nomination comme membre du Gouvernement
+PM722518,PA605518,15,Bouches-du-Rhône,13,10,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722558,PA605694,15,Charente-Maritime,17,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796401,PA605694,16,Charente-Maritime,17,1,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842609,PA605694,17,Charente-Maritime,17,1,2024-07-07,2026-04-26,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
 PM796419,PA605745,16,Cher,18,2,2022-06-19,2024-06-09,élections générales,Fin de législature
@@ -113,476 +242,1031 @@ PM842504,PA605745,17,Cher,18,2,2024-07-07,,élections générales,
 PM796350,PA605782,16,Corse-du-Sud,2A,1,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM874605,PA605782,17,Corse-du-Sud,2A,1,2024-07-07,,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,
 PM842666,PA605782,17,Corse-du-Sud,2A,1,2024-07-07,2025-01-23,élections générales,Nomination comme membre du Gouvernement
+PM722584,PA605963,15,Doubs,25,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796494,PA605963,16,Doubs,25,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722660,PA605991,15,Doubs,25,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796428,PA605991,16,Doubs,25,5,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842540,PA605991,17,Doubs,25,5,2024-07-07,2024-10-21,élections générales,Nomination comme membre du Gouvernement
 PM842633,PA606098,17,Eure-et-Loir,28,2,2024-07-07,2025-07-07,élections générales,Décès
+PM722642,PA606098,15,Eure-et-Loir,28,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796449,PA606098,16,Eure-et-Loir,28,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722632,PA606171,15,Finistère,29,6,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722698,PA606202,15,Gard,30,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722662,PA606212,15,Gard,30,2,2017-06-18,2020-01-31,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
 PM842834,PA606507,17,Gironde,33,10,2024-07-07,2026-07-19,élections générales,Prolongation de mission temporaire
 PM796605,PA606507,16,Gironde,33,10,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722720,PA606507,15,Gironde,33,10,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842729,PA606545,17,Hérault,34,1,2024-07-07,,élections générales,
 PM842732,PA606573,17,Hérault,34,3,2024-07-07,,élections générales,
 PM796602,PA606639,16,Hérault,34,9,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722776,PA606639,15,Hérault,34,9,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722742,PA606675,15,Ille-et-Vilaine,35,3,2017-06-18,2020-02-11,élections générales,Décès
+PM722756,PA606712,15,Ille-et-Vilaine,35,7,2017-06-18,2020-07-31,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
 PM842759,PA606793,17,Indre-et-Loire,37,4,2024-07-07,,élections générales,
+PM722796,PA607090,15,Haute-Loire,43,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842903,PA607090,17,Haute-Loire,43,2,2024-07-07,,élections générales,
 PM796761,PA607090,16,Haute-Loire,43,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722832,PA607155,15,Loire-Atlantique,44,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796839,PA607193,16,Loire-Atlantique,44,10,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722846,PA607193,15,Loire-Atlantique,44,10,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842930,PA607193,17,Loire-Atlantique,44,10,2024-07-07,,élections générales,
 PM796818,PA607395,16,Manche,50,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722888,PA607395,15,Manche,50,3,2017-06-18,2017-07-21,élections générales,Nomination comme membre du Gouvernement
+PM760313,PA607395,15,Manche,50,3,2017-06-18,2022-06-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
 PM843077,PA607395,17,Manche,50,3,2024-07-07,,élections générales,
+PM722956,PA607553,15,Meurthe-et-Moselle,54,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796875,PA607553,16,Meurthe-et-Moselle,54,5,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843059,PA607553,17,Meurthe-et-Moselle,54,5,2024-07-07,,élections générales,
+PM722924,PA607595,15,Morbihan,56,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722936,PA607619,15,Morbihan,56,4,2017-06-11,2022-06-21,élections générales,Fin de législature
 PM796890,PA607619,16,Morbihan,56,4,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843002,PA607619,17,Morbihan,56,4,2024-07-07,,élections générales,
 PM843113,PA607846,17,Nord,59,10,2024-07-07,2025-01-23,élections générales,Nomination comme membre du Gouvernement
 PM796956,PA607846,16,Nord,59,10,2022-06-19,2022-07-22,élections générales,Nomination comme membre du Gouvernement
+PM723022,PA608011,15,Orne,61,1,2017-06-18,2020-08-02,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723024,PA608016,15,Orne,61,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797100,PA608016,16,Orne,61,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843155,PA608016,17,Orne,61,2,2024-07-07,2025-01-23,élections générales,Nomination comme membre du Gouvernement
 PM874599,PA608016,17,Orne,61,2,2024-07-07,2026-04-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM783473,PA608083,15,Pas-de-Calais,62,6,2021-06-06,2021-07-06,élection partielle,Nomination comme membre du Gouvernement
+PM723038,PA608083,15,Pas-de-Calais,62,6,2017-06-18,2020-08-06,élections générales,Nomination comme membre du Gouvernement
 PM797064,PA608172,16,Puy-de-Dôme,63,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843083,PA608172,17,Puy-de-Dôme,63,2,2024-07-07,,élections générales,
+PM723048,PA608172,15,Puy-de-Dôme,63,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843179,PA608264,17,Pyrénées-Atlantiques,64,5,2024-07-07,,élections générales,
+PM723076,PA608292,15,Hautes-Pyrénées,65,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797133,PA608416,16,Bas-Rhin,67,7,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723540,PA608416,15,Bas-Rhin,67,7,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM858346,PA608416,17,Bas-Rhin,67,7,2024-07-07,,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,
 PM843197,PA608416,17,Bas-Rhin,67,7,2024-07-07,2024-10-21,élections générales,Nomination comme membre du Gouvernement
+PM723248,PA608641,15,Rhône,69,14,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723564,PA608695,15,Saône-et-Loire,71,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797220,PA608695,16,Saône-et-Loire,71,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM757984,PA608741,15,Sarthe,72,4,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM723276,PA608826,15,Haute-Savoie,74,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843365,PA608826,17,Haute-Savoie,74,4,2024-07-07,,élections générales,
 PM797256,PA608826,16,Haute-Savoie,74,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723318,PA609245,15,Seine-et-Marne,77,2,2017-06-18,2020-06-22,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723378,PA609332,15,Seine-et-Marne,77,11,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797532,PA609332,16,Seine-et-Marne,77,11,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM840396,PA609332,17,Seine-et-Marne,77,11,2024-06-30,,élections générales,
 PM797676,PA609520,16,Somme,80,2,2022-06-19,2023-09-24,élections générales,Prolongation de mission temporaire
+PM723508,PA609520,15,Somme,80,2,2017-06-18,2020-08-06,élections générales,Nomination comme membre du Gouvernement
+PM791893,PA609520,15,Somme,80,2,2017-06-18,2022-06-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
 PM797742,PA609590,16,Tarn-et-Garonne,82,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723326,PA609590,15,Tarn-et-Garonne,82,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723426,PA609726,15,Vaucluse,84,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797286,PA610002,16,Paris,75,8,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM840363,PA610002,17,Paris,75,8,2024-06-30,,élections générales,
+PM723138,PA610634,15,Martinique,972,2,2017-06-18,2018-04-23,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723142,PA610654,15,Martinique,972,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797724,PA610654,16,Martinique,972,4,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843719,PA610654,17,Martinique,972,4,2024-07-07,,élections générales,
+PM723146,PA610667,15,Guyane,973,1,2017-06-18,2021-08-01,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723150,PA610681,15,Réunion,974,1,2017-06-18,2020-07-13,élections générales,Démission
+PM723162,PA610733,15,Réunion,974,7,2017-06-18,2018-07-06,élections générales,Démission d'office sur décision du Conseil constitutionnel
+PM723170,PA610775,15,Nouvelle-Calédonie,988,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM840381,PA610968,17,Paris,75,5,2024-06-30,,élections générales,
 PM796389,PA642695,16,Côtes-d'Armor,22,5,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722602,PA642695,15,Côtes-d'Armor,22,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842594,PA642695,17,Côtes-d'Armor,22,5,2024-07-07,,élections générales,
+PM722658,PA642724,15,Doubs,25,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM849129,PA642725,17,Doubs,25,5,2024-07-07,,remplacement d'un député nommé au Gouvernement,
 PM885153,PA642734,17,Eure-et-Loir,28,3,2024-07-07,,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",
 PM796524,PA642764,16,Haute-Garonne,31,8,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722692,PA642764,15,Haute-Garonne,31,8,2017-06-18,2017-12-18,élections générales,Annulation de l'élection sur décision du Conseil constitutionnel
+PM753836,PA642764,15,Haute-Garonne,31,8,2018-03-18,2022-06-21,"élection partielle, suite à l'annulation de l'élection d'un député",Fin de législature
 PM842711,PA642764,17,Haute-Garonne,31,8,2024-07-07,,élections générales,
+PM722746,PA642788,15,Isère,38,1,2017-06-18,2020-03-16,élections générales,Nomination comme membre du Gouvernement
 PM834840,PA642788,16,Isère,38,1,2022-06-19,2024-06-09,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
 PM796650,PA642788,16,Isère,38,1,2022-06-19,2022-07-22,élections générales,Nomination comme membre du Gouvernement
 PM796872,PA642847,16,Meurthe-et-Moselle,54,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722954,PA642847,15,Meurthe-et-Moselle,54,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843056,PA642847,17,Meurthe-et-Moselle,54,4,2024-07-07,,élections générales,
 PM796968,PA642868,16,Nord,59,14,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722992,PA642868,15,Nord,59,14,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM858305,PA642868,17,Nord,59,14,2024-07-07,2026-04-06,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
 PM843122,PA642868,17,Nord,59,14,2024-07-07,2024-10-21,élections générales,Nomination comme membre du Gouvernement
+PM723238,PA642935,15,Haut-Rhin,68,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843218,PA642935,17,Haut-Rhin,68,5,2024-07-07,,élections générales,
 PM797154,PA642935,16,Haut-Rhin,68,5,2022-06-19,2022-08-04,élections générales,Nomination comme membre du Gouvernement
 PM834852,PA642935,16,Haut-Rhin,68,5,2022-06-19,2024-06-09,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
 PM797862,PA642988,16,Vaucluse,84,3,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM840414,PA642988,17,Vaucluse,84,3,2024-06-30,,élections générales,
+PM775869,PA643004,15,Somme,80,5,2017-06-11,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM826708,PA643048,16,Hauts-de-Seine,92,8,2022-06-19,2024-06-09,remplacement d'un député nommé au Gouvernement,Fin de législature
 PM797439,PA643089,16,Seine-et-Marne,77,3,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843431,PA643089,17,Seine-et-Marne,77,3,2024-07-07,2024-10-27,élections générales,Nomination comme membre du Gouvernement
 PM858443,PA643089,17,Seine-et-Marne,77,3,2024-07-07,,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,
+PM758076,PA643089,15,Seine-et-Marne,77,3,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM722614,PA643103,15,Corse-du-Sud,2A,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM872431,PA643104,17,Eure-et-Loir,28,2,2024-07-07,,remplacement d'un député décédé,
+PM722636,PA643127,15,Eure,27,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796758,PA643134,16,Haute-Loire,43,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722824,PA643134,15,Haute-Loire,43,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797646,PA643143,16,Guadeloupe,971,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843761,PA643143,17,Guadeloupe,971,2,2024-07-07,,élections générales,
+PM723130,PA643145,15,Guadeloupe,971,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797763,PA643157,16,Réunion,974,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM773734,PA643157,15,Réunion,974,1,2020-07-14,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM843728,PA643157,17,Réunion,974,1,2024-07-07,,élections générales,
 PM796794,PA643175,16,Maine-et-Loire,49,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842840,PA643175,17,Maine-et-Loire,49,2,2024-07-07,,élections générales,
+PM722868,PA643175,15,Maine-et-Loire,49,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797142,PA643184,16,Haut-Rhin,68,1,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843206,PA643184,17,Haut-Rhin,68,1,2024-07-07,,élections générales,
+PM774263,PA643184,15,Haut-Rhin,68,1,2017-06-18,2020-07-29,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Nomination comme membre du Gouvernement
 PM797097,PA643192,16,Orne,61,1,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843152,PA643192,17,Orne,61,1,2024-07-07,,élections générales,
+PM774330,PA643192,15,Orne,61,1,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM723358,PA643205,15,Paris,75,10,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723230,PA672,15,Val-de-Marne,94,7,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796233,PA677483,16,Aveyron,12,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722466,PA677483,15,Aveyron,12,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842435,PA677483,17,Aveyron,12,1,2024-07-07,2026-04-26,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
 PM843686,PA687214,17,Val-de-Marne,94,1,2024-07-07,,élections générales,
+PM723090,PA689,15,Seine-Saint-Denis,93,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723180,PA693008,15,Wallis-et-Futuna,986,1,2017-06-11,2018-02-02,élections générales,Annulation de l'élection sur décision du Conseil constitutionnel
 PM823124,PA695100,16,Français établis hors de France,099,8,2023-04-16,2024-06-09,élection partielle,Fin de législature
 PM797739,PA695100,16,Français établis hors de France,099,8,2022-06-19,2023-02-03,élections générales,Annulation de l'élection sur décision du Conseil constitutionnel
+PM723198,PA695100,15,Français établis hors de France,099,8,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842963,PA695512,17,Lot-et-Garonne,47,3,2024-07-07,2026-04-20,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723172,PA702052,15,Polynésie Française,987,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM733713,PA702054,15,Saint-Pierre-et-Miquelon,975,1,2017-06-18,2022-06-20,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM722526,PA709315,15,Aveyron,12,3,2017-06-18,2021-07-31,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM722984,PA712014,15,Nord,59,10,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM802637,PA712014,16,Nord,59,10,2022-06-19,2024-06-09,remplacement d'un député nommé au Gouvernement,Fin de législature
 PM858454,PA712014,17,Nord,59,10,2024-07-07,,remplacement d'un député nommé au Gouvernement,
+PM722448,PA712015,15,Aisne,02,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796176,PA712015,16,Aisne,02,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842381,PA712015,17,Aisne,02,2,2024-07-07,,élections générales,
+PM722452,PA713448,15,Alpes-Maritimes,06,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723374,PA717151,15,Paris,75,11,2017-06-18,2021-01-13,élections générales,Décès
 PM796311,PA717161,16,Calvados,14,6,2022-06-19,2022-07-22,élections générales,Nomination comme membre du Gouvernement
 PM842396,PA717161,17,Calvados,14,6,2024-07-07,2025-01-23,élections générales,Nomination comme membre du Gouvernement
 PM874997,PA717161,17,Calvados,14,6,2024-07-07,,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,
 PM834836,PA717161,16,Calvados,14,6,2022-06-19,2024-06-09,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
+PM764782,PA717167,15,Paris,75,16,2017-06-18,2022-06-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
+PM723432,PA717167,15,Paris,75,16,2017-06-18,2017-07-21,élections générales,Nomination comme membre du Gouvernement
 PM797265,PA717379,16,Paris,75,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723282,PA717379,15,Paris,75,1,2017-06-11,2022-06-21,élections générales,Fin de législature
 PM843374,PA717379,17,Paris,75,1,2024-07-07,,élections générales,
+PM722420,PA718674,15,Ain,01,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796164,PA718674,16,Ain,01,3,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842372,PA718674,17,Ain,01,3,2024-07-07,2024-10-21,élections générales,Nomination comme membre du Gouvernement
 PM858386,PA718674,17,Ain,01,3,2024-07-07,,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,
+PM722422,PA718682,15,Ain,01,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722426,PA718694,15,Aisne,02,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM733715,PA718706,15,Alpes-de-Haute-Provence,04,2,2017-06-18,2020-08-03,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
 PM796149,PA718710,16,Hautes-Alpes,05,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722432,PA718710,15,Hautes-Alpes,05,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722436,PA718720,15,Allier,03,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722438,PA718728,15,Allier,03,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722440,PA718736,15,Allier,03,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722442,PA718744,15,Alpes-de-Haute-Provence,04,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM791881,PA718752,15,Ain,01,5,2017-06-18,2022-06-21,remplacement d'un député nommé au Gouvernement,Fin de législature
+PM722446,PA718756,15,Aisne,02,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722450,PA718768,15,Alpes-Maritimes,06,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722454,PA718780,15,Alpes-Maritimes,06,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796266,PA718784,16,Alpes-Maritimes,06,7,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842342,PA718784,17,Alpes-Maritimes,06,7,2024-07-07,,élections générales,
+PM722456,PA718784,15,Alpes-Maritimes,06,7,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722460,PA718794,15,Aude,11,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722462,PA718802,15,Aude,11,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722464,PA718810,15,Aude,11,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM881203,PA718820,17,Aveyron,12,1,2024-07-07,,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",
+PM722474,PA718838,15,Ardèche,07,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842405,PA718838,17,Ardèche,07,3,2024-07-07,,élections générales,
 PM796197,PA718838,16,Ardèche,07,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722478,PA718850,15,Ardennes,08,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796203,PA718850,16,Ardennes,08,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842411,PA718850,17,Ardennes,08,2,2024-07-07,,élections générales,
+PM722482,PA718860,15,Ariège,09,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796209,PA718860,16,Ariège,09,1,2022-06-19,2023-01-27,élections générales,Annulation de l'élection sur décision du Conseil constitutionnel
+PM722484,PA718868,15,Ariège,09,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722486,PA718876,15,Aube,10,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796218,PA718884,16,Aube,10,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722488,PA718884,15,Aube,10,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842420,PA718884,17,Aube,10,2,2024-07-07,2026-09-30,élections générales,Élection au Sénat
+PM722494,PA718894,15,Alpes-Maritimes,06,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722496,PA718902,15,Alpes-Maritimes,06,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722498,PA718910,15,Bouches-du-Rhône,13,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796245,PA718910,16,Bouches-du-Rhône,13,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722500,PA718918,15,Bouches-du-Rhône,13,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796326,PA718926,16,Bouches-du-Rhône,13,13,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722502,PA718926,15,Bouches-du-Rhône,13,13,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796287,PA718930,16,Bouches-du-Rhône,13,14,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722504,PA718930,15,Bouches-du-Rhône,13,14,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722508,PA718944,15,Bouches-du-Rhône,13,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722512,PA718954,15,Bouches-du-Rhône,13,7,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722514,PA718962,15,Bouches-du-Rhône,13,8,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796278,PA718962,16,Bouches-du-Rhône,13,8,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722520,PA718978,15,Bouches-du-Rhône,13,11,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796320,PA718978,16,Bouches-du-Rhône,13,11,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722524,PA718990,15,Aveyron,12,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM785216,PA718998,15,Aveyron,12,3,2017-06-18,2021-09-14,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral","Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM775857,PA719002,15,Bouches-du-Rhône,13,1,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM796296,PA719006,16,Calvados,14,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722530,PA719006,15,Calvados,14,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM774184,PA719020,15,Calvados,14,3,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM796305,PA719024,16,Calvados,14,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722536,PA719024,15,Calvados,14,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842390,PA719024,17,Calvados,14,4,2024-07-07,,élections générales,
+PM722538,PA719032,15,Calvados,14,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796308,PA719032,16,Calvados,14,5,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842393,PA719032,17,Calvados,14,5,2024-07-07,,élections générales,
+PM722542,PA719044,15,Cher,18,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722544,PA719052,15,Cher,18,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796341,PA719052,16,Cher,18,3,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842507,PA719052,17,Cher,18,3,2024-07-07,2026-09-30,élections générales,Élection au Sénat
+PM722546,PA719060,15,Corrèze,19,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722552,PA719072,15,Charente,16,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796392,PA719072,16,Charente,16,1,2022-06-19,2022-12-02,élections générales,Annulation de l'élection sur décision du Conseil constitutionnel
 PM796395,PA719080,16,Charente,16,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722554,PA719080,15,Charente,16,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842603,PA719080,17,Charente,16,2,2024-07-07,,élections générales,
+PM722560,PA719092,15,Charente-Maritime,17,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796407,PA719100,16,Charente-Maritime,17,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722562,PA719100,15,Charente-Maritime,17,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796410,PA719108,16,Charente-Maritime,17,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722564,PA719108,15,Charente-Maritime,17,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796416,PA719118,16,Cher,18,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722568,PA719118,15,Cher,18,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842501,PA719118,17,Cher,18,1,2024-07-07,,élections générales,
+PM722572,PA719130,15,Bouches-du-Rhône,13,16,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796356,PA719138,16,Haute-Corse,2B,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722574,PA719138,15,Haute-Corse,2B,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842672,PA719138,17,Haute-Corse,2B,1,2024-07-07,,élections générales,
 PM796359,PA719146,16,Haute-Corse,2B,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722576,PA719146,15,Haute-Corse,2B,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722578,PA719154,15,Côte-d'Or,21,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796362,PA719154,16,Côte-d'Or,21,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722580,PA719162,15,Dordogne,24,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722582,PA719170,15,Doubs,25,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722588,PA719186,15,Côte-d'Or,21,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796368,PA719186,16,Côte-d'Or,21,3,2022-06-19,2023-08-20,élections générales,Nomination comme membre du Gouvernement
 PM826700,PA719190,16,Côte-d'Or,21,3,2022-06-19,2024-06-09,remplacement d'un député nommé au Gouvernement,Fin de législature
+PM722590,PA719194,15,Côte-d'Or,21,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722592,PA719202,15,Côte-d'Or,21,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796374,PA719202,16,Côte-d'Or,21,5,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722594,PA719210,15,Côtes-d'Armor,22,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722596,PA719218,15,Côtes-d'Armor,22,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842585,PA719218,17,Côtes-d'Armor,22,2,2024-07-07,2026-08-04,élections générales,Prolongation de mission temporaire
 PM796380,PA719218,16,Côtes-d'Armor,22,2,2022-06-19,2022-08-04,élections générales,Nomination comme membre du Gouvernement
+PM722600,PA719230,15,Côtes-d'Armor,22,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722604,PA719242,15,Creuse,23,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722606,PA719250,15,Dordogne,24,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722608,PA719258,15,Dordogne,24,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796485,PA719266,16,Dordogne,24,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722610,PA719266,15,Dordogne,24,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796347,PA719272,16,Corrèze,19,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722612,PA719272,15,Corrèze,19,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842513,PA719272,17,Corrèze,19,2,2024-07-07,,élections générales,
 PM858574,PA719282,17,Corse-du-Sud,2A,1,2024-07-07,2025-11-05,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM722616,PA719286,15,Corse-du-Sud,2A,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796353,PA719286,16,Corse-du-Sud,2A,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842669,PA719286,17,Corse-du-Sud,2A,2,2024-07-07,,élections générales,
+PM722618,PA719294,15,Drôme,26,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796431,PA719294,16,Drôme,26,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722620,PA719302,15,Drôme,26,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722622,PA719310,15,Drôme,26,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722624,PA719318,15,Drôme,26,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796470,PA719318,16,Drôme,26,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM733709,PA719326,15,Eure,27,1,2017-06-18,2022-06-21,remplacement d'un député nommé au Gouvernement,Fin de législature
+PM722628,PA719330,15,Eure,27,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722630,PA719338,15,Finistère,29,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796545,PA719338,16,Finistère,29,5,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842654,PA719338,17,Finistère,29,5,2024-07-07,,élections générales,
+PM722634,PA719350,15,Eure,27,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722638,PA719364,15,Eure,27,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796446,PA719372,16,Eure-et-Loir,28,1,2022-06-19,2024-03-08,élections générales,Nomination comme membre du Gouvernement
 PM842630,PA719372,17,Eure-et-Loir,28,1,2024-07-07,2024-10-21,élections générales,Nomination comme membre du Gouvernement
+PM722640,PA719372,15,Eure-et-Loir,28,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM858347,PA719372,17,Eure-et-Loir,28,1,2024-07-07,,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,
 PM835641,PA719376,16,Eure-et-Loir,28,1,2022-06-19,2024-06-09,remplacement d'un député nommé au Gouvernement,Fin de législature
 PM796452,PA719382,16,Eure-et-Loir,28,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM779854,PA719382,15,Eure-et-Loir,28,3,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM796458,PA719388,16,Finistère,29,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722648,PA719388,15,Finistère,29,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842642,PA719388,17,Finistère,29,1,2024-07-07,,élections générales,
+PM722650,PA719396,15,Finistère,29,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796461,PA719396,16,Finistère,29,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722652,PA719404,15,Finistère,29,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796539,PA719404,16,Finistère,29,3,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842648,PA719404,17,Finistère,29,3,2024-07-07,,élections générales,
 PM796542,PA719412,16,Finistère,29,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722654,PA719412,15,Finistère,29,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842651,PA719412,17,Finistère,29,4,2024-07-07,,élections générales,
+PM722656,PA719420,15,Doubs,25,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796560,PA719436,16,Gard,30,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM840279,PA719436,17,Gard,30,2,2024-06-30,,élections générales,
+PM770316,PA719436,15,Gard,30,2,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM722664,PA719440,15,Gard,30,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722666,PA719448,15,Gard,30,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722668,PA719456,15,Haute-Garonne,31,9,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722670,PA719464,15,Haute-Garonne,31,10,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796533,PA719472,16,Gers,32,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722672,PA719472,15,Gers,32,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842720,PA719472,17,Gers,32,1,2024-07-07,,élections générales,
+PM722674,PA719480,15,Gard,30,5,2017-06-18,2021-06-26,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM784001,PA719484,15,Gard,30,5,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM796500,PA719488,16,Gard,30,6,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722676,PA719488,15,Gard,30,6,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722678,PA719496,15,Haute-Garonne,31,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722680,PA719504,15,Haute-Garonne,31,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796509,PA719512,16,Haute-Garonne,31,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722682,PA719512,15,Haute-Garonne,31,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842699,PA719512,17,Haute-Garonne,31,3,2024-07-07,,élections générales,
+PM722684,PA719520,15,Haute-Garonne,31,4,2017-06-18,2022-02-28,élections générales,Démission
+PM722686,PA719528,15,Haute-Garonne,31,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796515,PA719528,16,Haute-Garonne,31,5,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842702,PA719528,17,Haute-Garonne,31,5,2024-07-07,,élections générales,
+PM722690,PA719540,15,Haute-Garonne,31,7,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722694,PA719550,15,Finistère,29,7,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796551,PA719550,16,Finistère,29,7,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842660,PA719550,17,Finistère,29,7,2024-07-07,,élections générales,
+PM722696,PA719558,15,Finistère,29,8,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796554,PA719558,16,Finistère,29,8,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842663,PA719558,17,Finistère,29,8,2024-07-07,,élections générales,
+PM722700,PA719570,15,Gironde,33,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796620,PA719578,16,Gironde,33,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722702,PA719578,15,Gironde,33,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842618,PA719578,17,Gironde,33,3,2024-07-07,,élections générales,
+PM722706,PA719592,15,Gironde,33,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796629,PA719600,16,Gironde,33,6,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722708,PA719600,15,Gironde,33,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796593,PA719608,16,Hérault,34,6,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722710,PA719608,15,Hérault,34,6,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722712,PA719616,15,Hérault,34,7,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722714,PA719624,15,Gironde,33,7,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM834838,PA719624,16,Gironde,33,7,2022-06-19,2024-06-09,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
 PM796569,PA719624,16,Gironde,33,7,2022-06-19,2022-08-04,élections générales,Nomination comme membre du Gouvernement
 PM796572,PA719632,16,Gironde,33,8,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722716,PA719632,15,Gironde,33,8,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842828,PA719632,17,Gironde,33,8,2024-07-07,,élections générales,
 PM796575,PA719640,16,Gironde,33,9,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722718,PA719640,15,Gironde,33,9,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842831,PA719640,17,Gironde,33,9,2024-07-07,,élections générales,
+PM722722,PA719652,15,Gironde,33,11,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722724,PA719660,15,Gironde,33,12,2017-06-18,2018-11-16,élections générales,Nomination comme membre du Gouvernement
+PM774341,PA719660,15,Gironde,33,12,2017-06-18,2022-06-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
 PM796611,PA719664,16,Gironde,33,12,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM760309,PA719664,15,Gironde,33,12,2017-06-18,2020-08-03,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM722726,PA719668,15,Hérault,34,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796578,PA719668,16,Hérault,34,1,2022-06-19,2022-08-04,élections générales,Nomination comme membre du Gouvernement
 PM803288,PA719672,16,Hérault,34,1,2022-06-19,2024-06-09,remplacement d'un député nommé au Gouvernement,Fin de législature
+PM722728,PA719676,15,Hérault,34,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722730,PA719684,15,Hérault,34,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722732,PA719692,15,Hérault,34,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722734,PA719700,15,Hérault,34,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722738,PA719710,15,Gironde,33,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722740,PA719718,15,Ille-et-Vilaine,35,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796692,PA719718,16,Ille-et-Vilaine,35,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722744,PA719728,15,Ille-et-Vilaine,35,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM771033,PA719736,15,Isère,38,1,2017-06-18,2022-06-21,remplacement d'un député nommé au Gouvernement,Fin de législature
 PM857026,PA719736,17,Isère,38,1,2025-01-19,2026-03-26,"élection partielle, remplacement d'un député démissionnaire",Nomination comme membre du Gouvernement
+PM722748,PA719740,15,Isère,38,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722750,PA719748,15,Isère,38,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722752,PA719756,15,Ille-et-Vilaine,35,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796701,PA719756,16,Ille-et-Vilaine,35,5,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842813,PA719756,17,Ille-et-Vilaine,35,5,2024-07-07,,élections générales,
+PM722758,PA719770,15,Ille-et-Vilaine,35,8,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722760,PA719778,15,Indre,36,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796713,PA719778,16,Indre,36,1,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842744,PA719778,17,Indre,36,1,2024-07-07,,élections générales,
+PM722764,PA719790,15,Indre-et-Loire,37,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722766,PA719798,15,Indre-et-Loire,37,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796638,PA719798,16,Indre-et-Loire,37,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842753,PA719798,17,Indre-et-Loire,37,2,2024-07-07,,élections générales,
+PM722768,PA719806,15,Indre-et-Loire,37,3,2017-06-18,2021-03-05,élections générales,Démission
+PM722770,PA719814,15,Indre-et-Loire,37,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796644,PA719814,16,Indre-et-Loire,37,4,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM796647,PA719822,16,Indre-et-Loire,37,5,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842762,PA719822,17,Indre-et-Loire,37,5,2024-07-07,,élections générales,
+PM722772,PA719822,15,Indre-et-Loire,37,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722774,PA719830,15,Hérault,34,8,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722778,PA719842,15,Ille-et-Vilaine,35,1,2017-06-18,2021-09-07,élections générales,Démission
+PM722780,PA719850,15,Isère,38,6,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722782,PA719858,15,Isère,38,7,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796671,PA719866,16,Isère,38,8,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722784,PA719866,15,Isère,38,8,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796674,PA719874,16,Isère,38,9,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722786,PA719874,15,Isère,38,9,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796677,PA719882,16,Isère,38,10,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722788,PA719882,15,Isère,38,10,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796680,PA719890,16,Jura,39,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722790,PA719890,15,Jura,39,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842855,PA719890,17,Jura,39,1,2024-07-07,,élections générales,
 PM796728,PA719910,16,Loire-Atlantique,44,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM759347,PA719910,15,Loire-Atlantique,44,1,2017-06-18,2019-08-16,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
 PM796764,PA719914,16,Landes,40,1,2022-06-19,2022-08-04,élections générales,Nomination comme membre du Gouvernement
 PM826860,PA719914,16,Landes,40,1,2022-06-19,2024-06-09,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
 PM842864,PA719914,17,Landes,40,1,2024-07-07,2024-10-21,élections générales,Nomination comme membre du Gouvernement
+PM722800,PA719914,15,Landes,40,1,2017-06-18,2017-07-21,élections générales,Nomination comme membre du Gouvernement
+PM791917,PA719914,15,Landes,40,1,2017-06-18,2022-06-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
 PM858294,PA719914,17,Landes,40,1,2024-07-07,,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,
 PM849155,PA719918,17,Landes,40,1,2024-07-07,2025-01-23,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM733721,PA719918,15,Landes,40,1,2017-06-18,2022-06-20,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
 PM803282,PA719918,16,Landes,40,1,2022-06-19,2023-08-20,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM722802,PA719922,15,Landes,40,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796767,PA719922,16,Landes,40,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842867,PA719922,17,Landes,40,2,2024-07-07,,élections générales,
 PM796770,PA719930,16,Landes,40,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722804,PA719930,15,Landes,40,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842870,PA719930,17,Landes,40,3,2024-07-07,,élections générales,
 PM842873,PA719938,17,Loir-et-Cher,41,1,2024-07-07,,élections générales,
+PM722806,PA719938,15,Loir-et-Cher,41,1,2017-06-18,2018-11-16,élections générales,Nomination comme membre du Gouvernement
 PM796773,PA719938,16,Loir-et-Cher,41,1,2022-06-19,2022-07-22,élections générales,Nomination comme membre du Gouvernement
+PM760307,PA719942,15,Loir-et-Cher,41,1,2017-06-18,2021-07-27,remplacement d'un député nommé au Gouvernement,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM722808,PA719946,15,Loir-et-Cher,41,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722814,PA719952,15,Loire,42,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722816,PA719960,15,Loire,42,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842891,PA719968,17,Loire,42,4,2024-07-07,,élections générales,
 PM832556,PA719968,16,Loire,42,4,2023-12-01,2024-06-09,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM722820,PA719972,15,Loire,42,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722822,PA719980,15,Loire,42,6,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722828,PA719994,15,Isère,38,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM791903,PA720002,15,Loire-Atlantique,44,5,2017-06-18,2022-06-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
 PM802848,PA720002,16,Loire-Atlantique,44,5,2022-06-19,2022-08-04,élections générales,Nomination comme membre du Gouvernement
+PM722830,PA720002,15,Loire-Atlantique,44,5,2017-06-18,2020-08-26,élections générales,Nomination comme membre du Gouvernement
+PM774487,PA720006,15,Loire-Atlantique,44,5,2017-06-18,2022-06-20,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
 PM803286,PA720006,16,Loire-Atlantique,44,5,2022-06-19,2024-06-09,remplacement d'un député nommé au Gouvernement,Fin de législature
+PM722834,PA720014,15,Lot,46,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796863,PA720014,16,Lot,46,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM796866,PA720022,16,Lot-et-Garonne,47,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722836,PA720022,15,Lot-et-Garonne,47,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842957,PA720022,17,Lot-et-Garonne,47,1,2024-07-07,,élections générales,
+PM722838,PA720030,15,Lot-et-Garonne,47,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796746,PA720038,16,Loire-Atlantique,44,7,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722840,PA720038,15,Loire-Atlantique,44,7,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842921,PA720038,17,Loire-Atlantique,44,7,2024-07-07,,élections générales,
+PM722842,PA720046,15,Loire-Atlantique,44,8,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722844,PA720054,15,Loire-Atlantique,44,9,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796752,PA720054,16,Loire-Atlantique,44,9,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722848,PA720066,15,Loiret,45,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796842,PA720066,16,Loiret,45,1,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842933,PA720066,17,Loiret,45,1,2024-07-07,2025-11-12,élections générales,Nomination comme membre du Gouvernement
 PM878039,PA720066,17,Loiret,45,1,2026-01-25,2026-02-26,élection partielle,Nomination comme membre du Gouvernement
+PM722850,PA720074,15,Loiret,45,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796845,PA720074,16,Loiret,45,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722858,PA720092,15,Loiret,45,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796857,PA720092,16,Loiret,45,6,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842948,PA720092,17,Loiret,45,6,2024-07-07,,élections générales,
+PM722860,PA720100,15,Lot,46,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796860,PA720100,16,Lot,46,1,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842951,PA720100,17,Lot,46,1,2024-07-07,,élections générales,
+PM722862,PA720108,15,Loire-Atlantique,44,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722864,PA720116,15,Loire-Atlantique,44,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722866,PA720124,15,Loire-Atlantique,44,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM774376,PA720134,15,Maine-et-Loire,49,3,2017-06-18,2020-08-01,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Démission
 PM796800,PA720138,16,Maine-et-Loire,49,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722872,PA720138,15,Maine-et-Loire,49,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842846,PA720138,17,Maine-et-Loire,49,4,2024-07-07,,élections générales,
+PM722874,PA720146,15,Maine-et-Loire,49,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796803,PA720146,16,Maine-et-Loire,49,5,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842849,PA720146,17,Maine-et-Loire,49,5,2024-07-07,,élections générales,
 PM796806,PA720154,16,Maine-et-Loire,49,6,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722876,PA720154,15,Maine-et-Loire,49,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842852,PA720154,17,Maine-et-Loire,49,6,2024-07-07,,élections générales,
+PM722878,PA720162,15,Maine-et-Loire,49,7,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796809,PA720162,16,Maine-et-Loire,49,7,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843068,PA720162,17,Maine-et-Loire,49,7,2024-07-07,2026-04-26,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM722880,PA720170,15,Meurthe-et-Moselle,54,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796935,PA720170,16,Meurthe-et-Moselle,54,1,2022-06-19,2022-08-04,élections générales,Nomination comme membre du Gouvernement
 PM834861,PA720170,16,Meurthe-et-Moselle,54,1,2022-06-19,2024-06-09,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
 PM803278,PA720174,16,Meurthe-et-Moselle,54,1,2022-06-19,2024-02-11,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM722882,PA720178,15,Meurthe-et-Moselle,54,2,2017-06-18,2022-01-29,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM789432,PA720182,15,Meurthe-et-Moselle,54,2,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM722886,PA720190,15,Manche,50,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796815,PA720190,16,Manche,50,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843074,PA720190,17,Manche,50,2,2024-07-07,,élections générales,
+PM733711,PA720198,15,Manche,50,3,2017-06-18,2018-11-16,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM722890,PA720202,15,Manche,50,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722892,PA720210,15,Marne,51,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722894,PA720214,15,Marne,51,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796830,PA720222,16,Marne,51,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722896,PA720222,15,Marne,51,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796833,PA720230,16,Marne,51,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722898,PA720230,15,Marne,51,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842984,PA720230,17,Marne,51,4,2024-07-07,,élections générales,
+PM791901,PA720242,15,Haute-Marne,52,1,2017-06-18,2022-06-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
+PM722902,PA720242,15,Haute-Marne,52,1,2017-06-18,2020-08-26,élections générales,Nomination comme membre du Gouvernement
+PM774483,PA720246,15,Haute-Marne,52,1,2017-06-18,2022-06-20,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM722908,PA720256,15,Mayenne,53,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796929,PA720256,16,Mayenne,53,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843041,PA720256,17,Mayenne,53,2,2024-07-07,,élections générales,
+PM722912,PA720268,15,Lot-et-Garonne,47,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722916,PA720278,15,Maine-et-Loire,49,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796878,PA720286,16,Meurthe-et-Moselle,54,6,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722918,PA720286,15,Meurthe-et-Moselle,54,6,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722922,PA720298,15,Meuse,55,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722926,PA720310,15,Moselle,57,6,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722928,PA720318,15,Moselle,57,7,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722930,PA720326,15,Moselle,57,8,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796884,PA720334,16,Morbihan,56,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722932,PA720334,15,Morbihan,56,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842996,PA720334,17,Morbihan,56,2,2024-07-07,,élections générales,
 PM796887,PA720342,16,Morbihan,56,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722934,PA720342,15,Morbihan,56,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM842999,PA720342,17,Morbihan,56,3,2024-07-07,,élections générales,
+PM722940,PA720354,15,Morbihan,56,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796896,PA720354,16,Morbihan,56,6,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843008,PA720354,17,Morbihan,56,6,2024-07-07,,élections générales,
 PM796899,PA720362,16,Moselle,57,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722942,PA720362,15,Moselle,57,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843011,PA720362,17,Moselle,57,1,2024-07-07,,élections générales,
 PM796902,PA720370,16,Moselle,57,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722944,PA720370,15,Moselle,57,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843014,PA720370,17,Moselle,57,2,2024-07-07,,élections générales,
+PM722946,PA720378,15,Moselle,57,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796908,PA720386,16,Moselle,57,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722948,PA720386,15,Moselle,57,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843020,PA720386,17,Moselle,57,4,2024-07-07,2026-04-20,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
 PM881119,PA720390,17,Moselle,57,4,2024-07-07,,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",
+PM722950,PA720394,15,Moselle,57,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722952,PA720402,15,Meurthe-et-Moselle,54,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797019,PA720414,16,Nièvre,58,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722958,PA720414,15,Nièvre,58,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722960,PA720422,15,Nord,59,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797022,PA720422,16,Nord,59,1,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM797025,PA720430,16,Nord,59,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722962,PA720430,15,Nord,59,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843092,PA720430,17,Nord,59,2,2024-07-07,,élections générales,
+PM722964,PA720438,15,Nord,59,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797031,PA720446,16,Nord,59,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722966,PA720446,15,Nord,59,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843095,PA720446,17,Nord,59,4,2024-07-07,,élections générales,
+PM722968,PA720454,15,Nord,59,17,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722972,PA720468,15,Nord,59,19,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796983,PA720468,16,Nord,59,19,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM840333,PA720468,17,Nord,59,19,2024-06-30,,élections générales,
+PM722976,PA720480,15,Nord,59,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796944,PA720480,16,Nord,59,6,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM879691,PA720480,17,Nord,59,6,2024-07-07,,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,
 PM843101,PA720480,17,Nord,59,6,2024-07-07,2024-10-27,élections générales,Nomination comme membre du Gouvernement
+PM772842,PA720488,15,Nord,59,7,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM722980,PA720492,15,Nord,59,8,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722982,PA720500,15,Nord,59,9,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM791905,PA720512,15,Nord,59,11,2017-06-18,2022-06-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
+PM722986,PA720512,15,Nord,59,11,2017-06-18,2020-01-17,élections générales,Nomination comme membre du Gouvernement
+PM769311,PA720516,15,Nord,59,11,2017-06-18,2022-06-20,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM722988,PA720520,15,Nord,59,12,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722994,PA720538,15,Nord,59,15,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722996,PA720546,15,Nord,59,16,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797013,PA720552,16,Moselle,57,9,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM722998,PA720552,15,Moselle,57,9,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843029,PA720552,17,Moselle,57,9,2024-07-07,,élections générales,
 PM843032,PA720560,17,Nièvre,58,1,2024-07-07,,élections générales,
 PM797016,PA720560,16,Nièvre,58,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723000,PA720560,15,Nièvre,58,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723002,PA720568,15,Oise,60,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723004,PA720576,15,Oise,60,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797088,PA720586,16,Oise,60,5,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723008,PA720586,15,Oise,60,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723010,PA720590,15,Pas-de-Calais,62,8,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723012,PA720598,15,Pas-de-Calais,62,9,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723014,PA720606,15,Pas-de-Calais,62,10,2017-06-18,2021-04-21,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM782592,PA720610,15,Pas-de-Calais,62,10,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM840315,PA720614,17,Pas-de-Calais,62,11,2024-06-30,,élections générales,
 PM797055,PA720614,16,Pas-de-Calais,62,11,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723016,PA720614,15,Pas-de-Calais,62,11,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723018,PA720622,15,Oise,60,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797094,PA720630,16,Oise,60,7,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723020,PA720630,15,Oise,60,7,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723026,PA720644,15,Orne,61,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797103,PA720644,16,Orne,61,3,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843158,PA720644,17,Orne,61,3,2024-07-07,2026-04-14,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723028,PA720652,15,Pas-de-Calais,62,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723032,PA720664,15,Pas-de-Calais,62,3,2017-06-18,2022-01-07,élections générales,Décès
 PM797106,PA720668,16,Pas-de-Calais,62,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM788735,PA720668,15,Pas-de-Calais,62,3,2017-06-18,2022-06-21,remplacement d'un député décédé,Fin de législature
 PM840342,PA720668,17,Pas-de-Calais,62,1,2024-06-30,,élections générales,
+PM774356,PA720672,15,Pas-de-Calais,62,4,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM774373,PA720680,15,Pas-de-Calais,62,6,2017-06-18,2020-09-27,remplacement d'un député nommé au Gouvernement,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723040,PA720684,15,Pas-de-Calais,62,7,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797082,PA720684,16,Pas-de-Calais,62,7,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM796986,PA720692,16,Nord,59,20,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723042,PA720692,15,Nord,59,20,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723044,PA720696,15,Nord,59,21,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796989,PA720696,16,Nord,59,21,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723050,PA720704,15,Puy-de-Dôme,63,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797067,PA720704,16,Puy-de-Dôme,63,3,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843254,PA720720,17,Pyrénées-Atlantiques,64,1,2024-07-07,,élections générales,
 PM797076,PA720720,16,Pyrénées-Atlantiques,64,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723056,PA720720,15,Pyrénées-Atlantiques,64,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797157,PA720728,16,Pyrénées-Atlantiques,64,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723058,PA720728,15,Pyrénées-Atlantiques,64,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843257,PA720728,17,Pyrénées-Atlantiques,64,2,2024-07-07,,élections générales,
+PM723062,PA720738,15,Bas-Rhin,67,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723064,PA720746,15,Bas-Rhin,67,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723066,PA720754,15,Bas-Rhin,67,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797121,PA720754,16,Bas-Rhin,67,3,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM797166,PA720764,16,Pyrénées-Atlantiques,64,5,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723070,PA720764,15,Pyrénées-Atlantiques,64,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797169,PA720772,16,Pyrénées-Atlantiques,64,6,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723072,PA720772,15,Pyrénées-Atlantiques,64,6,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723074,PA720780,15,Hautes-Pyrénées,65,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723078,PA720790,15,Pyrénées-Orientales,66,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723080,PA720798,15,Pyrénées-Orientales,66,2,2017-06-18,2020-08-02,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM774333,PA720802,15,Pyrénées-Orientales,66,2,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM723082,PA720806,15,Pyrénées-Orientales,66,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723084,PA720814,15,Pyrénées-Orientales,66,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797058,PA720822,16,Pas-de-Calais,62,12,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723086,PA720822,15,Pas-de-Calais,62,12,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM840318,PA720822,17,Pas-de-Calais,62,12,2024-06-30,,élections générales,
+PM723088,PA720830,15,Puy-de-Dôme,63,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843671,PA720838,17,Seine-Saint-Denis,93,4,2024-07-07,,élections générales,
 PM797865,PA720838,16,Seine-Saint-Denis,93,4,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM797328,PA720846,16,Seine-Saint-Denis,93,6,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM840441,PA720846,17,Seine-Saint-Denis,93,6,2024-06-30,,élections générales,
+PM723094,PA720846,15,Seine-Saint-Denis,93,6,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723096,PA720854,15,Seine-Saint-Denis,93,12,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723098,PA720862,15,Val-de-Marne,94,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797412,PA720862,16,Val-de-Marne,94,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723100,PA720870,15,Val-de-Marne,94,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723102,PA720878,15,Val-de-Marne,94,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM772923,PA720888,15,Val-de-Marne,94,9,2017-06-18,2020-06-24,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Démission
+PM723106,PA720892,15,Val-de-Marne,94,10,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797520,PA720892,16,Val-de-Marne,94,10,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM840420,PA720892,17,Val-de-Marne,94,10,2024-06-30,,élections générales,
+PM723108,PA720900,15,Val-d'Oise,95,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797553,PA720900,16,Val-d'Oise,95,3,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM797556,PA720908,16,Val-d'Oise,95,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723110,PA720908,15,Val-d'Oise,95,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843701,PA720908,17,Val-d'Oise,95,4,2024-07-07,2025-11-12,élections générales,Nomination comme membre du Gouvernement
+PM723112,PA720916,15,Val-d'Oise,95,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723114,PA720924,15,Val-d'Oise,95,6,2017-06-18,2020-08-26,élections générales,Nomination comme membre du Gouvernement
+PM791375,PA720924,15,Val-d'Oise,95,6,2017-06-18,2022-06-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
+PM774485,PA720928,15,Val-d'Oise,95,6,2017-06-18,2022-04-05,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM723116,PA720932,15,Val-d'Oise,95,7,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797586,PA720932,16,Val-d'Oise,95,7,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723120,PA720944,15,Val-d'Oise,95,9,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797619,PA720952,16,Val-d'Oise,95,10,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723122,PA720952,15,Val-d'Oise,95,10,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843755,PA720952,17,Val-d'Oise,95,10,2024-07-07,,élections générales,
 PM797643,PA720960,16,Guadeloupe,971,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723124,PA720960,15,Guadeloupe,971,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843758,PA720960,17,Guadeloupe,971,1,2024-07-07,,élections générales,
+PM723126,PA720968,15,Guadeloupe,971,2,2017-06-18,2022-06-20,élections générales,Nomination comme membre du Gouvernement
+PM791883,PA720972,15,Guadeloupe,971,2,2017-06-18,2022-06-21,remplacement d'un député nommé au Gouvernement,Fin de législature
 PM797667,PA720976,16,Guadeloupe,971,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723128,PA720976,15,Guadeloupe,971,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843764,PA720976,17,Guadeloupe,971,3,2024-07-07,,élections générales,
+PM723132,PA720988,15,Martinique,972,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797697,PA720992,16,Martinique,972,1,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843710,PA720992,17,Martinique,972,1,2024-07-07,,élections générales,
+PM723134,PA720996,15,Français établis hors de France,099,9,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723136,PA721004,15,Français établis hors de France,099,10,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797496,PA721004,16,Français établis hors de France,099,10,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843824,PA721004,17,Français établis hors de France,099,10,2024-07-07,,élections générales,
+PM755861,PA721012,15,Martinique,972,2,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM723144,PA721024,15,Français établis hors de France,099,11,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM858289,PA721024,17,Français établis hors de France,099,11,2024-07-07,,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,
 PM843827,PA721024,17,Français établis hors de France,099,11,2024-07-07,2024-10-21,élections générales,Nomination comme membre du Gouvernement
 PM797592,PA721024,16,Français établis hors de France,099,11,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM785212,PA721032,15,Guyane,973,1,2017-06-18,2021-08-02,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Démission avant entrée en fonction
+PM753260,PA721036,15,Guyane,973,2,2018-03-11,2022-06-21,"élection partielle, suite à l'annulation de l'élection d'un député",Fin de législature
+PM723148,PA721036,15,Guyane,973,2,2017-06-18,2017-12-08,élections générales,Annulation de l'élection sur décision du Conseil constitutionnel
+PM723154,PA721046,15,Réunion,974,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797769,PA721046,16,Réunion,974,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723156,PA721054,15,Réunion,974,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797799,PA721062,16,Réunion,974,5,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723158,PA721062,15,Réunion,974,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843740,PA721062,17,Réunion,974,5,2024-07-07,,élections générales,
+PM723160,PA721070,15,Réunion,974,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797340,PA721094,16,Nouvelle-Calédonie,988,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723168,PA721094,15,Nouvelle-Calédonie,988,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843782,PA721110,17,Polynésie Française,987,2,2024-07-07,,élections générales,
+PM723174,PA721110,15,Polynésie Française,987,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723176,PA721118,15,Polynésie Française,987,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797376,PA721118,16,Polynésie Française,987,3,2022-06-19,2023-06-09,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723182,PA721126,15,Saint-Barthélemy et Saint-Martin,977,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797421,PA721134,16,Français établis hors de France,099,1,2022-06-19,2022-08-04,élections générales,Nomination comme membre du Gouvernement
+PM723184,PA721134,15,Français établis hors de France,099,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843797,PA721134,17,Français établis hors de France,099,1,2024-07-07,2025-11-12,élections générales,Nomination comme membre du Gouvernement
+PM723186,PA721142,15,Français établis hors de France,099,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797427,PA721150,16,Français établis hors de France,099,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723188,PA721150,15,Français établis hors de France,099,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797460,PA721158,16,Français établis hors de France,099,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723190,PA721158,15,Français établis hors de France,099,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843806,PA721158,17,Français établis hors de France,099,4,2024-07-07,,élections générales,
+PM755857,PA721166,15,Français établis hors de France,099,5,2018-04-22,2021-10-01,"élection partielle, suite à l'annulation de l'élection d'un député",Élection au Sénat
+PM723192,PA721166,15,Français établis hors de France,099,5,2017-06-18,2018-02-02,élections générales,Annulation de l'élection sur décision du Conseil constitutionnel
 PM797463,PA721170,16,Français établis hors de France,099,5,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843809,PA721170,17,Français établis hors de France,099,5,2024-07-07,2025-07-11,élections générales,Démission d'office sur décision du Conseil constitutionnel
+PM786160,PA721170,15,Français établis hors de France,099,5,2018-04-22,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM723194,PA721174,15,Français établis hors de France,099,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843815,PA721182,17,Français établis hors de France,099,7,2024-07-07,,élections générales,
+PM723196,PA721182,15,Français établis hors de France,099,7,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797736,PA721182,16,Français établis hors de France,099,7,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723200,PA721194,15,Hauts-de-Seine,92,13,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723202,PA721202,15,Seine-Saint-Denis,93,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM840435,PA721202,17,Seine-Saint-Denis,93,1,2024-06-30,,élections générales,
 PM797826,PA721202,16,Seine-Saint-Denis,93,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723204,PA721210,15,Seine-Saint-Denis,93,7,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843677,PA721210,17,Seine-Saint-Denis,93,7,2024-07-07,,élections générales,
 PM797331,PA721210,16,Seine-Saint-Denis,93,7,2022-06-12,2024-06-09,élections générales,Fin de législature
+PM723206,PA721218,15,Seine-Saint-Denis,93,8,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723208,PA721226,15,Seine-Saint-Denis,93,9,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723210,PA721234,15,Val-de-Marne,94,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797451,PA721234,16,Val-de-Marne,94,4,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843692,PA721234,17,Val-de-Marne,94,4,2024-07-07,,élections générales,
+PM723214,PA721246,15,Val-de-Marne,94,11,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723216,PA721254,15,Val-d'Oise,95,1,2017-06-18,2017-11-16,élections générales,Annulation de l'élection sur décision du Conseil constitutionnel
 PM797550,PA721262,16,Val-d'Oise,95,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723218,PA721262,15,Val-d'Oise,95,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM840438,PA721270,17,Seine-Saint-Denis,93,2,2024-06-30,,élections générales,
 PM797829,PA721270,16,Seine-Saint-Denis,93,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723220,PA721270,15,Seine-Saint-Denis,93,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723222,PA721278,15,Seine-Saint-Denis,93,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723224,PA721286,15,Seine-Saint-Denis,93,10,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797457,PA721296,16,Val-de-Marne,94,6,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723228,PA721296,15,Val-de-Marne,94,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843698,PA721296,17,Val-de-Marne,94,6,2024-07-07,,élections générales,
 PM797151,PA721314,16,Haut-Rhin,68,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723236,PA721314,15,Haut-Rhin,68,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843215,PA721314,17,Haut-Rhin,68,4,2024-07-07,,élections générales,
 PM797250,PA721328,16,Rhône,69,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723240,PA721328,15,Rhône,69,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723242,PA721336,15,Rhône,69,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843281,PA721336,17,Rhône,69,5,2024-07-07,,élections générales,
 PM797184,PA721336,16,Rhône,69,5,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723244,PA721344,15,Rhône,69,6,2017-06-18,2022-01-29,élections générales,Démission
+PM723246,PA721352,15,Rhône,69,13,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723250,PA721364,15,Saône-et-Loire,71,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723252,PA721372,15,Sarthe,72,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723256,PA721384,15,Sarthe,72,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723262,PA721398,15,Savoie,73,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797316,PA721410,16,Savoie,73,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723266,PA721410,15,Savoie,73,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843350,PA721410,17,Savoie,73,3,2024-07-07,,élections générales,
+PM723268,PA721418,15,Savoie,73,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843356,PA721426,17,Haute-Savoie,74,1,2024-07-07,,élections générales,
 PM797322,PA721426,16,Haute-Savoie,74,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723270,PA721426,15,Haute-Savoie,74,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723272,PA721434,15,Haute-Savoie,74,2,2017-06-18,2022-01-29,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM789434,PA721438,15,Haute-Savoie,74,2,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM843362,PA721442,17,Haute-Savoie,74,3,2024-07-07,2025-11-06,élections générales,Démission
 PM797253,PA721442,16,Haute-Savoie,74,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM785214,PA721442,15,Haute-Savoie,74,3,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM723278,PA721450,15,Haute-Savoie,74,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723280,PA721458,15,Haute-Savoie,74,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843371,PA721458,17,Haute-Savoie,74,6,2024-07-07,,élections générales,
 PM797262,PA721458,16,Haute-Savoie,74,6,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723284,PA721466,15,Paris,75,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797268,PA721466,16,Paris,75,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM797511,PA721474,16,Vosges,88,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723286,PA721474,15,Vosges,88,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843608,PA721474,17,Vosges,88,1,2024-07-07,,élections générales,
 PM797514,PA721482,16,Vosges,88,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM797517,PA721486,16,Vosges,88,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723290,PA721486,15,Vosges,88,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843614,PA721486,17,Vosges,88,3,2024-07-07,,élections générales,
 PM797271,PA721498,16,Paris,75,3,2022-06-19,2022-07-22,élections générales,Nomination comme membre du Gouvernement
+PM723294,PA721498,15,Paris,75,3,2017-06-18,2022-06-20,élections générales,Nomination comme membre du Gouvernement
+PM791885,PA721502,15,Paris,75,3,2017-06-18,2022-06-21,remplacement d'un député nommé au Gouvernement,Fin de législature
+PM723296,PA721506,15,Paris,75,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723298,PA721514,15,Seine-Maritime,76,9,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797430,PA721522,16,Seine-Maritime,76,10,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723300,PA721522,15,Seine-Maritime,76,10,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723302,PA721530,15,Seine-et-Marne,77,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797433,PA721530,16,Seine-et-Marne,77,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM775863,PA721538,15,Tarn,81,1,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM723308,PA721542,15,Tarn,81,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723314,PA721560,15,Paris,75,5,2017-06-18,2017-07-21,élections générales,Nomination comme membre du Gouvernement
+PM764780,PA721560,15,Paris,75,5,2017-06-18,2021-05-12,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Démission
+PM733723,PA721564,15,Paris,75,5,2017-06-18,2019-04-27,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM723316,PA721568,15,Paris,75,6,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM772844,PA721576,15,Seine-et-Marne,77,2,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM797712,PA721584,16,Tarn,81,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723324,PA721584,15,Tarn,81,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843518,PA721584,17,Tarn,81,3,2024-07-07,,élections générales,
+PM723330,PA721600,15,Hauts-de-Seine,92,11,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797790,PA721608,16,Hauts-de-Seine,92,12,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723332,PA721608,15,Hauts-de-Seine,92,12,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM879690,PA721612,17,Hauts-de-Seine,92,12,2024-07-07,,remplacement d'un député nommé au Gouvernement,
+PM723334,PA721616,15,Paris,75,7,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723336,PA721624,15,Paris,75,8,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM802647,PA721632,16,Seine-et-Marne,77,5,2022-06-19,2024-06-09,remplacement d'un député nommé au Gouvernement,Fin de législature
 PM880995,PA721632,17,Seine-et-Marne,77,5,2024-07-07,,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",
+PM760305,PA721632,15,Seine-et-Marne,77,5,2017-06-18,2022-06-21,remplacement d'un député nommé au Gouvernement,Fin de législature
+PM723340,PA721636,15,Seine-et-Marne,77,6,2017-06-18,2021-07-27,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM785108,PA721640,15,Seine-et-Marne,77,6,2017-06-18,2021-08-25,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Démission
+PM723342,PA721644,15,Seine-et-Marne,77,7,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723346,PA721656,15,Var,83,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM774327,PA721666,15,Var,83,3,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM723350,PA721670,15,Essonne,91,6,2017-06-18,2019-04-30,élections générales,Nomination comme membre du Gouvernement
+PM764881,PA721674,15,Essonne,91,6,2017-06-18,2022-06-21,remplacement d'un député nommé au Gouvernement,Fin de législature
 PM797634,PA721678,16,Essonne,91,7,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723352,PA721678,15,Essonne,91,7,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723356,PA721690,15,Paris,75,9,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723360,PA721702,15,Seine-et-Marne,77,8,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723362,PA721710,15,Seine-et-Marne,77,9,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797505,PA721710,16,Seine-et-Marne,77,9,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723364,PA721718,15,Seine-et-Marne,77,10,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797502,PA721722,16,Seine-et-Marne,77,8,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723366,PA721726,15,Var,83,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723368,PA721734,15,Var,83,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723370,PA721742,15,Hauts-de-Seine,92,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797715,PA721750,16,Hauts-de-Seine,92,5,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723372,PA721750,15,Hauts-de-Seine,92,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843647,PA721750,17,Hauts-de-Seine,92,5,2024-07-07,,élections générales,
 PM797295,PA721760,16,Paris,75,11,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM779695,PA721760,15,Paris,75,11,2017-06-18,2022-06-21,remplacement d'un député décédé,Fin de législature
+PM723376,PA721764,15,Paris,75,12,2017-06-18,2020-08-26,élections générales,Nomination comme membre du Gouvernement
 PM797772,PA721764,16,Paris,75,12,2022-06-19,2022-07-22,élections générales,Nomination comme membre du Gouvernement
 PM843416,PA721764,17,Paris,75,12,2024-07-07,,élections générales,
+PM774489,PA721768,15,Paris,75,12,2017-06-18,2022-06-21,remplacement d'un député nommé au Gouvernement,Fin de législature
+PM723380,PA721776,15,Yvelines,78,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723382,PA721784,15,Var,83,6,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723384,PA721792,15,Var,83,7,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723386,PA721800,15,Var,83,8,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723388,PA721808,15,Yonne,89,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797571,PA721816,16,Territoire de Belfort,90,1,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843551,PA721816,17,Territoire de Belfort,90,1,2024-07-07,,élections générales,
+PM723390,PA721816,15,Territoire de Belfort,90,1,2017-06-18,2017-12-08,élections générales,Annulation de l'élection sur décision du Conseil constitutionnel
+PM748964,PA721816,15,Territoire de Belfort,90,1,2018-02-04,2022-06-21,"élection partielle, suite à l'annulation de l'élection d'un député",Fin de législature
+PM723394,PA721824,15,Paris,75,13,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM802651,PA721828,16,Paris,75,12,2022-06-19,2024-06-09,remplacement d'un député nommé au Gouvernement,Fin de législature
+PM771998,PA721832,15,Paris,75,14,2017-06-18,2022-06-21,remplacement d'un député décédé,Fin de législature
 PM805157,PA721836,16,Yvelines,78,2,2022-10-09,2022-11-09,élection partielle,Nomination comme membre du Gouvernement
+PM723398,PA721836,15,Yvelines,78,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797559,PA721836,16,Yvelines,78,2,2022-06-19,2022-08-04,élections générales,Nomination comme membre du Gouvernement
 PM843458,PA721836,17,Yvelines,78,2,2024-07-07,2024-10-21,élections générales,Nomination comme membre du Gouvernement
 PM803274,PA721840,16,Yvelines,78,2,2022-06-19,2022-08-12,remplacement d'un député nommé au Gouvernement,Démission
+PM723400,PA721844,15,Yvelines,78,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797562,PA721844,16,Yvelines,78,3,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843461,PA721844,17,Yvelines,78,3,2024-07-07,,élections générales,
+PM723402,PA721852,15,Yvelines,78,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797565,PA721852,16,Yvelines,78,4,2022-06-19,2024-02-11,élections générales,Nomination comme membre du Gouvernement
 PM843464,PA721852,17,Yvelines,78,4,2024-07-07,,élections générales,
+PM723404,PA721860,15,Vaucluse,84,1,2017-06-18,2020-03-29,élections générales,Décès
+PM771266,PA721864,15,Vaucluse,84,1,2017-06-18,2022-06-21,remplacement d'un député décédé,Fin de législature
+PM774343,PA721872,15,Vaucluse,84,3,2017-06-18,2021-04-05,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Prolongation de mission temporaire
+PM723408,PA721872,15,Vaucluse,84,3,2017-06-18,2017-07-21,élections générales,Nomination comme membre du Gouvernement
+PM782435,PA721876,15,Vaucluse,84,3,2017-06-18,2022-06-21,remplacement d'un député en mission au-delà de 6 mois,Fin de législature
+PM733719,PA721876,15,Vaucluse,84,3,2017-06-18,2020-08-03,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM723410,PA721880,15,Essonne,91,9,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797640,PA721880,16,Essonne,91,9,2022-06-19,2024-03-08,élections générales,Nomination comme membre du Gouvernement
+PM723412,PA721888,15,Essonne,91,10,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723414,PA721896,15,Hauts-de-Seine,92,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797664,PA721896,16,Hauts-de-Seine,92,1,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM840405,PA721896,17,Hauts-de-Seine,92,1,2024-06-30,,élections générales,
 PM797568,PA721908,16,Yvelines,78,5,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723418,PA721908,15,Yvelines,78,5,2017-06-18,2022-06-20,élections générales,Nomination comme membre du Gouvernement
 PM843467,PA721908,17,Yvelines,78,5,2024-07-07,,élections générales,
+PM791879,PA721912,15,Yvelines,78,5,2017-06-18,2022-06-21,remplacement d'un député nommé au Gouvernement,Fin de législature
 PM797595,PA721916,16,Yvelines,78,6,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723420,PA721916,15,Yvelines,78,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843470,PA721916,17,Yvelines,78,6,2024-07-07,,élections générales,
+PM723422,PA721924,15,Yvelines,78,7,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797361,PA721932,16,Vaucluse,84,4,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843632,PA721932,17,Vaucluse,84,4,2024-07-07,,élections générales,
+PM734586,PA721932,15,Vaucluse,84,4,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
+PM723430,PA721946,15,Hauts-de-Seine,92,7,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM733717,PA721956,15,Paris,75,16,2017-06-18,2019-04-27,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
 PM797811,PA721960,16,Paris,75,17,2022-06-12,2024-06-09,élections générales,Fin de législature
+PM723434,PA721960,15,Paris,75,17,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM840378,PA721960,17,Paris,75,17,2024-06-30,,élections générales,
+PM723436,PA721968,15,Yvelines,78,8,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723438,PA721976,15,Yvelines,78,9,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797622,PA721976,16,Yvelines,78,9,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM797367,PA721984,16,Vendée,85,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723440,PA721984,15,Vendée,85,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843536,PA721984,17,Vendée,85,1,2024-07-07,,élections générales,
+PM723442,PA721992,15,Vendée,85,2,2017-06-18,2019-07-07,élections générales,Décès
+PM766306,PA721996,15,Vendée,85,2,2017-06-18,2022-06-21,remplacement d'un député décédé,Fin de législature
 PM797400,PA722000,16,Vendée,85,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723444,PA722000,15,Vendée,85,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843542,PA722000,17,Vendée,85,3,2024-07-07,,élections générales,
+PM723446,PA722008,15,Vendée,85,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723452,PA722022,15,Essonne,91,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723454,PA722030,15,Paris,75,18,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723456,PA722038,15,Seine-Maritime,76,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797847,PA722038,16,Seine-Maritime,76,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723458,PA722046,15,Yvelines,78,10,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843482,PA722046,17,Yvelines,78,10,2024-07-07,2025-01-23,élections générales,Nomination comme membre du Gouvernement
 PM797625,PA722046,16,Yvelines,78,10,2022-06-19,2023-08-20,élections générales,Nomination comme membre du Gouvernement
+PM723460,PA722054,15,Yvelines,78,11,2017-06-18,2020-07-06,élections générales,Démission
 PM797598,PA722054,16,Yvelines,78,7,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723462,PA722062,15,Yvelines,78,12,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723464,PA722070,15,Vendée,85,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797406,PA722070,16,Vendée,85,5,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843548,PA722070,17,Vendée,85,5,2024-07-07,,élections générales,
+PM723466,PA722078,15,Vienne,86,1,2017-06-18,2020-08-24,élections générales,Prolongation de mission temporaire
+PM774472,PA722082,15,Vienne,86,1,2017-06-18,2022-06-21,remplacement d'un député en mission au-delà de 6 mois,Fin de législature
+PM723468,PA722086,15,Hauts-de-Seine,92,2,2017-06-18,2019-02-25,élections générales,Nomination comme membre du Gouvernement
+PM791907,PA722086,15,Hauts-de-Seine,92,2,2017-06-18,2022-06-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
+PM762941,PA722090,15,Hauts-de-Seine,92,2,2017-06-18,2022-06-20,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM723470,PA722094,15,Hauts-de-Seine,92,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797850,PA722102,16,Seine-Maritime,76,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723472,PA722102,15,Seine-Maritime,76,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843380,PA722102,17,Seine-Maritime,76,2,2024-07-07,,élections générales,
+PM723474,PA722110,15,Seine-Maritime,76,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797853,PA722110,16,Seine-Maritime,76,3,2022-06-19,2024-01-10,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM723476,PA722118,15,Seine-Maritime,76,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723478,PA722126,15,Deux-Sèvres,79,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843497,PA722134,17,Deux-Sèvres,79,3,2024-07-07,,élections générales,
+PM723482,PA722134,15,Deux-Sèvres,79,3,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797658,PA722134,16,Deux-Sèvres,79,3,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM797673,PA722142,16,Somme,80,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723484,PA722142,15,Somme,80,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843500,PA722142,17,Somme,80,1,2024-07-07,,élections générales,
+PM723486,PA722150,15,Vienne,86,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797445,PA722150,16,Vienne,86,2,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843590,PA722150,17,Vienne,86,2,2024-07-07,,élections générales,
 PM797475,PA722162,16,Vienne,86,4,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723490,PA722162,15,Vienne,86,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843596,PA722162,17,Vienne,86,4,2024-07-07,,élections générales,
+PM723492,PA722170,15,Haute-Vienne,87,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723494,PA722178,15,Hauts-de-Seine,92,8,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797760,PA722190,16,Hauts-de-Seine,92,10,2022-06-19,2022-07-22,élections générales,Nomination comme membre du Gouvernement
 PM843659,PA722190,17,Hauts-de-Seine,92,10,2024-07-07,,élections générales,
+PM723498,PA722190,15,Hauts-de-Seine,92,10,2017-06-18,2018-11-16,élections générales,Nomination comme membre du Gouvernement
+PM760311,PA722194,15,Hauts-de-Seine,92,10,2017-06-18,2022-06-21,remplacement d'un député nommé au Gouvernement,Fin de législature
+PM772705,PA722198,15,Seine-Maritime,76,5,2017-06-18,2020-06-23,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Démission
+PM723502,PA722202,15,Seine-Maritime,76,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797358,PA722202,16,Seine-Maritime,76,6,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM774371,PA722218,15,Somme,80,2,2017-06-18,2022-06-20,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM723512,PA722228,15,Somme,80,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723514,PA722236,15,Haute-Vienne,87,2,2017-06-18,2019-10-03,élections générales,Nomination comme membre du Gouvernement
+PM791899,PA722236,15,Haute-Vienne,87,2,2017-06-18,2022-06-21,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
+PM767406,PA722240,15,Haute-Vienne,87,2,2017-06-18,2022-06-20,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM723516,PA722244,15,Haute-Vienne,87,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723518,PA722252,15,Essonne,91,4,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797610,PA722252,16,Essonne,91,4,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843566,PA722252,17,Essonne,91,4,2024-07-07,,élections générales,
+PM723520,PA722260,15,Essonne,91,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723522,PA722268,15,Bas-Rhin,67,4,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM772999,PA722280,15,Bas-Rhin,67,6,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM797238,PA722284,16,Haut-Rhin,68,6,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723528,PA722284,15,Haut-Rhin,68,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843221,PA722284,17,Haut-Rhin,68,6,2024-07-07,,élections générales,
 PM797241,PA722292,16,Rhône,69,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723530,PA722292,15,Rhône,69,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723532,PA722300,15,Rhône,69,7,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM772707,PA722308,15,Rhône,69,8,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM797229,PA722308,16,Rhône,69,8,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723536,PA722312,15,Haute-Saône,70,1,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM723538,PA722320,15,Haute-Saône,70,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM849127,PA722328,17,Bas-Rhin,67,7,2024-07-07,2025-01-23,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
 PM797139,PA722336,16,Bas-Rhin,67,9,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723544,PA722336,15,Bas-Rhin,67,9,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843203,PA722336,17,Bas-Rhin,67,9,2024-07-07,,élections générales,
 PM797244,PA722344,16,Rhône,69,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723546,PA722344,15,Rhône,69,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843296,PA722358,17,Rhône,69,10,2024-07-07,,élections générales,
+PM723552,PA722358,15,Rhône,69,10,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797235,PA722358,16,Rhône,69,10,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843299,PA722366,17,Rhône,69,11,2024-07-07,,élections générales,
 PM797193,PA722366,16,Rhône,69,11,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723554,PA722366,15,Rhône,69,11,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843302,PA722374,17,Rhône,69,12,2024-07-07,,élections générales,
 PM797196,PA722374,16,Rhône,69,12,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723556,PA722374,15,Rhône,69,12,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843314,PA722382,17,Saône-et-Loire,71,1,2024-07-07,,élections générales,
 PM797211,PA722382,16,Saône-et-Loire,71,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723558,PA722382,15,Saône-et-Loire,71,1,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM843317,PA722390,17,Saône-et-Loire,71,2,2024-07-07,,élections générales,
 PM797214,PA722390,16,Saône-et-Loire,71,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723560,PA722390,15,Saône-et-Loire,71,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797217,PA722398,16,Saône-et-Loire,71,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM723562,PA722398,15,Saône-et-Loire,71,3,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM754304,PA724827,15,Mayotte,976,1,2018-03-25,2022-06-21,"élection partielle, suite à l'annulation de l'élection d'un député",Fin de législature
+PM724831,PA724827,15,Mayotte,976,1,2017-06-18,2018-01-19,élections générales,Annulation de l'élection sur décision du Conseil constitutionnel
 PM797523,PA736201,16,Val-de-Marne,94,11,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM840423,PA736201,17,Val-de-Marne,94,11,2024-06-30,,élections générales,
+PM723212,PA746,15,Val-de-Marne,94,5,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM748958,PA748954,15,Val-d'Oise,95,1,2018-02-04,2022-06-21,"élection partielle, suite à l'annulation de l'élection d'un député",Fin de législature
+PM755552,PA755549,15,Wallis-et-Futuna,986,1,2018-04-15,2022-06-21,"élection partielle, suite à l'annulation de l'élection d'un député",Fin de législature
 PM840465,PA757225,17,Wallis-et-Futuna,986,1,2024-06-30,,élections générales,
 PM797382,PA757225,16,Wallis-et-Futuna,986,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM759197,PA759192,15,Réunion,974,7,2018-09-30,2022-06-21,"élection partielle, remplacement d'un député démissionnaire d'office",Fin de législature
 PM874998,PA759832,17,Pas-de-Calais,62,2,2024-07-07,,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,
 PM843161,PA759832,17,Pas-de-Calais,62,2,2024-07-07,2024-10-21,élections générales,Nomination comme membre du Gouvernement
+PM760662,PA760658,15,Essonne,91,1,2018-11-18,2022-06-21,"élection partielle, remplacement d'un député démissionnaire",Fin de législature
+PM723568,PA767,15,Haut-Rhin,68,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM834849,PA774109,16,Paris,75,7,2022-06-19,2024-06-09,reprise de l'exercice du mandat d'un ancien membre du Gouvernement,Fin de législature
 PM797283,PA774109,16,Paris,75,7,2022-06-19,2022-07-22,élections générales,Nomination comme membre du Gouvernement
+PM774983,PA774952,15,Yvelines,78,11,2020-09-20,2022-06-21,"élection partielle, remplacement d'un député démissionnaire",Fin de législature
 PM796797,PA774954,16,Maine-et-Loire,49,3,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM774972,PA774954,15,Maine-et-Loire,49,3,2020-09-20,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM842843,PA774954,17,Maine-et-Loire,49,3,2024-07-07,,élections générales,
+PM774979,PA774956,15,Haut-Rhin,68,1,2020-09-27,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM797355,PA774958,16,Seine-Maritime,76,5,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843389,PA774958,17,Seine-Maritime,76,5,2024-07-07,,élections générales,
+PM774981,PA774958,15,Seine-Maritime,76,5,2020-09-20,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
 PM797490,PA774960,16,Val-de-Marne,94,9,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM840417,PA774960,17,Val-de-Marne,94,9,2024-06-30,,élections générales,
+PM774985,PA774960,15,Val-de-Marne,94,9,2020-09-20,2022-06-21,"élection partielle, remplacement d'un député démissionnaire",Fin de législature
 PM797766,PA774962,16,Réunion,974,2,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM774987,PA774962,15,Réunion,974,2,2020-09-20,2022-06-21,"élection partielle, remplacement d'un député démissionnaire",Fin de législature
 PM843731,PA774962,17,Réunion,974,2,2024-07-07,,élections générales,
 PM796992,PA783457,16,Oise,60,1,2022-06-19,2024-06-09,élections générales,Fin de législature
+PM783488,PA783457,15,Oise,60,1,2021-06-06,2022-06-21,"élection partielle, en remplacement d'un député décédé et sans suppléant",Fin de législature
+PM783494,PA783463,15,Indre-et-Loire,37,3,2021-06-06,2022-06-21,élection partielle,Fin de législature
+PM783490,PA783468,15,Paris,75,15,2021-06-06,2022-01-28,élection partielle,Annulation de l'élection sur décision du Conseil constitutionnel
+PM784316,PA784314,15,Pas-de-Calais,62,6,2021-07-07,2022-06-21,remplacement d'un député nommé au Gouvernement,Fin de législature
 PM797280,PA791812,16,Paris,75,6,2022-06-12,2024-06-09,élections générales,Fin de législature
 PM840384,PA791812,17,Paris,75,6,2024-06-30,,élections générales,
 PM797808,PA791824,16,Paris,75,16,2022-06-12,2024-06-09,élections générales,Fin de législature
@@ -1308,10 +1992,14 @@ PM843779,PA842279,17,Mayotte,976,2,2024-07-07,,élections générales,
 PM843791,PA842299,17,Nouvelle-Calédonie,988,2,2024-07-07,,élections générales,
 PM843803,PA842311,17,Français établis hors de France,099,3,2024-07-07,,élections générales,
 PM849153,PA842323,17,Français établis hors de France,099,11,2024-07-07,2025-01-23,remplacement d'un député nommé au Gouvernement,Reprise de l'exercice du mandat d'un ancien membre du Gouvernement
+PM723288,PA856,15,Vosges,88,2,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM879689,PA857021,17,Isère,38,1,2025-01-19,,remplacement d'un député nommé au Gouvernement,
 PM874936,PA870009,17,Saône-et-Loire,71,5,2025-05-25,,remplacement d'un député nommé au Gouvernement,
 PM870011,PA870010,17,Saône-et-Loire,71,5,2025-05-25,2025-11-12,"élection partielle, suite à l'annulation de l'élection d'un député",Nomination comme membre du Gouvernement
 PM878243,PA878242,17,Haute-Savoie,74,3,2026-02-01,,"élection partielle, remplacement d'un député démissionnaire",
 PM879400,PA879389,17,Loiret,45,1,2026-01-25,,remplacement d'un député nommé au Gouvernement,
+PM722904,PA923,15,Haute-Marne,52,2,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM722900,PA942,15,Marne,51,5,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM796836,PA942,16,Marne,51,5,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM842987,PA942,17,Marne,51,5,2024-07-07,,élections générales,
+PM723046,PA998,15,Oise,60,1,2017-06-18,2021-03-07,élections générales,Décès
