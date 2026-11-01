@@ -51,7 +51,7 @@ témoins. En cas d'écart avec ce fichier, il prime.
 - **Site public** : Cloudflare Pages relié au dépôt. Son build ne
   télécharge rien : il lit `data/` (open data et `editorial.json`).
 - **Périmètre** : Assemblée nationale, XVe, XVIe et XVIIe législatures (depuis
-  juin 2017), et Sénat depuis juin 2022, à part (règles 23 à 28).
+  juin 2017), et Sénat depuis juin 2017 lui aussi, à part (règles 23 à 28).
 - **PISTE / Légifrance** : identifiants de compte dans `source/`. Le spike
   dira si l'API apporte quelque chose (texte au JO, décisions du Conseil
   constitutionnel) ; sinon, on s'en passe.

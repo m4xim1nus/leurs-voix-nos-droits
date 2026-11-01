@@ -39,7 +39,7 @@ Le 31/10/2026, pour le Sénat : les règles 23 à 28, et le CESE hors des source
 l'échéance d'un régime restrictif et le droit lu à la seule date du vote (règle 4), les lois de finances (règle 8), les
 lois successives d'une même crise (règle 18), le détail par législature sur la fiche d'un·e député·e (règle 19). Le 01/11/2026, après l'audit de cohérence : le choix du droit
 principal et le décompte des sources (règle 4), le droit `discriminations` et la mesure d'un autre droit (règle 4), la mesure absente
-du texte décisif, le droit secondaire, les sources partagées et la réserve du Conseil constitutionnel (règle 11).
+du texte décisif, le droit secondaire, les sources partagées et la réserve du Conseil constitutionnel (règle 11). Le 01/11/2026, proposé pour le Sénat de 2017-2022 et **en attente de validation** (`docs/A_VALIDER.md`) : deux périodes et des amendements clés (règle 26).
 
 ## Grille des droits
 
@@ -358,8 +358,7 @@ ci-dessous remplacent, pour le Sénat, les règles 9 à 11 et 15 à 19.
     ou sur son article unique. Il est compté s'il a au moins une voix de chaque côté et si son
     sens est établi (règle 24). Sinon, il est affiché et non compté. Les autres lectures et les
     parties d'une loi de finances sont affichées, pas comptées. Les **motions** aussi, question
-    préalable comprise, même quand elle met fin à l'examen du texte. Les crédits d'une mission
-    et les amendements ne sont pas retenus. Quand le dernier vote sur l'ensemble n'est pas public, le dernier scrutin public
+    préalable comprise, même quand elle met fin à l'examen du texte. Les crédits d'une mission ne sont pas retenus, ni les amendements, hors amendements clés (règle 26). Quand le dernier vote sur l'ensemble n'est pas public, le dernier scrutin public
     reste décisif, avec la mention « dernier vote public, sur le texte du JJ/MM/AAAA ».
 24. **Chaque vote se lit sur le texte voté.** Si le Sénat a voté le même texte que le scrutin
     décisif de l'Assemblée (conclusions de la commission mixte paritaire, adoption sans

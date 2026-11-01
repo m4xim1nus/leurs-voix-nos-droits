@@ -311,8 +311,9 @@ Comparer), Sénat, Méthode (Méthodologie et Données). Les adresses ne changen
 | Groupes | `/groupes` | par législature : tableau groupe × droit, effectifs |
 | Fiche groupe | `/groupes/<sigle>-<législature>` | score global, par droit et par texte (un clic sur un droit filtre ses textes), textes adoptés sans opposition, membres et leur score |
 | Comparer | `/comparer?a=…&b=…` | deux députés, deux groupes, ou un député et son groupe : score, droit par droit, textes où ils s'écartent le plus ; deux règles par ligne (le premier en haut, curseur plein ; le second en bas, curseur creux), bandeau fixe qui les rappelle au défilement |
-| Sénat | `/senat` | les groupes d'abord, droit par droit ; le vote de groupe expliqué ; sénateur·ices en poste par département (code postal ou nom : case de l'en-tête) |
-| Fiche sénateur·ice | `/senat/<slug>` | département, groupes successifs, score « d'après les votes enregistrés à son nom », écarts au groupe, votes comptés, « Lui écrire » ; **aucun taux de participation** (règle 27) |
+| Sénat | `/senat` | les groupes d'abord, droit par droit et par période (depuis juin 2022, 2017-2022) ; le vote de groupe expliqué ; sénateur·ices en poste par département (code postal ou nom : case de l'en-tête) |
+| Comparer au Sénat | `/senat/comparer` | deux sénateur·ices, deux groupes, ou un·e sénateur·ice et un groupe sur la période de ce groupe ; jamais avec l'Assemblée (règle 28) |
+| Fiche sénateur·ice | `/senat/<slug>` | département, groupes successifs, score « d'après les votes enregistrés à son nom », score par période, écarts au groupe, carte partageable (`/cartes/senateurs/`, `/cartes/portrait/senateurs/`), votes comptés, « Lui écrire » ; **aucun taux de participation** (règle 27) |
 | Recherche | `/recherche?q=…` | tous les résultats d'une recherche : élu·es, code postal (député·es et sénateur·ices du département), pays, textes qualifiés, textes écartés et leur motif |
 | Méthodologie | `/methodologie` | grille, règles 1 à 28, préparation des qualifications, code postal, sources |
 | Données | `/donnees` | `editorial.json`, exports CSV, votes nominatifs, licence |

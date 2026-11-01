@@ -318,10 +318,10 @@
       du texte, ou sur son article unique. Il est compté s’il a au moins une voix de chaque côté et
       si son sens est établi (règle 24). Sinon, il est affiché et non compté. Les autres lectures et
       les parties d’une loi de finances sont affichées, pas comptées. Les motions aussi, question
-      préalable comprise, même quand elle met fin à l’examen du texte. Les crédits d’une mission et
-      les amendements ne sont pas retenus. Quand le dernier vote sur l’ensemble n’est pas public, le
-      dernier scrutin public reste décisif, avec la mention « dernier vote public, sur le texte du
-      JJ/MM/AAAA ».
+      préalable comprise, même quand elle met fin à l’examen du texte. Les crédits d’une mission ne
+      sont pas retenus, ni les amendements, hors amendements clés (règle 26). Quand le dernier vote
+      sur l’ensemble n’est pas public, le dernier scrutin public reste décisif, avec la mention
+      « dernier vote public, sur le texte du JJ/MM/AAAA ».
     </li>
     <li value="24" id="regle-24">
       <strong>Chaque vote se lit sur le texte voté.</strong> Si le Sénat a voté le même texte que le scrutin

@@ -146,7 +146,11 @@ export function vueSenateur(slug: string) {
   const b = baseSenat();
   const s = b.senateurs.find((x) => x.slug === slug);
   if (!s) error(404, 'Sénateur·ice inconnu·e');
-  const votes: VoteSenateur[] = textesComptes().flatMap(({ texte, scrutin }) => {
+  // Le décisif et les amendements clés comptés : le score de la fiche les réunit (règle 26).
+  const comptes = textesComptes().flatMap(({ texte }) =>
+    texte.senat!.scrutins.filter((x) => x.compte).map((scrutin) => ({ texte, scrutin }))
+  );
+  const votes: VoteSenateur[] = comptes.flatMap(({ texte, scrutin }) => {
     const v = b.votes().get(scrutin.id)?.get(s.id);
     if (!v) return [];
     const groupe = groupeDuJour(s, scrutin.date);
