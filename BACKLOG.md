@@ -21,7 +21,7 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 ## À trier
 
 - [ ] Vérifier le 02/11/2026 que la passe quotidienne (`donnees-quotidien.yml`, 5 h UTC) tourne bien : première avec la XVe et avec la v1.5.0. Attendu : plus d'attente de 20 minutes sur le dump des amendements (copie de la release, ou archive du cache), passe finie sous le plafond de 60 minutes, sync de l'admin sans erreur, build Cloudflare réussi, site à jour. Si elle échoue, rien n'est commité et le site garde les données de la veille : corriger, relancer à la main, et ne pas supprimer les branches (user:moi, 2026-11-01)
-- [ ] Une fois la passe du 02/11/2026 vérifiée : supprimer les branches `xve`, `worktree-textes-en-cours`, `relecture-xve`, `recherche` et `prise-en-main`, fusionnées dans `main`, et les worktrees `.claude/worktrees/xve` et `textes-en-cours`. Seules les deux premières sont encore sur GitHub, où un push lance un build d'aperçu Cloudflare (claude, 2026-11-01)
+- [ ] Une fois la passe du 02/11/2026 vérifiée : supprimer les branches `xve`, `worktree-textes-en-cours`, `relecture-xve`, `recherche`, `prise-en-main` et `senat-suite`, fusionnées dans `main`, et les worktrees `.claude/worktrees/xve` et `textes-en-cours`. Seules les deux premières sont encore sur GitHub, où un push lance un build d'aperçu Cloudflare (claude, 2026-11-01)
 - [ ] Premier essai de `/aide` avec le contributeur qui a déjà accès à l'admin, et corrections qu'il fait remonter (user:moi, 2026-11-01)
 - [ ] Écarts de forme de l'audit non traités (`source/audit-coherence/`) : mention « aucune critique trouvée » absente de plusieurs notes, `regime-exception` sur les textes à mesure temporaire non centrale, vigilances de sens opposé, formules des motifs, résumés des fiches témoins (claude, 2026-11-01)
 - [ ] ZAN 2023 et plastiques dangereux : lire à la main les pages de FNE et de Générations Futures, refusées à la lecture automatique. Une critique sur le texte voté rouvre l'écart (claude, 2026-11-01)
@@ -32,7 +32,6 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] LOPJ 2023, SN2022-297 : les conseils de l'ordre de Paris, Lyon et Marseille contestent une « atteinte au droit d'accès à un juge », sans droit de la grille pour la justice commerciale. Statut de ces conseils au regard de la règle 7, à trancher (claude, 2026-11-01)
 - [ ] LOM 2019 : la note publiée dit « faute de source admise lue » sur le contrôle automatisé, alors que l'avis n° 395539 du Conseil d'État en parle (risques d'atteinte, mais dispositif admis). Corriger la note (claude, 2026-11-01)
 - [ ] Amendements clés des budgets au Sénat : 52 candidats non lus (claude, 2026-11-01)
-- [ ] Fiche d'un groupe NI : presque tous les député·es y figurent en « anciens membres » (630 en XVIIe, dont 4 seulement ont voté comme NI), car l'open data les inscrit NI entre l'élection et la formation des groupes. N'y lister que les personnes qui ont voté sous ce groupe, comme règle fixe. (claude, signalé par Max, 2026-11-01)
 - [ ] Présentation : PDF au texte sélectionnable, et chiffres à relire à chaque évolution de la méthode (claude, 2026-11-01)
 
 ## Textes à surveiller
@@ -47,15 +46,6 @@ Ce que les alertes de `lvnd check` et d'« À traiter » ne signalent pas. Le re
 ## Cycles candidats
 
 Un cycle à la fois, choisi et nommé au moment de l'ouvrir.
-
-### Sénat, suite
-
-Le Sénat de 2017-2022, écarté du cycle XVe (décision de Max, 31/10/2026) : lire chaque version votée, et redécouper la période unique de la règle 26. Et les compléments laissés hors du cycle Sénat.
-
-- [→Sénat, suite] Votes du Sénat sur les textes de la XVe (claude, 2026-10-31)
-- [→Sénat, suite] Amendements clés du Sénat (environ 31 suppressions hors budgets et retraites, sur 16 textes) (claude, 2026-10-31)
-- [→Sénat, suite] Cartes partageables des sénateur·ices (claude, 2026-10-31)
-- [→Sénat, suite] Comparer pour le Sénat (claude, 2026-10-31)
 
 ### Passation
 

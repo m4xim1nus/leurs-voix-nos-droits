@@ -3,6 +3,36 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Les tags `v*` du dépôt suivent ces versions.
 
+## [1.8.0] — 2026-11-01
+
+Cycle Sénat, suite : le Sénat de 2017-2022, lu comme celui d'après. Les scores du Sénat changent, depuis 2022 aussi : ils comptent
+désormais des amendements clés. Aucun score de l'Assemblée ne bouge.
+
+### Ajouté
+
+- **Données** : scrutins et votes du Sénat depuis le 27/06/2017, soit 2 243 scrutins et 780 054 votes. Contrôle croisé sur 247 pages de
+  senat.fr, aucun écart.
+- **Qualifications** : 46 textes de la XVe lus pour le Sénat, dont 37 comptés et 9 affichés ; 50 textes votés au seul Sénat écartés au tri.
+- **Amendements clés du Sénat** : 19 retenus sur 87 candidats hors budgets, sur 14 textes.
+- `/senat/comparer` : deux sénateur·ices, deux groupes, ou un·e sénateur·ice et un groupe sur la période de ce groupe. Jamais avec l'Assemblée.
+- Cartes partageables des sénateur·ices, avec la mention « votes enregistrés à son nom ».
+- `senat/scores_senateurs_periodes.csv`, et la colonne `a_vote` d'`appartenances.csv`.
+
+### Modifié
+
+- Règle 26 : deux périodes coupées au 28/06/2022, un texte comptant dans celle de son décisif, et amendements clés aux conditions de la règle 11.
+  `senat/scores_groupes.csv` gagne la colonne `periode`. `/senat` et l'aperçu de l'admin se lisent par période.
+- Fiche d'un groupe NI : seuls les député·es qui y sont, ou qui y ont voté, et non toute l'Assemblée.
+- `lvnd sync-admin` envoie dans D1 les amendements du Sénat, nécessaires pour les retenir.
+
+### Limites connues
+
+- Les 52 amendements candidats des lois de finances et de sécurité sociale ne sont pas lus : un budget ne compte au Sénat que par son décisif.
+- Les groupes du Sénat gardent leur nom actuel, faute d'historique dans l'open data, y compris sur 2017-2022.
+- `justice-criminelle-2026` compte peut-être à l'Assemblée un amendement clé sur une mesure absente du texte de la CMP, à vérifier (`BACKLOG.md`).
+- Plusieurs sources n'ont pas pu être lues (refus d'accès, PDF scannés lus en partie) : détail dans la fiche privée de relecture.
+- La passe du 02/11/2026 n'a pas tourné au moment du tag.
+
 ## [1.7.1] — 2026-11-01
 
 Fin du cycle Prise en main : la page d'aide, restée hors du commit de la v1.7.0.

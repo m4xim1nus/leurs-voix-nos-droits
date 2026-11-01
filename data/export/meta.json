@@ -1,5 +1,5 @@
 {
- "genere_le": "2026-11-01T14:59:14+00:00",
+ "genere_le": "2026-11-01T15:54:39+00:00",
  "sources": {
   "an_scrutins_17": {
    "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/loi/scrutins/Scrutins.json.zip",
@@ -134,7 +134,7 @@
   "en_cours_evenements": 75,
   "en_cours_etats": 1065,
   "en_cours_agenda": 89,
-  "en_cours_alertes": 99,
+  "en_cours_alertes": 5,
   "votes": 2484369,
   "fichiers_votes": 97,
   "senat_scrutins": 2243,

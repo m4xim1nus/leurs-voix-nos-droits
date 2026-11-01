@@ -69,6 +69,7 @@ Rôle d'un scrutin : `decisif` et `amendement` sont comptés ; `ensemble`, `moti
 
 ### `appartenances.csv`
 
+- `a_vote` : a voté au moins une fois sous ce groupe (`true` ou `false`)
 - `acteur_id`, `groupe_id`, `legislature`, `debut`, `fin`, `qualite`
 
 ### `groupes.csv`

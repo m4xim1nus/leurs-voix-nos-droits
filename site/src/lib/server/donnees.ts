@@ -161,7 +161,8 @@ function deputes(groupe: Map<string, GroupeCourt>): Depute[] {
       legislature: Number(a.legislature),
       debut: a.debut!,
       fin: txt(a.fin),
-      qualite: a.qualite!
+      qualite: a.qualite!,
+      a_vote: a.a_vote === 'true'
     });
     appart.set(a.acteur_id!, l);
   }

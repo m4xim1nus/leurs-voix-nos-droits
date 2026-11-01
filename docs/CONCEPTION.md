@@ -309,7 +309,7 @@ Comparer), Sénat, Méthode (Méthodologie et Données). Les adresses ne changen
 | Fiche député | `/deputes/<slug>` | circonscription, groupes successifs, score global et par droit (un clic sur un droit filtre ses votes), participation, abstentions, votes sur chaque scrutin compté (les autres sont sur la fiche texte), textes adoptés sans opposition, « Lui écrire », carte partageable |
 | Circonscription | `/circonscriptions/<dép>-<num>` | député en cours, ou « siège vacant », et ses prédécesseurs depuis 2022 |
 | Groupes | `/groupes` | par législature : tableau groupe × droit, effectifs |
-| Fiche groupe | `/groupes/<sigle>-<législature>` | score global, par droit et par texte (un clic sur un droit filtre ses textes), textes adoptés sans opposition, membres et leur score |
+| Fiche groupe | `/groupes/<sigle>-<législature>` | score global, par droit et par texte (un clic sur un droit filtre ses textes), textes adoptés sans opposition, membres et leur score (dans NI, seulement celles et ceux qui y sont, ou qui y ont voté) |
 | Comparer | `/comparer?a=…&b=…` | deux députés, deux groupes, ou un député et son groupe : score, droit par droit, textes où ils s'écartent le plus ; deux règles par ligne (le premier en haut, curseur plein ; le second en bas, curseur creux), bandeau fixe qui les rappelle au défilement |
 | Sénat | `/senat` | les groupes d'abord, droit par droit et par période (depuis juin 2022, 2017-2022) ; le vote de groupe expliqué ; sénateur·ices en poste par département (code postal ou nom : case de l'en-tête) |
 | Comparer au Sénat | `/senat/comparer` | deux sénateur·ices, deux groupes, ou un·e sénateur·ice et un groupe sur la période de ce groupe ; jamais avec l'Assemblée (règle 28) |

@@ -204,6 +204,10 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
     scr_df = _df(scr)
     votes_df = _df(votes)
     motifs_ec = {t["id"]: t["motif_ecart"] for t in en_cours}
+    # L'open data inscrit chaque député·e non-inscrit·e entre l'élection et la formation des groupes : `a_vote` dit qui a
+    # vraiment voté sous un groupe, pour ne pas lister toute l'Assemblée parmi les anciens NI (fiche d'un groupe).
+    ont_vote = set(votes_df.select("acteur_id", "groupe_id").unique().iter_rows())
+    appart = [{**a, "a_vote": (a["acteur_id"], a["groupe_id"]) in ont_vote} for a in appart]
     dfs = {
         "textes": _df(cat),
         "scrutins": scr_df,

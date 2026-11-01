@@ -1,5 +1,6 @@
 // Ce que reçoit chaque page : des extraits de `donnees()`, sérialisables et sans calcul de score.
 
+import { membreAffiche } from '$lib/groupes';
 import { error } from '@sveltejs/kit';
 import { donnees, type Donnees } from './donnees';
 import type {
@@ -340,7 +341,7 @@ export function vueGroupe(slug: string) {
   const membres = d.deputes
     .flatMap((dep) => {
       const a = dep.groupes.filter((x) => groupe.organes.includes(x.groupe.id));
-      if (!a.length) return [];
+      if (!a.length || !membreAffiche(groupe.sigle, a)) return [];
       return [
         {
           ...entree(d, dep),

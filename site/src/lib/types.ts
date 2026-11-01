@@ -306,6 +306,8 @@ export interface Appartenance {
   debut: string;
   fin: string | null;
   qualite: string;
+  /** A voté au moins une fois sous ce groupe. */
+  a_vote: boolean;
 }
 
 export interface Depute {

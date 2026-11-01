@@ -142,6 +142,13 @@
   </p>
   {@render liste(actuels)}
 {/if}
+{#if g.sigle === 'NI'}
+  <p class="petit discret">
+    L’open data inscrit tous les député·es comme non-inscrit·es entre l’élection et la formation des
+    groupes. Ne figurent donc ici que celles et ceux qui ont voté sans groupe, ou qui sont encore
+    non-inscrit·es.
+  </p>
+{/if}
 {#if anciens.length}
   <details>
     <summary>{pluriel(anciens.length, 'ancien membre', 'anciens membres')}</summary>
