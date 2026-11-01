@@ -17,6 +17,14 @@ describe('cartes partageables', () => {
     expect(svg).toContain('>34 %<');
   });
 
+  it('dit au Sénat que le score vient des votes enregistrés (règle 27)', () => {
+    const svg = svgCarte({ ...carte, enregistres: true, nTextes: 12 });
+    expect(svg).toContain('sur 12 textes, votes enregistrés à son nom');
+    expect(svgPortrait({ ...carte, enregistres: true, nTextes: 1 })).toContain(
+      'sur 1 texte, votes enregistrés à son nom'
+    );
+  });
+
   it('rend un PNG de 1200 × 630', () => {
     const p = png(svgCarte(carte));
     expect([...p.slice(1, 4)].map((c) => String.fromCharCode(c)).join('')).toBe('PNG');

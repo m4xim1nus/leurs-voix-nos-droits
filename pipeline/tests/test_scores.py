@@ -126,6 +126,26 @@ def test_senat_ne_change_rien_a_l_an_et_compte_le_seul_decisif():
     assert (g["score"], g["abstentions"], g["n_textes"]) == (50.0, 1, 3)
 
 
+def test_senat_amendement_cle_partage_le_poids_du_texte():
+    droits = [{"code": "libertes", "role": "principal", "sens": "restreint"}]
+    doc = scores.qualif_senat({"textes": [{"id": "t", "droits": droits, "scrutins": [], "senat": {"version": "seul", "droits": [], "scrutins": [
+        {"id": "D", "role": "decisif", "pour": "texte"}, {"id": "A", "role": "amendement", "pour": "contre-texte"},
+        {"id": "M", "role": "motion", "pour": "contre-texte"}]}}]})
+    assert [x["id"] for x in doc["textes"][0]["scrutins"]] == ["D", "A"]
+    votes = [{"scrutin_id": "D", "acteur_id": "1A", "groupe_id": "UC", "position": "pour"}, {"scrutin_id": "A", "acteur_id": "1A", "groupe_id": "UC", "position": "contre"}]
+    sc = scores.calculer(doc, votes, scores.REGLES_SENAT)
+    # Voter pour un texte qui restreint : 0 ; voter contre la suppression de sa mesure : 0.
+    assert next(r for r in sc["scores_deputes"] if r["droit"] == "global")["score"] == 0.0
+    votes[1]["position"] = "pour"
+    sc = scores.calculer(doc, votes, scores.REGLES_SENAT)
+    assert next(r for r in sc["scores_deputes"] if r["droit"] == "global")["score"] == 50.0  # 0,5 × 0 + 0,5 × 1
+
+
+def test_senat_periode_coupee_a_la_xvie():
+    assert scores.periode_senat("2022-06-27") == "2017-2022"
+    assert scores.periode_senat("2022-06-28") == "depuis-2022"
+
+
 def test_par_legislature_redonne_le_score_d_ensemble():
     """Un député sur une seule législature a le même score que son score global ; sur deux, chacune garde ses votes."""
     temoins = {"textes": [

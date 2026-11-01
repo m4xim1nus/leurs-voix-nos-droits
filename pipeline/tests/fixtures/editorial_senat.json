@@ -1074,6 +1074,156 @@
      "contre": 1
     }
    }
+  },
+  {
+   "nom": "amendement sans decisif",
+   "doc": {
+    "id": "t",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "principal",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "senat": {
+     "version": "meme",
+     "scrutins": [
+      {
+       "id": "SN1",
+       "role": "amendement",
+       "pour": "contre-texte",
+       "objet": "suppression (10-20)"
+      }
+     ]
+    }
+   },
+   "erreurs": [
+    "Sénat : amendement clé sans décisif compté (règle 26)"
+   ],
+   "avertissements": []
+  },
+  {
+   "nom": "amendements open data",
+   "doc": {
+    "id": "t",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "principal",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": " Parce que. "
+     }
+    ],
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "senat": {
+     "version": "meme",
+     "scrutins": [
+      {
+       "id": "SN1",
+       "role": "decisif",
+       "pour": "texte",
+       "objet": "ensemble (10-20)"
+      },
+      {
+       "id": "SN2",
+       "role": "amendement",
+       "pour": "contre-texte",
+       "objet": "suppression (10-20)"
+      },
+      {
+       "id": "SN3",
+       "role": "amendement",
+       "pour": "a-trancher",
+       "objet": "suppression (0-20)"
+      },
+      {
+       "id": "SN4",
+       "role": "amendement",
+       "pour": "texte",
+       "objet": "motion (5-6)"
+      }
+     ]
+    }
+   },
+   "infos_senat": {
+    "SN1": {
+     "dossier_id": "DLR5L17N1",
+     "objet": "ensemble",
+     "pour": 10,
+     "contre": 20
+    },
+    "SN2": {
+     "dossier_id": "DLR5L17N1",
+     "objet": "amendement",
+     "pour": 10,
+     "contre": 20
+    },
+    "SN3": {
+     "dossier_id": "DLR5L17N1",
+     "objet": "article",
+     "pour": 0,
+     "contre": 20
+    },
+    "SN4": {
+     "dossier_id": "DLR5L17N1",
+     "objet": "motion_rejet",
+     "pour": 5,
+     "contre": 6
+    }
+   },
+   "erreurs": [
+    "Sénat : SN3 : amendement clé sans voix d'un côté (0-20) (règle 11)",
+    "Sénat : SN3 : amendement clé sans sens fixé (règle 11)",
+    "Sénat : SN4 : amendement clé sur motion_rejet (règle 11)"
+   ],
+   "avertissements": [
+    "Sénat : SN3 : sens à trancher, scrutin non compté"
+   ]
   }
  ]
 }
