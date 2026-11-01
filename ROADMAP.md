@@ -45,5 +45,5 @@ Vérifier la passe quotidienne du 02/11/2026, première avec la XVe, et nettoyer
    quand c'est sûr.
 8. [x] **Catalogue** : `cc_sens` vide pour 2021-817 DC ; `textes.csv` titre « 2021 à 2027 » pour la programmation de la recherche,
    alors que la loi dit 2030.
-9. [ ] **« Prochains votes » de la fiche député·e** (`prochains`, `site/src/lib/server/vues.ts:205`) : y ajouter les textes du seul
+9. [x] **« Prochains votes » de la fiche député·e** (`prochains`, `site/src/lib/server/vues.ts:205`) : y ajouter les textes du seul
    Sénat attendus à l'AN (casseurs-payeurs), exclus pendant le cycle Sénat pour ne pas toucher aux vues de l'AN.

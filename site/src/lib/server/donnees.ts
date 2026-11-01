@@ -69,6 +69,8 @@ export interface Donnees {
   enCours: TexteEnCours[];
   /** Textes du seul Sénat encore en navette (page /en-cours seulement). */
   enCoursSeuls: TexteEnCours[];
+  /** Tous les textes retenus en cours, y compris ceux du seul Sénat, par échéance. */
+  enCoursTous: TexteEnCours[];
   senat: BaseSenat;
   lignees: Lignee[];
   ligneeDe: Map<string, Lignee>;
@@ -587,6 +589,7 @@ function charger(): Donnees {
     .filter((t) => t.etat?.etat === 'en_navette')
     .map(qualifieEnCours)
     .sort(parEcheance);
+  const enCoursTous = [...enCours, ...enCoursSeuls].sort(parEcheance);
 
   const participation = new Map<string, Participation>(
     (existsSync(resolve(EXPORT, 'participation.csv')) ? exp('participation') : []).map((p) => [
@@ -610,6 +613,7 @@ function charger(): Donnees {
     unanimes,
     enCours,
     enCoursSeuls,
+    enCoursTous,
     senat,
     lignees,
     ligneeDe,

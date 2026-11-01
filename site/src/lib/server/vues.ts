@@ -203,9 +203,9 @@ function groupeDuJour(dep: Depute, date: string): GroupeCourt | null {
   );
 }
 
-/** Textes retenus attendus à l'AN et, à la lecture précédente, le vote du député et de son groupe. */
+/** Textes retenus attendus à l'AN, ceux du seul Sénat compris, et, à la lecture précédente, le vote du député et de son groupe. */
 function prochains(d: Donnees, dep: Depute) {
-  return d.enCours
+  return d.enCoursTous
     .filter((t) => t.echeance === 'AN' || (t.echeance === 'inscrit' && estInscritAN(t)))
     .map((t) => {
       const v = t.dernier_vote;

@@ -57,7 +57,7 @@ describe('données du site', () => {
 
   it('ne propose aux députés en cours que les textes attendus à l’Assemblée', () => {
     const attendus = new Set(
-      d.enCours
+      [...d.enCours, ...d.enCoursSeuls]
         .filter((t) => t.echeance === 'AN' || t.seances.length > 0 || t.chambre === 'AN')
         .map((t) => t.id)
     );
