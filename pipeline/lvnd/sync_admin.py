@@ -40,7 +40,6 @@ COLONNES_ALERTES = alertes_.COLONNES
 COLONNES_SENAT_SCRUTINS = ("id", "texte_id", "session", "numero", "date", "titre", "objet", "lecture", "sort", "pour", "contre",
                            "abstention", "non_votants", "note", "url", "positions")
 COLONNES_SENAT_GROUPES = ("id", "sigle", "nom")
-OBJETS_SANS_FICHE = ("amendement",)  # le Sénat ne retient aucun amendement (règle 23) : D1 s'en passe
 
 
 def sql_valeur(v) -> str:
@@ -140,7 +139,7 @@ def catalogue(export: Path) -> dict[str, list[dict]]:
         {**{k: r[k] for k in COLONNES_SENAT_SCRUTINS if k in r}, "texte_id": r["dossier_id"], "note": _vide(r["note"]),
          "positions": json.dumps(pos_senat.get(r["id"], []), separators=(",", ":"))}
         for r in _lire(export, "senat/scrutins").iter_rows(named=True)
-        if r["dossier_id"] in ids and r["objet"] not in OBJETS_SANS_FICHE]
+        if r["dossier_id"] in ids]
     return {"textes": textes, "scrutins": scrutins, "groupes": groupes, "alertes": _alertes(export),
             "senat_scrutins": senat_scrutins, "senat_groupes": _lire(export, "senat/groupes").to_dicts(),
             "catalogue_meta": metas}
