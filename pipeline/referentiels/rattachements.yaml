@@ -38,6 +38,11 @@ catalogue:
   DLR5L15N40171: { titre: "Programmation de la recherche pour les années 2021 à 2030" }  # dump : « 2021 à 2027 » ; titreLoi : 2030
   DLR5L15N40712: { cc_sens: "Partiellement conforme" }  # 2021-817 DC, statutConclusion vide dans le dump
 
+# Erreurs du dump : `objet.dossierLegislatif` désigne un autre texte que celui que nomme le scrutin. Lues à la main, elles
+# priment sur tout. Pour en chercher d'autres : `uv run python explo/rattachement_objet.py`.
+corrections:
+  VTANR5L17V6758: { dossier: DLR5L17N54085, etape: AN1 }  # amendement n° 1128 du projet de loi d'urgence agricole, donné à la loi organique « natifs » (DLR5L17N52104)
+
 scrutins:
   - { numeros: "57-84", dossier: DLR5L14N35825, etape: AN1 }       # confiance dans la vie publique, loi ordinaire
   - { numeros: "145 147", dossier: DLR5L15N35984, etape: AN1 }     # programmation des finances publiques 2018-2022

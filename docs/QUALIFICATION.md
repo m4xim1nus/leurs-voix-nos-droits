@@ -88,6 +88,7 @@ changent pas, ni la validation par Max.
    |---|---|
    | `vote_posterieur` | le nouveau vote devient le décisif (règle 9) : relire le sens sur le texte voté (règle 6) |
    | `unanimite_contestee` | revoir l'écart (règle 9) : qualifier, ou garder l'écart avec un motif à jour |
+   | `ecart_revote` | texte écarté pour un autre motif que l'unanimité, revoté à l'AN (depuis le 01/11/2026) : relire l'écart, puis qualifier, ou garder l'écart avec un motif qui cite ce vote (son décompte « 120-45 », ou sa date « 19/11/2026 » sans scrutin public), ce qui éteint l'alerte |
    | `premier_decisif` | qualifier, ou écarter avec son motif |
    | `vote_sans_decisif` | la lecture est close sans décisif proposé (rejet d'une partie, vote sans scrutin public) : lire le dossier, puis qualifier ou écarter avec son motif |
    | `inscrit` | rien à qualifier : le vote n'a pas eu lieu. On repère les sources utiles et on revient après le vote |
@@ -190,7 +191,7 @@ travail doit être factuel, sourcé, vérifiable, et signaler franchement les po
   applicable au jour du vote, jurisprudence comprise (rétablir une règle abrogée par le Conseil
   constitutionnel restreint ; le droit du jour comprend son échéance légale : prolonger un dispositif
   protecteur étend, prolonger un régime restrictif ou en inscrire les pouvoirs dans le droit commun restreint ; rien de postérieur au vote) ; texte composite : sens des mesures que les
-  sources citent le plus, la mesure opposée en vigilance), 5 (vigilance), 6 (on qualifie le texte
+  sources mettent en cause ou défendent le plus, la mesure opposée en vigilance ; droit principal : celui de la mesure la plus citée ainsi, à égalité celui de l'objet du texte ; mesure d'un autre droit avec sa source → secondaire ; source qui constate une discrimination → `discriminations` en secondaire), 5 (vigilance), 6 (on qualifie le texte
   soumis au scrutin décisif), 7 (sources admises, dont les instances consultatives indépendantes,
   l'ANSES, le HCFEA, l'UNAF (statut signalé), une association porteuse d'un dispositif pour en décrire
   un risque (signalée partie prenante), les syndicats représentatifs de salariés, leurs fédérations,
@@ -211,7 +212,7 @@ travail doit être factuel, sourcé, vérifiable, et signaler franchement les po
   affichées, pas comptées), 11 (amendements clés : seulement suppression ou rétablissement d'un
   article dont la mesure est **mise en cause** par une source — une source favorable, une critique
   d'insuffisance ou une décision qui valide la mesure ne suffisent pas, ni une source antérieure au projet et générale : la source vise la mesure sur ce projet, ou telle qu'elle est votée ; article mixte, au sens non
-  univoque, ou dont les sources ne s'accordent pas sur le sens → non retenu ; **une seule lecture : la dernière lecture de l'AN où des suppressions
+  univoque, ou dont les sources ne s'accordent pas sur le sens → non retenu ; mesure absente du texte soumis au décisif, critique qui ne vise qu'un droit secondaire de sens opposé au principal → non retenu ; réserve du Conseil : mise en cause seulement si elle censure ou neutralise la mesure ; **une seule lecture : la dernière lecture de l'AN où des suppressions
   ont été mises aux voix** ; un seul scrutin par article ; l'article qui est le seul du texte au
   décisif compte comme un article unique ; le sens se lit sur le contenu de
   l'article).

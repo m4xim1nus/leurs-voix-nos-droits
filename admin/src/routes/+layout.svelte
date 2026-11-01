@@ -24,6 +24,16 @@
     {#each liens as l (l.href)}
       <a href={l.href} aria-current={actif(l.href) ? 'page' : undefined}>{l.libelle}</a>
     {/each}
+    <a
+      href="https://github.com/m4xim1nus/leurs-voix-nos-droits/blob/main/docs/TUTORIEL_ADMIN.md"
+      rel="external noopener"
+      target="_blank">Aide</a
+    >
+    <a
+      href="https://github.com/m4xim1nus/leurs-voix-nos-droits/blob/main/docs/EXPLOITATION.md"
+      rel="external noopener"
+      target="_blank">Exploitation</a
+    >
   </nav>
   <p class="discret">
     {data.email}

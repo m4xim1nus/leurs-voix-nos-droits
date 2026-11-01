@@ -77,6 +77,18 @@
       </li>
     {/each}
   </ul>
+  {#if cp.senateurs.length}
+    <h3>Sénateur·ices du département</h3>
+    <ul>
+      {#each cp.senateurs as e (e.slug)}
+        <li>{@render elu(e)}</li>
+      {/each}
+    </ul>
+  {/if}
+{/if}
+
+{#if r.approche}
+  <p class="note">Rien d’exact : voici les résultats les plus proches de votre saisie.</p>
 {/if}
 
 {#if r.elus.length}

@@ -57,6 +57,39 @@ def test_suppression_article_unique_compte_si_adoptee():
     assert len(alertes.calculer([texte(decisif="S1")], ss, [], qualif([qualifie("D", ("S1", "decisif"))]))) == 1
 
 
+def test_ecart_revote():
+    """AGRASC : écarté faute de source, un vote sur les conclusions de la CMP doit se voir."""
+    ecart = {"dossier_an": "D", "motif": "Aucune source admise sur une de ses mesures (règle 8)."}
+    avant = scrutin("S1", date="2026-06-03")
+    assert alertes.calculer([texte()], [avant], [], qualif(ecartes=[ecart])) == []
+    apres = scrutin("S2", date="2026-11-18", pour=120, contre=45)
+    r = alertes.calculer([texte()], [avant, apres], [], qualif(ecartes=[ecart]))
+    assert types(r) == [("ecart_revote", "D", "S2")]
+    assert "120-45" in r[0]["detail"]
+    # le motif relu cite ce vote : l'alerte tombe
+    relu = {**ecart, "motif": "Toujours aucune source admise après le vote de la CMP (120-45) (règle 8)."}
+    assert alertes.calculer([texte()], [avant, apres], [], qualif(ecartes=[relu])) == []
+
+
+def test_ecart_revote_ni_unanimite_ni_amendement():
+    unanime = {"dossier_an": "D", "motif": "Adopté sans aucune voix contre au scrutin décisif (21-0) (règle 9)."}
+    apres = scrutin("S2", date="2026-11-18", pour=120, contre=0)
+    assert alertes.calculer([texte()], [apres], [], qualif(ecartes=[unanime])) == []
+    ecart = {"dossier_an": "D", "motif": "Hors de la grille."}
+    amdt = scrutin("S3", date="2026-11-18", objet="amendement")
+    assert alertes.calculer([texte()], [amdt], [], qualif(ecartes=[ecart])) == []
+
+
+def test_ecart_revote_sans_scrutin_public():
+    ecart = {"dossier_an": "D", "motif": "Aucune source admise."}
+    lecture = {"texte_id": "D", "etape": "CMP", "chambre": "AN", "date": "2026-11-19", "issue": "adopté",
+               "mode_adoption": "MAIN_LEVEE", "scrutin_id": None, "motif_ecart": None}
+    r = alertes.calculer([texte()], [], [], qualif(ecartes=[ecart]), lectures=[lecture])
+    assert types(r) == [("ecart_revote", "D", None)] and r[0]["id"] == "ecart_revote:D:CMP"
+    relu = {**ecart, "motif": "Aucune source admise, vote à main levée du 19/11/2026."}
+    assert alertes.calculer([texte()], [], [], qualif(ecartes=[relu]), lectures=[lecture]) == []
+
+
 def test_unanimite_contestee():
     motif = "Adopté sans aucune voix contre au scrutin décisif (96 pour, 0 contre) : ce vote ne départage aucun député (règle 9)."
     ecarte = {"dossier_an": "D", "motif": motif}

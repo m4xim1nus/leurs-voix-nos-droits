@@ -58,3 +58,11 @@ def test_le_referentiel_prime_sur_la_seance():
     s = {**scrutin("la motion de renvoi du projet de loi choix de son avenir professionnel", id_="VTANR5L15V1094")}
     lien = rattacher([s], {"A": dossier("A", "choix de son avenir professionnel", seance="S1")}, {}, {})["VTANR5L15V1094"]
     assert (lien["dossier_id"], lien["etape"], lien["rattachement"]) == ("DLR5L15N36410", "ANNLEC", "referentiel")
+
+
+def test_une_correction_lue_a_la_main_prime_sur_l_objet_du_dump(monkeypatch):
+    """V6758 : le dump rattache un amendement de la loi agricole à la loi organique « natifs »."""
+    monkeypatch.setattr("lvnd.textes.rattachements", lambda: {"scrutins": [], "corrections": {"V1": {"dossier": "BON", "etape": "AN1"}}})
+    s = {**scrutin("l'amendement n° 1128 au projet de loi relatif à la cathédrale"), "dossier_objet": "AUTRE"}
+    lien = rattacher([s], DOSSIERS, {}, {})["V1"]
+    assert (lien["dossier_id"], lien["etape"], lien["rattachement"]) == ("BON", "AN1", "referentiel")

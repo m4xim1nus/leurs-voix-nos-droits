@@ -6,6 +6,7 @@ import type { Statut } from './types';
 export type TypeAlerte =
   | 'vote_posterieur'
   | 'unanimite_contestee'
+  | 'ecart_revote'
   | 'premier_decisif'
   | 'vote_sans_decisif'
   | 'inscrit'
@@ -15,6 +16,7 @@ export type TypeAlerte =
 export const LIBELLES_ALERTE: Record<TypeAlerte, string> = {
   vote_posterieur: 'Vote sur l’ensemble après le décisif',
   unanimite_contestee: 'Écarté pour unanimité, vote contesté',
+  ecart_revote: 'Texte écarté, revoté à l’Assemblée',
   premier_decisif: 'Décisif d’un texte non traité',
   vote_sans_decisif: 'Lecture close sans décisif proposé',
   inscrit: 'Texte non traité, inscrit en séance',
@@ -34,7 +36,7 @@ export interface Alerte {
 
 /** L'alerte reste-t-elle à traiter, vu la qualification de D1 (statut et document JSON) ? */
 export function resteATraiter(a: Alerte, statut: Statut | null, doc: string | null): boolean {
-  if (a.type === 'unanimite_contestee') return statut === 'ecarte';
+  if (a.type === 'unanimite_contestee' || a.type === 'ecart_revote') return statut === 'ecarte';
   if (a.type === 'vote_posterieur') {
     if (!doc) return true;
     const scrutins = (JSON.parse(doc) as { scrutins?: { id: string }[] }).scrutins ?? [];

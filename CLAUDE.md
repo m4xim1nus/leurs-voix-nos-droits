@@ -102,6 +102,8 @@ docs/METHODO.md      grille des droits et règles de calcul, base de la page Mé
 docs/CONCEPTION.md   conception du site public et de l'admin
 docs/A_VALIDER.md    décisions préparées, en attente de Max (vidé au fil des arbitrages)
 docs/QUALIFICATION.md  qualification par lots : rôles, circuit, consigne aux agents
+docs/TUTORIEL_ADMIN.md  guide de l'admin pour les rédacteur·ices
+docs/EXPLOITATION.md qui tourne quand, ce qui bloque un commit, quoi faire en cas d'échec
 pipeline/lvnd/       package Python (CLI download / build / check / editorial / scores / annuaire / sync-admin)
 pipeline/explo/      scripts jetables (spike)
 pipeline/referentiels/  YAML maintenus à la main (droits, mots-clés, groupes, termes de recherche, pays → circonscription)

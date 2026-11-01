@@ -32,6 +32,46 @@ export function motCorrespond(mot: string, cherche: string): boolean {
 }
 
 const dans = (mots: string[], cherche: string) => mots.some((m) => motCorrespond(m, cherche));
+
+/** Distance d'édition, une inversion de deux lettres voisines comptant pour une faute. */
+export function distance(a: string, b: string): number {
+  let avant: number[] = [];
+  let prec = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const ligne = [i];
+    for (let j = 1; j <= b.length; j++) {
+      const cout = a[i - 1] === b[j - 1] ? 0 : 1;
+      let d = Math.min(prec[j] + 1, ligne[j - 1] + 1, prec[j - 1] + cout);
+      if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1])
+        d = Math.min(d, avant[j - 2] + 1);
+      ligne.push(d);
+    }
+    avant = prec;
+    prec = ligne;
+  }
+  return prec[b.length];
+}
+
+/** Fautes tolérées selon la longueur du mot : aucune sous quatre lettres, où tout se ressemble. */
+export const fautesTolerees = (mot: string) => (mot.length < 4 ? 0 : mot.length < 8 ? 1 : 2);
+
+/** Les mots du vocabulaire les plus proches de `mot` : lui-même s'il s'y trouve, sinon ceux à la plus petite distance. */
+export function motsProches(mot: string, vocabulaire: Iterable<string>): string[] {
+  const seuil = fautesTolerees(mot);
+  let meilleure = seuil + 1;
+  let proches: string[] = [];
+  for (const v of vocabulaire) {
+    if (v === mot) return [mot];
+    if (Math.abs(v.length - mot.length) > meilleure) continue;
+    const d = distance(mot, v);
+    if (d > seuil) continue;
+    if (d < meilleure) {
+      meilleure = d;
+      proches = [v];
+    } else if (d === meilleure) proches.push(v);
+  }
+  return proches;
+}
 const decoupe = (s: string) => normaliser(s).split(' ').filter(Boolean);
 
 interface Prepare {
@@ -99,6 +139,8 @@ export interface Resultats {
   pays: PaysIndex[];
   textes: TexteIndex[];
   ecartes: EcarteIndex[];
+  /** Vrai si rien ne correspondait exactement : ce sont les résultats d'une saisie corrigée. */
+  approche?: boolean;
 }
 
 export interface Moteur {
@@ -119,32 +161,92 @@ export function creerMoteur(index: IndexRecherche): Moteur {
     noms: [p.pays, ...p.alias].map(normaliser)
   }));
 
+  const textesTries = (mots: string[], phrase: string) =>
+    textes
+      .map(({ t, p }) => ({ t, s: noter(p, mots, phrase) }))
+      .filter((x) => x.s > 0)
+      .sort((a, b) => b.s - a.s || b.t.date.localeCompare(a.t.date))
+      .map((x) => x.t);
+  const ecartesTries = (mots: string[], phrase: string) =>
+    ecartes
+      .map(({ e, p }) => ({ e, s: noter(p, mots, phrase) }))
+      .filter((x) => x.s > 0)
+      .sort((a, b) => b.s - a.s || b.e.legislature - a.e.legislature)
+      .map((x) => x.e);
+  // Élu·es : chaque mot saisi commence un mot du nom, pour que « loi » ne trouve pas Éloi.
+  const elusTries = (motsBruts: string[]) =>
+    elus
+      .filter(({ mots: nom }) => motsBruts.every((m) => nom.some((n) => n.startsWith(m))))
+      .map((x) => x.e)
+      .sort(
+        (a, b) =>
+          Number(b.actuel) - Number(a.actuel) || Number(a.senat ?? false) - Number(b.senat ?? false)
+      );
+
+  // Vocabulaires de la recherche approchée, construits à la première faute seulement.
+  let vocabulaires: { documents: Set<string>; noms: Set<string> } | null = null;
+  const vocabulaire = () =>
+    (vocabulaires ??= {
+      documents: new Set(
+        [...textes, ...ecartes].flatMap(({ p }) =>
+          [...p.motsCles, ...p.motsTitre, ...p.motsEtiquettes, ...p.motsResume].map(singulier)
+        )
+      ),
+      noms: new Set(elus.flatMap((x) => x.mots))
+    });
+
+  /** Toutes les corrections d'une saisie, chaque mot remplacé par l'un de ses voisins (au plus quelques-unes). */
+  function corrections(mots: string[], voc: Set<string>): string[][] {
+    let lignes: string[][] = [[]];
+    for (const m of mots) {
+      const proches = motsProches(m, voc);
+      if (!proches.length) return [];
+      lignes = lignes.flatMap((l) => proches.slice(0, 4).map((p) => [...l, p])).slice(0, 8);
+    }
+    return lignes;
+  }
+
+  /** Repli quand rien ne correspond : mêmes règles, sur la saisie corrigée (« Kasbarien » → « kasbarian »). */
+  function approchee(phrase: string, mots: string[], motsBruts: string[]): Resultats {
+    const { documents, noms } = vocabulaire();
+    const unir = <T>(listes: T[][], cle: (x: T) => string) => {
+      const vus = new Map<string, T>();
+      for (const x of listes.flat()) if (!vus.has(cle(x))) vus.set(cle(x), x);
+      return [...vus.values()];
+    };
+    const docs = corrections(mots, documents);
+    return {
+      elus: unir(
+        corrections(motsBruts, noms).map((l) => elusTries(l)),
+        (e) => `${e.senat ? 's' : 'd'}-${e.slug}`
+      ),
+      pays: pays
+        .filter(({ noms }) =>
+          noms.some(
+            (n) => fautesTolerees(phrase) > 0 && distance(n, phrase) <= fautesTolerees(phrase)
+          )
+        )
+        .map((x) => x.p),
+      textes: unir(
+        docs.map((l) => textesTries(l, l.join(' '))),
+        (t) => t.id
+      ),
+      ecartes: unir(
+        docs.map((l) => ecartesTries(l, l.join(' '))),
+        (e) => e.dossier
+      ),
+      approche: true
+    };
+  }
+
   return {
     chercher(q) {
       const phrase = normaliser(q);
       if (phrase.length < 2) return { elus: [], pays: [], textes: [], ecartes: [] };
       const mots = motsCherches(q);
       const motsBruts = phrase.split(' ');
-      const trouveTextes = textes
-        .map(({ t, p }) => ({ t, s: noter(p, mots, phrase) }))
-        .filter((x) => x.s > 0)
-        .sort((a, b) => b.s - a.s || b.t.date.localeCompare(a.t.date))
-        .map((x) => x.t);
-      const trouveEcartes = ecartes
-        .map(({ e, p }) => ({ e, s: noter(p, mots, phrase) }))
-        .filter((x) => x.s > 0)
-        .sort((a, b) => b.s - a.s || b.e.legislature - a.e.legislature)
-        .map((x) => x.e);
-      return {
-        // Élu·es : chaque mot saisi commence un mot du nom, pour que « loi » ne trouve pas Éloi.
-        elus: elus
-          .filter(({ mots: nom }) => motsBruts.every((m) => nom.some((n) => n.startsWith(m))))
-          .map((x) => x.e)
-          .sort(
-            (a, b) =>
-              Number(b.actuel) - Number(a.actuel) ||
-              Number(a.senat ?? false) - Number(b.senat ?? false)
-          ),
+      const exacts: Resultats = {
+        elus: elusTries(motsBruts),
         pays: pays
           .filter(({ noms }) =>
             noms.some(
@@ -155,9 +257,12 @@ export function creerMoteur(index: IndexRecherche): Moteur {
             )
           )
           .map((x) => x.p),
-        textes: trouveTextes,
-        ecartes: trouveEcartes
+        textes: textesTries(mots, phrase),
+        ecartes: ecartesTries(mots, phrase)
       };
+      if (nombreResultats(exacts) > 0) return exacts;
+      const r = approchee(phrase, mots, motsBruts);
+      return nombreResultats(r) > 0 ? r : exacts;
     }
   };
 }

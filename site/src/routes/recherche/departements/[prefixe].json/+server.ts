@@ -1,4 +1,4 @@
-// Code postal → départements d'un préfixe à deux chiffres (recherche de la page Sénat).
+// Code postal → départements d'un préfixe à deux chiffres (sénateur·ices d'un code postal, dans la recherche).
 import { error, json } from '@sveltejs/kit';
 import { prefixesDepartements, tableDepartements } from '$lib/server/vues-senat';
 

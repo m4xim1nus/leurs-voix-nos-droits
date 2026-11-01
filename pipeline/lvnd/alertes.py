@@ -7,6 +7,9 @@ l'admin, qui retire ceux que D1 a déjà traités (admin/src/lib/alertes.ts).
 - `vote_posterieur` : vote sur l'ensemble après le décisif d'un texte qualifié ;
 - `unanimite_contestee` : texte écarté pour unanimité (règle 9) dont le décisif proposé a désormais
   des voix des deux côtés ;
+- `ecart_revote` : texte écarté pour un autre motif que l'unanimité (faute de source, hors grille…), revoté à l'AN sur
+  l'ensemble après la dernière revue des écarts (`ECARTS_RELUS_LE`). L'alerte tombe quand le texte est qualifié, ou
+  quand son motif, relu, cite ce vote : son décompte (« 120-45 »), ou sa date (« 19/11/2026 ») sans scrutin public ;
 - `premier_decisif` : décisif proposé sur un texte ni qualifié ni écarté (une fiche de suivi n'y change
   rien : le vote attendu a eu lieu, il reste à qualifier) ;
 - `vote_sans_decisif` : lecture de l'AN close sur un texte ni qualifié ni écarté, sans décisif proposé : rejet
@@ -25,6 +28,7 @@ from .textes import ENSEMBLE
 
 COLONNES = ("id", "type", "dossier_id", "scrutin_id", "date", "titre", "detail")
 SANS_OPPOSITION = re.compile(r"sans aucune voix (contre|pour)", re.I)  # motif écrit par l'admin (site : donnees.ts)
+ECARTS_RELUS_LE = "2026-11-01"  # un vote antérieur a déjà été vu quand l'écart a été décidé ou revu
 
 
 def _decompte(s: dict) -> str:
@@ -77,6 +81,25 @@ def calculer(textes: list[dict], scrutins: list[dict], points: list[dict], quali
             ajouter("unanimite_contestee", d, s["id"], s["date"], f"écarté pour unanimité, décisif proposé : {_decompte(s)}")
         elif d not in qualifies and d not in ecartes:
             ajouter("premier_decisif", d, s["id"], s["date"], f"décisif proposé : {_decompte(s)}")
+
+    closes: dict[str, list[dict]] = {}
+    for l in lectures:
+        if l["chambre"] == "AN" and l["issue"] and not l["scrutin_id"]:
+            closes.setdefault(l["texte_id"], []).append(l)
+    for d, e in ecartes.items():
+        if SANS_OPPOSITION.search(e["motif"]):
+            continue
+        votes = [s for s in finals.get(d, []) if s["date"] > ECARTS_RELUS_LE]
+        sans_scrutin = [l for l in closes.get(d, []) if l["date"] > ECARTS_RELUS_LE]
+        if votes:
+            s = max(votes, key=_cle)
+            if f"{s['pour']}-{s['contre']}" not in e["motif"]:
+                ajouter("ecart_revote", d, s["id"], s["date"], f"écarté (« {e['motif']} »), nouveau vote : {_decompte(s)}")
+        elif sans_scrutin:
+            l = max(sans_scrutin, key=lambda x: (x["date"], x["etape"]))
+            if "/".join(reversed(l["date"].split("-"))) not in e["motif"]:
+                ajouter("ecart_revote", d, None, l["date"], f"écarté (« {e['motif']} »), {l['etape']} {l['issue']} le {l['date']} "
+                        f"sans scrutin public ({l['mode_adoption']})", suffixe=l["etape"])
 
     sans_decisif: dict[str, dict] = {}
     for l in lectures:

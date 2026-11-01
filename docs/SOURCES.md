@@ -370,6 +370,7 @@ jamais échouer le contrôle : un nouveau vote ne doit pas bloquer l'Action.
 |---|---|---|
 | `vote_posterieur` | vote sur l'ensemble après le décisif (ou la motion de censure) retenu d'un texte qualifié | 0 |
 | `unanimite_contestee` | texte écarté pour unanimité dont le décisif proposé a des voix des deux côtés | 0 |
+| `ecart_revote` | texte écarté pour un autre motif, revoté à l'AN après le 01/11/2026, sans que son motif cite ce vote | 0 |
 | `premier_decisif` | décisif proposé sur un texte ni qualifié ni écarté | 0 |
 | `vote_sans_decisif` | lecture de l'AN close sans décisif proposé sur un texte ni qualifié, ni écarté, ni à l'arrêt : rejet d'une partie, vote sans scrutin public | 3 (01/11/2026) |
 | `inscrit` | texte ni qualifié ni écarté, inscrit **en séance** (pas en commission) | 14 |
@@ -585,7 +586,9 @@ Mesures du 31/10/2026, cycle XVe.
   NOR, donc pas de lien vers Légifrance.
 - **Rattachements figés.** 75 scrutins sont rattachés à la main dans ce même référentiel, qui prime sur la proximité dans
   la séance. Il corrige aussi deux champs du catalogue (`catalogue:`) : le titre de la programmation de la recherche et le sens
-  de la décision 2021-817 DC.
+  de la décision 2021-817 DC. Sa section `corrections:` prime sur tout, y compris sur `objet.dossierLegislatif` du dump, quand
+  celui-ci désigne un autre texte que celui que nomme le scrutin (V6758, en XVIIe : seul cas trouvé par
+  `pipeline/explo/rattachement_objet.py` le 01/11/2026).
 - **Déclarations du Gouvernement** (art. 49 ou 50-1). Elles ne vont qu'à leur propre dossier (procédure 11), quand il existe :
   le texte débattu le même jour ne les reçoit plus (règle corrigée le 01/11/2026). Les autres restent sans dossier.
 - **Intitulés.** Pour V45, V738 et V1612, le titre du scrutin ne cite pas le même article que la division de l'amendement (6 et

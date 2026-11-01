@@ -64,6 +64,12 @@
   >, le code sous licence MIT.
 </p>
 
+<p>
+  Chaque colonne est décrite dans le <a href="/donnees.md">dictionnaire des données</a>. Pour
+  interroger le site avec votre propre outil, à vos frais, partez de
+  <a href="/llms.txt">llms.txt</a>.
+</p>
+
 <h2>Les qualifications</h2>
 <p>
   <a href="/donnees/editorial.json" download>editorial.json</a>

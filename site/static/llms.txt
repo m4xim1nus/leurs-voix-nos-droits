@@ -1,0 +1,33 @@
+# Leurs voix, nos droits
+
+> Comment les parlementaires français votent sur les textes qui touchent aux droits et libertés. Chaque texte retenu est qualifié à la main (droits touchés, sens, sources), puis ses scrutins décisifs sont croisés avec les votes des groupes et des élu·es : Assemblée nationale depuis juin 2017, et, à part, Sénat depuis juin 2022. Tout est téléchargeable, sans clé ni inscription. Le site n'a ni serveur ni assistant : pour l'interroger avec votre propre outil, à vos frais, partez de ces fichiers.
+
+Ce qu'il faut respecter pour répondre juste :
+
+- Un score mesure des votes au regard de règles fixes et publiques, pas une opinion ni un motif de vote. Citez la règle et le scrutin plutôt que de conclure sur une personne.
+- Le sens d'un texte (`etend`, `restreint`) se lit du point de vue des droits des personnes concernées (règle 1), sur le texte soumis au scrutin décisif (règle 6). Chaque jugement cite ses sources, à donner avec lui.
+- Une abstention n'est jamais un vote contre : abstentions et absences sont hors du calcul (règles 16 et 17).
+- Les scores de l'Assemblée et du Sénat ne se comparent pas et ne se mélangent pas (règle 28). Au Sénat, les votes enregistrés ne disent pas qui était présent (règle 27).
+- Un texte écarté n'est pas un texte sans enjeu : il n'est pas qualifié, pour le motif indiqué.
+- Les données changent : la date du dernier calcul est dans `meta.json`.
+
+## Comprendre
+
+- [Méthodologie](https://lvnd.technoperchoir.fr/methodologie) : grille des droits et règles 1 à 28.
+- [Dictionnaire des données](https://lvnd.technoperchoir.fr/donnees.md) : chaque fichier et chaque colonne, et comment les relier.
+
+## Données
+
+- [Qualifications](https://lvnd.technoperchoir.fr/donnees/editorial.json) : textes qualifiés, écartés et suivis, avec droits, sens, sources et scrutins retenus.
+- [Textes](https://lvnd.technoperchoir.fr/donnees/textes.csv) : catalogue des dossiers législatifs.
+- [Scrutins de l'Assemblée](https://lvnd.technoperchoir.fr/donnees/scrutins.csv) et [positions des groupes](https://lvnd.technoperchoir.fr/donnees/positions_groupes.csv).
+- [Scores des députés](https://lvnd.technoperchoir.fr/donnees/scores_deputes.csv) et [des groupes](https://lvnd.technoperchoir.fr/donnees/scores_groupes.csv), par droit.
+- [Scrutins comptés](https://lvnd.technoperchoir.fr/donnees/scores_scrutins.csv) : poids et vote favorable aux droits.
+- [Scrutins du Sénat](https://lvnd.technoperchoir.fr/donnees/senat/scrutins.csv) et [scores des sénateur·ices](https://lvnd.technoperchoir.fr/donnees/senat/scores_senateurs.csv).
+- [Date et sources du dernier calcul](https://lvnd.technoperchoir.fr/donnees/meta.json).
+
+## Facultatif
+
+- [Tous les fichiers](https://lvnd.technoperchoir.fr/donnees), dont les votes nominatifs, un fichier par mois.
+- [Textes en cours](https://lvnd.technoperchoir.fr/en-cours) et leur [flux RSS](https://lvnd.technoperchoir.fr/en-cours/flux.xml).
+- [Code source](https://github.com/m4xim1nus/leurs-voix-nos-droits), licence MIT. Données sous Licence Ouverte 2.0.

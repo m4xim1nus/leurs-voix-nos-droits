@@ -1,5 +1,4 @@
 <script lang="ts">
-  import RechercheSenat from '$lib/components/RechercheSenat.svelte';
   import { pluriel, pourcent } from '$lib/format';
   import { NOM } from '$lib/site';
 
@@ -85,10 +84,11 @@
   taux de participation (<a href="/methodologie#regle-27">règle 27</a>).
 </p>
 
-<h2>Trouver ses sénateur·ices</h2>
-<RechercheSenat />
-
 <h2>Sénateur·ices en poste, par département</h2>
+<p>
+  Pour trouver les vôtres, tapez votre code postal ou leur nom dans la case de recherche, en haut de
+  la page.
+</p>
 {#each data.departements as dep (dep.code)}
   <section class="departement" id="dep-{dep.code}">
     <h3>{dep.nom}</h3>

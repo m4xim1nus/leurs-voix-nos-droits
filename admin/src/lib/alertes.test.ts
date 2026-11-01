@@ -34,6 +34,11 @@ describe('resteATraiter', () => {
     expect(resteATraiter(a, null, null)).toBe(true);
   });
 
+  it('écarté puis revoté : tant que le texte reste écarté', () => {
+    const a = alerte('ecart_revote', 'S2');
+    expect(resteATraiter(a, 'ecarte', '{}')).toBe(true);
+    expect(resteATraiter(a, 'a-relire', '{}')).toBe(false);
+  });
   it('unanimité contestée : tant que le texte reste écarté', () => {
     const a = alerte('unanimite_contestee', 'S2');
     expect(resteATraiter(a, 'ecarte', '{}')).toBe(true);

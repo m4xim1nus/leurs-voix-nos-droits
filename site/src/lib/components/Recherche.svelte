@@ -18,7 +18,7 @@
     | { type: 'vide' }
     | { type: 'attente' }
     | { type: 'erreur'; message: string }
-    | { type: 'noms'; liste: EntreeIndex[]; pays: PaysIndex[] }
+    | { type: 'noms'; liste: EntreeIndex[]; pays: PaysIndex[]; approche: boolean }
     | { type: 'cp'; cp: string; circos: CircoTrouvee[] }
   >({ type: 'vide' });
 
@@ -30,10 +30,10 @@
       resultat = 'erreur' in t ? { type: 'erreur', message: t.erreur } : { type: 'cp', ...t };
     } else if (normaliser(q).length >= 2) {
       try {
-        const { elus, pays } = (await chargerMoteur()).chercher(q);
+        const { elus, pays, approche } = (await chargerMoteur()).chercher(q);
         resultat =
           elus.length || pays.length
-            ? { type: 'noms', liste: elus.slice(0, 12), pays }
+            ? { type: 'noms', liste: elus.slice(0, 12), pays, approche: !!approche }
             : {
                 type: 'erreur',
                 message: `Aucun·e député·e depuis 2017 ni sénateur·ice depuis 2022 ne s’appelle « ${q} », et aucun pays ne porte ce nom.`
@@ -105,6 +105,11 @@
   {:else if resultat.type === 'erreur'}
     <p>{resultat.message}</p>
   {:else if resultat.type === 'noms'}
+    {#if resultat.approche}
+      <p class="petit discret">
+        Rien d’exact : voici les résultats les plus proches de votre saisie.
+      </p>
+    {/if}
     <ul>
       {#each resultat.pays as p (p.pays)}
         <li>
