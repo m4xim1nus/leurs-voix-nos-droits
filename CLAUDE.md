@@ -104,7 +104,7 @@ docs/A_VALIDER.md    décisions préparées, en attente de Max (vidé au fil des
 docs/QUALIFICATION.md  qualification par lots : rôles, circuit, consigne aux agents
 pipeline/lvnd/       package Python (CLI download / build / check / editorial / scores / annuaire / sync-admin)
 pipeline/explo/      scripts jetables (spike)
-pipeline/referentiels/  YAML maintenus à la main (droits, mots-clés, groupes)
+pipeline/referentiels/  YAML maintenus à la main (droits, mots-clés, groupes, termes de recherche, pays → circonscription)
 pipeline/tests/      pytest, dont les textes témoins
 site/                site public : SvelteKit adapter-static + d3
 admin/               admin : SvelteKit adapter-cloudflare + D1, derrière Cloudflare Access

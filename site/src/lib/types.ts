@@ -328,6 +328,41 @@ export interface Participation {
   taux: number;
 }
 
+/** Texte qualifié ou à suivre dans l'index de recherche (/recherche/textes.json). */
+export interface TexteIndex {
+  id: string;
+  titre: string;
+  resume: string;
+  etiquettes: string[];
+  /** Termes courants et surnoms : cherchés, jamais affichés (termes_recherche.csv). */
+  cles: string[];
+  date: string;
+  /** « Environnement : restreint, XVIIe législature ». */
+  detail: string;
+  url: string;
+}
+
+/** Texte écarté dans l'index de recherche : pas de fiche, son motif s'affiche dans le résultat. */
+export interface EcarteIndex {
+  dossier: string;
+  titre: string;
+  motif: string;
+  legislature: number;
+  url: string | null;
+  cles: string[];
+}
+
+/** Pays dans l'index de recherche : la circonscription des Français qui y vivent (/recherche/pays.json). */
+export interface PaysIndex {
+  pays: string;
+  alias: string[];
+  circo: string;
+  libelle: string;
+  /** Le tableau du code électoral ne le nomme pas : rattaché d'après le poste consulaire qui le couvre. */
+  hors_tableau: boolean;
+  depute: EntreeIndex | null;
+}
+
 /** Entrée de l'index de recherche par nom (JSON chargé à la demande). */
 export interface EntreeIndex {
   slug: string;

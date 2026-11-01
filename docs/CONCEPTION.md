@@ -298,7 +298,7 @@ vie privée », avec la source à côté, jamais « texte liberticide ».
 
 | Page | Adresse | Contenu |
 |---|---|---|
-| Accueil | `/` | recherche (code postal, nom), score global des groupes de la XVIIe, les onze droits, derniers textes qualifiés |
+| Accueil | `/` | recherche (code postal, pays, nom), score global des groupes de la XVIIe, les onze droits, derniers textes qualifiés |
 | Droit | `/droits/<code>` | libellé, textes (principal ou secondaire, sens), scores des groupes par législature |
 | Textes | `/textes` | textes qualifiés (filtres : droit, sens, législature), textes écartés et leur motif |
 | Fiche texte | `/textes/<id>` | droits, sens, justification et sources ; vigilance ; Conseil constitutionnel ; scrutins et positions de groupe ; score de chaque groupe sur ce texte ; liens AN et Légifrance |
@@ -310,6 +310,7 @@ vie privée », avec la source à côté, jamais « texte liberticide ».
 | Comparer | `/comparer?a=…&b=…` | deux députés, deux groupes, ou un député et son groupe : score, droit par droit, textes où ils s'écartent le plus ; deux règles par ligne (le premier en haut, curseur plein ; le second en bas, curseur creux), bandeau fixe qui les rappelle au défilement |
 | Sénat | `/senat` | les groupes d'abord, droit par droit ; le vote de groupe expliqué ; recherche par code postal ou nom ; sénateur·ices en poste par département |
 | Fiche sénateur·ice | `/senat/<slug>` | département, groupes successifs, score « d'après les votes enregistrés à son nom », écarts au groupe, votes comptés, « Lui écrire » ; **aucun taux de participation** (règle 27) |
+| Recherche | `/recherche?q=…` | tous les résultats d'une recherche : élu·es, code postal, pays, textes qualifiés, textes écartés et leur motif |
 | Méthodologie | `/methodologie` | grille, règles 1 à 28, préparation des qualifications, code postal, sources |
 | Données | `/donnees` | `editorial.json`, exports CSV, votes nominatifs, licence |
 
@@ -418,6 +419,26 @@ axes variables : deux instances statiques d'Archivo en TTF sont rangées
 dans `site/scripts/polices/`. La fiche propose « Télécharger l'image ».
 La carte donne aussi le droit le plus et le moins favorable ; à égalité,
 leur nombre (« 4 droits ») plutôt qu'un nom pris au hasard.
+
+### Recherche
+
+Une case dans l'en-tête, sur toutes les pages, avec un menu de résultats (flèches, Entrée, Échap) et une page `/recherche?q=…`
+pour tout voir. Quatre JSON statiques, chargés à la première frappe et non à l'ouverture de la page (`deputes.json`,
+`senateurs.json`, `textes.json`, `pays.json`, environ 160 Ko compressés en tout) ; le moteur (`site/src/lib/recherche.ts`)
+tourne dans le navigateur. Aucune requête ne dit ce que l'on cherche, pas même au site.
+
+- **Dans l'index** : élu·es, pays, titre, résumé, étiquettes, termes et surnoms des textes qualifiés et à suivre ; titre, termes
+  et surnoms des écartés. Le motif d'un écart s'affiche mais n'est pas cherché : ses formules se répètent (« règle 9 »).
+- **Hors index** : les 18 000 scrutins et les justifications, sources de bruit.
+- **Termes et surnoms** : `pipeline/referentiels/termes_recherche.yaml`, exportés dans `data/export/termes_recherche.csv`, donc
+  hors d'`editorial.json`, de l'admin et de D1. Ils se cherchent et ne s'affichent jamais. Ni victime, ni personne mise en cause, ni
+  formule militante. `lvnd check` refuse une clé inconnue et les termes de la liste privée.
+- **Correspondance** : tous les mots saisis doivent se trouver, sans accents ni casse, au singulier ; un mot de trois lettres ou
+  moins doit être entier (« APL » ne trouve pas « aplomb »), un mot plus long se complète. Pas de tolérance aux fautes de frappe.
+- **Classement** : clé exacte, puis expression dans une clé ou le titre, puis mots dans les clés, le titre, les étiquettes, le
+  résumé ; à égalité, le plus récent. Élu·es en poste d'abord.
+- **Pays** : la case de l'accueil et celle de l'en-tête donnent le ou la député·e de la circonscription. Un pays absent du tableau du
+  code électoral le dit (`pays_circonscriptions.csv`, colonne `hors_tableau`).
 
 ### Code postal
 

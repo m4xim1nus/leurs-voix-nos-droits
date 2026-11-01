@@ -112,7 +112,8 @@ def main(argv=None) -> int:
         editorial.CHEMIN.write_text(editorial.serialiser(editorial.depuis_temoins(referentiels.temoins())))
         print(editorial.CHEMIN, file=sys.stderr)
     elif args.commande == "scores":
-        from . import editorial, scores
+        from . import editorial, recherche, scores
+        recherche.ecrire(args.export)
         qualif = editorial.charger()
         sc = scores.depuis_export(args.export, qualif)
         scores.ecrire(args.export, sc)

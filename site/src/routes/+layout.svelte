@@ -1,6 +1,7 @@
 <script lang="ts">
   import '../app.css';
   import { page } from '$app/state';
+  import CaseRecherche from '$lib/components/CaseRecherche.svelte';
   import { date, pluriel } from '$lib/format';
   import { DEPOT, NOM, OUVERT } from '$lib/site';
 
@@ -31,6 +32,7 @@
 
 <header>
   <a class="marque" href="/">{NOM}</a>
+  <CaseRecherche />
   <nav aria-label="Principale">
     <ul>
       {#each MENU as m (m.href)}

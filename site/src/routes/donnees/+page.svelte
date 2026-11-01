@@ -33,6 +33,10 @@
     'en_cours_etats.csv': 'où en est chaque texte du catalogue',
     'en_cours_agenda.csv': 'ordre du jour de l’AN : points de séance et de commission à venir',
     'en_cours_alertes.csv': 'nouveaux votes et inscriptions à traiter pour la qualification',
+    'termes_recherche.csv':
+      'termes courants et surnoms cherchés par la recherche du site, jamais affichés, hors de tout score',
+    'pays_circonscriptions.csv':
+      'pays → circonscription des Français établis hors de France (code électoral, tableau n° 1 ter)',
     'senat/scrutins.csv': 'scrutins publics du Sénat depuis juin 2022, rattachés à leur dossier',
     'senat/positions_groupes.csv': 'décompte et position de chaque groupe sur chaque scrutin',
     'senat/senateurs.csv': 'sénateur·ices : département, courriel public',

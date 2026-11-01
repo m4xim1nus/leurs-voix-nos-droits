@@ -8,7 +8,7 @@ import re
 import sqlite3
 from pathlib import Path
 
-from . import alertes, an, editorial, referentiels, senat
+from . import alertes, an, editorial, recherche, referentiels, senat
 
 
 def _q(con, sql: str, *args) -> list[tuple]:
@@ -145,6 +145,17 @@ def _qualifications(con, controle, out) -> None:
         controle(f"{s['id']} : fiche de suivi valide", not err, " ; ".join(err))
         out += [f"info {s['id']} : {a}" for a in avert]
     out.append(f"info {len(doc['textes'])} textes qualifiés, {len(doc.get('ecartes', []))} écartés, {len(suivis)} à suivre")
+
+
+def _recherche(controle, out) -> None:
+    """Termes de recherche et table des pays : clés connues, table complète, aucun terme de la liste privée."""
+    err, sans = recherche.controler_termes(editorial.charger())
+    controle("termes de recherche : clés connues, ni vides ni en double", not err, " ; ".join(err))
+    controle("pays → circonscription : table complète, sans doublon", not (e := recherche.controler_pays()), " ; ".join(e))
+    if TERMES_INTERDITS.exists():
+        trouves = termes_interdits("\n".join(l["terme"] for l in recherche.lignes_termes()))
+        controle("aucun terme interdit dans les termes de recherche", not trouves, f"{len(trouves)} terme(s) trouvé(s)")
+    out += [f"info {cle} : aucun terme de recherche" for cle in sans]
 
 
 def _alertes(con) -> list[dict]:
@@ -287,6 +298,7 @@ def verifier(chemin: Path) -> tuple[bool, list[str]]:
 
     out.append(f"\n== Qualifications ({'data/editorial.json' if editorial.CHEMIN.exists() else 'textes témoins'})")
     _qualifications(con, controle, out)
+    _recherche(controle, out)
 
     out.append("\n== Catalogue")
     for nature, n, c, s in _q(con, "select nature, count(*), sum(droits_candidats != '' or etiquettes_candidates != ''), "

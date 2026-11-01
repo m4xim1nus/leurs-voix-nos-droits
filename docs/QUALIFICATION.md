@@ -68,6 +68,13 @@ Le lot de tri (garder ou écarter des candidats en masse) suit le même
 circuit. Ses brouillons ne portent que `statut: ecarte` et un
 `motif_ecart` court, ou une simple liste « à qualifier » dans la fiche.
 
+## Termes de recherche
+
+Un texte nouvellement qualifié se trouve déjà par son titre et son résumé. Pour qu'il se trouve aussi par ce que les gens tapent
+(« APL », « loi Duplomb »), ajouter ses termes à `pipeline/referentiels/termes_recherche.yaml` : `lvnd check` signale chaque texte
+qualifié qui n'en a pas (ligne `info`), sans bloquer. Ni victime, ni personne mise en cause, ni formule militante ; un surnom doit
+être d'usage public. Les règles sont en tête du fichier.
+
 ## Au fil de l'eau
 
 Depuis le cycle « Au fil des votes », un nouveau vote se traite sans attendre

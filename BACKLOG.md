@@ -25,6 +25,8 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] Vérifier le 02/11/2026 que la passe quotidienne (`donnees-quotidien.yml`, 5 h UTC) tourne bien : première avec la XVe et avec la v1.5.0. Attendu : plus d'attente de 20 minutes sur le dump des amendements (copie de la release, ou archive du cache), passe finie sous le plafond de 60 minutes, sync de l'admin sans erreur, build Cloudflare réussi, site à jour. Si elle échoue, rien n'est commité et le site garde les données de la veille : corriger, relancer à la main, et ne pas supprimer les branches (user:moi, 2026-11-01)
 - [ ] Une fois la passe du 02/11/2026 vérifiée : supprimer les branches `xve`, `worktree-textes-en-cours` et `relecture-xve`, fusionnées dans `main`, en local et sur GitHub, et les worktrees `.claude/worktrees/xve` et `textes-en-cours`. Tant qu'une branche existe sur GitHub, un push y lance un build d'aperçu Cloudflare (claude, 2026-11-01)
 - [ ] `/comparer` : un·e député·e y garde son score global face à un groupe sur sa seule législature, alors que la fiche compare désormais sur la même législature (règle 19). Le libellé du groupe dit la législature ; à aligner ou non (claude, 2026-11-01)
+- [ ] Recherche : tolérance aux fautes de frappe (« Kasbarien »), non prévue au cycle Recherche ; le moteur n'accepte que des mots justes, sans accents ni casse (claude, 2026-11-01)
+- [ ] Recherche sur `/senat` : la case de la page ne cherche ni pays ni textes. Sans objet pour les pays, les sénateur·ices des Français de l'étranger n'ayant pas de circonscription par pays ; à voir si la fusionner avec la case de l'en-tête (claude, 2026-11-01)
 
 ## Textes à surveiller
 

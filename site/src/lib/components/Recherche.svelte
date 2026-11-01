@@ -1,101 +1,46 @@
 <!--
-  Recherche d'un député par code postal ou par nom, sans serveur : les tables sont des JSON
-  statiques chargés à la demande (/recherche/deputes.json, /recherche/cp/<2 chiffres>.json). La
-  recherche par nom trouve aussi les sénateur·ices, signalé·es comme tel·les.
+  Recherche d'un député par code postal, par nom ou par pays, sans serveur : les tables sont des JSON
+  statiques chargés à la demande ($lib/charge-recherche). La recherche par nom trouve aussi les
+  sénateur·ices, signalé·es comme tel·les. La case de l'en-tête (CaseRecherche) cherche aussi les textes.
   Code postal à plusieurs circonscriptions : on liste les députés possibles, avec les communes
   de chacune (docs/CONCEPTION.md, code postal).
 -->
 <script lang="ts">
-  import { circonscription, normaliser } from '$lib/format';
-  import type { EntreeIndex, TableCodesPostaux } from '$lib/types';
+  import { chargerMoteur, chercherCodePostal, type CircoTrouvee } from '$lib/charge-recherche';
+  import { normaliser } from '$lib/format';
+  import { estCodePostal } from '$lib/recherche';
+  import type { EntreeIndex, PaysIndex } from '$lib/types';
 
   let { grand = false }: { grand?: boolean } = $props();
 
   let saisie = $state('');
-  let index: EntreeIndex[] | null = null;
-  let tables = new Map<string, TableCodesPostaux>();
   let resultat = $state<
     | { type: 'vide' }
     | { type: 'attente' }
     | { type: 'erreur'; message: string }
-    | { type: 'noms'; liste: EntreeIndex[] }
-    | {
-        type: 'cp';
-        cp: string;
-        circos: {
-          id: string;
-          libelle: string;
-          communes: string[];
-          depute: EntreeIndex | null;
-        }[];
-      }
+    | { type: 'noms'; liste: EntreeIndex[]; pays: PaysIndex[] }
+    | { type: 'cp'; cp: string; circos: CircoTrouvee[] }
   >({ type: 'vide' });
-
-  async function json<T>(url: string): Promise<T> {
-    const r = await fetch(url);
-    if (!r.ok) throw new Error(String(r.status));
-    return r.json();
-  }
 
   async function chercher() {
     const q = saisie.trim();
-    if (/^\d{5}$/.test(q)) {
+    if (estCodePostal(q)) {
       resultat = { type: 'attente' };
-      const prefixe = q.slice(0, 2);
-      try {
-        if (!tables.has(prefixe))
-          tables.set(prefixe, await json<TableCodesPostaux>(`/recherche/cp/${prefixe}.json`));
-      } catch {
-        resultat = { type: 'erreur', message: `Aucun code postal ne commence par ${prefixe}.` };
-        return;
-      }
-      const t = tables.get(prefixe)!;
-      const lignes = t.codes[q];
-      if (!lignes) {
-        resultat = {
-          type: 'erreur',
-          message: `Le code postal ${q} n’existe pas dans la base de La Poste.`
-        };
-        return;
-      }
-      const ids = [...new Set(lignes.map((l) => l.circo))];
-      resultat = {
-        type: 'cp',
-        cp: q,
-        circos: ids.map((id) => ({
-          id,
-          libelle: t.circos[id].libelle,
-          communes: [...new Set(lignes.filter((l) => l.circo === id).map((l) => l.commune))],
-          depute: t.circos[id].depute
-        }))
-      };
+      const t = await chercherCodePostal(q);
+      resultat = 'erreur' in t ? { type: 'erreur', message: t.erreur } : { type: 'cp', ...t };
     } else if (normaliser(q).length >= 2) {
       try {
-        index ??= (
-          await Promise.all([
-            json<EntreeIndex[]>('/recherche/deputes.json'),
-            json<EntreeIndex[]>('/recherche/senateurs.json')
-          ])
-        ).flat();
+        const { elus, pays } = (await chargerMoteur()).chercher(q);
+        resultat =
+          elus.length || pays.length
+            ? { type: 'noms', liste: elus.slice(0, 12), pays }
+            : {
+                type: 'erreur',
+                message: `Aucun·e député·e depuis 2017 ni sénateur·ice depuis 2022 ne s’appelle « ${q} », et aucun pays ne porte ce nom.`
+              };
       } catch {
         resultat = { type: 'erreur', message: 'La liste des élu·es n’a pas pu être chargée.' };
-        return;
       }
-      const mots = normaliser(q).split(' ');
-      const liste = index
-        .filter((e) => mots.every((m) => normaliser(e.nom).includes(m)))
-        .sort(
-          (a, b) =>
-            Number(b.actuel) - Number(a.actuel) ||
-            Number(a.senat ?? false) - Number(b.senat ?? false)
-        )
-        .slice(0, 12);
-      resultat = liste.length
-        ? { type: 'noms', liste }
-        : {
-            type: 'erreur',
-            message: `Aucun·e député·e depuis 2017 ni sénateur·ice depuis 2022 ne s’appelle « ${q} ».`
-          };
     } else {
       resultat = { type: 'vide' };
     }
@@ -134,13 +79,15 @@
     chercher();
   }}
 >
-  <label for="recherche-{grand ? 'accueil' : 'page'}">Code postal ou nom de votre député·e</label>
+  <label for="recherche-{grand ? 'accueil' : 'page'}"
+    >Code postal, pays ou nom de votre député·e</label
+  >
   <div class="champ">
     <input
       id="recherche-{grand ? 'accueil' : 'page'}"
       type="search"
       autocomplete="off"
-      placeholder="33000, ou un nom"
+      placeholder="33000, Allemagne, ou un nom"
       bind:value={saisie}
       oninput={frappe}
     />
@@ -148,7 +95,8 @@
   </div>
 </form>
 <p class="etranger petit discret">
-  Vous vivez hors de France : <a href="/circonscriptions#etranger">vos onze circonscriptions</a>.
+  Vous vivez hors de France : tapez votre pays, ou voyez
+  <a href="/circonscriptions#etranger">les onze circonscriptions</a>.
 </p>
 
 <div class="resultats" aria-live="polite">
@@ -158,7 +106,23 @@
     <p>{resultat.message}</p>
   {:else if resultat.type === 'noms'}
     <ul>
-      {#each resultat.liste as e (e.slug)}
+      {#each resultat.pays as p (p.pays)}
+        <li>
+          {#if p.depute}
+            {@render carte(p.depute)}
+          {:else}
+            <a class="depute" href="/circonscriptions/{p.circo}">
+              <span class="nom">Siège vacant</span>
+            </a>
+          {/if}
+          <p class="petit discret communes">
+            {p.pays} : <a href="/circonscriptions/{p.circo}">{p.libelle}</a>{#if p.hors_tableau}.
+              Absent du tableau du code électoral, rattaché d’après le poste consulaire qui le
+              couvre{/if}
+          </p>
+        </li>
+      {/each}
+      {#each resultat.liste as e (`${e.senat ? 's' : 'd'}-${e.slug}`)}
         <li>{@render carte(e)}</li>
       {/each}
     </ul>
