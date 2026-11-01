@@ -1,11 +1,10 @@
 # Présentation du projet
 
-`leurs-voix-nos-droits.pdf` : une page A4 paysage, à partager telle quelle. Ni le site public ni l'admin ne la servent. Le fichier source est `presentation.html`.
+Le projet, ses objectifs, sa méthode et son fonctionnement, en 19 slides avec notes de l'orateur. Ni le site public ni l'admin ne servent ces fichiers.
 
-Après une modification ou pour remettre les chiffres à jour :
+- `leurs-voix-nos-droits.bento.html` : la source. Elle s'ouvre dans un navigateur, sans rien installer, pour présenter (`F5`) ou modifier. Fait avec [Bento](https://bento.page) (MIT), dont l'application est incluse dans le fichier.
+- `leurs-voix-nos-droits.pdf` : la version à partager, faite de captures des slides : son texte ne se sélectionne pas.
 
-```bash
-python3 docs/presentation/generer.py /chemin/vers/chrome   # écrit le PDF
-```
+**Modifier** : à la souris dans le fichier, ou en demandant à un LLM de réécrire le bloc JSON `#bento-doc` (guide : <https://bento.page/agents.md>). Les chiffres (201 textes, 620 écartés, 19 317 scrutins) sont ceux du 01/11/2026 : à mettre à jour à la main.
 
-Sans Chrome : `python3 docs/presentation/generer.py`, puis ouvrir `presentation-a-imprimer.html` dans un navigateur, Imprimer, Enregistrer en PDF, sans marges, avec les graphiques d'arrière-plan. Supprimer ensuite ce fichier intermédiaire.
+**Refaire le PDF** : ouvrir le fichier dans un navigateur et utiliser l'export PDF de l'application, ou l'impression.
