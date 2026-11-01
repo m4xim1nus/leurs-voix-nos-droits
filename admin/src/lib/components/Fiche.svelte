@@ -3,6 +3,7 @@
   // Tout se modifie en local, puis s'enregistre d'un bloc (une révision par enregistrement).
   import { untrack } from 'svelte';
   import { enhance } from '$app/forms';
+  import EditeurDroits, { type LigneSource, versLignes, versSources } from './EditeurDroits.svelte';
   import Positions from './Positions.svelte';
   import {
     date,
@@ -35,16 +36,11 @@
     ScrutinCatalogue,
     ScrutinRetenu,
     ScrutinSenat,
-    Source,
     Statut
   } from '$lib/types';
   import type { PageData, ActionData } from '../../routes/textes/[id]/$types';
 
   let { data, form }: { data: PageData; form: ActionData } = $props();
-
-  type LigneSource = Source & { cle: string; avant: string };
-  const versLignes = (s: Record<string, Source>): LigneSource[] =>
-    Object.entries(s ?? {}).map(([cle, v]) => ({ cle, avant: cle, ...v }));
 
   // État initial : la qualification enregistrée (ou vide). Le composant est recréé à chaque texte
   // (+page.svelte), d'où la lecture unique de `data`.
@@ -98,31 +94,14 @@
     note: ''
   });
   let blocSenat: BlocSenat = $state(depart.doc.senat ?? vide());
-  // Autre version : droits, étiquettes, vigilance et sources propres, saisis en JSON (rare, et le plus
-  // souvent chargés depuis un brouillon relu).
-  const versJson = (b: BlocSenat) =>
-    b.droits.length || b.etiquettes.length || b.vigilance.length || Object.keys(b.sources).length
-      ? JSON.stringify(
-          {
-            droits: b.droits,
-            etiquettes: b.etiquettes,
-            vigilance: b.vigilance,
-            sources: b.sources
-          },
-          null,
-          2
-        )
-      : '';
-  let texteAutre = $state(versJson(depart.doc.senat ?? vide()));
-  const senatJson = $derived.by(() => {
-    if (blocSenat.version !== 'autre' || !texteAutre.trim()) return { valeur: {}, erreur: null };
-    try {
-      return { valeur: JSON.parse(texteAutre) as Partial<BlocSenat>, erreur: null };
-    } catch {
-      return { valeur: {}, erreur: 'droits propres : JSON illisible' };
-    }
-  });
-  const senat = $derived<BlocSenat>({ ...blocSenat, ...senatJson.valeur });
+  let sourcesSenat: LigneSource[] = $state(versLignes(depart.doc.senat?.sources ?? {}));
+  // Droits, étiquettes, vigilance et sources propres n'existent que pour une autre version : le
+  // formulaire les garde si l'on change de version, mais ils ne s'enregistrent pas.
+  const senat = $derived<BlocSenat>(
+    blocSenat.version === 'autre'
+      ? { ...blocSenat, sources: versSources(sourcesSenat) }
+      : { ...blocSenat, droits: [], etiquettes: [], vigilance: [], sources: {} }
+  );
 
   // Fiche de suivi : ni sens, ni rôle, ni scrutin dans ce qui s'enregistre (le formulaire les garde,
   // au cas où le statut change avant l'enregistrement).
@@ -139,11 +118,7 @@
         : doc.droits,
       scrutins: aSuivre ? [] : doc.scrutins,
       senat: aSuivre ? undefined : senat,
-      sources: Object.fromEntries(
-        sources
-          .filter((s) => s.cle.trim())
-          .map(({ cle, auteur, titre, date, url }) => [cle.trim(), { auteur, titre, date, url }])
-      )
+      sources: versSources(sources)
     })
   );
   const controle = $derived.by(() => {
@@ -155,7 +130,6 @@
     const v = aSuivre
       ? validerSuivi(complet, data.grille)
       : valider(complet, data.grille, infos, infosSenat);
-    if (senatJson.erreur) v.erreurs.push(`Sénat : ${senatJson.erreur}`);
     if (data.autresIds.includes(complet.id))
       v.erreurs.push(`identifiant ${complet.id} déjà pris par un autre texte`);
     return v;
@@ -170,60 +144,6 @@
     if (premier) premier = false;
     else modifie = true;
   });
-
-  // --- Droits, étiquettes, sources, vigilance -------------------------------------------------
-
-  function ajouterDroit() {
-    doc.droits.push({
-      code: '',
-      role: doc.droits.some((d) => d.role === 'principal') ? 'secondaire' : 'principal',
-      sens: 'restreint',
-      sources: [],
-      justification: ''
-    });
-  }
-
-  function basculer(liste: string[], cle: string) {
-    const i = liste.indexOf(cle);
-    if (i >= 0) liste.splice(i, 1);
-    else liste.push(cle);
-  }
-
-  function ajouterSource(s?: { cle: string; source: Source }) {
-    let cle = s?.cle ?? '';
-    while (cle && sources.some((x) => x.cle === cle)) cle += '-bis';
-    const v = s?.source ?? { auteur: '', titre: '', date: '', url: '' };
-    sources.push({ cle, avant: cle, ...v });
-  }
-
-  /** Renommer une source met à jour les droits et la vigilance qui la citent. */
-  function renommer(l: LigneSource) {
-    const nouveau = l.cle.trim();
-    if (l.avant && nouveau && nouveau !== l.avant)
-      for (const liste of [
-        ...doc.droits.map((d) => d.sources),
-        ...doc.vigilance.map((v) => v.sources)
-      ]) {
-        const i = liste.indexOf(l.avant);
-        if (i >= 0) liste[i] = nouveau;
-      }
-    l.cle = nouveau;
-    l.avant = nouveau;
-  }
-
-  function retirerSource(i: number) {
-    const cle = sources[i].cle;
-    for (const liste of [
-      ...doc.droits.map((d) => d.sources),
-      ...doc.vigilance.map((v) => v.sources)
-    ]) {
-      const j = liste.indexOf(cle);
-      if (j >= 0) liste.splice(j, 1);
-    }
-    sources.splice(i, 1);
-  }
-
-  let choixBibliotheque = $state('');
 
   // --- Scrutins -------------------------------------------------------------------------------
 
@@ -361,7 +281,7 @@
     doc = d;
     sources = versLignes(d.sources);
     blocSenat = d.senat ?? vide();
-    texteAutre = versJson(blocSenat);
+    sourcesSenat = versLignes(blocSenat.sources);
     statut = r.statut;
     motif = r.motif_ecart ?? '';
     commentaire = `retour à la version du ${dateHeure(r.date)}`;
@@ -437,165 +357,17 @@
         <textarea bind:value={doc.resume} rows="2"></textarea>
       </label>
 
-      <h3>Droits touchés</h3>
-      <p class="discret">
-        {#if !aSuivre}Un droit principal ; le sens se lit du point de vue des droits des personnes
-          (règle 1).{/if} Une justification courte et au moins une source par droit.
-      </p>
-      {#each doc.droits as d, i (i)}
-        <div class="droit">
-          <div class="ligne">
-            <select bind:value={d.code} aria-label="Droit">
-              <option value="" disabled>droit…</option>
-              {#each data.grille.droits as g (g.code)}
-                <option value={g.code} title={g.libelle}>{g.code}</option>
-              {/each}
-            </select>
-            {#if !aSuivre}
-              <select bind:value={d.role} aria-label="Rôle">
-                <option value="principal">principal</option>
-                <option value="secondaire">secondaire</option>
-              </select>
-              <select bind:value={d.sens} aria-label="Sens" class={d.sens}>
-                <option value="restreint">restreint</option>
-                <option value="etend">étend</option>
-              </select>
-            {/if}
-            <span class="discret">sources :</span>
-            {#each sources.filter((s) => s.cle) as s (s.cle)}
-              <label class="ligne petite">
-                <input
-                  type="checkbox"
-                  checked={d.sources.includes(s.cle)}
-                  onchange={() => basculer(d.sources, s.cle)}
-                />
-                {s.cle}
-              </label>
-            {:else}
-              <span class="discret">(définir les sources plus bas)</span>
-            {/each}
-            <button type="button" class="lien" onclick={() => doc.droits.splice(i, 1)}
-              >retirer</button
-            >
-          </div>
-          <textarea
-            bind:value={d.justification}
-            rows="2"
-            placeholder="Justification, avec la source"></textarea>
-        </div>
-      {/each}
-      <button type="button" onclick={ajouterDroit}>+ droit</button>
+      <EditeurDroits
+        bind:droits={doc.droits}
+        bind:etiquettes={doc.etiquettes}
+        bind:vigilance={doc.vigilance}
+        bind:sources
+        grille={data.grille}
+        bibliotheque={data.bibliotheque}
+        suivi={aSuivre}
+      />
 
       {#if !aSuivre}
-        <h3>Étiquettes</h3>
-        <div class="ligne">
-          {#each data.grille.etiquettes as e (e.code)}
-            <label class="ligne petite" title={e.libelle}>
-              <input
-                type="checkbox"
-                checked={doc.etiquettes.includes(e.code)}
-                onchange={() => basculer(doc.etiquettes, e.code)}
-              />
-              {e.code}
-            </label>
-          {/each}
-        </div>
-      {/if}
-
-      <h3>Sources</h3>
-      <p class="discret">
-        Avis de la CNCDH, du Défenseur des droits, de la CNIL, décision du Conseil constitutionnel,
-        analyse d'ONG… (règle 7). La clé sert à les citer.
-      </p>
-      <table class="sources">
-        <thead>
-          <tr><th>Clé</th><th>Auteur</th><th>Titre</th><th>Date</th><th>URL</th><th></th></tr>
-        </thead>
-        <tbody>
-          {#each sources as s, i (i)}
-            <tr>
-              <td
-                ><input
-                  type="text"
-                  bind:value={s.cle}
-                  onchange={() => renommer(s)}
-                  class="mono"
-                  size="14"
-                /></td
-              >
-              <td><input type="text" bind:value={s.auteur} size="16" /></td>
-              <td><input type="text" bind:value={s.titre} /></td>
-              <td>
-                <input
-                  type="text"
-                  bind:value={s.date}
-                  placeholder="AAAA-MM-JJ"
-                  pattern={'\\d{4}(-\\d{2}(-\\d{2})?)?'}
-                  title="AAAA-MM-JJ, ou AAAA-MM si le document n'est daté qu'au mois"
-                  size="10"
-                />
-              </td>
-              <td><input type="url" bind:value={s.url} /></td>
-              <td
-                ><button type="button" class="lien" onclick={() => retirerSource(i)}>retirer</button
-                ></td
-              >
-            </tr>
-          {/each}
-        </tbody>
-      </table>
-      <div class="ligne">
-        <button type="button" onclick={() => ajouterSource()}>+ source</button>
-        {#if data.bibliotheque.length}
-          <select bind:value={choixBibliotheque} aria-label="Reprendre une source d'un autre texte">
-            <option value="">reprendre une source d'un autre texte…</option>
-            {#each data.bibliotheque as b, i (i)}
-              <option value={String(i)}
-                >{b.cle} ({b.texte}) : {b.source.auteur}, {b.source.titre.slice(0, 60)}</option
-              >
-            {/each}
-          </select>
-          <button
-            type="button"
-            disabled={!choixBibliotheque}
-            onclick={() => {
-              ajouterSource(data.bibliotheque[Number(choixBibliotheque)]);
-              choixBibliotheque = '';
-            }}>reprendre</button
-          >
-        {/if}
-      </div>
-
-      {#if !aSuivre}
-        <h3>Points de vigilance</h3>
-        <p class="discret">
-          Critiques sourcées affichées à côté du jugement, sans le modifier (règle 5).
-        </p>
-        {#each doc.vigilance as v, i (i)}
-          <div class="droit">
-            <textarea bind:value={v.texte} rows="2"></textarea>
-            <div class="ligne">
-              <span class="discret">sources :</span>
-              {#each sources.filter((s) => s.cle) as s (s.cle)}
-                <label class="ligne petite">
-                  <input
-                    type="checkbox"
-                    checked={v.sources.includes(s.cle)}
-                    onchange={() => basculer(v.sources, s.cle)}
-                  />
-                  {s.cle}
-                </label>
-              {/each}
-              <button type="button" class="lien" onclick={() => doc.vigilance.splice(i, 1)}
-                >retirer</button
-              >
-            </div>
-          </div>
-        {/each}
-        <button type="button" onclick={() => doc.vigilance.push({ texte: '', sources: [] })}>
-          + point de vigilance
-        </button>
-
         <h3>Conseil constitutionnel et note</h3>
         <label class="champ"
           >Décision résumée {#if t.cc_decision}({t.cc_decision}, {t.cc_sens?.toLowerCase()}){/if}
@@ -778,10 +550,20 @@
         </table>
       {/if}
       {#if blocSenat.version === 'autre'}
-        <label class="champ"
-          >Droits propres à cette version (JSON : droits, etiquettes, vigilance, sources)
-          <textarea bind:value={texteAutre} rows="6" class="mono"></textarea>
-        </label>
+        <h3>Qualification de cette version</h3>
+        <p class="discret">
+          Lue sur le texte voté au Sénat, avec ses propres sources (règle 24). Droits et sens
+          seulement si un décisif est retenu : sans décisif, le vote est affiché, sans droits ni
+          sens.
+        </p>
+        <EditeurDroits
+          bind:droits={blocSenat.droits}
+          bind:etiquettes={blocSenat.etiquettes}
+          bind:vigilance={blocSenat.vigilance}
+          bind:sources={sourcesSenat}
+          grille={data.grille}
+          bibliotheque={data.bibliotheque}
+        />
       {/if}
       <label class="champ"
         >Note (publique : sur quoi porte le vote, pourquoi il est compté ou affiché)
@@ -999,29 +781,8 @@
   .grand input {
     width: 100%;
   }
-  .droit {
-    border-left: 3px solid var(--bord);
-    padding: 0.3rem 0 0.3rem 0.6rem;
-    margin: 0.5rem 0;
-  }
-  .droit textarea {
-    margin-top: 0.3rem;
-  }
-  .petite {
-    gap: 0.2rem;
-    font-size: 0.88rem;
-  }
-  select.etend {
-    color: var(--etend);
-  }
-  select.restreint {
-    color: var(--restreint);
-  }
   select.a-trancher {
     background: var(--alerte-fond);
-  }
-  .sources input {
-    width: 100%;
   }
   td.large {
     width: 45%;
