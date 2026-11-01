@@ -242,7 +242,7 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
     sens n'est pas univoque n'est pas retenu, y compris quand les sources
     admises ne s'accordent pas sur ce sens (primes de partage de la valeur,
     2023 : mises en cause par la CGT, soutenues par la CFDT et FO). N'est pas retenu non plus : un article portant une mesure
-    **absente du texte soumis au scrutin décisif** (règle 6), ni un article retenu pour une critique qui ne vise qu'un **droit secondaire** :
+    **absente du texte soumis au scrutin décisif** (règle 6), ni un article retenu pour une critique qui ne vise qu'un **droit secondaire de sens opposé au droit principal** :
     le scrutin compterait au score global dans le sens du droit principal, à rebours de cette critique. Une **réserve du Conseil
     constitutionnel** ne vaut mise en cause que si elle censure ou neutralise la mesure. Sur la justice des
     mineurs, le RN propose de supprimer l'article 7, qui ajoute une

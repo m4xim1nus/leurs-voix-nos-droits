@@ -197,12 +197,12 @@
       droits. Un article dont le sens n’est pas univoque n’est pas retenu, y compris quand les sources
       ne s’accordent pas sur ce sens. N’est pas retenu non plus un article dont la mesure a disparu du
       texte soumis au vote décisif, ni un article retenu pour une critique qui ne vise qu’un droit secondaire
-      : le vote compterait au score global à rebours de cette critique. Une réserve du Conseil constitutionnel
-      ne vaut mise en cause que si elle censure ou neutralise la mesure. Un seul scrutin par article (celui
-      qui en a fixé le sort), et une seule lecture : la dernière où des suppressions ont été mises aux
-      voix. Ne comptent pas : la suppression de l’article unique d’un texte (elle double le vote décisif),
-      ou de l’article qui est le seul du texte au vote décisif, et un scrutin sans aucune voix d’un côté
-      (il ne départage personne).
+      de sens opposé au droit principal : le vote compterait au score global à rebours de cette critique.
+      Une réserve du Conseil constitutionnel ne vaut mise en cause que si elle censure ou neutralise la
+      mesure. Un seul scrutin par article (celui qui en a fixé le sort), et une seule lecture : la dernière
+      où des suppressions ont été mises aux voix. Ne comptent pas : la suppression de l’article unique
+      d’un texte (elle double le vote décisif), ou de l’article qui est le seul du texte au vote décisif,
+      et un scrutin sans aucune voix d’un côté (il ne départage personne).
     </li>
   </ol>
 </section>
