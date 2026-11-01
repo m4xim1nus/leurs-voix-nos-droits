@@ -317,8 +317,10 @@ loi-orientation-agricole-2025,VTANR5L16V3728,amendement,environnement,principal,
 loi-orientation-agricole-2025,VTANR5L16V3728,amendement,global,principal,restreint,0.25,pour
 loi-orientation-agricole-2025,VTANR5L16V3938,amendement,environnement,principal,restreint,0.25,pour
 loi-orientation-agricole-2025,VTANR5L16V3938,amendement,global,principal,restreint,0.25,pour
-lom-2019,VTANR5L15V2308,decisif,travail-protection-sociale,principal,restreint,1.0,contre
-lom-2019,VTANR5L15V2308,decisif,global,principal,restreint,1.0,contre
+lom-2019,VTANR5L15V2308,decisif,travail-protection-sociale,principal,restreint,0.5,contre
+lom-2019,VTANR5L15V2308,decisif,global,principal,restreint,0.5,contre
+lom-2019,VTANR5L15V1932,amendement,travail-protection-sociale,principal,restreint,0.5,contre
+lom-2019,VTANR5L15V1932,amendement,global,principal,restreint,0.5,contre
 lopj-2023,VTANR5L16V2719,decisif,vie-privee,principal,restreint,0.5,contre
 lopj-2023,VTANR5L16V2719,decisif,police-justice,secondaire,restreint,0.5,contre
 lopj-2023,VTANR5L16V2719,decisif,global,principal,restreint,0.5,contre

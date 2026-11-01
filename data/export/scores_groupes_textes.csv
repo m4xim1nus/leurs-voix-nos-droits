@@ -26,7 +26,7 @@ PO723569,jld-mayotte-2019,0,2,0,0,0.0
 PO723569,justice-proximite-2021,0,0,1,0,
 PO723569,lanceurs-alerte-2022,3,0,0,0,100.0
 PO723569,langues-regionales-2021,6,1,2,0,85.7
-PO723569,lom-2019,2,0,0,0,100.0
+PO723569,lom-2019,2,1,0,0,66.7
 PO723569,manipulation-information-2018,6,0,0,0,100.0
 PO723569,neonicotinoides-betteraves-2020,6,0,0,0,100.0
 PO723569,pacte-ferroviaire-2018,15,1,3,0,93.8
@@ -90,7 +90,7 @@ PO730934,jld-mayotte-2019,0,3,0,0,0.0
 PO730934,justice-proximite-2021,0,5,0,1,0.0
 PO730934,lanceurs-alerte-2022,2,3,0,0,40.0
 PO730934,langues-regionales-2021,54,0,0,0,100.0
-PO730934,lom-2019,26,0,3,0,100.0
+PO730934,lom-2019,26,5,3,0,83.9
 PO730934,manipulation-information-2018,56,0,0,0,100.0
 PO730934,neonicotinoides-betteraves-2020,2,25,0,0,7.4
 PO730934,pacte-ferroviaire-2018,2,76,23,0,2.6
@@ -154,7 +154,7 @@ PO730940,jld-mayotte-2019,2,0,0,0,100.0
 PO730940,justice-proximite-2021,0,0,4,0,
 PO730940,lanceurs-alerte-2022,1,0,0,0,100.0
 PO730940,langues-regionales-2021,6,0,0,0,100.0
-PO730940,lom-2019,5,0,0,0,100.0
+PO730940,lom-2019,6,0,0,0,100.0
 PO730940,manipulation-information-2018,9,0,0,0,100.0
 PO730940,neonicotinoides-betteraves-2020,9,0,0,0,100.0
 PO730940,pacte-ferroviaire-2018,16,0,0,0,100.0
@@ -219,7 +219,7 @@ PO730958,jld-mayotte-2019,2,0,0,0,100.0
 PO730958,justice-proximite-2021,2,0,0,0,100.0
 PO730958,lanceurs-alerte-2022,2,0,0,0,100.0
 PO730958,langues-regionales-2021,1,12,0,0,7.7
-PO730958,lom-2019,8,0,0,0,100.0
+PO730958,lom-2019,9,0,0,0,100.0
 PO730958,manipulation-information-2018,9,0,0,0,100.0
 PO730958,neonicotinoides-betteraves-2020,20,0,0,0,100.0
 PO730958,pacte-ferroviaire-2018,17,0,0,0,100.0
@@ -285,7 +285,7 @@ PO730964,jld-mayotte-2019,0,26,0,1,0.0
 PO730964,justice-proximite-2021,0,70,0,1,0.0
 PO730964,lanceurs-alerte-2022,37,0,0,1,100.0
 PO730964,langues-regionales-2021,100,57,12,2,63.7
-PO730964,lom-2019,0,93,0,1,0.0
+PO730964,lom-2019,0,116,0,2,0.0
 PO730964,manipulation-information-2018,0,160,3,1,0.0
 PO730964,neonicotinoides-betteraves-2020,14,130,3,4,9.7
 PO730964,pacte-ferroviaire-2018,0,296,1,1,0.0
@@ -351,7 +351,7 @@ PO758835,jld-mayotte-2019,2,0,1,0,100.0
 PO758835,justice-proximite-2021,0,0,1,0,
 PO758835,lanceurs-alerte-2022,1,0,0,0,100.0
 PO758835,langues-regionales-2021,21,0,0,0,100.0
-PO758835,lom-2019,7,0,0,0,100.0
+PO758835,lom-2019,8,0,0,0,100.0
 PO758835,manipulation-information-2018,14,0,0,0,100.0
 PO758835,neonicotinoides-betteraves-2020,11,1,0,0,91.7
 PO758835,pacte-ferroviaire-2018,30,0,0,0,100.0
@@ -408,7 +408,7 @@ PO759900,jld-mayotte-2019,0,3,0,0,0.0
 PO759900,justice-proximite-2021,0,2,0,0,0.0
 PO759900,lanceurs-alerte-2022,1,0,0,0,100.0
 PO759900,langues-regionales-2021,17,0,0,0,100.0
-PO759900,lom-2019,0,1,6,0,0.0
+PO759900,lom-2019,0,1,7,0,0.0
 PO759900,manipulation-information-2018,10,1,0,0,90.9
 PO759900,neonicotinoides-betteraves-2020,3,1,0,0,75.0
 PO759900,parquet-europeen-2020,0,1,1,0,0.0
@@ -563,7 +563,7 @@ PO774834,jld-mayotte-2019,0,1,0,0,0.0
 PO774834,justice-proximite-2021,0,12,0,0,0.0
 PO774834,lanceurs-alerte-2022,6,0,0,0,100.0
 PO774834,langues-regionales-2021,17,6,5,0,73.9
-PO774834,lom-2019,0,15,0,0,0.0
+PO774834,lom-2019,0,20,0,1,0.0
 PO774834,manipulation-information-2018,0,22,0,1,0.0
 PO774834,neonicotinoides-betteraves-2020,1,24,5,0,4.0
 PO774834,pacte-ferroviaire-2018,0,47,0,0,0.0
