@@ -92,7 +92,7 @@
         }
       ],
       "conseil_constitutionnel": "",
-      "note": "Texte adopté par l'AN en 1re lecture le 4 mai 2023 (157-137), après son rejet en commission, puis jamais inscrit au Sénat : ce vote est le dernier de l'AN sur l'ensemble (règle 9). Amendement clé, en 1re lecture : la suppression de l'article 1er (abrogation de l'obligation), rejetée de justesse (134-147). L'Académie nationale de médecine met cette mesure en cause. L'article porte la mesure principale du texte : voter sa suppression va contre le texte. Écartés : l'amendement V1458, qui n'est pas une suppression, et les votes sur les articles (V1459 sur l'article 1er, V1460 sur l'article 2, V1461 sur l'article 3, gage financier rejeté).",
+      "note": "Texte adopté par l'AN en 1re lecture le 4 mai 2023 (157-137), après son rejet en commission, puis jamais inscrit au Sénat : ce vote est le dernier de l'AN sur l'ensemble (règle 9). Aucun amendement clé. La suppression de l'article 1er (abrogation de l'obligation, V1457, 134-147) n'est pas retenue : les sources admises ne s'accordent pas sur cette mesure, que la HAS recommandait et que l'Académie nationale de médecine met en cause (règle 11). Écartés aussi : l'amendement V1458, qui n'est pas une suppression, et les votes sur les articles (V1459 sur l'article 1er, V1460 sur l'article 2, V1461 sur l'article 3, gage financier rejeté).",
       "sources": {
         "anm-2022-12": {
           "auteur": "Académie nationale de médecine",
@@ -131,12 +131,6 @@
           "role": "decisif",
           "pour": "texte",
           "objet": "ensemble, 1re lecture (157-137)"
-        },
-        {
-          "id": "VTANR5L16V1457",
-          "role": "amendement",
-          "pour": "contre-texte",
-          "objet": "suppression de l'article 1er, abrogation de l'obligation vaccinale, 1re lecture (134-147)"
         }
       ]
     },
@@ -441,7 +435,7 @@
         }
       ],
       "conseil_constitutionnel": "Aucune censure, trois réserves (majeurs protégés, pharmaciens, établissements privés).",
-      "note": "",
+      "note": "Scrutin décisif : l'ensemble du texte en lecture définitive (V8280, 291-241). Aucun amendement clé. Les votes sur l'ensemble des lectures précédentes et la motion de rejet préalable sont affichés, pas comptés.",
       "sources": {
         "admd-2026-02": {
           "auteur": "ADMD",
@@ -717,7 +711,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2025-890 DC du 29 juillet 2025, saisie par des députés (première signataire : Mathilde Panot). Le dernier alinéa de l'article L. 811-5-1 (section disciplinaire commune) et le I de l'article L. 811-6 (liste des fautes disciplinaires) du code de l'éducation sont déclarés conformes, sans réserve : ces dispositions sont « suffisamment précises pour garantir contre le risque d'arbitraire ». Aucune autre disposition n'a été examinée d'office.",
-      "note": "Adoption définitive le 2 juillet 2025 : le scrutin décisif est le vote de l'AN sur le texte de la CMP (règle 9). Amendement clé (1re lecture, seule lecture de l'AN où des suppressions et des rétablissements ont été votés, règle 11) : rétablissement de l'article 3, supprimé en commission, dont les mesures disciplinaires sont mises en cause par la doctrine (Revue des droits de l'homme) et par le SNESUP-FSU. L'article figure dans la loi : voter pour va dans le sens du texte. Les sept sous-amendements à cet amendement (V1586 à V1592) ne sont pas comptés, puisqu'on garde un seul scrutin par article. Écartés : les suppressions des articles 5, 6 et 7 (V1598, V1599, V1600), qui demandaient des rapports au Gouvernement et qu'aucune source ne met en cause, ainsi que les autres amendements (V1571 à V1584, V1594, V1595, V1597), qui ne suppriment ni ne rétablissent un article. Les votes sur les articles 1er, 2 et 4 ne sont pas retenus.",
+      "note": "Adoption définitive le 2 juillet 2025 : le scrutin décisif est le vote de l'AN sur le texte de la CMP (règle 9). Aucun amendement clé (1re lecture, seule lecture de l'AN où des suppressions et des rétablissements ont été votés, règle 11). Le rétablissement de l'article 3 (V1593, 124-55), supprimé en commission, n'est pas retenu : ses mesures disciplinaires ne sont mises en cause par la doctrine (Revue des droits de l'homme) et par le SNESUP-FSU qu'au titre du droit secondaire, les libertés (règle 11). Les sept sous-amendements à cet amendement (V1586 à V1592) ne sont pas retenus non plus. Écartés aussi : les suppressions des articles 5, 6 et 7 (V1598, V1599, V1600), qui demandaient des rapports au Gouvernement et qu'aucune source ne met en cause, ainsi que les autres amendements (V1571 à V1584, V1594, V1595, V1597), qui ne suppriment ni ne rétablissent un article. Les votes sur les articles 1er, 2 et 4 ne sont pas retenus.",
       "sources": {
         "cc-2025-890": {
           "auteur": "Conseil constitutionnel",
@@ -762,12 +756,6 @@
           "role": "motion",
           "pour": "contre-texte",
           "objet": "motion de rejet préalable, CMP (46-179)"
-        },
-        {
-          "id": "VTANR5L17V1593",
-          "role": "amendement",
-          "pour": "texte",
-          "objet": "rétablissement de l'article 3, procédure disciplinaire (fautes élargies, section régionale, interdiction d'accès, information des victimes), adopté (124-55)"
         }
       ],
       "senat": {
@@ -2691,7 +2679,7 @@
         }
       ],
       "conseil_constitutionnel": "Pas de décision : la révision constitutionnelle n'a jamais été soumise au Congrès du Parlement.",
-      "note": "Révision de la Constitution, adoptée d'abord par le Sénat. L'Assemblée l'a votée sans modification en 1re lecture : ce vote sur l'ensemble est le scrutin décisif (règle 9), même si le Congrès n'a jamais été réuni. Le sens est lu par rapport au droit en vigueur au jour du vote, le corps électoral « gelé » depuis 2007 (règle 4). Le droit de vote est jugé étendu, puisque le texte l'ouvre à des électeurs qui en étaient privés. Les instances de l'ONU et la CNCDH y voient une atteinte aux droits du peuple kanak, peuple autochtone : le texte reçoit donc aussi le droit « discriminations », au sens restreint (règle 4). Les deux lectures sont comptées, chacune pour son droit. Amendement clé : la suppression de l'article 1er, qui porte l'ouverture du corps électoral mise en cause par les rapporteurs de l'ONU (règle 11). La suppression de l'article 2, qui règle l'entrée en vigueur et la caducité en cas d'accord, n'est pas retenue : le sens de cet article n'est pas univoque. Les autres amendements mis aux voix modifiaient l'article 2 sans le supprimer.",
+      "note": "Révision de la Constitution, adoptée d'abord par le Sénat. L'Assemblée l'a votée sans modification en 1re lecture : ce vote sur l'ensemble est le scrutin décisif (règle 9), même si le Congrès n'a jamais été réuni. Le sens est lu par rapport au droit en vigueur au jour du vote, le corps électoral « gelé » depuis 2007 (règle 4). Le droit de vote est jugé étendu, puisque le texte l'ouvre à des électeurs qui en étaient privés. Les instances de l'ONU et la CNCDH y voient une atteinte aux droits du peuple kanak, peuple autochtone : le texte reçoit donc aussi le droit « discriminations », au sens restreint (règle 4). Les deux lectures sont comptées, chacune pour son droit. Aucun amendement clé. La suppression de l'article 1er (V3718, 50-102), qui porte l'ouverture du corps électoral, n'est pas retenue : les sources admises ne s'accordent pas sur cette mesure, à laquelle le Conseil d'État n'oppose pas de réserves et que les rapporteurs de l'ONU mettent en cause (règle 11). La suppression de l'article 2, qui règle l'entrée en vigueur et la caducité en cas d'accord, n'est pas retenue non plus : le sens de cet article n'est pas univoque. Les autres amendements mis aux voix modifiaient l'article 2 sans le supprimer.",
       "sources": {
         "ccpr-fra-co-6": {
           "auteur": "Comité des droits de l'homme de l'ONU",
@@ -2736,12 +2724,6 @@
           "role": "motion",
           "pour": "contre-texte",
           "objet": "motion de rejet préalable, 1re lecture (79-174)"
-        },
-        {
-          "id": "VTANR5L16V3718",
-          "role": "amendement",
-          "pour": "contre-texte",
-          "objet": "amendements de suppression de l'article 1er (ouverture du corps électoral), 1re lecture (50-102)"
         }
       ],
       "senat": {
@@ -3284,7 +3266,7 @@
         }
       ],
       "conseil_constitutionnel": "",
-      "note": "Texte en navette : adopté en 1re lecture par l'AN le 7 mai 2025, discuté au Sénat le 11 juin 2026 sans vote sur l'ensemble. Le dernier vote de l'AN sur l'ensemble est donc la 1re lecture (99-9), qui départage (règle 9). Amendement clé, en 1re lecture : le rétablissement de l'article 1er (régulation de l'installation), supprimé en commission et rétabli en séance. L'Ordre des médecins met cette mesure en cause. L'article étend l'accès aux soins : voter son rétablissement va dans le sens du texte. Écartés : le sous-amendement V1213 (règle 11) et les votes sur les articles 3 (V1605, unanime) et 4 (V1606, permanence des soins), qui ne sont ni des suppressions ni des rétablissements.",
+      "note": "Texte en navette : adopté en 1re lecture par l'AN le 7 mai 2025, discuté au Sénat le 11 juin 2026 sans vote sur l'ensemble. Le dernier vote de l'AN sur l'ensemble est donc la 1re lecture (99-9), qui départage (règle 9). Aucun amendement clé. Le rétablissement de l'article 1er (régulation de l'installation, V1214, 155-85), supprimé en commission et rétabli en séance, n'est pas retenu : les sources admises ne s'accordent pas sur cette mesure, que soutiennent France Assos Santé et UFC-Que Choisir et que l'Ordre des médecins met en cause (règle 11). Écartés aussi : le sous-amendement V1213 (règle 11) et les votes sur les articles 3 (V1605, unanime) et 4 (V1606, permanence des soins), qui ne sont ni des suppressions ni des rétablissements.",
       "sources": {
         "cnom-2025-03": {
           "auteur": "Conseil national de l'Ordre des médecins, syndicats de médecins et d'étudiants en médecine (communiqué commun)",
@@ -3317,12 +3299,6 @@
           "role": "decisif",
           "pour": "texte",
           "objet": "ensemble, 1re lecture (99-9)"
-        },
-        {
-          "id": "VTANR5L17V1214",
-          "role": "amendement",
-          "pour": "texte",
-          "objet": "rétablissement de l'article 1er, autorisation préalable d'installation des médecins, adopté, 1re lecture (155-85)"
         }
       ]
     },
@@ -4165,7 +4141,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2023-848 DC du 9 mars 2023, non-conformité partielle. Dix articles censurés comme cavaliers (46, 48, 49, 55, 79, 94, 97, 111, 113 et 115 : rapports, autoconsommation collective, combustibles solides de récupération, notamment) et un article censuré faute de portée normative (65, ports). Sans réserve, sont déclarés conformes la présomption de raison impérative d'intérêt public majeur (article 19), l'obligation de notifier les recours contre les autorisations environnementales (article 23), le fonds d'assurance contre le risque contentieux (article 24), la modulation du tarif de rachat dans les zones d'accélération (article 17) et la cartographie des zones prioritaires de l'éolien en mer (article 56). Le grief général tiré de la Charte de l'environnement, dirigé contre toute la loi, est écarté.",
-      "note": "Le scrutin décisif est le vote du texte de la CMP le 31 janvier 2023, dernier vote de l'Assemblée sur l'ensemble (règle 9). La 1re lecture (décembre 2022) est la seule lecture de l'Assemblée où des suppressions ont été mises aux voix (règle 11). Aucun amendement clé. La suppression de l'article 12 (V757, 28-84) visait la mutualisation du débat public sur l'éolien en mer, critiquée par France Nature Environnement, mais le même article porte aussi la planification de l'éolien en mer, que cette association approuve : son sens n'est pas univoque, et le scrutin n'est donc pas retenu. Écartées faute de source qui mette en cause la mesure : les suppressions des articles 1er CBA (saturation visuelle des éoliennes), 2 (participation du public par voie électronique étendue, suppression adoptée), 10 (solaire en montagne), 11 quater (solaire en zone à risque), 16 nonies (méthanisation), 17, 17 bis AA et 18 (mécanismes de soutien et partage de la valeur), ainsi que les amendements sur les articles supprimés en commission (1er CA et 1er CB, éoliennes ; 11 ter, solaire sur les bâtiments ; 11 octies C, crédit d'impôt). Aucune motion de rejet n'a été mise aux voix. Le sens se lit sur les garanties des personnes, pas sur le choix d'une source d'énergie (règle 2) : la loi d'accélération du nucléaire (2023) est qualifiée de la même façon.",
+      "note": "Le scrutin décisif est le vote du texte de la CMP le 31 janvier 2023, dernier vote de l'Assemblée sur l'ensemble (règle 9). La 1re lecture (décembre 2022) est la seule lecture de l'Assemblée où des suppressions ont été mises aux voix (règle 11). Aucun amendement clé. La suppression de l'article 12 (V757, 28-84) visait la mutualisation du débat public sur l'éolien en mer, critiquée par France Nature Environnement, mais le même article porte aussi la planification de l'éolien en mer, que cette association approuve : son sens n'est pas univoque, et le scrutin n'est donc pas retenu. Écartées faute de source qui mette en cause la mesure : les suppressions des articles 1er CBA (saturation visuelle des éoliennes), 2 (participation du public par voie électronique étendue, suppression adoptée), 10 (solaire en montagne), 11 quater (solaire en zone à risque), 16 nonies (méthanisation), 17, 17 bis AA et 18 (mécanismes de soutien et partage de la valeur), ainsi que les amendements sur les articles supprimés en commission (1er CA et 1er CB, éoliennes ; 11 ter, solaire sur les bâtiments ; 11 octies C, crédit d'impôt). Aucune motion de rejet n'a été mise aux voix. Le sens se lit sur les garanties des personnes, pas sur le choix d'une source d'énergie (règle 2) : la loi d'accélération du nucléaire (2023) est qualifiée de la même façon. Des groupes opposés au texte pour des motifs différents sont comptés de la même façon : on mesure le vote, pas son motif (règle 14).",
       "sources": {
         "cc-2023-848": {
           "auteur": "Conseil constitutionnel",
@@ -5097,7 +5073,7 @@
         }
       ],
       "conseil_constitutionnel": "",
-      "note": "Décisif : 1re lecture à l'Assemblée, 21 juin 2018. C'est le dernier vote de l'Assemblée : le Sénat a ensuite adopté ce texte sans modification en 2e lecture (règle 9). Le sens se lit sur le texte de ce vote et par rapport au droit alors en vigueur, non par rapport à la version plus sévère du Sénat (règles 4 et 6). Amendements clés (règle 11) : une seule lecture à l'Assemblée. Un article supprimé en commission porte une mesure mise en cause par le Défenseur des droits sur ce projet : l'article 5 (évacuation élargie). Voter son rétablissement va dans le sens restrictif du texte. Ne sont pas retenus : le rétablissement de l'article 2 (fin de la consignation des fonds), article mixte qui conserve aussi un délai de six mois ; les votes sur des alinéas des articles 1er et 6, qui ne rétablissent pas l'article entier ; les rétablissements des articles 3 bis, 7, 8 et 9, faute de source admise lue sur ces mesures. Aucune motion de rejet n'a été mise aux voix.",
+      "note": "Décisif : 1re lecture à l'Assemblée, 21 juin 2018. C'est le dernier vote de l'Assemblée : le Sénat a ensuite adopté ce texte sans modification en 2e lecture (règle 9). Le sens se lit sur le texte de ce vote et par rapport au droit alors en vigueur, non par rapport à la version plus sévère du Sénat (règles 4 et 6). Aucun amendement clé, sur la seule lecture de l'Assemblée. Le rétablissement de l'article 5 (évacuation élargie, V446, rejeté 9-24) n'est pas retenu : sa mesure ne figure pas dans le texte soumis au scrutin décisif (règle 11). Ne sont pas retenus non plus : le rétablissement de l'article 2 (fin de la consignation des fonds), article mixte qui conserve aussi un délai de six mois ; les votes sur des alinéas des articles 1er et 6, qui ne rétablissent pas l'article entier ; les rétablissements des articles 3 bis, 7, 8 et 9, faute de source admise lue sur ces mesures. Aucune motion de rejet n'a été mise aux voix.",
       "sources": {
         "ddd-18-10": {
           "auteur": "Défenseur des droits",
@@ -5130,12 +5106,6 @@
           "role": "decisif",
           "pour": "texte",
           "objet": "ensemble, 1re lecture à l'Assemblée (40-3)"
-        },
-        {
-          "id": "VTANR5L15V446",
-          "role": "amendement",
-          "pour": "texte",
-          "objet": "rétablissement de l'article 5 (évacuation élargie), rejeté (9-24)"
         }
       ]
     },
@@ -5528,7 +5498,7 @@
       ],
       "vigilance": [],
       "conseil_constitutionnel": "32 articles censurés comme cavaliers (dont l'accès aux prestations sociales), 3 en partie au fond (quotas, relevé d'empreintes sous contrainte), 2 réserves.",
-      "note": "",
+      "note": "Scrutin décisif : l'ensemble du texte de la CMP (V3213, 349-186). Aucun amendement clé. Les deux motions de rejet préalable, dont celle adoptée en 1re lecture (V3203, 270-265), sont affichées, pas comptées (règle 10).",
       "sources": {
         "cimade-2024": {
           "auteur": "La Cimade",
@@ -6084,6 +6054,12 @@
           "role": "motion",
           "pour": "contre-texte",
           "objet": "motion de rejet préalable, CMP (21-101)"
+        },
+        {
+          "id": "VTANR5L16V3581",
+          "role": "article",
+          "pour": "texte",
+          "objet": "article 3, technique de l'algorithme étendue aux ingérences étrangères, 1re lecture (106-7)"
         }
       ]
     },
@@ -6535,7 +6511,7 @@
       ],
       "vigilance": [],
       "conseil_constitutionnel": "Censure de l'article 7 de la loi (cavalier). Vidéosurveillance algorithmique (article 10 de la loi) validée sous réserve.",
-      "note": "",
+      "note": "Scrutin décisif : l'ensemble du texte de la CMP (V1409, 244-57). Amendement clé : la suppression de l'article 7 du projet, vidéosurveillance algorithmique (V1263, 26-90). Le vote sur l'article 7 lui-même (V1274), le vote de 1re lecture et les motions de rejet préalable sont affichés, pas comptés.",
       "sources": {
         "amnesty-jo-2023": {
           "auteur": "Amnesty International France",
@@ -6886,7 +6862,7 @@
       "etiquettes": [],
       "vigilance": [],
       "conseil_constitutionnel": "6 articles censurés en tout ou partie, dont 5 au nom du principe fondamental de la justice des mineurs (comparution immédiate dès 16 ans, excuse de minorité, détention provisoire…).",
-      "note": "",
+      "note": "Scrutin décisif : l'ensemble du texte de la CMP (V1624, 341-187). Amendements clés : les suppressions des articles 1er (circonstance aggravante pour les parents, V793) et 7 (rapport éducatif avant détention provisoire, V798), et les rétablissements des articles 4 (audience unique dérogatoire dès 16 ans, V794) et 5 (excuse de minorité assouplie, V797). Le vote de 1re lecture et les motions de rejet préalable sont affichés, pas comptés.",
       "sources": {
         "cc-2025-886": {
           "auteur": "Conseil constitutionnel",
@@ -7693,7 +7669,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2019-794 DC du 20 décembre 2019, non-conformité partielle, sans réserve. Censure, à l'article 44, des mots qui empêchaient le juge de retenir le respect des engagements de la charte pour caractériser un lien de subordination : le législateur a méconnu l'étendue de sa compétence. Le reste des dispositions contestées sur la charte est conforme. Sont aussi censurés l'article 33, le II de l'article 83, le IX de l'article 98 et le V de l'article 113, qui habilitaient le Gouvernement à légiférer par ordonnance, et, comme cavaliers, les articles 7, 49, 104, 109 et 110.",
-      "note": "Scrutin décisif : ensemble, lecture définitive, 19/11/2019. Texte composite : le droit principal suit la seule mesure sur laquelle une source admise a été lue, la charte des plateformes (règle 4). Les zones à faibles émissions et le contrôle automatisé figurent dans le résumé sans droit associé, faute de source admise lue qui se prononce sur ces mesures dans ce texte. Amendement clé (règle 11) : le rétablissement de l'article 20, qui porte la charte des plateformes, en 1re lecture le 07/06/2019 (amendement n° 2900, adopté 34-3). Voter pour, c'est voter la mesure mise en cause, même si la rédaction rétablie comporte aussi des droits présentés comme renforcés. Aucune motion de rejet préalable n'a été soumise à un scrutin public.",
+      "note": "Scrutin décisif : ensemble, lecture définitive, 19/11/2019. Texte composite : le droit principal suit la seule mesure sur laquelle une source admise a été lue, la charte des plateformes (règle 4). Les zones à faibles émissions et le contrôle automatisé figurent dans le résumé sans droit associé, faute de source admise lue qui se prononce sur ces mesures dans ce texte. Aucun amendement clé. Le rétablissement de l'article 20, qui porte la charte des plateformes, en 1re lecture le 07/06/2019 (amendement n° 2900, V1932, adopté 34-3), n'est pas retenu : cet article mixte porte la mesure mise en cause et des droits présentés comme renforcés, et son sens n'est pas univoque (règle 11). Aucune motion de rejet préalable n'a été soumise à un scrutin public.",
       "sources": {
         "cc-2019-794": {
           "auteur": "Conseil constitutionnel",
@@ -7726,12 +7702,6 @@
           "role": "ensemble",
           "pour": "texte",
           "objet": "ensemble, 1re lecture (372-40)"
-        },
-        {
-          "id": "VTANR5L15V1932",
-          "role": "amendement",
-          "pour": "texte",
-          "objet": "rétablissement de l'article 20 (charte des plateformes), 1re lecture (34-3)"
         }
       ]
     },
@@ -8638,6 +8608,12 @@
           "role": "motion",
           "pour": "contre-texte",
           "objet": "motion de rejet préalable, 1re lecture (25-109)"
+        },
+        {
+          "id": "VTANR5L17V5167",
+          "role": "article",
+          "pour": "texte",
+          "objet": "article 1er, interdiction des réseaux sociaux aux moins de quinze ans, 1re lecture (116-23)"
         }
       ],
       "senat": {
@@ -8891,7 +8867,7 @@
       ],
       "vigilance": [],
       "conseil_constitutionnel": "6 articles censurés en tout ou partie (dont l'accès du renseignement aux fichiers fiscaux, l'extension des « boîtes noires », une partie du « dossier coffre »), nombreuses réserves.",
-      "note": "",
+      "note": "Scrutin décisif : l'ensemble du texte de la CMP (V1473, 396-68). Amendements clés : les suppressions des articles 8 (surveillance algorithmique, V1095), 8 bis (prolongation des « boîtes noires », V1098), 23 (détention provisoire et visioconférence, V1075), 23 quinquies (quartiers de lutte contre la criminalité organisée, V1054) et 24 (interdiction de paraître et fermetures administratives, V1104) ; les rétablissements des articles 8 ter (accès aux messageries chiffrées, V1102), 15 ter et 15 quater (activation à distance des appareils, V1160 et V1161) et 16 (« dossier coffre », V1103). Le vote de 1re lecture et la motion de rejet préalable sont affichés, pas comptés.",
       "sources": {
         "cc-2025-885": {
           "auteur": "Conseil constitutionnel",
@@ -12214,7 +12190,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2025-899 DC du 30 décembre 2025, non-conformité partielle. Censure sur le fond du 1° de l'article 83 : en définissant l'incapacité de travail ouvrant droit aux indemnités journalières par rapport à « une activité professionnelle salariée ou non salariée quelconque », le législateur a retenu une définition « imprécise et insuffisamment circonstanciée » et méconnu le onzième alinéa du Préambule de 1946. Neuf autres dispositions sont censurées comme cavaliers sociaux (articles 51, 57, 60 en partie, 69, 72 en partie, 85, 91, 92 et 105, paragraphe VII), sans examen de leur contenu. Sont déclarés conformes, sans réserve, la limitation de la durée de prescription des arrêts de travail et le plafonnement de la durée des indemnités journalières en cas d'accident du travail ou de maladie professionnelle (article 81), les pénalités financières des établissements de santé (article 79), l'objectif national de dépenses d'assurance maladie (articles 2 et 109) et la procédure d'adoption du parcours préventif précédant une affection de longue durée (article 54).",
-      "note": "Texte composite : ses mesures vont en sens opposés pour la protection sociale. Le sens retenu est celui des mesures que les sources admises citent le plus souvent, la limitation des arrêts de travail et des indemnités journalières ; la suspension de la réforme des retraites s'affiche en vigilance (règle 4). Le scrutin décisif est l'adoption en lecture définitive, le 16 décembre 2025, dernier vote de l'AN sur l'ensemble (règle 9). Le vote sur l'ensemble en nouvelle lecture est affiché sans être compté. En 1re lecture, l'AN n'a pas voté sur l'ensemble : le texte est parti au Sénat avant la fin de son examen. Les trois motions de rejet préalable (LFI) sont affichées sans être comptées (règle 10). Les votes sur les parties et sur les articles ne sont pas retenus. La nouvelle lecture est la dernière lecture de l'AN où des suppressions ont été mises aux voix (règle 11). Deux amendements clés portent sur des mesures mises en cause par une source admise : la suppression de l'article 28 (plafonnement des indemnités journalières après un accident du travail) et la suppression de l'article 44 (gel des pensions et des prestations). Ne sont pas retenus le rétablissement de l'article 45 bis (suspension de la réforme des retraites), qu'aucune source admise ne met en cause (la CGT la juge seulement insuffisante), et la suppression de l'article 23, qui reporte un calendrier. Les autres suppressions et rétablissements de la nouvelle lecture ne sont pas retenus. Ils portent sur des recettes, des taxes ou l'équilibre des comptes (articles liminaire à 17, dont l'article 7, contribution des organismes complémentaires, et l'article 49, objectif de dépenses), sur la tarification des offreurs de soins (articles 24, 25, 26 ter, 26 quater, 27), sur un droit autre que celui qualifié (article 26, dépassements d'honoraires ; article 26 bis, médecins non conventionnés), ou sur des mesures qu'aucune source admise ne met en cause (articles 18 bis A, 18 ter A, 20 à 22 ter, 24 bis, 28 bis A, 35 bis). Les votes de 1re lecture, dont l'adoption de l'article 45 bis le 12 novembre 2025 (255-146), sont affichés pour mémoire.",
+      "note": "Texte composite : ses mesures vont en sens opposés pour la protection sociale. Le sens retenu est celui des mesures que les sources admises citent le plus souvent, la limitation des arrêts de travail et des indemnités journalières ; la suspension de la réforme des retraites s'affiche en vigilance (règle 4). Le scrutin décisif est l'adoption en lecture définitive, le 16 décembre 2025, dernier vote de l'AN sur l'ensemble (règle 9). Le vote sur l'ensemble en nouvelle lecture est affiché sans être compté. En 1re lecture, l'AN n'a pas voté sur l'ensemble : le texte est parti au Sénat avant la fin de son examen. Les trois motions de rejet préalable (LFI) sont affichées sans être comptées (règle 10). Les votes sur les parties et sur les articles ne sont pas retenus. La nouvelle lecture est la dernière lecture de l'AN où des suppressions ont été mises aux voix (règle 11). Un amendement clé porte sur une mesure mise en cause par une source admise : la suppression de l'article 28 (plafonnement des indemnités journalières après un accident du travail). La suppression de l'article 44 (gel des pensions et des prestations, V4641, 197-84) n'est pas retenue : sa mesure ne figure pas dans le texte soumis au scrutin décisif (règle 11). Ne sont pas retenus non plus le rétablissement de l'article 45 bis (suspension de la réforme des retraites), qu'aucune source admise ne met en cause (la CGT la juge seulement insuffisante), et la suppression de l'article 23, qui reporte un calendrier. Les autres suppressions et rétablissements de la nouvelle lecture ne sont pas retenus. Ils portent sur des recettes, des taxes ou l'équilibre des comptes (articles liminaire à 17, dont l'article 7, contribution des organismes complémentaires, et l'article 49, objectif de dépenses), sur la tarification des offreurs de soins (articles 24, 25, 26 ter, 26 quater, 27), sur un droit autre que celui qualifié (article 26, dépassements d'honoraires ; article 26 bis, médecins non conventionnés), ou sur des mesures qu'aucune source admise ne met en cause (articles 18 bis A, 18 ter A, 20 à 22 ter, 24 bis, 28 bis A, 35 bis). Les votes de 1re lecture, dont l'adoption de l'article 45 bis le 12 novembre 2025 (255-146), sont affichés pour mémoire.",
       "sources": {
         "cc-2025-899": {
           "auteur": "Conseil constitutionnel",
@@ -12307,12 +12283,6 @@
           "role": "amendement",
           "pour": "contre-texte",
           "objet": "suppression de l'article 28 (plafonnement des indemnités journalières après un accident du travail ou une maladie professionnelle), nouvelle lecture, rejetée (76-127)"
-        },
-        {
-          "id": "VTANR5L17V4641",
-          "role": "amendement",
-          "pour": "contre-texte",
-          "objet": "suppression de l'article 44 (gel des pensions et des prestations en 2026), nouvelle lecture, adoptée (197-84)"
         }
       ],
       "senat": {
@@ -12725,7 +12695,7 @@
       "etiquettes": [],
       "vigilance": [],
       "conseil_constitutionnel": "",
-      "note": "Texte non promulgué : adopté en 1re lecture par l'AN le 07/07/2026, transmis au Sénat, sans suite connue au 29/10/2026. Scrutin décisif (règle 9) : le dernier vote de l'AN sur l'ensemble, soit la 1re lecture. Il sera remplacé si l'AN revote le texte. On qualifie le texte voté (règle 6) : l'article unique réécrit par l'amendement du Gouvernement n° 39 (présomption d'usage légitime de l'arme dans le code de la sécurité intérieure), et non la rédaction initiale (présomption de légitime défense dans le code pénal). Amendement clé (règle 11) : suppression de l'article unique (22/01/2026), avant sa réécriture ; la mesure visée, la présomption de légitime défense, est mise en cause par la Défenseure des droits et la CNCDH. Écartés : les sous-amendements et amendements portant sur l'article ou le titre, qui ne sont ni des suppressions ni des rétablissements, dont l'amendement du Gouvernement n° 39 (V5147, adopté 103-74). La suppression de l'article unique (V5127) n'est pas comptée : elle double le scrutin décisif (règle 11).",
+      "note": "Texte non promulgué : adopté en 1re lecture par l'AN le 07/07/2026, transmis au Sénat, sans suite connue au 29/10/2026. Scrutin décisif (règle 9) : le dernier vote de l'AN sur l'ensemble, soit la 1re lecture. Il sera remplacé si l'AN revote le texte. On qualifie le texte voté (règle 6) : l'article unique réécrit par l'amendement du Gouvernement n° 39 (présomption d'usage légitime de l'arme dans le code de la sécurité intérieure), et non la rédaction initiale (présomption de légitime défense dans le code pénal). Aucun amendement clé : la suppression de l'article unique (V5127, 22/01/2026), avant sa réécriture, n'est pas comptée, car elle double le scrutin décisif (règle 11). Écartés : les sous-amendements et amendements portant sur l'article ou le titre, qui ne sont ni des suppressions ni des rétablissements, dont l'amendement du Gouvernement n° 39 (V5147, adopté 103-74).",
       "sources": {
         "cncdh-lettre-2026-06": {
           "auteur": "CNCDH",
@@ -14592,7 +14562,14 @@
           "url": "https://www.snjcgt.fr/2025/07/02/audiovisuel-public-la-place-de-la-loi-holding-est-aux-oubliettes-de-lhistoire/"
         }
       },
-      "scrutins": [],
+      "scrutins": [
+        {
+          "id": "VTANR5L17V2873",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable adoptée, 1re lecture (94-38)"
+        }
+      ],
       "senat": {
         "version": "seul",
         "scrutins": [
@@ -15497,7 +15474,7 @@
         }
       ],
       "conseil_constitutionnel": "Pas de saisine du Conseil constitutionnel.",
-      "note": "Adoption définitive par l'AN le 10 mai 2023, après le Sénat : le dernier vote de l'AN sur l'ensemble est celui du texte de la CMP (226-1). Une voix contre suffit pour qu'il départage (règle 9). Une seule lecture à l'AN avant la CMP : la 1re lecture est donc celle des amendements clés (règle 11). Un seul amendement de suppression a été mis aux voix : celui de l'article 1er (accès direct et primo-prescription des infirmiers en pratique avancée). La mesure est mise en cause par l'Ordre des médecins et l'Académie de médecine. L'article étend l'accès aux soins : voter sa suppression va contre le texte. Les autres scrutins sur amendement de 1re lecture (V864 à V866, V868, V870, V872 à V874) ne sont ni des suppressions ni des rétablissements. Les votes sur les articles eux-mêmes (V867, V869, V871) ne sont pas retenus.",
+      "note": "Adoption définitive par l'AN le 10 mai 2023, après le Sénat : le dernier vote de l'AN sur l'ensemble est celui du texte de la CMP (226-1). Une voix contre suffit pour qu'il départage (règle 9). Une seule lecture à l'AN avant la CMP : la 1re lecture est donc celle des amendements clés (règle 11). Aucun amendement clé. Un seul amendement de suppression a été mis aux voix : celui de l'article 1er (accès direct et primo-prescription des infirmiers en pratique avancée, V863, 7-66). Il n'est pas retenu : les sources admises ne s'accordent pas sur cette mesure, que France Assos Santé salue et que l'Ordre des médecins et l'Académie de médecine mettent en cause (règle 11). Les autres scrutins sur amendement de 1re lecture (V864 à V866, V868, V870, V872 à V874) ne sont ni des suppressions ni des rétablissements. Les votes sur les articles eux-mêmes (V867, V869, V871) ne sont pas retenus.",
       "sources": {
         "anm-2024-02": {
           "auteur": "Académie nationale de médecine",
@@ -15536,12 +15513,6 @@
           "role": "ensemble",
           "pour": "texte",
           "objet": "ensemble, 1re lecture (73-0)"
-        },
-        {
-          "id": "VTANR5L16V863",
-          "role": "amendement",
-          "pour": "contre-texte",
-          "objet": "suppression de l'article 1er, accès direct et primo-prescription des infirmiers en pratique avancée, 1re lecture (7-66)"
         }
       ],
       "senat": {
@@ -16265,7 +16236,7 @@
       "etiquettes": [],
       "vigilance": [],
       "conseil_constitutionnel": "Décision 2025-896 DC du 20 novembre 2025, saisie par 60 députés. Le 4° du I de l'article 26 est censuré au fond : il réservait le recours contre un document d'urbanisme aux personnes ayant participé à la consultation du public, une « atteinte disproportionnée » au droit à un recours juridictionnel effectif. Le II du même article tombe par voie de conséquence. Douze articles sont censurés comme cavaliers (5, 6, 10, 11, 12, 13, 14, 16, 27, 28, 30 et 31). Sont déclarés conformes, sans réserve, le gel des règles pour les permis modificatifs, l'abrogation de l'article L. 600-1 et le délai d'un mois du recours gracieux.",
-      "note": "Adoption définitive par l'AN le 15 octobre 2025 (texte de la CMP), après le Sénat le 9 juillet : c'est le scrutin décisif (règle 9). Amendements clés de 1re lecture, seule lecture de l'AN où des suppressions ont été mises aux voix (règle 11), proposés sous réserve : la suppression de l'article 2 (V1684), dont les dérogations au PLU sont mises en cause par FNE Île-de-France, et celle de l'article 4 (V1708), qui portait alors la réforme du recours gracieux, comptée par la même source parmi les régressions. Les deux articles restreignent le droit suivi : voter leur suppression va contre le texte. Écartées faute de source qui mette en cause la mesure : les suppressions de l'article 1er (V1676 ; seuils de solarisation, schémas de cohérence territoriale, établissements publics fonciers), de l'article 1er bis (V1683, carrières, adoptée) et de l'article 3 bis (V1707, constructions temporaires des chantiers nucléaires). Les autres scrutins de 1re lecture ne suppriment ni ne rétablissent un article. Le scrutin V4239, rattaché à ce dossier dans les données, porte sur le projet de loi de finances pour 2026 et n'est pas retenu. Aucune motion de rejet n'a été mise aux voix.",
+      "note": "Adoption définitive par l'AN le 15 octobre 2025 (texte de la CMP), après le Sénat le 9 juillet : c'est le scrutin décisif (règle 9). Amendement clé de 1re lecture, seule lecture de l'AN où des suppressions ont été mises aux voix (règle 11) : la suppression de l'article 2 (V1684), dont les dérogations au PLU sont mises en cause par FNE Île-de-France. Cet article restreint le droit suivi : voter sa suppression va contre le texte. La suppression de l'article 4 (V1708, 21-99) n'est pas retenue : cet article mixte portait alors la réforme du recours gracieux, comptée par la même source parmi les régressions, et le relèvement des amendes contre les constructions illégales ; son sens n'est pas univoque (règle 11). Écartées faute de source qui mette en cause la mesure : les suppressions de l'article 1er (V1676 ; seuils de solarisation, schémas de cohérence territoriale, établissements publics fonciers), de l'article 1er bis (V1683, carrières, adoptée) et de l'article 3 bis (V1707, constructions temporaires des chantiers nucléaires). Les autres scrutins de 1re lecture ne suppriment ni ne rétablissent un article. Le scrutin V4239, rattaché à ce dossier dans les données, porte sur le projet de loi de finances pour 2026 et n'est pas retenu. Aucune motion de rejet n'a été mise aux voix.",
       "sources": {
         "cc-2025-896": {
           "auteur": "Conseil constitutionnel",
@@ -16304,12 +16275,6 @@
           "role": "amendement",
           "pour": "contre-texte",
           "objet": "suppression de l'article 2, dérogations au PLU élargies et résidences hôtelières à vocation sociale (27-104)"
-        },
-        {
-          "id": "VTANR5L17V1708",
-          "role": "amendement",
-          "pour": "contre-texte",
-          "objet": "suppression de l'article 4, amendes contre les constructions illégales et recours gracieux réduit à un mois (21-99)"
         }
       ]
     },
@@ -16696,7 +16661,7 @@
       "etiquettes": [],
       "vigilance": [],
       "conseil_constitutionnel": "Décision 2024-866 DC du 17 mai 2024, partiellement conforme. Le délit d'outrage en ligne (article 19) est censuré au fond, pour une atteinte à la liberté d'expression « qui n'est pas nécessaire, adaptée et proportionnée ». Quatre articles (10, 11, 18 et 58) sont censurés comme cavaliers, dont l'objectif d'identité numérique pour tous en 2027 (article 10). Le référentiel de vérification de l'âge et le blocage administratif sont validés. Deux réserves : pas de reconnaissance faciale dans les travaux de recherche du service de l'État (article 42), pas de sanction pour des faits antérieurs à l'entrée en vigueur (article 64).",
-      "note": "Scrutin décisif : l'ensemble du texte de la CMP, le 10 avril 2024. C'est le dernier vote de l'AN, et l'adoption est définitive à cette date. Il n'y a eu qu'une lecture à l'AN : les amendements clés sont de 1re lecture (règle 11). Trois sont retenus. Article 1er : référentiel de vérification de l'âge (La Quadrature du Net, qui demande le rejet des articles 1er et 2). Article 5 : suspension des comptes (La Quadrature du Net). Article 5 bis : délit d'outrage en ligne. Sa suppression a été adoptée, mais l'article a été rétabli en CMP, est devenu l'article 19 de la loi et a été censuré par le Conseil constitutionnel. Les trois articles restreignent des droits : voter leur suppression va contre le texte. Six scrutins sont écartés. Article 4 (Arcom et médias visés par des sanctions européennes) : aucune source ne met la mesure en cause. Articles 4 B et 10 bis A : rétablissements de mesures protectrices ou techniques que personne ne met en cause. Articles 15 et 15 bis (jeux à objets numériques) : hors grille. Le filtre « anti-arnaque » (article 6) n'a fait l'objet d'aucun scrutin public de suppression.",
+      "note": "Scrutin décisif : l'ensemble du texte de la CMP, le 10 avril 2024. C'est le dernier vote de l'AN, et l'adoption est définitive à cette date. Il n'y a eu qu'une lecture à l'AN : les amendements clés sont de 1re lecture (règle 11). Deux sont retenus. Article 5 : suspension des comptes (La Quadrature du Net). Article 5 bis : délit d'outrage en ligne. Sa suppression a été adoptée, mais l'article a été rétabli en CMP, est devenu l'article 19 de la loi et a été censuré par le Conseil constitutionnel. Les deux articles restreignent des droits : voter leur suppression va contre le texte. La suppression de l'article 1er (référentiel de vérification de l'âge, V2645, 21-89) n'est pas retenue : La Quadrature du Net demande le rejet des articles 1er et 2 au nom de l'anonymat en ligne, mais cet article porte aussi la protection des mineurs face aux sites pornographiques, et son sens n'est pas univoque (règle 11). Six autres scrutins sont écartés. Article 4 (Arcom et médias visés par des sanctions européennes) : aucune source ne met la mesure en cause. Articles 4 B et 10 bis A : rétablissements de mesures protectrices ou techniques que personne ne met en cause. Articles 15 et 15 bis (jeux à objets numériques) : hors grille. Le filtre « anti-arnaque » (article 6) n'a fait l'objet d'aucun scrutin public de suppression.",
       "sources": {
         "cc-2024-866": {
           "auteur": "Conseil constitutionnel",
@@ -16741,12 +16706,6 @@
           "role": "motion",
           "pour": "contre-texte",
           "objet": "motion de rejet préalable, CMP (97-163)"
-        },
-        {
-          "id": "VTANR5L16V2645",
-          "role": "amendement",
-          "pour": "contre-texte",
-          "objet": "suppression de l'article 1er, référentiel de vérification de l'âge (21-89)"
         },
         {
           "id": "VTANR5L16V2712",
@@ -16806,7 +16765,8 @@
         }
       ],
       "etiquettes": [
-        "regime-exception"
+        "regime-exception",
+        "outre-mer"
       ],
       "vigilance": [
         {
@@ -16824,7 +16784,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2025-878 DC du 24 avril 2025, non-conformité partielle avec réserves. Censures au fond : pouvoir des agents privés de contraindre une personne à quitter les lieux (art. 4, 2°), caméras embarquées des transports scolaires à Mayotte (art. 13). Quatre articles censurés comme cavaliers, dont le pistolet à impulsion électrique des agents de la SNCF (art. 5) et la prolongation de la vidéosurveillance algorithmique jusqu'au 1er mars 2027 (art. 15). Réserves sur les interventions sur la voie publique, l'éviction des gares (critères excluant toute discrimination) et les caméras frontales. Validés : palpations et fouilles par les agents de la SNCF et de la RATP (art. 1er), caméras individuelles des conducteurs (art. 11), captation sonore (art. 16).",
-      "note": "Scrutin décisif : texte de la CMP, dernier vote de l'AN sur l'ensemble (18/03/2025). Amendements clés de 1re lecture, seule lecture de l'AN (règle 11). Numéros d'articles du texte du Sénat examiné en séance. Un amendement clé : le rétablissement de l'article 11 (captation sonore), mesure mise en cause par La Quadrature du Net. Écartés faute de source admise qui mette la mesure en cause : V744 (suppression de l'article 1er, palpations et fouilles, validées sans réserve par le Conseil constitutionnel) ; V776 et V775 (rétablissement de l'article 13, interdiction de paraître, que le Conseil n'a pas examinée) ; V781 (rétablissement de l'article 16, transmission des procès-verbaux au parquet, 85-85). V773, amendement du Gouvernement prolongeant la vidéosurveillance algorithmique (86-37), crée un article additionnel et n'est ni une suppression ni un rétablissement. La commission avait supprimé la vidéosurveillance algorithmique en différé (art. 9), qui n'a pas été rétablie.",
+      "note": "Scrutin décisif : texte de la CMP, dernier vote de l'AN sur l'ensemble (18/03/2025). Amendements clés de 1re lecture, seule lecture de l'AN (règle 11). Numéros d'articles du texte du Sénat examiné en séance. Un amendement clé : le rétablissement de l'article 11 (captation sonore), mesure mise en cause par La Quadrature du Net. Écartés faute de source admise qui mette la mesure en cause : V744 (suppression de l'article 1er, palpations et fouilles, validées sans réserve par le Conseil constitutionnel) ; V776 et V775 (rétablissement de l'article 13, interdiction de paraître, que le Conseil n'a pas examinée) ; V781 (rétablissement de l'article 16, transmission des procès-verbaux au parquet, 85-85). V773, amendement du Gouvernement prolongeant la vidéosurveillance algorithmique (86-37), crée un article additionnel et n'est ni une suppression ni un rétablissement. La commission avait supprimé la vidéosurveillance algorithmique en différé (art. 9), qui n'a pas été rétablie. L'étiquette « outre-mer » tient à une mesure propre à Mayotte, les caméras embarquées des transports scolaires, présente dans le texte voté même si elle a été censurée ensuite (règle 6).",
       "sources": {
         "cc-2025-878": {
           "auteur": "Conseil constitutionnel",
@@ -17557,7 +17517,9 @@
           "justification": "Les néonicotinoïdes autorisés par dérogation « induisent des risques pour la santé humaine », constate le Conseil constitutionnel. Les associations soulignent qu'ils « peuvent avoir des effets neurotoxiques sur les pollinisateurs et la santé humaine »."
         }
       ],
-      "etiquettes": [],
+      "etiquettes": [
+        "regime-exception"
+      ],
       "vigilance": [
         {
           "texte": "Le Conseil constitutionnel a validé la quasi-totalité des mesures contestées. Il juge que les dérogations aux néonicotinoïdes, « compte tenu en particulier de leur caractère temporaire » et sous deux réserves, ne privent pas de garanties légales le droit de vivre dans un environnement équilibré. Il valide aussi l'objectif de stockage d'eau, l'écart au principe de non-régression, la compensation des atteintes à la biodiversité, le régime du loup et l'action contre les recours abusifs.",
@@ -17573,7 +17535,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2026-914 DC du 14 août 2026, non-conformité partielle avec réserves. Censurés comme cavaliers : le curage des plans d'eau (3° de l'article 14), la pisciculture (article 16), la suspension par décret de la redevance pour pollutions diffuses (article 26), l'exclusion des bâtiments agricoles du décompte de l'artificialisation (article 32), le régime des haies (article 36) et les allégations sur la rémunération des agriculteurs (article 55). La servitude de voisinage agricole (article 35) est censurée pour atteinte disproportionnée au droit de propriété. La restriction de la participation du public aux personnes justifiant d'un intérêt à agir (2° de l'article 46) est censurée sur le fondement de l'article 7 de la Charte de l'environnement. Trois dispositions sont validées sous réserve : les dérogations aux néonicotinoïdes (l'ANSES peut en restreindre le champ géographique, et son silence au bout de deux mois vaut refus), la compensation des zones humides (un ouvrage de stockage d'eau n'est pas une zone humide) et le plafond « directives européennes » de l'ordonnance sur les élevages (limité aux élevages qu'elles couvrent). Le reste des dispositions contestées est déclaré conforme, dont le délai de grâce et l'instruction des autorisations de pesticides, le stockage d'eau, la dérogation aux schémas d'aménagement des eaux, l'écart au principe de non-régression, le régime du loup, les circonstances aggravantes pénales et les dommages et intérêts pour recours abusif.",
-      "note": "Le scrutin décisif est le vote du texte de la CMP par l'Assemblée le 20 juillet 2026, dernier vote de l'Assemblée sur l'ensemble ; le Sénat l'a adopté définitivement le 21 juillet (règle 9). On qualifie ce texte (règle 6) : il contient les dérogations aux néonicotinoïdes, ajoutées par le Sénat, et la restriction de la participation du public, censurée ensuite. Le vote de 1re lecture et la motion de rejet de la CMP sont affichés, pas comptés (règle 10). Trois amendements clés, tous de 1re lecture, seule lecture de l'Assemblée où des suppressions ont été mises aux voix (règle 11). La suppression de l'article 14 (loup, V6903) est mise en cause par le Conseil d'État et les associations, celle de l'article 17 (ordonnance sur les élevages, V6958) par les associations. La suppression de l'article 18 bis (participation réservée aux personnes ayant un intérêt à agir, V7145) est mise en cause par la censure du Conseil constitutionnel. Ces articles restreignent tous des garanties : voter leur suppression va contre le texte. Ne sont pas retenus la suppression de l'article 5 (stockage d'eau), dont le lien avec les critiques des sources est le plus ténu, et le rétablissement de l'article 7 (zones humides), que le Conseil constitutionnel a validé sous réserve : une décision qui valide une mesure ne la met pas en cause (règle 11). Écartées faute de source qui mette en cause la mesure précise, ou parce que le sens de l'article n'est pas univoque : les suppressions des articles 3, 4 bis, 5 ter, 5 quater, 6, 6 bis, 8 bis, 8 ter, 10, 21 et 23, et le rétablissement de l'article 8 (captages). Les dérogations aux néonicotinoïdes n'ont été introduites qu'au Sénat : aucun vote de l'Assemblée ne porte sur elles, hors les votes sur l'ensemble.",
+      "note": "Le scrutin décisif est le vote du texte de la CMP par l'Assemblée le 20 juillet 2026, dernier vote de l'Assemblée sur l'ensemble ; le Sénat l'a adopté définitivement le 21 juillet (règle 9). On qualifie ce texte (règle 6) : il contient les dérogations aux néonicotinoïdes, ajoutées par le Sénat, et la restriction de la participation du public, censurée ensuite. Le vote de 1re lecture et la motion de rejet de la CMP sont affichés, pas comptés (règle 10). Trois amendements clés, tous de 1re lecture, seule lecture de l'Assemblée où des suppressions ont été mises aux voix (règle 11). La suppression de l'article 14 (loup, V6903) est mise en cause par le Conseil d'État et les associations, celle de l'article 17 (ordonnance sur les élevages, V6958) par les associations. La suppression de l'article 18 bis (participation réservée aux personnes ayant un intérêt à agir, V7145) est mise en cause par la censure du Conseil constitutionnel. Ces articles restreignent tous des garanties : voter leur suppression va contre le texte. Ne sont pas retenus la suppression de l'article 5 (stockage d'eau), dont le lien avec les critiques des sources est le plus ténu, et le rétablissement de l'article 7 (zones humides), que le Conseil constitutionnel a validé sous réserve : une décision qui valide une mesure ne la met pas en cause (règle 11). Écartées faute de source qui mette en cause la mesure précise, ou parce que le sens de l'article n'est pas univoque : les suppressions des articles 3, 4 bis, 5 ter, 5 quater, 6, 6 bis, 8 bis, 8 ter, 10, 21 et 23, et le rétablissement de l'article 8 (captages). Les dérogations aux néonicotinoïdes n'ont été introduites qu'au Sénat : aucun vote de l'Assemblée ne porte sur elles, hors les votes sur l'ensemble. L'étiquette « régimes d'exception » tient aux dérogations de trois ans à l'interdiction des néonicotinoïdes, dispositif temporaire.",
       "sources": {
         "cc-2026-914": {
           "auteur": "Conseil constitutionnel",
@@ -17848,7 +17810,7 @@
         }
       ],
       "conseil_constitutionnel": "Pas de saisine du Conseil constitutionnel.",
-      "note": "Adoption définitive au Sénat (18 décembre 2023) : le dernier vote de l'AN est celui du texte de la CMP, le 12 décembre (165-24). Une seule lecture à l'AN avant la CMP : la 1re lecture est donc celle des amendements clés (règle 11). Un amendement retenu : la suppression de l'article 3 (adhésion automatique des professionnels aux CPTS), mesure que l'Ordre des médecins met en cause. L'article organise l'accès aux soins dans le territoire : voter sa suppression va contre le texte. Écartées : la suppression de l'article 1er (V1802, conseils territoriaux de santé), qu'aucune source ne met en cause (l'Ordre « s'interroge » seulement sur la responsabilité collective), et celle de l'article 6 bis (V1853, direction commune des hôpitaux d'un groupement), mesure de gestion hospitalière sans source. Les amendements Garot de régulation de l'installation (V1812, 127-168) créaient un article : ce ne sont ni des suppressions ni des rétablissements (règle 11).",
+      "note": "Adoption définitive au Sénat (18 décembre 2023) : le dernier vote de l'AN est celui du texte de la CMP, le 12 décembre (165-24). Une seule lecture à l'AN avant la CMP : la 1re lecture est donc celle des amendements clés (règle 11). Aucun amendement clé. La suppression de l'article 3 (adhésion automatique des professionnels aux CPTS, V1845, 16-32) n'est pas retenue : sa mesure ne figure pas dans le texte soumis au scrutin décisif (règle 11). Écartées aussi : la suppression de l'article 1er (V1802, conseils territoriaux de santé), qu'aucune source ne met en cause (l'Ordre « s'interroge » seulement sur la responsabilité collective), et celle de l'article 6 bis (V1853, direction commune des hôpitaux d'un groupement), mesure de gestion hospitalière sans source. Les amendements Garot de régulation de l'installation (V1812, 127-168) créaient un article : ce ne sont ni des suppressions ni des rétablissements (règle 11).",
       "sources": {
         "cnom-2023-10": {
           "auteur": "Conseil national de l'Ordre des médecins",
@@ -17881,12 +17843,6 @@
           "role": "ensemble",
           "pour": "texte",
           "objet": "ensemble, 1re lecture (37-4)"
-        },
-        {
-          "id": "VTANR5L16V1845",
-          "role": "amendement",
-          "pour": "contre-texte",
-          "objet": "suppression de l'article 3, adhésion automatique des professionnels aux CPTS, 1re lecture (16-32)"
         }
       ],
       "senat": {
@@ -18171,59 +18127,6 @@
         "sources": {},
         "note": "Vote sur une autre version que le décisif de l'AN, sans aucune voix contre : affiché et non compté (règle 23)."
       }
-    },
-    {
-      "id": "visite-parlementaires-essms-ppl-2023",
-      "dossier_an": "DLR5L16N46778",
-      "legislature": 16,
-      "titre": "Proposition de loi visant à étendre le droit de visite des parlementaires et parlementaires européens élus en France aux établissements sociaux et médico-sociaux",
-      "resume": "Proposition de loi du groupe RN (Laure Lavalette), examinée le 12 janvier 2023 et rejetée. Son article unique autorisait les députés, les sénateurs et les députés européens élus en France à visiter « à tout moment et sans préavis » tous les établissements sociaux et médico-sociaux. Sont notamment visés ceux de l'aide sociale à l'enfance, les Ehpad, les établissements pour personnes handicapées, les centres d'hébergement et les centres d'accueil pour demandeurs d'asile. Les parlementaires pouvaient se faire accompagner de journalistes. L'Assemblée a supprimé l'article unique (100-90), et le texte a été rejeté.",
-      "droits": [
-        {
-          "code": "enfants",
-          "role": "principal",
-          "sens": "etend",
-          "sources": [
-            "ddd-2025-005"
-          ],
-          "justification": "Le texte ouvre aux parlementaires un contrôle sans préavis des lieux d'accueil de la protection de l'enfance, comme il en existe déjà pour les prisons, les centres de rétention et les centres éducatifs fermés. Pour la Défenseure des droits, le contrôle des établissements de protection de l'enfance « s'inscrit dans une politique globale de lutte contre la maltraitance institutionnelle ». Elle juge ce contrôle insuffisant et recommande des « contrôles inopinés dans les structures d'accueil collectif »."
-        },
-        {
-          "code": "sante",
-          "role": "secondaire",
-          "sens": "etend",
-          "sources": [
-            "cglpl-2012"
-          ],
-          "justification": "Le texte ouvre aussi aux visites les établissements pour personnes âgées dépendantes (Ehpad). Le Contrôleur général des lieux de privation de liberté y voit un « risque d'atteinte aux droits des personnes âgées hébergées » et relève qu'« aucun instrument de constat sur place n'existe ». Selon lui, les « possibilités de contrôle » suffisent « à modifier les pratiques »."
-        }
-      ],
-      "etiquettes": [],
-      "vigilance": [],
-      "conseil_constitutionnel": "",
-      "note": "Le texte n'a pas fait l'objet d'un vote sur l'ensemble. Le 12/01/2023, l'Assemblée a adopté les amendements de suppression de l'article unique (V829, 100-90), et la présidente a constaté que la proposition était rejetée. Le vote qui a fixé le sort de l'article unique tient lieu de scrutin décisif (règle 9). Il porte sur la suppression de l'article : voter pour, c'est voter contre le texte. Aucun amendement clé ni aucune motion de rejet : c'est le seul scrutin public du dossier. Les sources portent sur la mesure (le contrôle sans préavis de ces établissements par un tiers) et non sur ce texte. Le texte étend un droit, et aucune critique n'a été trouvée parmi les sources admises.",
-      "sources": {
-        "cglpl-2012": {
-          "auteur": "Contrôleur général des lieux de privation de liberté",
-          "titre": "Rapport d'activité 2012 (chapitre 1 : la question des établissements d'hébergement pour personnes âgées dépendantes)",
-          "date": "2013-02-25",
-          "url": "https://www.vie-publique.fr/files/rapport/pdf/134000232.pdf"
-        },
-        "ddd-2025-005": {
-          "auteur": "Défenseur des droits",
-          "titre": "Décision-cadre n° 2025-005 du 28 janvier 2025 relative à la protection de l'enfance",
-          "date": "2025-01-28",
-          "url": "https://juridique.defenseurdesdroits.fr/doc_num.php?explnum_id=22543"
-        }
-      },
-      "scrutins": [
-        {
-          "id": "VTANR5L16V829",
-          "role": "decisif",
-          "pour": "contre-texte",
-          "objet": "suppression de l'article unique, valant rejet du texte, 1re lecture, adoptée (100-90)"
-        }
-      ]
     },
     {
       "id": "vote-correspondance-detenus-2025",
@@ -19318,7 +19221,7 @@
       "dossier_an": "DLR5L15N41895",
       "legislature": 15,
       "titre": "Proposition de loi, modifiée par l'Assemblée nationale en première lecture, visant à favoriser l'accès de tous les étudiants à une offre de restauration à tarif modéré",
-      "motif": "Adopté sans aucune voix contre au Sénat : ce vote ne départage personne (règle 23)."
+      "motif": "Aucune source admise sur ce texte (règle 7)."
     },
     {
       "dossier_an": "DLR5L15N42024",
@@ -19720,7 +19623,7 @@
       "dossier_an": "DLR5L16N46275",
       "legislature": 16,
       "titre": "Suppression des zones à faibles émissions mobilité",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+      "motif": "Rejeté en séance sans vote sur l'ensemble (règle 9)."
     },
     {
       "dossier_an": "DLR5L16N46346",
@@ -19738,7 +19641,7 @@
       "dossier_an": "DLR5L16N46428",
       "legislature": 16,
       "titre": "Réintégrer le personnel des établissements de santé et de secours non-vacciné grâce à un protocole sanitaire renforcé",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+      "motif": "Retiré par son auteur sans vote sur l'ensemble (règle 9)."
     },
     {
       "dossier_an": "DLR5L16N46445",
@@ -19756,7 +19659,7 @@
       "dossier_an": "DLR5L16N46471",
       "legislature": 16,
       "titre": "Création d’une juridiction spécialisée dans l'expulsion des étrangers délinquants",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+      "motif": "Rejeté en séance sans vote sur l'ensemble (règle 9)."
     },
     {
       "dossier_an": "DLR5L16N46472",
@@ -19870,7 +19773,7 @@
       "dossier_an": "DLR5L16N46760",
       "legislature": 16,
       "titre": "Favoriser et inciter les entreprises à augmenter les salaires nets de 10 %",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+      "motif": "Rejeté en séance sans vote sur l'ensemble (règle 9)."
     },
     {
       "dossier_an": "DLR5L16N46767",
@@ -19879,10 +19782,16 @@
       "motif": "Règles de la mobilité à l'étranger des apprentis et des alternants. Aucune source admise (règle 7) ne s'est prononcée sur le texte."
     },
     {
+      "dossier_an": "DLR5L16N46778",
+      "legislature": 16,
+      "titre": "Proposition de loi visant à étendre le droit de visite des parlementaires et parlementaires européens élus en France aux établissements sociaux et médico-sociaux",
+      "motif": "Aucune source admise ne se prononce sur la visite d'établissements sociaux et médico-sociaux par des parlementaires : les avis lus portent sur le contrôle de ces établissements en général (règle 7)."
+    },
+    {
       "dossier_an": "DLR5L16N46780",
       "legislature": 16,
       "titre": "Revivifier la représentation politique",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+      "motif": "Rejeté en séance sans vote sur l'ensemble (règle 9)."
     },
     {
       "dossier_an": "DLR5L16N46824",
@@ -19996,7 +19905,7 @@
       "dossier_an": "DLR5L16N47036",
       "legislature": 16,
       "titre": "Mieux lutter contre la récidive",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+      "motif": "Retiré par son auteur sans vote sur l'ensemble (règle 9)."
     },
     {
       "dossier_an": "DLR5L16N47046",
@@ -20146,7 +20055,7 @@
       "dossier_an": "DLR5L16N47595",
       "legislature": 16,
       "titre": "Élargir l'assiette de la taxe sur les transactions financières",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+      "motif": "Retiré par son auteur sans vote sur l'ensemble (règle 9)."
     },
     {
       "dossier_an": "DLR5L16N47601",
@@ -20254,7 +20163,7 @@
       "dossier_an": "DLR5L16N47806",
       "legislature": 16,
       "titre": "Soutenir les femmes qui souffrent d'endométriose",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+      "motif": "Retiré par son auteur sans vote sur l'ensemble (règle 9)."
     },
     {
       "dossier_an": "DLR5L16N47883",
@@ -20296,7 +20205,7 @@
       "dossier_an": "DLR5L16N48135",
       "legislature": 16,
       "titre": "Souveraineté de la France, nationalité, immigration et asile",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+      "motif": "Retiré par son auteur sans vote sur l'ensemble (règle 9)."
     },
     {
       "dossier_an": "DLR5L16N48140",
@@ -20356,7 +20265,7 @@
       "dossier_an": "DLR5L16N48484",
       "legislature": 16,
       "titre": "Proposition de loi visant à supprimer ou à suspendre les allocations familiales pour les parents d’enfants criminels ou délinquants",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+      "motif": "Retiré par son auteur sans vote sur l'ensemble (règle 9)."
     },
     {
       "dossier_an": "DLR5L16N48492",
@@ -20374,7 +20283,7 @@
       "dossier_an": "DLR5L16N48543",
       "legislature": 16,
       "titre": "Proposition de loi visant à baisser la facture énergétique des Français et des entreprises sur le territoire",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+      "motif": "Retiré par son auteur sans vote sur l'ensemble (règle 9)."
     },
     {
       "dossier_an": "DLR5L16N48586",
