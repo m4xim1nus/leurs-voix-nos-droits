@@ -36,7 +36,7 @@
             ? { type: 'noms', liste: elus.slice(0, 12), pays, approche: !!approche }
             : {
                 type: 'erreur',
-                message: `Aucun·e député·e depuis 2017 ni sénateur·ice depuis 2022 ne s’appelle « ${q} », et aucun pays ne porte ce nom.`
+                message: `Aucun·e député·e ni sénateur·ice depuis 2017 ne s’appelle « ${q} », et aucun pays ne porte ce nom.`
               };
       } catch {
         resultat = { type: 'erreur', message: 'La liste des élu·es n’a pas pu être chargée.' };

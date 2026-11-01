@@ -9,6 +9,7 @@ import { MessageChannel, receiveMessageOnPort, Worker } from 'node:worker_thread
 import { circonscription, depute, legislature, pluriel, pourcent } from '$lib/format';
 import { URL_SITE } from '$lib/site';
 import { vueDepute, vueGroupe } from './vues';
+import { vueSenateur } from './vues-senat';
 
 const POLICES = ['archivo-etroit-800.ttf', 'archivo-500.ttf'].map((f) =>
   resolve(process.cwd(), 'scripts/polices', f)
@@ -41,7 +42,14 @@ export interface Carte {
   /** Droits le plus et le moins favorables, s'ils diffèrent. */
   extremes?: { haut: Repere; bas: Repere } | null;
   chemin: string;
+  /** Sénat (règle 27) : le score se lit « d'après les votes enregistrés ». */
+  enregistres?: boolean;
 }
+
+const detail = (c: Carte) =>
+  c.enregistres
+    ? `sur ${c.nTextes} ${c.nTextes > 1 ? 'textes' : 'texte'}, votes enregistrés à son nom`
+    : `sur ${pluriel(c.nTextes, 'texte qualifié', 'textes qualifiés')}`;
 
 /** La règle graduée de 0 à 100 %, un curseur par repère, et la légende des repères dessous. */
 function regle(reperes: Repere[], y: number, largeur = L): string {
@@ -105,7 +113,7 @@ export function svgCarte(c: Carte): string {
       ? `<text x="${MARGE}" y="380" font-size="44" font-weight="500" fill="${ENCRE}">Aucun vote compté</text>`
       : `<text x="${MARGE}" y="410" font-weight="800" font-stretch="condensed" font-size="160" fill="${ENCRE}">${chiffre}</text>
   <text x="${xd}" y="${c.extremes ? 316 : 356}" font-size="30" font-weight="500" fill="${ENCRE}">de votes favorables aux droits</text>
-  <text x="${xd}" y="${c.extremes ? 354 : 398}" font-size="30" font-weight="500" fill="${ARDOISE}">sur ${pluriel(c.nTextes, 'texte qualifié', 'textes qualifiés')}</text>${c.extremes ? ligneExtreme('Le plus favorable', c.extremes.haut, xd, 398) + ligneExtreme('Le moins favorable', c.extremes.bas, xd, 430) : ''}`;
+  <text x="${xd}" y="${c.extremes ? 354 : 398}" font-size="30" font-weight="500" fill="${ARDOISE}">${echapper(detail(c))}</text>${c.extremes ? ligneExtreme('Le plus favorable', c.extremes.haut, xd, 398) + ligneExtreme('Le moins favorable', c.extremes.bas, xd, 430) : ''}`;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${L}" height="${H}" viewBox="0 0 ${L} ${H}" font-family="Archivo">
   <rect width="${L}" height="${H}" fill="#ffffff"/>
   <rect width="${L}" height="14" fill="${ENCRE}"/>
@@ -144,7 +152,7 @@ export function svgPortrait(c: Carte): string {
       ? `<text x="${MARGE}" y="${ySous + 200}" font-size="48" font-weight="500" fill="${ENCRE}">Aucun vote compté</text>`
       : `<text x="${MARGE}" y="${ySous + 300}" font-weight="800" font-stretch="condensed" font-size="260" fill="${ENCRE}">${chiffre}</text>
   <text x="${MARGE}" y="${ySous + 372}" font-size="40" font-weight="500" fill="${ENCRE}">de votes favorables aux droits</text>
-  <text x="${MARGE}" y="${ySous + 424}" font-size="40" font-weight="500" fill="${ARDOISE}">sur ${pluriel(c.nTextes, 'texte qualifié', 'textes qualifiés')}</text>${c.extremes ? ligneExtreme('Le plus favorable', c.extremes.haut, MARGE, ySous + 492).replace('font-size="23"', 'font-size="30"') + ligneExtreme('Le moins favorable', c.extremes.bas, MARGE, ySous + 534).replace('font-size="23"', 'font-size="30"') : ''}
+  <text x="${MARGE}" y="${ySous + 424}" font-size="40" font-weight="500" fill="${ARDOISE}">${echapper(detail(c))}</text>${c.extremes ? ligneExtreme('Le plus favorable', c.extremes.haut, MARGE, ySous + 492).replace('font-size="23"', 'font-size="30"') + ligneExtreme('Le moins favorable', c.extremes.bas, MARGE, ySous + 534).replace('font-size="23"', 'font-size="30"') : ''}
   ${regle(c.reperes, 1110, W)}`;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${HP}" viewBox="0 0 ${W} ${HP}" font-family="Archivo">
   <rect width="${W}" height="${HP}" fill="#ffffff"/>
@@ -191,6 +199,41 @@ export function carteDepute(slug: string): Carte {
     reperes,
     extremes: extremes(v.droits.map((x) => ({ libelle: x.droit.court, score: x.score.score }))),
     chemin: `/deputes/${d.slug}`
+  };
+}
+
+/** Carte d'un·e sénateur·ice : son score d'après les votes enregistrés à son nom (règle 27), et son groupe sur la dernière période où il ou elle a voté. */
+export function carteSenateur(slug: string): Carte {
+  const v = vueSenateur(slug);
+  const s = v.senateur;
+  const elle = s.civ === 'Mme';
+  const qui = s.actuel
+    ? elle
+      ? 'Sénatrice'
+      : 'Sénateur'
+    : elle
+      ? 'Ancienne sénatrice'
+      : 'Ancien sénateur';
+  const p = v.periodes[0];
+  const suffixe = p && v.periodes.length > 1 ? `, ${p.court}` : '';
+  const reperes: Repere[] = [];
+  if (p?.score.score != null)
+    reperes.push({ libelle: `${s.nom}${suffixe}`, couleur: ENCRE, score: p.score.score });
+  if (p?.groupe && p.scoreGroupe?.score != null)
+    reperes.push({
+      libelle: `groupe ${p.groupe.sigle}${suffixe}`,
+      couleur: ARDOISE,
+      score: p.scoreGroupe.score
+    });
+  return {
+    titre: `${s.prenom} ${s.nom}`,
+    sousTitre: `${qui}${v.groupeActuel ? ` ${v.groupeActuel.sigle}` : ''}, ${s.circonscription}`,
+    score: v.global?.score ?? null,
+    nTextes: v.global?.n_textes ?? 0,
+    reperes,
+    extremes: extremes(v.droits.map((x) => ({ libelle: x.droit.court, score: x.score.score }))),
+    chemin: `/senat/${s.slug}`,
+    enregistres: true
   };
 }
 

@@ -28,6 +28,10 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] Une publication peut remettre un ancien motif quand `editorial.json` a été commité sans passer par D1 (DLR5L15N41895, 01/11/2026). Comparer D1 et le fichier dans `lvnd check`, ou au moment de publier (claude, 2026-11-01)
 - [ ] Une publication qui change le statut d'un texte cité dans `termes_recherche.yaml` fait échouer les tests et `lvnd check`, donc bloque la passe de données suivante (01/11/2026, corrigé à la main). Rendre ce contrôle non bloquant, ou faire suivre les clés (claude, 2026-11-01)
 - [ ] `sync-admin --brouillons --simuler` écrit quand même dans D1 : refuser la combinaison (claude, 2026-11-01)
+- [ ] justice-criminelle-2026 : d'après une lecture du texte de la CMP (T.A. 160) et du rapport n° 868, le « plaider-coupable » criminel n'y est plus, alors que le résumé le décrit et que VTANR5L17V7896 compte comme amendement clé (règle 11). Vérifier, puis requalifier : les scores publiés de l'Assemblée sont touchés (claude, 2026-11-01)
+- [ ] LOPJ 2023, SN2022-297 : les conseils de l'ordre de Paris, Lyon et Marseille contestent une « atteinte au droit d'accès à un juge », sans droit de la grille pour la justice commerciale. Statut de ces conseils au regard de la règle 7, à trancher (claude, 2026-11-01)
+- [ ] LOM 2019 : la note publiée dit « faute de source admise lue » sur le contrôle automatisé, alors que l'avis n° 395539 du Conseil d'État en parle (risques d'atteinte, mais dispositif admis). Corriger la note (claude, 2026-11-01)
+- [ ] Amendements clés des budgets au Sénat : 52 candidats non lus (claude, 2026-11-01)
 - [ ] Présentation : PDF au texte sélectionnable, et chiffres à relire à chaque évolution de la méthode (claude, 2026-11-01)
 
 ## Textes à surveiller
@@ -50,7 +54,7 @@ Le Sénat de 2017-2022, écarté du cycle XVe (décision de Max, 31/10/2026) : l
 - [→Sénat, suite] Votes du Sénat sur les textes de la XVe (claude, 2026-10-31)
 - [→Sénat, suite] Amendements clés du Sénat (environ 31 suppressions hors budgets et retraites, sur 16 textes) (claude, 2026-10-31)
 - [→Sénat, suite] Cartes partageables des sénateur·ices (claude, 2026-10-31)
-- [→Sénat, suite] Comparer pour le Sénat, et correspondance entre groupes des deux chambres (claude, 2026-10-31)
+- [→Sénat, suite] Comparer pour le Sénat (claude, 2026-10-31)
 
 ### Passation
 
@@ -97,6 +101,7 @@ vient de lui ; un cas non prévu remonte à un humain, sans règle inventée.
 
 ## Refusé
 
+- [refusé] Correspondance entre les groupes des deux chambres : jugement au cas par cas, contraire à la règle fixe et à la règle 28 (décision de Max, 2026-11-01)
 - [refusé] Interroger le catalogue de l'admin en langage naturel : peu d'utilisateurs, des filtres déjà là, et la même raison que l'assistant dans l'admin (user:moi et claude, 2026-11-01)
 - [refusé] Sénat : compter au Sénat un texte écarté à l'AN pour unanimité et disputé au Sénat (nationalisation d'EDF, douane, commission d'évaluation de l'aide, textile, chlordécone, devoir conjugal, accès à l'accompagnement, Territoires zéro chômeur) : un texte écarté l'est pour les deux chambres, règle 28 (décision de Max, 2026-10-31)
 - [refusé] Listes et « Prochains votes » : afficher la date de l'état. Le pied de page donne déjà la date des données sur chaque page (claude, 2026-10-31)

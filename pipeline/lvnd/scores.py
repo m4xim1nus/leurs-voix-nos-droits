@@ -17,7 +17,7 @@ versionnés, les groupes depuis les ventilations officielles, comme l'aperçu de
 score d'un groupe agrège les votes de ses membres, ce que la ventilation donne directement.
 build.sh l'exécute avant le build du site : une publication depuis l'admin met le site à jour.
 
-Le Sénat a ses propres fichiers, dans data/export/senat/ (règle 26) : même calcul, sur son seul décisif.
+Le Sénat a ses propres fichiers, dans data/export/senat/ (règle 26) : même calcul, sur ses propres scrutins.
 Aucun score ne mélange les deux chambres (règle 28).
 """
 
@@ -279,13 +279,19 @@ def depuis_export(export: Path, qualif: dict) -> dict[str, list[dict]]:
 
 # --- Sénat (règles 23 à 28) ------------------------------------------------------------------------
 
-REGLES_SENAT = {"ponderation": "decisif"}  # règle 26 : chaque texte pèse 1, son décisif seul
+# Règle 26 : chaque texte pèse 1, partagé entre son décisif et ses amendements clés, comme à l'Assemblée.
+REGLES_SENAT = {"ponderation": "texte"}
+# Règle 26 : deux périodes, coupées au début de la XVIe. Un texte compte dans la période de son décisif.
+PERIODES_SENAT = ("2017-2022", "depuis-2022")
+COUPURE_PERIODES_SENAT = "2022-06-28"
 CODES_SENAT = {"P": "pour", "C": "contre", "A": "abstention", "N": "non_votant"}
 COLONNES_SENAT = {
     "scores_scrutins": ("texte_id", "scrutin_id", "role", "droit", "droit_role", "sens", "poids", "favorable"),
     "scores_senateurs": ("senateur_id", "droit", "n_textes", "votes_favorables", "votes_defavorables", "abstentions",
                          "non_votants", "score"),
-    "scores_groupes": ("groupe_id", "droit", "n_textes", "votes_favorables", "votes_defavorables", "abstentions",
+    "scores_senateurs_periodes": ("senateur_id", "periode", "droit", "n_textes", "votes_favorables", "votes_defavorables",
+                                  "abstentions", "non_votants", "score"),
+    "scores_groupes": ("groupe_id", "periode", "droit", "n_textes", "votes_favorables", "votes_defavorables", "abstentions",
                        "non_votants", "score"),
     "scores_senateurs_textes": ("senateur_id", "texte_id", "votes_favorables", "votes_defavorables", "abstentions",
                                 "non_votants", "score"),
@@ -295,16 +301,21 @@ COLONNES_SENAT = {
 
 
 def qualif_senat(qualif: dict) -> dict:
-    """Les textes comptés au Sénat, au format d'une qualification : le décisif du Sénat, et les droits de
-    la version votée. Pas de décisif, pas de compte (règle 23)."""
+    """Les textes comptés au Sénat, au format d'une qualification : le décisif du Sénat, ses amendements clés, et
+    les droits de la version votée. Pas de décisif, pas de compte (règle 23)."""
     textes = []
     for t in qualif["textes"]:
         s = t.get("senat") or {}
-        decisif = [x for x in s.get("scrutins", []) if x["role"] == "decisif"]
-        if decisif:
+        comptes = [x for x in s.get("scrutins", []) if x["role"] in COMPTES]
+        if any(x["role"] == "decisif" for x in comptes):
             textes.append({"id": t["id"], "droits": s["droits"] if s["version"] == "autre" else t["droits"],
-                           "scrutins": decisif})
+                           "scrutins": comptes})
     return {"textes": textes}
+
+
+def periode_senat(date: str) -> str:
+    """La période de la règle 26 pour un décisif tenu à cette date."""
+    return PERIODES_SENAT[date >= COUPURE_PERIODES_SENAT]
 
 
 def _votes_senat(export: Path, ids: set[str], dates: dict[str, str]) -> list[dict]:
@@ -330,13 +341,22 @@ def senat_depuis_export(export: Path, qualif: dict) -> dict[str, list[dict]]:
               .with_columns(pl.col("pour", "contre", "abstention", "non_votants").cast(pl.Int64)).to_dicts())
     sc = calculer(doc, votes, REGLES_SENAT, ventil)
     pt = par_texte(doc, votes, ventil, REGLES_SENAT)
+    groupes, senateurs = [], []
+    for periode in PERIODES_SENAT:
+        part = {"textes": [t for t in doc["textes"] if periode_senat(
+            dates[next(x["id"] for x in t["scrutins"] if x["role"] == "decisif")]) == periode]}
+        if part["textes"]:
+            p = calculer(part, votes, REGLES_SENAT, ventil)
+            groupes += [{**r, "periode": periode} for r in p["scores_groupes"]]
+            senateurs += [{**r, "periode": periode} for r in p["scores_deputes"]]
 
     def renommer(rows: list[dict], avant: str, apres: str) -> list[dict]:
         return [{(apres if k == avant else k): v for k, v in r.items()} for r in rows]
     return {
         "scores_scrutins": sc["scores_scrutins"],
         "scores_senateurs": renommer(sc["scores_deputes"], "acteur_id", "senateur_id"),
-        "scores_groupes": renommer(sc["scores_groupes"], "lignee", "groupe_id"),
+        "scores_senateurs_periodes": renommer(senateurs, "acteur_id", "senateur_id"),
+        "scores_groupes": renommer(groupes, "lignee", "groupe_id"),
         "scores_senateurs_textes": renommer(pt["scores_deputes_textes"], "acteur_id", "senateur_id"),
         "scores_groupes_textes": renommer(pt["scores_groupes_textes"], "lignee", "groupe_id"),
     }

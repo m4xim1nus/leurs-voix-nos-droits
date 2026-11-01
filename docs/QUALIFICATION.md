@@ -160,7 +160,7 @@ senat:
 relecture: { points_attention: [], extraits: [] }
 ```
 
-Seul `role: decisif` est compté. Un décisif unanime, ou sans source admise sur sa version, reste en
+Seuls `role: decisif` et `role: amendement` sont comptés (amendements clés : règles 11 et 26, `pour` lu sur le contenu de l'article). Un décisif unanime, ou sans source admise sur sa version, reste en
 `role: ensemble`, sans droits ni sens, et la `note` dit pourquoi. Un texte sans qualification à l'AN porte en plus les champs
 habituels (`titre`, `resume`, `droits`, `sources`, `scrutins: []`), et ses droits valent pour le texte
 voté au Sénat.

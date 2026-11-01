@@ -51,6 +51,7 @@
   );
   const ROLE_SENAT: Record<ScrutinSenat['role'], string> = {
     decisif: 'Vote décisif du Sénat',
+    amendement: 'Amendement clé, compté',
     ensemble: 'Vote sur l’ensemble, affiché',
     motion: 'Motion, affichée'
   };

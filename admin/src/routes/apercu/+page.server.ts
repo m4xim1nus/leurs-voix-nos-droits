@@ -30,15 +30,29 @@ export const load: PageServerLoad = async ({ platform, url }) => {
     base,
     comptesSenat.map((c) => c.scrutin_id)
   );
-  const scoresSenat = scoresGroupes(
-    comptesSenat,
-    new Map(scrutinsSenat.map((s) => [s.id, s.positions])),
-    (g) => g
+  // Règle 26 : un texte compte dans la période de son décisif, chaque groupe se lit par période.
+  const dates = new Map(scrutinsSenat.map((s) => [s.id, s.date]));
+  const periodeDe = new Map(
+    comptesSenat
+      .filter((c) => c.role === 'decisif')
+      .map((c) => [c.texte_id, (dates.get(c.scrutin_id) ?? '') >= '2022-06-28'])
   );
+  const positionsSenat = new Map(scrutinsSenat.map((s) => [s.id, s.positions]));
+  const periodesSenat = [
+    { libelle: 'Depuis juin 2022', recente: true },
+    { libelle: 'De juin 2017 à juin 2022', recente: false }
+  ].map(({ libelle, recente }) => ({
+    libelle,
+    scores: scoresGroupes(
+      comptesSenat.filter((c) => periodeDe.get(c.texte_id) === recente),
+      positionsSenat,
+      (g) => g
+    )
+  }));
   return {
     brouillons,
     scores,
-    scoresSenat,
+    periodesSenat,
     groupesSenat: await db.groupesSenat(base),
     groupes,
     droits: grille.droits,

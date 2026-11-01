@@ -73,7 +73,7 @@ const CLES_SENAT = [
   'note'
 ] as const;
 export const VERSIONS_SENAT = ['meme', 'autre', 'seul'] as const;
-export const ROLES_SENAT = ['decisif', 'ensemble', 'motion'] as const;
+export const ROLES_SENAT = ['decisif', 'ensemble', 'motion', 'amendement'] as const;
 const OBJETS_DECISIF_SENAT = ['ensemble', 'article_unique'];
 
 function ordonner<T extends object>(d: Record<string, unknown>, cles: readonly string[]): T {
@@ -297,6 +297,8 @@ function validerSenat(
   const ids = scrutins.map((x) => x.id);
   for (const i of [...new Set(ids.filter((i, n) => ids.indexOf(i) !== n))].sort(parCle))
     err.push(`Sénat : scrutin en double : ${i}`);
+  if (!decisifs.length && scrutins.some((x) => x.role === 'amendement'))
+    err.push('Sénat : amendement clé sans décisif compté (règle 26)');
   for (const x of scrutins) {
     if (!(ROLES_SENAT as readonly string[]).includes(x.role))
       err.push(`Sénat : ${x.id} : rôle inconnu (${x.role})`);
@@ -377,6 +379,16 @@ function validerSenat(
         err.push(
           `Sénat : ${x.id} : décisif sans voix d'un côté (${info.pour}-${info.contre}), vote affiché (règle 23)`
         );
+    }
+    if (x.role === 'amendement') {
+      if (!['amendement', 'article'].includes(info.objet ?? ''))
+        err.push(`Sénat : ${x.id} : amendement clé sur ${info.objet} (règle 11)`);
+      if (info.pour === 0 || info.contre === 0)
+        err.push(
+          `Sénat : ${x.id} : amendement clé sans voix d'un côté (${info.pour}-${info.contre}) (règle 11)`
+        );
+      if (x.pour !== 'texte' && x.pour !== 'contre-texte')
+        err.push(`Sénat : ${x.id} : amendement clé sans sens fixé (règle 11)`);
     }
     if (!(x.objet ?? '').includes(`(${info.pour}-${info.contre})`))
       avert.push(

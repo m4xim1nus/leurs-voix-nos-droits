@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { ancreGroupe } from '$lib/comparer';
   import { pluriel, pourcent } from '$lib/format';
   import { NOM } from '$lib/site';
 
@@ -8,9 +9,6 @@
     s === null
       ? 'transparent'
       : `color-mix(in srgb, var(${s >= 50 ? '--favorable' : '--defavorable'}) ${Math.round(Math.abs(s - 50) * 1.1)}%, var(--papier))`;
-  const presents = $derived(
-    data.droits.filter((d) => data.groupes.some((g) => g.droits[d.code] !== null))
-  );
 </script>
 
 <svelte:head>
@@ -24,17 +22,23 @@
 <h1>Le Sénat</h1>
 <p class="chapo">
   Comment les groupes du Sénat votent sur les textes qui touchent aux droits et libertés, depuis
-  juin 2022 : {pluriel(
+  juin 2017 : {pluriel(
     data.n_textes,
     'vote décisif compté',
     'votes décisifs comptés',
     'aucun vote décisif compté pour l’instant'
-  )}. Le calcul est à part de celui de l’Assemblée : les textes comptés diffèrent, et les scores ne
+  )}. Le calcul est à part de celui de l’Assemblée : les textes comptés diffèrent, et les scores ne
   se comparent pas d’une chambre à l’autre.
 </p>
+<p><a href="/senat/comparer">Comparer deux sénateur·ices ou deux groupes du Sénat</a></p>
 
 <h2>Les groupes, droit par droit</h2>
-{#if data.groupes.length}
+{#each data.periodes as p (p.id)}
+  {@const presents = data.droits.filter((d) => p.groupes.some((g) => g.droits[d.code] !== null))}
+  <h3>{p.libelle}</h3>
+  <p class="petit discret">
+    {pluriel(p.n_textes, 'vote décisif compté', 'votes décisifs comptés')}.
+  </p>
   <div class="defile">
     <table>
       <thead>
@@ -45,8 +49,8 @@
         </tr>
       </thead>
       <tbody>
-        {#each data.groupes as g (g.groupe.id)}
-          <tr id="groupe-{g.groupe.id}">
+        {#each p.groupes as g (g.groupe.id)}
+          <tr id={ancreGroupe(g.groupe.id, p.id)}>
             <th scope="row" title={g.groupe.nom}>{g.groupe.sigle}</th>
             <td class="nombre fort" style:background={fond(g.global?.score ?? null)}
               >{pourcent(g.global?.score ?? null)}</td
@@ -65,13 +69,17 @@
       </tbody>
     </table>
   </div>
-  <p class="petit discret">
-    Part des votes favorables aux droits. Chaque texte pèse 1 et ne compte que son vote décisif.
-    Abstentions et non-votants hors calcul. Un vote compte pour le groupe du jour du vote. Case
-    vide : aucun texte compté ne touche ce droit.
-  </p>
 {:else}
   <p>Aucun vote du Sénat n’est compté pour l’instant.</p>
+{/each}
+{#if data.periodes.length}
+  <p class="petit discret">
+    Part des votes favorables aux droits. Chaque texte pèse 1, partagé entre son vote décisif et ses
+    amendements clés. Abstentions et non-votants hors calcul. Un vote compte pour le groupe du jour
+    du vote, et un texte pour la période de son vote décisif. Les groupes portent leur nom actuel,
+    même pour les années où ils s’appelaient autrement. Case vide : aucun texte compté ne touche ce
+    droit.
+  </p>
 {/if}
 
 <h2>Un vote enregistré n’est pas une présence</h2>

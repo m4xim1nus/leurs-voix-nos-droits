@@ -43,7 +43,8 @@ CLES_SUIVI = ("id", "dossier_an", "legislature", "titre", "resume", "droits", "n
 CLES_DROIT_SUIVI = ("code", "sources", "justification")
 CLES_SENAT = ("version", "scrutins", "droits", "etiquettes", "vigilance", "sources", "note")
 VERSIONS_SENAT = ("meme", "autre", "seul")
-ROLES_SENAT = ("decisif", "ensemble", "motion")
+ROLES_SENAT = ("decisif", "ensemble", "motion", "amendement")
+OBJETS_AMENDEMENT_SENAT = ("amendement", "article")
 OBJETS_DECISIF_SENAT = ("ensemble", "article_unique")
 
 
@@ -249,6 +250,8 @@ def _valider_senat(t: dict, scrutins_senat: dict[str, dict] | None, err: list[st
     ids = [x.get("id") for x in scrutins]
     for i in sorted({i for i in ids if ids.count(i) > 1}):
         err.append(f"Sénat : scrutin en double : {i}")
+    if not decisifs and any(x.get("role") == "amendement" for x in scrutins):
+        err.append("Sénat : amendement clé sans décisif compté (règle 26)")
     for x in scrutins:
         if x.get("role") not in ROLES_SENAT:
             err.append(f"Sénat : {x.get('id')} : rôle inconnu ({x.get('role')})")
@@ -314,6 +317,13 @@ def _valider_senat(t: dict, scrutins_senat: dict[str, dict] | None, err: list[st
             if info.get("pour") == 0 or info.get("contre") == 0:
                 err.append(f"Sénat : {x['id']} : décisif sans voix d'un côté ({info.get('pour')}-{info.get('contre')}), "
                            "vote affiché (règle 23)")
+        if x.get("role") == "amendement":
+            if info.get("objet") not in OBJETS_AMENDEMENT_SENAT:
+                err.append(f"Sénat : {x['id']} : amendement clé sur {info.get('objet')} (règle 11)")
+            if info.get("pour") == 0 or info.get("contre") == 0:
+                err.append(f"Sénat : {x['id']} : amendement clé sans voix d'un côté ({info.get('pour')}-{info.get('contre')}) (règle 11)")
+            if x.get("pour") not in ("texte", "contre-texte"):
+                err.append(f"Sénat : {x['id']} : amendement clé sans sens fixé (règle 11)")
         if f"({info.get('pour')}-{info.get('contre')})" not in (x.get("objet") or ""):
             avert.append(f"Sénat : {x['id']} : l'objet ne reprend pas le décompte ({info.get('pour')}-{info.get('contre')})")
 

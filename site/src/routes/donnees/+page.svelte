@@ -39,16 +39,18 @@
       'termes courants et surnoms cherchés par la recherche du site, jamais affichés, hors de tout score',
     'pays_circonscriptions.csv':
       'pays → circonscription des Français établis hors de France (code électoral, tableau n° 1 ter)',
-    'senat/scrutins.csv': 'scrutins publics du Sénat depuis juin 2022, rattachés à leur dossier',
+    'senat/scrutins.csv': 'scrutins publics du Sénat depuis juin 2017, rattachés à leur dossier',
     'senat/positions_groupes.csv': 'décompte et position de chaque groupe sur chaque scrutin',
     'senat/senateurs.csv': 'sénateur·ices : département, courriel public',
     'senat/mandats.csv': 'mandats de sénateur·ice, avec les dates',
     'senat/appartenances.csv': 'appartenance aux groupes, avec les dates',
     'senat/groupes.csv': 'groupes du Sénat, sans correspondance avec ceux de l’Assemblée',
     'senat/mises_au_point.csv': 'mises au point de vote (affichées, pas comptées)',
-    'senat/scores_scrutins.csv': 'décisifs comptés : vote favorable aux droits, droit par droit',
+    'senat/scores_scrutins.csv':
+      'décisifs et amendements clés comptés : vote favorable aux droits, droit par droit',
     'senat/scores_senateurs.csv': 'score de chaque sénateur·ice, par droit',
-    'senat/scores_groupes.csv': 'score de chaque groupe, par droit',
+    'senat/scores_senateurs_periodes.csv': 'score de chaque sénateur·ice, par période et par droit',
+    'senat/scores_groupes.csv': 'score de chaque groupe, par période et par droit',
     'senat/scores_senateurs_textes.csv': 'score de chaque sénateur·ice, par texte',
     'senat/scores_groupes_textes.csv': 'score de chaque groupe, par texte'
   };

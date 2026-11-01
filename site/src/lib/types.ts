@@ -122,7 +122,7 @@ export interface ScrutinRetenu {
 }
 
 export type VersionSenat = 'meme' | 'autre' | 'seul';
-export type RoleSenat = 'decisif' | 'ensemble' | 'motion';
+export type RoleSenat = 'decisif' | 'amendement' | 'ensemble' | 'motion';
 
 /** Un scrutin du Sénat retenu sur un texte (règle 23). */
 export interface ScrutinSenat {
