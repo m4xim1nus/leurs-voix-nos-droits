@@ -152,8 +152,13 @@ def rattacher(scrutins: list[dict], dossiers: dict[str, dict], titres: dict[str,
             return notes[0][1]
         return None
 
+    corrections = rattachements().get("corrections") or {}
     out = {}
     for s in scrutins:
+        if c := corrections.get(s["id"]):  # erreur du dump, lue à la main : prime même sur `objet`
+            out[s["id"]] = {"dossier_id": c["dossier"], "etape": c.get("etape"), "rattachement": "referentiel",
+                            "amendement_refuse": False}
+            continue
         uid, how = None, None
         d_amdt = (par_amendement.get(s["id"]) or {}).get("dossier_id")
         refuse = bool(d_amdt) and not s["dossier_objet"] and s["id"] not in idx.vote_refs and amendement_refuse(s, d_amdt)

@@ -88,6 +88,7 @@ changent pas, ni la validation par Max.
    |---|---|
    | `vote_posterieur` | le nouveau vote devient le décisif (règle 9) : relire le sens sur le texte voté (règle 6) |
    | `unanimite_contestee` | revoir l'écart (règle 9) : qualifier, ou garder l'écart avec un motif à jour |
+   | `ecart_revote` | texte écarté pour un autre motif que l'unanimité, revoté à l'AN (depuis le 01/11/2026) : relire l'écart, puis qualifier, ou garder l'écart avec un motif qui cite ce vote (son décompte « 120-45 », ou sa date « 19/11/2026 » sans scrutin public), ce qui éteint l'alerte |
    | `premier_decisif` | qualifier, ou écarter avec son motif |
    | `vote_sans_decisif` | la lecture est close sans décisif proposé (rejet d'une partie, vote sans scrutin public) : lire le dossier, puis qualifier ou écarter avec son motif |
    | `inscrit` | rien à qualifier : le vote n'a pas eu lieu. On repère les sources utiles et on revient après le vote |
