@@ -1,4 +1,4 @@
-"""Ligne de commande : lvnd download | archiver | build | check | editorial | scores | annuaire | sync-admin | proposer."""
+"""Ligne de commande : lvnd download | archiver | build | check | editorial | scores | annuaire | sync-admin | proposer | resumer | veille."""
 
 import argparse
 import sys
@@ -88,6 +88,20 @@ def main(argv=None) -> int:
     pr.add_argument("--sortie", type=Path, help="dossier des brouillons (défaut : source/propositions/AAAA-MM-JJ)")
     pr.add_argument("--prompt", action="store_true", help="écrit le prompt dans --sortie, sans aucun appel")
     pr.add_argument("--export", type=Path, default=EXPORT)
+    rs = sub.add_parser("resumer", help="résumés en mots simples des textes validés, proposés par LLM et écrits dans "
+                                        "D1 (table propositions) ; ni validés ni publiés")
+    rs.add_argument("dossiers", nargs="*", metavar="DOSSIER",
+                    help="dossiers AN (défaut : tous les textes validés sans résumé simple à jour)")
+    cible_r = rs.add_mutually_exclusive_group()
+    cible_r.add_argument("--local", dest="cible", action="store_const", const="local",
+                         help="réglages, qualifications et propositions dans la D1 locale (défaut : en ligne)")
+    cible_r.add_argument("--remote", dest="cible", action="store_const", const="remote")
+    rs.set_defaults(cible="remote")
+    rs.add_argument("--max", type=int, default=5, help="propositions par passe (défaut : 5)")
+    rs.add_argument("--prompt", action="store_true",
+                    help="écrit les prompts (textes publiés) dans --sortie, sans aucun appel")
+    rs.add_argument("--sortie", type=Path, help="avec --prompt (défaut : source/propositions/simple)")
+    rs.add_argument("--export", type=Path, default=EXPORT)
     v = sub.add_parser("veille", help="veille des sources : flux de referentiels/sources_veille.yaml, rapprochés des "
                                       "textes publiés par le LLM ; une proposition par correspondance, écrite dans D1")
     cible_v = v.add_mutually_exclusive_group()
@@ -167,6 +181,9 @@ def main(argv=None) -> int:
     elif args.commande == "veille":
         from . import veille
         return veille.lancer(args.export, ADMIN, args.cible, args.jours, args.max, args.simuler, args.essai)
+    elif args.commande == "resumer":
+        from . import resumer
+        return resumer.lancer(args.dossiers, args.export, ADMIN, args.cible, args.max, args.sortie, args.prompt)
     elif args.commande == "proposer":
         from . import propositions
         if args.alertes:
