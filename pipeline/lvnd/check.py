@@ -165,9 +165,11 @@ def _recherche(controle, out) -> None:
     # une publication qui change le statut d'un texte ne doit pas bloquer la passe suivante (01/11/2026)
     out += [f"AVERTISSEMENT termes de recherche : {a}" for a in a_deplacer]
     controle("pays → circonscription : table complète, sans doublon", not (e := recherche.controler_pays()), " ; ".join(e))
-    if TERMES_INTERDITS.exists():
-        trouves = termes_interdits("\n".join(l["terme"] for l in recherche.lignes_termes()))
+    if liste_termes() is not None:
+        trouves = termes_interdits("\n".join(l["terme"] for l in recherche.lignes_termes(doc=editorial.charger())))
         controle("aucun terme interdit dans les termes de recherche", not trouves, f"{len(trouves)} terme(s) trouvé(s)")
+        flux = (referentiels.DOSSIER / "sources_veille.yaml").read_text()
+        controle("aucune source exclue dans les flux de la veille", not termes_interdits(flux), "sources_veille.yaml")
     out += [f"info {cle} : aucun terme de recherche" for cle in sans]
 
 

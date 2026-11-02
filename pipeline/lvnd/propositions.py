@@ -155,13 +155,19 @@ def alertes_a_proposer(export: Path, d1, types: set[str]) -> list[dict]:
             and reste_a_traiter(a, *qualifs.get(a["dossier_id"], (None, None, None)))]
 
 
-def ligne_d1(alerte: dict, p: proposer.Proposition, r: controles.Resultat | None, modele: str) -> dict:
+def ligne_d1(alerte: dict, p: proposer.Proposition, r: controles.Resultat | None, modele: str,
+             publication: dict | None = None) -> dict:
     doc = brouillon(p, r, modele)
     relecture = doc.pop("relecture")
+    if publication:
+        relecture["publication"] = publication
     if p.echec or r is None:
         statut, motif = "echec", p.echec or "aucun brouillon"
     elif not r.ok:
         statut, motif = "echec", f"{len(r.erreurs)} erreur(s) de contrôle"
+    elif (p.doc or {}).get("statut") == "sans-changement":
+        # Veille : rien à changer. Gardé pour la trace, jamais montré dans « À traiter ».
+        statut, motif = "ecartee", "rien à changer, d'après le LLM : " + str(relecture.get("action") or "")[:300]
     else:
         statut, motif = "proposee", None
     return {"alerte_id": alerte["id"], "dossier_an": p.dossier_an, "mode": p.mode, "date": llm.maintenant(),

@@ -19,6 +19,8 @@ export interface Relecture {
   echec?: string;
   controles?: { erreurs: string[]; avertissements: string[]; points: string[] };
   documents_lus?: string[];
+  /** Veille des sources : la publication qui a déclenché la proposition. */
+  publication?: { auteur: string; titre: string; lien: string; date: string; raison?: string };
 }
 
 /** Brouillon proposé : une entrée d'editorial.json, plus `statut` et `motif_ecart`. */

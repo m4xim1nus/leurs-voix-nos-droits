@@ -82,7 +82,7 @@ function afficher(p: Proposition, actuelle: LigneQualification | undefined): Pro
 }
 
 function section(g: Omit<Groupe, 'section'>): Section {
-  if (g.alertes.every((a) => a.type === 'inscrit')) return 'a-venir';
+  if (g.alertes.length && g.alertes.every((a) => a.type === 'inscrit')) return 'a-venir';
   const utiles = g.propositions.filter((p) => p.statut === 'proposee');
   if (!utiles.length) return 'main';
   return utiles.some((p) => p.methode) ? 'methode' : 'pret';
@@ -125,7 +125,21 @@ export const load: PageServerLoad = async ({ platform }) => {
   // Une proposition n'apparaît que si son texte a encore une alerte à traiter : traité à la main
   // entre-temps, il sort de la file avec elle.
   for (const p of props) {
-    const g = brouillons.get(p.dossier_an);
+    let g = brouillons.get(p.dossier_an);
+    // Veille des sources : la proposition vient d'une publication, pas d'une alerte.
+    if (!g && p.alerte_id.startsWith('veille:')) {
+      g = {
+        dossier: p.dossier_an,
+        titre: actuelles.get(p.dossier_an)?.doc.titre || p.doc?.titre || p.dossier_an,
+        alertes: [],
+        note: parNote.get(p.dossier_an) ?? null,
+        propositions: [],
+        demande: null,
+        echeance: null,
+        recent: p.date.slice(0, 10)
+      };
+      brouillons.set(p.dossier_an, g);
+    }
     if (g) g.propositions.push(afficher(p, actuelles.get(p.dossier_an)));
   }
   for (const g of brouillons.values()) {

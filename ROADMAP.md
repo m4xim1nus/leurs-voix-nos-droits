@@ -104,3 +104,10 @@ clé ; poser `LLM_CHIFFREMENT` (Worker et dépôt) et `TERMES_INTERDITS` (dépô
   suivante, Sénat compris) ; page rangée en quatre sections par une règle fixe (prêt à relire, avec le badge « mise à
   jour mineure » ; question de méthode ; à faire à la main ; à venir) ; une phrase « action proposée » écrite par le
   LLM dans le même appel. Pas d'appel de classement.
+- Item 8 : termes de recherche dans `editorial.json` (bloc `recherche`, décision de Max), saisis sur la fiche de l'admin et
+  proposés par le LLM ; le YAML ne sert plus que de repli. **Reprise à faire** : déployer l'admin, puis
+  `lvnd sync-admin --remote --recherche` et « Publier » (environ 200 textes modifiés d'un coup), puis retirer le YAML.
+- Item 7 : veille « à l'envers » (décision de Max) : `lvnd veille`, flux de 36 sources admises
+  (`referentiels/sources_veille.yaml`, brouillon **à valider par Max**), lus sans LLM ; un appel de rapprochement
+  (0,24 $ à l'essai du 02/11/2026 : 115 publications, 4 correspondances pertinentes) ; une proposition par correspondance,
+  3 au plus. Action `veille.yml` le lundi ; elle ne tourne qu'une fois la liste validée.

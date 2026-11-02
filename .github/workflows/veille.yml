@@ -1,0 +1,65 @@
+# Veille des sources « à l'envers » (ROADMAP, cycle Pré-qualification, item 7 ; décision de Max du 02/11/2026) : le lundi,
+# les flux RSS ou Atom de pipeline/referentiels/sources_veille.yaml (8 derniers jours), lus sans LLM ; un appel au LLM les
+# rapproche des textes publiés ; une proposition complète pour chaque correspondance nouvelle (3 au plus), écrite dans D1
+# et visible dans « À traiter ». Rien n'est commité.
+#
+# Interrupteur, clé et plafond : page « LLM » de l'admin. Mêmes secrets que propositions.yml.
+
+name: Veille des sources
+
+on:
+  schedule:
+    - cron: '37 7 * * 1' # lundi, 7 h 37 UTC : après le dump hebdomadaire
+  workflow_dispatch:
+    inputs:
+      max:
+        description: Propositions au plus
+        default: '3'
+
+concurrency:
+  group: propositions # jamais en même temps que les propositions sur alertes (même plafond, même table)
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  veille:
+    name: Veille des sources
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      LLM_CHIFFREMENT: ${{ secrets.LLM_CHIFFREMENT }}
+      TERMES_INTERDITS: ${{ secrets.TERMES_INTERDITS }}
+    steps:
+      - name: Configuration
+        run: |
+          for s in CLOUDFLARE_API_TOKEN LLM_CHIFFREMENT TERMES_INTERDITS; do
+            if [ -z "${!s}" ]; then echo "::notice::secret $s absent : pas de veille."; echo "SAUTER=1" >> "$GITHUB_ENV"; fi
+          done
+
+      - uses: actions/checkout@v6
+        if: env.SAUTER != '1'
+        with:
+          ref: main
+
+      - uses: astral-sh/setup-uv@v7
+        if: env.SAUTER != '1'
+        with:
+          enable-cache: true
+          cache-dependency-glob: pipeline/uv.lock
+
+      - uses: actions/setup-node@v5
+        if: env.SAUTER != '1'
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: admin/package-lock.json
+
+      - name: Veille (lvnd veille)
+        if: env.SAUTER != '1'
+        run: |
+          (cd admin && npm ci --no-audit --no-fund)
+          cd pipeline && uv run --no-dev lvnd veille --remote --max "${{ inputs.max || '3' }}"

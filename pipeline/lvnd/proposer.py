@@ -51,6 +51,11 @@ CONSIGNES = {
     "suivi": "Ce texte est inscrit en séance mais pas encore voté. Prépare une fiche de suivi (`statut: a-suivre`) : "
              "droits touchés et sources, sans sens, sans rôle, sans scrutin. Sans source admise, ne rédige pas de "
              "fiche : rends `statut: sans-source`, avec ce que tu as cherché dans `relecture.points_attention`.",
+    "veille": "Une source admise vient de publier un document sur ce texte ou une de ses mesures (ci-dessous). Lis-le. "
+              "S'il change la qualification publiée (source nouvelle d'un droit, vigilance, sens, ou, pour un texte écarté "
+              "faute de source, une source qui permet de le qualifier), propose la version modifiée en partant de la "
+              "version publiée et en gardant son `id`. S'il ne change rien (document hors sujet, déjà cité, simple "
+              "mention), rends `statut: sans-changement`, avec la raison dans `relecture.action`.",
     "senat": "Le Sénat a voté ce texte sur l'ensemble. Prépare le bloc `senat` (section « Vote du Sénat » de la "
              "consigne) : un YAML sans `titre` (`id`, `dossier_an`, `senat`, `relecture`) si le texte est qualifié à "
              "l'Assemblée, un YAML complet sinon.",
@@ -91,7 +96,7 @@ id: …
 dossier_an: …
 legislature: …
 titre: "…"
-statut: a-relire          # ou ecarte, a-suivre, sans-source (selon la tâche)
+statut: a-relire          # ou ecarte, a-suivre, sans-source, sans-changement (selon la tâche)
 motif_ecart: null
 resume: "…"
 droits: []
@@ -173,7 +178,7 @@ def publie(dossier: str, doc: dict | None = None) -> tuple[str, dict] | None:
 
 
 def message_tache(export: Path, dossier: str, mode: str, alerte: dict | None, version: tuple[str, dict] | None,
-                  aujourd_hui: str) -> str:
+                  aujourd_hui: str, publication: dict | None = None) -> str:
     textes = pl.read_csv(export / "textes.csv", infer_schema_length=None).filter(pl.col("id") == dossier)
     if not textes.height:
         raise SystemExit(f"{dossier} : absent du catalogue (data/export/textes.csv)")
@@ -182,7 +187,11 @@ def message_tache(export: Path, dossier: str, mode: str, alerte: dict | None, ve
         f"Date du jour : {aujourd_hui}.",
         "## Tâche\n\n" + CONSIGNES[mode],
     ]
-    if alerte:
+    if publication:
+        parties.append(f"## Publication nouvelle\n\n{publication['auteur']}, « {publication['titre']} », "
+                       f"{publication['date'][:10]} : {publication['lien']}\n\n{publication.get('resume') or ''}\n\n"
+                       f"Rapprochement : {publication.get('raison') or ''}")
+    elif alerte:
         parties.append(f"## Alerte\n\n{alerte['type']} du {alerte['date']} : {alerte['detail']}"
                        + (f" (scrutin {alerte['scrutin_id']})" if alerte.get("scrutin_id") else ""))
     parties.append("## Dossier (data/export/textes.csv)\n\n```yaml\n"
@@ -259,14 +268,15 @@ def bloc_yaml(texte: str) -> str | None:
 
 
 def proposer(session: llm.Session, export: Path, dossier: str, mode: str, alerte: dict | None = None,
-             version: tuple[str, dict] | None = None, aujourd_hui: str | None = None) -> Proposition:
+             version: tuple[str, dict] | None = None, aujourd_hui: str | None = None,
+             publication: dict | None = None) -> Proposition:
     """Une proposition pour `dossier`. Lève `llm.Indisponible` si le plafond interdit l'appel ; toute autre
     issue (refus, sortie tronquée, YAML absent ou illisible) donne une proposition en échec, avec sa raison."""
     if check.liste_termes() is None:
         raise llm.Indisponible("liste des termes interdits introuvable (source/termes_interdits.txt ou secret "
                                "TERMES_INTERDITS) : aucune proposition sans elle")
     systeme = contexte_fixe()
-    tache = message_tache(export, dossier, mode, alerte, version, aujourd_hui or date.today().isoformat())
+    tache = message_tache(export, dossier, mode, alerte, version, aujourd_hui or date.today().isoformat(), publication)
     if trouves := check.termes_interdits(systeme + tache):
         raise SystemExit(f"le prompt contient {len(trouves)} terme(s) de la liste d'exclusion : rien n'est envoyé")
 

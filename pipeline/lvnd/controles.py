@@ -19,7 +19,7 @@ import yaml
 
 from . import check, editorial
 
-STATUTS = ("a-relire", "ecarte", "a-suivre", "sans-source")
+STATUTS = ("a-relire", "ecarte", "a-suivre", "sans-source", "sans-changement")
 
 
 @dataclass
@@ -127,6 +127,8 @@ def controler(doc: dict, yaml_brut: str, dossier: str, infos_an: dict, infos_sen
 
     if statut == "sans-source":
         r.points.append("aucune source admise trouvée : pas de fiche, le texte attend")
+        return r
+    if statut == "sans-changement":
         return r
 
     ident = doc.get("id") or ""

@@ -10,7 +10,7 @@
   const SECTIONS = {
     pret: {
       titre: 'Prêt à relire',
-      aide: 'Un vote a eu lieu et la proposition du LLM passe les contrôles. « Mise à jour mineure » : rien ne change du statut, du droit principal, du sens ni du décisif.'
+      aide: 'Un vote a eu lieu, ou une source a publié sur le texte (veille), et la proposition du LLM passe les contrôles. « Mise à jour mineure » : rien ne change du statut, du droit principal, du sens ni du décisif.'
     },
     methode: {
       titre: 'Question de méthode',
@@ -31,7 +31,8 @@
     ecart: 'relecture de l’écart',
     requalification: 'requalification',
     suivi: 'fiche de suivi',
-    senat: 'vote du Sénat'
+    senat: 'vote du Sénat',
+    veille: 'veille des sources'
   };
   const usd = (x: number) =>
     `${x.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} $`;
@@ -74,6 +75,13 @@
       {#if p.methode}<span class="pastille a-relire">question de méthode</span>{/if}
       <span class="discret"> · {dateHeure(p.date)} · {p.modele} · {usd(p.cout_usd)}</span>
     </h4>
+    {#if p.relecture.publication}
+      {@const pub = p.relecture.publication}
+      <p class="discret">
+        Publication du {date(pub.date)} : {pub.auteur},
+        <a href={pub.lien} rel="external noopener" target="_blank">{pub.titre}</a>{#if pub.raison}. {pub.raison}{/if}
+      </p>
+    {/if}
     {#if p.statut === 'echec'}
       <p class="erreur-texte">
         Proposition écartée par les contrôles : {p.motif ?? p.relecture.echec}
@@ -179,7 +187,7 @@
     {#each g.propositions as p (p.id)}
       {@render proposition(p)}
     {/each}
-    {#if !g.propositions.length}
+    {#if !g.propositions.length && g.alertes.length}
       {#if g.demande}
         <p class="discret">
           Proposition demandée le {dateHeure(g.demande.demande_le)} par {g.demande.demande_par} : elle

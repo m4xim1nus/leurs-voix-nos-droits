@@ -91,6 +91,17 @@ def main(argv=None) -> int:
     pr.add_argument("--sortie", type=Path, help="dossier des brouillons (défaut : source/propositions/AAAA-MM-JJ)")
     pr.add_argument("--prompt", action="store_true", help="écrit le prompt dans --sortie, sans aucun appel")
     pr.add_argument("--export", type=Path, default=EXPORT)
+    v = sub.add_parser("veille", help="veille des sources : flux de referentiels/sources_veille.yaml, rapprochés des "
+                                      "textes publiés par le LLM ; une proposition par correspondance, écrite dans D1")
+    cible_v = v.add_mutually_exclusive_group()
+    cible_v.add_argument("--local", dest="cible", action="store_const", const="local")
+    cible_v.add_argument("--remote", dest="cible", action="store_const", const="remote")
+    v.set_defaults(cible="remote")
+    v.add_argument("--jours", type=int, default=8, help="publications des N derniers jours (défaut : 8)")
+    v.add_argument("--max", type=int, default=3, help="propositions au plus (défaut : 3)")
+    v.add_argument("--simuler", action="store_true", help="lit les flux et compte les publications, sans appel au LLM")
+    v.add_argument("--essai", action="store_true", help="passage à la main, même si la liste des flux n'est pas validée")
+    v.add_argument("--export", type=Path, default=EXPORT)
     args = ap.parse_args(argv)
 
     if args.commande == "download":
@@ -156,6 +167,9 @@ def main(argv=None) -> int:
         from . import sync_admin
         sync_admin.sync(args.export, ADMIN, args.cible, args.editorial, args.sortie, args.brouillons, args.valider,
                         args.complet, args.simuler, args.remplacer, args.ecarter_publie, args.recherche)
+    elif args.commande == "veille":
+        from . import veille
+        return veille.lancer(args.export, ADMIN, args.cible, args.jours, args.max, args.simuler, args.essai)
     elif args.commande == "proposer":
         from . import propositions
         if args.alertes:

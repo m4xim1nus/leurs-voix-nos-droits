@@ -1,0 +1,61 @@
+# Flux suivis par la veille des sources (ROADMAP, cycle Pré-qualification, item 7 ; `lvnd veille`).
+#
+# Une fois par semaine, le pipeline lit ces flux RSS ou Atom, sans LLM, et garde les publications des derniers jours.
+# Un appel au LLM les rapproche ensuite des textes publiés (qualifiés, suivis, écartés faute de source) ; seule une
+# correspondance donne une proposition complète, dans « À traiter ».
+#
+# Règles :
+# - seulement des sources admises par la règle 7 (docs/METHODO.md), à l'échelon national ; `categorie` dit à quel
+#   titre ;
+# - jamais une organisation de la liste d'exclusion (`lvnd check` refuse ce fichier sinon) ; une publication collective
+#   reste contrôlée par ses signataires, comme toute proposition ;
+# - une source sans flux n'est pas suivie ici (Conseil d'État, Syndicat de la magistrature, CNB, FNE, APF…) : la
+#   recherche des propositions la trouve encore, au cas par cas. Les décisions du Conseil constitutionnel viennent de
+#   l'open data.
+#
+# Flux sondés le 02/11/2026 ; celui de l'Inter-LGBT, mal formé ce jour-là, n'est pas repris. Statut : brouillon, à
+# valider par Max.
+
+statut: brouillon
+
+flux:
+  # Autorités et instances indépendantes
+  - {cle: cncdh, auteur: CNCDH, categorie: autorite, url: "https://www.cncdh.fr/rss.xml"}
+  - {cle: ddd, auteur: Défenseur des droits, categorie: autorite, url: "https://www.defenseurdesdroits.fr/rss.xml"}
+  - {cle: cnil, auteur: CNIL, categorie: instance, url: "https://www.cnil.fr/fr/rss.xml"}
+  - {cle: cglpl, auteur: CGLPL, categorie: instance, url: "https://www.cglpl.fr/feed/"}
+  - {cle: hce, auteur: Haut Conseil à l'égalité, categorie: instance, url: "https://www.haut-conseil-egalite.gouv.fr/rss.xml"}
+  - {cle: hclpd, auteur: Haut Comité pour le logement des personnes défavorisées, categorie: instance, url: "https://www.hclpd.gouv.fr/spip.php?page=backend"}
+  - {cle: ciivise, auteur: CIIVISE, categorie: instance, url: "https://www.ciivise.fr/rss.xml"}
+  - {cle: anses, auteur: ANSES, categorie: instance, url: "https://www.anses.fr/fr/rss.xml"}
+  # Syndicats représentatifs de salariés (confédérations)
+  - {cle: cgt, auteur: CGT, categorie: syndicat, url: "https://www.cgt.fr/rss.xml"}
+  - {cle: cfdt, auteur: CFDT, categorie: syndicat, url: "https://www.cfdt.fr/feed/"}
+  - {cle: fo, auteur: Force ouvrière, categorie: syndicat, url: "https://www.force-ouvriere.fr/spip.php?page=backend"}
+  - {cle: fsu, auteur: FSU, categorie: syndicat, url: "https://fsu.fr/feed/"}
+  - {cle: unsa, auteur: UNSA, categorie: syndicat, url: "https://www.unsa.org/feed/"}
+  - {cle: solidaires, auteur: Union syndicale Solidaires, categorie: syndicat, url: "https://solidaires.org/feed/"}
+  - {cle: snj, auteur: SNJ, categorie: syndicat, url: "https://snj.fr/rss.xml"}
+  # Droit, santé, enseignement : organisations professionnelles et ordres
+  - {cle: saf, auteur: Syndicat des avocats de France, categorie: droit, url: "https://lesaf.org/feed/"}
+  - {cle: cnom, auteur: Conseil national de l'Ordre des médecins, categorie: sante, url: "https://www.conseil-national.medecin.fr/rss.xml"}
+  - {cle: france-assos-sante, auteur: France Assos Santé, categorie: ong, url: "https://www.france-assos-sante.org/feed/"}
+  # ONG
+  - {cle: quadrature, auteur: La Quadrature du Net, categorie: ong, url: "https://www.laquadrature.net/feed/"}
+  - {cle: cimade, auteur: La Cimade, categorie: ong, url: "https://www.lacimade.org/feed/"}
+  - {cle: gisti, auteur: Gisti, categorie: ong, url: "https://www.gisti.org/spip.php?page=backend"}
+  - {cle: anafe, auteur: Anafé, categorie: ong, url: "https://www.anafe.org/feed/"}
+  - {cle: amnesty, auteur: Amnesty International France, categorie: ong, url: "https://www.amnesty.fr/rss"}
+  - {cle: hrw, auteur: Human Rights Watch, categorie: ong, url: "https://www.hrw.org/rss.xml"}
+  - {cle: fondation-logement, auteur: Fondation pour le logement des défavorisés, categorie: ong, url: "https://www.fondationpourlelogement.fr/feed"}
+  - {cle: dal, auteur: Droit au logement, categorie: ong, url: "https://www.droitaulogement.org/feed/"}
+  - {cle: atd, auteur: ATD Quart Monde, categorie: ong, url: "https://www.atd-quartmonde.fr/feed/"}
+  - {cle: fas, auteur: Fédération des acteurs de la solidarité, categorie: ong, url: "https://www.federationsolidarite.org/feed/"}
+  - {cle: oxfam, auteur: Oxfam France, categorie: ong, url: "https://www.oxfamfrance.org/feed/"}
+  - {cle: unicef, auteur: UNICEF France, categorie: ong, url: "https://www.unicef.fr/feed/"}
+  - {cle: unaf, auteur: UNAF, categorie: unaf, url: "https://www.unaf.fr/feed/"}
+  - {cle: fondation-femmes, auteur: Fondation des femmes, categorie: ong, url: "https://fondationdesfemmes.org/feed/"}
+  - {cle: planning, auteur: Planning familial, categorie: ong, url: "https://www.planning-familial.org/rss.xml"}
+  - {cle: greenpeace, auteur: Greenpeace France, categorie: ong, url: "https://www.greenpeace.fr/feed/"}
+  - {cle: rac, auteur: Réseau Action Climat, categorie: ong, url: "https://reseauactionclimat.org/feed/"}
+  - {cle: generations-futures, auteur: Générations Futures, categorie: ong, url: "https://www.generations-futures.fr/feed/"}
