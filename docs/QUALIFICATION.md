@@ -82,6 +82,17 @@ Depuis le cycle « Au fil des votes », un nouveau vote se traite sans attendre
 un lot : **un texte à la fois, dès l'alerte**. Rôles, règles et sources ne
 changent pas, ni la validation par Max.
 
+**Avec les propositions du LLM** (cycle Pré-qualification, 02/11/2026). Après chaque
+passe de données, l'Action `propositions.yml` prépare une proposition pour chaque
+nouvelle alerte de l'Assemblée (`lvnd proposer --alertes`), et la veille du lundi
+(`lvnd veille`) une proposition pour chaque publication d'une source suivie qui porte
+sur un texte publié. Le prompt reprend la consigne aux agents ci-dessous ; les
+contrôles de l'étape 3 tournent sans LLM, et un extrait introuvable dans son
+document écarte la proposition. Le circuit se fait alors dans l'admin, sans Claude
+Code : « À traiter », « Charger à relire », correction et validation sur la fiche,
+« Publier ». Une alerte « inscrit » ou du Sénat n'a de proposition que sur demande,
+depuis sa carte. Le circuit ci-dessous, avec Claude Code, reste valable.
+
 1. **L'alerte.** `lvnd check` (lignes `AVERTISSEMENT`) ou la file « À traiter »
    de l'admin :
 

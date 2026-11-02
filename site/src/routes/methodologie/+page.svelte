@@ -161,6 +161,18 @@
     de chaque scrutin compté sont arrêtés par une personne et publiés ici.
   </p>
   <p>
+    Depuis novembre 2026, une partie de cette préparation est automatique. Après chaque mise à jour
+    des données, un programme demande à ce même assistant, par l’interface de programmation
+    d’Anthropic, une proposition pour chaque nouveau vote à qualifier. Chaque semaine, il lit aussi
+    les publications récentes d’une liste fixe de sources admises, pour repérer celles qui portent
+    sur un texte déjà traité. Avant d’être montrée à une personne, chaque proposition passe des
+    contrôles sans intelligence artificielle : chaque citation doit se retrouver mot pour mot dans
+    le document cité, et les décomptes doivent correspondre aux scrutins officiels. Elle est ensuite
+    relue et validée comme les autres : <strong
+      >l’assistant propose, il ne valide ni ne publie</strong
+    >.
+  </p>
+  <p>
     Chaque publication est enregistrée dans l’historique public du <a
       href="https://github.com/m4xim1nus/leurs-voix-nos-droits/commits/main/data/editorial.json"
       >dépôt de code</a

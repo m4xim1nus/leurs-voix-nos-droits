@@ -111,3 +111,5 @@ clé ; poser `LLM_CHIFFREMENT` (Worker et dépôt) et `TERMES_INTERDITS` (dépô
   (`referentiels/sources_veille.yaml`, brouillon **à valider par Max**), lus sans LLM ; un appel de rapprochement
   (0,24 $ à l'essai du 02/11/2026 : 115 publications, 4 correspondances pertinentes) ; une proposition par correspondance,
   3 au plus. Action `veille.yml` le lundi ; elle ne tourne qu'une fois la liste validée.
+- Item 10 : « Qui qualifie, et comment » (page Méthodologie du site), guide `/aide` de l'admin, `docs/QUALIFICATION.md`,
+  `docs/EXPLOITATION.md`. Reste : refaire la capture d'écran d'« À traiter » du guide.

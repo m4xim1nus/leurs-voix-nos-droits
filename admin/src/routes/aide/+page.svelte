@@ -91,10 +91,28 @@
     ]
   })}
   <p>
-    Le plus souvent, on part de « À traiter » : ce qu’un nouveau vote demande de regarder. En
-    dessous des alertes, les <b>notes internes</b> : un pense-bête saisi en haut de la fiche d’un texte
-    (« fiche prête, attendre l’inscription », « motif à actualiser au prochain passage »). Elles ne sont
-    jamais publiées ; on en retire une en la vidant.
+    Le plus souvent, on part de « À traiter » : ce qu’un nouveau vote demande de regarder, rangé en
+    quatre sections. <b>Prêt à relire</b> : un vote a eu lieu (ou une source a publié sur un texte
+    déjà traité), et le LLM a préparé une proposition qui passe les contrôles ; « mise à jour
+    mineure » signale celles qui ne changent ni le statut, ni le droit principal, ni le sens, ni le
+    décisif.
+    <b>Question de méthode</b> : la proposition signale un cas que les règles ne prévoient pas.
+    <b>À faire à la main</b> : pas de proposition utilisable. <b>À venir</b> : textes seulement inscrits,
+    rien à qualifier avant le vote.
+  </p>
+  <p>
+    Une proposition du LLM se lit sur sa carte : la phrase en tête dit ce qu’il propose de faire,
+    puis le jugement, l’écart avec la fiche actuelle, les sources avec leurs extraits, les points
+    d’attention. <b>Charger « à relire »</b> l’écrit sur la fiche, où on la corrige et la valide
+    comme toute qualification, avant « Publier » ; <b>Écarter la proposition</b> la retire (un motif
+    court aide à mesurer sa qualité). Sur un texte sans proposition, on peut en <b>demander une</b> :
+    elle arrive après la prochaine mise à jour des données. Le LLM se règle (interrupteur, clé, plafond
+    de dépense) dans l’onglet LLM ; coupé, tout le reste fonctionne.
+  </p>
+  <p>
+    En dessous, les <b>notes internes</b> : un pense-bête saisi en haut de la fiche d’un texte (« fiche
+    prête, attendre l’inscription », « motif à actualiser au prochain passage »). Elles ne sont jamais
+    publiées ; on en retire une en la vidant.
   </p>
   {@render capture({
     image: 'a-traiter',
@@ -310,7 +328,7 @@
         <tr
           ><td>Texte non traité, inscrit en séance</td><td
             >Rien à qualifier : le vote n’a pas eu lieu. Repérer les sources, ou rédiger une fiche «
-            à suivre »</td
+            à suivre » (le LLM peut en préparer une, sur demande)</td
           ></tr
         >
         <tr
