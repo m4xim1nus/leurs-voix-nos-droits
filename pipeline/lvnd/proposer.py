@@ -76,6 +76,9 @@ avec ces différences :
   coordination), recopie la liste complète de ses signataires dans `relecture.signataires`, sous la clé de la
   source ; une personne la contrôlera ;
 - ajoute à `relecture` une liste `incertitudes` : ce que tu n'as pas pu vérifier, et pourquoi.
+- ajoute à `relecture` un champ `action` : une seule phrase, adressée au relecteur, qui dit ce que tu lui proposes de
+  faire et ce qu'il doit vérifier d'abord (par exemple « Valider après avoir lu l'avis de la CNIL sur l'article 3 » ou
+  « Rien à publier avant le vote du 19/11 ; source à confirmer »).
 
 Format attendu du bloc final (champs de la consigne, plus ceux de `relecture`) :
 
@@ -95,6 +98,7 @@ note: ""
 sources: {}
 scrutins: []
 relecture:
+  action: "…"
   points_attention: []
   extraits: []
   incertitudes: []

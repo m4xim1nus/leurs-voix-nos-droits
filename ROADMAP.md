@@ -98,3 +98,9 @@ clé ; poser `LLM_CHIFFREMENT` (Worker et dépôt) et `TERMES_INTERDITS` (dépô
 - Items 5 et 6 : table `propositions` (migration `0008`), `lvnd proposer --alertes`, Action `propositions.yml` (après
   chaque passe de données, 5 propositions au plus), « À traiter » repensé (une carte par texte, proposition, charger ou
   écarter). Un crédit épuisé ou une clé refusée arrêtent la passe.
+- Premier passage réel (02/11/2026, 3,89 $) : 4 propositions, toutes conformes aux contrôles ; 3 cas non prévus tranchés
+  par Max (règles 7, 22, 25, 28). Décision de Max sur « À traiter » : plus de proposition automatique sur `inscrit`
+  (rien à qualifier avant le vote), demande au LLM depuis la carte d'un texte (migration `0009`, traitée à la passe
+  suivante, Sénat compris) ; page rangée en quatre sections par une règle fixe (prêt à relire, avec le badge « mise à
+  jour mineure » ; question de méthode ; à faire à la main ; à venir) ; une phrase « action proposée » écrite par le
+  LLM dans le même appel. Pas d'appel de classement.

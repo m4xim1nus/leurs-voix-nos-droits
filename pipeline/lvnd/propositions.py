@@ -136,12 +136,15 @@ def reste_a_traiter(a: dict, statut: str | None, doc: str | None, motif: str | N
 
 
 def alertes_a_proposer(export: Path, d1, types: set[str]) -> list[dict]:
-    """Alertes en cours, encore à traiter dans D1, d'un type retenu, et sans proposition déjà faite (jamais
-    recalculée, réussie ou non)."""
+    """Alertes en cours, encore à traiter dans D1, d'un type retenu ou demandées depuis l'admin (table demandes_llm),
+    et sans proposition déjà faite (jamais recalculée, réussie ou non). Les demandes passent en premier."""
     f = export / "en_cours_alertes.csv"
     if not f.exists():
         return []
-    alertes = [a for a in pl.read_csv(f, infer_schema=False).sort("date").iter_rows(named=True) if a["type"] in types]
+    demandees = {r["alerte_id"] for r in d1.lire("SELECT alerte_id FROM demandes_llm")}
+    alertes = [a for a in pl.read_csv(f, infer_schema=False).sort("date").iter_rows(named=True)
+               if a["type"] in types or a["id"] in demandees]
+    alertes.sort(key=lambda a: a["id"] not in demandees)
     if not alertes:
         return []
     faites = {r["alerte_id"] for r in d1.lire("SELECT alerte_id FROM propositions")}

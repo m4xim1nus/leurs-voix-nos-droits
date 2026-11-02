@@ -7,7 +7,10 @@ import { getPlatformProxy } from 'wrangler';
 import { normaliser } from '../qualification';
 import { enregistrer, qualification, revisions } from './db';
 import {
+  casNonPrevu,
   charger,
+  demander,
+  demandes,
   ecarter,
   jugement,
   propositionsOuvertes,
@@ -168,5 +171,21 @@ describe('propositions', () => {
     expect(jugement(BROUILLON)).toBe('vie-privee, restreint · décisif VTANR5L17V1');
     expect(jugement({ dossier_an: 'D', statut: 'sans-source' })).toMatch(/aucune source/);
     expect(jugement({ ...BROUILLON, statut: 'ecarte', motif_ecart: 'm' })).toBe('écarter : m');
+  });
+
+  it('demande une proposition une fois, et jamais pour une alerte déjà proposée', async () => {
+    await demander(db, { id: 'senat_premier_vote:DLR5L17N9:SN9', dossier_id: 'DLR5L17N9' }, 'max');
+    await demander(db, { id: 'senat_premier_vote:DLR5L17N9:SN9', dossier_id: 'DLR5L17N9' }, 'max');
+    expect((await demandes(db)).filter((d) => d.dossier_an === 'DLR5L17N9')).toHaveLength(1);
+    await expect(
+      demander(db, { id: 'premier_decisif:DLR5L17N1:VTANR5L17V1', dossier_id: 'DLR5L17N1' }, 'max')
+    ).rejects.toThrow(/existe déjà/);
+  });
+
+  it('repère une question de méthode', () => {
+    const p = (points: string[]) =>
+      ({ relecture: { points_attention: points } }) as unknown as Parameters<typeof casNonPrevu>[0];
+    expect(casNonPrevu(p(['CAS NON PRÉVU : x']))).toBe(true);
+    expect(casNonPrevu(p(['autre']))).toBe(false);
   });
 });

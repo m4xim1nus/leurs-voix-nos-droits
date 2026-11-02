@@ -274,9 +274,14 @@ def test_alertes_deja_proposees_ou_traitees_sautees(tmp_path):
         def lire(self, sql):
             if "FROM propositions" in sql:
                 return [{"alerte_id": "inscrit:D1"}]
+            if "FROM demandes_llm" in sql:
+                return [{"alerte_id": "inscrit:D3"}]
             return [{"dossier_an": "D2", "statut": "brouillon", "doc": "{}", "motif_ecart": None}]
 
     assert [a["id"] for a in alertes_a_proposer(tmp_path, D1(), {"inscrit"})] == ["inscrit:D3"]
+    # Type non retenu : seule la demande passe, et en premier.
+    assert [a["id"] for a in alertes_a_proposer(tmp_path, D1(), {"premier_decisif"})] == [
+        "inscrit:D3", "premier_decisif:D4"]
 
 
 def test_credit_epuise_arrete_la_passe():

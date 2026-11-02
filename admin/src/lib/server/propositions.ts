@@ -9,6 +9,8 @@ import { enregistrer, qualification } from './db';
 export type StatutProposition = 'proposee' | 'echec' | 'chargee' | 'ecartee';
 
 export interface Relecture {
+  /** Une phrase du LLM au relecteur : ce qu'il propose de faire, et quoi vérifier d'abord. */
+  action?: string;
   points_attention?: string[];
   extraits?: string[];
   incertitudes?: string[];
@@ -181,4 +183,43 @@ export function jugement(d: DocPropose | null): string {
     p ? `${p.code}, ${p.sens === 'etend' ? 'étend' : 'restreint'}` : 'sans droit principal',
     decisif ? `décisif ${decisif.id}` : 'sans décisif'
   ].join(' · ');
+}
+
+/** Proposition qui soulève une question de méthode (« CAS NON PRÉVU »). */
+export function casNonPrevu(p: Proposition): boolean {
+  return [...(p.relecture.points_attention ?? []), ...(p.relecture.controles?.points ?? [])].some(
+    (x) => String(x).startsWith('CAS NON PRÉVU')
+  );
+}
+
+export interface Demande {
+  alerte_id: string;
+  dossier_an: string;
+  demande_par: string;
+  demande_le: string;
+}
+
+export async function demandes(db: D1Database): Promise<Demande[]> {
+  const { results } = await db.prepare('SELECT * FROM demandes_llm').all<Demande>();
+  return results;
+}
+
+/** Demande une proposition pour une alerte : la prochaine passe de l'Action la traite. */
+export async function demander(
+  db: D1Database,
+  alerte: { id: string; dossier_id: string },
+  auteur: string
+): Promise<void> {
+  const deja = await db
+    .prepare('SELECT 1 FROM propositions WHERE alerte_id = ?')
+    .bind(alerte.id)
+    .first();
+  if (deja) throw new RefusProposition('une proposition existe déjà pour cette alerte');
+  await db
+    .prepare(
+      `INSERT INTO demandes_llm (alerte_id, dossier_an, demande_par, demande_le) VALUES (?, ?, ?, ?)
+       ON CONFLICT (alerte_id) DO NOTHING`
+    )
+    .bind(alerte.id, alerte.dossier_id, auteur, new Date().toISOString().slice(0, 19) + '+00:00')
+    .run();
 }

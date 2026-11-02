@@ -65,9 +65,9 @@ jobs:
       - name: Propositions (lvnd proposer --alertes)
         if: env.SAUTER != '1'
         env:
-          # Types retenus par Max le 02/11/2026, après la mesure (source/mesure-preq/RAPPORT.md) : ceux de
-          # l'Assemblée ; le Sénat (senat_premier_vote, senat_vote_posterieur) après un essai.
-          TYPES: premier_decisif,vote_sans_decisif,unanimite_contestee,ecart_revote,vote_posterieur,lecture_posterieure,inscrit
+          # Types retenus par Max le 02/11/2026 : les votes de l'Assemblée. Pas `inscrit` (rien à qualifier avant le
+          # vote) ni le Sénat (pas encore essayé) : ceux-là sur demande, depuis « À traiter » (table demandes_llm).
+          TYPES: premier_decisif,vote_sans_decisif,unanimite_contestee,ecart_revote,vote_posterieur,lecture_posterieure
         run: |
           (cd admin && npm ci --no-audit --no-fund)
           cd pipeline && uv run --no-dev lvnd proposer --alertes --remote --max "${{ inputs.max || '5' }}" --types "$TYPES"
