@@ -104,7 +104,7 @@ docs/A_VALIDER.md    décisions préparées, en attente de Max (vidé au fil des
 docs/QUALIFICATION.md  qualification par lots : rôles, circuit, consigne aux agents
 docs/presentation/   présentation du projet : deck Bento et PDF, hors du site et de l'admin
 docs/EXPLOITATION.md qui tourne quand, ce qui bloque un commit, quoi faire en cas d'échec
-pipeline/lvnd/       package Python (CLI download / build / check / editorial / scores / annuaire / sync-admin / proposer / veille)
+pipeline/lvnd/       package Python (CLI download / build / check / editorial / scores / annuaire / sync-admin / proposer / resumer / veille)
 pipeline/explo/      scripts jetables (spike)
 pipeline/referentiels/  YAML maintenus à la main (droits, mots-clés, groupes, pays → circonscription, flux de la veille)
 pipeline/tests/      pytest, dont les textes témoins
@@ -158,6 +158,7 @@ cd pipeline && uv run lvnd annuaire # data/raw/circos/ + AMO → data/annuaire/
 cd pipeline && uv run lvnd sync-admin --local --editorial   # catalogue → D1 de l'admin (--remote en ligne)
 cd pipeline && uv run lvnd proposer DOSSIER --prompt       # prompt d'une proposition LLM, sans appel (sans --prompt : appel payant)
 cd pipeline && uv run lvnd veille --simuler                 # flux de la veille, sans appel au LLM
+cd pipeline && uv run lvnd resumer DOSSIER --prompt        # prompt d'un résumé en mots simples, sans appel (sans --prompt : appel payant)
 
 cd admin && npm ci && npm run db:migrer && npm run dev     # admin en local (D1 émulée)
 cd admin && npm run check && npm test && npm run format:check

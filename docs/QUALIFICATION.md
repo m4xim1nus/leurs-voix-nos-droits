@@ -75,6 +75,16 @@ Un texte nouvellement qualifié se trouve déjà par son titre et son résumé. 
 proposition du LLM en contient déjà. Ils partent avec « Publier ». `lvnd check` signale chaque texte qualifié qui n'en a pas
 (ligne `info`), sans bloquer. Ni victime, ni personne mise en cause, ni formule militante ; un surnom doit être d'usage public.
 
+## Résumé en mots simples
+
+Un texte validé reçoit un résumé « En mots simples » (`docs/METHODO.md`, dernière section). L'Action `propositions.yml`
+en propose quelques-uns par passe (`lvnd resumer`) pour les textes qui n'en ont pas d'à jour : un appel sans recherche
+web, sur la fiche seule. Ils arrivent dans la section « En mots simples » d'« À traiter » : on les lit à côté du résumé
+de la fiche, on corrige au besoin, puis « Valider ce résumé simple » ; le texte garde son statut, et le résumé part avec
+« Publier ». On peut aussi l'écrire ou le corriger sur la fiche (champ « En mots simples »). Quand la fiche change
+(titre, résumé, droits touchés, décision du Conseil), le résumé simple est « à revoir » : le site ne l'affiche plus, la
+fiche le signale (« Le résumé simple est à jour » le confirme), et une nouvelle proposition arrive à la passe suivante.
+
 ## Au fil de l'eau
 
 Depuis le cycle « Au fil des votes », un nouveau vote se traite sans attendre

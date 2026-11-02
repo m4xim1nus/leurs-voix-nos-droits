@@ -449,3 +449,22 @@ ci-dessous remplacent, pour le Sénat, les règles 9 à 11 et 15 à 19.
     Un texte écarté **faute de vote sur l'ensemble à l'Assemblée** (règle 9 : retiré, rejeté sans
     vote sur l'ensemble, loi de finances rejetée par une partie), dont le motif le dit (« sans vote
     sur l'ensemble »), reste qualifiable au Sénat selon la règle 25.
+
+## Résumé en mots simples
+
+Décisions de Max du 02/11/2026 (cycle Facile à lire). Un texte qualifié peut porter un résumé « En mots simples », pour
+une personne qui lit difficilement le français ou ne connaît pas le travail des parlementaires. Ce n'est pas une règle de
+qualification : il n'entre dans aucun score.
+
+- **Intitulé** : « En mots simples ». Il suit les règles européennes du « facile à lire et à comprendre » (FALC), sans en
+  porter le sigle ni le logo, qui demandent une relecture par des personnes concernées.
+- **Contenu** : ce que fait le texte et quels droits il touche, d'après la fiche seule (titre, résumé, droits touchés,
+  décision du Conseil constitutionnel). Il n'ajoute rien. Il ne dit **pas le sens** (étend, restreint), que la fiche dit
+  à côté avec ses sources, ni aucun jugement, et ne nomme ni élu·e, ni groupe, ni organisation qui a donné son avis.
+- **Écriture** : 5 phrases au plus, 15 mots au plus par phrase, 80 mots au plus en tout ; une phrase par ligne, une idée
+  par phrase ; mots de tous les jours, mot difficile expliqué ; aucun sigle ni abréviation ; nombres en chiffres ; on
+  parle du « texte ». Au-delà, l'admin et `lvnd check` avertissent, sans bloquer.
+- **Périmètre** : les textes qualifiés. Ni les fiches de suivi, ni le vote du Sénat.
+- **Relecture** : préparé par le LLM (`lvnd resumer`), toujours relu et validé par une personne. Il garde l'empreinte de
+  la fiche relue ; si la fiche change, il n'est plus affiché jusqu'à une nouvelle relecture.
+

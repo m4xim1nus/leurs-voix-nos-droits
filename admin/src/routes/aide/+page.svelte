@@ -97,8 +97,15 @@
     mineure » signale celles qui ne changent ni le statut, ni le droit principal, ni le sens, ni le
     décisif.
     <b>Question de méthode</b> : la proposition signale un cas que les règles ne prévoient pas.
-    <b>À faire à la main</b> : pas de proposition utilisable. <b>À venir</b> : textes seulement inscrits,
-    rien à qualifier avant le vote.
+    <b>À faire à la main</b> : pas de proposition utilisable. <b>En mots simples</b> : résumés « en
+    mots simples » proposés pour des textes validés. <b>À venir</b> : textes seulement inscrits, rien
+    à qualifier avant le vote.
+  </p>
+  <p>
+    Un <b>résumé en mots simples</b> se relit à côté du résumé de la fiche : rien d’ajouté, pas de
+    sens (étend, restreint), ni élu·e ni groupe, 5 phrases courtes au plus. On le corrige dans le
+    cadre, puis <b>Valider ce résumé simple</b> : il entre dans la qualification, qui garde son statut,
+    et part avec « Publier ».
   </p>
   <p>
     Une proposition du LLM se lit sur sa carte : la phrase en tête dit ce qu’il propose de faire,
@@ -181,6 +188,12 @@
       '<b>Résumé.</b> Une ou deux phrases factuelles sur ce que fait le texte.'
     ]
   })}
+  <p>
+    Sous le résumé, le cadre <strong>En mots simples</strong> : le même texte pour une personne qui lit
+    difficilement, une phrase par ligne, sans le sens ni aucun nom. Le saisir ou le corriger vaut relecture.
+    Si le titre, le résumé, les droits touchés ou la décision du Conseil changent ensuite, un bandeau
+    le signale et le site ne l’affiche plus : relisez-le, puis « Le résumé simple est à jour », ou corrigez-le.
+  </p>
   <p>
     Saisissez les <strong>sources d’abord</strong> : les droits les citent. Seules celles de la
     <a

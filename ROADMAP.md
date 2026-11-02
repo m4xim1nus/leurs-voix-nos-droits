@@ -62,3 +62,21 @@ appliquer une éventuelle migration (`npm run db:migrer:distant`) et déployer l
   (la page Méthodologie dira qu'il suit ces règles sans en porter le logo) ; le résumé simple dit ce que fait le texte et
   quels droits il touche, **pas le sens**, qui reste dans l'étiquette du site ; périmètre : les textes qualifiés seuls.
   Reste : les règles d'écriture et la longueur (5 phrases, 80 mots par défaut), à fixer à la mesure de l'item 6.
+- Item 2 : bloc `resume_simple` (`texte`, `empreinte`) d'`editorial.json`, après `resume`, absent quand vide ; pipeline,
+  admin et site calculent la même empreinte (FNV-1a 64 bits sur titre, résumé, codes des droits, décision du Conseil),
+  fixture partagée `editorial_simple.json`. Contrôles en avertissements (80 mots, 5 phrases, 15 mots par phrase,
+  sigles), empreinte périmée signalée par `valider` et `lvnd check`. Champ « En mots simples » sur la fiche de l'admin.
+- Item 3 : `lvnd resumer` (un appel par texte validé, sans recherche web, effort `low`) ; contrôles sans LLM (termes
+  interdits, noms d'élu·es et de groupes des deux chambres : bloquants ; longueur, sigles, nombres absents de la fiche :
+  avertissements) ; propositions dans la table `propositions` (mode `simple`, une par texte et par empreinte).
+- Item 4 : section « En mots simples » d'« À traiter », geste « Valider ce résumé simple » (statut inchangé, refusé si
+  la fiche a changé depuis la proposition).
+- Item 5 : encadré « En mots simples » sur la fiche du site, affiché seulement s'il est à jour ; section de la page
+  Méthodologie.
+- Item 6, en partie : mesure sur 5 textes (02/11/2026, Opus 5.5, 0,15 $) : 5 propositions conformes, 55 à 66 mots,
+  15 mots au plus par phrase, les 5 phrases toujours remplies ; consigne resserrée (la remarque ne liste plus les
+  omissions), nombres en lettres reconnus. Étape `lvnd resumer` ajoutée à l'Action `propositions.yml` (5 par passe).
+  **Reste** : décisions de Max (seuils, budget de la passe initiale), relecture, « Publier ».
+- Item 7 : `docs/METHODO.md` (section « Résumé en mots simples »), `docs/QUALIFICATION.md`, `docs/CONCEPTION.md`,
+  `docs/EXPLOITATION.md`, guide `/aide`, `CLAUDE.md`. **À faire par Max** : `npm run deploy` de l'admin (aucune
+  migration), puis `git push`.
