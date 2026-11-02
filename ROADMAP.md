@@ -88,4 +88,13 @@ clé ; poser `LLM_CHIFFREMENT` (Worker et dépôt) et `TERMES_INTERDITS` (dépô
   `source/propositions/AAAA-MM-JJ/`, avec origine, coût et contrôles sous `relecture`. Contrôles : termes interdits
   (refus de tout appel sans la liste, lue aussi depuis le secret `TERMES_INTERDITS`), signataires des publications
   collectives, `editorial.valider`, décomptes, URL, **chaque extrait retrouvé dans son document**. `--prompt` écrit le
-  prompt sans appel. Pas encore essayé contre l'API : premier appel réel avec l'item 4.
+  prompt sans appel.
+- Item 4 : mesure à blanc sur 5 textes (7 passages, 6,78 $), rapport dans `source/mesure-preq/RAPPORT.md`. 3 accords
+  sur 5 (droit principal, sens, décisif), les 2 désaccords signalés comme incertains ; jugement stable d'un passage à
+  l'autre. Réglages resserrés (effort `medium`, 12 pages de 30 000 jetons, 20 recherches) : environ 0,7 $ par
+  proposition. Limite : la recherche de sources s'épuise vite là où elles sont rares. Décisions de Max : propositions
+  sur tous les types d'alerte de l'Assemblée, le Sénat après un essai ; mots-clés inchangés pour l'instant (item 9),
+  à rejuger sur un mois de dépense réelle.
+- Items 5 et 6 : table `propositions` (migration `0008`), `lvnd proposer --alertes`, Action `propositions.yml` (après
+  chaque passe de données, 5 propositions au plus), « À traiter » repensé (une carte par texte, proposition, charger ou
+  écarter). Un crédit épuisé ou une clé refusée arrêtent la passe.
