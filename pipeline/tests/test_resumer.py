@@ -115,3 +115,18 @@ def test_entrees_puis_importer(tmp_path, monkeypatch, termes):
     sql = "\n".join(d1.ecrits)
     assert sql.count("simple:DLR5L17N1:") == 1 and "DLR5L17N2" not in sql and "claude-code" in sql
     assert "préparé dans Claude Code" in sql and "'proposee'" in sql
+
+
+def test_validations_garde_le_statut_et_saute_une_fiche_changee():
+    e = editorial.empreinte_simple(FICHE)
+    doc = lambda texte: json.dumps({"dossier_an": "DLR5L17N1", "resume_simple": {"texte": texte, "empreinte": e}})  # noqa: E731
+    props = [{"id": 7, "alerte_id": f"simple:DLR5L17N1:{e}", "dossier_an": "DLR5L17N1", "doc": doc("Une phrase.")},
+             {"id": 8, "alerte_id": "simple:DLR5L17N2:0000000000000000", "dossier_an": "DLR5L17N2", "doc": doc("x")}]
+    qualifs = {"DLR5L17N1": {"statut": "valide", "doc": json.dumps(FICHE), "motif_ecart": None},
+               "DLR5L17N2": {"statut": "valide", "doc": json.dumps({**FICHE, "dossier_an": "DLR5L17N2"}),
+                             "motif_ecart": None}}
+    sql = resumer.validations(props, qualifs, {"DLR5L17N1": "Une phrase corrigée."}, "relu", "2026-11-02T20:00:00+00:00")
+    assert len(sql) == 3 and "DLR5L17N2" not in "".join(sql)
+    assert '"resume_simple":{"texte":"Une phrase corrigée.","empreinte":"' + e in sql[0]
+    assert "'valide'" in sql[1] and "après correction (proposition n° 7) : relu" in sql[1]
+    assert "statut = 'chargee'" in sql[2] and "id = 7" in sql[2]

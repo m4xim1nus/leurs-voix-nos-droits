@@ -11,6 +11,7 @@ texte et par empreinte, jamais recalculée : une fiche qui change en reçoit une
 
 import json
 import re
+import subprocess
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -292,6 +293,61 @@ def importer(fichier: Path, export: Path, admin: Path, cible: str, origine: str)
     for sql in sync_admin.inserts("propositions", COLONNES_D1, lignes):
         d1.ecrire(sql)
     print(f"{len(lignes)} proposition(s) écrite(s) dans D1 ({cible})", file=sys.stderr)
+    return 0
+
+
+def validations(propositions: list[dict], qualifs: dict[str, dict], corrections: dict[str, str], commentaire: str,
+                date: str) -> list[str]:
+    """SQL qui valide des résumés simples proposés, sur décision explicite de Max (comme `sync-admin --valider`) : le
+    même geste que « Valider ce résumé simple » de l'admin. Le résumé, corrigé s'il est dans `corrections`, entre dans
+    la qualification avec l'empreinte de la fiche actuelle, sans changer son statut ; une révision le dit ; la
+    proposition passe « chargée ». Une fiche qui a changé depuis la proposition est sautée."""
+    out = []
+    for p in propositions:
+        d = p["dossier_an"]
+        q = qualifs.get(d)
+        if q is None or q["statut"] in ("ecarte", "a-suivre"):
+            print(f"{d} : aucune qualification à compléter, sauté", file=sys.stderr)
+            continue
+        t = editorial.normaliser(json.loads(q["doc"]))
+        e = editorial.empreinte_simple(t)
+        if p["alerte_id"] != alerte_id(d, e):
+            print(f"{d} : la fiche a changé depuis la proposition, sauté", file=sys.stderr)
+            continue
+        propose = editorial.resume_simple((json.loads(p["doc"]) or {}).get("resume_simple"))
+        simple = editorial.resume_simple({"texte": corrections.get(d) or (propose or {}).get("texte"), "empreinte": e})
+        if simple is None:
+            print(f"{d} : résumé vide, sauté", file=sys.stderr)
+            continue
+        corrige = simple["texte"] != (propose or {}).get("texte")
+        doc = sync_admin.compact(editorial.normaliser({**t, "resume_simple": simple}))
+        note = f"résumé simple validé{' après correction' if corrige else ''} (proposition n° {p['id']}) : {commentaire}"
+        v = sync_admin.sql_valeur
+        out.append(f"UPDATE qualifications SET doc = {v(doc)}, modifie_par = {v(sync_admin.AUTEUR_VALIDATION)}, "
+                   f"modifie_le = {v(date)} WHERE dossier_an = {v(d)};")
+        out.append("INSERT INTO revisions (dossier_an, statut, doc, motif_ecart, auteur, date, commentaire) VALUES ("
+                   + ", ".join(v(x) for x in [d, q["statut"], doc, q.get("motif_ecart"), sync_admin.AUTEUR_VALIDATION,
+                                              date, note]) + ");")
+        out.append(f"UPDATE propositions SET statut = 'chargee', traite_par = {v(sync_admin.AUTEUR_VALIDATION)}, "
+                   f"traite_le = {v(date)} WHERE id = {int(p['id'])};")
+    return out
+
+
+def valider(admin: Path, cible: str, commentaire: str, corrections: Path | None) -> int:
+    d1 = llm.D1(cible, admin)
+    props = d1.lire(f"SELECT id, alerte_id, dossier_an, doc FROM propositions WHERE mode = '{MODE}' AND statut = 'proposee'")
+    qualifs = {q["dossier_an"]: q for q in d1.lire(
+        "SELECT dossier_an, statut, doc, motif_ecart FROM qualifications WHERE dossier_an IN ("
+        + ", ".join(sync_admin.sql_valeur(p["dossier_an"]) for p in props) + ")")} if props else {}
+    sql = validations(props, qualifs, json.loads(corrections.read_text()) if corrections else {}, commentaire,
+                      llm.maintenant())
+    fichier = admin / ".wrangler" / "resumer-valider.sql"
+    fichier.parent.mkdir(parents=True, exist_ok=True)
+    fichier.write_text("-- Généré par `lvnd resumer --valider` : ne pas éditer.\n" + "\n".join(sql) + "\n")
+    print(f"{len(sql) // 3} résumé(s) simple(s) validé(s) → {fichier}", file=sys.stderr)
+    if sql:
+        subprocess.run(["npx", "wrangler", "d1", "execute", sync_admin.BASE, f"--{cible}", f"--file={fichier.resolve()}",
+                        "--yes"], cwd=admin, check=True)
     return 0
 
 

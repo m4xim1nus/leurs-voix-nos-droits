@@ -117,7 +117,7 @@
           <input type="hidden" name="id" value={p.id} />
           <label class="champ"
             >Proposé (à corriger au besoin, une phrase par ligne)
-            <textarea name="texte" rows="5">{p.doc?.resume_simple?.texte ?? ''}</textarea>
+            <textarea name="texte" rows="7">{p.doc?.resume_simple?.texte ?? ''}</textarea>
           </label>
           <button class="principal">Valider ce résumé simple</button>
         </form>

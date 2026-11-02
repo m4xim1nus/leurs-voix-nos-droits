@@ -126,9 +126,10 @@
     alt: 'Onglet À traiter : les compteurs des sections, puis une carte par texte, avec la proposition du LLM.',
     legende: [
       '<b>Les sections.</b> Un clic sur un compteur y mène : prêt à relire, question de méthode, à faire à la main, en mots simples, à venir.',
-      '<b>Prêt à relire.</b> Un vote a eu lieu et la proposition du LLM passe les contrôles. Les mises à jour mineures viennent en tête.',
-      '<b>La phrase d’action.</b> Ce que le LLM propose de faire, et ce qu’il faut vérifier d’abord. En dessous : le jugement, puis les sources et leurs extraits, les points d’attention, les incertitudes (un clic les déplie).',
+      '<b>Prêt à relire.</b> Un vote a eu lieu et la proposition du LLM passe les contrôles ; les mises à jour mineures viennent en tête. Sur chaque carte : la phrase d’action du LLM quand il en donne une, le jugement, puis les sources et leurs extraits, les points d’attention, les incertitudes (un clic les déplie).',
       '<b>Les gestes.</b> « Charger « à relire » » ouvre la fiche avec la proposition ; « Écarter la proposition » la retire (un motif court aide à mesurer sa qualité). « Question tranchée » apparaît sur une question de méthode réglée.',
+      '<b>En mots simples.</b> Un résumé simple proposé pour un texte validé, à lire à côté du résumé de la fiche, rappelé au-dessus.',
+      '<b>Valider ce résumé simple</b>, après l’avoir corrigé au besoin dans le cadre : il entre dans la qualification, qui garde son statut, et part avec « Publier ».',
       '<b>À venir.</b> Textes seulement inscrits : rien à faire avant le vote. « Demander une fiche de suivi au LLM » pour un texte qu’on veut suivre.'
     ]
   })}

@@ -107,6 +107,11 @@ def main(argv=None) -> int:
     rs.add_argument("--importer", type=Path, metavar="FICHIER",
                     help="verse dans D1 des résumés écrits hors de l'API (JSON {dossier: {texte, remarque, empreinte}}), "
                          "contrôlés comme ceux du LLM")
+    rs.add_argument("--valider", metavar="COMMENTAIRE",
+                    help="valide toutes les propositions ouvertes, sur décision explicite de Max (comme sync-admin "
+                         "--valider) ; COMMENTAIRE va dans chaque révision")
+    rs.add_argument("--corrections", type=Path, metavar="FICHIER",
+                    help="avec --valider : JSON {dossier: texte corrigé} qui remplace le texte proposé")
     rs.add_argument("--origine", default="résumé simple préparé dans Claude Code",
                     help="avec --importer : origine affichée sur la carte")
     rs.add_argument("--export", type=Path, default=EXPORT)
@@ -196,6 +201,8 @@ def main(argv=None) -> int:
             args.entrees.write_text(json.dumps(e, ensure_ascii=False, indent=1) + "\n")
             print(f"{len(e)} fiche(s) à résumer → {args.entrees}", file=sys.stderr)
             return 0
+        if args.valider:
+            return resumer.valider(ADMIN, args.cible, args.valider, args.corrections)
         if args.importer:
             return resumer.importer(args.importer, args.export, ADMIN, args.cible, args.origine)
         return resumer.lancer(args.dossiers, args.export, ADMIN, args.cible, args.max, args.sortie, args.prompt)

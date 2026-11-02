@@ -85,6 +85,10 @@ de la fiche, on corrige au besoin, puis « Valider ce résumé simple » ; le te
 (titre, résumé, droits touchés, décision du Conseil), le résumé simple est « à revoir » : le site ne l'affiche plus, la
 fiche le signale (« Le résumé simple est à jour » le confirme), et une nouvelle proposition arrive à la passe suivante.
 
+En lot, hors de l'API (passe initiale du 02/11/2026) : `lvnd resumer --entrees FICHIER` écrit les fiches à résumer,
+`--importer FICHIER` verse les résumés écrits ailleurs (mêmes contrôles), et, sur décision explicite de Max seulement,
+`--valider "COMMENTAIRE" [--corrections FICHIER]` valide toutes les propositions ouvertes, comme le geste de l'admin.
+
 ## Au fil de l'eau
 
 Depuis le cycle « Au fil des votes », un nouveau vote se traite sans attendre
