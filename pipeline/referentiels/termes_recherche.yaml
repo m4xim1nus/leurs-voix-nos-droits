@@ -41,6 +41,7 @@ textes:
   code-justice-mineurs-2021: {termes: [ordonnance de 1945, CJPM, mineurs délinquants, justice des enfants, adolescents]}
   condition-residence-prestations-2025: {termes: [APL, allocations, CAF, aides sociales aux étrangers, APA, prestations familiales]}
   confiance-justice-2021: {termes: [cours criminelles, jury populaire, réduction de peine, secret de l'avocat, enregistrement des audiences], surnoms: [loi Dupond-Moretti]}
+  confiance-simplification-sante-2021: {termes: [hôpital, intérim médical, Ségur], surnoms: [loi Rist]}
   constitution-environnement-2021: {termes: [article 1er de la Constitution, référendum climat, réforme constitutionnelle, climat, biodiversité]}
   constitutionnaliser-securite-sociale-2024: {termes: [Sécu, Constitution, assurance maladie]}
   consultation-nc-2018: {termes: [Nouvelle-Calédonie, référendum d'indépendance, indépendance, liste électorale, Nouméa]}
@@ -82,6 +83,7 @@ textes:
   gens-du-voyage-2018: {termes: [campements illicites, aires d'accueil, caravanes, amende forfaitaire, expulsion]}
   gestion-crise-sanitaire-2021: {termes: [pass sanitaire, passe sanitaire, vaccination obligatoire, obligation vaccinale, soignants, covid, isolement, QR code, suspendus]}
   habilitation-ordonnances-travail-2017: {termes: [ordonnances Macron, loi travail, code du travail, CSE, prud'hommes, barème, dialogue social, licenciement]}
+  homicide-routier-2025: {termes: [homicide routier, alcool au volant, permis de conduire]}
   hydrocarbures-outre-mer-2026: {termes: [pétrole, gaz, forages, Guyane, énergies fossiles, Saint-Pierre-et-Miquelon]}
   immigration-2024: {termes: [OQTF, regroupement familial, titre de séjour, sans-papiers, métiers en tension, étudiants étrangers, droit du sol, expulsions, régularisation], surnoms: [loi Darmanin, loi immigration]}
   immigration-asile-2018: {termes: [OQTF, asile, CNDA, rétention, délit de solidarité, droit du sol, Mayotte, réfugiés, demandeurs d'asile, expulsions, sans-papiers], surnoms: [loi Collomb, loi asile et immigration]}
@@ -244,7 +246,6 @@ ecartes:
   DLR5L15N38970: {termes: ["49.3", retraite à points, réforme des retraites, âge pivot, motion de censure]}
   DLR5L15N39814: {termes: [élections municipales, covid, report des municipales]}
   DLR5L15N40073: {termes: [CESE, convention citoyenne, tirage au sort]}
-  DLR5L15N40764: {termes: [hôpital, intérim médical, Ségur], surnoms: [loi Rist]}
   DLR5L15N40997: {termes: [âge de consentement, 15 ans, viol, inceste]}
   DLR5L15N41126: {termes: [animaux, cirques, delphinarium, visons, abandon, animaleries, zoos]}
   DLR5L15N41193: {termes: [âge de consentement, 15 ans, viol, inceste, 18 ans], surnoms: [loi Billon]}
@@ -280,7 +281,6 @@ ecartes:
   DLR5L16N48135: {termes: [droit du sol, immigration, OQTF]}
   DLR5L16N48392: {termes: [émeutes, reconstruction]}
   DLR5L16N48492: {termes: [discrimination capillaire, cheveux, coiffure, afro]}
-  DLR5L16N48739: {termes: [homicide routier, alcool au volant, permis de conduire]}
   DLR5L16N49096: {termes: [copropriétés dégradées, marchands de sommeil, habitat indigne, HLM]}
   DLR5L16N49263: {termes: [chlordécone, Antilles, Martinique, Guadeloupe, pesticide]}
   DLR5L16N49364: {termes: [fast fashion, Shein, mode éphémère, vêtements]}

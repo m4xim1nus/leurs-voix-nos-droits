@@ -148,6 +148,10 @@ confiance-justice-2021,terme,réduction de peine
 confiance-justice-2021,terme,secret de l'avocat
 confiance-justice-2021,terme,enregistrement des audiences
 confiance-justice-2021,surnom,loi Dupond-Moretti
+confiance-simplification-sante-2021,terme,hôpital
+confiance-simplification-sante-2021,terme,intérim médical
+confiance-simplification-sante-2021,terme,Ségur
+confiance-simplification-sante-2021,surnom,loi Rist
 constitution-environnement-2021,terme,article 1er de la Constitution
 constitution-environnement-2021,terme,référendum climat
 constitution-environnement-2021,terme,réforme constitutionnelle
@@ -393,6 +397,9 @@ habilitation-ordonnances-travail-2017,terme,prud'hommes
 habilitation-ordonnances-travail-2017,terme,barème
 habilitation-ordonnances-travail-2017,terme,dialogue social
 habilitation-ordonnances-travail-2017,terme,licenciement
+homicide-routier-2025,terme,homicide routier
+homicide-routier-2025,terme,alcool au volant
+homicide-routier-2025,terme,permis de conduire
 hydrocarbures-outre-mer-2026,terme,pétrole
 hydrocarbures-outre-mer-2026,terme,gaz
 hydrocarbures-outre-mer-2026,terme,forages
@@ -1529,10 +1536,6 @@ DLR5L15N39814,terme,report des municipales
 DLR5L15N40073,terme,CESE
 DLR5L15N40073,terme,convention citoyenne
 DLR5L15N40073,terme,tirage au sort
-DLR5L15N40764,terme,hôpital
-DLR5L15N40764,terme,intérim médical
-DLR5L15N40764,terme,Ségur
-DLR5L15N40764,surnom,loi Rist
 DLR5L15N40997,terme,âge de consentement
 DLR5L15N40997,terme,15 ans
 DLR5L15N40997,terme,viol
@@ -1667,9 +1670,6 @@ DLR5L16N48492,terme,discrimination capillaire
 DLR5L16N48492,terme,cheveux
 DLR5L16N48492,terme,coiffure
 DLR5L16N48492,terme,afro
-DLR5L16N48739,terme,homicide routier
-DLR5L16N48739,terme,alcool au volant
-DLR5L16N48739,terme,permis de conduire
 DLR5L16N49096,terme,copropriétés dégradées
 DLR5L16N49096,terme,marchands de sommeil
 DLR5L16N49096,terme,habitat indigne
