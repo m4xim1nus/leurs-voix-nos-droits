@@ -23,7 +23,7 @@
       "etiquettes": [],
       "vigilance": [],
       "conseil_constitutionnel": "",
-      "note": "Le sens se lit sur l'article unique adopté le 15 mai 2025 et sur le droit applicable ce jour-là (règle 4). La cour administrative d'appel a suspendu le jugement le 28 mai 2025, puis l'a annulé le 30 décembre 2025. Le Conseil d'État a rejeté les pourvois le 29 juin 2026 : les autorisations sont aujourd'hui définitives, indépendamment de ce texte. Solidaires se prononce sur la version adoptée par le Sénat. France Nature Environnement se prononce sur le jugement du 27 février, avant le dépôt du texte.",
+      "note": "Le sens se lit sur l'article unique adopté le 15 mai 2025 et sur le droit applicable ce jour-là (règle 4). La cour administrative d'appel a suspendu le jugement le 28 mai 2025, puis l'a annulé le 30 décembre 2025. Le Conseil d'État a rejeté les pourvois le 29 juin 2026 : les autorisations sont aujourd'hui définitives, indépendamment de ce texte. Solidaires se prononce sur la version adoptée par le Sénat. France Nature Environnement se prononce sur le jugement du 27 février, avant le dépôt du texte. À l'Assemblée, le texte a été rejeté en 1re lecture le 02/06/2025 par une motion de rejet préalable adoptée sans aucune voix contre (176-0) : ce vote ne départage personne et n'est pas retenu (règle 9). Texte à l'arrêt depuis l'accord en commission mixte paritaire du 25/06/2025.",
       "sources": {
         "fne-2025-02": {
           "auteur": "France Nature Environnement",
@@ -460,7 +460,7 @@
       "dossier_an": "DLR5L17N51670",
       "legislature": 17,
       "titre": "Loi relative au droit à l'aide à mourir",
-      "resume": "",
+      "resume": "Le texte crée un droit à l'aide à mourir : une personne majeure, française ou résidant de façon stable et régulière en France, atteinte d'une affection grave et incurable en phase avancée ou terminale, qui éprouve une souffrance réfractaire aux traitements ou insupportable et peut exprimer une volonté libre et éclairée, peut être autorisée à recourir à une substance létale, qu'elle s'administre ou, si elle n'en est pas physiquement capable, que lui administre un médecin ou un infirmier. Un médecin décide après une procédure collégiale, la demande est confirmée après au moins deux jours de réflexion, les soignants disposent d'une clause de conscience et une commission en assure le contrôle a posteriori.",
       "droits": [
         {
           "code": "sante",
@@ -884,7 +884,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2020-807 DC du 3 décembre 2020, non-conformité partielle, sans réserve. Vingt-six articles sont censurés comme cavaliers, sans examen du fond, dont l'article 74 sur les peines pour violation de domicile. Sont conformes les dispositions contestées des articles 34 (installations classées), 44 (consultation du public) et 56 (travaux anticipés). L'article 73 (expulsion administrative) n'est pas censuré, et la décision ne l'examine pas.",
-      "note": "Scrutin décisif : ensemble, texte de la commission mixte paritaire, 28/10/2020. Texte composite : le sens se lit sur les mesures de procédure environnementale, que vise la source citée (règle 4). L'Autorité environnementale écrit après le vote, à propos du décret d'application, mais se prononce sur la loi ; de même la Commission nationale du débat public, dont l'avis est lu dans la reprise d'Humanité et Biodiversité. Motions de rejet préalable affichées, pas comptées (règle 10). Deux amendements clés, en 1re lecture, seule lecture où des suppressions ont été mises aux voix (règle 11) : la suppression de l'article 24 bis, délai du droit d'initiative, et celle de l'article 25, consultation du public. L'Assemblée a adopté la seconde (55-53), puis a rétabli l'article le 02/10/2020 en seconde délibération, sans scrutin public : ce vote de suppression reste le seul vote nominatif sur cet article. La suppression de l'article 26, travaux anticipés, n'est pas retenue, faute d'une source citée qui vise cette mesure. L'extension de l'expulsion administrative n'entre pas dans le jugement, faute de source retenue.",
+      "note": "Scrutin décisif : ensemble, texte de la commission mixte paritaire, 28/10/2020. Texte composite : le sens se lit sur les mesures de procédure environnementale, que vise la source citée (règle 4). L'Autorité environnementale écrit après le vote, à propos du décret d'application, mais se prononce sur la loi ; de même la Commission nationale du débat public, dont l'avis est lu dans la reprise d'Humanité et Biodiversité. Motions de rejet préalable affichées, pas comptées (règle 10). Deux amendements clés, en 1re lecture, seule lecture où des suppressions ont été mises aux voix (règle 11) : la suppression de l'article 24 bis, délai du droit d'initiative, et celle de l'article 25, consultation du public. L'Assemblée a adopté la seconde (55-53), puis a rétabli l'article le 02/10/2020 en seconde délibération, sans scrutin public : ce vote de suppression reste le seul vote nominatif sur cet article. La suppression de l'article 26, travaux anticipés, n'est pas retenue, faute d'une source citée qui vise cette mesure. L'extension de l'expulsion administrative n'entre pas dans le jugement, faute de source admise citable sur cette mesure.",
       "sources": {
         "ae-2021": {
           "auteur": "Autorité environnementale",
@@ -2641,6 +2641,56 @@
         "sources": {},
         "note": "Conclusions de la commission mixte paritaire, votées par les deux chambres : le Sénat a voté le même texte que le décisif de l'Assemblée (règle 24)."
       }
+    },
+    {
+      "id": "confiance-simplification-sante-2021",
+      "dossier_an": "DLR5L15N40764",
+      "legislature": 15,
+      "titre": "Loi visant à améliorer le système de santé par la confiance et la simplification",
+      "resume": "Élargit ce que certains professionnels peuvent faire sans passer par un médecin : les sages-femmes peuvent prolonger les arrêts de travail qu'elles prescrivent, et prescrire à leurs patientes et aux partenaires de celles-ci le dépistage et le traitement de certaines infections sexuellement transmissibles. Les orthophonistes peuvent adapter certaines prescriptions, les ergothérapeutes en renouveler. Le texte développe les protocoles locaux de coopération entre professionnels, demande un rapport sur la pratique avancée et sur l'accès aux masseurs-kinésithérapeutes sans prescription, renforce le contrôle des plafonds de l'intérim médical et modifie la gouvernance des hôpitaux.",
+      "droits": [
+        {
+          "code": "sante",
+          "role": "principal",
+          "sens": "etend",
+          "sources": [
+            "osf-2020"
+          ],
+          "justification": "Le texte permet aux sages-femmes de prolonger des arrêts de travail et de traiter certaines infections sexuellement transmissibles, ce qui évite un passage par le médecin. Le Conseil national de l'Ordre des sages-femmes, qui demandait ces mesures, écrit que la prolongation par la sage-femme évite à la femme enceinte « de longs déplacements pour voir un médecin » et répond aux « difficultés d'accès au médecin »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "Pas de saisine du Conseil constitutionnel.",
+      "note": "Scrutin décisif : lecture définitive du 14/04/2021, dernier vote de l'AN sur l'ensemble (règle 9). Le vote de 1re lecture et la motion de rejet préalable sont affichés, non comptés. Texte composite : l'essentiel de ses articles organise l'hôpital public et la coopération entre professionnels, sans source admise qui s'en saisisse au nom d'un droit de la grille. Le droit retenu est l'accès aux soins (règle 2), sur le volet des sages-femmes. Aucune critique trouvée parmi les sources admises (règle 7). Aucun amendement clé (règle 11) : la dernière lecture où une suppression a été mise aux voix est la nouvelle lecture, avec la suppression de l'article 1er bis AA sur les infirmiers anesthésistes, qu'aucune source admise ne met en cause.",
+      "sources": {
+        "osf-2020": {
+          "auteur": "Conseil national de l'Ordre des sages-femmes",
+          "titre": "Proposition de loi visant à améliorer le système de santé par la confiance et la simplification : contribution du Conseil national de l'Ordre des sages-femmes",
+          "date": "2020-11-01",
+          "url": "https://www.ordre-sages-femmes.fr/wp-content/uploads/2020/11/Contribution-du-Conseil-national-de-lOrdre-des-sages-femmes-PPL-Rist-suites-du-Segur.pdf"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L15V3641",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, lecture définitive (95-42)"
+        },
+        {
+          "id": "VTANR5L15V3295",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture, scrutin solennel (334-158)"
+        },
+        {
+          "id": "VTANR5L15V3271",
+          "role": "motion",
+          "pour": "contre-texte",
+          "objet": "motion de rejet préalable, 1re lecture (19-61)"
+        }
+      ]
     },
     {
       "id": "constitution-environnement-2021",
@@ -6164,6 +6214,50 @@
       }
     },
     {
+      "id": "homicide-routier-2025",
+      "dossier_an": "DLR5L16N48739",
+      "legislature": 16,
+      "titre": "Loi créant l'homicide routier et visant à lutter contre la violence routière",
+      "resume": "Le texte remplace l'homicide et les blessures involontaires aggravés commis par un conducteur par des délits d'homicide routier et de blessures routières ; l'homicide routier est puni de sept ans d'emprisonnement, dix ans avec deux circonstances aggravantes ou plus. Il ajoute aux circonstances existantes l'usage du téléphone tenu en main, le refus d'obtempérer, la consommation détournée de substances psychoactives et le rodéo motorisé, et abaisse de 50 à 30 km/h l'excès de vitesse retenu. Toute condamnation pour homicide routier, ou pour blessures routières de plus de trois mois d'incapacité, entraîne de plein droit l'annulation du permis. Plusieurs peines complémentaires deviennent obligatoires, sauf décision motivée. Le grand excès de vitesse (50 km/h ou plus) devient un délit dès la première fois, que l'amende forfaitaire délictuelle peut éteindre. Le texte renforce aussi l'information de la victime partie civile en appel.",
+      "droits": [
+        {
+          "code": "police-justice",
+          "role": "principal",
+          "sens": "restreint",
+          "sources": [
+            "cnb-2024-03"
+          ],
+          "justification": "Le texte élargit les circonstances qui aggravent la peine encourue, rend automatiques l'annulation du permis et plusieurs peines complémentaires, et fait du grand excès de vitesse un délit dès la première fois, éteint par une amende forfaitaire délictuelle. Le Conseil national des barreaux s'oppose à « l'automaticité de certaines peines complémentaires et l'extension de la procédure d'amende forfaitaire qui ne permet un exercice effectif des droits de la défense »."
+        }
+      ],
+      "etiquettes": [],
+      "vigilance": [],
+      "conseil_constitutionnel": "Pas de saisine du Conseil constitutionnel.",
+      "note": "Adoption définitive par le Sénat le 01/07/2025, sans modification : le dernier vote de l'AN sur l'ensemble, en 2e lecture le 03/06/2025, est décisif (règle 9). Le vote de 1re lecture (160-0, 16e législature) est affiché, non compté. Aucun amendement clé (règle 11) : aucun amendement de suppression ou de rétablissement d'un article n'a été soumis à un scrutin public, ni en 1re ni en 2e lecture. Le vote sur l'article 1er en 2e lecture (V2216) double le décisif et n'est pas retenu. Aucune motion de rejet.",
+      "sources": {
+        "cnb-2024-03": {
+          "auteur": "Conseil national des barreaux",
+          "titre": "Proposition de loi créant l'homicide routier : le CNB appelle le législateur à plus de précision",
+          "date": "2024-03-18",
+          "url": "https://cnb.avocat.fr/actionsinfluence/actualites/proposition-de-loi-creant-l-homicide-routier-le-cnb-appelle-le-legislateur-a-plus-de-precision"
+        }
+      },
+      "scrutins": [
+        {
+          "id": "VTANR5L17V2217",
+          "role": "decisif",
+          "pour": "texte",
+          "objet": "ensemble, 2e lecture (194-6)"
+        },
+        {
+          "id": "VTANR5L16V3296",
+          "role": "ensemble",
+          "pour": "texte",
+          "objet": "ensemble, 1re lecture (160-0)"
+        }
+      ]
+    },
+    {
       "id": "hydrocarbures-outre-mer-2026",
       "dossier_an": "DLR5L17N53304",
       "legislature": 17,
@@ -6257,7 +6351,7 @@
       "dossier_an": "DLR5L16N47118",
       "legislature": 16,
       "titre": "Loi pour contrôler l'immigration, améliorer l'intégration",
-      "resume": "",
+      "resume": "Le texte de la commission mixte paritaire durcit les conditions d'entrée, de séjour et d'éloignement des étrangers : regroupement familial plus exigeant (24 mois de séjour, 21 ans, connaissance élémentaire du français), durée de résidence ou d'activité exigée pour plusieurs prestations sociales, caution retour pour les étudiants, délit de séjour irrégulier puni d'amende, nombre d'admissions fixé par le Parlement, expulsion possible des étrangers protégés déjà condamnés pour des faits punis de trois ans ou plus, juge unique en principe à la Cour nationale du droit d'asile. Il interdit aussi la rétention des mineurs (à Mayotte à partir du 1er janvier 2027) et ouvre, jusqu'au 31 décembre 2026, un titre de séjour aux étrangers qui travaillent dans un métier en tension. De nombreuses mesures ont été censurées par le Conseil constitutionnel.",
       "droits": [
         {
           "code": "etrangers",
@@ -6280,11 +6374,12 @@
         }
       ],
       "etiquettes": [
-        "outre-mer"
+        "outre-mer",
+        "regime-exception"
       ],
       "vigilance": [],
       "conseil_constitutionnel": "32 articles censurés comme cavaliers (dont l'accès aux prestations sociales), 3 en partie au fond (quotas, relevé d'empreintes sous contrainte), 2 réserves.",
-      "note": "Scrutin décisif : l'ensemble du texte de la CMP (V3213, 349-186). Aucun amendement clé. Les deux motions de rejet préalable, dont celle adoptée en 1re lecture (V3203, 270-265), sont affichées, pas comptées (règle 10). Sur l'interdiction de la rétention des mineurs (`enfants`), aucune critique trouvée parmi les sources admises (règle 7).",
+      "note": "Scrutin décisif : l'ensemble du texte de la CMP (V3213, 349-186). Aucun amendement clé. Les deux motions de rejet préalable, dont celle adoptée en 1re lecture (V3203, 270-265), sont affichées, pas comptées (règle 10). Sur l'interdiction de la rétention des mineurs (`enfants`), aucune critique trouvée parmi les sources admises (règle 7). L'étiquette « régimes d'exception » tient au titre de séjour des métiers en tension, applicable jusqu'au 31 décembre 2026 (article 4 bis du texte de la CMP), et à l'examen de tous les motifs de séjour avant un refus, expérimenté pour trois ans au plus (article 1er H).",
       "sources": {
         "cimade-2024": {
           "auteur": "La Cimade",
@@ -7454,7 +7549,7 @@
       "dossier_an": "DLR5L16N46918",
       "legislature": 16,
       "titre": "Loi relative aux jeux Olympiques et Paralympiques de 2024",
-      "resume": "",
+      "resume": "Le texte de la commission mixte paritaire autorise, à titre expérimental jusqu'au 31 mars 2025, le traitement par algorithmes des images de vidéoprotection et de caméras sur aéronefs, lors de grandes manifestations sportives, récréatives ou culturelles, pour détecter en temps réel des « événements prédéterminés », sans reconnaissance faciale ni donnée biométrique. Il permet aussi le contrôle par scanner corporel à l'entrée des enceintes, renforce l'enquête administrative sur les personnes qui travaillent dans les grands événements, crée des délits d'intrusion dans les stades, rend en principe obligatoire la peine d'interdiction de stade et autorise des analyses génétiques dans la lutte antidopage.",
       "droits": [
         {
           "code": "vie-privee",
@@ -7823,7 +7918,7 @@
       "dossier_an": "DLR5L17N50690",
       "legislature": 17,
       "titre": "Loi visant à renforcer l'autorité de la justice à l'égard des mineurs délinquants et de leurs parents",
-      "resume": "",
+      "resume": "Le texte de la commission mixte paritaire punit de trois ans d'emprisonnement le parent qui s'est soustrait à ses obligations légales quand cela a directement conduit son enfant à commettre un crime ou plusieurs délits, sanctionne d'une amende civile les parents absents aux convocations du juge des enfants et les rend responsables de plein droit des dommages causés par leur enfant. Pour les mineurs, il crée une audience unique en comparution immédiate dès seize ans, écarte en principe l'atténuation de peine liée à la minorité pour les plus de seize ans en récidive, allonge le contrôle judiciaire et la détention provisoire pour le terrorisme et la criminalité organisée, crée une rétention de douze heures en cas de violation d'une mesure éducative et impose un rapport éducatif avant toute détention provisoire. Plusieurs de ces mesures ont été censurées par le Conseil constitutionnel.",
       "droits": [
         {
           "code": "enfants",
@@ -7845,7 +7940,9 @@
           "justification": "Comparution immédiate, détention provisoire, rétention (censurées) ; peine aggravée pour les parents (validée)."
         }
       ],
-      "etiquettes": [],
+      "etiquettes": [
+        "regime-exception"
+      ],
       "vigilance": [
         {
           "texte": "Mesure de sens opposé (règle 4) : le texte impose un rapport éducatif avant toute détention provisoire d'un mineur (article 7 de la proposition de loi).",
@@ -7853,7 +7950,7 @@
         }
       ],
       "conseil_constitutionnel": "6 articles censurés en tout ou partie, dont 5 au nom du principe fondamental de la justice des mineurs (comparution immédiate dès 16 ans, excuse de minorité, détention provisoire…).",
-      "note": "Scrutin décisif : l'ensemble du texte de la CMP (V1624, 341-187). Amendements clés : les suppressions des articles 1er (circonstance aggravante pour les parents, V793) et 7 (rapport éducatif avant détention provisoire, V798), et les rétablissements des articles 4 (audience unique dérogatoire dès 16 ans, V794) et 5 (excuse de minorité assouplie, V797). Le vote de 1re lecture et les motions de rejet préalable sont affichés, pas comptés.",
+      "note": "Scrutin décisif : l'ensemble du texte de la CMP (V1624, 341-187). Amendements clés : les suppressions des articles 1er (circonstance aggravante pour les parents, V793) et 7 (rapport éducatif avant détention provisoire, V798), et les rétablissements des articles 4 (audience unique dérogatoire dès 16 ans, V794) et 5 (excuse de minorité assouplie, V797). Le vote de 1re lecture et les motions de rejet préalable sont affichés, pas comptés. L'étiquette « régimes d'exception » tient à l'expérimentation, pour dix-huit mois et dans deux tribunaux, d'un tribunal pour enfants à quatre assesseurs (article 10 septies).",
       "sources": {
         "cc-2025-886": {
           "auteur": "Conseil constitutionnel",
@@ -8015,7 +8112,7 @@
       "dossier_an": "DLR5L16N46484",
       "legislature": 16,
       "titre": "Loi visant à protéger les logements contre l'occupation illicite (Kasbarian-Bergé)",
-      "resume": "",
+      "resume": "Le texte voté en 2e lecture crée un délit d'introduction et de maintien frauduleux dans un local d'habitation, commercial, agricole ou professionnel (deux ans d'emprisonnement et 30 000 € d'amende), punit de 7 500 € d'amende le maintien dans un logement plus de deux mois après un commandement de quitter les lieux, sauf exceptions, et étend l'évacuation par le préfet, sans jugement, à tout local d'habitation occupé illicitement. Il impose dans tout bail une clause de résiliation de plein droit, subordonne les délais de paiement à la reprise du loyer, raccourcit plusieurs délais de la procédure d'expulsion locative et dégage le propriétaire d'un bien squatté de sa responsabilité pour défaut d'entretien, disposition censurée par le Conseil constitutionnel.",
       "droits": [
         {
           "code": "logement",
@@ -9957,7 +10054,7 @@
       "dossier_an": "DLR5L17N50169",
       "legislature": 17,
       "titre": "Loi visant à sortir la France du piège du narcotrafic",
-      "resume": "",
+      "resume": "Le texte de la commission mixte paritaire crée un procureur de la République national anti-criminalité organisée, renforce la lutte contre le blanchiment et étend à la criminalité organisée les traitements algorithmiques du renseignement. Il permet d'activer à distance des appareils électroniques dans les enquêtes, de retirer du dossier de la procédure certaines informations sur les techniques d'enquête (« dossier coffre »), de prolonger de vingt-quatre heures la garde à vue d'une personne qui transporte des stupéfiants dans son corps, et allonge plusieurs délais en matière de détention provisoire. Il crée des quartiers pénitentiaires de lutte contre la criminalité organisée et permet au préfet d'interdire de paraître des personnes liées au trafic, de fermer des commerces et lieux ouverts au public et de faire résilier le bail d'occupants dont le trafic trouble l'ordre public.",
       "droits": [
         {
           "code": "police-justice",
@@ -10003,7 +10100,7 @@
       ],
       "vigilance": [],
       "conseil_constitutionnel": "6 articles censurés en tout ou partie (dont l'accès du renseignement aux fichiers fiscaux, l'extension des « boîtes noires », une partie du « dossier coffre »), nombreuses réserves.",
-      "note": "Scrutin décisif : l'ensemble du texte de la CMP (V1473, 396-68). Amendements clés : les suppressions des articles 8 (surveillance algorithmique, V1095), 8 bis (prolongation des « boîtes noires », V1098), 23 (détention provisoire et visioconférence, V1075), 23 quinquies (quartiers de lutte contre la criminalité organisée, V1054) et 24 (interdiction de paraître et fermetures administratives, V1104) ; les rétablissements des articles 8 ter (accès aux messageries chiffrées, V1102), 15 ter et 15 quater (activation à distance des appareils, V1160 et V1161) et 16 (« dossier coffre », V1103). Le vote de 1re lecture et la motion de rejet préalable sont affichés, pas comptés. L'étiquette « régimes d'exception » tient à l'extension à la criminalité organisée de mesures du droit antiterroriste, dont la surveillance algorithmique, à titre expérimental.",
+      "note": "Scrutin décisif : l'ensemble du texte de la CMP (V1473, 396-68). Amendements clés : les suppressions des articles 8 (surveillance algorithmique, V1095), 8 bis (prolongation des « boîtes noires », V1098), 23 (détention provisoire et visioconférence, V1075), 23 quinquies (quartiers de lutte contre la criminalité organisée, V1054) et 24 (interdiction de paraître et fermetures administratives, V1104) ; les rétablissements des articles 8 ter (accès aux messageries chiffrées, V1102), 15 ter et 15 quater (activation à distance des appareils, V1160 et V1161) et 16 (« dossier coffre », V1103). Le vote de 1re lecture et la motion de rejet préalable sont affichés, pas comptés. L'étiquette « régimes d'exception » tient à l'extension à la criminalité organisée de mesures du droit antiterroriste, dont la surveillance algorithmique, et à la prolongation jusqu'au 31 décembre 2028 des « boîtes noires » de la loi du 30 juillet 2021, que celle-ci limitait au 31 juillet 2025 (article 8 bis).",
       "sources": {
         "cc-2025-885": {
           "auteur": "Conseil constitutionnel",
@@ -10293,10 +10390,10 @@
           "sens": "restreint",
           "sources": [
             "cc-2020-809",
-            "unaf-apiculture-2020-10",
+            "ong-neonics-2020-09",
             "ce-2020-08"
           ],
-          "justification": "Depuis le 1er juillet 2020, « il n'est plus possible d'accorder de dérogations » (Conseil d'État). Le texte en rétablit. Le Conseil constitutionnel relève que ces produits « ont des incidences sur la biodiversité, en particulier pour les insectes pollinisateurs et les oiseaux ». L'Union nationale de l'apiculture française parle d'« un recul sans précédent »."
+          "justification": "Depuis le 1er juillet 2020, « il n'est plus possible d'accorder de dérogations » (Conseil d'État). Le texte en rétablit. Le Conseil constitutionnel relève que ces produits « ont des incidences sur la biodiversité, en particulier pour les insectes pollinisateurs et les oiseaux ». Seize organisations, dont Générations Futures, Greenpeace France et la LPO, y voient « un grave retour en arrière en matière de protection des écosystèmes » et demandent aux députés de « rejeter le projet de loi »."
         },
         {
           "code": "sante",
@@ -10326,7 +10423,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2020-809 DC du 10 décembre 2020. Conformité, sans censure ni réserve : les mots « précisées par décret » et la dérogation, applicable jusqu'au 1er juillet 2023, sont jugés conformes. Le Conseil écarte les griefs tirés de la Charte de l'environnement et de l'adaptation au droit de l'Union européenne.",
-      "note": "Le droit applicable au jour du vote (règle 4) interdit ces produits, sans dérogation possible depuis le 1er juillet 2020 : le texte restreint donc le droit. Un amendement clé (règle 11) : la suppression de l'article 1er, qui porte la dérogation, mise en cause par l'Union nationale de l'apiculture française. La suppression de l'article 2 n'est pas retenue : cet article limite la dérogation aux betteraves, et le supprimer l'aurait élargie. L'étiquette tient à la durée limitée de la dérogation. Les amendements de rédaction de l'article 1er ne sont pas retenus.",
+      "note": "Le droit applicable au jour du vote (règle 4) interdit ces produits, sans dérogation possible depuis le 1er juillet 2020 : le texte restreint donc le droit. Un amendement clé (règle 11) : la suppression de l'article 1er, qui porte la dérogation, mise en cause par seize organisations, dont Générations Futures, Greenpeace France et la LPO, qui demandaient aux députés de rejeter le projet de loi. La suppression de l'article 2 n'est pas retenue : cet article limite la dérogation aux betteraves, et le supprimer l'aurait élargie. L'étiquette tient à la durée limitée de la dérogation. Les amendements de rédaction de l'article 1er ne sont pas retenus.",
       "sources": {
         "anses-2020-12": {
           "auteur": "ANSES",
@@ -10346,11 +10443,11 @@
           "date": "2020-08-26",
           "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b3298_avis-conseil-etat.pdf"
         },
-        "unaf-apiculture-2020-10": {
-          "auteur": "Union nationale de l'apiculture française (partie prenante)",
-          "titre": "Vote sur les néonicotinoïdes : une insulte à l'apiculture, à la science et à la protection du vivant",
-          "date": "2020-10-06",
-          "url": "https://www.unaf-apiculture.info/vote-sur-les-neonicotinoides-pour-l-union-nationale-de-l-apiculture-francaise-c/"
+        "ong-neonics-2020-09": {
+          "auteur": "Agir pour l'Environnement, Alerte des Médecins sur les Pesticides, Eau & Rivières de Bretagne, Fédération Nature & Progrès, Foodwatch France, Générations Futures, Greenpeace France, Justice Pesticides, LPO France, Mouvement de l'Agriculture BioDynamique, Nous voulons des coquelicots, Pollinis, Syndicat des Apiculteurs d'Occitanie, Syndicat National d'Apiculture, Terre d'Abeilles et Union Nationale de l'Apiculture Française",
+          "titre": "Projet de loi visant à réintroduire les néonicotinoïdes en France : le vrai et le faux de la communication gouvernementale",
+          "date": "2020-09",
+          "url": "https://www.generations-futures.fr/wp-content/uploads/2020/09/commun_neonicsbetteraves_contreverites_22092020_vf.pdf"
         }
       },
       "scrutins": [
@@ -14269,7 +14366,7 @@
       "dossier_an": "DLR5L17N52922",
       "legislature": 17,
       "titre": "Loi de financement de la sécurité sociale pour 2026",
-      "resume": "La loi fixe le budget de la sécurité sociale pour 2026. Elle suspend la réforme des retraites de 2023 : l'âge légal reste fixé à 62 ans et 9 mois pour les assurés nés jusqu'au 31 mars 1965, la durée d'assurance requise est décalée de la même façon, et l'âge de 64 ans ne s'applique qu'à partir de la génération 1969. Elle crée un congé supplémentaire de naissance d'un ou deux mois. Elle plafonne par décret la durée des arrêts de travail prescrits (au moins un mois pour une première prescription, deux mois pour une prolongation, sauf dérogation motivée) et la durée des indemnités journalières après un accident du travail ou une maladie professionnelle. Le gel des pensions et des prestations, l'extension des franchises médicales et la fin du régime des affections de longue durée « non exonérantes », prévus par le projet initial, ont été retirés avant le vote final.",
+      "resume": "La loi fixe le budget de la sécurité sociale pour 2026. Elle suspend la réforme des retraites de 2023 : l'âge légal reste fixé à 62 ans et 9 mois pour les assurés nés jusqu'au 31 mars 1965, la durée d'assurance requise est décalée de la même façon, et l'âge de 64 ans ne s'applique qu'à partir de la génération 1969. Elle crée un congé supplémentaire de naissance d'un ou deux mois. À partir de 2027, les prescriptions des médecins non conventionnés (secteur 3) ne sont plus remboursées. Elle plafonne par décret la durée des arrêts de travail prescrits (au moins un mois pour une première prescription, deux mois pour une prolongation, sauf dérogation motivée) et la durée des indemnités journalières après un accident du travail ou une maladie professionnelle. Le gel des pensions et des prestations, l'extension des franchises médicales et la fin du régime des affections de longue durée « non exonérantes », prévus par le projet initial, ont été retirés avant le vote final.",
       "droits": [
         {
           "code": "travail-protection-sociale",
@@ -14282,6 +14379,15 @@
             "cc-2025-899"
           ],
           "justification": "Le texte soumis au vote décisif limite la durée des arrêts de travail que les médecins peuvent prescrire et plafonne la durée des indemnités journalières versées après un accident du travail ou une maladie professionnelle. France Assos Santé regrette « une limitation générale et rigide », « y compris pour les personnes en ALD », et voit dans le plafonnement des indemnités « une régression du droit des victimes ». FO reste opposée à « la limitation des arrêts de travail ». Pour la CGT, la contrainte financière vient « supplanter la décision médicale ». Le texte voté définissait aussi l'incapacité ouvrant droit aux indemnités journalières par rapport à « une activité professionnelle salariée ou non salariée quelconque ». Le Conseil constitutionnel a censuré cette définition, qui a « privé de garanties légales » le droit à des moyens convenables d'existence garanti par le Préambule de 1946."
+        },
+        {
+          "code": "sante",
+          "role": "secondaire",
+          "sens": "restreint",
+          "sources": [
+            "ufml-2025-12-10"
+          ],
+          "justification": "Le texte voté rétablit l'article 26 bis, devenu l'article 76 de la loi : à partir du 1er janvier 2027, les produits de santé, actes et prestations prescrits par un médecin non conventionné (secteur 3) ne sont plus remboursés par l'assurance maladie, sauf ceux qu'il prescrit à titre gracieux pour lui-même et ses proches. Pour l'UFML-Syndicat, syndicat de médecins libéraux, « dérembourser les soins prescrits à un patient, cotisant obligatoirement à la Sécurité Sociale, est aussi injuste qu'injustifiable » ; il y voit une atteinte au « droit des patients, cotisants à la Sécurité Sociale, de choisir librement son médecin et de bénéficier des soins selon ses besoins »."
         }
       ],
       "etiquettes": [],
@@ -14308,10 +14414,16 @@
           "sources": [
             "cc-2025-899"
           ]
+        },
+        {
+          "texte": "France Assos Santé juge le non-remboursement des prescriptions des médecins non conventionnés « compréhensible, car il est important que les médecins s'inscrivent dans un cadre », mais demande qu'il n'ait pas « pour effet de pénaliser les patients qui ont des difficultés à accéder aux médecins conventionnés ». Elle réitère sa demande d'informer leur patientèle et de l'accompagner vers un médecin conventionné.",
+          "sources": [
+            "fas-2026-01-08"
+          ]
         }
       ],
       "conseil_constitutionnel": "Décision 2025-899 DC du 30 décembre 2025, non-conformité partielle. Censure sur le fond du 1° de l'article 83 : en définissant l'incapacité de travail ouvrant droit aux indemnités journalières par rapport à « une activité professionnelle salariée ou non salariée quelconque », le législateur a retenu une définition « imprécise et insuffisamment circonstanciée » et méconnu le onzième alinéa du Préambule de 1946. Neuf autres dispositions sont censurées comme cavaliers sociaux (articles 51, 57, 60 en partie, 69, 72 en partie, 85, 91, 92 et 105, paragraphe VII), sans examen de leur contenu. Sont déclarés conformes, sans réserve, la limitation de la durée de prescription des arrêts de travail et le plafonnement de la durée des indemnités journalières en cas d'accident du travail ou de maladie professionnelle (article 81), les pénalités financières des établissements de santé (article 79), l'objectif national de dépenses d'assurance maladie (articles 2 et 109) et la procédure d'adoption du parcours préventif précédant une affection de longue durée (article 54).",
-      "note": "Texte composite : ses mesures vont en sens opposés pour la protection sociale. Le sens retenu est celui des mesures que les sources admises citent le plus souvent, la limitation des arrêts de travail et des indemnités journalières ; la suspension de la réforme des retraites s'affiche en vigilance (règle 4). Le scrutin décisif est l'adoption en lecture définitive, le 16 décembre 2025, dernier vote de l'AN sur l'ensemble (règle 9). Le vote sur l'ensemble en nouvelle lecture est affiché sans être compté. En 1re lecture, l'AN n'a pas voté sur l'ensemble : le texte est parti au Sénat avant la fin de son examen. Les trois motions de rejet préalable (LFI) sont affichées sans être comptées (règle 10). Les votes sur les parties et sur les articles ne sont pas retenus. La nouvelle lecture est la dernière lecture de l'AN où des suppressions ont été mises aux voix (règle 11). Un amendement clé porte sur une mesure mise en cause par une source admise : la suppression de l'article 28 (plafonnement des indemnités journalières après un accident du travail). La suppression de l'article 44 (gel des pensions et des prestations, V4641, 197-84) n'est pas retenue : sa mesure ne figure pas dans le texte soumis au scrutin décisif (règle 11). Ne sont pas retenus non plus le rétablissement de l'article 45 bis (suspension de la réforme des retraites), qu'aucune source admise ne met en cause (la CGT la juge seulement insuffisante), et la suppression de l'article 23, qui reporte un calendrier. Les autres suppressions et rétablissements de la nouvelle lecture ne sont pas retenus. Ils portent sur des recettes, des taxes ou l'équilibre des comptes (articles liminaire à 17, dont l'article 7, contribution des organismes complémentaires, et l'article 49, objectif de dépenses), sur la tarification des offreurs de soins (articles 24, 25, 26 ter, 26 quater, 27), sur un droit autre que celui qualifié (article 26, dépassements d'honoraires ; article 26 bis, médecins non conventionnés), ou sur des mesures qu'aucune source admise ne met en cause (articles 18 bis A, 18 ter A, 20 à 22 ter, 24 bis, 28 bis A, 35 bis). Les votes de 1re lecture, dont l'adoption de l'article 45 bis le 12 novembre 2025 (255-146), sont affichés pour mémoire.",
+      "note": "Texte composite : ses mesures vont en sens opposés pour la protection sociale. Le sens retenu est celui des mesures que les sources admises citent le plus souvent, la limitation des arrêts de travail et des indemnités journalières ; la suspension de la réforme des retraites s'affiche en vigilance (règle 4). Le non-remboursement des prescriptions des médecins non conventionnés reçoit `sante` en secondaire, de même sens (règle 4). Le scrutin décisif est l'adoption en lecture définitive, le 16 décembre 2025, dernier vote de l'AN sur l'ensemble (règle 9). Le vote sur l'ensemble en nouvelle lecture est affiché sans être compté. En 1re lecture, l'AN n'a pas voté sur l'ensemble : le texte est parti au Sénat avant la fin de son examen. Les trois motions de rejet préalable (LFI) sont affichées sans être comptées (règle 10). Les votes sur les parties et sur les articles ne sont pas retenus. La nouvelle lecture est la dernière lecture de l'AN où des suppressions ont été mises aux voix (règle 11). Deux amendements clés portent sur des mesures mises en cause par une source admise : la suppression de l'article 28 (plafonnement des indemnités journalières après un accident du travail), et le rétablissement de l'article 26 bis (non-remboursement des prescriptions des médecins non conventionnés, devenu l'article 76 de la loi), mis en cause par l'UFML-Syndicat. Voter ce rétablissement va dans le sens du texte. Le scrutin retenu est celui de l'amendement adopté (V4650), après le rejet de deux autres rédactions qui épargnaient les zones sous-dotées (V4648, V4649). La suppression de l'article 44 (gel des pensions et des prestations, V4641, 197-84) n'est pas retenue : sa mesure ne figure pas dans le texte soumis au scrutin décisif (règle 11). Ne sont pas retenus non plus le rétablissement de l'article 45 bis (suspension de la réforme des retraites), qu'aucune source admise ne met en cause (la CGT la juge seulement insuffisante), et la suppression de l'article 23, qui reporte un calendrier. Les autres suppressions et rétablissements de la nouvelle lecture ne sont pas retenus. Ils portent sur des recettes, des taxes ou l'équilibre des comptes (articles liminaire à 17, dont l'article 7, contribution des organismes complémentaires, et l'article 49, objectif de dépenses), sur la tarification des offreurs de soins (articles 24, 25, 26 ter, 26 quater, 27), ou sur des mesures qu'aucune source admise ne met en cause (articles 18 bis A, 18 ter A, 20 à 22 ter, 24 bis, 28 bis A, 35 bis). Les rétablissements de l'article 26 (maîtrise des dépassements d'honoraires, V4645 à V4647, rejetés) ne sont pas retenus : la mesure est absente du texte soumis au scrutin décisif, et France Assos Santé en regrette la suppression sans la mettre en cause (règle 11). Les votes de 1re lecture, dont l'adoption de l'article 45 bis le 12 novembre 2025 (255-146), sont affichés pour mémoire.",
       "sources": {
         "cc-2025-899": {
           "auteur": "Conseil constitutionnel",
@@ -14366,6 +14478,12 @@
           "titre": "PLFSS pour 2026 : une facture encore lourde pour les travailleurs ! (communiqué)",
           "date": "2025-12-11",
           "url": "https://www.force-ouvriere.fr/IMG/pdf/cp_fo_-_plfss_pour_2026___une_facture_encore_lourde_pour_les_travailleurs.pdf"
+        },
+        "ufml-2025-12-10": {
+          "auteur": "UFML-Syndicat",
+          "titre": "Déremboursement des prescriptions des médecins en secteur 3 : les députés votent pour la rupture d'égalité entre patients (communiqué de presse du 10/12/2025)",
+          "date": "2025-12-10",
+          "url": "https://www.ufml-syndicat.org/deremboursement-des-prescriptions-des-medecins-en-secteur-3-les-deputes-votent-pour-la-rupture-degalite-entre-patients-communique-de-presse-du-10-12-2025/"
         }
       },
       "scrutins": [
@@ -14404,6 +14522,12 @@
           "role": "amendement",
           "pour": "contre-texte",
           "objet": "suppression de l'article 28 (plafonnement des indemnités journalières après un accident du travail ou une maladie professionnelle), nouvelle lecture, rejetée (76-127)"
+        },
+        {
+          "id": "VTANR5L17V4650",
+          "role": "amendement",
+          "pour": "texte",
+          "objet": "rétablissement de l'article 26 bis (non-remboursement des prescriptions des médecins non conventionnés), nouvelle lecture, adopté (107-97)"
         }
       ],
       "senat": {
@@ -19722,16 +19846,28 @@
           "sources": [
             "ce-399528"
           ]
+        },
+        {
+          "texte": "La CFDT, qui défend depuis des années un système universel, compte parmi ses acquis « l'ouverture des droits à la retraite dès la première heure travaillée grâce au système en points ». Elle juge en revanche que la réforme, « en se focalisant sur la création d'un âge d'équilibre, injuste par nature », en a « dénaturé l'intention initiale ».",
+          "sources": [
+            "cfdt-2020-02-28"
+          ]
         }
       ],
       "conseil_constitutionnel": "",
-      "note": "Texte adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score, amendements clés compris. Il n'a pas été promulgué, et le Conseil constitutionnel ne s'est donc pas prononcé. L'Assemblée n'a pas achevé son examen : le Gouvernement a engagé sa responsabilité, et le texte est considéré comme adopté le 3 mars 2020. Le sens se lit sur ce texte (T.A. n° 409, règle 6). Les deux motions de censure du 3 mars 2020 sont affichées groupe par groupe (rôle censure). La motion de rejet préalable et la motion référendaire sont affichées, pas comptées (règle 10). La 1re lecture est la seule où des suppressions ont été mises aux voix (règle 11). Aucun amendement clé. Ne sont pas retenues les suppressions de l'article 8, qui fixe le calcul par points, faute d'établir que les sources s'accordent sur son sens, de l'article 1er, qui énonce les principes et les objectifs du système et dont le sens n'est pas univoque, et des articles 3, 5 et 6, sur l'affiliation à certains régimes, qu'aucune source admise lue ne met en cause en elles-mêmes. Les votes sur les articles ne sont pas retenus.",
+      "note": "Texte adopté par l'article 49, alinéa 3, sans vote final à l'Assemblée (règle 9) : il est qualifié, mais compté dans aucun score, amendements clés compris. Il n'a pas été promulgué, et le Conseil constitutionnel ne s'est donc pas prononcé. L'Assemblée n'a pas achevé son examen : le Gouvernement a engagé sa responsabilité, et le texte est considéré comme adopté le 3 mars 2020. Le sens se lit sur ce texte (T.A. n° 409, règle 6). Les deux motions de censure du 3 mars 2020 sont affichées groupe par groupe (rôle censure). La motion de rejet préalable et la motion référendaire sont affichées, pas comptées (règle 10). La 1re lecture est la seule où des suppressions ont été mises aux voix (règle 11). Aucun amendement clé. Ne sont pas retenues les suppressions de l'article 8, qui fixe le calcul de la retraite par points sur toute la carrière, parce que les sources admises ne s'accordent pas sur son sens : la CGT et le Haut Conseil à l'Égalité mettent ce calcul en cause, et la CFDT compte le système en points parmi ses acquis (règle 11), de l'article 1er, qui énonce les principes et les objectifs du système et dont le sens n'est pas univoque, et des articles 3, 5 et 6, sur l'affiliation à certains régimes, qu'aucune source admise lue ne met en cause en elles-mêmes. Les votes sur les articles ne sont pas retenus.",
       "sources": {
         "ce-399528": {
           "auteur": "Conseil d'État",
           "titre": "Avis n° 399.528 et n° 399.529 sur un projet de loi organique et un projet de loi instituant un système universel de retraite",
           "date": "2020-01-23",
           "url": "https://www.assemblee-nationale.fr/dyn/15/textes/l15b2623_avis-conseil-etat"
+        },
+        "cfdt-2020-02-28": {
+          "auteur": "CFDT",
+          "titre": "Réforme des retraites : la CFDT mobilisée pour continuer à obtenir des avancées (tract)",
+          "date": "2020-02-28",
+          "url": "https://www.cfdt.fr/upload/docs/application/pdf/2020-02/reforme_des_retraites_-_la_cfdt_mobilisee_pour_continuer_a_obtenir_des_avancees.pdf"
         },
         "cgt-2020-03-05": {
           "auteur": "CGT",
@@ -20354,7 +20490,7 @@
         }
       ],
       "conseil_constitutionnel": "",
-      "note": "Le sens est lu sur le texte adopté par le Sénat (T.A. n° 164, 2024-2025), par rapport au droit du jour du vote, jurisprudence comprise (règle 4), et non par rapport à la tolérance administrative. L'avis du Conseil d'État porte sur le projet de loi de 2026, pas sur ce texte : il n'est retenu que pour l'état du droit.",
+      "note": "Le sens est lu sur le texte adopté par le Sénat (T.A. n° 164, 2024-2025), par rapport au droit du jour du vote, jurisprudence comprise (règle 4), et non par rapport à la tolérance administrative. L'avis du Conseil d'État porte sur le projet de loi de 2026, pas sur ce texte : il n'est retenu que pour l'état du droit. En 1re lecture à l'Assemblée, le 10/04/2026, une députée du groupe Ensemble pour la République, favorable au texte, a déposé une motion de rejet préalable, adoptée (120-105), pour l'envoyer en commission mixte paritaire. Voter pour cette motion allait donc dans le sens du texte. Comme toute motion, elle est affichée sans être comptée (règle 10).",
       "sources": {
         "ce-2026-04-23": {
           "auteur": "Conseil d'État",
@@ -20375,7 +20511,14 @@
           "url": "https://www.force-ouvriere.fr/le-22-janvier-l-assemblee-nationale-doit-rejeter-l-attaque-du"
         }
       },
-      "scrutins": [],
+      "scrutins": [
+        {
+          "id": "VTANR5L17V6133",
+          "role": "motion",
+          "pour": "texte",
+          "objet": "motion de rejet préalable adoptée, 1re lecture, déposée par les soutiens du texte (120-105)"
+        }
+      ],
       "senat": {
         "version": "seul",
         "scrutins": [
@@ -20414,9 +20557,10 @@
             "cc-2026-914",
             "ong-lua-2026-08",
             "ong-lua-2026-07",
-            "ce-410698"
+            "ce-410698",
+            "ong-lua-2026-08-contribution"
           ],
-          "justification": "Le texte allège plusieurs garanties de protection des milieux et de participation du public. Le Conseil constitutionnel a censuré la restriction de la participation du public aux seules personnes justifiant d'un intérêt à agir, contraire à l'exigence d'une participation de « toute personne ». Il n'a validé les dérogations aux néonicotinoïdes et la compensation des zones humides que sous réserves. Neuf organisations, dont France Nature Environnement, la LPO, Générations Futures et le WWF, estiment que la loi « multiplie les reculs environnementaux et sanitaires » : pesticides, eau, élevages. Le Conseil d'État jugeait les dispositions sur le loup « ni nécessaires, ni opportunes »."
+          "justification": "Le texte allège plusieurs garanties de protection des milieux et de participation du public. Le Conseil constitutionnel a censuré la restriction de la participation du public aux seules personnes justifiant d'un intérêt à agir, contraire à l'exigence d'une participation de « toute personne ». Il n'a validé les dérogations aux néonicotinoïdes et la compensation des zones humides que sous réserves. Neuf organisations, dont France Nature Environnement, la LPO, Générations Futures et le WWF, estiment que la loi « multiplie les reculs environnementaux et sanitaires » : pesticides, eau, élevages. Six d'entre elles demandent aussi au Conseil constitutionnel de censurer la disposition qui « permet à l'administration maintenir pendant trois ans maximum les effets d'une autorisation provisoire de prélèvement d'eau annulée par le juge ». Le Conseil d'État jugeait les dispositions sur le loup « ni nécessaires, ni opportunes »."
         },
         {
           "code": "sante",
@@ -20447,7 +20591,7 @@
         }
       ],
       "conseil_constitutionnel": "Décision 2026-914 DC du 14 août 2026, non-conformité partielle avec réserves. Censurés comme cavaliers : le curage des plans d'eau (3° de l'article 14), la pisciculture (article 16), la suspension par décret de la redevance pour pollutions diffuses (article 26), l'exclusion des bâtiments agricoles du décompte de l'artificialisation (article 32), le régime des haies (article 36) et les allégations sur la rémunération des agriculteurs (article 55). La servitude de voisinage agricole (article 35) est censurée pour atteinte disproportionnée au droit de propriété. La restriction de la participation du public aux personnes justifiant d'un intérêt à agir (2° de l'article 46) est censurée sur le fondement de l'article 7 de la Charte de l'environnement. Trois dispositions sont validées sous réserve : les dérogations aux néonicotinoïdes (l'ANSES peut en restreindre le champ géographique, et son silence au bout de deux mois vaut refus), la compensation des zones humides (un ouvrage de stockage d'eau n'est pas une zone humide) et le plafond « directives européennes » de l'ordonnance sur les élevages (limité aux élevages qu'elles couvrent). Le reste des dispositions contestées est déclaré conforme, dont le délai de grâce et l'instruction des autorisations de pesticides, le stockage d'eau, la dérogation aux schémas d'aménagement des eaux, l'écart au principe de non-régression, le régime du loup, les circonstances aggravantes pénales et les dommages et intérêts pour recours abusif.",
-      "note": "Le scrutin décisif est le vote du texte de la CMP par l'Assemblée le 20 juillet 2026, dernier vote de l'Assemblée sur l'ensemble ; le Sénat l'a adopté définitivement le 21 juillet (règle 9). On qualifie ce texte (règle 6) : il contient les dérogations aux néonicotinoïdes, ajoutées par le Sénat, et la restriction de la participation du public, censurée ensuite. Le vote de 1re lecture et la motion de rejet de la CMP sont affichés, pas comptés (règle 10). Trois amendements clés, tous de 1re lecture, seule lecture de l'Assemblée où des suppressions ont été mises aux voix (règle 11). La suppression de l'article 14 (loup, V6903) est mise en cause par le Conseil d'État et les associations, celle de l'article 17 (ordonnance sur les élevages, V6958) par les associations. La suppression de l'article 18 bis (participation réservée aux personnes ayant un intérêt à agir, V7145) est mise en cause par la censure du Conseil constitutionnel. Ces articles restreignent tous des garanties : voter leur suppression va contre le texte. Ne sont pas retenus la suppression de l'article 5 (stockage d'eau), dont le lien avec les critiques des sources est le plus ténu, et le rétablissement de l'article 7 (zones humides), que le Conseil constitutionnel a validé sous réserve : une décision qui valide une mesure ne la met pas en cause (règle 11). Écartées faute de source qui mette en cause la mesure précise : les suppressions des articles 6 (dérogation aux règles d'un schéma d'aménagement des eaux), 8 bis et 8 ter (mesures protectrices supprimées, qu'aucune source ne cite), 10 (compensation sur des terres agricoles) et 23 (recours abusifs), et celles des articles 3, 4 bis, 5 ter, 5 quater, 6 bis et 21, hors grille ou sans source. Non retenu parce que le sens de l'article n'est pas univoque : le rétablissement de l'article 8 (captages), qui étend des obligations de protection. Les dérogations aux néonicotinoïdes n'ont été introduites qu'au Sénat : aucun vote de l'Assemblée ne porte sur elles, hors les votes sur l'ensemble. L'étiquette « régimes d'exception » tient aux dérogations de trois ans à l'interdiction des néonicotinoïdes, dispositif temporaire.",
+      "note": "Le scrutin décisif est le vote du texte de la CMP par l'Assemblée le 20 juillet 2026, dernier vote de l'Assemblée sur l'ensemble ; le Sénat l'a adopté définitivement le 21 juillet (règle 9). On qualifie ce texte (règle 6) : il contient les dérogations aux néonicotinoïdes, ajoutées par le Sénat, et la restriction de la participation du public, censurée ensuite. Le vote de 1re lecture et la motion de rejet de la CMP sont affichés, pas comptés (règle 10). Quatre amendements clés, tous de 1re lecture, seule lecture de l'Assemblée où des suppressions ont été mises aux voix (règle 11). La suppression de l'article 5 (participation du public allégée pour les ouvrages de stockage d'eau, poursuite des prélèvements dont l'autorisation a été annulée par le juge, V6770) est mise en cause par les associations, qui visent les dispositions sur l'eau et demandent la censure de cette poursuite des prélèvements. La suppression de l'article 14 (loup, V6903) est mise en cause par le Conseil d'État et les associations, celle de l'article 17 (ordonnance sur les élevages, V6958) par les associations. La suppression de l'article 18 bis (participation réservée aux personnes ayant un intérêt à agir, V7145) est mise en cause par la censure du Conseil constitutionnel. Ces articles restreignent tous des garanties : voter leur suppression va contre le texte. N'est pas retenu le rétablissement de l'article 7 (zones humides), que le Conseil constitutionnel a validé sous réserve : une décision qui valide une mesure ne la met pas en cause (règle 11). Écartées faute de source qui mette en cause la mesure précise : les suppressions des articles 6 (dérogation aux règles d'un schéma d'aménagement des eaux), 8 bis et 8 ter (mesures protectrices supprimées, qu'aucune source ne cite), 10 (compensation sur des terres agricoles) et 23 (recours abusifs), et celles des articles 3, 4 bis, 5 ter, 5 quater, 6 bis et 21, hors grille ou sans source. Non retenu parce que le sens de l'article n'est pas univoque : le rétablissement de l'article 8 (captages), qui étend des obligations de protection. Les dérogations aux néonicotinoïdes n'ont été introduites qu'au Sénat : aucun vote de l'Assemblée ne porte sur elles, hors les votes sur l'ensemble. L'étiquette « régimes d'exception » tient aux dérogations de trois ans à l'interdiction des néonicotinoïdes, dispositif temporaire.",
       "sources": {
         "cc-2026-914": {
           "auteur": "Conseil constitutionnel",
@@ -20472,6 +20616,12 @@
           "titre": "Loi d'urgence agricole : plusieurs organisations appellent à la censure du texte (communiqué)",
           "date": "2026-08-03",
           "url": "https://welfarm.fr/wp-content/uploads/2026/08/CP-contribution-exterieure-CC-LUA.pdf"
+        },
+        "ong-lua-2026-08-contribution": {
+          "auteur": "Notre Affaire à Tous, POLLINIS, Générations Futures, Biodiversité sous nos pieds, WELFARM et LPO",
+          "titre": "Contribution extérieure, saisines n° 2026-914 DC, loi d'urgence pour la protection et la souveraineté agricole",
+          "date": "2026-08-03",
+          "url": "https://notreaffaireatous.org/wp-content/uploads/2026/08/Contribution-exterieure-CC-Loi-durgence-agricole-Saisines-2026-914-DC.pdf"
         }
       },
       "scrutins": [
@@ -20492,6 +20642,12 @@
           "role": "motion",
           "pour": "contre-texte",
           "objet": "motion de rejet préalable, CMP (126-247)"
+        },
+        {
+          "id": "VTANR5L17V6770",
+          "role": "amendement",
+          "pour": "contre-texte",
+          "objet": "suppression de l'article 5 (participation du public allégée pour le stockage d'eau, poursuite des prélèvements après annulation par le juge), 1re lecture (35-134)"
         },
         {
           "id": "VTANR5L17V6903",
@@ -22038,7 +22194,7 @@
       "dossier_an": "DLR5L15N37436",
       "legislature": 15,
       "titre": "Restauration de Notre-Dame de Paris",
-      "motif": "Restauration de Notre-Dame de Paris : texte d'organisation du chantier, sans droit de la grille mis en cause (règle 8)."
+      "motif": "Restauration de Notre-Dame de Paris : souscription nationale, réduction d'impôt sur les dons, établissement public chargé du chantier, dérogations ponctuelles au code du patrimoine et habilitation à déroger par ordonnance à des règles de voirie, d'environnement et d'urbanisme. Aucune source admise ne met en cause ces dérogations au regard d'un droit de la grille. Dans son avis sur le projet, le Conseil d'État les jugeait justifiées par l'objectif de restauration (règle 7)."
     },
     {
       "dossier_an": "DLR5L15N37446",
@@ -22465,12 +22621,6 @@
       "legislature": 15,
       "titre": "Proposition de loi visant à réduire l'empreinte environnementale du numérique en France",
       "motif": "Adopté sans aucune voix contre au scrutin décisif (40-0) : ce vote ne départage personne (règle 9)."
-    },
-    {
-      "dossier_an": "DLR5L15N40764",
-      "legislature": 15,
-      "titre": "Loi visant à améliorer le système de santé par la confiance et la simplification",
-      "motif": "Aucune source admise indépendante sur ses mesures d'accès aux soins (règle 7)."
     },
     {
       "dossier_an": "DLR5L15N40849",
@@ -23400,7 +23550,7 @@
       "dossier_an": "DLR5L16N47215",
       "legislature": 16,
       "titre": "Interdire les vols en jets privés",
-      "motif": "Aucun vote de l'Assemblée sur l'ensemble du texte : son examen n'a pas abouti avant la fin de la XVIe législature (règle 9)."
+      "motif": "Rejeté en séance sans vote sur l'ensemble : l'article 1er a été supprimé (V1403, 124-39), puis les articles additionnels ont été rejetés (règle 9)."
     },
     {
       "dossier_an": "DLR5L16N47217",
@@ -23688,7 +23838,7 @@
       "dossier_an": "DLR5L16N48392",
       "legislature": 16,
       "titre": "Projet de loi relatif à l’accélération de la reconstruction et de la réfection des bâtiments dégradés ou détruits au cours des violences urbaines survenues du 27 juin au 5 juillet 2023",
-      "motif": "Reconstruction des bâtiments dégradés lors des violences urbaines de 2023 : dérogations d'urbanisme et de procédure, hors de la grille des droits."
+      "motif": "Reconstruction des bâtiments dégradés lors des violences urbaines de 2023 : habilitation à déroger par ordonnance à des règles d'urbanisme, de commande publique et de financement des travaux des collectivités. Aucune source admise ne met en cause ces dérogations au regard d'un droit de la grille. Le Conseil d'État, saisi du projet, les jugeait justifiées par l'urgence des réparations (règle 7)."
     },
     {
       "dossier_an": "DLR5L16N48414",
@@ -23779,12 +23929,6 @@
       "legislature": 16,
       "titre": "Proroger la loi du 6 mars 2017 relative à l’assainissement cadastral et à la résorption du désordre de la propriété",
       "motif": "Adopté sans aucune voix contre au scrutin décisif (139-0) : ce vote ne départage personne (règle 9)."
-    },
-    {
-      "dossier_an": "DLR5L16N48739",
-      "legislature": 16,
-      "titre": "Création d'un homicide routier et visant à lutter contre la violence routière",
-      "motif": "Création de l'homicide routier : requalification d'infractions existantes, sans mesure touchant un droit de la grille."
     },
     {
       "dossier_an": "DLR5L16N48747",
