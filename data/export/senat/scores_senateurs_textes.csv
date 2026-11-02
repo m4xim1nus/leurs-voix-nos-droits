@@ -36,6 +36,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 01024M,climat-resilience-2021,1,0,0,0,100.0
 01024M,confiance-justice-2021,0,1,0,0,0.0
 01024M,consultation-nc-2018,1,0,0,0,100.0
+01024M,cse-la-poste-2022,0,1,0,0,0.0
+01024M,directeur-ecole-2021,0,1,0,0,0.0
 01024M,ecole-confiance-2019,1,0,0,0,100.0
 01024M,elan-2018,1,0,0,0,100.0
 01024M,energies-renouvelables-2023,0,1,0,0,0.0
@@ -92,6 +94,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 01025N,climat-resilience-2021,1,0,0,0,100.0
 01025N,confiance-justice-2021,0,1,0,0,0.0
 01025N,consultation-nc-2018,1,0,0,0,100.0
+01025N,cse-la-poste-2022,0,1,0,0,0.0
+01025N,directeur-ecole-2021,0,1,0,0,0.0
 01025N,ecole-confiance-2019,1,0,0,0,100.0
 01025N,elan-2018,1,0,0,0,100.0
 01025N,energies-renouvelables-2023,0,1,0,0,0.0
@@ -151,6 +155,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 01028R,climat-resilience-2021,0,1,0,0,0.0
 01028R,confiance-justice-2021,1,0,0,0,100.0
 01028R,consultation-nc-2018,1,0,0,0,100.0
+01028R,cse-la-poste-2022,1,0,0,0,100.0
+01028R,directeur-ecole-2021,1,0,0,0,100.0
 01028R,ecole-confiance-2019,0,1,0,0,0.0
 01028R,elan-2018,1,0,0,0,100.0
 01028R,energies-renouvelables-2023,0,1,0,0,0.0
@@ -215,7 +221,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 01034P,consultation-nc-2018,1,0,0,0,100.0
 01034P,continuite-transports-greve-2024,0,1,0,0,0.0
 01034P,corps-electoral-nc-degel-2024,1,0,0,0,100.0
+01034P,cse-la-poste-2022,0,1,0,0,0.0
 01034P,ddadue-2025,0,1,0,0,0.0
+01034P,directeur-ecole-2021,0,1,0,0,0.0
 01034P,drones-epandage-2025,0,1,0,0,0.0
 01034P,duplomb-2025,0,1,0,0,0.0
 01034P,ecole-confiance-2019,1,0,0,0,100.0
@@ -307,6 +315,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 01043Q,climat-resilience-2021,1,0,0,0,100.0
 01043Q,confiance-justice-2021,0,1,0,0,0.0
 01043Q,consultation-nc-2018,1,0,0,0,100.0
+01043Q,cse-la-poste-2022,0,1,0,0,0.0
+01043Q,directeur-ecole-2021,0,1,0,0,0.0
 01043Q,ecole-confiance-2019,1,0,0,0,100.0
 01043Q,elan-2018,1,0,0,0,100.0
 01043Q,energies-renouvelables-2023,0,1,0,0,0.0
@@ -369,6 +379,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 01048V,climat-resilience-2021,1,0,0,0,100.0
 01048V,confiance-justice-2021,0,1,0,0,0.0
 01048V,consultation-nc-2018,1,0,0,0,100.0
+01048V,cse-la-poste-2022,0,1,0,0,0.0
+01048V,directeur-ecole-2021,0,1,0,0,0.0
 01048V,ecole-confiance-2019,1,0,0,0,100.0
 01048V,elan-2018,0,1,0,0,0.0
 01048V,energies-renouvelables-2023,0,1,0,0,0.0
@@ -428,6 +440,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 01057W,climat-resilience-2021,1,0,0,0,100.0
 01057W,confiance-justice-2021,0,1,0,0,0.0
 01057W,consultation-nc-2018,1,0,0,0,100.0
+01057W,cse-la-poste-2022,0,1,0,0,0.0
+01057W,directeur-ecole-2021,0,1,0,0,0.0
 01057W,ecole-confiance-2019,1,0,0,0,100.0
 01057W,elan-2018,0,1,0,0,0.0
 01057W,energies-renouvelables-2023,0,1,0,0,0.0
@@ -493,7 +507,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 01058X,continuite-transports-greve-2024,0,1,0,0,0.0
 01058X,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 01058X,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+01058X,cse-la-poste-2022,0,1,0,0,0.0
 01058X,ddadue-2025,0,1,0,0,0.0
+01058X,directeur-ecole-2021,0,1,0,0,0.0
 01058X,drones-epandage-2025,0,1,0,0,0.0
 01058X,duplomb-2025,0,1,0,0,0.0
 01058X,ecole-confiance-2019,1,0,0,0,100.0
@@ -602,6 +618,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 01060R,climat-resilience-2021,1,0,0,0,100.0
 01060R,confiance-justice-2021,0,0,0,1,
 01060R,consultation-nc-2018,0,0,1,0,
+01060R,cse-la-poste-2022,0,0,0,1,
+01060R,directeur-ecole-2021,0,0,0,1,
 01060R,ecole-confiance-2019,0,0,1,0,
 01060R,elan-2018,1,0,0,0,100.0
 01060R,energies-renouvelables-2023,0,0,0,1,
@@ -661,6 +679,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 01062T,climat-resilience-2021,0,1,0,0,0.0
 01062T,confiance-justice-2021,1,0,0,0,100.0
 01062T,consultation-nc-2018,1,0,0,0,100.0
+01062T,cse-la-poste-2022,1,0,0,0,100.0
+01062T,directeur-ecole-2021,1,0,0,0,100.0
 01062T,ecole-confiance-2019,0,1,0,0,0.0
 01062T,elan-2018,1,0,0,0,100.0
 01062T,energies-renouvelables-2023,0,1,0,0,0.0
@@ -750,7 +770,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04008A,continuite-transports-greve-2024,0,1,0,0,0.0
 04008A,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 04008A,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+04008A,cse-la-poste-2022,0,1,0,0,0.0
 04008A,ddadue-2025,0,1,0,0,0.0
+04008A,directeur-ecole-2021,0,1,0,0,0.0
 04008A,drones-epandage-2025,0,1,0,0,0.0
 04008A,duplomb-2025,0,1,0,0,0.0
 04008A,ecole-confiance-2019,1,0,0,0,100.0
@@ -881,6 +903,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04033B,continuite-transports-greve-2024,0,1,0,0,0.0
 04033B,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 04033B,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+04033B,cse-la-poste-2022,0,1,0,0,0.0
+04033B,directeur-ecole-2021,0,1,0,0,0.0
 04033B,ecole-confiance-2019,1,0,0,0,100.0
 04033B,ecriture-inclusive-senat-2023,0,1,0,0,0.0
 04033B,elan-2018,0,1,0,0,0.0
@@ -965,6 +989,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04034C,bioethique-2021,1,0,0,0,100.0
 04034C,climat-resilience-2021,0,0,1,0,
 04034C,consultation-nc-2018,1,0,0,0,100.0
+04034C,directeur-ecole-2021,0,1,0,0,0.0
 04034C,ecole-confiance-2019,0,0,1,0,
 04034C,elan-2018,0,1,0,0,0.0
 04034C,gens-du-voyage-2018,0,1,0,0,0.0
@@ -999,6 +1024,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04035D,climat-resilience-2021,1,0,0,0,100.0
 04035D,confiance-justice-2021,0,1,0,0,0.0
 04035D,consultation-nc-2018,1,0,0,0,100.0
+04035D,cse-la-poste-2022,0,1,0,0,0.0
+04035D,directeur-ecole-2021,0,1,0,0,0.0
 04035D,ecole-confiance-2019,1,0,0,0,100.0
 04035D,elan-2018,0,1,0,0,0.0
 04035D,energies-renouvelables-2023,0,1,0,0,0.0
@@ -1114,7 +1141,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04042C,continuite-transports-greve-2024,0,1,0,0,0.0
 04042C,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 04042C,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+04042C,cse-la-poste-2022,0,1,0,0,0.0
 04042C,ddadue-2025,0,1,0,0,0.0
+04042C,directeur-ecole-2021,0,1,0,0,0.0
 04042C,drones-epandage-2025,0,1,0,0,0.0
 04042C,duplomb-2025,0,1,0,0,0.0
 04042C,ecole-confiance-2019,1,0,0,0,100.0
@@ -1220,6 +1249,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04043D,climat-resilience-2021,0,0,1,0,
 04043D,confiance-justice-2021,0,1,0,0,0.0
 04043D,consultation-nc-2018,1,0,0,0,100.0
+04043D,cse-la-poste-2022,0,1,0,0,0.0
+04043D,directeur-ecole-2021,0,1,0,0,0.0
 04043D,ecole-confiance-2019,1,0,0,0,100.0
 04043D,elan-2018,0,1,0,0,0.0
 04043D,energies-renouvelables-2023,0,1,0,0,0.0
@@ -1306,7 +1337,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04045F,continuite-transports-greve-2024,0,0,1,0,
 04045F,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 04045F,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+04045F,cse-la-poste-2022,0,1,0,0,0.0
 04045F,ddadue-2025,0,1,0,0,0.0
+04045F,directeur-ecole-2021,0,1,0,0,0.0
 04045F,drones-epandage-2025,0,1,0,0,0.0
 04045F,duplomb-2025,0,1,0,0,0.0
 04045F,ecole-confiance-2019,0,0,1,0,
@@ -1417,6 +1450,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04047H,continuite-transports-greve-2024,0,1,0,0,0.0
 04047H,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 04047H,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+04047H,cse-la-poste-2022,0,1,0,0,0.0
+04047H,directeur-ecole-2021,0,1,0,0,0.0
 04047H,ecole-confiance-2019,1,0,0,0,100.0
 04047H,ecriture-inclusive-senat-2023,0,1,0,0,0.0
 04047H,elan-2018,0,1,0,0,0.0
@@ -1536,6 +1571,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04057K,climat-resilience-2021,1,0,0,0,100.0
 04057K,confiance-justice-2021,0,0,1,0,
 04057K,consultation-nc-2018,1,0,0,0,100.0
+04057K,cse-la-poste-2022,0,1,0,0,0.0
+04057K,directeur-ecole-2021,0,1,0,0,0.0
 04057K,ecole-confiance-2019,1,0,0,0,100.0
 04057K,elan-2018,0,1,0,0,0.0
 04057K,energies-renouvelables-2023,0,1,0,0,0.0
@@ -1592,6 +1629,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04059M,climat-resilience-2021,0,1,0,0,0.0
 04059M,confiance-justice-2021,1,0,0,0,100.0
 04059M,consultation-nc-2018,1,0,0,0,100.0
+04059M,cse-la-poste-2022,1,0,0,0,100.0
+04059M,directeur-ecole-2021,1,0,0,0,100.0
 04059M,ecole-confiance-2019,0,1,0,0,0.0
 04059M,elan-2018,1,0,0,0,100.0
 04059M,energies-renouvelables-2023,0,1,0,0,0.0
@@ -1685,7 +1724,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04070G,continuite-transports-greve-2024,0,1,0,0,0.0
 04070G,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 04070G,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+04070G,cse-la-poste-2022,0,1,0,0,0.0
 04070G,ddadue-2025,0,1,0,0,0.0
+04070G,directeur-ecole-2021,0,1,0,0,0.0
 04070G,drones-epandage-2025,0,1,0,0,0.0
 04070G,duplomb-2025,0,1,0,0,0.0
 04070G,ecole-confiance-2019,1,0,0,0,100.0
@@ -1791,6 +1832,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04071H,climat-resilience-2021,1,0,0,0,100.0
 04071H,confiance-justice-2021,0,1,0,0,0.0
 04071H,consultation-nc-2018,1,0,0,0,100.0
+04071H,cse-la-poste-2022,0,1,0,0,0.0
+04071H,directeur-ecole-2021,0,1,0,0,0.0
 04071H,ecole-confiance-2019,1,0,0,0,100.0
 04071H,elan-2018,0,1,0,0,0.0
 04071H,energies-renouvelables-2023,0,1,0,0,0.0
@@ -1865,6 +1908,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04085P,climat-resilience-2021,0,1,0,0,0.0
 04085P,confiance-justice-2021,1,0,0,0,100.0
 04085P,consultation-nc-2018,1,0,0,0,100.0
+04085P,cse-la-poste-2022,1,0,0,0,100.0
+04085P,directeur-ecole-2021,1,0,0,0,100.0
 04085P,ecole-confiance-2019,0,1,0,0,0.0
 04085P,elan-2018,1,0,0,0,100.0
 04085P,energies-renouvelables-2023,0,0,1,0,
@@ -1919,6 +1964,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04086Q,bioethique-2021,0,1,0,0,0.0
 04086Q,climat-resilience-2021,1,0,0,0,100.0
 04086Q,consultation-nc-2018,1,0,0,0,100.0
+04086Q,directeur-ecole-2021,0,1,0,0,0.0
 04086Q,ecole-confiance-2019,1,0,0,0,100.0
 04086Q,elan-2018,0,1,0,0,0.0
 04086Q,gens-du-voyage-2018,0,1,0,0,0.0
@@ -2005,7 +2051,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 04092N,continuite-transports-greve-2024,0,1,0,0,0.0
 04092N,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 04092N,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+04092N,cse-la-poste-2022,0,1,0,0,0.0
 04092N,ddadue-2025,0,1,0,0,0.0
+04092N,directeur-ecole-2021,0,1,0,0,0.0
 04092N,drones-epandage-2025,0,1,0,0,0.0
 04092N,duplomb-2025,0,1,0,0,0.0
 04092N,ecole-confiance-2019,1,0,0,0,100.0
@@ -2147,6 +2195,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 05008E,consultation-nc-2018,1,0,0,0,100.0
 05008E,continuite-transports-greve-2024,0,1,0,0,0.0
 05008E,corps-electoral-nc-degel-2024,1,0,0,0,100.0
+05008E,cse-la-poste-2022,0,1,0,0,0.0
+05008E,directeur-ecole-2021,0,1,0,0,0.0
 05008E,ecole-confiance-2019,1,0,0,0,100.0
 05008E,ecriture-inclusive-senat-2023,0,1,0,0,0.0
 05008E,elan-2018,0,1,0,0,0.0
@@ -2230,7 +2280,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 05012A,continuite-transports-greve-2024,0,1,0,0,0.0
 05012A,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 05012A,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+05012A,cse-la-poste-2022,0,1,0,0,0.0
 05012A,ddadue-2025,0,1,0,0,0.0
+05012A,directeur-ecole-2021,0,1,0,0,0.0
 05012A,drones-epandage-2025,0,1,0,0,0.0
 05012A,duplomb-2025,0,1,0,0,0.0
 05012A,ecole-confiance-2019,1,0,0,0,100.0
@@ -2344,7 +2396,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 07004J,continuite-transports-greve-2024,0,1,0,0,0.0
 07004J,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 07004J,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+07004J,cse-la-poste-2022,0,1,0,0,0.0
 07004J,ddadue-2025,0,1,0,0,0.0
+07004J,directeur-ecole-2021,0,1,0,0,0.0
 07004J,drones-epandage-2025,0,1,0,0,0.0
 07004J,duplomb-2025,0,0,1,0,
 07004J,ecole-confiance-2019,0,0,1,0,
@@ -2462,7 +2516,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 07029T,continuite-transports-greve-2024,0,1,0,0,0.0
 07029T,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 07029T,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+07029T,cse-la-poste-2022,0,1,0,0,0.0
 07029T,ddadue-2025,0,0,0,1,
+07029T,directeur-ecole-2021,0,1,0,0,0.0
 07029T,drones-epandage-2025,0,1,0,0,0.0
 07029T,duplomb-2025,0,1,0,0,0.0
 07029T,ecole-confiance-2019,1,0,0,0,100.0
@@ -2577,7 +2633,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 07033P,continuite-transports-greve-2024,0,1,0,0,0.0
 07033P,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 07033P,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+07033P,cse-la-poste-2022,0,1,0,0,0.0
 07033P,ddadue-2025,0,1,0,0,0.0
+07033P,directeur-ecole-2021,0,1,0,0,0.0
 07033P,drones-epandage-2025,0,1,0,0,0.0
 07033P,duplomb-2025,0,1,0,0,0.0
 07033P,ecole-confiance-2019,1,0,0,0,100.0
@@ -2703,7 +2761,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08009T,continuite-transports-greve-2024,0,1,0,0,0.0
 08009T,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 08009T,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+08009T,cse-la-poste-2022,0,1,0,0,0.0
 08009T,ddadue-2025,0,1,0,0,0.0
+08009T,directeur-ecole-2021,0,1,0,0,0.0
 08009T,drones-epandage-2025,0,1,0,0,0.0
 08009T,duplomb-2025,0,1,0,0,0.0
 08009T,ecole-confiance-2019,1,0,0,0,100.0
@@ -2818,7 +2878,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08010L,continuite-transports-greve-2024,0,1,0,0,0.0
 08010L,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 08010L,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+08010L,cse-la-poste-2022,0,1,0,0,0.0
 08010L,ddadue-2025,0,1,0,0,0.0
+08010L,directeur-ecole-2021,0,1,0,0,0.0
 08010L,drones-epandage-2025,0,1,0,0,0.0
 08010L,duplomb-2025,0,1,0,0,0.0
 08010L,ecole-confiance-2019,1,0,0,0,100.0
@@ -2933,7 +2995,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08011M,continuite-transports-greve-2024,0,1,0,0,0.0
 08011M,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 08011M,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+08011M,cse-la-poste-2022,0,1,0,0,0.0
 08011M,ddadue-2025,0,1,0,0,0.0
+08011M,directeur-ecole-2021,0,1,0,0,0.0
 08011M,drones-epandage-2025,0,1,0,0,0.0
 08011M,duplomb-2025,0,1,0,0,0.0
 08011M,ecole-confiance-2019,1,0,0,0,100.0
@@ -3048,7 +3112,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08012N,continuite-transports-greve-2024,1,0,0,0,100.0
 08012N,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 08012N,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+08012N,cse-la-poste-2022,1,0,0,0,100.0
 08012N,ddadue-2025,0,0,1,0,
+08012N,directeur-ecole-2021,1,0,0,0,100.0
 08012N,drones-epandage-2025,1,0,0,0,100.0
 08012N,duplomb-2025,1,0,0,0,100.0
 08012N,ecole-confiance-2019,0,1,0,0,0.0
@@ -3184,7 +3250,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08015R,continuite-transports-greve-2024,0,1,0,0,0.0
 08015R,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 08015R,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+08015R,cse-la-poste-2022,0,1,0,0,0.0
 08015R,ddadue-2025,0,1,0,0,0.0
+08015R,directeur-ecole-2021,0,1,0,0,0.0
 08015R,drones-epandage-2025,0,1,0,0,0.0
 08015R,duplomb-2025,0,1,0,0,0.0
 08015R,ecole-confiance-2019,1,0,0,0,100.0
@@ -3299,6 +3367,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08017T,bioethique-2021,1,0,0,0,100.0
 08017T,climat-resilience-2021,0,1,0,0,0.0
 08017T,consultation-nc-2018,1,0,0,0,100.0
+08017T,directeur-ecole-2021,1,0,0,0,100.0
 08017T,ecole-confiance-2019,0,1,0,0,0.0
 08017T,elan-2018,1,0,0,0,100.0
 08017T,gens-du-voyage-2018,0,1,0,0,0.0
@@ -3341,7 +3410,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08018U,continuite-transports-greve-2024,0,1,0,0,0.0
 08018U,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 08018U,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+08018U,cse-la-poste-2022,0,1,0,0,0.0
 08018U,ddadue-2025,0,1,0,0,0.0
+08018U,directeur-ecole-2021,0,1,0,0,0.0
 08018U,drones-epandage-2025,0,1,0,0,0.0
 08018U,duplomb-2025,0,1,0,0,0.0
 08018U,ecole-confiance-2019,1,0,0,0,100.0
@@ -3539,7 +3610,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08028W,continuite-transports-greve-2024,0,1,0,0,0.0
 08028W,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 08028W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+08028W,cse-la-poste-2022,0,1,0,0,0.0
 08028W,ddadue-2025,0,1,0,0,0.0
+08028W,directeur-ecole-2021,0,1,0,0,0.0
 08028W,drones-epandage-2025,0,1,0,0,0.0
 08028W,duplomb-2025,0,1,0,0,0.0
 08028W,ecole-confiance-2019,1,0,0,0,100.0
@@ -3674,7 +3747,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08034U,continuite-transports-greve-2024,0,1,0,0,0.0
 08034U,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 08034U,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+08034U,cse-la-poste-2022,0,1,0,0,0.0
 08034U,ddadue-2025,0,1,0,0,0.0
+08034U,directeur-ecole-2021,0,1,0,0,0.0
 08034U,drones-epandage-2025,0,1,0,0,0.0
 08034U,duplomb-2025,0,1,0,0,0.0
 08034U,ecole-confiance-2019,1,0,0,0,100.0
@@ -3922,7 +3997,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08045X,continuite-transports-greve-2024,1,0,0,0,100.0
 08045X,corps-electoral-nc-degel-2024,0,0,0,1,
 08045X,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+08045X,cse-la-poste-2022,1,0,0,0,100.0
 08045X,ddadue-2025,0,0,1,0,
+08045X,directeur-ecole-2021,1,0,0,0,100.0
 08045X,drones-epandage-2025,1,0,0,0,100.0
 08045X,duplomb-2025,1,0,0,0,100.0
 08045X,ecole-confiance-2019,0,1,0,0,0.0
@@ -4033,7 +4110,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08047A,continuite-transports-greve-2024,0,1,0,0,0.0
 08047A,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 08047A,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+08047A,cse-la-poste-2022,0,1,0,0,0.0
 08047A,ddadue-2025,0,1,0,0,0.0
+08047A,directeur-ecole-2021,0,1,0,0,0.0
 08047A,drones-epandage-2025,0,1,0,0,0.0
 08047A,duplomb-2025,0,1,0,0,0.0
 08047A,ecole-confiance-2019,1,0,0,0,100.0
@@ -4258,7 +4337,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08056B,continuite-transports-greve-2024,0,1,0,0,0.0
 08056B,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 08056B,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+08056B,cse-la-poste-2022,0,1,0,0,0.0
 08056B,ddadue-2025,0,1,0,0,0.0
+08056B,directeur-ecole-2021,0,1,0,0,0.0
 08056B,drones-epandage-2025,0,1,0,0,0.0
 08056B,duplomb-2025,0,1,0,0,0.0
 08056B,ecole-confiance-2019,1,0,0,0,100.0
@@ -4395,7 +4476,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08060W,continuite-transports-greve-2024,1,0,0,0,100.0
 08060W,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 08060W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+08060W,cse-la-poste-2022,1,0,0,0,100.0
 08060W,ddadue-2025,0,0,1,0,
+08060W,directeur-ecole-2021,1,0,0,0,100.0
 08060W,drones-epandage-2025,1,0,0,0,100.0
 08060W,duplomb-2025,1,0,0,0,100.0
 08060W,ecole-confiance-2019,0,1,0,0,0.0
@@ -4509,7 +4592,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08061X,continuite-transports-greve-2024,0,0,1,0,
 08061X,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 08061X,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+08061X,cse-la-poste-2022,0,1,0,0,0.0
 08061X,ddadue-2025,0,1,0,0,0.0
+08061X,directeur-ecole-2021,0,1,0,0,0.0
 08061X,drones-epandage-2025,0,1,0,0,0.0
 08061X,duplomb-2025,0,1,0,0,0.0
 08061X,ecole-confiance-2019,0,0,1,0,
@@ -4670,7 +4755,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08069G,continuite-transports-greve-2024,0,1,0,0,0.0
 08069G,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 08069G,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+08069G,cse-la-poste-2022,0,1,0,0,0.0
 08069G,ddadue-2025,0,1,0,0,0.0
+08069G,directeur-ecole-2021,0,1,0,0,0.0
 08069G,drones-epandage-2025,0,1,0,0,0.0
 08069G,duplomb-2025,0,1,0,0,0.0
 08069G,ecole-confiance-2019,1,0,0,0,100.0
@@ -4786,7 +4873,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 08073C,continuite-transports-greve-2024,0,0,1,0,
 08073C,corps-electoral-nc-degel-2024,0,0,1,0,
 08073C,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+08073C,cse-la-poste-2022,0,1,0,0,0.0
 08073C,ddadue-2025,0,1,0,0,0.0
+08073C,directeur-ecole-2021,0,1,0,0,0.0
 08073C,drones-epandage-2025,0,1,0,0,0.0
 08073C,duplomb-2025,0,1,0,0,0.0
 08073C,ecole-confiance-2019,0,0,1,0,
@@ -4894,6 +4983,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 10006L,climat-resilience-2021,1,0,0,0,100.0
 10006L,confiance-justice-2021,0,1,0,0,0.0
 10006L,consultation-nc-2018,1,0,0,0,100.0
+10006L,cse-la-poste-2022,0,1,0,0,0.0
+10006L,directeur-ecole-2021,0,1,0,0,0.0
 10006L,ecole-confiance-2019,1,0,0,0,100.0
 10006L,elan-2018,0,1,0,0,0.0
 10006L,energies-renouvelables-2023,0,1,0,0,0.0
@@ -4955,7 +5046,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 10015M,consultation-nc-2018,1,0,0,0,100.0
 10015M,continuite-transports-greve-2024,0,1,0,0,0.0
 10015M,corps-electoral-nc-degel-2024,1,0,0,0,100.0
+10015M,cse-la-poste-2022,0,1,0,0,0.0
 10015M,ddadue-2025,0,1,0,0,0.0
+10015M,directeur-ecole-2021,0,1,0,0,0.0
 10015M,drones-epandage-2025,0,1,0,0,0.0
 10015M,duplomb-2025,0,1,0,0,0.0
 10015M,ecole-confiance-2019,1,0,0,0,100.0
@@ -5044,6 +5137,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11010L,climat-resilience-2021,1,0,0,0,100.0
 11010L,confiance-justice-2021,0,1,0,0,0.0
 11010L,consultation-nc-2018,1,0,0,0,100.0
+11010L,cse-la-poste-2022,0,1,0,0,0.0
+11010L,directeur-ecole-2021,0,1,0,0,0.0
 11010L,ecole-confiance-2019,1,0,0,0,100.0
 11010L,elan-2018,0,1,0,0,0.0
 11010L,energies-renouvelables-2023,0,1,0,0,0.0
@@ -5103,6 +5198,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11012A,climat-resilience-2021,0,0,1,0,
 11012A,confiance-justice-2021,0,1,0,0,0.0
 11012A,consultation-nc-2018,1,0,0,0,100.0
+11012A,cse-la-poste-2022,0,1,0,0,0.0
+11012A,directeur-ecole-2021,0,1,0,0,0.0
 11012A,ecole-confiance-2019,0,0,1,0,
 11012A,elan-2018,0,1,0,0,0.0
 11012A,energies-renouvelables-2023,0,1,0,0,0.0
@@ -5174,6 +5271,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11026G,climat-resilience-2021,0,1,0,0,0.0
 11026G,confiance-justice-2021,1,0,0,0,100.0
 11026G,consultation-nc-2018,1,0,0,0,100.0
+11026G,cse-la-poste-2022,1,0,0,0,100.0
+11026G,directeur-ecole-2021,1,0,0,0,100.0
 11026G,ecole-confiance-2019,0,1,0,0,0.0
 11026G,elan-2018,1,0,0,0,100.0
 11026G,energies-renouvelables-2023,0,1,0,0,0.0
@@ -5239,7 +5338,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11027H,continuite-transports-greve-2024,1,0,0,0,100.0
 11027H,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 11027H,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+11027H,cse-la-poste-2022,1,0,0,0,100.0
 11027H,ddadue-2025,0,0,1,0,
+11027H,directeur-ecole-2021,1,0,0,0,100.0
 11027H,drones-epandage-2025,1,0,0,0,100.0
 11027H,duplomb-2025,1,0,0,0,100.0
 11027H,ecole-confiance-2019,0,1,0,0,0.0
@@ -5351,6 +5452,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11031D,climat-resilience-2021,0,1,0,0,0.0
 11031D,confiance-justice-2021,1,0,0,0,100.0
 11031D,consultation-nc-2018,1,0,0,0,100.0
+11031D,cse-la-poste-2022,1,0,0,0,100.0
+11031D,directeur-ecole-2021,1,0,0,0,100.0
 11031D,ecole-confiance-2019,0,1,0,0,0.0
 11031D,elan-2018,1,0,0,0,100.0
 11031D,energies-renouvelables-2023,0,0,1,0,
@@ -5409,6 +5512,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11033F,climat-resilience-2021,0,1,0,0,0.0
 11033F,confiance-justice-2021,0,0,0,1,
 11033F,consultation-nc-2018,1,0,0,0,100.0
+11033F,cse-la-poste-2022,0,0,0,1,
+11033F,directeur-ecole-2021,1,0,0,0,100.0
 11033F,ecole-confiance-2019,0,1,0,0,0.0
 11033F,elan-2018,1,0,0,0,100.0
 11033F,energies-renouvelables-2023,0,0,0,1,
@@ -5483,6 +5588,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11040E,consultation-nc-2018,1,0,0,0,100.0
 11040E,continuite-transports-greve-2024,1,0,0,0,100.0
 11040E,corps-electoral-nc-degel-2024,0,1,0,0,0.0
+11040E,cse-la-poste-2022,1,0,0,0,100.0
+11040E,directeur-ecole-2021,1,0,0,0,100.0
 11040E,ecole-confiance-2019,0,1,0,0,0.0
 11040E,ecriture-inclusive-senat-2023,0,0,0,1,
 11040E,elan-2018,1,0,0,0,100.0
@@ -5553,6 +5660,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11041F,climat-resilience-2021,0,1,0,0,0.0
 11041F,confiance-justice-2021,1,0,0,0,100.0
 11041F,consultation-nc-2018,1,0,0,0,100.0
+11041F,cse-la-poste-2022,1,0,0,0,100.0
+11041F,directeur-ecole-2021,1,0,0,0,100.0
 11041F,ecole-confiance-2019,0,1,0,0,0.0
 11041F,elan-2018,1,0,0,0,100.0
 11041F,energies-renouvelables-2023,0,1,0,0,0.0
@@ -5620,7 +5729,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11043H,continuite-transports-greve-2024,0,1,0,0,0.0
 11043H,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 11043H,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+11043H,cse-la-poste-2022,0,1,0,0,0.0
 11043H,ddadue-2025,0,1,0,0,0.0
+11043H,directeur-ecole-2021,0,1,0,0,0.0
 11043H,drones-epandage-2025,0,1,0,0,0.0
 11043H,duplomb-2025,0,1,0,0,0.0
 11043H,ecole-confiance-2019,1,0,0,0,100.0
@@ -5737,7 +5848,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11045K,continuite-transports-greve-2024,1,0,0,0,100.0
 11045K,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 11045K,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+11045K,cse-la-poste-2022,1,0,0,0,100.0
 11045K,ddadue-2025,0,0,1,0,
+11045K,directeur-ecole-2021,1,0,0,0,100.0
 11045K,drones-epandage-2025,1,0,0,0,100.0
 11045K,duplomb-2025,1,0,0,0,100.0
 11045K,ecole-confiance-2019,0,1,0,0,0.0
@@ -5855,7 +5968,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11048N,continuite-transports-greve-2024,0,1,0,0,0.0
 11048N,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 11048N,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+11048N,cse-la-poste-2022,0,1,0,0,0.0
 11048N,ddadue-2025,0,1,0,0,0.0
+11048N,directeur-ecole-2021,0,1,0,0,0.0
 11048N,drones-epandage-2025,0,1,0,0,0.0
 11048N,duplomb-2025,0,1,0,0,0.0
 11048N,ecole-confiance-2019,1,0,0,0,100.0
@@ -5992,7 +6107,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11053K,continuite-transports-greve-2024,0,1,0,0,0.0
 11053K,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 11053K,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+11053K,cse-la-poste-2022,0,1,0,0,0.0
 11053K,ddadue-2025,0,1,0,0,0.0
+11053K,directeur-ecole-2021,0,1,0,0,0.0
 11053K,drones-epandage-2025,0,1,0,0,0.0
 11053K,duplomb-2025,0,1,0,0,0.0
 11053K,ecole-confiance-2019,1,0,0,0,100.0
@@ -6098,6 +6215,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11054L,climat-resilience-2021,0,1,0,0,0.0
 11054L,confiance-justice-2021,1,0,0,0,100.0
 11054L,consultation-nc-2018,1,0,0,0,100.0
+11054L,cse-la-poste-2022,1,0,0,0,100.0
+11054L,directeur-ecole-2021,1,0,0,0,100.0
 11054L,ecole-confiance-2019,0,1,0,0,0.0
 11054L,elan-2018,1,0,0,0,100.0
 11054L,energies-renouvelables-2023,0,1,0,0,0.0
@@ -6166,7 +6285,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11056N,continuite-transports-greve-2024,1,0,0,0,100.0
 11056N,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 11056N,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
+11056N,cse-la-poste-2022,1,0,0,0,100.0
 11056N,ddadue-2025,0,0,1,0,
+11056N,directeur-ecole-2021,1,0,0,0,100.0
 11056N,drones-epandage-2025,0,0,1,0,
 11056N,duplomb-2025,1,0,0,0,100.0
 11056N,ecole-confiance-2019,0,1,0,0,0.0
@@ -6294,7 +6415,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11064N,consultation-nc-2018,1,0,0,0,100.0
 11064N,continuite-transports-greve-2024,0,0,0,1,
 11064N,corps-electoral-nc-degel-2024,0,0,0,1,
+11064N,cse-la-poste-2022,0,1,0,0,0.0
 11064N,ddadue-2025,0,0,0,1,
+11064N,directeur-ecole-2021,0,1,0,0,0.0
 11064N,drones-epandage-2025,0,0,0,1,
 11064N,duplomb-2025,0,0,0,1,
 11064N,ecole-confiance-2019,1,0,0,0,100.0
@@ -6392,7 +6515,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11065P,continuite-transports-greve-2024,1,0,0,0,100.0
 11065P,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 11065P,corps-electoral-nc-natifs-2026,0,0,1,0,
+11065P,cse-la-poste-2022,1,0,0,0,100.0
 11065P,ddadue-2025,1,0,0,0,100.0
+11065P,directeur-ecole-2021,1,0,0,0,100.0
 11065P,drones-epandage-2025,1,0,0,0,100.0
 11065P,duplomb-2025,1,0,0,0,100.0
 11065P,ecole-confiance-2019,0,1,0,0,0.0
@@ -6498,6 +6623,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11066Q,climat-resilience-2021,0,1,0,0,0.0
 11066Q,confiance-justice-2021,1,0,0,0,100.0
 11066Q,consultation-nc-2018,1,0,0,0,100.0
+11066Q,cse-la-poste-2022,1,0,0,0,100.0
+11066Q,directeur-ecole-2021,1,0,0,0,100.0
 11066Q,ecole-confiance-2019,0,1,0,0,0.0
 11066Q,elan-2018,1,0,0,0,100.0
 11066Q,energies-renouvelables-2023,0,1,0,0,0.0
@@ -6554,6 +6681,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11067R,climat-resilience-2021,0,1,0,0,0.0
 11067R,confiance-justice-2021,1,0,0,0,100.0
 11067R,consultation-nc-2018,1,0,0,0,100.0
+11067R,cse-la-poste-2022,1,0,0,0,100.0
+11067R,directeur-ecole-2021,1,0,0,0,100.0
 11067R,ecole-confiance-2019,0,1,0,0,0.0
 11067R,elan-2018,1,0,0,0,100.0
 11067R,energies-renouvelables-2023,0,1,0,0,0.0
@@ -6625,7 +6754,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11070L,continuite-transports-greve-2024,0,1,0,0,0.0
 11070L,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 11070L,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+11070L,cse-la-poste-2022,0,1,0,0,0.0
 11070L,ddadue-2025,0,1,0,0,0.0
+11070L,directeur-ecole-2021,0,1,0,0,0.0
 11070L,drones-epandage-2025,0,1,0,0,0.0
 11070L,duplomb-2025,0,1,0,0,0.0
 11070L,ecole-confiance-2019,1,0,0,0,100.0
@@ -6741,6 +6872,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11072N,continuite-transports-greve-2024,0,0,1,0,
 11072N,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 11072N,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+11072N,cse-la-poste-2022,0,1,0,0,0.0
+11072N,directeur-ecole-2021,0,1,0,0,0.0
 11072N,ecole-confiance-2019,0,0,1,0,
 11072N,ecriture-inclusive-senat-2023,0,0,1,0,
 11072N,elan-2018,0,1,0,0,0.0
@@ -6836,7 +6969,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11074Q,continuite-transports-greve-2024,1,0,0,0,100.0
 11074Q,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 11074Q,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+11074Q,cse-la-poste-2022,1,0,0,0,100.0
 11074Q,ddadue-2025,0,0,1,0,
+11074Q,directeur-ecole-2021,1,0,0,0,100.0
 11074Q,drones-epandage-2025,1,0,0,0,100.0
 11074Q,duplomb-2025,1,0,0,0,100.0
 11074Q,ecole-confiance-2019,0,1,0,0,0.0
@@ -6945,6 +7080,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11077T,climat-resilience-2021,0,1,0,0,0.0
 11077T,confiance-justice-2021,1,0,0,0,100.0
 11077T,consultation-nc-2018,1,0,0,0,100.0
+11077T,cse-la-poste-2022,1,0,0,0,100.0
+11077T,directeur-ecole-2021,1,0,0,0,100.0
 11077T,ecole-confiance-2019,0,1,0,0,0.0
 11077T,elan-2018,1,0,0,0,100.0
 11077T,energies-renouvelables-2023,0,0,1,0,
@@ -7001,6 +7138,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11080N,climat-resilience-2021,1,0,0,0,100.0
 11080N,confiance-justice-2021,0,1,0,0,0.0
 11080N,consultation-nc-2018,1,0,0,0,100.0
+11080N,cse-la-poste-2022,0,1,0,0,0.0
+11080N,directeur-ecole-2021,0,1,0,0,0.0
 11080N,ecole-confiance-2019,1,0,0,0,100.0
 11080N,elan-2018,0,1,0,0,0.0
 11080N,energies-renouvelables-2023,0,1,0,0,0.0
@@ -7079,6 +7218,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11083R,climat-resilience-2021,0,0,1,0,
 11083R,confiance-justice-2021,0,1,0,0,0.0
 11083R,consultation-nc-2018,1,0,0,0,100.0
+11083R,cse-la-poste-2022,0,1,0,0,0.0
+11083R,directeur-ecole-2021,0,1,0,0,0.0
 11083R,ecole-confiance-2019,0,0,1,0,
 11083R,elan-2018,0,1,0,0,0.0
 11083R,energies-renouvelables-2023,0,1,0,0,0.0
@@ -7147,7 +7288,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11085T,continuite-transports-greve-2024,0,1,0,0,0.0
 11085T,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 11085T,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+11085T,cse-la-poste-2022,0,1,0,0,0.0
 11085T,ddadue-2025,0,1,0,0,0.0
+11085T,directeur-ecole-2021,0,1,0,0,0.0
 11085T,drones-epandage-2025,0,1,0,0,0.0
 11085T,duplomb-2025,0,1,0,0,0.0
 11085T,ecole-confiance-2019,1,0,0,0,100.0
@@ -7266,6 +7409,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11090Q,continuite-transports-greve-2024,0,1,0,0,0.0
 11090Q,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 11090Q,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+11090Q,cse-la-poste-2022,0,1,0,0,0.0
+11090Q,directeur-ecole-2021,0,1,0,0,0.0
 11090Q,ecole-confiance-2019,1,0,0,0,100.0
 11090Q,ecriture-inclusive-senat-2023,0,1,0,0,0.0
 11090Q,elan-2018,0,1,0,0,0.0
@@ -7367,6 +7512,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11097X,climat-resilience-2021,0,0,1,0,
 11097X,confiance-justice-2021,0,1,0,0,0.0
 11097X,consultation-nc-2018,1,0,0,0,100.0
+11097X,cse-la-poste-2022,0,1,0,0,0.0
+11097X,directeur-ecole-2021,0,1,0,0,0.0
 11097X,ecole-confiance-2019,1,0,0,0,100.0
 11097X,elan-2018,0,1,0,0,0.0
 11097X,energies-renouvelables-2023,0,1,0,0,0.0
@@ -7426,6 +7573,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11099A,climat-resilience-2021,0,1,0,0,0.0
 11099A,confiance-justice-2021,1,0,0,0,100.0
 11099A,consultation-nc-2018,1,0,0,0,100.0
+11099A,cse-la-poste-2022,1,0,0,0,100.0
+11099A,directeur-ecole-2021,1,0,0,0,100.0
 11099A,ecole-confiance-2019,0,1,0,0,0.0
 11099A,elan-2018,1,0,0,0,100.0
 11099A,energies-renouvelables-2023,0,0,1,0,
@@ -7485,6 +7634,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11101A,climat-resilience-2021,1,0,0,0,100.0
 11101A,confiance-justice-2021,0,1,0,0,0.0
 11101A,consultation-nc-2018,1,0,0,0,100.0
+11101A,cse-la-poste-2022,0,1,0,0,0.0
+11101A,directeur-ecole-2021,0,1,0,0,0.0
 11101A,ecole-confiance-2019,1,0,0,0,100.0
 11101A,elan-2018,0,1,0,0,0.0
 11101A,energies-renouvelables-2023,0,1,0,0,0.0
@@ -7541,6 +7692,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11103C,climat-resilience-2021,0,0,1,0,
 11103C,confiance-justice-2021,0,1,0,0,0.0
 11103C,consultation-nc-2018,1,0,0,0,100.0
+11103C,cse-la-poste-2022,0,1,0,0,0.0
+11103C,directeur-ecole-2021,0,1,0,0,0.0
 11103C,ecole-confiance-2019,1,0,0,0,100.0
 11103C,elan-2018,0,1,0,0,0.0
 11103C,energies-renouvelables-2023,0,1,0,0,0.0
@@ -7597,6 +7750,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11104D,climat-resilience-2021,0,1,0,0,0.0
 11104D,confiance-justice-2021,1,0,0,0,100.0
 11104D,consultation-nc-2018,1,0,0,0,100.0
+11104D,cse-la-poste-2022,1,0,0,0,100.0
+11104D,directeur-ecole-2021,1,0,0,0,100.0
 11104D,ecole-confiance-2019,0,1,0,0,0.0
 11104D,elan-2018,1,0,0,0,100.0
 11104D,energies-renouvelables-2023,0,1,0,0,0.0
@@ -7662,6 +7817,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11109J,climat-resilience-2021,0,1,0,0,0.0
 11109J,confiance-justice-2021,1,0,0,0,100.0
 11109J,consultation-nc-2018,1,0,0,0,100.0
+11109J,cse-la-poste-2022,1,0,0,0,100.0
+11109J,directeur-ecole-2021,1,0,0,0,100.0
 11109J,ecole-confiance-2019,0,1,0,0,0.0
 11109J,elan-2018,1,0,0,0,100.0
 11109J,energies-renouvelables-2023,0,1,0,0,0.0
@@ -7727,7 +7884,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11110B,continuite-transports-greve-2024,1,0,0,0,100.0
 11110B,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 11110B,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+11110B,cse-la-poste-2022,1,0,0,0,100.0
 11110B,ddadue-2025,0,0,1,0,
+11110B,directeur-ecole-2021,1,0,0,0,100.0
 11110B,drones-epandage-2025,1,0,0,0,100.0
 11110B,duplomb-2025,1,0,0,0,100.0
 11110B,ecole-confiance-2019,0,1,0,0,0.0
@@ -7854,7 +8013,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 11115U,continuite-transports-greve-2024,0,1,0,0,0.0
 11115U,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 11115U,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+11115U,cse-la-poste-2022,0,1,0,0,0.0
 11115U,ddadue-2025,0,1,0,0,0.0
+11115U,directeur-ecole-2021,0,1,0,0,0.0
 11115U,drones-epandage-2025,0,1,0,0,0.0
 11115U,duplomb-2025,0,1,0,0,0.0
 11115U,ecole-confiance-2019,1,0,0,0,100.0
@@ -7967,7 +8128,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 12016W,continuite-transports-greve-2024,1,0,0,0,100.0
 12016W,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 12016W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+12016W,cse-la-poste-2022,1,0,0,0,100.0
 12016W,ddadue-2025,0,0,1,0,
+12016W,directeur-ecole-2021,1,0,0,0,100.0
 12016W,drones-epandage-2025,1,0,0,0,100.0
 12016W,duplomb-2025,1,0,0,0,100.0
 12016W,ecole-confiance-2019,0,1,0,0,0.0
@@ -8075,7 +8238,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 12028B,continuite-transports-greve-2024,1,0,0,0,100.0
 12028B,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 12028B,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+12028B,cse-la-poste-2022,1,0,0,0,100.0
 12028B,ddadue-2025,0,0,1,0,
+12028B,directeur-ecole-2021,1,0,0,0,100.0
 12028B,drones-epandage-2025,1,0,0,0,100.0
 12028B,duplomb-2025,1,0,0,0,100.0
 12028B,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -8164,6 +8329,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 12041X,climat-resilience-2021,0,1,0,0,0.0
 12041X,confiance-justice-2021,1,0,0,0,100.0
 12041X,consultation-nc-2018,1,0,0,0,100.0
+12041X,cse-la-poste-2022,1,0,0,0,100.0
+12041X,directeur-ecole-2021,1,0,0,0,100.0
 12041X,ecole-confiance-2019,0,1,0,0,0.0
 12041X,elan-2018,1,0,0,0,100.0
 12041X,energies-renouvelables-2023,0,0,1,0,
@@ -8234,7 +8401,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14001X,continuite-transports-greve-2024,1,0,0,0,100.0
 14001X,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 14001X,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14001X,cse-la-poste-2022,1,0,0,0,100.0
 14001X,ddadue-2025,0,0,1,0,
+14001X,directeur-ecole-2021,1,0,0,0,100.0
 14001X,drones-epandage-2025,1,0,0,0,100.0
 14001X,duplomb-2025,1,0,0,0,100.0
 14001X,ecole-confiance-2019,0,1,0,0,0.0
@@ -8354,7 +8523,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14021P,continuite-transports-greve-2024,1,0,0,0,100.0
 14021P,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 14021P,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14021P,cse-la-poste-2022,1,0,0,0,100.0
 14021P,ddadue-2025,0,0,1,0,
+14021P,directeur-ecole-2021,1,0,0,0,100.0
 14021P,drones-epandage-2025,1,0,0,0,100.0
 14021P,duplomb-2025,1,0,0,0,100.0
 14021P,ecole-confiance-2019,0,1,0,0,0.0
@@ -8466,7 +8637,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14026U,continuite-transports-greve-2024,0,1,0,0,0.0
 14026U,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14026U,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14026U,cse-la-poste-2022,0,1,0,0,0.0
 14026U,ddadue-2025,0,1,0,0,0.0
+14026U,directeur-ecole-2021,0,1,0,0,0.0
 14026U,drones-epandage-2025,0,1,0,0,0.0
 14026U,duplomb-2025,0,1,0,0,0.0
 14026U,ecole-confiance-2019,1,0,0,0,100.0
@@ -8622,7 +8795,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14030Q,continuite-transports-greve-2024,0,1,0,0,0.0
 14030Q,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14030Q,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14030Q,cse-la-poste-2022,0,1,0,0,0.0
 14030Q,ddadue-2025,0,1,0,0,0.0
+14030Q,directeur-ecole-2021,0,1,0,0,0.0
 14030Q,drones-epandage-2025,0,1,0,0,0.0
 14030Q,duplomb-2025,0,1,0,0,0.0
 14030Q,ecole-confiance-2019,1,0,0,0,100.0
@@ -8736,7 +8911,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14031R,continuite-transports-greve-2024,0,1,0,0,0.0
 14031R,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14031R,corps-electoral-nc-natifs-2026,0,0,0,1,
+14031R,cse-la-poste-2022,0,1,0,0,0.0
 14031R,ddadue-2025,0,1,0,0,0.0
+14031R,directeur-ecole-2021,0,1,0,0,0.0
 14031R,drones-epandage-2025,0,1,0,0,0.0
 14031R,duplomb-2025,0,1,0,0,0.0
 14031R,ecole-confiance-2019,1,0,0,0,100.0
@@ -8850,7 +9027,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14033T,continuite-transports-greve-2024,0,1,0,0,0.0
 14033T,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14033T,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14033T,cse-la-poste-2022,0,1,0,0,0.0
 14033T,ddadue-2025,0,1,0,0,0.0
+14033T,directeur-ecole-2021,0,1,0,0,0.0
 14033T,drones-epandage-2025,0,1,0,0,0.0
 14033T,duplomb-2025,0,1,0,0,0.0
 14033T,ecole-confiance-2019,1,0,0,0,100.0
@@ -8980,6 +9159,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14037X,continuite-transports-greve-2024,0,0,1,0,
 14037X,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14037X,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14037X,cse-la-poste-2022,0,1,0,0,0.0
 14037X,ddadue-2025,0,1,0,0,0.0
 14037X,drones-epandage-2025,0,1,0,0,0.0
 14037X,duplomb-2025,0,1,0,0,0.0
@@ -9066,7 +9246,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14038Y,continuite-transports-greve-2024,0,1,0,0,0.0
 14038Y,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14038Y,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14038Y,cse-la-poste-2022,0,1,0,0,0.0
 14038Y,ddadue-2025,0,1,0,0,0.0
+14038Y,directeur-ecole-2021,0,1,0,0,0.0
 14038Y,drones-epandage-2025,0,1,0,0,0.0
 14038Y,duplomb-2025,0,1,0,0,0.0
 14038Y,ecole-confiance-2019,1,0,0,0,100.0
@@ -9191,6 +9373,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14041T,bioethique-2021,0,1,0,0,0.0
 14041T,climat-resilience-2021,1,0,0,0,100.0
 14041T,consultation-nc-2018,1,0,0,0,100.0
+14041T,directeur-ecole-2021,0,1,0,0,0.0
 14041T,ecole-confiance-2019,1,0,0,0,100.0
 14041T,elan-2018,0,1,0,0,0.0
 14041T,gens-du-voyage-2018,0,1,0,0,0.0
@@ -9234,7 +9417,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14042U,continuite-transports-greve-2024,0,1,0,0,0.0
 14042U,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14042U,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14042U,cse-la-poste-2022,0,1,0,0,0.0
 14042U,ddadue-2025,0,1,0,0,0.0
+14042U,directeur-ecole-2021,0,1,0,0,0.0
 14042U,drones-epandage-2025,0,1,0,0,0.0
 14042U,duplomb-2025,0,1,0,0,0.0
 14042U,ecole-confiance-2019,1,0,0,0,100.0
@@ -9371,7 +9556,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14053L,continuite-transports-greve-2024,0,1,0,0,0.0
 14053L,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14053L,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14053L,cse-la-poste-2022,0,1,0,0,0.0
 14053L,ddadue-2025,0,1,0,0,0.0
+14053L,directeur-ecole-2021,0,1,0,0,0.0
 14053L,drones-epandage-2025,0,1,0,0,0.0
 14053L,duplomb-2025,0,1,0,0,0.0
 14053L,ecole-confiance-2019,1,0,0,0,100.0
@@ -9484,7 +9671,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14055N,continuite-transports-greve-2024,0,0,0,1,
 14055N,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14055N,corps-electoral-nc-natifs-2026,0,0,0,1,
+14055N,cse-la-poste-2022,0,0,0,1,
 14055N,ddadue-2025,0,0,0,1,
+14055N,directeur-ecole-2021,0,0,0,1,
 14055N,drones-epandage-2025,0,0,0,1,
 14055N,duplomb-2025,0,0,0,1,
 14055N,ecole-confiance-2019,1,0,0,0,100.0
@@ -9597,7 +9786,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14059S,continuite-transports-greve-2024,0,1,0,0,0.0
 14059S,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14059S,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14059S,cse-la-poste-2022,0,1,0,0,0.0
 14059S,ddadue-2025,0,1,0,0,0.0
+14059S,directeur-ecole-2021,0,1,0,0,0.0
 14059S,drones-epandage-2025,0,1,0,0,0.0
 14059S,duplomb-2025,0,1,0,0,0.0
 14059S,ecole-confiance-2019,1,0,0,0,100.0
@@ -9777,7 +9968,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14069U,continuite-transports-greve-2024,0,1,0,0,0.0
 14069U,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14069U,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14069U,cse-la-poste-2022,0,1,0,0,0.0
 14069U,ddadue-2025,0,1,0,0,0.0
+14069U,directeur-ecole-2021,0,1,0,0,0.0
 14069U,drones-epandage-2025,0,1,0,0,0.0
 14069U,duplomb-2025,0,1,0,0,0.0
 14069U,ecole-confiance-2019,1,0,0,0,100.0
@@ -9892,7 +10085,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14071N,continuite-transports-greve-2024,0,1,0,0,0.0
 14071N,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14071N,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14071N,cse-la-poste-2022,0,1,0,0,0.0
 14071N,ddadue-2025,0,1,0,0,0.0
+14071N,directeur-ecole-2021,0,1,0,0,0.0
 14071N,drones-epandage-2025,0,1,0,0,0.0
 14071N,duplomb-2025,0,1,0,0,0.0
 14071N,ecole-confiance-2019,1,0,0,0,100.0
@@ -10006,7 +10201,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14073Q,continuite-transports-greve-2024,0,1,0,0,0.0
 14073Q,corps-electoral-nc-degel-2024,0,0,0,1,
 14073Q,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14073Q,cse-la-poste-2022,0,1,0,0,0.0
 14073Q,ddadue-2025,0,1,0,0,0.0
+14073Q,directeur-ecole-2021,0,1,0,0,0.0
 14073Q,drones-epandage-2025,0,1,0,0,0.0
 14073Q,duplomb-2025,0,1,0,0,0.0
 14073Q,ecole-confiance-2019,1,0,0,0,100.0
@@ -10164,7 +10361,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14083S,continuite-transports-greve-2024,0,1,0,0,0.0
 14083S,corps-electoral-nc-degel-2024,0,0,0,1,
 14083S,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14083S,cse-la-poste-2022,0,1,0,0,0.0
 14083S,ddadue-2025,0,1,0,0,0.0
+14083S,directeur-ecole-2021,0,1,0,0,0.0
 14083S,drones-epandage-2025,0,1,0,0,0.0
 14083S,duplomb-2025,0,1,0,0,0.0
 14083S,ecole-confiance-2019,1,0,0,0,100.0
@@ -10317,6 +10516,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14089Y,consultation-nc-2018,1,0,0,0,100.0
 14089Y,continuite-transports-greve-2024,0,1,0,0,0.0
 14089Y,corps-electoral-nc-degel-2024,1,0,0,0,100.0
+14089Y,cse-la-poste-2022,0,1,0,0,0.0
+14089Y,directeur-ecole-2021,0,1,0,0,0.0
 14089Y,ecole-confiance-2019,1,0,0,0,100.0
 14089Y,ecriture-inclusive-senat-2023,0,1,0,0,0.0
 14089Y,elan-2018,1,0,0,0,100.0
@@ -10416,7 +10617,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14097Y,continuite-transports-greve-2024,1,0,0,0,100.0
 14097Y,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 14097Y,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14097Y,cse-la-poste-2022,1,0,0,0,100.0
 14097Y,ddadue-2025,0,0,1,0,
+14097Y,directeur-ecole-2021,1,0,0,0,100.0
 14097Y,drones-epandage-2025,1,0,0,0,100.0
 14097Y,duplomb-2025,1,0,0,0,100.0
 14097Y,ecole-confiance-2019,0,1,0,0,0.0
@@ -10548,7 +10751,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14105F,consultation-nc-2018,1,0,0,0,100.0
 14105F,continuite-transports-greve-2024,0,1,0,0,0.0
 14105F,corps-electoral-nc-degel-2024,1,0,0,0,100.0
+14105F,cse-la-poste-2022,0,1,0,0,0.0
 14105F,ddadue-2025,0,1,0,0,0.0
+14105F,directeur-ecole-2021,0,1,0,0,0.0
 14105F,drones-epandage-2025,0,1,0,0,0.0
 14105F,duplomb-2025,0,1,0,0,0.0
 14105F,ecole-confiance-2019,1,0,0,0,100.0
@@ -10646,7 +10851,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14107H,continuite-transports-greve-2024,1,0,0,0,100.0
 14107H,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14107H,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14107H,cse-la-poste-2022,0,1,0,0,0.0
 14107H,ddadue-2025,0,1,0,0,0.0
+14107H,directeur-ecole-2021,0,1,0,0,0.0
 14107H,drones-epandage-2025,0,1,0,0,0.0
 14107H,duplomb-2025,0,1,0,0,0.0
 14107H,ecole-confiance-2019,0,0,1,0,
@@ -10760,7 +10967,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14109K,continuite-transports-greve-2024,1,0,0,0,100.0
 14109K,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 14109K,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14109K,cse-la-poste-2022,1,0,0,0,100.0
 14109K,ddadue-2025,0,0,1,0,
+14109K,directeur-ecole-2021,1,0,0,0,100.0
 14109K,drones-epandage-2025,1,0,0,0,100.0
 14109K,duplomb-2025,1,0,0,0,100.0
 14109K,ecole-confiance-2019,0,1,0,0,0.0
@@ -10874,7 +11083,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14111D,continuite-transports-greve-2024,0,1,0,0,0.0
 14111D,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14111D,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14111D,cse-la-poste-2022,0,1,0,0,0.0
 14111D,ddadue-2025,0,0,0,1,
+14111D,directeur-ecole-2021,0,1,0,0,0.0
 14111D,drones-epandage-2025,0,1,0,0,0.0
 14111D,duplomb-2025,0,1,0,0,0.0
 14111D,ecole-confiance-2019,1,0,0,0,100.0
@@ -11030,7 +11241,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14121F,continuite-transports-greve-2024,1,0,0,0,100.0
 14121F,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 14121F,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14121F,cse-la-poste-2022,1,0,0,0,100.0
 14121F,ddadue-2025,0,0,1,0,
+14121F,directeur-ecole-2021,1,0,0,0,100.0
 14121F,drones-epandage-2025,1,0,0,0,100.0
 14121F,duplomb-2025,1,0,0,0,100.0
 14121F,ecole-confiance-2019,0,1,0,0,0.0
@@ -11144,7 +11357,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14123H,continuite-transports-greve-2024,0,1,0,0,0.0
 14123H,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14123H,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14123H,cse-la-poste-2022,0,1,0,0,0.0
 14123H,ddadue-2025,0,1,0,0,0.0
+14123H,directeur-ecole-2021,0,1,0,0,0.0
 14123H,drones-epandage-2025,0,1,0,0,0.0
 14123H,duplomb-2025,0,1,0,0,0.0
 14123H,ecole-confiance-2019,1,0,0,0,100.0
@@ -11258,7 +11473,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14133K,continuite-transports-greve-2024,0,1,0,0,0.0
 14133K,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14133K,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14133K,cse-la-poste-2022,0,1,0,0,0.0
 14133K,ddadue-2025,0,1,0,0,0.0
+14133K,directeur-ecole-2021,0,1,0,0,0.0
 14133K,drones-epandage-2025,0,1,0,0,0.0
 14133K,duplomb-2025,0,1,0,0,0.0
 14133K,ecole-confiance-2019,1,0,0,0,100.0
@@ -11396,7 +11613,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14147R,continuite-transports-greve-2024,0,1,0,0,0.0
 14147R,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14147R,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14147R,cse-la-poste-2022,0,1,0,0,0.0
 14147R,ddadue-2025,0,1,0,0,0.0
+14147R,directeur-ecole-2021,0,1,0,0,0.0
 14147R,drones-epandage-2025,0,1,0,0,0.0
 14147R,duplomb-2025,0,1,0,0,0.0
 14147R,ecole-confiance-2019,1,0,0,0,100.0
@@ -11507,7 +11726,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14151M,consultation-nc-2018,1,0,0,0,100.0
 14151M,continuite-transports-greve-2024,1,0,0,0,100.0
 14151M,corps-electoral-nc-degel-2024,0,1,0,0,0.0
+14151M,cse-la-poste-2022,1,0,0,0,100.0
 14151M,ddadue-2025,0,0,1,0,
+14151M,directeur-ecole-2021,1,0,0,0,100.0
 14151M,drones-epandage-2025,1,0,0,0,100.0
 14151M,duplomb-2025,1,0,0,0,100.0
 14151M,ecole-confiance-2019,0,1,0,0,0.0
@@ -11651,7 +11872,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14169X,continuite-transports-greve-2024,0,1,0,0,0.0
 14169X,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14169X,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14169X,cse-la-poste-2022,0,1,0,0,0.0
 14169X,ddadue-2025,0,1,0,0,0.0
+14169X,directeur-ecole-2021,0,1,0,0,0.0
 14169X,drones-epandage-2025,0,1,0,0,0.0
 14169X,duplomb-2025,0,1,0,0,0.0
 14169X,ecole-confiance-2019,1,0,0,0,100.0
@@ -11765,7 +11988,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14173T,continuite-transports-greve-2024,0,1,0,0,0.0
 14173T,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14173T,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14173T,cse-la-poste-2022,0,1,0,0,0.0
 14173T,ddadue-2025,0,1,0,0,0.0
+14173T,directeur-ecole-2021,0,1,0,0,0.0
 14173T,drones-epandage-2025,0,1,0,0,0.0
 14173T,duplomb-2025,0,1,0,0,0.0
 14173T,ecole-confiance-2019,1,0,0,0,100.0
@@ -11880,7 +12105,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14179A,continuite-transports-greve-2024,0,1,0,0,0.0
 14179A,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14179A,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14179A,cse-la-poste-2022,0,1,0,0,0.0
 14179A,ddadue-2025,0,0,0,1,
+14179A,directeur-ecole-2021,0,1,0,0,0.0
 14179A,drones-epandage-2025,0,1,0,0,0.0
 14179A,duplomb-2025,0,1,0,0,0.0
 14179A,ecole-confiance-2019,1,0,0,0,100.0
@@ -11995,7 +12222,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14187A,continuite-transports-greve-2024,0,1,0,0,0.0
 14187A,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14187A,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14187A,cse-la-poste-2022,0,1,0,0,0.0
 14187A,ddadue-2025,0,1,0,0,0.0
+14187A,directeur-ecole-2021,0,1,0,0,0.0
 14187A,drones-epandage-2025,0,1,0,0,0.0
 14187A,duplomb-2025,0,1,0,0,0.0
 14187A,ecole-confiance-2019,1,0,0,0,100.0
@@ -12105,7 +12334,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14189C,continuite-transports-greve-2024,0,1,0,0,0.0
 14189C,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14189C,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14189C,cse-la-poste-2022,0,1,0,0,0.0
 14189C,ddadue-2025,0,1,0,0,0.0
+14189C,directeur-ecole-2021,0,1,0,0,0.0
 14189C,drones-epandage-2025,0,1,0,0,0.0
 14189C,duplomb-2025,0,1,0,0,0.0
 14189C,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -12203,7 +12434,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14191V,continuite-transports-greve-2024,0,1,0,0,0.0
 14191V,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14191V,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14191V,cse-la-poste-2022,0,1,0,0,0.0
 14191V,ddadue-2025,0,1,0,0,0.0
+14191V,directeur-ecole-2021,0,1,0,0,0.0
 14191V,drones-epandage-2025,0,1,0,0,0.0
 14191V,duplomb-2025,0,1,0,0,0.0
 14191V,ecole-confiance-2019,1,0,0,0,100.0
@@ -12318,7 +12551,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14193X,continuite-transports-greve-2024,0,1,0,0,0.0
 14193X,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14193X,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14193X,cse-la-poste-2022,0,1,0,0,0.0
 14193X,ddadue-2025,0,1,0,0,0.0
+14193X,directeur-ecole-2021,0,1,0,0,0.0
 14193X,drones-epandage-2025,0,1,0,0,0.0
 14193X,duplomb-2025,0,1,0,0,0.0
 14193X,ecole-confiance-2019,1,0,0,0,100.0
@@ -12432,7 +12667,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14195A,continuite-transports-greve-2024,0,1,0,0,0.0
 14195A,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14195A,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14195A,cse-la-poste-2022,0,1,0,0,0.0
 14195A,ddadue-2025,0,0,0,1,
+14195A,directeur-ecole-2021,0,1,0,0,0.0
 14195A,drones-epandage-2025,0,1,0,0,0.0
 14195A,duplomb-2025,0,1,0,0,0.0
 14195A,ecole-confiance-2019,1,0,0,0,100.0
@@ -12612,7 +12849,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14205J,continuite-transports-greve-2024,0,1,0,0,0.0
 14205J,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14205J,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14205J,cse-la-poste-2022,0,1,0,0,0.0
 14205J,ddadue-2025,0,1,0,0,0.0
+14205J,directeur-ecole-2021,0,1,0,0,0.0
 14205J,drones-epandage-2025,0,1,0,0,0.0
 14205J,duplomb-2025,0,1,0,0,0.0
 14205J,ecole-confiance-2019,1,0,0,0,100.0
@@ -12726,7 +12965,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14207L,continuite-transports-greve-2024,1,0,0,0,100.0
 14207L,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14207L,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14207L,cse-la-poste-2022,0,1,0,0,0.0
 14207L,ddadue-2025,0,1,0,0,0.0
+14207L,directeur-ecole-2021,0,1,0,0,0.0
 14207L,drones-epandage-2025,0,1,0,0,0.0
 14207L,duplomb-2025,0,1,0,0,0.0
 14207L,ecole-confiance-2019,0,1,0,0,0.0
@@ -12842,7 +13083,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14211G,continuite-transports-greve-2024,0,1,0,0,0.0
 14211G,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14211G,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14211G,cse-la-poste-2022,0,1,0,0,0.0
 14211G,ddadue-2025,0,0,0,1,
+14211G,directeur-ecole-2021,0,1,0,0,0.0
 14211G,drones-epandage-2025,0,1,0,0,0.0
 14211G,duplomb-2025,0,1,0,0,0.0
 14211G,ecole-confiance-2019,1,0,0,0,100.0
@@ -12956,7 +13199,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14213J,continuite-transports-greve-2024,0,1,0,0,0.0
 14213J,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14213J,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14213J,cse-la-poste-2022,0,1,0,0,0.0
 14213J,ddadue-2025,0,1,0,0,0.0
+14213J,directeur-ecole-2021,0,1,0,0,0.0
 14213J,drones-epandage-2025,0,1,0,0,0.0
 14213J,duplomb-2025,0,1,0,0,0.0
 14213J,ecole-confiance-2019,1,0,0,0,100.0
@@ -13071,7 +13316,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14215L,continuite-transports-greve-2024,0,1,0,0,0.0
 14215L,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14215L,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14215L,cse-la-poste-2022,0,1,0,0,0.0
 14215L,ddadue-2025,0,1,0,0,0.0
+14215L,directeur-ecole-2021,0,1,0,0,0.0
 14215L,drones-epandage-2025,0,1,0,0,0.0
 14215L,duplomb-2025,0,1,0,0,0.0
 14215L,ecole-confiance-2019,1,0,0,0,100.0
@@ -13185,7 +13432,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14217N,continuite-transports-greve-2024,0,1,0,0,0.0
 14217N,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14217N,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14217N,cse-la-poste-2022,0,1,0,0,0.0
 14217N,ddadue-2025,0,1,0,0,0.0
+14217N,directeur-ecole-2021,0,1,0,0,0.0
 14217N,drones-epandage-2025,0,1,0,0,0.0
 14217N,duplomb-2025,0,1,0,0,0.0
 14217N,ecole-confiance-2019,1,0,0,0,100.0
@@ -13299,7 +13548,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14219Q,continuite-transports-greve-2024,0,1,0,0,0.0
 14219Q,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14219Q,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14219Q,cse-la-poste-2022,0,1,0,0,0.0
 14219Q,ddadue-2025,0,1,0,0,0.0
+14219Q,directeur-ecole-2021,0,1,0,0,0.0
 14219Q,drones-epandage-2025,0,1,0,0,0.0
 14219Q,duplomb-2025,0,1,0,0,0.0
 14219Q,ecole-confiance-2019,1,0,0,0,100.0
@@ -13414,7 +13665,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14221J,continuite-transports-greve-2024,0,1,0,0,0.0
 14221J,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14221J,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14221J,cse-la-poste-2022,0,1,0,0,0.0
 14221J,ddadue-2025,0,0,0,1,
+14221J,directeur-ecole-2021,0,1,0,0,0.0
 14221J,drones-epandage-2025,0,1,0,0,0.0
 14221J,duplomb-2025,0,1,0,0,0.0
 14221J,ecole-confiance-2019,1,0,0,0,100.0
@@ -13529,7 +13782,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14223L,continuite-transports-greve-2024,0,1,0,0,0.0
 14223L,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14223L,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14223L,cse-la-poste-2022,0,1,0,0,0.0
 14223L,ddadue-2025,0,1,0,0,0.0
+14223L,directeur-ecole-2021,0,1,0,0,0.0
 14223L,drones-epandage-2025,0,1,0,0,0.0
 14223L,duplomb-2025,0,1,0,0,0.0
 14223L,ecole-confiance-2019,1,0,0,0,100.0
@@ -13643,7 +13898,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14225N,continuite-transports-greve-2024,1,0,0,0,100.0
 14225N,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 14225N,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14225N,cse-la-poste-2022,1,0,0,0,100.0
 14225N,ddadue-2025,0,0,1,0,
+14225N,directeur-ecole-2021,1,0,0,0,100.0
 14225N,drones-epandage-2025,1,0,0,0,100.0
 14225N,duplomb-2025,1,0,0,0,100.0
 14225N,ecole-confiance-2019,0,1,0,0,0.0
@@ -13779,7 +14036,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14229S,continuite-transports-greve-2024,1,0,0,0,100.0
 14229S,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 14229S,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14229S,cse-la-poste-2022,1,0,0,0,100.0
 14229S,ddadue-2025,0,0,1,0,
+14229S,directeur-ecole-2021,1,0,0,0,100.0
 14229S,drones-epandage-2025,1,0,0,0,100.0
 14229S,duplomb-2025,0,0,0,1,
 14229S,ecole-confiance-2019,0,1,0,0,0.0
@@ -13889,6 +14148,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14231L,consultation-nc-2018,1,0,0,0,100.0
 14231L,continuite-transports-greve-2024,0,1,0,0,0.0
 14231L,corps-electoral-nc-degel-2024,1,0,0,0,100.0
+14231L,cse-la-poste-2022,0,1,0,0,0.0
+14231L,directeur-ecole-2021,0,1,0,0,0.0
 14231L,ecole-confiance-2019,1,0,0,0,100.0
 14231L,ecriture-inclusive-senat-2023,0,1,0,0,0.0
 14231L,elan-2018,0,0,1,0,
@@ -13990,7 +14251,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14237S,continuite-transports-greve-2024,0,1,0,0,0.0
 14237S,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14237S,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14237S,cse-la-poste-2022,0,1,0,0,0.0
 14237S,ddadue-2025,0,0,0,1,
+14237S,directeur-ecole-2021,0,1,0,0,0.0
 14237S,drones-epandage-2025,0,1,0,0,0.0
 14237S,duplomb-2025,0,1,0,0,0.0
 14237S,ecole-confiance-2019,1,0,0,0,100.0
@@ -14196,7 +14459,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14249W,continuite-transports-greve-2024,0,0,1,0,
 14249W,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14249W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14249W,cse-la-poste-2022,0,1,0,0,0.0
 14249W,ddadue-2025,0,1,0,0,0.0
+14249W,directeur-ecole-2021,0,1,0,0,0.0
 14249W,drones-epandage-2025,0,1,0,0,0.0
 14249W,duplomb-2025,0,1,0,0,0.0
 14249W,ecole-confiance-2019,1,0,0,0,100.0
@@ -14310,7 +14575,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14251Q,continuite-transports-greve-2024,0,1,0,0,0.0
 14251Q,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14251Q,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14251Q,cse-la-poste-2022,0,1,0,0,0.0
 14251Q,ddadue-2025,0,0,0,1,
+14251Q,directeur-ecole-2021,0,1,0,0,0.0
 14251Q,drones-epandage-2025,0,1,0,0,0.0
 14251Q,duplomb-2025,0,1,0,0,0.0
 14251Q,ecole-confiance-2019,1,0,0,0,100.0
@@ -14424,7 +14691,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14253S,continuite-transports-greve-2024,0,1,0,0,0.0
 14253S,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14253S,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14253S,cse-la-poste-2022,0,1,0,0,0.0
 14253S,ddadue-2025,0,1,0,0,0.0
+14253S,directeur-ecole-2021,0,1,0,0,0.0
 14253S,drones-epandage-2025,0,1,0,0,0.0
 14253S,duplomb-2025,0,1,0,0,0.0
 14253S,ecole-confiance-2019,1,0,0,0,100.0
@@ -14538,7 +14807,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14255U,continuite-transports-greve-2024,0,1,0,0,0.0
 14255U,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14255U,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14255U,cse-la-poste-2022,0,1,0,0,0.0
 14255U,ddadue-2025,0,1,0,0,0.0
+14255U,directeur-ecole-2021,0,1,0,0,0.0
 14255U,drones-epandage-2025,0,1,0,0,0.0
 14255U,duplomb-2025,0,1,0,0,0.0
 14255U,ecole-confiance-2019,1,0,0,0,100.0
@@ -14652,7 +14923,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14257W,continuite-transports-greve-2024,1,0,0,0,100.0
 14257W,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 14257W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14257W,cse-la-poste-2022,1,0,0,0,100.0
 14257W,ddadue-2025,0,0,1,0,
+14257W,directeur-ecole-2021,1,0,0,0,100.0
 14257W,drones-epandage-2025,1,0,0,0,100.0
 14257W,duplomb-2025,1,0,0,0,100.0
 14257W,ecole-confiance-2019,0,1,0,0,0.0
@@ -14766,7 +15039,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14259Y,continuite-transports-greve-2024,0,0,0,1,
 14259Y,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14259Y,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14259Y,cse-la-poste-2022,0,1,0,0,0.0
 14259Y,ddadue-2025,0,1,0,0,0.0
+14259Y,directeur-ecole-2021,0,1,0,0,0.0
 14259Y,drones-epandage-2025,0,1,0,0,0.0
 14259Y,duplomb-2025,0,1,0,0,0.0
 14259Y,ecole-confiance-2019,1,0,0,0,100.0
@@ -14925,7 +15200,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14267Y,continuite-transports-greve-2024,0,1,0,0,0.0
 14267Y,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14267Y,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14267Y,cse-la-poste-2022,0,1,0,0,0.0
 14267Y,ddadue-2025,0,1,0,0,0.0
+14267Y,directeur-ecole-2021,0,1,0,0,0.0
 14267Y,drones-epandage-2025,0,1,0,0,0.0
 14267Y,duplomb-2025,0,1,0,0,0.0
 14267Y,ecole-confiance-2019,1,0,0,0,100.0
@@ -15046,7 +15323,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14275Y,continuite-transports-greve-2024,0,1,0,0,0.0
 14275Y,corps-electoral-nc-degel-2024,0,0,1,0,
 14275Y,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14275Y,cse-la-poste-2022,0,1,0,0,0.0
 14275Y,ddadue-2025,0,1,0,0,0.0
+14275Y,directeur-ecole-2021,0,1,0,0,0.0
 14275Y,drones-epandage-2025,0,1,0,0,0.0
 14275Y,duplomb-2025,0,1,0,0,0.0
 14275Y,ecole-confiance-2019,1,0,0,0,100.0
@@ -15183,7 +15462,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14281W,continuite-transports-greve-2024,1,0,0,0,100.0
 14281W,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 14281W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14281W,cse-la-poste-2022,1,0,0,0,100.0
 14281W,ddadue-2025,0,0,1,0,
+14281W,directeur-ecole-2021,1,0,0,0,100.0
 14281W,drones-epandage-2025,1,0,0,0,100.0
 14281W,duplomb-2025,1,0,0,0,100.0
 14281W,ecole-confiance-2019,0,1,0,0,0.0
@@ -15298,7 +15579,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14327T,continuite-transports-greve-2024,0,1,0,0,0.0
 14327T,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14327T,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14327T,cse-la-poste-2022,0,1,0,0,0.0
 14327T,ddadue-2025,0,1,0,0,0.0
+14327T,directeur-ecole-2021,0,1,0,0,0.0
 14327T,drones-epandage-2025,0,1,0,0,0.0
 14327T,duplomb-2025,0,0,1,0,
 14327T,ecole-confiance-2019,1,0,0,0,100.0
@@ -15413,7 +15696,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14329V,continuite-transports-greve-2024,0,1,0,0,0.0
 14329V,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14329V,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14329V,cse-la-poste-2022,0,1,0,0,0.0
 14329V,ddadue-2025,0,1,0,0,0.0
+14329V,directeur-ecole-2021,0,1,0,0,0.0
 14329V,drones-epandage-2025,0,1,0,0,0.0
 14329V,duplomb-2025,0,1,0,0,0.0
 14329V,ecole-confiance-2019,1,0,0,0,100.0
@@ -15528,7 +15813,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14331P,continuite-transports-greve-2024,0,1,0,0,0.0
 14331P,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14331P,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14331P,cse-la-poste-2022,0,1,0,0,0.0
 14331P,ddadue-2025,0,1,0,0,0.0
+14331P,directeur-ecole-2021,0,1,0,0,0.0
 14331P,drones-epandage-2025,0,1,0,0,0.0
 14331P,duplomb-2025,0,1,0,0,0.0
 14331P,ecole-confiance-2019,1,0,0,0,100.0
@@ -15642,7 +15929,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14355X,continuite-transports-greve-2024,0,1,0,0,0.0
 14355X,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14355X,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14355X,cse-la-poste-2022,0,1,0,0,0.0
 14355X,ddadue-2025,0,1,0,0,0.0
+14355X,directeur-ecole-2021,0,1,0,0,0.0
 14355X,drones-epandage-2025,0,1,0,0,0.0
 14355X,duplomb-2025,0,1,0,0,0.0
 14355X,ecole-confiance-2019,1,0,0,0,100.0
@@ -15756,7 +16045,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 14357A,continuite-transports-greve-2024,0,1,0,0,0.0
 14357A,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 14357A,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+14357A,cse-la-poste-2022,0,1,0,0,0.0
 14357A,ddadue-2025,0,1,0,0,0.0
+14357A,directeur-ecole-2021,0,1,0,0,0.0
 14357A,drones-epandage-2025,0,1,0,0,0.0
 14357A,duplomb-2025,0,1,0,0,0.0
 14357A,ecole-confiance-2019,1,0,0,0,100.0
@@ -15952,6 +16243,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 16685X,climat-resilience-2021,1,0,0,0,100.0
 16685X,confiance-justice-2021,0,1,0,0,0.0
 16685X,consultation-nc-2018,1,0,0,0,100.0
+16685X,cse-la-poste-2022,0,1,0,0,0.0
+16685X,directeur-ecole-2021,0,1,0,0,0.0
 16685X,ecole-confiance-2019,1,0,0,0,100.0
 16685X,elan-2018,0,0,1,0,
 16685X,energies-renouvelables-2023,0,1,0,0,0.0
@@ -16013,7 +16306,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 17023S,continuite-transports-greve-2024,0,1,0,0,0.0
 17023S,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 17023S,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+17023S,cse-la-poste-2022,0,1,0,0,0.0
 17023S,ddadue-2025,0,1,0,0,0.0
+17023S,directeur-ecole-2021,0,1,0,0,0.0
 17023S,drones-epandage-2025,0,1,0,0,0.0
 17023S,duplomb-2025,0,1,0,0,0.0
 17023S,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -16106,7 +16401,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 17229F,continuite-transports-greve-2024,0,1,0,0,0.0
 17229F,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 17229F,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+17229F,cse-la-poste-2022,0,1,0,0,0.0
 17229F,ddadue-2025,0,1,0,0,0.0
+17229F,directeur-ecole-2021,0,1,0,0,0.0
 17229F,drones-epandage-2025,0,1,0,0,0.0
 17229F,duplomb-2025,0,1,0,0,0.0
 17229F,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -16202,7 +16499,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 17367Q,continuite-transports-greve-2024,0,1,0,0,0.0
 17367Q,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 17367Q,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+17367Q,cse-la-poste-2022,0,1,0,0,0.0
 17367Q,ddadue-2025,0,1,0,0,0.0
+17367Q,directeur-ecole-2021,0,1,0,0,0.0
 17367Q,drones-epandage-2025,0,1,0,0,0.0
 17367Q,duplomb-2025,0,1,0,0,0.0
 17367Q,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -16310,6 +16609,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 17589D,climat-resilience-2021,1,0,0,0,100.0
 17589D,confiance-justice-2021,0,0,1,0,
 17589D,consultation-nc-2018,1,0,0,0,100.0
+17589D,cse-la-poste-2022,0,1,0,0,0.0
+17589D,directeur-ecole-2021,0,1,0,0,0.0
 17589D,ecole-confiance-2019,1,0,0,0,100.0
 17589D,elan-2018,0,1,0,0,0.0
 17589D,energies-renouvelables-2023,0,1,0,0,0.0
@@ -16364,6 +16665,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 17637T,climat-resilience-2021,1,0,0,0,100.0
 17637T,confiance-justice-2021,0,1,0,0,0.0
 17637T,consultation-nc-2018,1,0,0,0,100.0
+17637T,cse-la-poste-2022,0,1,0,0,0.0
+17637T,directeur-ecole-2021,0,1,0,0,0.0
 17637T,ecole-confiance-2019,1,0,0,0,100.0
 17637T,elan-2018,0,1,0,0,0.0
 17637T,energies-renouvelables-2023,0,1,0,0,0.0
@@ -16422,7 +16725,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 17737W,continuite-transports-greve-2024,0,1,0,0,0.0
 17737W,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 17737W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+17737W,cse-la-poste-2022,0,1,0,0,0.0
 17737W,ddadue-2025,0,1,0,0,0.0
+17737W,directeur-ecole-2021,0,1,0,0,0.0
 17737W,drones-epandage-2025,0,1,0,0,0.0
 17737W,duplomb-2025,0,1,0,0,0.0
 17737W,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -16520,7 +16825,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 17779H,continuite-transports-greve-2024,1,0,0,0,100.0
 17779H,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 17779H,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+17779H,cse-la-poste-2022,1,0,0,0,100.0
 17779H,ddadue-2025,0,0,1,0,
+17779H,directeur-ecole-2021,1,0,0,0,100.0
 17779H,drones-epandage-2025,1,0,0,0,100.0
 17779H,duplomb-2025,1,0,0,0,100.0
 17779H,ecole-confiance-2019,0,1,0,0,0.0
@@ -16627,7 +16934,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 17965H,continuite-transports-greve-2024,1,0,0,0,100.0
 17965H,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 17965H,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+17965H,cse-la-poste-2022,1,0,0,0,100.0
 17965H,ddadue-2025,0,0,1,0,
+17965H,directeur-ecole-2021,1,0,0,0,100.0
 17965H,drones-epandage-2025,1,0,0,0,100.0
 17965H,duplomb-2025,1,0,0,0,100.0
 17965H,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -16745,7 +17054,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 18083K,continuite-transports-greve-2024,0,1,0,0,0.0
 18083K,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 18083K,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+18083K,cse-la-poste-2022,0,1,0,0,0.0
 18083K,ddadue-2025,0,1,0,0,0.0
+18083K,directeur-ecole-2021,0,1,0,0,0.0
 18083K,drones-epandage-2025,0,1,0,0,0.0
 18083K,duplomb-2025,0,1,0,0,0.0
 18083K,ecole-confiance-2019,1,0,0,0,100.0
@@ -16858,7 +17169,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 18193Q,continuite-transports-greve-2024,1,0,0,0,100.0
 18193Q,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 18193Q,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+18193Q,cse-la-poste-2022,1,0,0,0,100.0
 18193Q,ddadue-2025,0,0,1,0,
+18193Q,directeur-ecole-2021,1,0,0,0,100.0
 18193Q,drones-epandage-2025,1,0,0,0,100.0
 18193Q,duplomb-2025,1,0,0,0,100.0
 18193Q,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -17132,6 +17445,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19057M,continuite-transports-greve-2024,0,0,1,0,
 19057M,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19057M,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19057M,cse-la-poste-2022,0,1,0,0,0.0
 19057M,ddadue-2025,0,1,0,0,0.0
 19057M,drones-epandage-2025,0,0,1,0,
 19057M,duplomb-2025,0,1,0,0,0.0
@@ -17278,7 +17592,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19251M,continuite-transports-greve-2024,1,0,0,0,100.0
 19251M,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19251M,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19251M,cse-la-poste-2022,1,0,0,0,100.0
 19251M,ddadue-2025,0,0,1,0,
+19251M,directeur-ecole-2021,1,0,0,0,100.0
 19251M,drones-epandage-2025,1,0,0,0,100.0
 19251M,duplomb-2025,1,0,0,0,100.0
 19251M,ecole-confiance-2019,0,1,0,0,0.0
@@ -17425,6 +17741,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19289C,climat-resilience-2021,0,0,1,0,
 19289C,confiance-justice-2021,0,0,0,1,
 19289C,consultation-nc-2018,1,0,0,0,100.0
+19289C,directeur-ecole-2021,0,0,0,1,
 19289C,ecole-confiance-2019,0,1,0,0,0.0
 19289C,elan-2018,0,1,0,0,0.0
 19289C,gens-du-voyage-2018,0,1,0,0,0.0
@@ -17470,7 +17787,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19295A,continuite-transports-greve-2024,1,0,0,0,100.0
 19295A,corps-electoral-nc-degel-2024,0,0,0,1,
 19295A,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19295A,cse-la-poste-2022,1,0,0,0,100.0
 19295A,ddadue-2025,0,0,1,0,
+19295A,directeur-ecole-2021,1,0,0,0,100.0
 19295A,drones-epandage-2025,0,0,0,1,
 19295A,duplomb-2025,1,0,0,0,100.0
 19295A,ecole-confiance-2019,0,1,0,0,0.0
@@ -17583,7 +17902,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19301E,continuite-transports-greve-2024,0,0,1,0,
 19301E,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19301E,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19301E,cse-la-poste-2022,0,1,0,0,0.0
 19301E,ddadue-2025,0,1,0,0,0.0
+19301E,directeur-ecole-2021,0,1,0,0,0.0
 19301E,drones-epandage-2025,0,0,1,0,
 19301E,duplomb-2025,0,0,1,0,
 19301E,ecole-confiance-2019,0,0,1,0,
@@ -17687,6 +18008,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19319Q,climat-resilience-2021,0,0,1,0,
 19319Q,confiance-justice-2021,0,1,0,0,0.0
 19319Q,consultation-nc-2018,1,0,0,0,100.0
+19319Q,cse-la-poste-2022,0,1,0,0,0.0
+19319Q,directeur-ecole-2021,0,1,0,0,0.0
 19319Q,ecole-confiance-2019,1,0,0,0,100.0
 19319Q,elan-2018,1,0,0,0,100.0
 19319Q,energies-renouvelables-2023,0,1,0,0,0.0
@@ -17741,6 +18064,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19329S,climat-resilience-2021,0,0,1,0,
 19329S,confiance-justice-2021,0,1,0,0,0.0
 19329S,consultation-nc-2018,1,0,0,0,100.0
+19329S,cse-la-poste-2022,0,1,0,0,0.0
+19329S,directeur-ecole-2021,0,1,0,0,0.0
 19329S,ecole-confiance-2019,0,0,1,0,
 19329S,elan-2018,0,1,0,0,0.0
 19329S,energies-renouvelables-2023,0,1,0,0,0.0
@@ -17854,6 +18179,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19333N,climat-resilience-2021,0,1,0,0,0.0
 19333N,confiance-justice-2021,1,0,0,0,100.0
 19333N,consultation-nc-2018,1,0,0,0,100.0
+19333N,cse-la-poste-2022,1,0,0,0,100.0
+19333N,directeur-ecole-2021,1,0,0,0,100.0
 19333N,ecole-confiance-2019,0,1,0,0,0.0
 19333N,elan-2018,1,0,0,0,100.0
 19333N,energies-renouvelables-2023,0,1,0,0,0.0
@@ -17917,7 +18244,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19335Q,continuite-transports-greve-2024,0,1,0,0,0.0
 19335Q,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19335Q,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19335Q,cse-la-poste-2022,0,1,0,0,0.0
 19335Q,ddadue-2025,0,1,0,0,0.0
+19335Q,directeur-ecole-2021,0,1,0,0,0.0
 19335Q,drones-epandage-2025,0,1,0,0,0.0
 19335Q,duplomb-2025,0,1,0,0,0.0
 19335Q,ecole-confiance-2019,1,0,0,0,100.0
@@ -18030,7 +18359,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19347U,continuite-transports-greve-2024,1,0,0,0,100.0
 19347U,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19347U,corps-electoral-nc-natifs-2026,0,0,1,0,
+19347U,cse-la-poste-2022,1,0,0,0,100.0
 19347U,ddadue-2025,1,0,0,0,100.0
+19347U,directeur-ecole-2021,1,0,0,0,100.0
 19347U,drones-epandage-2025,1,0,0,0,100.0
 19347U,duplomb-2025,1,0,0,0,100.0
 19347U,ecole-confiance-2019,0,1,0,0,0.0
@@ -18143,7 +18474,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19349W,continuite-transports-greve-2024,0,0,1,0,
 19349W,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19349W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19349W,cse-la-poste-2022,0,1,0,0,0.0
 19349W,ddadue-2025,0,1,0,0,0.0
+19349W,directeur-ecole-2021,0,1,0,0,0.0
 19349W,drones-epandage-2025,0,1,0,0,0.0
 19349W,duplomb-2025,0,1,0,0,0.0
 19349W,ecole-confiance-2019,0,0,1,0,
@@ -18256,7 +18589,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19367Y,continuite-transports-greve-2024,0,1,0,0,0.0
 19367Y,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19367Y,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19367Y,cse-la-poste-2022,0,1,0,0,0.0
 19367Y,ddadue-2025,0,1,0,0,0.0
+19367Y,directeur-ecole-2021,0,1,0,0,0.0
 19367Y,drones-epandage-2025,0,1,0,0,0.0
 19367Y,duplomb-2025,0,1,0,0,0.0
 19367Y,ecole-confiance-2019,1,0,0,0,100.0
@@ -18360,6 +18695,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19369B,climat-resilience-2021,1,0,0,0,100.0
 19369B,confiance-justice-2021,0,1,0,0,0.0
 19369B,consultation-nc-2018,1,0,0,0,100.0
+19369B,cse-la-poste-2022,0,1,0,0,0.0
+19369B,directeur-ecole-2021,0,1,0,0,0.0
 19369B,ecole-confiance-2019,1,0,0,0,100.0
 19369B,elan-2018,0,0,1,0,
 19369B,energies-renouvelables-2023,0,1,0,0,0.0
@@ -18423,7 +18760,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19383Y,continuite-transports-greve-2024,0,1,0,0,0.0
 19383Y,corps-electoral-nc-degel-2024,0,0,0,1,
 19383Y,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19383Y,cse-la-poste-2022,0,1,0,0,0.0
 19383Y,ddadue-2025,0,1,0,0,0.0
+19383Y,directeur-ecole-2021,0,1,0,0,0.0
 19383Y,drones-epandage-2025,0,1,0,0,0.0
 19383Y,duplomb-2025,0,1,0,0,0.0
 19383Y,ecole-confiance-2019,1,0,0,0,100.0
@@ -18536,7 +18875,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19387D,continuite-transports-greve-2024,1,0,0,0,100.0
 19387D,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19387D,corps-electoral-nc-natifs-2026,0,0,1,0,
+19387D,cse-la-poste-2022,0,1,0,0,0.0
 19387D,ddadue-2025,0,1,0,0,0.0
+19387D,directeur-ecole-2021,0,1,0,0,0.0
 19387D,drones-epandage-2025,0,1,0,0,0.0
 19387D,duplomb-2025,0,0,1,0,
 19387D,ecole-confiance-2019,0,0,1,0,
@@ -18649,7 +18990,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19399H,continuite-transports-greve-2024,0,1,0,0,0.0
 19399H,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19399H,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19399H,cse-la-poste-2022,0,1,0,0,0.0
 19399H,ddadue-2025,0,1,0,0,0.0
+19399H,directeur-ecole-2021,0,1,0,0,0.0
 19399H,drones-epandage-2025,0,1,0,0,0.0
 19399H,duplomb-2025,0,1,0,0,0.0
 19399H,ecole-confiance-2019,1,0,0,0,100.0
@@ -18762,7 +19105,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19413M,continuite-transports-greve-2024,1,0,0,0,100.0
 19413M,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19413M,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19413M,cse-la-poste-2022,1,0,0,0,100.0
 19413M,ddadue-2025,0,0,1,0,
+19413M,directeur-ecole-2021,1,0,0,0,100.0
 19413M,drones-epandage-2025,1,0,0,0,100.0
 19413M,duplomb-2025,1,0,0,0,100.0
 19413M,ecole-confiance-2019,0,1,0,0,0.0
@@ -18866,6 +19211,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19415P,climat-resilience-2021,0,0,1,0,
 19415P,confiance-justice-2021,0,1,0,0,0.0
 19415P,consultation-nc-2018,1,0,0,0,100.0
+19415P,cse-la-poste-2022,0,1,0,0,0.0
+19415P,directeur-ecole-2021,0,1,0,0,0.0
 19415P,ecole-confiance-2019,1,0,0,0,100.0
 19415P,elan-2018,0,1,0,0,0.0
 19415P,energies-renouvelables-2023,0,1,0,0,0.0
@@ -18929,7 +19276,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19421M,continuite-transports-greve-2024,0,1,0,0,0.0
 19421M,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19421M,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19421M,cse-la-poste-2022,0,1,0,0,0.0
 19421M,ddadue-2025,0,1,0,0,0.0
+19421M,directeur-ecole-2021,0,1,0,0,0.0
 19421M,drones-epandage-2025,0,1,0,0,0.0
 19421M,duplomb-2025,0,1,0,0,0.0
 19421M,ecole-confiance-2019,1,0,0,0,100.0
@@ -19033,6 +19382,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19441R,climat-resilience-2021,1,0,0,0,100.0
 19441R,confiance-justice-2021,0,1,0,0,0.0
 19441R,consultation-nc-2018,1,0,0,0,100.0
+19441R,cse-la-poste-2022,0,1,0,0,0.0
+19441R,directeur-ecole-2021,0,1,0,0,0.0
 19441R,ecole-confiance-2019,1,0,0,0,100.0
 19441R,elan-2018,1,0,0,0,100.0
 19441R,energies-renouvelables-2023,0,1,0,0,0.0
@@ -19087,6 +19438,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19443T,climat-resilience-2021,1,0,0,0,100.0
 19443T,confiance-justice-2021,0,1,0,0,0.0
 19443T,consultation-nc-2018,1,0,0,0,100.0
+19443T,cse-la-poste-2022,0,1,0,0,0.0
+19443T,directeur-ecole-2021,0,1,0,0,0.0
 19443T,ecole-confiance-2019,1,0,0,0,100.0
 19443T,elan-2018,0,1,0,0,0.0
 19443T,energies-renouvelables-2023,0,1,0,0,0.0
@@ -19150,7 +19503,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19447X,continuite-transports-greve-2024,0,1,0,0,0.0
 19447X,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19447X,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19447X,cse-la-poste-2022,0,1,0,0,0.0
 19447X,ddadue-2025,0,1,0,0,0.0
+19447X,directeur-ecole-2021,0,1,0,0,0.0
 19447X,drones-epandage-2025,0,1,0,0,0.0
 19447X,duplomb-2025,0,1,0,0,0.0
 19447X,ecole-confiance-2019,1,0,0,0,100.0
@@ -19254,6 +19609,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19467C,climat-resilience-2021,1,0,0,0,100.0
 19467C,confiance-justice-2021,0,1,0,0,0.0
 19467C,consultation-nc-2018,1,0,0,0,100.0
+19467C,cse-la-poste-2022,0,1,0,0,0.0
+19467C,directeur-ecole-2021,0,1,0,0,0.0
 19467C,ecole-confiance-2019,1,0,0,0,100.0
 19467C,elan-2018,0,1,0,0,0.0
 19467C,energies-renouvelables-2023,0,1,0,0,0.0
@@ -19317,7 +19674,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19479G,continuite-transports-greve-2024,0,1,0,0,0.0
 19479G,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19479G,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19479G,cse-la-poste-2022,0,1,0,0,0.0
 19479G,ddadue-2025,0,1,0,0,0.0
+19479G,directeur-ecole-2021,0,1,0,0,0.0
 19479G,drones-epandage-2025,0,1,0,0,0.0
 19479G,duplomb-2025,0,1,0,0,0.0
 19479G,ecole-confiance-2019,1,0,0,0,100.0
@@ -19433,7 +19792,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19489J,continuite-transports-greve-2024,1,0,0,0,100.0
 19489J,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19489J,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19489J,cse-la-poste-2022,1,0,0,0,100.0
 19489J,ddadue-2025,0,0,1,0,
+19489J,directeur-ecole-2021,1,0,0,0,100.0
 19489J,drones-epandage-2025,1,0,0,0,100.0
 19489J,duplomb-2025,1,0,0,0,100.0
 19489J,ecole-confiance-2019,0,1,0,0,0.0
@@ -19537,6 +19898,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19503N,climat-resilience-2021,0,1,0,0,0.0
 19503N,confiance-justice-2021,1,0,0,0,100.0
 19503N,consultation-nc-2018,1,0,0,0,100.0
+19503N,cse-la-poste-2022,1,0,0,0,100.0
+19503N,directeur-ecole-2021,1,0,0,0,100.0
 19503N,ecole-confiance-2019,0,1,0,0,0.0
 19503N,elan-2018,1,0,0,0,100.0
 19503N,energies-renouvelables-2023,0,1,0,0,0.0
@@ -19600,7 +19963,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19507S,continuite-transports-greve-2024,0,1,0,0,0.0
 19507S,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19507S,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19507S,cse-la-poste-2022,0,1,0,0,0.0
 19507S,ddadue-2025,0,1,0,0,0.0
+19507S,directeur-ecole-2021,0,1,0,0,0.0
 19507S,drones-epandage-2025,0,1,0,0,0.0
 19507S,duplomb-2025,0,1,0,0,0.0
 19507S,ecole-confiance-2019,1,0,0,0,100.0
@@ -19704,6 +20069,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19511N,climat-resilience-2021,1,0,0,0,100.0
 19511N,confiance-justice-2021,0,1,0,0,0.0
 19511N,consultation-nc-2018,1,0,0,0,100.0
+19511N,cse-la-poste-2022,0,1,0,0,0.0
+19511N,directeur-ecole-2021,0,1,0,0,0.0
 19511N,ecole-confiance-2019,1,0,0,0,100.0
 19511N,elan-2018,1,0,0,0,100.0
 19511N,energies-renouvelables-2023,0,1,0,0,0.0
@@ -19758,6 +20125,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19515S,climat-resilience-2021,1,0,0,0,100.0
 19515S,confiance-justice-2021,0,1,0,0,0.0
 19515S,consultation-nc-2018,1,0,0,0,100.0
+19515S,cse-la-poste-2022,0,1,0,0,0.0
+19515S,directeur-ecole-2021,0,1,0,0,0.0
 19515S,ecole-confiance-2019,1,0,0,0,100.0
 19515S,elan-2018,0,1,0,0,0.0
 19515S,energies-renouvelables-2023,0,1,0,0,0.0
@@ -19811,6 +20180,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19521Q,climat-resilience-2021,1,0,0,0,100.0
 19521Q,confiance-justice-2021,0,1,0,0,0.0
 19521Q,consultation-nc-2018,1,0,0,0,100.0
+19521Q,directeur-ecole-2021,0,1,0,0,0.0
 19521Q,ecole-confiance-2019,1,0,0,0,100.0
 19521Q,elan-2018,1,0,0,0,100.0
 19521Q,gens-du-voyage-2018,0,1,0,0,0.0
@@ -19845,6 +20215,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19525U,climat-resilience-2021,0,1,0,0,0.0
 19525U,confiance-justice-2021,1,0,0,0,100.0
 19525U,consultation-nc-2018,1,0,0,0,100.0
+19525U,cse-la-poste-2022,0,1,0,0,0.0
+19525U,directeur-ecole-2021,1,0,0,0,100.0
 19525U,ecole-confiance-2019,0,1,0,0,0.0
 19525U,elan-2018,1,0,0,0,100.0
 19525U,energies-renouvelables-2023,0,1,0,0,0.0
@@ -19899,6 +20271,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19527W,climat-resilience-2021,0,1,0,0,0.0
 19527W,confiance-justice-2021,1,0,0,0,100.0
 19527W,consultation-nc-2018,1,0,0,0,100.0
+19527W,cse-la-poste-2022,1,0,0,0,100.0
+19527W,directeur-ecole-2021,1,0,0,0,100.0
 19527W,ecole-confiance-2019,0,1,0,0,0.0
 19527W,elan-2018,1,0,0,0,100.0
 19527W,energies-renouvelables-2023,0,1,0,0,0.0
@@ -19962,7 +20336,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19531S,continuite-transports-greve-2024,1,0,0,0,100.0
 19531S,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19531S,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19531S,cse-la-poste-2022,1,0,0,0,100.0
 19531S,ddadue-2025,0,0,1,0,
+19531S,directeur-ecole-2021,1,0,0,0,100.0
 19531S,drones-epandage-2025,1,0,0,0,100.0
 19531S,duplomb-2025,1,0,0,0,100.0
 19531S,ecole-confiance-2019,0,1,0,0,0.0
@@ -20075,7 +20451,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19533U,continuite-transports-greve-2024,0,1,0,0,0.0
 19533U,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19533U,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19533U,cse-la-poste-2022,0,1,0,0,0.0
 19533U,ddadue-2025,0,1,0,0,0.0
+19533U,directeur-ecole-2021,0,1,0,0,0.0
 19533U,drones-epandage-2025,0,1,0,0,0.0
 19533U,duplomb-2025,0,1,0,0,0.0
 19533U,ecole-confiance-2019,1,0,0,0,100.0
@@ -20179,6 +20557,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19543W,climat-resilience-2021,1,0,0,0,100.0
 19543W,confiance-justice-2021,0,1,0,0,0.0
 19543W,consultation-nc-2018,1,0,0,0,100.0
+19543W,cse-la-poste-2022,0,1,0,0,0.0
+19543W,directeur-ecole-2021,0,1,0,0,0.0
 19543W,ecole-confiance-2019,1,0,0,0,100.0
 19543W,elan-2018,0,1,0,0,0.0
 19543W,energies-renouvelables-2023,0,1,0,0,0.0
@@ -20242,7 +20622,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19545Y,continuite-transports-greve-2024,0,1,0,0,0.0
 19545Y,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19545Y,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19545Y,cse-la-poste-2022,0,1,0,0,0.0
 19545Y,ddadue-2025,0,0,0,1,
+19545Y,directeur-ecole-2021,0,1,0,0,0.0
 19545Y,drones-epandage-2025,0,1,0,0,0.0
 19545Y,duplomb-2025,0,1,0,0,0.0
 19545Y,ecole-confiance-2019,1,0,0,0,100.0
@@ -20346,6 +20728,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19549D,climat-resilience-2021,0,1,0,0,0.0
 19549D,confiance-justice-2021,1,0,0,0,100.0
 19549D,consultation-nc-2018,1,0,0,0,100.0
+19549D,cse-la-poste-2022,1,0,0,0,100.0
+19549D,directeur-ecole-2021,1,0,0,0,100.0
 19549D,ecole-confiance-2019,0,1,0,0,0.0
 19549D,elan-2018,1,0,0,0,100.0
 19549D,energies-renouvelables-2023,0,1,0,0,0.0
@@ -20409,7 +20793,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19551W,continuite-transports-greve-2024,1,0,0,0,100.0
 19551W,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19551W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19551W,cse-la-poste-2022,1,0,0,0,100.0
 19551W,ddadue-2025,0,0,1,0,
+19551W,directeur-ecole-2021,1,0,0,0,100.0
 19551W,drones-epandage-2025,1,0,0,0,100.0
 19551W,duplomb-2025,1,0,0,0,100.0
 19551W,ecole-confiance-2019,0,1,0,0,0.0
@@ -20519,7 +20905,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19553Y,consultation-nc-2018,1,0,0,0,100.0
 19553Y,continuite-transports-greve-2024,0,1,0,0,0.0
 19553Y,corps-electoral-nc-degel-2024,1,0,0,0,100.0
+19553Y,cse-la-poste-2022,0,1,0,0,0.0
 19553Y,ddadue-2025,0,1,0,0,0.0
+19553Y,directeur-ecole-2021,0,1,0,0,0.0
 19553Y,drones-epandage-2025,0,1,0,0,0.0
 19553Y,duplomb-2025,0,1,0,0,0.0
 19553Y,ecole-confiance-2019,1,0,0,0,100.0
@@ -20621,7 +21009,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19563B,continuite-transports-greve-2024,0,1,0,0,0.0
 19563B,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19563B,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19563B,cse-la-poste-2022,0,1,0,0,0.0
 19563B,ddadue-2025,0,1,0,0,0.0
+19563B,directeur-ecole-2021,0,1,0,0,0.0
 19563B,drones-epandage-2025,0,1,0,0,0.0
 19563B,duplomb-2025,0,1,0,0,0.0
 19563B,ecole-confiance-2019,1,0,0,0,100.0
@@ -20734,7 +21124,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19565D,continuite-transports-greve-2024,1,0,0,0,100.0
 19565D,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19565D,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
+19565D,cse-la-poste-2022,1,0,0,0,100.0
 19565D,ddadue-2025,0,0,1,0,
+19565D,directeur-ecole-2021,1,0,0,0,100.0
 19565D,drones-epandage-2025,1,0,0,0,100.0
 19565D,duplomb-2025,1,0,0,0,100.0
 19565D,ecole-confiance-2019,0,1,0,0,0.0
@@ -20847,7 +21239,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19569H,continuite-transports-greve-2024,0,1,0,0,0.0
 19569H,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19569H,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19569H,cse-la-poste-2022,0,1,0,0,0.0
 19569H,ddadue-2025,0,1,0,0,0.0
+19569H,directeur-ecole-2021,0,1,0,0,0.0
 19569H,drones-epandage-2025,0,1,0,0,0.0
 19569H,duplomb-2025,0,1,0,0,0.0
 19569H,ecole-confiance-2019,1,0,0,0,100.0
@@ -20960,7 +21354,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19573D,continuite-transports-greve-2024,0,1,0,0,0.0
 19573D,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19573D,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19573D,cse-la-poste-2022,0,1,0,0,0.0
 19573D,ddadue-2025,0,1,0,0,0.0
+19573D,directeur-ecole-2021,0,1,0,0,0.0
 19573D,drones-epandage-2025,0,1,0,0,0.0
 19573D,duplomb-2025,0,1,0,0,0.0
 19573D,ecole-confiance-2019,1,0,0,0,100.0
@@ -21073,7 +21469,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19575F,continuite-transports-greve-2024,0,1,0,0,0.0
 19575F,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19575F,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19575F,cse-la-poste-2022,0,1,0,0,0.0
 19575F,ddadue-2025,0,1,0,0,0.0
+19575F,directeur-ecole-2021,0,1,0,0,0.0
 19575F,drones-epandage-2025,0,1,0,0,0.0
 19575F,duplomb-2025,0,1,0,0,0.0
 19575F,ecole-confiance-2019,1,0,0,0,100.0
@@ -21177,6 +21575,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19577H,climat-resilience-2021,1,0,0,0,100.0
 19577H,confiance-justice-2021,0,1,0,0,0.0
 19577H,consultation-nc-2018,1,0,0,0,100.0
+19577H,cse-la-poste-2022,0,1,0,0,0.0
+19577H,directeur-ecole-2021,0,1,0,0,0.0
 19577H,ecole-confiance-2019,1,0,0,0,100.0
 19577H,elan-2018,1,0,0,0,100.0
 19577H,energies-renouvelables-2023,0,1,0,0,0.0
@@ -21231,6 +21631,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19581D,climat-resilience-2021,1,0,0,0,100.0
 19581D,confiance-justice-2021,0,1,0,0,0.0
 19581D,consultation-nc-2018,1,0,0,0,100.0
+19581D,cse-la-poste-2022,0,1,0,0,0.0
+19581D,directeur-ecole-2021,0,1,0,0,0.0
 19581D,ecole-confiance-2019,1,0,0,0,100.0
 19581D,elan-2018,0,1,0,0,0.0
 19581D,energies-renouvelables-2023,0,1,0,0,0.0
@@ -21285,6 +21687,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19583F,climat-resilience-2021,1,0,0,0,100.0
 19583F,confiance-justice-2021,0,0,1,0,
 19583F,consultation-nc-2018,1,0,0,0,100.0
+19583F,cse-la-poste-2022,0,1,0,0,0.0
+19583F,directeur-ecole-2021,0,1,0,0,0.0
 19583F,ecole-confiance-2019,1,0,0,0,100.0
 19583F,elan-2018,0,1,0,0,0.0
 19583F,energies-renouvelables-2023,0,1,0,0,0.0
@@ -21348,7 +21752,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19585H,continuite-transports-greve-2024,0,1,0,0,0.0
 19585H,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19585H,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19585H,cse-la-poste-2022,0,1,0,0,0.0
 19585H,ddadue-2025,0,0,0,1,
+19585H,directeur-ecole-2021,0,1,0,0,0.0
 19585H,drones-epandage-2025,0,1,0,0,0.0
 19585H,duplomb-2025,0,1,0,0,0.0
 19585H,ecole-confiance-2019,1,0,0,0,100.0
@@ -21461,7 +21867,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19591F,continuite-transports-greve-2024,0,0,1,0,
 19591F,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19591F,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19591F,cse-la-poste-2022,0,1,0,0,0.0
 19591F,ddadue-2025,0,1,0,0,0.0
+19591F,directeur-ecole-2021,0,1,0,0,0.0
 19591F,drones-epandage-2025,0,0,0,1,
 19591F,duplomb-2025,0,1,0,0,0.0
 19591F,ecole-confiance-2019,0,1,0,0,0.0
@@ -21574,7 +21982,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19593H,continuite-transports-greve-2024,1,0,0,0,100.0
 19593H,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19593H,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
+19593H,cse-la-poste-2022,1,0,0,0,100.0
 19593H,ddadue-2025,0,0,1,0,
+19593H,directeur-ecole-2021,1,0,0,0,100.0
 19593H,drones-epandage-2025,1,0,0,0,100.0
 19593H,duplomb-2025,1,0,0,0,100.0
 19593H,ecole-confiance-2019,0,1,0,0,0.0
@@ -21678,6 +22088,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19599P,climat-resilience-2021,0,1,0,0,0.0
 19599P,confiance-justice-2021,1,0,0,0,100.0
 19599P,consultation-nc-2018,1,0,0,0,100.0
+19599P,cse-la-poste-2022,1,0,0,0,100.0
+19599P,directeur-ecole-2021,1,0,0,0,100.0
 19599P,ecole-confiance-2019,0,1,0,0,0.0
 19599P,elan-2018,1,0,0,0,100.0
 19599P,energies-renouvelables-2023,0,1,0,0,0.0
@@ -21741,7 +22153,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19611R,continuite-transports-greve-2024,0,1,0,0,0.0
 19611R,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19611R,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19611R,cse-la-poste-2022,0,1,0,0,0.0
 19611R,ddadue-2025,0,1,0,0,0.0
+19611R,directeur-ecole-2021,0,1,0,0,0.0
 19611R,drones-epandage-2025,0,1,0,0,0.0
 19611R,duplomb-2025,0,1,0,0,0.0
 19611R,ecole-confiance-2019,1,0,0,0,100.0
@@ -21854,7 +22268,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19619A,continuite-transports-greve-2024,0,1,0,0,0.0
 19619A,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19619A,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19619A,cse-la-poste-2022,0,1,0,0,0.0
 19619A,ddadue-2025,0,1,0,0,0.0
+19619A,directeur-ecole-2021,0,1,0,0,0.0
 19619A,drones-epandage-2025,0,1,0,0,0.0
 19619A,duplomb-2025,0,0,1,0,
 19619A,ecole-confiance-2019,1,0,0,0,100.0
@@ -21967,7 +22383,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19621T,continuite-transports-greve-2024,0,1,0,0,0.0
 19621T,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19621T,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19621T,cse-la-poste-2022,0,1,0,0,0.0
 19621T,ddadue-2025,0,1,0,0,0.0
+19621T,directeur-ecole-2021,0,1,0,0,0.0
 19621T,drones-epandage-2025,0,1,0,0,0.0
 19621T,duplomb-2025,0,1,0,0,0.0
 19621T,ecole-confiance-2019,1,0,0,0,100.0
@@ -22080,7 +22498,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19629C,continuite-transports-greve-2024,1,0,0,0,100.0
 19629C,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19629C,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19629C,cse-la-poste-2022,0,1,0,0,0.0
 19629C,ddadue-2025,0,1,0,0,0.0
+19629C,directeur-ecole-2021,0,1,0,0,0.0
 19629C,drones-epandage-2025,0,1,0,0,0.0
 19629C,duplomb-2025,0,1,0,0,0.0
 19629C,ecole-confiance-2019,0,1,0,0,0.0
@@ -22193,7 +22613,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19631V,continuite-transports-greve-2024,1,0,0,0,100.0
 19631V,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19631V,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19631V,cse-la-poste-2022,1,0,0,0,100.0
 19631V,ddadue-2025,0,0,1,0,
+19631V,directeur-ecole-2021,1,0,0,0,100.0
 19631V,drones-epandage-2025,1,0,0,0,100.0
 19631V,duplomb-2025,1,0,0,0,100.0
 19631V,ecole-confiance-2019,0,1,0,0,0.0
@@ -22297,6 +22719,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19637C,climat-resilience-2021,0,0,1,0,
 19637C,confiance-justice-2021,0,1,0,0,0.0
 19637C,consultation-nc-2018,1,0,0,0,100.0
+19637C,cse-la-poste-2022,0,1,0,0,0.0
+19637C,directeur-ecole-2021,0,1,0,0,0.0
 19637C,ecole-confiance-2019,0,0,1,0,
 19637C,elan-2018,0,1,0,0,0.0
 19637C,energies-renouvelables-2023,0,1,0,0,0.0
@@ -22351,6 +22775,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19643A,climat-resilience-2021,1,0,0,0,100.0
 19643A,confiance-justice-2021,0,1,0,0,0.0
 19643A,consultation-nc-2018,1,0,0,0,100.0
+19643A,cse-la-poste-2022,0,1,0,0,0.0
+19643A,directeur-ecole-2021,0,1,0,0,0.0
 19643A,ecole-confiance-2019,1,0,0,0,100.0
 19643A,elan-2018,0,1,0,0,0.0
 19643A,energies-renouvelables-2023,0,1,0,0,0.0
@@ -22414,7 +22840,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19647E,continuite-transports-greve-2024,1,0,0,0,100.0
 19647E,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19647E,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19647E,cse-la-poste-2022,1,0,0,0,100.0
 19647E,ddadue-2025,0,0,1,0,
+19647E,directeur-ecole-2021,1,0,0,0,100.0
 19647E,drones-epandage-2025,1,0,0,0,100.0
 19647E,duplomb-2025,1,0,0,0,100.0
 19647E,ecole-confiance-2019,0,1,0,0,0.0
@@ -22527,7 +22955,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19649G,continuite-transports-greve-2024,1,0,0,0,100.0
 19649G,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19649G,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19649G,cse-la-poste-2022,1,0,0,0,100.0
 19649G,ddadue-2025,0,0,1,0,
+19649G,directeur-ecole-2021,1,0,0,0,100.0
 19649G,drones-epandage-2025,1,0,0,0,100.0
 19649G,duplomb-2025,1,0,0,0,100.0
 19649G,ecole-confiance-2019,0,1,0,0,0.0
@@ -22631,6 +23061,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19651A,climat-resilience-2021,0,0,1,0,
 19651A,confiance-justice-2021,0,1,0,0,0.0
 19651A,consultation-nc-2018,1,0,0,0,100.0
+19651A,cse-la-poste-2022,0,1,0,0,0.0
+19651A,directeur-ecole-2021,0,1,0,0,0.0
 19651A,ecole-confiance-2019,0,0,1,0,
 19651A,elan-2018,0,1,0,0,0.0
 19651A,energies-renouvelables-2023,0,1,0,0,0.0
@@ -22694,7 +23126,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19657G,continuite-transports-greve-2024,0,1,0,0,0.0
 19657G,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19657G,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19657G,cse-la-poste-2022,0,1,0,0,0.0
 19657G,ddadue-2025,0,1,0,0,0.0
+19657G,directeur-ecole-2021,0,1,0,0,0.0
 19657G,drones-epandage-2025,0,1,0,0,0.0
 19657G,duplomb-2025,0,1,0,0,0.0
 19657G,ecole-confiance-2019,1,0,0,0,100.0
@@ -22798,6 +23232,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19659J,climat-resilience-2021,0,0,1,0,
 19659J,confiance-justice-2021,0,1,0,0,0.0
 19659J,consultation-nc-2018,1,0,0,0,100.0
+19659J,cse-la-poste-2022,0,1,0,0,0.0
+19659J,directeur-ecole-2021,0,1,0,0,0.0
 19659J,ecole-confiance-2019,0,0,1,0,
 19659J,elan-2018,0,1,0,0,0.0
 19659J,energies-renouvelables-2023,0,1,0,0,0.0
@@ -22852,6 +23288,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19663E,climat-resilience-2021,1,0,0,0,100.0
 19663E,confiance-justice-2021,0,1,0,0,0.0
 19663E,consultation-nc-2018,1,0,0,0,100.0
+19663E,cse-la-poste-2022,0,1,0,0,0.0
+19663E,directeur-ecole-2021,0,1,0,0,0.0
 19663E,ecole-confiance-2019,1,0,0,0,100.0
 19663E,elan-2018,0,1,0,0,0.0
 19663E,energies-renouvelables-2023,0,1,0,0,0.0
@@ -22915,7 +23353,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19667J,continuite-transports-greve-2024,0,1,0,0,0.0
 19667J,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19667J,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19667J,cse-la-poste-2022,0,1,0,0,0.0
 19667J,ddadue-2025,0,1,0,0,0.0
+19667J,directeur-ecole-2021,0,1,0,0,0.0
 19667J,drones-epandage-2025,0,1,0,0,0.0
 19667J,duplomb-2025,0,1,0,0,0.0
 19667J,ecole-confiance-2019,1,0,0,0,100.0
@@ -23028,7 +23468,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19669L,continuite-transports-greve-2024,1,0,0,0,100.0
 19669L,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19669L,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19669L,cse-la-poste-2022,1,0,0,0,100.0
 19669L,ddadue-2025,0,0,1,0,
+19669L,directeur-ecole-2021,1,0,0,0,100.0
 19669L,drones-epandage-2025,1,0,0,0,100.0
 19669L,duplomb-2025,1,0,0,0,100.0
 19669L,ecole-confiance-2019,0,1,0,0,0.0
@@ -23132,6 +23574,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19671E,climat-resilience-2021,1,0,0,0,100.0
 19671E,confiance-justice-2021,0,1,0,0,0.0
 19671E,consultation-nc-2018,1,0,0,0,100.0
+19671E,cse-la-poste-2022,0,1,0,0,0.0
+19671E,directeur-ecole-2021,0,1,0,0,0.0
 19671E,ecole-confiance-2019,1,0,0,0,100.0
 19671E,elan-2018,0,1,0,0,0.0
 19671E,energies-renouvelables-2023,0,1,0,0,0.0
@@ -23195,7 +23639,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19673G,continuite-transports-greve-2024,0,1,0,0,0.0
 19673G,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19673G,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19673G,cse-la-poste-2022,0,1,0,0,0.0
 19673G,ddadue-2025,0,1,0,0,0.0
+19673G,directeur-ecole-2021,0,1,0,0,0.0
 19673G,drones-epandage-2025,0,1,0,0,0.0
 19673G,duplomb-2025,0,1,0,0,0.0
 19673G,ecole-confiance-2019,1,0,0,0,100.0
@@ -23299,6 +23745,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19675J,climat-resilience-2021,1,0,0,0,100.0
 19675J,confiance-justice-2021,0,1,0,0,0.0
 19675J,consultation-nc-2018,1,0,0,0,100.0
+19675J,cse-la-poste-2022,0,1,0,0,0.0
+19675J,directeur-ecole-2021,0,1,0,0,0.0
 19675J,ecole-confiance-2019,1,0,0,0,100.0
 19675J,elan-2018,0,1,0,0,0.0
 19675J,energies-renouvelables-2023,0,1,0,0,0.0
@@ -23363,7 +23811,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19679N,continuite-transports-greve-2024,0,1,0,0,0.0
 19679N,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19679N,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19679N,cse-la-poste-2022,0,1,0,0,0.0
 19679N,ddadue-2025,0,1,0,0,0.0
+19679N,directeur-ecole-2021,0,1,0,0,0.0
 19679N,drones-epandage-2025,0,1,0,0,0.0
 19679N,duplomb-2025,0,1,0,0,0.0
 19679N,ecole-confiance-2019,1,0,0,0,100.0
@@ -23476,7 +23926,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19681G,continuite-transports-greve-2024,1,0,0,0,100.0
 19681G,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19681G,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
+19681G,cse-la-poste-2022,0,1,0,0,0.0
 19681G,ddadue-2025,0,0,1,0,
+19681G,directeur-ecole-2021,0,1,0,0,0.0
 19681G,drones-epandage-2025,1,0,0,0,100.0
 19681G,duplomb-2025,1,0,0,0,100.0
 19681G,ecole-confiance-2019,0,1,0,0,0.0
@@ -23589,7 +24041,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19683J,continuite-transports-greve-2024,1,0,0,0,100.0
 19683J,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19683J,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19683J,cse-la-poste-2022,1,0,0,0,100.0
 19683J,ddadue-2025,0,0,1,0,
+19683J,directeur-ecole-2021,1,0,0,0,100.0
 19683J,drones-epandage-2025,1,0,0,0,100.0
 19683J,duplomb-2025,1,0,0,0,100.0
 19683J,ecole-confiance-2019,0,1,0,0,0.0
@@ -23702,7 +24156,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19685L,continuite-transports-greve-2024,0,1,0,0,0.0
 19685L,corps-electoral-nc-degel-2024,0,0,1,0,
 19685L,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19685L,cse-la-poste-2022,0,1,0,0,0.0
 19685L,ddadue-2025,0,1,0,0,0.0
+19685L,directeur-ecole-2021,0,1,0,0,0.0
 19685L,drones-epandage-2025,0,1,0,0,0.0
 19685L,duplomb-2025,0,1,0,0,0.0
 19685L,ecole-confiance-2019,0,0,1,0,
@@ -23815,7 +24271,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19687N,continuite-transports-greve-2024,1,0,0,0,100.0
 19687N,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19687N,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
+19687N,cse-la-poste-2022,1,0,0,0,100.0
 19687N,ddadue-2025,0,0,1,0,
+19687N,directeur-ecole-2021,1,0,0,0,100.0
 19687N,drones-epandage-2025,1,0,0,0,100.0
 19687N,duplomb-2025,1,0,0,0,100.0
 19687N,ecole-confiance-2019,0,1,0,0,0.0
@@ -23918,6 +24376,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19689Q,climat-resilience-2021,0,1,0,0,0.0
 19689Q,confiance-justice-2021,1,0,0,0,100.0
 19689Q,consultation-nc-2018,1,0,0,0,100.0
+19689Q,directeur-ecole-2021,1,0,0,0,100.0
 19689Q,ecole-confiance-2019,0,1,0,0,0.0
 19689Q,elan-2018,1,0,0,0,100.0
 19689Q,gens-du-voyage-2018,0,1,0,0,0.0
@@ -23963,7 +24422,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19691J,continuite-transports-greve-2024,0,1,0,0,0.0
 19691J,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19691J,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19691J,cse-la-poste-2022,0,1,0,0,0.0
 19691J,ddadue-2025,0,1,0,0,0.0
+19691J,directeur-ecole-2021,0,1,0,0,0.0
 19691J,drones-epandage-2025,0,1,0,0,0.0
 19691J,duplomb-2025,0,1,0,0,0.0
 19691J,ecole-confiance-2019,1,0,0,0,100.0
@@ -24076,7 +24537,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19693L,continuite-transports-greve-2024,0,1,0,0,0.0
 19693L,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19693L,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19693L,cse-la-poste-2022,0,1,0,0,0.0
 19693L,ddadue-2025,0,0,0,1,
+19693L,directeur-ecole-2021,0,1,0,0,0.0
 19693L,drones-epandage-2025,0,1,0,0,0.0
 19693L,duplomb-2025,0,1,0,0,0.0
 19693L,ecole-confiance-2019,1,0,0,0,100.0
@@ -24189,7 +24652,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19695N,continuite-transports-greve-2024,1,0,0,0,100.0
 19695N,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19695N,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
+19695N,cse-la-poste-2022,1,0,0,0,100.0
 19695N,ddadue-2025,0,0,1,0,
+19695N,directeur-ecole-2021,1,0,0,0,100.0
 19695N,drones-epandage-2025,1,0,0,0,100.0
 19695N,duplomb-2025,1,0,0,0,100.0
 19695N,ecole-confiance-2019,0,1,0,0,0.0
@@ -24302,7 +24767,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19697Q,continuite-transports-greve-2024,1,0,0,0,100.0
 19697Q,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19697Q,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19697Q,cse-la-poste-2022,0,1,0,0,0.0
 19697Q,ddadue-2025,0,1,0,0,0.0
+19697Q,directeur-ecole-2021,0,1,0,0,0.0
 19697Q,drones-epandage-2025,0,1,0,0,0.0
 19697Q,duplomb-2025,0,1,0,0,0.0
 19697Q,ecole-confiance-2019,0,0,1,0,
@@ -24415,7 +24882,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19699S,continuite-transports-greve-2024,0,1,0,0,0.0
 19699S,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19699S,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19699S,cse-la-poste-2022,0,1,0,0,0.0
 19699S,ddadue-2025,0,1,0,0,0.0
+19699S,directeur-ecole-2021,0,1,0,0,0.0
 19699S,drones-epandage-2025,0,1,0,0,0.0
 19699S,duplomb-2025,0,1,0,0,0.0
 19699S,ecole-confiance-2019,1,0,0,0,100.0
@@ -24528,7 +24997,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19701S,continuite-transports-greve-2024,0,1,0,0,0.0
 19701S,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19701S,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19701S,cse-la-poste-2022,0,1,0,0,0.0
 19701S,ddadue-2025,0,1,0,0,0.0
+19701S,directeur-ecole-2021,0,1,0,0,0.0
 19701S,drones-epandage-2025,0,1,0,0,0.0
 19701S,duplomb-2025,0,1,0,0,0.0
 19701S,ecole-confiance-2019,1,0,0,0,100.0
@@ -24641,7 +25112,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19703U,continuite-transports-greve-2024,0,1,0,0,0.0
 19703U,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19703U,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19703U,cse-la-poste-2022,0,1,0,0,0.0
 19703U,ddadue-2025,0,1,0,0,0.0
+19703U,directeur-ecole-2021,0,1,0,0,0.0
 19703U,drones-epandage-2025,0,1,0,0,0.0
 19703U,duplomb-2025,0,1,0,0,0.0
 19703U,ecole-confiance-2019,1,0,0,0,100.0
@@ -24754,7 +25227,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19705W,continuite-transports-greve-2024,0,1,0,0,0.0
 19705W,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19705W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19705W,cse-la-poste-2022,0,1,0,0,0.0
 19705W,ddadue-2025,0,1,0,0,0.0
+19705W,directeur-ecole-2021,0,1,0,0,0.0
 19705W,drones-epandage-2025,0,1,0,0,0.0
 19705W,duplomb-2025,0,1,0,0,0.0
 19705W,ecole-confiance-2019,1,0,0,0,100.0
@@ -24857,6 +25332,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19707Y,consultation-nc-2018,1,0,0,0,100.0
 19707Y,continuite-transports-greve-2024,0,1,0,0,0.0
 19707Y,corps-electoral-nc-degel-2024,1,0,0,0,100.0
+19707Y,cse-la-poste-2022,0,1,0,0,0.0
 19707Y,ecriture-inclusive-senat-2023,0,1,0,0,0.0
 19707Y,energies-renouvelables-2023,0,1,0,0,0.0
 19707Y,fin-regimes-exception-covid-2022,0,1,0,0,0.0
@@ -24914,7 +25390,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19709B,continuite-transports-greve-2024,0,1,0,0,0.0
 19709B,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19709B,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19709B,cse-la-poste-2022,0,1,0,0,0.0
 19709B,ddadue-2025,0,1,0,0,0.0
+19709B,directeur-ecole-2021,0,1,0,0,0.0
 19709B,drones-epandage-2025,0,1,0,0,0.0
 19709B,duplomb-2025,0,1,0,0,0.0
 19709B,ecole-confiance-2019,1,0,0,0,100.0
@@ -25027,7 +25505,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19711U,continuite-transports-greve-2024,0,1,0,0,0.0
 19711U,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19711U,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19711U,cse-la-poste-2022,0,1,0,0,0.0
 19711U,ddadue-2025,0,1,0,0,0.0
+19711U,directeur-ecole-2021,0,1,0,0,0.0
 19711U,drones-epandage-2025,0,1,0,0,0.0
 19711U,duplomb-2025,0,1,0,0,0.0
 19711U,ecole-confiance-2019,1,0,0,0,100.0
@@ -25140,7 +25620,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19713W,continuite-transports-greve-2024,0,1,0,0,0.0
 19713W,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19713W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19713W,cse-la-poste-2022,0,1,0,0,0.0
 19713W,ddadue-2025,0,1,0,0,0.0
+19713W,directeur-ecole-2021,0,1,0,0,0.0
 19713W,drones-epandage-2025,0,1,0,0,0.0
 19713W,duplomb-2025,0,1,0,0,0.0
 19713W,ecole-confiance-2019,1,0,0,0,100.0
@@ -25244,6 +25726,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19715Y,climat-resilience-2021,0,1,0,0,0.0
 19715Y,confiance-justice-2021,1,0,0,0,100.0
 19715Y,consultation-nc-2018,1,0,0,0,100.0
+19715Y,cse-la-poste-2022,1,0,0,0,100.0
+19715Y,directeur-ecole-2021,1,0,0,0,100.0
 19715Y,ecole-confiance-2019,0,1,0,0,0.0
 19715Y,elan-2018,1,0,0,0,100.0
 19715Y,energies-renouvelables-2023,0,1,0,0,0.0
@@ -25298,6 +25782,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19717B,climat-resilience-2021,0,0,1,0,
 19717B,confiance-justice-2021,0,1,0,0,0.0
 19717B,consultation-nc-2018,1,0,0,0,100.0
+19717B,cse-la-poste-2022,0,1,0,0,0.0
+19717B,directeur-ecole-2021,0,1,0,0,0.0
 19717B,ecole-confiance-2019,1,0,0,0,100.0
 19717B,elan-2018,0,1,0,0,0.0
 19717B,energies-renouvelables-2023,0,1,0,0,0.0
@@ -25359,6 +25845,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19719D,continuite-transports-greve-2024,0,1,0,0,0.0
 19719D,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19719D,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19719D,cse-la-poste-2022,0,1,0,0,0.0
+19719D,directeur-ecole-2021,0,1,0,0,0.0
 19719D,ecole-confiance-2019,1,0,0,0,100.0
 19719D,ecriture-inclusive-senat-2023,0,0,1,0,
 19719D,elan-2018,0,1,0,0,0.0
@@ -25451,7 +25939,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19721W,continuite-transports-greve-2024,0,1,0,0,0.0
 19721W,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19721W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19721W,cse-la-poste-2022,0,1,0,0,0.0
 19721W,ddadue-2025,0,1,0,0,0.0
+19721W,directeur-ecole-2021,0,1,0,0,0.0
 19721W,drones-epandage-2025,0,1,0,0,0.0
 19721W,duplomb-2025,0,1,0,0,0.0
 19721W,ecole-confiance-2019,1,0,0,0,100.0
@@ -25562,7 +26052,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19723Y,continuite-transports-greve-2024,0,1,0,0,0.0
 19723Y,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19723Y,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19723Y,cse-la-poste-2022,0,1,0,0,0.0
 19723Y,ddadue-2025,0,1,0,0,0.0
+19723Y,directeur-ecole-2021,0,1,0,0,0.0
 19723Y,drones-epandage-2025,0,1,0,0,0.0
 19723Y,duplomb-2025,0,1,0,0,0.0
 19723Y,ecole-confiance-2019,1,0,0,0,100.0
@@ -25673,7 +26165,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19725B,continuite-transports-greve-2024,1,0,0,0,100.0
 19725B,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19725B,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19725B,cse-la-poste-2022,1,0,0,0,100.0
 19725B,ddadue-2025,0,0,1,0,
+19725B,directeur-ecole-2021,1,0,0,0,100.0
 19725B,drones-epandage-2025,1,0,0,0,100.0
 19725B,duplomb-2025,1,0,0,0,100.0
 19725B,ecole-confiance-2019,0,1,0,0,0.0
@@ -25804,7 +26298,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19729F,continuite-transports-greve-2024,0,1,0,0,0.0
 19729F,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19729F,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19729F,cse-la-poste-2022,0,1,0,0,0.0
 19729F,ddadue-2025,0,1,0,0,0.0
+19729F,directeur-ecole-2021,0,1,0,0,0.0
 19729F,drones-epandage-2025,0,1,0,0,0.0
 19729F,duplomb-2025,0,1,0,0,0.0
 19729F,ecole-confiance-2019,1,0,0,0,100.0
@@ -25956,7 +26452,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19735D,continuite-transports-greve-2024,0,1,0,0,0.0
 19735D,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19735D,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19735D,cse-la-poste-2022,0,1,0,0,0.0
 19735D,ddadue-2025,0,1,0,0,0.0
+19735D,directeur-ecole-2021,0,1,0,0,0.0
 19735D,drones-epandage-2025,0,1,0,0,0.0
 19735D,duplomb-2025,0,1,0,0,0.0
 19735D,ecole-confiance-2019,1,0,0,0,100.0
@@ -26080,6 +26578,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19739H,climat-resilience-2021,1,0,0,0,100.0
 19739H,confiance-justice-2021,0,1,0,0,0.0
 19739H,consultation-nc-2018,1,0,0,0,100.0
+19739H,cse-la-poste-2022,0,1,0,0,0.0
+19739H,directeur-ecole-2021,0,1,0,0,0.0
 19739H,ecole-confiance-2019,1,0,0,0,100.0
 19739H,elan-2018,1,0,0,0,100.0
 19739H,energies-renouvelables-2023,0,1,0,0,0.0
@@ -26133,6 +26633,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19741B,climat-resilience-2021,0,0,1,0,
 19741B,confiance-justice-2021,0,1,0,0,0.0
 19741B,consultation-nc-2018,1,0,0,0,100.0
+19741B,cse-la-poste-2022,0,1,0,0,0.0
+19741B,directeur-ecole-2021,0,1,0,0,0.0
 19741B,ecole-confiance-2019,1,0,0,0,100.0
 19741B,elan-2018,0,1,0,0,0.0
 19741B,energies-renouvelables-2023,0,1,0,0,0.0
@@ -26194,7 +26696,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19745F,continuite-transports-greve-2024,0,1,0,0,0.0
 19745F,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19745F,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19745F,cse-la-poste-2022,0,1,0,0,0.0
 19745F,ddadue-2025,0,1,0,0,0.0
+19745F,directeur-ecole-2021,0,1,0,0,0.0
 19745F,drones-epandage-2025,0,1,0,0,0.0
 19745F,duplomb-2025,0,1,0,0,0.0
 19745F,ecole-confiance-2019,1,0,0,0,100.0
@@ -26295,6 +26799,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19747H,climat-resilience-2021,1,0,0,0,100.0
 19747H,confiance-justice-2021,0,1,0,0,0.0
 19747H,consultation-nc-2018,1,0,0,0,100.0
+19747H,cse-la-poste-2022,0,1,0,0,0.0
+19747H,directeur-ecole-2021,0,1,0,0,0.0
 19747H,ecole-confiance-2019,1,0,0,0,100.0
 19747H,ecriture-inclusive-senat-2023,0,1,0,0,0.0
 19747H,elan-2018,0,1,0,0,0.0
@@ -26364,7 +26870,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19749K,continuite-transports-greve-2024,0,1,0,0,0.0
 19749K,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19749K,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19749K,cse-la-poste-2022,0,1,0,0,0.0
 19749K,ddadue-2025,0,1,0,0,0.0
+19749K,directeur-ecole-2021,0,1,0,0,0.0
 19749K,drones-epandage-2025,0,1,0,0,0.0
 19749K,duplomb-2025,0,1,0,0,0.0
 19749K,ecole-confiance-2019,1,0,0,0,100.0
@@ -26474,7 +26982,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19758L,continuite-transports-greve-2024,1,0,0,0,100.0
 19758L,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19758L,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
+19758L,cse-la-poste-2022,1,0,0,0,100.0
 19758L,ddadue-2025,0,0,1,0,
+19758L,directeur-ecole-2021,1,0,0,0,100.0
 19758L,drones-epandage-2025,1,0,0,0,100.0
 19758L,duplomb-2025,1,0,0,0,100.0
 19758L,ecole-confiance-2019,0,1,0,0,0.0
@@ -26584,7 +27094,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19760E,continuite-transports-greve-2024,1,0,0,0,100.0
 19760E,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19760E,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
+19760E,cse-la-poste-2022,1,0,0,0,100.0
 19760E,ddadue-2025,0,0,1,0,
+19760E,directeur-ecole-2021,1,0,0,0,100.0
 19760E,drones-epandage-2025,1,0,0,0,100.0
 19760E,duplomb-2025,1,0,0,0,100.0
 19760E,ecole-confiance-2019,0,1,0,0,0.0
@@ -26682,6 +27194,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19762G,bioethique-2021,0,1,0,0,0.0
 19762G,climat-resilience-2021,1,0,0,0,100.0
 19762G,confiance-justice-2021,0,1,0,0,0.0
+19762G,cse-la-poste-2022,0,1,0,0,0.0
+19762G,directeur-ecole-2021,0,1,0,0,0.0
 19762G,ecole-confiance-2019,1,0,0,0,100.0
 19762G,elan-2018,0,1,0,0,0.0
 19762G,energies-renouvelables-2023,1,0,0,0,100.0
@@ -26729,6 +27243,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19766L,bioethique-2021,0,1,0,0,0.0
 19766L,climat-resilience-2021,1,0,0,0,100.0
 19766L,confiance-justice-2021,0,1,0,0,0.0
+19766L,cse-la-poste-2022,0,1,0,0,0.0
+19766L,directeur-ecole-2021,0,1,0,0,0.0
 19766L,ecole-confiance-2019,1,0,0,0,100.0
 19766L,elan-2018,0,1,0,0,0.0
 19766L,energies-renouvelables-2023,0,1,0,0,0.0
@@ -26785,7 +27301,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19768N,continuite-transports-greve-2024,0,1,0,0,0.0
 19768N,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19768N,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19768N,cse-la-poste-2022,0,1,0,0,0.0
 19768N,ddadue-2025,0,1,0,0,0.0
+19768N,directeur-ecole-2021,0,1,0,0,0.0
 19768N,drones-epandage-2025,0,1,0,0,0.0
 19768N,duplomb-2025,0,1,0,0,0.0
 19768N,ecole-confiance-2019,1,0,0,0,100.0
@@ -26890,7 +27408,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19782L,continuite-transports-greve-2024,1,0,0,0,100.0
 19782L,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19782L,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19782L,cse-la-poste-2022,0,1,0,0,0.0
 19782L,ddadue-2025,0,1,0,0,0.0
+19782L,directeur-ecole-2021,0,1,0,0,0.0
 19782L,drones-epandage-2025,0,1,0,0,0.0
 19782L,duplomb-2025,0,1,0,0,0.0
 19782L,ecole-confiance-2019,0,0,1,0,
@@ -27000,7 +27520,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19798U,continuite-transports-greve-2024,0,1,0,0,0.0
 19798U,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19798U,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19798U,cse-la-poste-2022,0,1,0,0,0.0
 19798U,ddadue-2025,0,1,0,0,0.0
+19798U,directeur-ecole-2021,0,1,0,0,0.0
 19798U,drones-epandage-2025,0,1,0,0,0.0
 19798U,duplomb-2025,0,1,0,0,0.0
 19798U,ecole-confiance-2019,1,0,0,0,100.0
@@ -27107,7 +27629,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19820Y,continuite-transports-greve-2024,1,0,0,0,100.0
 19820Y,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 19820Y,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19820Y,cse-la-poste-2022,1,0,0,0,100.0
 19820Y,ddadue-2025,0,0,1,0,
+19820Y,directeur-ecole-2021,1,0,0,0,100.0
 19820Y,drones-epandage-2025,1,0,0,0,100.0
 19820Y,duplomb-2025,1,0,0,0,100.0
 19820Y,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -27206,7 +27730,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19826F,continuite-transports-greve-2024,0,1,0,0,0.0
 19826F,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19826F,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19826F,cse-la-poste-2022,0,1,0,0,0.0
 19826F,ddadue-2025,0,1,0,0,0.0
+19826F,directeur-ecole-2021,0,1,0,0,0.0
 19826F,drones-epandage-2025,0,1,0,0,0.0
 19826F,duplomb-2025,0,1,0,0,0.0
 19826F,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -27304,7 +27830,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19866P,continuite-transports-greve-2024,1,0,0,0,100.0
 19866P,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19866P,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19866P,cse-la-poste-2022,0,1,0,0,0.0
 19866P,ddadue-2025,0,1,0,0,0.0
+19866P,directeur-ecole-2021,0,1,0,0,0.0
 19866P,drones-epandage-2025,0,1,0,0,0.0
 19866P,duplomb-2025,0,1,0,0,0.0
 19866P,ecriture-inclusive-senat-2023,0,0,0,1,
@@ -27401,7 +27929,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19954N,continuite-transports-greve-2024,0,1,0,0,0.0
 19954N,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 19954N,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+19954N,cse-la-poste-2022,0,1,0,0,0.0
 19954N,ddadue-2025,0,1,0,0,0.0
+19954N,directeur-ecole-2021,0,1,0,0,0.0
 19954N,drones-epandage-2025,0,1,0,0,0.0
 19954N,duplomb-2025,0,1,0,0,0.0
 19954N,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -27483,6 +28013,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 19954N,vigilance-sanitaire-2021,0,1,0,0,0.0
 19954N,zan-2023,0,1,0,0,0.0
 19966S,climat-resilience-2021,1,0,0,0,100.0
+19966S,directeur-ecole-2021,0,1,0,0,0.0
 19966S,neonicotinoides-betteraves-2020,0,1,0,0,0.0
 19966S,plfss-2021,0,1,0,0,0.0
 19966S,programmation-recherche-2020,0,1,0,0,0.0
@@ -27501,7 +28032,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20016T,continuite-transports-greve-2024,0,0,1,0,
 20016T,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20016T,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20016T,cse-la-poste-2022,0,1,0,0,0.0
 20016T,ddadue-2025,0,1,0,0,0.0
+20016T,directeur-ecole-2021,0,1,0,0,0.0
 20016T,drones-epandage-2025,0,1,0,0,0.0
 20016T,duplomb-2025,0,1,0,0,0.0
 20016T,ecriture-inclusive-senat-2023,0,0,1,0,
@@ -27593,7 +28126,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20018V,continuite-transports-greve-2024,1,0,0,0,100.0
 20018V,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20018V,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20018V,cse-la-poste-2022,1,0,0,0,100.0
 20018V,ddadue-2025,0,0,1,0,
+20018V,directeur-ecole-2021,1,0,0,0,100.0
 20018V,drones-epandage-2025,1,0,0,0,100.0
 20018V,duplomb-2025,1,0,0,0,100.0
 20018V,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -27686,7 +28221,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20020P,continuite-transports-greve-2024,0,1,0,0,0.0
 20020P,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20020P,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20020P,cse-la-poste-2022,0,1,0,0,0.0
 20020P,ddadue-2025,0,1,0,0,0.0
+20020P,directeur-ecole-2021,0,1,0,0,0.0
 20020P,drones-epandage-2025,0,1,0,0,0.0
 20020P,duplomb-2025,0,1,0,0,0.0
 20020P,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -27779,7 +28316,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20022R,continuite-transports-greve-2024,0,1,0,0,0.0
 20022R,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20022R,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20022R,cse-la-poste-2022,0,1,0,0,0.0
 20022R,ddadue-2025,0,1,0,0,0.0
+20022R,directeur-ecole-2021,0,1,0,0,0.0
 20022R,drones-epandage-2025,0,1,0,0,0.0
 20022R,duplomb-2025,0,1,0,0,0.0
 20022R,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -27872,7 +28411,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20024T,continuite-transports-greve-2024,0,1,0,0,0.0
 20024T,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20024T,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20024T,cse-la-poste-2022,0,1,0,0,0.0
 20024T,ddadue-2025,0,1,0,0,0.0
+20024T,directeur-ecole-2021,0,1,0,0,0.0
 20024T,drones-epandage-2025,0,1,0,0,0.0
 20024T,duplomb-2025,0,1,0,0,0.0
 20024T,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -27965,7 +28506,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20026V,continuite-transports-greve-2024,0,1,0,0,0.0
 20026V,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20026V,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20026V,cse-la-poste-2022,0,1,0,0,0.0
 20026V,ddadue-2025,0,1,0,0,0.0
+20026V,directeur-ecole-2021,0,1,0,0,0.0
 20026V,drones-epandage-2025,0,1,0,0,0.0
 20026V,duplomb-2025,0,1,0,0,0.0
 20026V,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -28058,7 +28601,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20028X,continuite-transports-greve-2024,1,0,0,0,100.0
 20028X,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20028X,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20028X,cse-la-poste-2022,1,0,0,0,100.0
 20028X,ddadue-2025,0,0,1,0,
+20028X,directeur-ecole-2021,1,0,0,0,100.0
 20028X,drones-epandage-2025,1,0,0,0,100.0
 20028X,duplomb-2025,1,0,0,0,100.0
 20028X,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -28151,7 +28696,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20030R,continuite-transports-greve-2024,1,0,0,0,100.0
 20030R,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20030R,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20030R,cse-la-poste-2022,1,0,0,0,100.0
 20030R,ddadue-2025,0,0,1,0,
+20030R,directeur-ecole-2021,1,0,0,0,100.0
 20030R,drones-epandage-2025,1,0,0,0,100.0
 20030R,duplomb-2025,1,0,0,0,100.0
 20030R,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -28244,7 +28791,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20032T,continuite-transports-greve-2024,0,1,0,0,0.0
 20032T,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20032T,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20032T,cse-la-poste-2022,0,1,0,0,0.0
 20032T,ddadue-2025,0,1,0,0,0.0
+20032T,directeur-ecole-2021,0,1,0,0,0.0
 20032T,drones-epandage-2025,0,1,0,0,0.0
 20032T,duplomb-2025,0,1,0,0,0.0
 20032T,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -28337,7 +28886,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20034V,continuite-transports-greve-2024,0,1,0,0,0.0
 20034V,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20034V,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20034V,cse-la-poste-2022,0,1,0,0,0.0
 20034V,ddadue-2025,0,1,0,0,0.0
+20034V,directeur-ecole-2021,0,1,0,0,0.0
 20034V,drones-epandage-2025,0,1,0,0,0.0
 20034V,duplomb-2025,0,1,0,0,0.0
 20034V,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -28430,7 +28981,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20036X,continuite-transports-greve-2024,0,1,0,0,0.0
 20036X,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20036X,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
+20036X,cse-la-poste-2022,1,0,0,0,100.0
 20036X,ddadue-2025,0,1,0,0,0.0
+20036X,directeur-ecole-2021,1,0,0,0,100.0
 20036X,drones-epandage-2025,0,1,0,0,0.0
 20036X,duplomb-2025,0,1,0,0,0.0
 20036X,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -28522,7 +29075,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20038A,continuite-transports-greve-2024,0,1,0,0,0.0
 20038A,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20038A,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20038A,cse-la-poste-2022,0,1,0,0,0.0
 20038A,ddadue-2025,0,1,0,0,0.0
+20038A,directeur-ecole-2021,0,1,0,0,0.0
 20038A,drones-epandage-2025,0,1,0,0,0.0
 20038A,duplomb-2025,0,1,0,0,0.0
 20038A,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -28614,7 +29169,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20040T,continuite-transports-greve-2024,0,1,0,0,0.0
 20040T,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20040T,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20040T,cse-la-poste-2022,0,1,0,0,0.0
 20040T,ddadue-2025,0,1,0,0,0.0
+20040T,directeur-ecole-2021,0,1,0,0,0.0
 20040T,drones-epandage-2025,0,1,0,0,0.0
 20040T,duplomb-2025,0,1,0,0,0.0
 20040T,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -28707,7 +29264,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20042V,continuite-transports-greve-2024,0,1,0,0,0.0
 20042V,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20042V,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20042V,cse-la-poste-2022,0,1,0,0,0.0
 20042V,ddadue-2025,0,1,0,0,0.0
+20042V,directeur-ecole-2021,0,1,0,0,0.0
 20042V,drones-epandage-2025,0,1,0,0,0.0
 20042V,duplomb-2025,0,1,0,0,0.0
 20042V,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -28800,7 +29359,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20044X,continuite-transports-greve-2024,0,1,0,0,0.0
 20044X,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20044X,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20044X,cse-la-poste-2022,0,1,0,0,0.0
 20044X,ddadue-2025,0,1,0,0,0.0
+20044X,directeur-ecole-2021,0,1,0,0,0.0
 20044X,drones-epandage-2025,0,1,0,0,0.0
 20044X,duplomb-2025,0,1,0,0,0.0
 20044X,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -28893,7 +29454,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20046A,continuite-transports-greve-2024,1,0,0,0,100.0
 20046A,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20046A,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
+20046A,cse-la-poste-2022,1,0,0,0,100.0
 20046A,ddadue-2025,0,0,1,0,
+20046A,directeur-ecole-2021,1,0,0,0,100.0
 20046A,drones-epandage-2025,1,0,0,0,100.0
 20046A,duplomb-2025,1,0,0,0,100.0
 20046A,ecriture-inclusive-senat-2023,0,0,0,1,
@@ -28986,7 +29549,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20048C,continuite-transports-greve-2024,0,1,0,0,0.0
 20048C,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20048C,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20048C,cse-la-poste-2022,0,1,0,0,0.0
 20048C,ddadue-2025,0,1,0,0,0.0
+20048C,directeur-ecole-2021,0,1,0,0,0.0
 20048C,drones-epandage-2025,0,1,0,0,0.0
 20048C,duplomb-2025,0,1,0,0,0.0
 20048C,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -29079,7 +29644,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20050V,continuite-transports-greve-2024,0,1,0,0,0.0
 20050V,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20050V,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20050V,cse-la-poste-2022,0,1,0,0,0.0
 20050V,ddadue-2025,0,0,0,1,
+20050V,directeur-ecole-2021,0,1,0,0,0.0
 20050V,drones-epandage-2025,0,1,0,0,0.0
 20050V,duplomb-2025,0,1,0,0,0.0
 20050V,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -29172,7 +29739,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20052X,continuite-transports-greve-2024,0,1,0,0,0.0
 20052X,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20052X,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20052X,cse-la-poste-2022,0,1,0,0,0.0
 20052X,ddadue-2025,0,1,0,0,0.0
+20052X,directeur-ecole-2021,0,1,0,0,0.0
 20052X,drones-epandage-2025,0,1,0,0,0.0
 20052X,duplomb-2025,0,1,0,0,0.0
 20052X,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -29265,7 +29834,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20054A,continuite-transports-greve-2024,0,1,0,0,0.0
 20054A,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20054A,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20054A,cse-la-poste-2022,0,1,0,0,0.0
 20054A,ddadue-2025,0,1,0,0,0.0
+20054A,directeur-ecole-2021,0,1,0,0,0.0
 20054A,drones-epandage-2025,0,1,0,0,0.0
 20054A,duplomb-2025,0,1,0,0,0.0
 20054A,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -29358,7 +29929,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20056C,continuite-transports-greve-2024,0,1,0,0,0.0
 20056C,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20056C,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20056C,cse-la-poste-2022,0,1,0,0,0.0
 20056C,ddadue-2025,0,1,0,0,0.0
+20056C,directeur-ecole-2021,0,1,0,0,0.0
 20056C,drones-epandage-2025,0,1,0,0,0.0
 20056C,duplomb-2025,0,1,0,0,0.0
 20056C,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -29451,7 +30024,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20058E,continuite-transports-greve-2024,0,1,0,0,0.0
 20058E,corps-electoral-nc-degel-2024,0,0,0,1,
 20058E,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20058E,cse-la-poste-2022,0,1,0,0,0.0
 20058E,ddadue-2025,0,1,0,0,0.0
+20058E,directeur-ecole-2021,0,1,0,0,0.0
 20058E,drones-epandage-2025,0,1,0,0,0.0
 20058E,duplomb-2025,0,1,0,0,0.0
 20058E,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -29544,7 +30119,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20060X,continuite-transports-greve-2024,1,0,0,0,100.0
 20060X,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20060X,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20060X,cse-la-poste-2022,1,0,0,0,100.0
 20060X,ddadue-2025,0,0,1,0,
+20060X,directeur-ecole-2021,1,0,0,0,100.0
 20060X,drones-epandage-2025,1,0,0,0,100.0
 20060X,duplomb-2025,1,0,0,0,100.0
 20060X,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -29637,7 +30214,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20062A,continuite-transports-greve-2024,0,1,0,0,0.0
 20062A,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20062A,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20062A,cse-la-poste-2022,0,1,0,0,0.0
 20062A,ddadue-2025,0,1,0,0,0.0
+20062A,directeur-ecole-2021,0,1,0,0,0.0
 20062A,drones-epandage-2025,0,1,0,0,0.0
 20062A,duplomb-2025,0,1,0,0,0.0
 20062A,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -29730,7 +30309,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20064C,continuite-transports-greve-2024,1,0,0,0,100.0
 20064C,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20064C,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20064C,cse-la-poste-2022,1,0,0,0,100.0
 20064C,ddadue-2025,0,0,1,0,
+20064C,directeur-ecole-2021,1,0,0,0,100.0
 20064C,drones-epandage-2025,1,0,0,0,100.0
 20064C,duplomb-2025,1,0,0,0,100.0
 20064C,ecriture-inclusive-senat-2023,0,0,0,1,
@@ -29822,7 +30403,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20066E,continuite-transports-greve-2024,0,1,0,0,0.0
 20066E,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20066E,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20066E,cse-la-poste-2022,0,1,0,0,0.0
 20066E,ddadue-2025,0,1,0,0,0.0
+20066E,directeur-ecole-2021,0,1,0,0,0.0
 20066E,drones-epandage-2025,0,1,0,0,0.0
 20066E,duplomb-2025,0,1,0,0,0.0
 20066E,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -29913,7 +30496,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20068G,continuite-transports-greve-2024,0,1,0,0,0.0
 20068G,corps-electoral-nc-degel-2024,0,0,0,1,
 20068G,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20068G,cse-la-poste-2022,0,1,0,0,0.0
 20068G,ddadue-2025,0,1,0,0,0.0
+20068G,directeur-ecole-2021,0,1,0,0,0.0
 20068G,drones-epandage-2025,0,1,0,0,0.0
 20068G,duplomb-2025,0,1,0,0,0.0
 20068G,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -30005,7 +30590,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20070A,continuite-transports-greve-2024,1,0,0,0,100.0
 20070A,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20070A,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20070A,cse-la-poste-2022,1,0,0,0,100.0
 20070A,ddadue-2025,0,0,1,0,
+20070A,directeur-ecole-2021,1,0,0,0,100.0
 20070A,drones-epandage-2025,1,0,0,0,100.0
 20070A,duplomb-2025,1,0,0,0,100.0
 20070A,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -30097,7 +30684,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20072C,continuite-transports-greve-2024,1,0,0,0,100.0
 20072C,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20072C,corps-electoral-nc-natifs-2026,0,0,1,0,
+20072C,cse-la-poste-2022,0,1,0,0,0.0
 20072C,ddadue-2025,0,1,0,0,0.0
+20072C,directeur-ecole-2021,0,1,0,0,0.0
 20072C,drones-epandage-2025,0,1,0,0,0.0
 20072C,duplomb-2025,1,0,0,0,100.0
 20072C,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -30189,7 +30778,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20074E,continuite-transports-greve-2024,0,1,0,0,0.0
 20074E,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20074E,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20074E,cse-la-poste-2022,0,1,0,0,0.0
 20074E,ddadue-2025,0,1,0,0,0.0
+20074E,directeur-ecole-2021,0,1,0,0,0.0
 20074E,drones-epandage-2025,0,1,0,0,0.0
 20074E,duplomb-2025,0,1,0,0,0.0
 20074E,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -30281,7 +30872,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20076G,continuite-transports-greve-2024,0,1,0,0,0.0
 20076G,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20076G,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20076G,cse-la-poste-2022,0,1,0,0,0.0
 20076G,ddadue-2025,0,1,0,0,0.0
+20076G,directeur-ecole-2021,0,1,0,0,0.0
 20076G,drones-epandage-2025,0,1,0,0,0.0
 20076G,duplomb-2025,0,1,0,0,0.0
 20076G,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -30372,7 +30965,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20078J,continuite-transports-greve-2024,0,1,0,0,0.0
 20078J,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20078J,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20078J,cse-la-poste-2022,0,1,0,0,0.0
 20078J,ddadue-2025,0,1,0,0,0.0
+20078J,directeur-ecole-2021,0,1,0,0,0.0
 20078J,drones-epandage-2025,0,1,0,0,0.0
 20078J,duplomb-2025,0,1,0,0,0.0
 20078J,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -30464,7 +31059,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20080C,continuite-transports-greve-2024,1,0,0,0,100.0
 20080C,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20080C,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20080C,cse-la-poste-2022,1,0,0,0,100.0
 20080C,ddadue-2025,0,0,1,0,
+20080C,directeur-ecole-2021,1,0,0,0,100.0
 20080C,drones-epandage-2025,1,0,0,0,100.0
 20080C,duplomb-2025,1,0,0,0,100.0
 20080C,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -30557,7 +31154,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20082E,continuite-transports-greve-2024,1,0,0,0,100.0
 20082E,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20082E,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20082E,cse-la-poste-2022,1,0,0,0,100.0
 20082E,ddadue-2025,0,0,1,0,
+20082E,directeur-ecole-2021,1,0,0,0,100.0
 20082E,drones-epandage-2025,1,0,0,0,100.0
 20082E,duplomb-2025,1,0,0,0,100.0
 20082E,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -30649,7 +31248,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20084G,continuite-transports-greve-2024,1,0,0,0,100.0
 20084G,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20084G,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20084G,cse-la-poste-2022,1,0,0,0,100.0
 20084G,ddadue-2025,0,0,1,0,
+20084G,directeur-ecole-2021,1,0,0,0,100.0
 20084G,drones-epandage-2025,1,0,0,0,100.0
 20084G,duplomb-2025,1,0,0,0,100.0
 20084G,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -30741,7 +31342,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20086J,continuite-transports-greve-2024,0,1,0,0,0.0
 20086J,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20086J,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20086J,cse-la-poste-2022,0,1,0,0,0.0
 20086J,ddadue-2025,0,1,0,0,0.0
+20086J,directeur-ecole-2021,0,1,0,0,0.0
 20086J,drones-epandage-2025,0,1,0,0,0.0
 20086J,duplomb-2025,0,1,0,0,0.0
 20086J,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -30834,7 +31437,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20088L,continuite-transports-greve-2024,1,0,0,0,100.0
 20088L,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20088L,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20088L,cse-la-poste-2022,1,0,0,0,100.0
 20088L,ddadue-2025,0,0,1,0,
+20088L,directeur-ecole-2021,1,0,0,0,100.0
 20088L,drones-epandage-2025,1,0,0,0,100.0
 20088L,duplomb-2025,1,0,0,0,100.0
 20088L,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -30927,7 +31532,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20090E,continuite-transports-greve-2024,0,1,0,0,0.0
 20090E,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20090E,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20090E,cse-la-poste-2022,0,1,0,0,0.0
 20090E,ddadue-2025,0,1,0,0,0.0
+20090E,directeur-ecole-2021,0,1,0,0,0.0
 20090E,drones-epandage-2025,0,1,0,0,0.0
 20090E,duplomb-2025,0,1,0,0,0.0
 20090E,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -31020,7 +31627,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20092G,continuite-transports-greve-2024,1,0,0,0,100.0
 20092G,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20092G,corps-electoral-nc-natifs-2026,0,0,1,0,
+20092G,cse-la-poste-2022,1,0,0,0,100.0
 20092G,ddadue-2025,1,0,0,0,100.0
+20092G,directeur-ecole-2021,1,0,0,0,100.0
 20092G,drones-epandage-2025,1,0,0,0,100.0
 20092G,duplomb-2025,1,0,0,0,100.0
 20092G,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -31113,7 +31722,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20094J,continuite-transports-greve-2024,1,0,0,0,100.0
 20094J,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20094J,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20094J,cse-la-poste-2022,1,0,0,0,100.0
 20094J,ddadue-2025,0,0,1,0,
+20094J,directeur-ecole-2021,1,0,0,0,100.0
 20094J,drones-epandage-2025,1,0,0,0,100.0
 20094J,duplomb-2025,1,0,0,0,100.0
 20094J,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -31206,7 +31817,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20096L,continuite-transports-greve-2024,0,1,0,0,0.0
 20096L,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20096L,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20096L,cse-la-poste-2022,0,1,0,0,0.0
 20096L,ddadue-2025,0,1,0,0,0.0
+20096L,directeur-ecole-2021,0,1,0,0,0.0
 20096L,drones-epandage-2025,0,1,0,0,0.0
 20096L,duplomb-2025,0,1,0,0,0.0
 20096L,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -31299,7 +31912,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20098N,continuite-transports-greve-2024,0,1,0,0,0.0
 20098N,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20098N,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20098N,cse-la-poste-2022,0,1,0,0,0.0
 20098N,ddadue-2025,0,1,0,0,0.0
+20098N,directeur-ecole-2021,0,1,0,0,0.0
 20098N,drones-epandage-2025,0,1,0,0,0.0
 20098N,duplomb-2025,0,1,0,0,0.0
 20098N,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -31391,7 +32006,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20100N,continuite-transports-greve-2024,1,0,0,0,100.0
 20100N,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20100N,corps-electoral-nc-natifs-2026,0,0,1,0,
+20100N,cse-la-poste-2022,1,0,0,0,100.0
 20100N,ddadue-2025,1,0,0,0,100.0
+20100N,directeur-ecole-2021,1,0,0,0,100.0
 20100N,drones-epandage-2025,1,0,0,0,100.0
 20100N,duplomb-2025,1,0,0,0,100.0
 20100N,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -31483,7 +32100,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20102Q,continuite-transports-greve-2024,1,0,0,0,100.0
 20102Q,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20102Q,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
+20102Q,cse-la-poste-2022,1,0,0,0,100.0
 20102Q,ddadue-2025,0,0,1,0,
+20102Q,directeur-ecole-2021,1,0,0,0,100.0
 20102Q,drones-epandage-2025,1,0,0,0,100.0
 20102Q,duplomb-2025,1,0,0,0,100.0
 20102Q,ecriture-inclusive-senat-2023,0,0,0,1,
@@ -31576,7 +32195,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20104S,continuite-transports-greve-2024,0,1,0,0,0.0
 20104S,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20104S,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20104S,cse-la-poste-2022,0,1,0,0,0.0
 20104S,ddadue-2025,0,1,0,0,0.0
+20104S,directeur-ecole-2021,0,1,0,0,0.0
 20104S,drones-epandage-2025,0,1,0,0,0.0
 20104S,duplomb-2025,0,1,0,0,0.0
 20104S,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -31669,7 +32290,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20106U,continuite-transports-greve-2024,0,0,1,0,
 20106U,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20106U,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20106U,cse-la-poste-2022,0,1,0,0,0.0
 20106U,ddadue-2025,0,1,0,0,0.0
+20106U,directeur-ecole-2021,0,1,0,0,0.0
 20106U,drones-epandage-2025,0,0,1,0,
 20106U,duplomb-2025,0,1,0,0,0.0
 20106U,ecriture-inclusive-senat-2023,0,0,1,0,
@@ -31761,7 +32384,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20108W,continuite-transports-greve-2024,0,1,0,0,0.0
 20108W,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20108W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20108W,cse-la-poste-2022,0,1,0,0,0.0
 20108W,ddadue-2025,0,1,0,0,0.0
+20108W,directeur-ecole-2021,0,1,0,0,0.0
 20108W,drones-epandage-2025,0,1,0,0,0.0
 20108W,duplomb-2025,0,1,0,0,0.0
 20108W,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -31853,7 +32478,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20110Q,continuite-transports-greve-2024,1,0,0,0,100.0
 20110Q,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20110Q,corps-electoral-nc-natifs-2026,0,0,1,0,
+20110Q,cse-la-poste-2022,1,0,0,0,100.0
 20110Q,ddadue-2025,1,0,0,0,100.0
+20110Q,directeur-ecole-2021,1,0,0,0,100.0
 20110Q,drones-epandage-2025,1,0,0,0,100.0
 20110Q,duplomb-2025,1,0,0,0,100.0
 20110Q,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -31946,7 +32573,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20112S,continuite-transports-greve-2024,1,0,0,0,100.0
 20112S,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20112S,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
+20112S,cse-la-poste-2022,1,0,0,0,100.0
 20112S,ddadue-2025,0,0,1,0,
+20112S,directeur-ecole-2021,1,0,0,0,100.0
 20112S,drones-epandage-2025,1,0,0,0,100.0
 20112S,duplomb-2025,1,0,0,0,100.0
 20112S,ecriture-inclusive-senat-2023,0,0,0,1,
@@ -32039,7 +32668,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20114U,continuite-transports-greve-2024,1,0,0,0,100.0
 20114U,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20114U,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20114U,cse-la-poste-2022,1,0,0,0,100.0
 20114U,ddadue-2025,0,0,1,0,
+20114U,directeur-ecole-2021,1,0,0,0,100.0
 20114U,drones-epandage-2025,1,0,0,0,100.0
 20114U,duplomb-2025,1,0,0,0,100.0
 20114U,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -32131,7 +32762,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20116W,continuite-transports-greve-2024,1,0,0,0,100.0
 20116W,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20116W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20116W,cse-la-poste-2022,0,1,0,0,0.0
 20116W,ddadue-2025,0,1,0,0,0.0
+20116W,directeur-ecole-2021,0,1,0,0,0.0
 20116W,drones-epandage-2025,0,1,0,0,0.0
 20116W,duplomb-2025,0,1,0,0,0.0
 20116W,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -32223,7 +32856,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20118Y,continuite-transports-greve-2024,0,1,0,0,0.0
 20118Y,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20118Y,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20118Y,cse-la-poste-2022,0,1,0,0,0.0
 20118Y,ddadue-2025,0,1,0,0,0.0
+20118Y,directeur-ecole-2021,0,1,0,0,0.0
 20118Y,drones-epandage-2025,0,1,0,0,0.0
 20118Y,duplomb-2025,0,1,0,0,0.0
 20118Y,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -32316,7 +32951,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20120S,continuite-transports-greve-2024,0,1,0,0,0.0
 20120S,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20120S,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20120S,cse-la-poste-2022,0,1,0,0,0.0
 20120S,ddadue-2025,0,1,0,0,0.0
+20120S,directeur-ecole-2021,0,1,0,0,0.0
 20120S,drones-epandage-2025,0,1,0,0,0.0
 20120S,duplomb-2025,0,1,0,0,0.0
 20120S,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -32408,7 +33045,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20122U,continuite-transports-greve-2024,0,1,0,0,0.0
 20122U,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20122U,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20122U,cse-la-poste-2022,0,1,0,0,0.0
 20122U,ddadue-2025,0,0,0,1,
+20122U,directeur-ecole-2021,0,1,0,0,0.0
 20122U,drones-epandage-2025,0,1,0,0,0.0
 20122U,duplomb-2025,0,1,0,0,0.0
 20122U,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -32500,7 +33139,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20124W,continuite-transports-greve-2024,0,1,0,0,0.0
 20124W,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20124W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20124W,cse-la-poste-2022,0,1,0,0,0.0
 20124W,ddadue-2025,0,1,0,0,0.0
+20124W,directeur-ecole-2021,0,1,0,0,0.0
 20124W,drones-epandage-2025,0,1,0,0,0.0
 20124W,duplomb-2025,0,0,1,0,
 20124W,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -32593,7 +33234,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20126Y,continuite-transports-greve-2024,0,1,0,0,0.0
 20126Y,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20126Y,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20126Y,cse-la-poste-2022,0,1,0,0,0.0
 20126Y,ddadue-2025,0,1,0,0,0.0
+20126Y,directeur-ecole-2021,0,1,0,0,0.0
 20126Y,drones-epandage-2025,0,1,0,0,0.0
 20126Y,duplomb-2025,0,1,0,0,0.0
 20126Y,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -32686,7 +33329,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20128B,continuite-transports-greve-2024,0,0,1,0,
 20128B,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20128B,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20128B,cse-la-poste-2022,0,1,0,0,0.0
 20128B,ddadue-2025,0,1,0,0,0.0
+20128B,directeur-ecole-2021,0,1,0,0,0.0
 20128B,drones-epandage-2025,0,1,0,0,0.0
 20128B,duplomb-2025,0,1,0,0,0.0
 20128B,ecriture-inclusive-senat-2023,0,0,1,0,
@@ -32778,7 +33423,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20130U,continuite-transports-greve-2024,1,0,0,0,100.0
 20130U,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20130U,corps-electoral-nc-natifs-2026,0,0,1,0,
+20130U,cse-la-poste-2022,1,0,0,0,100.0
 20130U,ddadue-2025,1,0,0,0,100.0
+20130U,directeur-ecole-2021,1,0,0,0,100.0
 20130U,drones-epandage-2025,1,0,0,0,100.0
 20130U,duplomb-2025,1,0,0,0,100.0
 20130U,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -32870,7 +33517,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20132W,continuite-transports-greve-2024,0,1,0,0,0.0
 20132W,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20132W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20132W,cse-la-poste-2022,0,1,0,0,0.0
 20132W,ddadue-2025,0,1,0,0,0.0
+20132W,directeur-ecole-2021,0,1,0,0,0.0
 20132W,drones-epandage-2025,0,1,0,0,0.0
 20132W,duplomb-2025,0,1,0,0,0.0
 20132W,ecriture-inclusive-senat-2023,0,0,1,0,
@@ -32963,7 +33612,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20134Y,continuite-transports-greve-2024,1,0,0,0,100.0
 20134Y,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20134Y,corps-electoral-nc-natifs-2026,0,0,1,0,
+20134Y,cse-la-poste-2022,1,0,0,0,100.0
 20134Y,ddadue-2025,1,0,0,0,100.0
+20134Y,directeur-ecole-2021,1,0,0,0,100.0
 20134Y,drones-epandage-2025,1,0,0,0,100.0
 20134Y,duplomb-2025,1,0,0,0,100.0
 20134Y,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -33050,6 +33701,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20136B,confiance-justice-2021,0,1,0,0,0.0
 20136B,continuite-transports-greve-2024,0,1,0,0,0.0
 20136B,corps-electoral-nc-degel-2024,1,0,0,0,100.0
+20136B,cse-la-poste-2022,0,1,0,0,0.0
+20136B,directeur-ecole-2021,0,1,0,0,0.0
 20136B,ecriture-inclusive-senat-2023,0,1,0,0,0.0
 20136B,energies-renouvelables-2023,0,1,0,0,0.0
 20136B,fin-regimes-exception-covid-2022,0,1,0,0,0.0
@@ -33108,7 +33761,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20138D,continuite-transports-greve-2024,0,1,0,0,0.0
 20138D,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20138D,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20138D,cse-la-poste-2022,0,1,0,0,0.0
 20138D,ddadue-2025,0,1,0,0,0.0
+20138D,directeur-ecole-2021,0,1,0,0,0.0
 20138D,drones-epandage-2025,0,1,0,0,0.0
 20138D,duplomb-2025,0,1,0,0,0.0
 20138D,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -33200,7 +33855,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20140W,continuite-transports-greve-2024,0,1,0,0,0.0
 20140W,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20140W,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20140W,cse-la-poste-2022,0,1,0,0,0.0
 20140W,ddadue-2025,0,1,0,0,0.0
+20140W,directeur-ecole-2021,0,1,0,0,0.0
 20140W,drones-epandage-2025,0,1,0,0,0.0
 20140W,duplomb-2025,0,1,0,0,0.0
 20140W,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -33291,7 +33948,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20142Y,continuite-transports-greve-2024,1,0,0,0,100.0
 20142Y,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20142Y,corps-electoral-nc-natifs-2026,0,0,1,0,
+20142Y,cse-la-poste-2022,1,0,0,0,100.0
 20142Y,ddadue-2025,1,0,0,0,100.0
+20142Y,directeur-ecole-2021,1,0,0,0,100.0
 20142Y,drones-epandage-2025,1,0,0,0,100.0
 20142Y,duplomb-2025,1,0,0,0,100.0
 20142Y,ecriture-inclusive-senat-2023,1,0,0,0,100.0
@@ -33382,7 +34041,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20144B,continuite-transports-greve-2024,0,1,0,0,0.0
 20144B,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20144B,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20144B,cse-la-poste-2022,0,1,0,0,0.0
 20144B,ddadue-2025,0,1,0,0,0.0
+20144B,directeur-ecole-2021,0,1,0,0,0.0
 20144B,drones-epandage-2025,0,1,0,0,0.0
 20144B,duplomb-2025,0,1,0,0,0.0
 20144B,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -33473,7 +34134,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20146D,continuite-transports-greve-2024,0,0,1,0,
 20146D,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20146D,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20146D,cse-la-poste-2022,0,1,0,0,0.0
 20146D,ddadue-2025,0,1,0,0,0.0
+20146D,directeur-ecole-2021,0,1,0,0,0.0
 20146D,drones-epandage-2025,0,1,0,0,0.0
 20146D,duplomb-2025,0,1,0,0,0.0
 20146D,ecriture-inclusive-senat-2023,0,0,1,0,
@@ -33564,7 +34227,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20148F,continuite-transports-greve-2024,0,1,0,0,0.0
 20148F,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20148F,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20148F,cse-la-poste-2022,0,1,0,0,0.0
 20148F,ddadue-2025,0,1,0,0,0.0
+20148F,directeur-ecole-2021,0,1,0,0,0.0
 20148F,drones-epandage-2025,0,1,0,0,0.0
 20148F,duplomb-2025,0,1,0,0,0.0
 20148F,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -33655,7 +34320,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20150Y,continuite-transports-greve-2024,0,0,1,0,
 20150Y,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20150Y,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20150Y,cse-la-poste-2022,0,1,0,0,0.0
 20150Y,ddadue-2025,0,1,0,0,0.0
+20150Y,directeur-ecole-2021,0,1,0,0,0.0
 20150Y,drones-epandage-2025,0,1,0,0,0.0
 20150Y,duplomb-2025,0,1,0,0,0.0
 20150Y,ecriture-inclusive-senat-2023,0,0,1,0,
@@ -33738,6 +34405,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20152B,assurance-chomage-2022,0,1,0,0,0.0
 20152B,climat-resilience-2021,1,0,0,0,100.0
 20152B,confiance-justice-2021,0,1,0,0,0.0
+20152B,cse-la-poste-2022,0,1,0,0,0.0
+20152B,directeur-ecole-2021,0,1,0,0,0.0
 20152B,energies-renouvelables-2023,0,1,0,0,0.0
 20152B,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 20152B,gestion-crise-sanitaire-2021,0,1,0,0,0.0
@@ -33781,7 +34450,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20172F,continuite-transports-greve-2024,0,1,0,0,0.0
 20172F,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20172F,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20172F,cse-la-poste-2022,0,1,0,0,0.0
 20172F,ddadue-2025,0,1,0,0,0.0
+20172F,directeur-ecole-2021,0,1,0,0,0.0
 20172F,drones-epandage-2025,0,1,0,0,0.0
 20172F,duplomb-2025,0,1,0,0,0.0
 20172F,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -33863,6 +34534,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20172F,zan-2023,0,1,0,0,0.0
 20174H,climat-resilience-2021,0,0,1,0,
 20174H,confiance-justice-2021,0,1,0,0,0.0
+20174H,directeur-ecole-2021,0,1,0,0,0.0
 20174H,gestion-crise-sanitaire-2021,0,1,0,0,0.0
 20174H,lanceurs-alerte-2022,1,0,0,0,100.0
 20174H,neonicotinoides-betteraves-2020,0,1,0,0,0.0
@@ -33888,7 +34560,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20180F,continuite-transports-greve-2024,0,1,0,0,0.0
 20180F,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20180F,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20180F,cse-la-poste-2022,0,1,0,0,0.0
 20180F,ddadue-2025,0,1,0,0,0.0
+20180F,directeur-ecole-2021,0,1,0,0,0.0
 20180F,drones-epandage-2025,0,1,0,0,0.0
 20180F,duplomb-2025,0,1,0,0,0.0
 20180F,ecriture-inclusive-senat-2023,0,1,0,0,0.0
@@ -33977,6 +34651,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20248J,continuite-transports-greve-2024,0,1,0,0,0.0
 20248J,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20248J,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20248J,cse-la-poste-2022,0,1,0,0,0.0
 20248J,ddadue-2025,0,1,0,0,0.0
 20248J,drones-epandage-2025,0,1,0,0,0.0
 20248J,duplomb-2025,0,1,0,0,0.0
@@ -34062,6 +34737,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20252E,continuite-transports-greve-2024,0,1,0,0,0.0
 20252E,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20252E,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20252E,cse-la-poste-2022,0,1,0,0,0.0
 20252E,ddadue-2025,0,1,0,0,0.0
 20252E,drones-epandage-2025,0,1,0,0,0.0
 20252E,duplomb-2025,0,1,0,0,0.0
@@ -34145,6 +34821,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20264J,continuite-transports-greve-2024,1,0,0,0,100.0
 20264J,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20264J,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20264J,cse-la-poste-2022,1,0,0,0,100.0
 20264J,ddadue-2025,0,0,1,0,
 20264J,drones-epandage-2025,1,0,0,0,100.0
 20264J,duplomb-2025,1,0,0,0,100.0
@@ -34228,6 +34905,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20266L,continuite-transports-greve-2024,1,0,0,0,100.0
 20266L,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 20266L,corps-electoral-nc-natifs-2026,0,0,1,0,
+20266L,cse-la-poste-2022,1,0,0,0,100.0
 20266L,ddadue-2025,1,0,0,0,100.0
 20266L,drones-epandage-2025,1,0,0,0,100.0
 20266L,duplomb-2025,1,0,0,0,100.0
@@ -34310,6 +34988,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20286Q,continuite-transports-greve-2024,0,1,0,0,0.0
 20286Q,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 20286Q,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+20286Q,cse-la-poste-2022,0,1,0,0,0.0
 20286Q,ddadue-2025,0,1,0,0,0.0
 20286Q,drones-epandage-2025,0,1,0,0,0.0
 20286Q,duplomb-2025,0,1,0,0,0.0
@@ -34381,6 +35060,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20286Q,valletoux-2023,1,0,0,0,100.0
 20286Q,zan-2023,0,1,0,0,0.0
 20298U,assurance-chomage-2022,0,1,0,0,0.0
+20298U,cse-la-poste-2022,0,1,0,0,0.0
 20298U,energies-renouvelables-2023,0,1,0,0,0.0
 20298U,fin-regimes-exception-covid-2022,0,1,0,0,0.0
 20298U,ivg-contraception-constitution-senat-2022,1,0,0,0,100.0
@@ -34408,6 +35088,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 20874F,casseurs-payeurs-2026,0,3,0,0,0.0
 20874F,rapports-locatifs-2025,0,1,0,0,0.0
 20914V,assurance-chomage-2022,1,0,0,0,100.0
+20914V,cse-la-poste-2022,1,0,0,0,100.0
 20914V,energies-renouvelables-2023,0,0,1,0,
 20914V,fin-regimes-exception-covid-2022,0,0,1,0,
 20914V,ivg-contraception-constitution-senat-2022,1,0,0,0,100.0
@@ -39181,7 +39862,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 86034E,continuite-transports-greve-2024,0,0,0,1,
 86034E,corps-electoral-nc-degel-2024,0,0,0,1,
 86034E,corps-electoral-nc-natifs-2026,0,0,0,1,
+86034E,cse-la-poste-2022,0,0,0,1,
 86034E,ddadue-2025,0,0,0,1,
+86034E,directeur-ecole-2021,0,0,0,1,
 86034E,drones-epandage-2025,0,0,0,1,
 86034E,duplomb-2025,0,0,0,1,
 86034E,ecole-confiance-2019,0,0,0,1,
@@ -39377,6 +40060,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 92040Q,climat-resilience-2021,1,0,0,0,100.0
 92040Q,confiance-justice-2021,0,1,0,0,0.0
 92040Q,consultation-nc-2018,1,0,0,0,100.0
+92040Q,cse-la-poste-2022,0,1,0,0,0.0
+92040Q,directeur-ecole-2021,0,1,0,0,0.0
 92040Q,ecole-confiance-2019,1,0,0,0,100.0
 92040Q,elan-2018,0,1,0,0,0.0
 92040Q,fin-regimes-exception-covid-2022,0,1,0,0,0.0
@@ -39494,7 +40179,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 95041E,continuite-transports-greve-2024,0,1,0,0,0.0
 95041E,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 95041E,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+95041E,cse-la-poste-2022,0,1,0,0,0.0
 95041E,ddadue-2025,0,1,0,0,0.0
+95041E,directeur-ecole-2021,0,1,0,0,0.0
 95041E,drones-epandage-2025,0,1,0,0,0.0
 95041E,duplomb-2025,0,1,0,0,0.0
 95041E,ecole-confiance-2019,1,0,0,0,100.0
@@ -39621,6 +40308,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 95063L,climat-resilience-2021,0,0,1,0,
 95063L,confiance-justice-2021,0,1,0,0,0.0
 95063L,consultation-nc-2018,1,0,0,0,100.0
+95063L,cse-la-poste-2022,0,1,0,0,0.0
+95063L,directeur-ecole-2021,0,1,0,0,0.0
 95063L,ecole-confiance-2019,0,0,1,0,
 95063L,elan-2018,0,1,0,0,0.0
 95063L,energies-renouvelables-2023,0,1,0,0,0.0
@@ -39724,6 +40413,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 97011G,climat-resilience-2021,1,0,0,0,100.0
 97011G,confiance-justice-2021,0,1,0,0,0.0
 97011G,consultation-nc-2018,1,0,0,0,100.0
+97011G,cse-la-poste-2022,0,1,0,0,0.0
+97011G,directeur-ecole-2021,0,1,0,0,0.0
 97011G,ecole-confiance-2019,1,0,0,0,100.0
 97011G,elan-2018,0,1,0,0,0.0
 97011G,energies-renouvelables-2023,0,1,0,0,0.0
@@ -39800,6 +40491,7 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 98018T,bioethique-2021,0,1,0,0,0.0
 98018T,climat-resilience-2021,1,0,0,0,100.0
 98018T,consultation-nc-2018,1,0,0,0,100.0
+98018T,directeur-ecole-2021,0,1,0,0,0.0
 98018T,ecole-confiance-2019,1,0,0,0,100.0
 98018T,elan-2018,0,1,0,0,0.0
 98018T,gens-du-voyage-2018,0,1,0,0,0.0
@@ -39838,6 +40530,8 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 98022P,climat-resilience-2021,0,0,1,0,
 98022P,confiance-justice-2021,0,1,0,0,0.0
 98022P,consultation-nc-2018,1,0,0,0,100.0
+98022P,cse-la-poste-2022,0,1,0,0,0.0
+98022P,directeur-ecole-2021,0,1,0,0,0.0
 98022P,ecole-confiance-2019,0,0,1,0,
 98022P,ecriture-inclusive-senat-2023,0,1,0,0,0.0
 98022P,elan-2018,0,1,0,0,0.0
@@ -40026,7 +40720,9 @@ senateur_id,texte_id,votes_favorables,votes_defavorables,abstentions,non_votants
 99004R,continuite-transports-greve-2024,0,1,0,0,0.0
 99004R,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 99004R,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
+99004R,cse-la-poste-2022,0,1,0,0,0.0
 99004R,ddadue-2025,0,1,0,0,0.0
+99004R,directeur-ecole-2021,0,0,0,1,
 99004R,drones-epandage-2025,0,1,0,0,0.0
 99004R,duplomb-2025,0,1,0,0,0.0
 99004R,ecole-confiance-2019,1,0,0,0,100.0

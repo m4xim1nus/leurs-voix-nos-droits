@@ -274,7 +274,7 @@ PA1874,15,libertes,12,6,4,0,3,51.7
 PA1874,15,logement,1,1,0,0,0,100.0
 PA1874,15,police-justice,11,3,4,0,4,41.7
 PA1874,15,sante,2,0,2,0,0,0.0
-PA1874,15,travail-protection-sociale,12,6,3,1,2,60.0
+PA1874,15,travail-protection-sociale,13,6,3,1,3,60.0
 PA1874,15,vie-privee,9,4,1,0,4,75.0
 PA1874,16,citoyennete,2,2,0,0,0,100.0
 PA1874,16,discriminations,4,2,2,0,0,50.0
@@ -811,7 +811,7 @@ PA267429,15,libertes,9,7,3,0,0,68.8
 PA267429,15,logement,1,1,0,0,0,100.0
 PA267429,15,police-justice,6,2,4,0,0,30.0
 PA267429,15,sante,2,0,2,0,0,0.0
-PA267429,15,travail-protection-sociale,7,5,2,1,0,63.6
+PA267429,15,travail-protection-sociale,8,5,3,1,0,53.8
 PA267429,15,vie-privee,5,5,1,0,0,77.8
 PA267429,16,citoyennete,1,1,0,0,0,100.0
 PA267429,16,discriminations,2,1,1,0,0,66.7
@@ -2513,7 +2513,7 @@ PA606171,15,libertes,22,0,1,0,33,0.0
 PA606171,15,logement,4,0,1,0,3,0.0
 PA606171,15,police-justice,16,0,1,0,26,0.0
 PA606171,15,sante,5,0,0,0,6,
-PA606171,15,travail-protection-sociale,13,0,2,0,17,0.0
+PA606171,15,travail-protection-sociale,14,0,2,0,18,0.0
 PA606171,15,vie-privee,16,1,1,0,25,66.7
 PA606202,15,citoyennete,1,1,0,0,0,100.0
 PA606202,15,discriminations,1,0,1,0,0,0.0
@@ -3570,7 +3570,7 @@ PA643127,15,libertes,17,1,20,0,0,6.4
 PA643127,15,logement,4,0,4,0,0,0.0
 PA643127,15,police-justice,12,0,16,0,0,0.0
 PA643127,15,sante,3,2,1,0,0,80.0
-PA643127,15,travail-protection-sociale,11,3,11,0,0,19.0
+PA643127,15,travail-protection-sociale,12,3,12,0,0,17.4
 PA643127,15,vie-privee,11,1,13,0,0,10.9
 PA643134,15,citoyennete,1,1,0,0,0,100.0
 PA643134,15,discriminations,2,1,1,0,0,50.0
@@ -3728,7 +3728,7 @@ PA643192,15,femmes-lgbti,1,1,0,0,0,100.0
 PA643192,15,libertes,5,4,0,1,0,100.0
 PA643192,15,police-justice,4,1,2,1,0,20.0
 PA643192,15,sante,4,3,1,0,0,71.4
-PA643192,15,travail-protection-sociale,1,1,0,0,0,100.0
+PA643192,15,travail-protection-sociale,2,2,0,0,0,100.0
 PA643192,15,vie-privee,4,3,0,1,0,100.0
 PA643192,16,citoyennete,2,0,1,1,0,0.0
 PA643192,16,discriminations,5,2,1,2,0,80.0
@@ -3764,7 +3764,7 @@ PA643205,15,libertes,10,0,12,0,0,0.0
 PA643205,15,logement,2,0,3,0,0,0.0
 PA643205,15,police-justice,10,0,12,0,0,0.0
 PA643205,15,sante,3,3,0,0,0,100.0
-PA643205,15,travail-protection-sociale,7,0,7,0,0,0.0
+PA643205,15,travail-protection-sociale,8,0,8,0,0,0.0
 PA643205,15,vie-privee,6,0,7,1,0,0.0
 PA672,15,citoyennete,1,1,0,0,0,100.0
 PA672,15,discriminations,2,0,2,0,0,0.0
@@ -4163,7 +4163,7 @@ PA718720,15,libertes,14,15,0,0,0,100.0
 PA718720,15,logement,4,4,0,0,0,100.0
 PA718720,15,police-justice,8,8,0,0,0,100.0
 PA718720,15,sante,4,1,2,1,0,20.0
-PA718720,15,travail-protection-sociale,12,15,0,0,0,100.0
+PA718720,15,travail-protection-sociale,13,16,0,0,0,100.0
 PA718720,15,vie-privee,8,8,0,1,0,100.0
 PA718728,15,citoyennete,1,1,0,0,0,100.0
 PA718728,15,enfants,2,1,1,0,0,50.0
@@ -4279,7 +4279,7 @@ PA718794,15,libertes,15,0,16,0,0,0.0
 PA718794,15,logement,3,0,5,0,0,0.0
 PA718794,15,police-justice,10,0,10,0,0,0.0
 PA718794,15,sante,3,2,1,0,0,80.0
-PA718794,15,travail-protection-sociale,10,0,11,0,0,0.0
+PA718794,15,travail-protection-sociale,11,0,12,0,0,0.0
 PA718794,15,vie-privee,8,1,8,0,0,14.3
 PA718802,15,citoyennete,1,1,0,0,0,100.0
 PA718802,15,discriminations,2,1,1,0,0,66.7
@@ -4415,7 +4415,7 @@ PA718868,15,libertes,15,17,0,0,0,100.0
 PA718868,15,logement,4,4,0,0,0,100.0
 PA718868,15,police-justice,8,9,0,0,0,100.0
 PA718868,15,sante,4,3,1,0,0,71.4
-PA718868,15,travail-protection-sociale,11,12,0,0,0,100.0
+PA718868,15,travail-protection-sociale,12,13,0,0,0,100.0
 PA718868,15,vie-privee,10,11,1,0,0,88.2
 PA718876,15,citoyennete,1,1,0,0,0,100.0
 PA718876,15,discriminations,1,0,1,0,0,0.0
@@ -4473,7 +4473,7 @@ PA718894,15,libertes,12,0,13,0,0,0.0
 PA718894,15,logement,3,0,3,0,0,0.0
 PA718894,15,police-justice,8,0,8,0,0,0.0
 PA718894,15,sante,2,2,0,0,0,100.0
-PA718894,15,travail-protection-sociale,8,0,9,0,0,0.0
+PA718894,15,travail-protection-sociale,9,0,10,0,0,0.0
 PA718894,15,vie-privee,8,1,8,0,0,16.4
 PA718902,15,citoyennete,1,1,0,0,0,100.0
 PA718902,15,discriminations,2,1,2,0,0,57.1
@@ -5095,7 +5095,7 @@ PA719186,15,libertes,18,0,20,0,0,0.0
 PA719186,15,logement,3,0,4,0,0,0.0
 PA719186,15,police-justice,11,0,13,0,0,0.0
 PA719186,15,sante,4,2,1,1,0,66.7
-PA719186,15,travail-protection-sociale,11,0,13,0,0,0.0
+PA719186,15,travail-protection-sociale,12,0,14,0,0,0.0
 PA719186,15,vie-privee,10,1,10,0,0,12.4
 PA719186,16,citoyennete,1,0,1,0,0,0.0
 PA719186,16,discriminations,2,1,1,0,0,66.7
@@ -5743,7 +5743,7 @@ PA719448,15,libertes,9,0,8,1,0,0.0
 PA719448,15,logement,3,0,3,0,0,0.0
 PA719448,15,police-justice,8,1,6,1,0,17.9
 PA719448,15,sante,5,4,1,0,0,77.8
-PA719448,15,travail-protection-sociale,6,1,6,0,0,19.0
+PA719448,15,travail-protection-sociale,7,1,7,0,0,16.0
 PA719448,15,vie-privee,4,1,3,0,0,38.7
 PA719456,15,citoyennete,1,1,0,0,0,100.0
 PA719456,15,discriminations,2,1,3,0,0,50.0
@@ -5755,7 +5755,7 @@ PA719456,15,libertes,16,1,14,6,0,4.1
 PA719456,15,logement,4,1,6,0,0,12.5
 PA719456,15,police-justice,9,1,9,2,0,6.6
 PA719456,15,sante,3,1,1,1,0,50.0
-PA719456,15,travail-protection-sociale,8,0,8,0,0,0.0
+PA719456,15,travail-protection-sociale,9,0,9,0,0,0.0
 PA719456,15,vie-privee,10,1,10,1,0,11.7
 PA719464,15,discriminations,1,1,0,0,0,100.0
 PA719464,15,enfants,4,4,0,0,0,100.0
@@ -6006,7 +6006,7 @@ PA719558,15,libertes,14,1,17,1,0,0.7
 PA719558,15,logement,2,0,2,0,0,0.0
 PA719558,15,police-justice,11,1,15,1,0,0.9
 PA719558,15,sante,4,3,0,1,0,100.0
-PA719558,15,travail-protection-sociale,9,0,10,0,0,0.0
+PA719558,15,travail-protection-sociale,10,0,11,0,0,0.0
 PA719558,15,vie-privee,10,2,14,0,0,12.5
 PA719558,16,citoyennete,2,1,1,0,0,50.0
 PA719558,16,discriminations,6,4,4,0,0,46.7
@@ -6207,7 +6207,7 @@ PA719640,15,libertes,12,0,14,0,0,0.0
 PA719640,15,logement,1,0,2,0,0,0.0
 PA719640,15,police-justice,9,0,10,0,0,0.0
 PA719640,15,sante,3,3,0,0,0,100.0
-PA719640,15,travail-protection-sociale,9,0,11,0,0,0.0
+PA719640,15,travail-protection-sociale,10,0,12,0,0,0.0
 PA719640,15,vie-privee,8,1,9,0,0,15.2
 PA719640,16,citoyennete,2,2,0,0,0,100.0
 PA719640,16,discriminations,5,4,2,0,0,63.6
@@ -6389,7 +6389,7 @@ PA719728,15,libertes,13,2,10,1,0,20.0
 PA719728,15,logement,3,0,3,0,0,0.0
 PA719728,15,police-justice,10,1,9,0,0,12.5
 PA719728,15,sante,2,2,0,0,0,100.0
-PA719728,15,travail-protection-sociale,11,2,11,0,0,17.1
+PA719728,15,travail-protection-sociale,12,2,12,0,0,15.4
 PA719728,15,vie-privee,6,1,5,0,0,22.2
 PA719736,15,enfants,3,2,1,0,0,66.7
 PA719736,15,environnement,3,1,4,0,0,40.0
@@ -6585,7 +6585,7 @@ PA719814,15,libertes,16,0,19,0,0,0.0
 PA719814,15,logement,3,0,4,0,0,0.0
 PA719814,15,police-justice,13,0,14,0,0,0.0
 PA719814,15,sante,3,2,1,0,0,66.7
-PA719814,15,travail-protection-sociale,11,1,10,0,0,5.9
+PA719814,15,travail-protection-sociale,12,1,11,0,0,5.3
 PA719814,15,vie-privee,12,1,12,0,0,11.0
 PA719814,16,citoyennete,2,1,1,0,0,50.0
 PA719814,16,discriminations,7,3,3,1,0,54.5
@@ -6680,7 +6680,7 @@ PA719858,15,libertes,11,1,10,0,0,12.4
 PA719858,15,logement,3,0,3,0,0,0.0
 PA719858,15,police-justice,12,0,12,0,0,0.0
 PA719858,15,sante,3,3,0,0,0,100.0
-PA719858,15,travail-protection-sociale,8,1,9,0,0,13.8
+PA719858,15,travail-protection-sociale,9,1,10,0,0,12.1
 PA719858,15,vie-privee,8,1,7,0,0,20.7
 PA719866,15,citoyennete,1,1,0,0,0,100.0
 PA719866,15,discriminations,1,0,1,0,0,0.0
@@ -7137,7 +7137,7 @@ PA720030,15,libertes,10,0,12,0,0,0.0
 PA720030,15,logement,3,0,4,0,0,0.0
 PA720030,15,police-justice,6,0,6,0,0,0.0
 PA720030,15,sante,2,2,0,0,0,100.0
-PA720030,15,travail-protection-sociale,10,0,12,0,0,0.0
+PA720030,15,travail-protection-sociale,11,0,13,0,0,0.0
 PA720030,15,vie-privee,7,1,8,0,0,15.4
 PA720038,15,citoyennete,1,1,0,0,0,100.0
 PA720038,15,discriminations,1,1,0,0,0,100.0
@@ -7195,7 +7195,7 @@ PA720054,15,libertes,8,0,8,0,0,0.0
 PA720054,15,logement,1,0,1,0,0,0.0
 PA720054,15,police-justice,6,0,6,0,0,0.0
 PA720054,15,sante,2,1,1,0,0,50.0
-PA720054,15,travail-protection-sociale,6,0,6,0,0,0.0
+PA720054,15,travail-protection-sociale,7,0,7,0,0,0.0
 PA720054,15,vie-privee,4,1,3,0,0,33.3
 PA720054,16,citoyennete,1,1,0,0,0,100.0
 PA720054,16,discriminations,5,4,2,0,0,63.6
@@ -7369,7 +7369,7 @@ PA720124,15,libertes,14,1,11,3,0,2.9
 PA720124,15,logement,3,0,3,0,0,0.0
 PA720124,15,police-justice,10,0,10,0,0,0.0
 PA720124,15,sante,2,2,0,0,0,100.0
-PA720124,15,travail-protection-sociale,10,1,9,0,0,6.2
+PA720124,15,travail-protection-sociale,11,1,10,0,0,5.6
 PA720124,15,vie-privee,8,1,7,0,0,15.4
 PA720138,15,citoyennete,1,1,0,0,0,100.0
 PA720138,15,discriminations,2,0,1,0,1,0.0
@@ -7451,7 +7451,7 @@ PA720154,15,libertes,16,2,22,0,0,10.1
 PA720154,15,logement,3,0,3,0,0,0.0
 PA720154,15,police-justice,17,1,24,0,0,3.1
 PA720154,15,sante,5,4,1,0,0,88.9
-PA720154,15,travail-protection-sociale,14,3,12,0,0,17.0
+PA720154,15,travail-protection-sociale,15,3,13,0,0,15.7
 PA720154,15,vie-privee,11,1,16,0,0,10.4
 PA720154,16,citoyennete,1,1,0,0,0,100.0
 PA720154,16,discriminations,6,8,2,0,0,72.7
@@ -7521,7 +7521,7 @@ PA720170,15,libertes,11,0,15,0,0,0.0
 PA720170,15,logement,2,0,3,0,0,0.0
 PA720170,15,police-justice,9,0,12,0,0,0.0
 PA720170,15,sante,2,1,1,0,0,50.0
-PA720170,15,travail-protection-sociale,9,1,9,0,0,6.2
+PA720170,15,travail-protection-sociale,10,1,10,0,0,5.6
 PA720170,15,vie-privee,6,1,8,0,0,23.1
 PA720174,16,citoyennete,1,0,1,0,0,0.0
 PA720174,16,discriminations,3,2,1,0,0,75.0
@@ -7762,7 +7762,7 @@ PA720278,15,libertes,9,4,3,2,0,50.8
 PA720278,15,logement,2,0,2,0,0,0.0
 PA720278,15,police-justice,7,3,3,1,0,38.8
 PA720278,15,sante,3,4,0,0,0,100.0
-PA720278,15,travail-protection-sociale,8,1,5,2,0,18.2
+PA720278,15,travail-protection-sociale,9,1,6,2,0,15.4
 PA720278,15,vie-privee,6,3,2,1,0,51.4
 PA720286,15,citoyennete,1,1,0,0,0,100.0
 PA720286,15,discriminations,3,2,1,0,0,60.0
@@ -7844,7 +7844,7 @@ PA720334,15,libertes,14,0,16,0,0,0.0
 PA720334,15,logement,3,0,3,0,0,0.0
 PA720334,15,police-justice,11,0,13,0,0,0.0
 PA720334,15,sante,3,2,1,0,0,66.7
-PA720334,15,travail-protection-sociale,11,0,11,0,0,0.0
+PA720334,15,travail-protection-sociale,12,0,12,0,0,0.0
 PA720334,15,vie-privee,10,1,11,0,0,13.0
 PA720334,16,citoyennete,1,1,0,0,0,100.0
 PA720334,16,discriminations,3,3,1,0,0,76.5
@@ -8307,7 +8307,7 @@ PA720488,15,femmes-lgbti,2,0,2,0,0,0.0
 PA720488,15,libertes,6,3,2,1,0,57.1
 PA720488,15,police-justice,4,1,3,0,0,16.7
 PA720488,15,sante,2,0,1,1,0,0.0
-PA720488,15,travail-protection-sociale,3,2,1,0,0,66.7
+PA720488,15,travail-protection-sociale,4,2,2,0,0,40.0
 PA720488,15,vie-privee,4,3,1,0,0,80.0
 PA720492,15,citoyennete,1,1,0,0,0,100.0
 PA720492,15,discriminations,2,1,1,0,0,66.7
@@ -8478,7 +8478,7 @@ PA720576,15,libertes,14,1,15,0,0,8.3
 PA720576,15,logement,2,0,2,0,0,0.0
 PA720576,15,police-justice,11,0,12,0,0,0.0
 PA720576,15,sante,3,3,0,0,0,100.0
-PA720576,15,travail-protection-sociale,10,1,10,0,0,10.5
+PA720576,15,travail-protection-sociale,11,1,11,0,0,9.5
 PA720576,15,vie-privee,9,1,9,0,0,14.1
 PA720586,15,citoyennete,1,1,0,0,0,100.0
 PA720586,15,discriminations,4,3,0,1,0,100.0
@@ -8526,7 +8526,7 @@ PA720598,15,libertes,15,1,15,0,0,7.8
 PA720598,15,logement,3,0,4,0,0,0.0
 PA720598,15,police-justice,8,0,8,0,0,0.0
 PA720598,15,sante,5,4,1,0,0,88.9
-PA720598,15,travail-protection-sociale,10,1,10,0,0,11.4
+PA720598,15,travail-protection-sociale,11,1,11,0,0,10.3
 PA720598,15,vie-privee,9,1,9,0,0,12.5
 PA720606,15,citoyennete,1,1,0,0,0,100.0
 PA720606,15,discriminations,1,1,0,0,0,100.0
@@ -8604,7 +8604,7 @@ PA720630,15,libertes,15,11,7,1,0,67.1
 PA720630,15,logement,3,3,0,0,0,100.0
 PA720630,15,police-justice,11,5,7,2,0,43.8
 PA720630,15,sante,3,1,3,0,0,33.3
-PA720630,15,travail-protection-sociale,11,9,3,1,0,65.7
+PA720630,15,travail-protection-sociale,12,9,4,1,0,59.0
 PA720630,15,vie-privee,10,10,2,1,0,97.6
 PA720630,16,citoyennete,2,2,0,0,0,100.0
 PA720630,16,discriminations,6,3,3,1,0,39.4
@@ -8952,7 +8952,7 @@ PA720772,15,libertes,14,1,14,1,0,2.3
 PA720772,15,logement,3,0,3,0,0,0.0
 PA720772,15,police-justice,8,0,9,0,0,0.0
 PA720772,15,sante,2,1,1,0,0,50.0
-PA720772,15,travail-protection-sociale,9,0,9,0,0,0.0
+PA720772,15,travail-protection-sociale,10,0,10,0,0,0.0
 PA720772,15,vie-privee,9,1,9,0,0,14.1
 PA720772,16,citoyennete,2,2,0,0,0,100.0
 PA720772,16,discriminations,3,1,2,0,0,40.0
@@ -8975,7 +8975,7 @@ PA720780,15,libertes,10,0,15,0,0,0.0
 PA720780,15,logement,3,0,3,0,0,0.0
 PA720780,15,police-justice,10,0,15,0,0,0.0
 PA720780,15,sante,3,2,2,0,0,66.7
-PA720780,15,travail-protection-sociale,7,1,6,0,0,8.3
+PA720780,15,travail-protection-sociale,8,1,7,0,0,7.1
 PA720780,15,vie-privee,8,1,12,0,0,14.5
 PA720790,15,citoyennete,1,1,0,0,0,100.0
 PA720790,15,discriminations,2,1,1,0,0,66.7
@@ -9240,7 +9240,7 @@ PA720900,15,libertes,15,2,16,2,0,1.5
 PA720900,15,logement,2,0,2,0,0,0.0
 PA720900,15,police-justice,10,2,12,1,0,2.1
 PA720900,15,sante,2,1,0,1,0,100.0
-PA720900,15,travail-protection-sociale,11,0,12,0,0,0.0
+PA720900,15,travail-protection-sociale,12,0,13,0,0,0.0
 PA720900,15,vie-privee,9,3,11,0,0,15.7
 PA720900,16,citoyennete,1,1,0,0,0,100.0
 PA720900,16,discriminations,6,6,3,0,0,53.5
@@ -9317,7 +9317,7 @@ PA720928,15,femmes-lgbti,1,1,0,0,0,100.0
 PA720928,15,libertes,12,0,13,0,0,0.0
 PA720928,15,police-justice,8,0,9,0,0,0.0
 PA720928,15,sante,1,1,0,0,0,100.0
-PA720928,15,travail-protection-sociale,5,1,4,0,0,14.3
+PA720928,15,travail-protection-sociale,6,1,5,0,0,11.1
 PA720928,15,vie-privee,10,0,11,0,0,0.0
 PA720932,15,citoyennete,1,1,0,0,0,100.0
 PA720932,15,discriminations,1,1,0,0,0,100.0
@@ -9622,7 +9622,7 @@ PA721054,15,libertes,10,5,4,1,0,56.5
 PA721054,15,logement,1,1,0,0,0,100.0
 PA721054,15,police-justice,7,2,3,2,0,41.9
 PA721054,15,sante,1,0,1,0,0,0.0
-PA721054,15,travail-protection-sociale,7,3,4,0,0,36.4
+PA721054,15,travail-protection-sociale,8,3,5,0,0,30.8
 PA721054,15,vie-privee,6,4,2,0,0,73.5
 PA721062,15,citoyennete,1,1,0,0,0,100.0
 PA721062,15,enfants,4,6,0,0,0,100.0
@@ -10002,7 +10002,7 @@ PA721218,15,libertes,17,0,21,0,0,0.0
 PA721218,15,logement,3,0,3,0,0,0.0
 PA721218,15,police-justice,10,0,13,0,0,0.0
 PA721218,15,sante,2,2,0,0,0,100.0
-PA721218,15,travail-protection-sociale,10,1,10,0,0,5.9
+PA721218,15,travail-protection-sociale,11,1,11,0,0,5.3
 PA721218,15,vie-privee,10,1,12,0,0,12.2
 PA721226,15,citoyennete,1,1,0,0,0,100.0
 PA721226,15,discriminations,1,0,1,0,0,0.0
@@ -10014,7 +10014,7 @@ PA721226,15,libertes,17,21,0,0,0,100.0
 PA721226,15,logement,2,2,0,0,0,100.0
 PA721226,15,police-justice,11,14,0,0,0,100.0
 PA721226,15,sante,4,3,1,0,0,71.4
-PA721226,15,travail-protection-sociale,9,10,0,0,0,100.0
+PA721226,15,travail-protection-sociale,10,11,0,0,0,100.0
 PA721226,15,vie-privee,10,13,1,0,0,88.5
 PA721234,15,citoyennete,1,1,0,0,0,100.0
 PA721234,15,discriminations,3,1,1,1,0,50.0
@@ -10026,7 +10026,7 @@ PA721234,15,libertes,15,0,16,2,0,0.0
 PA721234,15,logement,3,0,2,1,0,0.0
 PA721234,15,police-justice,10,0,11,0,0,0.0
 PA721234,15,sante,4,2,0,2,0,100.0
-PA721234,15,travail-protection-sociale,12,0,14,1,0,0.0
+PA721234,15,travail-protection-sociale,13,0,15,1,0,0.0
 PA721234,15,vie-privee,9,1,10,1,0,15.0
 PA721234,16,citoyennete,2,1,1,0,0,50.0
 PA721234,16,discriminations,5,5,3,0,0,57.9
@@ -10062,7 +10062,7 @@ PA721246,15,libertes,17,9,6,5,0,51.6
 PA721246,15,logement,3,0,3,0,0,0.0
 PA721246,15,police-justice,10,6,5,2,0,47.3
 PA721246,15,sante,3,3,0,0,0,100.0
-PA721246,15,travail-protection-sociale,12,3,9,1,0,26.3
+PA721246,15,travail-protection-sociale,13,3,10,1,0,23.8
 PA721246,15,vie-privee,10,9,2,2,0,85.1
 PA721254,15,environnement,1,1,0,0,0,100.0
 PA721254,15,libertes,2,0,2,0,0,0.0
@@ -10159,7 +10159,7 @@ PA721296,15,libertes,18,1,26,0,0,6.1
 PA721296,15,logement,4,0,4,0,0,0.0
 PA721296,15,police-justice,16,1,23,0,0,7.0
 PA721296,15,sante,3,3,0,0,0,100.0
-PA721296,15,travail-protection-sociale,13,1,16,0,0,4.2
+PA721296,15,travail-protection-sociale,14,1,17,0,0,3.8
 PA721296,15,vie-privee,13,1,22,0,0,8.2
 PA721296,16,citoyennete,2,1,1,0,0,50.0
 PA721296,16,discriminations,7,3,4,1,0,41.5
@@ -10225,7 +10225,7 @@ PA721328,15,libertes,16,0,18,0,0,0.0
 PA721328,15,logement,2,0,3,0,0,0.0
 PA721328,15,police-justice,10,0,10,0,0,0.0
 PA721328,15,sante,3,2,1,0,0,66.7
-PA721328,15,travail-protection-sociale,13,1,13,0,0,4.8
+PA721328,15,travail-protection-sociale,14,1,14,0,0,4.3
 PA721328,15,vie-privee,11,1,10,0,0,12.4
 PA721328,16,discriminations,4,2,2,0,0,57.1
 PA721328,16,enfants,2,1,1,0,0,33.3
@@ -10470,7 +10470,7 @@ PA721450,15,libertes,20,2,22,1,0,7.1
 PA721450,15,logement,4,0,4,0,0,0.0
 PA721450,15,police-justice,12,0,12,1,0,0.0
 PA721450,15,sante,4,4,0,0,0,100.0
-PA721450,15,travail-protection-sociale,12,1,13,0,0,9.1
+PA721450,15,travail-protection-sociale,13,1,14,0,0,8.3
 PA721450,15,vie-privee,14,1,16,0,0,7.9
 PA721458,15,citoyennete,1,1,0,0,0,100.0
 PA721458,15,discriminations,2,0,2,0,0,0.0
@@ -11103,7 +11103,7 @@ PA721750,15,libertes,16,0,19,0,0,0.0
 PA721750,15,logement,3,0,3,0,0,0.0
 PA721750,15,police-justice,9,0,11,0,0,0.0
 PA721750,15,sante,3,2,1,0,0,66.7
-PA721750,15,travail-protection-sociale,13,0,13,0,0,0.0
+PA721750,15,travail-protection-sociale,14,0,14,0,0,0.0
 PA721750,15,vie-privee,12,1,13,0,0,9.8
 PA721750,16,discriminations,5,3,2,0,0,58.6
 PA721750,16,enfants,2,1,0,1,0,100.0
@@ -11322,7 +11322,7 @@ PA721844,15,libertes,17,1,18,0,0,7.2
 PA721844,15,logement,3,0,4,0,0,0.0
 PA721844,15,police-justice,14,1,13,0,0,9.0
 PA721844,15,sante,3,3,1,0,0,83.3
-PA721844,15,travail-protection-sociale,13,1,15,0,0,4.2
+PA721844,15,travail-protection-sociale,14,1,16,0,0,3.8
 PA721844,15,vie-privee,11,1,12,0,0,11.0
 PA721844,16,citoyennete,1,1,0,0,0,100.0
 PA721844,16,discriminations,7,5,4,0,0,52.0
@@ -11462,7 +11462,7 @@ PA721896,15,libertes,11,12,0,0,0,100.0
 PA721896,15,logement,2,4,0,0,0,100.0
 PA721896,15,police-justice,9,10,0,0,0,100.0
 PA721896,15,sante,3,2,1,0,0,60.0
-PA721896,15,travail-protection-sociale,6,6,0,0,0,100.0
+PA721896,15,travail-protection-sociale,7,7,0,0,0,100.0
 PA721896,15,vie-privee,6,7,0,0,0,100.0
 PA721896,16,citoyennete,1,0,1,0,0,0.0
 PA721896,16,discriminations,7,4,4,0,0,49.0
@@ -11527,7 +11527,7 @@ PA721916,15,libertes,14,0,17,0,0,0.0
 PA721916,15,logement,3,0,3,0,0,0.0
 PA721916,15,police-justice,12,0,14,0,0,0.0
 PA721916,15,sante,1,1,0,0,0,100.0
-PA721916,15,travail-protection-sociale,12,0,13,0,0,0.0
+PA721916,15,travail-protection-sociale,13,0,14,0,0,0.0
 PA721916,15,vie-privee,10,1,11,0,0,13.0
 PA721916,16,citoyennete,2,1,1,0,0,50.0
 PA721916,16,discriminations,4,2,2,0,0,50.0
@@ -11807,7 +11807,7 @@ PA722030,15,libertes,14,0,14,1,0,0.0
 PA722030,15,logement,2,0,1,1,0,0.0
 PA722030,15,police-justice,11,0,11,1,0,0.0
 PA722030,15,sante,3,2,0,1,0,100.0
-PA722030,15,travail-protection-sociale,10,0,10,0,0,0.0
+PA722030,15,travail-protection-sociale,11,0,11,0,0,0.0
 PA722030,15,vie-privee,10,1,10,0,0,11.8
 PA722038,15,citoyennete,1,1,0,0,0,100.0
 PA722038,15,discriminations,3,1,2,0,0,44.4
@@ -11889,7 +11889,7 @@ PA722062,15,libertes,13,0,15,1,0,0.0
 PA722062,15,logement,2,0,2,0,0,0.0
 PA722062,15,police-justice,10,0,12,1,0,0.0
 PA722062,15,sante,3,2,2,0,0,66.7
-PA722062,15,travail-protection-sociale,13,1,14,0,0,4.7
+PA722062,15,travail-protection-sociale,14,1,15,0,0,4.3
 PA722062,15,vie-privee,8,1,10,0,0,15.8
 PA722070,15,citoyennete,1,1,0,0,0,100.0
 PA722070,15,discriminations,2,1,1,0,0,80.0
@@ -11973,7 +11973,7 @@ PA722094,15,libertes,11,0,18,1,0,0.0
 PA722094,15,logement,4,0,6,0,0,0.0
 PA722094,15,police-justice,9,0,15,1,0,0.0
 PA722094,15,sante,2,2,0,0,0,100.0
-PA722094,15,travail-protection-sociale,10,1,10,0,0,5.9
+PA722094,15,travail-protection-sociale,11,1,11,0,0,5.3
 PA722094,15,vie-privee,7,1,14,0,0,14.3
 PA722102,15,citoyennete,1,1,0,0,0,100.0
 PA722102,15,discriminations,2,1,1,0,0,50.0
@@ -12134,7 +12134,7 @@ PA722150,15,libertes,17,1,18,2,0,7.5
 PA722150,15,logement,4,0,4,0,1,0.0
 PA722150,15,police-justice,13,1,15,1,0,8.6
 PA722150,15,sante,2,2,0,0,0,100.0
-PA722150,15,travail-protection-sociale,15,1,15,0,0,4.1
+PA722150,15,travail-protection-sociale,16,1,16,0,0,3.8
 PA722150,15,vie-privee,11,1,12,1,0,11.0
 PA722150,16,citoyennete,2,1,1,0,0,50.0
 PA722150,16,discriminations,7,3,4,1,0,45.5
@@ -12249,7 +12249,7 @@ PA722194,15,libertes,13,0,14,0,0,0.0
 PA722194,15,logement,2,0,2,0,0,0.0
 PA722194,15,police-justice,9,0,10,0,0,0.0
 PA722194,15,sante,1,1,0,0,0,100.0
-PA722194,15,travail-protection-sociale,6,0,6,0,0,0.0
+PA722194,15,travail-protection-sociale,7,0,7,0,0,0.0
 PA722194,15,vie-privee,8,0,8,0,0,0.0
 PA722202,15,citoyennete,1,1,0,0,0,100.0
 PA722202,15,enfants,3,3,0,0,0,100.0
@@ -12335,7 +12335,7 @@ PA722252,15,libertes,11,0,11,0,0,0.0
 PA722252,15,logement,2,0,2,0,0,0.0
 PA722252,15,police-justice,8,0,8,0,0,0.0
 PA722252,15,sante,2,1,1,0,0,50.0
-PA722252,15,travail-protection-sociale,6,0,6,0,0,0.0
+PA722252,15,travail-protection-sociale,7,0,7,0,0,0.0
 PA722252,15,vie-privee,7,1,6,0,0,21.8
 PA722252,16,citoyennete,1,1,0,0,0,100.0
 PA722252,16,discriminations,3,1,2,0,0,40.0
@@ -12514,7 +12514,7 @@ PA722336,15,libertes,18,0,21,0,0,0.0
 PA722336,15,logement,3,0,5,0,0,0.0
 PA722336,15,police-justice,13,0,15,0,0,0.0
 PA722336,15,sante,4,2,3,0,0,50.0
-PA722336,15,travail-protection-sociale,11,0,12,0,0,0.0
+PA722336,15,travail-protection-sociale,12,0,13,0,0,0.0
 PA722336,15,vie-privee,12,1,13,0,0,9.8
 PA722336,16,citoyennete,2,1,0,1,0,100.0
 PA722336,16,discriminations,4,2,1,1,0,60.0
@@ -12606,7 +12606,7 @@ PA722366,15,libertes,16,1,20,0,0,6.6
 PA722366,15,logement,5,0,5,0,0,0.0
 PA722366,15,police-justice,13,0,16,0,0,0.0
 PA722366,15,sante,4,3,2,0,0,75.0
-PA722366,15,travail-protection-sociale,12,1,13,0,0,9.1
+PA722366,15,travail-protection-sociale,13,1,14,0,0,8.3
 PA722366,15,vie-privee,11,1,14,0,0,9.9
 PA722366,16,citoyennete,2,1,1,0,0,50.0
 PA722366,16,discriminations,7,6,4,0,0,55.6
@@ -12745,7 +12745,7 @@ PA722398,15,libertes,18,1,26,0,0,5.7
 PA722398,15,logement,4,0,5,0,0,0.0
 PA722398,15,police-justice,13,0,21,0,0,0.0
 PA722398,15,sante,1,1,0,0,0,100.0
-PA722398,15,travail-protection-sociale,14,1,14,0,0,8.3
+PA722398,15,travail-protection-sociale,15,1,15,0,0,7.7
 PA722398,15,vie-privee,12,1,19,0,0,9.2
 PA722398,16,citoyennete,2,1,1,0,0,50.0
 PA722398,16,discriminations,8,5,3,1,0,59.2
@@ -12767,7 +12767,7 @@ PA724827,15,libertes,11,0,16,0,0,0.0
 PA724827,15,logement,2,0,2,0,0,0.0
 PA724827,15,police-justice,12,0,17,0,0,0.0
 PA724827,15,sante,1,1,0,0,0,100.0
-PA724827,15,travail-protection-sociale,9,0,12,0,0,0.0
+PA724827,15,travail-protection-sociale,10,0,13,0,0,0.0
 PA724827,15,vie-privee,8,0,14,0,0,0.0
 PA736201,16,citoyennete,1,0,1,0,0,0.0
 PA736201,16,discriminations,4,3,2,0,0,50.0

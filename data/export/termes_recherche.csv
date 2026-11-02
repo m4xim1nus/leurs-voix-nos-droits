@@ -7,10 +7,6 @@ abrogation-obligation-vaccinale-2023,terme,vaccin
 abrogation-obligation-vaccinale-2023,terme,soignants non vaccinés
 abrogation-obligation-vaccinale-2023,terme,suspendus
 abrogation-obligation-vaccinale-2023,terme,covid
-acces-soins-territoires-ppl-2025,terme,déserts médicaux
-acces-soins-territoires-ppl-2025,terme,installation des médecins
-acces-soins-territoires-ppl-2025,terme,médecins généralistes
-acces-soins-territoires-ppl-2025,surnom,loi Mouiller
 accueils-physiques-ppl-2023,terme,guichets
 accueils-physiques-ppl-2023,terme,dématérialisation
 accueils-physiques-ppl-2023,terme,France Services
@@ -38,11 +34,6 @@ aide-a-mourir,terme,euthanasie
 aide-a-mourir,terme,suicide assisté
 aide-a-mourir,terme,mourir dans la dignité
 aide-a-mourir,surnom,loi Falorni
-allocation-autonomie-etudes-2023,terme,étudiants
-allocation-autonomie-etudes-2023,terme,bourses
-allocation-autonomie-etudes-2023,terme,précarité étudiante
-allocation-autonomie-etudes-2023,terme,revenu étudiant
-allocation-autonomie-etudes-2023,terme,jeunes
 allocations-familiales-premier-enfant-2025,terme,CAF
 allocations-familiales-premier-enfant-2025,terme,allocs
 allocations-familiales-premier-enfant-2025,terme,prestations familiales
@@ -203,6 +194,12 @@ crise-sanitaire-diverses-2020,terme,DDADUC
 crise-sanitaire-diverses-2020,terme,Brexit
 crise-sanitaire-diverses-2020,terme,cours criminelles
 crise-sanitaire-diverses-2020,terme,ordonnances
+cse-la-poste-2022,terme,La Poste
+cse-la-poste-2022,terme,CHSCT
+cse-la-poste-2022,terme,comité social et économique
+cse-la-poste-2022,terme,CSE
+cse-la-poste-2022,terme,représentants du personnel
+cse-la-poste-2022,terme,facteurs
 ddadue-2024,terme,DDADUE
 ddadue-2024,terme,arrêt maladie
 ddadue-2024,terme,congés payés
@@ -233,6 +230,12 @@ deserts-medicaux-garot,terme,régulation des médecins
 deserts-medicaux-garot,terme,ARS
 deserts-medicaux-garot,terme,médecins
 deserts-medicaux-garot,surnom,loi Garot
+directeur-ecole-2021,terme,directeurs d'école
+directeur-ecole-2021,terme,directrices d'école
+directeur-ecole-2021,terme,autorité fonctionnelle
+directeur-ecole-2021,terme,école primaire
+directeur-ecole-2021,terme,enseignants
+directeur-ecole-2021,surnom,loi Rilhac
 droit-avortement-2022,terme,IVG
 droit-avortement-2022,terme,délai de 14 semaines
 droit-avortement-2022,terme,14 semaines
@@ -272,10 +275,6 @@ ecole-confiance-2019,terme,AESH
 ecole-confiance-2019,terme,Éducation nationale
 ecole-confiance-2019,terme,devoir d'exemplarité
 ecole-confiance-2019,surnom,loi Blanquer
-ecole-liberte-egalite-laicite-ppl-2023,terme,laïcité à l'école
-ecole-liberte-egalite-laicite-ppl-2023,terme,voile
-ecole-liberte-egalite-laicite-ppl-2023,terme,sorties scolaires
-ecole-liberte-egalite-laicite-ppl-2023,terme,signes religieux
 ecriture-inclusive-ppl-2023,terme,point médian
 ecriture-inclusive-ppl-2023,terme,langue française
 ecriture-inclusive-ppl-2023,terme,iel
@@ -328,10 +327,6 @@ execution-peines-ferme-2025,terme,surpopulation carcérale
 execution-provisoire-ineligibilite-ppl-2025,terme,inéligibilité
 execution-provisoire-ineligibilite-ppl-2025,terme,condamnation
 execution-provisoire-ineligibilite-ppl-2025,terme,exécution provisoire
-exploitation-sexuelle-en-ligne-senat-2026,terme,OnlyFans
-exploitation-sexuelle-en-ligne-senat-2026,terme,prostitution en ligne
-exploitation-sexuelle-en-ligne-senat-2026,terme,proxénétisme
-exploitation-sexuelle-en-ligne-senat-2026,terme,pornographie
 familles-enfants-malades-2023,terme,congé de présence parentale
 familles-enfants-malades-2023,terme,enfant malade
 familles-enfants-malades-2023,terme,cancer de l'enfant
@@ -363,11 +358,6 @@ financement-audiovisuel-public-lo-2024,terme,France Télévisions
 financement-audiovisuel-public-lo-2024,terme,Radio France
 financement-audiovisuel-public-lo-2024,terme,TVA
 financement-audiovisuel-public-lo-2024,terme,service public de l'audiovisuel
-formation-internes-mg-ppl-2022,terme,internes
-formation-internes-mg-ppl-2022,terme,médecine générale
-formation-internes-mg-ppl-2022,terme,études de médecine
-formation-internes-mg-ppl-2022,terme,déserts médicaux
-formation-internes-mg-ppl-2022,terme,quatrième année
 fraudes-sociales-fiscales-2026,terme,RSA
 fraudes-sociales-fiscales-2026,terme,CAF
 fraudes-sociales-fiscales-2026,terme,carte vitale
@@ -581,13 +571,6 @@ langues-regionales-2021,terme,tilde
 langues-regionales-2021,terme,immersion
 langues-regionales-2021,terme,Conseil constitutionnel
 langues-regionales-2021,surnom,loi Molac
-lapi-2025,terme,LAPI
-lapi-2025,terme,plaques d'immatriculation
-lapi-2025,terme,radars
-lapi-2025,terme,caméras
-lapi-2025,terme,conservation des données
-lapi-2025,terme,surveillance
-lapi-2025,terme,voitures
 lfr-2022-08,terme,redevance
 lfr-2022-08,terme,contribution à l'audiovisuel public
 lfr-2022-08,terme,service public
@@ -770,13 +753,6 @@ offre-locative-dpe-ppl-2024,terme,locations
 offre-locative-dpe-ppl-2024,terme,rénovation énergétique
 offre-locative-dpe-ppl-2024,terme,logements mal isolés
 offre-locative-dpe-ppl-2024,terme,climat et résilience
-organisation-algorithmique-travail-2023,terme,algorithme
-organisation-algorithmique-travail-2023,terme,plateformes
-organisation-algorithmique-travail-2023,terme,management algorithmique
-organisation-algorithmique-travail-2023,terme,intelligence artificielle
-organisation-algorithmique-travail-2023,terme,IA
-organisation-algorithmique-travail-2023,terme,licenciement
-organisation-algorithmique-travail-2023,terme,employeur
 pacte-ferroviaire-2018,terme,SNCF
 pacte-ferroviaire-2018,terme,cheminots
 pacte-ferroviaire-2018,terme,réforme de la SNCF
@@ -1605,8 +1581,20 @@ DLR5L15N44585,terme,nom de famille
 DLR5L15N44585,terme,nom d'usage
 DLR5L15N44585,terme,état civil
 DLR5L15N44585,surnom,loi Vignal
+DLR5L15N45009,terme,internes
+DLR5L15N45009,terme,médecine générale
+DLR5L15N45009,terme,études de médecine
+DLR5L15N45009,terme,déserts médicaux
+DLR5L15N45009,terme,quatrième année
 DLR5L15N45886,terme,McKinsey
 DLR5L15N45886,terme,cabinets de conseil
+DLR5L16N45968,terme,algorithme
+DLR5L16N45968,terme,plateformes
+DLR5L16N45968,terme,management algorithmique
+DLR5L16N45968,terme,intelligence artificielle
+DLR5L16N45968,terme,IA
+DLR5L16N45968,terme,licenciement
+DLR5L16N45968,terme,employeur
 DLR5L16N46127,terme,homosexuels
 DLR5L16N46127,terme,LGBT
 DLR5L16N46127,terme,réparation
@@ -1652,6 +1640,10 @@ DLR5L16N47074,terme,influenceurs
 DLR5L16N47074,terme,influenceuses
 DLR5L16N47074,terme,publicité en ligne
 DLR5L16N47074,terme,dropshipping
+DLR5L16N47165,terme,laïcité à l'école
+DLR5L16N47165,terme,voile
+DLR5L16N47165,terme,sorties scolaires
+DLR5L16N47165,terme,signes religieux
 DLR5L16N47595,terme,TTF
 DLR5L16N47595,terme,taxe Tobin
 DLR5L16N47629,terme,AGRASC
@@ -1670,6 +1662,11 @@ DLR5L16N48492,terme,discrimination capillaire
 DLR5L16N48492,terme,cheveux
 DLR5L16N48492,terme,coiffure
 DLR5L16N48492,terme,afro
+DLR5L16N48711,terme,étudiants
+DLR5L16N48711,terme,bourses
+DLR5L16N48711,terme,précarité étudiante
+DLR5L16N48711,terme,revenu étudiant
+DLR5L16N48711,terme,jeunes
 DLR5L16N49096,terme,copropriétés dégradées
 DLR5L16N49096,terme,marchands de sommeil
 DLR5L16N49096,terme,habitat indigne
@@ -1729,6 +1726,10 @@ DLR5L17N51475,terme,motion de censure
 DLR5L17N51672,terme,fin de vie
 DLR5L17N51672,terme,soins palliatifs
 DLR5L17N51672,terme,aide à mourir
+DLR5L17N51795,terme,déserts médicaux
+DLR5L17N51795,terme,installation des médecins
+DLR5L17N51795,terme,médecins généralistes
+DLR5L17N51795,surnom,loi Mouiller
 DLR5L17N51845,terme,enfants de la Creuse
 DLR5L17N51845,terme,Réunionnais de la Creuse
 DLR5L17N51845,terme,Creuse
@@ -1743,10 +1744,21 @@ DLR5L17N52977,terme,ArcelorMittal
 DLR5L17N52977,terme,sidérurgie
 DLR5L17N52977,terme,nationalisation
 DLR5L17N52977,terme,Dunkerque
+DLR5L17N53018,terme,LAPI
+DLR5L17N53018,terme,plaques d'immatriculation
+DLR5L17N53018,terme,radars
+DLR5L17N53018,terme,caméras
+DLR5L17N53018,terme,conservation des données
+DLR5L17N53018,terme,surveillance
+DLR5L17N53018,terme,voitures
 DLR5L17N53159,terme,AGRASC
 DLR5L17N53159,terme,avoirs criminels
 DLR5L17N53159,terme,saisie
 DLR5L17N53159,terme,confiscation
+DLR5L17N53198,terme,OnlyFans
+DLR5L17N53198,terme,prostitution en ligne
+DLR5L17N53198,terme,proxénétisme
+DLR5L17N53198,terme,pornographie
 DLR5L17N53276,terme,essais nucléaires
 DLR5L17N53276,terme,Polynésie
 DLR5L17N53276,terme,Moruroa

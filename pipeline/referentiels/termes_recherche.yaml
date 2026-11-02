@@ -15,13 +15,11 @@
 textes:
   a69-riipm-2025: {termes: [A69, autoroute Toulouse-Castres, A680, espèces protégées]}
   abrogation-obligation-vaccinale-2023: {termes: [vaccin, soignants non vaccinés, suspendus, covid]}
-  acces-soins-territoires-ppl-2025: {termes: [déserts médicaux, installation des médecins, médecins généralistes], surnoms: [loi Mouiller]}
   accueils-physiques-ppl-2023: {termes: [guichets, dématérialisation, France Services, illectronisme, services publics numériques]}
   additifs-nitres-2022: {termes: [nitrites, nitrates, charcuterie, jambon, cancer]}
   aesh-corps-fonctionnaires-2026: {termes: [AESH, AVS, handicap à l'école, accompagnants, titularisation]}
   agec-2020: {termes: [AGEC, plastique, anti-gaspillage, emballages, déchets, bouteilles, recyclage]}
   aide-a-mourir: {termes: [fin de vie, euthanasie, suicide assisté, mourir dans la dignité], surnoms: [loi Falorni]}
-  allocation-autonomie-etudes-2023: {termes: [étudiants, bourses, précarité étudiante, revenu étudiant, jeunes]}
   allocations-familiales-premier-enfant-2025: {termes: [CAF, allocs, prestations familiales]}
   anti-casseurs-2019: {termes: [gilets jaunes, interdiction de manifester, droit de manifester, visage dissimulé, casseurs]}
   antisemitisme-enseignement-superieur: {termes: [universités, racisme, étudiants, section disciplinaire]}
@@ -51,18 +49,19 @@ textes:
   corps-electoral-nc-degel-2024: {termes: [Nouvelle-Calédonie, dégel, kanak, émeutes, élections provinciales, accord de Nouméa, Nouméa]}
   corps-electoral-nc-natifs-2026: {termes: [Nouvelle-Calédonie, dégel, kanak, élections provinciales, accord de Bougival, Nouméa]}
   crise-sanitaire-diverses-2020: {termes: [covid, DDADUC, Brexit, cours criminelles, ordonnances]}
+  cse-la-poste-2022: {termes: [La Poste, CHSCT, comité social et économique, CSE, représentants du personnel, facteurs]}
   ddadue-2024: {termes: [DDADUE, arrêt maladie, congés payés, Cour de cassation, droit européen]}
   ddadue-2025: {termes: [DDADUE, droit européen, action de groupe, carte bleue européenne, directive]}
   definition-viol-2025: {termes: [consentement, non-consentement, violences sexuelles, code pénal, agression sexuelle]}
   delit-sejour-irregulier-ppl-2025: {termes: [sans-papiers, immigration, amende, visa]}
   derives-sectaires-2024: {termes: [sectes, Miviludes, thérapies alternatives, emprise, sujétion psychologique]}
   deserts-medicaux-garot: {termes: [installation des médecins, liberté d'installation, régulation des médecins, ARS, médecins], surnoms: [loi Garot]}
+  directeur-ecole-2021: {termes: [directeurs d'école, directrices d'école, autorité fonctionnelle, école primaire, enseignants], surnoms: [loi Rilhac]}
   droit-avortement-2022: {termes: [IVG, délai de 14 semaines, 14 semaines, sages-femmes, clause de conscience, interruption volontaire de grossesse], surnoms: [loi Gaillot]}
   droit-visite-lieux-privation-liberte-2026: {termes: [prison, centres de rétention, CRA, garde à vue, contrôle parlementaire, hôpital psychiatrique, avocats]}
   drones-epandage-2025: {termes: [pesticides, épandage, agriculture, pulvérisation aérienne, drones agricoles, vignes]}
   duplomb-2025: {termes: [acétamipride, néonicotinoïdes, pesticides, pétition, mégabassines, méga-bassines, élevages intensifs, agriculture, ANSES, abeilles], surnoms: [loi Duplomb]}
   ecole-confiance-2019: {termes: [instruction obligatoire, école à 3 ans, EPLEI, PIAL, AESH, Éducation nationale, devoir d'exemplarité], surnoms: [loi Blanquer]}
-  ecole-liberte-egalite-laicite-ppl-2023: {termes: [laïcité à l'école, voile, sorties scolaires, signes religieux]}
   ecriture-inclusive-ppl-2023: {termes: [point médian, langue française, iel, école, grammaire]}
   ecriture-inclusive-senat-2023: {termes: [point médian, langue française, iel, grammaire]}
   egalim-2018: {termes: [Egalim, Egalim 1, agriculteurs, cage, poules, glyphosate, négociations commerciales, cantines]}
@@ -72,13 +71,11 @@ textes:
   entrisme-islamiste-ppl-2026: {termes: [islamisme, séparatisme, dissolution d'associations, laïcité]}
   execution-peines-ferme-2025: {termes: [prison, courtes peines, peines de prison, récidive, sursis, surpopulation carcérale]}
   execution-provisoire-ineligibilite-ppl-2025: {termes: [inéligibilité, condamnation, exécution provisoire]}
-  exploitation-sexuelle-en-ligne-senat-2026: {termes: [OnlyFans, prostitution en ligne, proxénétisme, pornographie]}
   familles-enfants-malades-2023: {termes: [congé de présence parentale, enfant malade, cancer de l'enfant, handicap, licenciement, congé deuil, décès d'un enfant]}
   femmes-fonction-publique-2023: {termes: [parité, quotas, égalité femmes-hommes, hautes fonctionnaires, nominations équilibrées]}
   fin-hydrocarbures-2017: {termes: [pétrole, gaz, gaz de schiste, charbon, forages, énergies fossiles], surnoms: [loi Hulot]}
   fin-regimes-exception-covid-2022: {termes: [covid, pass sanitaire, SI-DEP, Contact Covid, passe sanitaire, fichiers de santé, veille sanitaire]}
   financement-audiovisuel-public-lo-2024: {termes: [redevance, France Télévisions, Radio France, TVA, service public de l'audiovisuel]}
-  formation-internes-mg-ppl-2022: {termes: [internes, médecine générale, études de médecine, déserts médicaux, quatrième année]}
   fraudes-sociales-fiscales-2026: {termes: [RSA, CAF, carte vitale, France Travail, partage de données, croisement de fichiers, évasion fiscale]}
   gens-du-voyage-2018: {termes: [campements illicites, aires d'accueil, caravanes, amende forfaitaire, expulsion]}
   gestion-crise-sanitaire-2021: {termes: [pass sanitaire, passe sanitaire, vaccination obligatoire, obligation vaccinale, soignants, covid, isolement, QR code, suspendus]}
@@ -108,7 +105,6 @@ textes:
   laicite-sport-ppl-2025: {termes: [voile, hijab, foot, football, signes religieux, sport, compétitions sportives]}
   lanceurs-alerte-2022: {termes: [lanceuses d'alerte, Défenseur des droits, directive européenne, secret, délit d'entrave, syndicats], surnoms: [loi Waserman]}
   langues-regionales-2021: {termes: [breton, basque, corse, occitan, alsacien, créole, tilde, immersion, Conseil constitutionnel], surnoms: [loi Molac]}
-  lapi-2025: {termes: [LAPI, plaques d'immatriculation, radars, caméras, conservation des données, surveillance, voitures]}
   lfr-2022-08: {termes: [redevance, contribution à l'audiovisuel public, service public, TVA, audiovisuel public, pouvoir d'achat, bouclier tarifaire]}
   loi-orientation-agricole-2025: {termes: [agriculteurs, agriculture, haies, LOA, souveraineté alimentaire, pesticides, installation, pêche, retour de la haie]}
   lom-2019: {termes: [ZFE, zones à faibles émissions, vélo, covoiturage, trottinettes, plateformes, Uber, Deliveroo, forfait mobilités, LOM, transports]}
@@ -132,7 +128,6 @@ textes:
   nouvelle-caledonie-bougival-2026: {termes: [Nouvelle-Calédonie, accord de Bougival, Bougival]}
   nucleaire-acceleration-2023: {termes: [EPR, centrales nucléaires, réacteurs, EDF, atome, énergie nucléaire]}
   offre-locative-dpe-ppl-2024: {termes: [DPE, passoires thermiques, propriétaires, locations, rénovation énergétique, logements mal isolés, climat et résilience]}
-  organisation-algorithmique-travail-2023: {termes: [algorithme, plateformes, management algorithmique, intelligence artificielle, IA, licenciement, employeur]}
   pacte-ferroviaire-2018: {termes: [SNCF, cheminots, réforme de la SNCF, statut des cheminots, trains, grève, ouverture à la concurrence, dette, service annuel]}
   parcours-soins-violences-sexuelles-2026: {termes: [viol, inceste, psychotraumatisme, remboursement, victimes, Sécurité sociale, ticket modérateur]}
   parite-bloc-communal-2025: {termes: [parité, municipales, petites communes, panachage, élections municipales, listes paritaires, élus locaux, conseils municipaux]}
@@ -263,7 +258,9 @@ ecartes:
   DLR5L15N44129: {termes: [harcèlement, cyberharcèlement, élèves, écoles]}
   DLR5L15N44345: {termes: [glyphosate, Roundup, pesticides]}
   DLR5L15N44585: {termes: [changer de nom, nom de famille, nom d'usage, état civil], surnoms: [loi Vignal]}
+  DLR5L15N45009: {termes: [internes, médecine générale, études de médecine, déserts médicaux, quatrième année]}
   DLR5L15N45886: {termes: [McKinsey, cabinets de conseil]}
+  DLR5L16N45968: {termes: [algorithme, plateformes, management algorithmique, intelligence artificielle, IA, licenciement, employeur]}
   DLR5L16N46127: {termes: [homosexuels, LGBT, réparation]}
   DLR5L16N46187: {termes: [CPF, compte formation]}
   DLR5L16N46249: {termes: [uniforme à l'école, tenue unique]}
@@ -275,12 +272,14 @@ ecartes:
   DLR5L16N46921: {termes: [EDF, tarif réglementé, nationalisation]}
   DLR5L16N47035: {termes: [majorité numérique, réseaux sociaux, moins de 15 ans, TikTok, haine en ligne], surnoms: [loi Marcangeli]}
   DLR5L16N47074: {termes: [influenceurs, influenceuses, publicité en ligne, dropshipping]}
+  DLR5L16N47165: {termes: [laïcité à l'école, voile, sorties scolaires, signes religieux]}
   DLR5L16N47595: {termes: [TTF, taxe Tobin]}
   DLR5L16N47629: {termes: [AGRASC, avoirs criminels, saisie]}
   DLR5L16N47637: {termes: [SERM, RER métropolitains, RER, trains]}
   DLR5L16N48135: {termes: [droit du sol, immigration, OQTF]}
   DLR5L16N48392: {termes: [émeutes, reconstruction]}
   DLR5L16N48492: {termes: [discrimination capillaire, cheveux, coiffure, afro]}
+  DLR5L16N48711: {termes: [étudiants, bourses, précarité étudiante, revenu étudiant, jeunes]}
   DLR5L16N49096: {termes: [copropriétés dégradées, marchands de sommeil, habitat indigne, HLM]}
   DLR5L16N49263: {termes: [chlordécone, Antilles, Martinique, Guadeloupe, pesticide]}
   DLR5L16N49364: {termes: [fast fashion, Shein, mode éphémère, vêtements]}
@@ -297,12 +296,15 @@ ecartes:
   DLR5L17N51462: {termes: ["49.3", budget, motion de censure]}
   DLR5L17N51475: {termes: ["49.3", budget, motion de censure]}
   DLR5L17N51672: {termes: [fin de vie, soins palliatifs, aide à mourir]}
+  DLR5L17N51795: {termes: [déserts médicaux, installation des médecins, médecins généralistes], surnoms: [loi Mouiller]}
   DLR5L17N51845: {termes: [enfants de la Creuse, Réunionnais de la Creuse, Creuse]}
   DLR5L17N51962: {termes: [TZCLD, chômeurs de longue durée, Territoires zéro chômeur]}
   DLR5L17N52037: {termes: [Dreyfus, affaire Dreyfus]}
   DLR5L17N52767: {termes: [Code noir, esclavage]}
   DLR5L17N52977: {termes: [ArcelorMittal, sidérurgie, nationalisation, Dunkerque]}
+  DLR5L17N53018: {termes: [LAPI, plaques d'immatriculation, radars, caméras, conservation des données, surveillance, voitures]}
   DLR5L17N53159: {termes: [AGRASC, avoirs criminels, saisie, confiscation]}
+  DLR5L17N53198: {termes: [OnlyFans, prostitution en ligne, proxénétisme, pornographie]}
   DLR5L17N53276: {termes: [essais nucléaires, Polynésie, Moruroa, victimes]}
   DLR5L17N53279: {termes: [devoir conjugal, viol conjugal, mariage, divorce]}
   DLR5L17N53359: {termes: [intelligence artificielle, IA, droit d'auteur, artistes, éditeurs]}

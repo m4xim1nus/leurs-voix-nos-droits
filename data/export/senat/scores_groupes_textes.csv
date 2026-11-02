@@ -16,7 +16,9 @@ CRC,consultation-nc-2018,15,0,0,0,100.0
 CRC,continuite-transports-greve-2024,18,0,0,0,100.0
 CRC,corps-electoral-nc-degel-2024,0,18,0,0,0.0
 CRC,corps-electoral-nc-natifs-2026,0,18,0,0,0.0
+CRC,cse-la-poste-2022,15,0,0,0,100.0
 CRC,ddadue-2025,0,0,18,0,
+CRC,directeur-ecole-2021,15,0,0,0,100.0
 CRC,drones-epandage-2025,17,0,1,0,100.0
 CRC,duplomb-2025,18,0,0,0,100.0
 CRC,ecole-confiance-2019,0,16,0,0,0.0
@@ -126,7 +128,9 @@ GEST,confiance-justice-2021,12,0,0,0,100.0
 GEST,continuite-transports-greve-2024,16,0,0,0,100.0
 GEST,corps-electoral-nc-degel-2024,0,16,0,0,0.0
 GEST,corps-electoral-nc-natifs-2026,0,0,16,0,
+GEST,cse-la-poste-2022,12,0,0,0,100.0
 GEST,ddadue-2025,16,0,0,0,100.0
+GEST,directeur-ecole-2021,12,0,0,0,100.0
 GEST,drones-epandage-2025,16,0,0,0,100.0
 GEST,duplomb-2025,16,0,0,0,100.0
 GEST,ecriture-inclusive-senat-2023,17,0,0,0,100.0
@@ -224,7 +228,9 @@ LREM,consultation-nc-2018,20,0,0,1,100.0
 LREM,continuite-transports-greve-2024,2,0,20,0,100.0
 LREM,corps-electoral-nc-degel-2024,20,0,2,0,100.0
 LREM,corps-electoral-nc-natifs-2026,19,0,0,0,100.0
+LREM,cse-la-poste-2022,0,24,0,0,0.0
 LREM,ddadue-2025,0,19,0,0,0.0
+LREM,directeur-ecole-2021,0,23,0,0,0.0
 LREM,drones-epandage-2025,0,13,5,1,0.0
 LREM,duplomb-2025,1,16,2,0,5.9
 LREM,ecole-confiance-2019,1,0,22,0,100.0
@@ -339,7 +345,9 @@ NI,consultation-nc-2018,3,2,1,0,60.0
 NI,continuite-transports-greve-2024,0,3,0,1,0.0
 NI,corps-electoral-nc-degel-2024,4,0,0,0,100.0
 NI,corps-electoral-nc-natifs-2026,3,0,0,1,100.0
+NI,cse-la-poste-2022,0,0,0,3,
 NI,ddadue-2025,0,0,0,4,
+NI,directeur-ecole-2021,0,0,0,2,
 NI,drones-epandage-2025,0,0,0,4,
 NI,duplomb-2025,0,3,0,1,0.0
 NI,ecole-confiance-2019,3,0,2,1,100.0
@@ -454,7 +462,9 @@ RDSE,consultation-nc-2018,21,0,0,0,100.0
 RDSE,continuite-transports-greve-2024,12,3,1,0,80.0
 RDSE,corps-electoral-nc-degel-2024,11,2,3,0,84.6
 RDSE,corps-electoral-nc-natifs-2026,10,1,4,1,90.9
+RDSE,cse-la-poste-2022,0,14,0,0,0.0
 RDSE,ddadue-2025,0,17,0,0,0.0
+RDSE,directeur-ecole-2021,0,14,0,1,0.0
 RDSE,drones-epandage-2025,0,17,0,0,0.0
 RDSE,duplomb-2025,3,11,3,0,21.4
 RDSE,ecole-confiance-2019,4,6,12,0,40.0
@@ -569,7 +579,9 @@ RTLI,consultation-nc-2018,11,0,0,0,100.0
 RTLI,continuite-transports-greve-2024,0,17,0,1,0.0
 RTLI,corps-electoral-nc-degel-2024,17,0,0,1,100.0
 RTLI,corps-electoral-nc-natifs-2026,20,0,0,0,100.0
+RTLI,cse-la-poste-2022,0,14,0,0,0.0
 RTLI,ddadue-2025,0,0,0,20,
+RTLI,directeur-ecole-2021,0,13,0,0,0.0
 RTLI,drones-epandage-2025,0,19,0,1,0.0
 RTLI,duplomb-2025,0,19,0,1,0.0
 RTLI,ecole-confiance-2019,13,0,0,0,100.0
@@ -682,7 +694,9 @@ SOC,consultation-nc-2018,78,0,0,0,100.0
 SOC,continuite-transports-greve-2024,64,0,0,0,100.0
 SOC,corps-electoral-nc-degel-2024,0,62,0,2,0.0
 SOC,corps-electoral-nc-natifs-2026,65,0,0,0,100.0
+SOC,cse-la-poste-2022,64,0,0,0,100.0
 SOC,ddadue-2025,0,0,65,0,
+SOC,directeur-ecole-2021,65,0,0,0,100.0
 SOC,drones-epandage-2025,64,0,0,1,100.0
 SOC,duplomb-2025,64,0,0,1,100.0
 SOC,ecole-confiance-2019,0,73,0,0,0.0
@@ -797,7 +811,9 @@ UC,consultation-nc-2018,50,0,0,0,100.0
 UC,continuite-transports-greve-2024,0,57,0,0,0.0
 UC,corps-electoral-nc-degel-2024,52,1,2,2,98.1
 UC,corps-electoral-nc-natifs-2026,58,1,0,0,98.3
+UC,cse-la-poste-2022,0,57,0,0,0.0
 UC,ddadue-2025,0,58,0,1,0.0
+UC,directeur-ecole-2021,0,55,0,0,0.0
 UC,drones-epandage-2025,0,59,0,0,0.0
 UC,duplomb-2025,0,55,4,0,0.0
 UC,ecole-confiance-2019,50,0,1,0,100.0
@@ -912,7 +928,9 @@ UMP,consultation-nc-2018,146,0,0,0,100.0
 UMP,continuite-transports-greve-2024,0,131,0,2,0.0
 UMP,corps-electoral-nc-degel-2024,129,0,0,4,100.0
 UMP,corps-electoral-nc-natifs-2026,129,0,0,2,100.0
+UMP,cse-la-poste-2022,0,144,0,1,0.0
 UMP,ddadue-2025,0,129,0,1,0.0
+UMP,directeur-ecole-2021,0,146,0,2,0.0
 UMP,drones-epandage-2025,0,129,0,1,0.0
 UMP,duplomb-2025,0,128,1,1,0.0
 UMP,ecole-confiance-2019,142,0,1,1,100.0
