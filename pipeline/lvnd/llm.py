@@ -127,6 +127,21 @@ class Indisponible(Exception):
     """Aucun appel possible : interrupteur, secret, clé ou plafond. Jamais une erreur de la passe de données."""
 
 
+ENV = Path(__file__).resolve().parents[2] / ".env"
+
+
+def secret_local(nom: str = "LLM_CHIFFREMENT", env: Path = ENV) -> str | None:
+    """Variable d'environnement, sinon ligne `NOM=valeur` du fichier .env de la racine (non versionné)."""
+    if os.environ.get(nom):
+        return os.environ[nom]
+    if env.exists():
+        for ligne in env.read_text().splitlines():
+            cle, _, valeur = ligne.partition("=")
+            if cle.strip() == nom and valeur.strip():
+                return valeur.strip().strip('"').strip("'")
+    return None
+
+
 def maintenant() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
@@ -140,7 +155,7 @@ class Session:
     d1: object
     tache: str
     client: object = None
-    secret: str | None = field(default_factory=lambda: os.environ.get("LLM_CHIFFREMENT"))
+    secret: str | None = field(default_factory=secret_local)
     reglages: Reglages = None
     depense: float = 0.0
     appels: list[dict] = field(default_factory=list)

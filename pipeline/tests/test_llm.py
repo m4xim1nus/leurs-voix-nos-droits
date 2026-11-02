@@ -232,3 +232,13 @@ def test_segments_d_une_citation_coupee():
     assert controles.segments("le texte prévoit […] une atteinte grave aux libertés") == [
         "le texte prévoit", "une atteinte grave aux libertés"]
     assert controles.normaliser("L’accès « libre »\n à la jus-\n  tice") == "l'accès\"libre\"à la justice"
+
+
+def test_secret_lu_dans_env(tmp_path, monkeypatch):
+    monkeypatch.delenv("LLM_CHIFFREMENT", raising=False)
+    f = tmp_path / ".env"
+    assert llm.secret_local(env=f) is None
+    f.write_text('AUTRE=1\nLLM_CHIFFREMENT="abc="\n')
+    assert llm.secret_local(env=f) == "abc="
+    monkeypatch.setenv("LLM_CHIFFREMENT", "env")
+    assert llm.secret_local(env=f) == "env"
