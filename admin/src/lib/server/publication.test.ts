@@ -413,6 +413,11 @@ describe('publication', () => {
     const { etat, f } = faux();
     await publier(db, GRILLE, CFG, 'a@x', f);
     expect(etat.commits).toHaveLength(1);
+    // l'admin retient l'empreinte du fichier écrit : la page « Publier » saute alors la comparaison
+    const derniere = await db
+      .prepare('SELECT fichier_sha FROM publications ORDER BY id DESC LIMIT 1')
+      .first<{ fichier_sha: string }>();
+    expect(derniere?.fichier_sha).toBe(etat.sha);
     // editorial.json corrigé à la main dans le dépôt (lvnd editorial --ajouter, commit) : D1 n'en sait rien
     const fichier = JSON.parse(etat.contenu!);
     fichier.textes[0].note = 'corrigée hors de l’admin';

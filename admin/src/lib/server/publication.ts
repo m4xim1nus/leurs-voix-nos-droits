@@ -15,7 +15,13 @@ import {
   validerSuivi
 } from '../qualification';
 import * as db from './db';
-import { ecrireFichier, lireFichier, shaBlob, type ConfigGitHub } from './github';
+import {
+  ecrireFichier,
+  lireFichier,
+  shaBlob,
+  type ConfigGitHub,
+  type FichierDistant
+} from './github';
 
 export interface EtatTexte {
   dossier_an: string;
@@ -205,6 +211,24 @@ export function modifiesHorsAdmin(
     .sort();
 }
 
+/**
+ * Dossiers modifiés hors de l'admin, sans calcul quand c'est inutile : si le fichier du dépôt a encore
+ * l'empreinte écrite par la dernière publication, personne n'y a touché depuis (Worker limité en calcul).
+ */
+export async function horsAdmin(
+  base: D1Database,
+  distant: FichierDistant,
+  contenu: string,
+  textes: EtatTexte[]
+): Promise<string[]> {
+  if (distant.contenu === null) return [];
+  const derniere = await base
+    .prepare('SELECT fichier_sha FROM publications ORDER BY id DESC LIMIT 1')
+    .first<{ fichier_sha: string | null }>();
+  if (distant.sha && distant.sha === derniere?.fichier_sha) return [];
+  return modifiesHorsAdmin(distant.contenu, contenu, textes);
+}
+
 export function erreurHorsAdmin(dossiers: string[]): string {
   return (
     `editorial.json a été modifié hors de l'admin (${dossiers.join(', ')}) : publier remettrait ` +
@@ -260,11 +284,12 @@ export async function publier(
   const prep = await preparer(base, g, interdits);
   if (prep.bloquant) throw new Error('des textes à publier ont des erreurs bloquantes');
   const distant = await lireFichier(cfg, f);
-  const horsAdmin = modifiesHorsAdmin(distant.contenu, prep.contenu, prep.textes);
-  if (horsAdmin.length) throw new Error(erreurHorsAdmin(horsAdmin));
+  const dossiers = await horsAdmin(base, distant, prep.contenu, prep.textes);
+  if (dossiers.length) throw new Error(erreurHorsAdmin(dossiers));
   const msg = message(prep.textes);
   let commit: Resultat['commit'] = null;
-  if (distant.sha !== (await shaBlob(prep.contenu)))
+  const fichierSha = await shaBlob(prep.contenu);
+  if (distant.sha !== fichierSha)
     commit = await ecrireFichier(cfg, prep.contenu, distant.sha, msg, f);
 
   // Empreintes de ce qui vient d'être publié (les documents lus, pas ceux d'une édition parallèle).
@@ -289,10 +314,10 @@ export async function publier(
     ...maj,
     base
       .prepare(
-        `INSERT INTO publications (auteur, date, commit_sha, commit_url, n_textes, n_ecartes, resume)
-         VALUES (?, ?, ?, ?, ?, ?, ?)`
+        `INSERT INTO publications (auteur, date, commit_sha, commit_url, n_textes, n_ecartes, resume, fichier_sha)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
       )
-      .bind(auteur, le, commit?.sha ?? null, commit?.url ?? null, n, nEcartes, msg)
+      .bind(auteur, le, commit?.sha ?? null, commit?.url ?? null, n, nEcartes, msg, fichierSha)
   ]);
   return { commit, resume: msg };
 }

@@ -2,7 +2,12 @@ import { fail } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 import * as db from '$lib/server/db';
 import { ConflitGitHub, lireFichier } from '$lib/server/github';
-import { message, modifiesHorsAdmin, preparer, publier } from '$lib/server/publication';
+import {
+  horsAdmin as dossiersHorsAdmin,
+  message,
+  preparer,
+  publier
+} from '$lib/server/publication';
 
 export const load: PageServerLoad = async ({ platform }) => {
   const env = platform!.env;
@@ -18,7 +23,7 @@ export const load: PageServerLoad = async ({ platform }) => {
         branche: env.GITHUB_BRANCH,
         chemin: env.EDITORIAL_CHEMIN
       });
-      horsAdmin = modifiesHorsAdmin(distant.contenu, prep.contenu, prep.textes);
+      horsAdmin = await dossiersHorsAdmin(env.DB, distant, prep.contenu, prep.textes);
     } catch (e) {
       lectureDepot = (e as Error).message;
     }
