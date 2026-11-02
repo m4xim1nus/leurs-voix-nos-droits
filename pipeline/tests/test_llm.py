@@ -243,3 +243,36 @@ def test_secret_lu_dans_env(tmp_path, monkeypatch):
     assert llm.secret_local(env=f) == "abc="
     monkeypatch.setenv("LLM_CHIFFREMENT", "env")
     assert llm.secret_local(env=f) == "env"
+
+
+def test_reste_a_traiter_comme_l_admin():
+    from lvnd.propositions import reste_a_traiter as r
+    a = lambda t, s=None: {"type": t, "scrutin_id": s, "date": "2026-11-18"}
+    assert r(a("inscrit"), None, None) and not r(a("inscrit"), "brouillon", "{}")
+    assert not r(a("inscrit"), "a-suivre", "{}") and r(a("premier_decisif"), "a-suivre", "{}")
+    assert r(a("vote_sans_decisif"), None, None) and not r(a("vote_sans_decisif"), "ecarte", "{}")
+    assert r(a("vote_posterieur", "S2"), "valide", json.dumps({"scrutins": [{"id": "S1"}]}))
+    assert not r(a("vote_posterieur", "S2"), "a-relire", json.dumps({"scrutins": [{"id": "S2"}]}))
+    assert not r(a("lecture_posterieure"), "a-relire", json.dumps({"note": "Adopté à main levée le 18/11/2026."}))
+    assert r(a("lecture_posterieure"), "valide", json.dumps({"note": "Décisif : S1."}))
+    assert r(a("unanimite_contestee"), "ecarte", "{}") and not r(a("unanimite_contestee"), "valide", "{}")
+    assert r(a("senat_premier_vote"), "valide", "{}") and not r(a("senat_premier_vote"), "ecarte", "{}")
+    assert not r(a("senat_vote_posterieur", "SN1"), "valide", json.dumps({"senat": {"scrutins": [{"id": "SN1"}]}}))
+
+
+def test_alertes_deja_proposees_ou_traitees_sautees(tmp_path):
+    from lvnd.propositions import alertes_a_proposer
+    (tmp_path / "en_cours_alertes.csv").write_text(
+        "id,type,dossier_id,scrutin_id,date,titre,detail\n"
+        "inscrit:D1,inscrit,D1,,2026-11-02,T1,x\n"
+        "inscrit:D2,inscrit,D2,,2026-11-03,T2,x\n"
+        "inscrit:D3,inscrit,D3,,2026-11-04,T3,x\n"
+        "premier_decisif:D4,premier_decisif,D4,S,2026-11-05,T4,x\n")
+
+    class D1:
+        def lire(self, sql):
+            if "FROM propositions" in sql:
+                return [{"alerte_id": "inscrit:D1"}]
+            return [{"dossier_an": "D2", "statut": "brouillon", "doc": "{}"}]
+
+    assert [a["id"] for a in alertes_a_proposer(tmp_path, D1(), {"inscrit"})] == ["inscrit:D3"]

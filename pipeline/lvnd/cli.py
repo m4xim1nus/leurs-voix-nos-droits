@@ -69,7 +69,12 @@ def main(argv=None) -> int:
     s.add_argument("--sortie", type=Path, help="chemin du script SQL (défaut : admin/.wrangler/sync-admin.sql)")
     pr = sub.add_parser("proposer", help="proposition de qualification par LLM pour des dossiers (brouillons YAML, "
                                          "contrôlés ; ni validés ni publiés)")
-    pr.add_argument("dossiers", nargs="+", metavar="DOSSIER", help="dossier AN (DLR5L17N…)")
+    pr.add_argument("dossiers", nargs="*", metavar="DOSSIER", help="dossier AN (DLR5L17N…)")
+    pr.add_argument("--alertes", action="store_true",
+                    help="une proposition par nouvelle alerte, écrite dans D1 (table propositions) : Action propositions.yml")
+    pr.add_argument("--types",
+                    help="avec --alertes : types d'alerte retenus, séparés par des virgules (défaut : tous)")
+    pr.add_argument("--max", type=int, default=5, help="avec --alertes : propositions par passe (défaut : 5)")
     cible_p = pr.add_mutually_exclusive_group()
     cible_p.add_argument("--local", dest="cible", action="store_const", const="local",
                          help="réglages et journal dans la D1 locale (défaut : en ligne)")
@@ -150,6 +155,12 @@ def main(argv=None) -> int:
                         args.complet, args.simuler, args.remplacer, args.ecarter_publie)
     elif args.commande == "proposer":
         from . import propositions
+        if args.alertes:
+            if args.dossiers:
+                ap.error("--alertes ne prend pas de dossier")
+            return propositions.lancer_alertes(args.export, ADMIN, args.cible, set(args.types.split(",")) if args.types else set(propositions.proposer.MODES), args.max)
+        if not args.dossiers:
+            ap.error("un dossier au moins, ou --alertes")
         return propositions.lancer(args.dossiers, args.export, ADMIN, args.cible, args.mode, args.a_blanc,
                                    args.tache, args.sortie, args.prompt)
     return 0
