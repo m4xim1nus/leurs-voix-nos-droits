@@ -92,7 +92,7 @@
   })}
   <p>
     Le plus souvent, on part de « À traiter » : ce qu’un nouveau vote demande de regarder, rangé en
-    quatre sections. <b>Prêt à relire</b> : un vote a eu lieu (ou une source a publié sur un texte
+    cinq sections. <b>Prêt à relire</b> : un vote a eu lieu (ou une source a publié sur un texte
     déjà traité), et le LLM a préparé une proposition qui passe les contrôles ; « mise à jour
     mineure » signale celles qui ne changent ni le statut, ni le droit principal, ni le sens, ni le
     décisif.
@@ -123,9 +123,9 @@
   </p>
   {@render capture({
     image: 'a-traiter',
-    alt: 'Onglet À traiter : les compteurs des quatre sections, puis une carte par texte, avec la proposition du LLM.',
+    alt: 'Onglet À traiter : les compteurs des sections, puis une carte par texte, avec la proposition du LLM.',
     legende: [
-      '<b>Les quatre sections.</b> Un clic sur un compteur y mène : prêt à relire, question de méthode, à faire à la main, à venir.',
+      '<b>Les sections.</b> Un clic sur un compteur y mène : prêt à relire, question de méthode, à faire à la main, en mots simples, à venir.',
       '<b>Prêt à relire.</b> Un vote a eu lieu et la proposition du LLM passe les contrôles. Les mises à jour mineures viennent en tête.',
       '<b>La phrase d’action.</b> Ce que le LLM propose de faire, et ce qu’il faut vérifier d’abord. En dessous : le jugement, puis les sources et leurs extraits, les points d’attention, les incertitudes (un clic les déplie).',
       '<b>Les gestes.</b> « Charger « à relire » » ouvre la fiche avec la proposition ; « Écarter la proposition » la retire (un motif court aide à mesurer sa qualité). « Question tranchée » apparaît sur une question de méthode réglée.',
