@@ -52,8 +52,10 @@ son avis. Les institutions (Assemblée nationale, Sénat, Conseil constitutionne
 être nommées.
 
 Réponse : le résumé entre les balises <resume_simple> et </resume_simple>, une phrase par ligne, rien d'autre \
-dedans. Puis, si c'est utile, une phrase pour la personne qui relit, entre <remarque> et </remarque> : ce qui a été \
-difficile à simplifier, ou ce qui manque à la fiche pour bien l'expliquer."""
+dedans. Le résumé n'a pas à tout dire : la fiche complète est juste au-dessus. Choisis l'essentiel, sans lister \
+ce que tu laisses de côté. Puis, seulement en cas de doute, une phrase pour la personne qui relit, entre <remarque> et \
+</remarque> : un mot que tu as simplifié et dont le sens a pu changer, ou ce qui manque à la fiche pour bien \
+l'expliquer."""
 
 
 def message(t: dict) -> str:
@@ -109,8 +111,18 @@ class Noms:
                 + [x for x in self.sigles if mot(x)])
 
 
-def _nombres(texte: str) -> set[str]:
-    return set(re.findall(r"\d+", texte))
+# Nombres écrits en lettres dans une fiche (« trois réserves ») que le résumé simple écrit en chiffres.
+NOMBRES_EN_LETTRES = {m: str(i) for i, m in enumerate(
+    "zéro un deux trois quatre cinq six sept huit neuf dix onze douze treize quatorze quinze seize".split())}
+NOMBRES_EN_LETTRES |= {"une": "1", "vingt": "20", "trente": "30", "quarante": "40", "cinquante": "50",
+                       "soixante": "60", "cent": "100", "mille": "1000"}
+
+
+def _nombres(texte: str, lettres: bool = False) -> set[str]:
+    out = set(re.findall(r"\d+", texte))
+    if lettres:
+        out |= {NOMBRES_EN_LETTRES[m] for m in re.findall(r"\w+", texte.lower()) if m in NOMBRES_EN_LETTRES}
+    return out
 
 
 def controler(texte: str, t: dict, noms: Noms) -> dict:
@@ -129,7 +141,7 @@ def controler(texte: str, t: dict, noms: Noms) -> dict:
     else:
         avert += editorial.controler_simple(doc)[1]
     source = " ".join([t.get("titre") or "", t.get("resume") or "", t.get("conseil_constitutionnel") or ""])
-    if absents := sorted(_nombres(texte) - _nombres(source), key=int):
+    if absents := sorted(_nombres(texte) - _nombres(source, lettres=True), key=int):
         avert.append(f"nombre absent de la fiche : {', '.join(absents)}")
     return {"erreurs": err, "avertissements": avert, "points": []}
 

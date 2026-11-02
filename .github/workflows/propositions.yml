@@ -1,6 +1,7 @@
 # Propositions du LLM (ROADMAP, cycle Pré-qualification, item 5) : après chaque passe de données réussie,
 # une proposition par nouvelle alerte, contrôlée, écrite dans D1 (table propositions) ; l'admin la montre dans
-# « À traiter ». Le LLM propose, il ne valide ni ne publie : rien n'est commité ici.
+# « À traiter ». Le LLM propose, il ne valide ni ne publie : rien n'est commité ici. Puis, à part, des résumés en
+# mots simples pour les textes validés qui n'en ont pas d'à jour (cycle Facile à lire, `lvnd resumer`).
 #
 # À part des passes de données : un échec ou un plafond atteint n'y touche pas. Interrupteur, clé (chiffrée)
 # et plafond se règlent sur la page « LLM » de l'admin ; coupé, l'Action s'arrête sans appel.
@@ -17,6 +18,9 @@ on:
     inputs:
       max:
         description: Propositions au plus
+        default: '5'
+      max_simples:
+        description: Résumés en mots simples au plus
         default: '5'
 
 concurrency:
@@ -71,3 +75,10 @@ jobs:
         run: |
           (cd admin && npm ci --no-audit --no-fund)
           cd pipeline && uv run --no-dev lvnd proposer --alertes --remote --max "${{ inputs.max || '5' }}" --types "$TYPES"
+
+      # Cycle Facile à lire : un résumé en mots simples proposé pour chaque texte validé qui n'en a pas d'à jour,
+      # quelques-uns par passe (environ 0,03 $ chacun). Indépendant de l'étape précédente : il tourne même si elle
+      # a échoué, et son échec ne la touche pas.
+      - name: Résumés en mots simples (lvnd resumer)
+        if: always() && env.SAUTER != '1'
+        run: cd pipeline && uv run --no-dev lvnd resumer --remote --max "${{ inputs.max_simples || '5' }}"

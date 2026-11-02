@@ -30,6 +30,9 @@ def test_controles(termes):
     assert c["erreurs"] == ["1 terme(s) de la liste d'exclusion", "nomme un·e élu·e ou un groupe : Alain David, RN"]
     assert "résumé simple : sigle à expliquer ou à éviter : RN" in c["avertissements"]
     assert resumer.controler("  \n ", FICHE, NOMS)["erreurs"] == ["résumé simple vide"]
+    # un nombre écrit en lettres dans la fiche peut passer en chiffres
+    trois = {**FICHE, "conseil_constitutionnel": "Aucune censure, trois réserves."}
+    assert resumer.controler("Le texte est accepté avec 3 conditions.", trois, NOMS)["avertissements"] == []
 
 
 def test_a_resumer_saute_les_textes_a_jour_ou_deja_proposes():
