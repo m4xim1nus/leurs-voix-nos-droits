@@ -461,7 +461,7 @@ qualification : il n'entre dans aucun score.
 - **Contenu** : ce que fait le texte et quels droits il touche, d'après la fiche seule (titre, résumé, droits touchés,
   décision du Conseil constitutionnel). Il n'ajoute rien. Il ne dit **pas le sens** (étend, restreint), que la fiche dit
   à côté avec ses sources, ni aucun jugement, et ne nomme ni élu·e, ni groupe, ni organisation qui a donné son avis.
-- **Écriture** : 5 phrases au plus, 15 mots au plus par phrase, 80 mots au plus en tout ; une phrase par ligne, une idée
+- **Écriture** : 6 phrases au plus, 15 mots au plus par phrase, 90 mots au plus en tout ; une phrase par ligne, une idée
   par phrase ; mots de tous les jours, mot difficile expliqué ; aucun sigle ni abréviation ; nombres en chiffres ; on
   parle du « texte ». Au-delà, l'admin et `lvnd check` avertissent, sans bloquer.
 - **Périmètre** : les textes qualifiés. Ni les fiches de suivi, ni le vote du Sénat.

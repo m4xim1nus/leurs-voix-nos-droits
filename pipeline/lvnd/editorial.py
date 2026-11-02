@@ -50,8 +50,8 @@ CLES_RECHERCHE = ("termes", "surnoms")
 CLES_DROIT_SUIVI = ("code", "sources", "justification")
 CLES_SIMPLE = ("texte", "empreinte")
 # Règles d'écriture du résumé simple (docs/METHODO.md) : au-delà, un avertissement, jamais un refus.
-SIMPLE_MOTS = 80
-SIMPLE_PHRASES = 5
+SIMPLE_MOTS = 90
+SIMPLE_PHRASES = 6
 SIMPLE_MOTS_PAR_PHRASE = 15
 CLES_SENAT = ("version", "scrutins", "droits", "etiquettes", "vigilance", "sources", "note")
 VERSIONS_SENAT = ("meme", "autre", "seul")

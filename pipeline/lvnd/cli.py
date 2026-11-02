@@ -1,6 +1,7 @@
 """Ligne de commande : lvnd download | archiver | build | check | editorial | scores | annuaire | sync-admin | proposer | resumer | veille."""
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -101,6 +102,13 @@ def main(argv=None) -> int:
     rs.add_argument("--prompt", action="store_true",
                     help="écrit les prompts (textes publiés) dans --sortie, sans aucun appel")
     rs.add_argument("--sortie", type=Path, help="avec --prompt (défaut : source/propositions/simple)")
+    rs.add_argument("--entrees", type=Path, metavar="FICHIER",
+                    help="écrit en JSON les fiches à résumer (D1), sans aucun appel : pour les faire écrire hors de l'API")
+    rs.add_argument("--importer", type=Path, metavar="FICHIER",
+                    help="verse dans D1 des résumés écrits hors de l'API (JSON {dossier: {texte, remarque, empreinte}}), "
+                         "contrôlés comme ceux du LLM")
+    rs.add_argument("--origine", default="résumé simple préparé dans Claude Code",
+                    help="avec --importer : origine affichée sur la carte")
     rs.add_argument("--export", type=Path, default=EXPORT)
     v = sub.add_parser("veille", help="veille des sources : flux de referentiels/sources_veille.yaml, rapprochés des "
                                       "textes publiés par le LLM ; une proposition par correspondance, écrite dans D1")
@@ -183,6 +191,13 @@ def main(argv=None) -> int:
         return veille.lancer(args.export, ADMIN, args.cible, args.jours, args.max, args.simuler, args.essai)
     elif args.commande == "resumer":
         from . import resumer
+        if args.entrees:
+            e = resumer.entrees(resumer.llm.D1(args.cible, ADMIN), args.dossiers)
+            args.entrees.write_text(json.dumps(e, ensure_ascii=False, indent=1) + "\n")
+            print(f"{len(e)} fiche(s) à résumer → {args.entrees}", file=sys.stderr)
+            return 0
+        if args.importer:
+            return resumer.importer(args.importer, args.export, ADMIN, args.cible, args.origine)
         return resumer.lancer(args.dossiers, args.export, ADMIN, args.cible, args.max, args.sortie, args.prompt)
     elif args.commande == "proposer":
         from . import propositions

@@ -103,7 +103,7 @@
   </p>
   <p>
     Un <b>résumé en mots simples</b> se relit à côté du résumé de la fiche : rien d’ajouté, pas de
-    sens (étend, restreint), ni élu·e ni groupe, 5 phrases courtes au plus. On le corrige dans le
+    sens (étend, restreint), ni élu·e ni groupe, 6 phrases courtes au plus. On le corrige dans le
     cadre, puis <b>Valider ce résumé simple</b> : il entre dans la qualification, qui garde son statut,
     et part avec « Publier ».
   </p>

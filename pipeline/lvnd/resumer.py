@@ -190,8 +190,9 @@ def alerte_id(dossier: str, empreinte: str) -> str:
     return f"{MODE}:{dossier}:{empreinte}"
 
 
-def ligne_d1(p: Proposition, t: dict, controles: dict | None, modele: str, date: str) -> dict:
-    relecture = {"origine": f"résumé simple proposé par LLM ({modele}, {date[:10]}, {p.cout_usd:.3f} $)"}
+def ligne_d1(p: Proposition, t: dict, controles: dict | None, modele: str, date: str,
+             origine: str | None = None) -> dict:
+    relecture = {"origine": origine or f"résumé simple proposé par LLM ({modele}, {date[:10]}, {p.cout_usd:.3f} $)"}
     if p.remarque:
         relecture["action"] = p.remarque
     if controles is not None:
@@ -229,6 +230,52 @@ def a_resumer(qualifs: list[dict], faites: set[str], dossiers: list[str] | None 
             continue
         out.append(t)
     return sorted(out, key=lambda t: t["dossier_an"])
+
+
+def entrees(d1, dossiers: list[str] | None = None) -> list[dict]:
+    """Textes à résumer, lus dans D1, avec la fiche telle que le LLM la recevrait (`message`) : de quoi faire écrire
+    les résumés hors de l'API (passe initiale dans Claude Code, décision de Max du 02/11/2026)."""
+    faites = {r["alerte_id"] for r in d1.lire(f"SELECT alerte_id FROM propositions WHERE mode = '{MODE}'")}
+    qualifs = d1.lire("SELECT dossier_an, statut, doc FROM qualifications WHERE statut = 'valide'")
+    return [{"dossier_an": t["dossier_an"], "id": t["id"], "empreinte": editorial.empreinte_simple(t), "fiche": message(t)}
+            for t in a_resumer(qualifs, faites, dossiers or None)]
+
+
+def importer(fichier: Path, export: Path, admin: Path, cible: str, origine: str) -> int:
+    """Verse dans D1 des résumés simples écrits hors de l'API : JSON {dossier: {texte, remarque?, empreinte}}, où
+    `empreinte` est celle de la fiche lue (`entrees`). Mêmes contrôles et même table que les propositions du LLM ;
+    une fiche qui a changé depuis, ou déjà proposée pour cette empreinte, est sautée."""
+    d1 = llm.D1(cible, admin)
+    recus = json.loads(fichier.read_text())
+    faites = {r["alerte_id"] for r in d1.lire(f"SELECT alerte_id FROM propositions WHERE mode = '{MODE}'")}
+    qualifs = {q["dossier_an"]: editorial.normaliser(json.loads(q["doc"])) for q in d1.lire(
+        "SELECT dossier_an, doc FROM qualifications WHERE statut = 'valide'")}
+    noms = Noms.depuis_export(export)
+    lignes, date = [], llm.maintenant()
+    for d, r in sorted(recus.items()):
+        t = qualifs.get(d)
+        if t is None:
+            print(f"{d} : pas de qualification validée, sauté", file=sys.stderr)
+            continue
+        e = editorial.empreinte_simple(t)
+        if r.get("empreinte") != e:
+            print(f"{d} : la fiche a changé depuis sa lecture, sauté", file=sys.stderr)
+            continue
+        if alerte_id(d, e) in faites:
+            print(f"{d} : déjà proposé pour cette fiche, sauté", file=sys.stderr)
+            continue
+        p = Proposition(d, e, texte=(r.get("texte") or "").strip() or None, remarque=r.get("remarque") or None)
+        if not p.texte:
+            p.echec = "résumé vide"
+        c = controler(p.texte, t, noms) if p.texte else None
+        ligne = ligne_d1(p, t, c, "claude-code", date, origine=f"{origine} ({date[:10]})")
+        lignes.append(ligne)
+        print(f"{d} {t['id']} → {ligne['statut']}{' : ' + ligne['motif'] if ligne['motif'] else ''}"
+              f"{' (' + '; '.join(c['avertissements']) + ')' if c and c['avertissements'] else ''}", file=sys.stderr)
+    for sql in sync_admin.inserts("propositions", COLONNES_D1, lignes):
+        d1.ecrire(sql)
+    print(f"{len(lignes)} proposition(s) écrite(s) dans D1 ({cible})", file=sys.stderr)
+    return 0
 
 
 def lancer(dossiers: list[str], export: Path, admin: Path, cible: str, maximum: int, sortie: Path | None,

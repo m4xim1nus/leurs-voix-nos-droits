@@ -185,7 +185,7 @@
   <p>
     Une fiche peut porter un résumé « En mots simples », pour les personnes qui lisent difficilement
     le français ou qui ne connaissent pas le travail des parlementaires. Il suit les règles
-    européennes du « facile à lire et à comprendre » (FALC) : 5 phrases au plus, 15 mots au plus par
+    européennes du « facile à lire et à comprendre » (FALC) : 6 phrases au plus, 15 mots au plus par
     phrase, une idée par phrase, des mots de tous les jours, aucun sigle. Il n’en porte pas le logo
     : ce label demande une relecture par des personnes en situation de handicap intellectuel, que ce
     projet n’a pas organisée.

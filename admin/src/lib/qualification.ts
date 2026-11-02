@@ -79,8 +79,8 @@ const CLES_SENAT = [
   'note'
 ] as const;
 // Règles d'écriture du résumé simple (docs/METHODO.md) : au-delà, un avertissement, jamais un refus.
-export const SIMPLE_MOTS = 80;
-export const SIMPLE_PHRASES = 5;
+export const SIMPLE_MOTS = 90;
+export const SIMPLE_PHRASES = 6;
 export const SIMPLE_MOTS_PAR_PHRASE = 15;
 export const VERSIONS_SENAT = ['meme', 'autre', 'seul'] as const;
 export const ROLES_SENAT = ['decisif', 'ensemble', 'motion', 'amendement'] as const;
