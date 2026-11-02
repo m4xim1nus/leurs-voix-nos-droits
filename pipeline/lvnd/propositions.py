@@ -13,6 +13,7 @@ from pathlib import Path
 import polars as pl
 import yaml
 
+from . import alertes as alertes_
 from . import controles, editorial, llm, proposer, sync_admin
 
 RACINE = Path(__file__).resolve().parents[2]
@@ -107,7 +108,7 @@ def lancer(dossiers: list[str], export: Path, admin: Path, cible: str, mode: str
 
 # File des alertes (item 5) ---------------------------------------------------------------------
 
-def reste_a_traiter(a: dict, statut: str | None, doc: str | None) -> bool:
+def reste_a_traiter(a: dict, statut: str | None, doc: str | None, motif: str | None = None) -> bool:
     """L'alerte reste-t-elle à traiter, vu la qualification de D1 ? Même règle que l'admin
     (admin/src/lib/alertes.ts, `resteATraiter`)."""
     t = a["type"]
@@ -123,7 +124,7 @@ def reste_a_traiter(a: dict, statut: str | None, doc: str | None) -> bool:
         return not ((a.get("scrutin_id") and any(s["id"] == a["scrutin_id"] for s in q.get("scrutins") or []))
                     or jour in (q.get("note") or ""))
     if t in ("senat_premier_vote", "senat_vote_posterieur"):
-        if statut == "ecarte":
+        if statut == "ecarte" and not alertes_.SANS_VOTE_AN.search(motif or ""):
             return False
         senat = q.get("senat") if doc else None
         if t == "senat_premier_vote":
@@ -144,11 +145,11 @@ def alertes_a_proposer(export: Path, d1, types: set[str]) -> list[dict]:
     if not alertes:
         return []
     faites = {r["alerte_id"] for r in d1.lire("SELECT alerte_id FROM propositions")}
-    qualifs = {r["dossier_an"]: (r["statut"], r["doc"]) for r in d1.lire(
-        "SELECT dossier_an, statut, doc FROM qualifications WHERE dossier_an IN ("
+    qualifs = {r["dossier_an"]: (r["statut"], r["doc"], r["motif_ecart"]) for r in d1.lire(
+        "SELECT dossier_an, statut, doc, motif_ecart FROM qualifications WHERE dossier_an IN ("
         + ", ".join(f"'{a['dossier_id']}'" for a in alertes) + ")")}
     return [a for a in alertes if a["id"] not in faites
-            and reste_a_traiter(a, *qualifs.get(a["dossier_id"], (None, None)))]
+            and reste_a_traiter(a, *qualifs.get(a["dossier_id"], (None, None, None)))]
 
 
 def ligne_d1(alerte: dict, p: proposer.Proposition, r: controles.Resultat | None, modele: str) -> dict:

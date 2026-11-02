@@ -165,6 +165,12 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
      de l'enseignement (Conseil national des barreaux, conseils de l'ordre
      des barreaux, Syndicat des avocats de France, Syndicat de la
      magistrature…) ;
+     le médico-social (établissements et services pour les personnes âgées
+     ou handicapées, aide à domicile) compte comme santé : ses organisations
+     professionnelles nationales sont admises (AD-PA, FNADEPA, FEHAP…), pas
+     leurs structures régionales ou départementales, et elles sont signalées
+     parties prenantes quand elles parlent du financement de leurs propres
+     établissements ;
    - organisations syndicales représentatives de salariés (CGT, CFDT, FO,
      CFE-CGC, CFTC, UNSA, FSU, Solidaires), y compris leurs fédérations
      professionnelles et les syndicats nationaux de branche qui leur sont
@@ -373,7 +379,10 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
     Il est retenu à la main : les mots-clés ne font que présélectionner. Sa fiche
     donne les droits qu'il touche et des sources publiques admises (règle 7), au
     moins une par droit, **sans sens ni score**. Aucun scrutin n'y est retenu. Faute
-    de source admise, il n'y a pas de fiche. Après le vote, le texte est qualifié ou
+    de source admise, il n'y a pas de fiche. La fiche décrit le texte dans son
+    dernier état connu à sa date (texte déposé, ou texte adopté par la dernière
+    chambre qui l'a voté), et dit cette date : une mesure supprimée par un scrutin
+    public avant cette date n'y figure pas. Après le vote, le texte est qualifié ou
     écarté selon les règles communes, et sa fiche disparaît. La page des textes en
     cours n'affiche que ces textes suivis et les textes qualifiés encore en navette.
 
@@ -398,7 +407,8 @@ ci-dessous remplacent, pour le Sénat, les règles 9 à 11 et 15 à 19.
 25. **Texte voté au seul Sénat.** Il est trié, puis qualifié s'il entre dans la grille (règles 2
     et 8). Il ne compte que dans les scores du Sénat, avec la mention « pas de vote sur
     l'ensemble à l'Assemblée », qui vaut aussi pour un texte que l'Assemblée a rejeté par une
-    motion, ou rejeté ou adopté à main levée : aucun vote nominatif n'y départage les député·es.
+    motion, rejeté ou adopté à main levée, ou rejeté par le rejet d'une partie d'une loi de
+    finances (règle 9) : aucun vote nominatif n'y départage les député·es.
     Sans source admise qui établisse son sens au Sénat, il est écarté, avec ce motif (règle 7) et
     le décompte du Sénat ; le vote « affiché et non compté » de la règle 24 ne vaut que pour un
     texte qualifié à l'Assemblée. Un texte attendu à l'Assemblée est qualifié dès le vote du Sénat,
@@ -430,5 +440,8 @@ ci-dessous remplacent, pour le Sénat, les règles 9 à 11 et 15 à 19.
 28. **Deux chambres séparées.** Aucun score ne mélange les deux chambres. Aucun score d'un·e
     député·e n'est comparé à celui d'un·e sénateur·ice, puisque les textes comptés diffèrent.
     Aucune correspondance n'est établie entre les groupes des deux chambres : ils sont côte à
-    côte, chacun sous son sigle. Un texte écarté (règles 8 et 9) l'est pour les deux chambres :
-    son vote au Sénat n'entre dans aucun score.
+    côte, chacun sous son sigle. Un texte écarté sur le fond (règle 8, vote unanime, hors grille,
+    sans source admise) l'est pour les deux chambres : son vote au Sénat n'entre dans aucun score.
+    Un texte écarté **faute de vote sur l'ensemble à l'Assemblée** (règle 9 : retiré, rejeté sans
+    vote sur l'ensemble, loi de finances rejetée par une partie), dont le motif le dit (« sans vote
+    sur l'ensemble »), reste qualifiable au Sénat selon la règle 25.

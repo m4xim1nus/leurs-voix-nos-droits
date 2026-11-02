@@ -54,12 +54,14 @@ export async function textes(db: D1Database): Promise<LigneListe[]> {
 export async function alertes(db: D1Database): Promise<Alerte[]> {
   const { results } = await db
     .prepare(
-      `SELECT a.*, q.statut, q.doc FROM alertes a
+      `SELECT a.*, q.statut, q.doc, q.motif_ecart FROM alertes a
        LEFT JOIN qualifications q ON q.dossier_an = a.dossier_id
        ORDER BY a.date DESC, a.id`
     )
-    .all<Alerte & { statut: Statut | null; doc: string | null }>();
-  return results.flatMap(({ statut, doc, ...a }) => (resteATraiter(a, statut, doc) ? [a] : []));
+    .all<Alerte & { statut: Statut | null; doc: string | null; motif_ecart: string | null }>();
+  return results.flatMap(({ statut, doc, motif_ecart, ...a }) =>
+    resteATraiter(a, statut, doc, motif_ecart) ? [a] : []
+  );
 }
 
 export async function texte(db: D1Database, id: string): Promise<TexteCatalogue | null> {

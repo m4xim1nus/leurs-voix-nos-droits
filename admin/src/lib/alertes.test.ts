@@ -71,6 +71,15 @@ describe('resteATraiter', () => {
     expect(resteATraiter(alerte('senat_premier_vote', 'S1'), 'valide', '{}')).toBe(true);
     expect(resteATraiter(alerte('senat_premier_vote', 'S1'), 'valide', doc)).toBe(false);
     expect(resteATraiter(alerte('senat_premier_vote', 'S1'), 'ecarte', '{}')).toBe(false);
+    // Écart faute de vote sur l'ensemble à l'AN : reste qualifiable au Sénat (règle 28).
+    expect(
+      resteATraiter(
+        alerte('senat_premier_vote', 'S1'),
+        'ecarte',
+        '{}',
+        'Retiré par son auteur sans vote sur l’ensemble (règle 9).'
+      )
+    ).toBe(true);
     expect(resteATraiter(alerte('senat_vote_posterieur', 'S2'), 'valide', doc)).toBe(true);
     expect(resteATraiter(alerte('senat_vote_posterieur', 'S1'), 'valide', doc)).toBe(false);
   });

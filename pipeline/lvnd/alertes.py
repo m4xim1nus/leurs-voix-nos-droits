@@ -21,8 +21,8 @@ l'admin, qui retire ceux que D1 a déjà traités (admin/src/lib/alertes.ts).
   (`motif_ecart`), et hors Sénat, dont les lectures n'ont ni scrutin ni mode ;
 - `inscrit` : texte ni qualifié, ni écarté, ni suivi, inscrit à l'ordre du jour d'une séance. Inscrit ne
   veut pas dire voté ;
-- `senat_premier_vote` : vote du Sénat en scrutin public sur l'ensemble d'un texte ni écarté ni lu pour
-  le Sénat (une fiche de suivi n'y change rien, comme pour `premier_decisif`) ;
+- `senat_premier_vote` : vote du Sénat en scrutin public sur l'ensemble d'un texte ni écarté (sauf faute de vote
+  sur l'ensemble à l'AN, règle 28) ni lu pour le Sénat (une fiche de suivi n'y change rien, comme pour `premier_decisif`) ;
 - `senat_vote_posterieur` : vote du Sénat sur l'ensemble après ceux que retient une qualification (règle 25).
 """
 
@@ -32,6 +32,8 @@ from .textes import ENSEMBLE
 
 COLONNES = ("id", "type", "dossier_id", "scrutin_id", "date", "titre", "detail")
 SANS_OPPOSITION = re.compile(r"sans aucune voix (contre|pour)", re.I)  # motif écrit par l'admin (site : donnees.ts)
+# Écart faute de vote sur l'ensemble à l'AN (règle 28) : le texte reste qualifiable au Sénat (règle 25).
+SANS_VOTE_AN = re.compile(r"sans vote sur l['’]ensemble", re.I)
 ECARTS_RELUS_LE = "2026-11-01"  # un vote antérieur a déjà été vu quand l'écart a été décidé ou revu
 
 
@@ -144,7 +146,7 @@ def calculer(textes: list[dict], scrutins: list[dict], points: list[dict], quali
             par_dossier.setdefault(s["dossier_id"], []).append(s)
     senat_scr = {s["id"]: s for s in scrutins_senat}
     for d, votes in par_dossier.items():
-        if d in ecartes:
+        if d in ecartes and not SANS_VOTE_AN.search(ecartes[d]["motif"]):
             continue
         dernier = max(votes, key=_cle)
         retenus = [senat_scr[s["id"]] for s in (qualifies.get(d, {}).get("senat") or {}).get("scrutins", []) if s["id"] in senat_scr]

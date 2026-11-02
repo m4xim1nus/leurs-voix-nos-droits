@@ -36,8 +36,16 @@ export interface Alerte {
   detail: string;
 }
 
-/** L'alerte reste-t-elle à traiter, vu la qualification de D1 (statut et document JSON) ? */
-export function resteATraiter(a: Alerte, statut: Statut | null, doc: string | null): boolean {
+/** Écart faute de vote sur l'ensemble à l'AN : le texte reste qualifiable au Sénat (règles 25 et 28). */
+export const SANS_VOTE_AN = /sans vote sur l['’]ensemble/i;
+
+/** L'alerte reste-t-elle à traiter, vu la qualification de D1 (statut, document JSON, motif d'écart) ? */
+export function resteATraiter(
+  a: Alerte,
+  statut: Statut | null,
+  doc: string | null,
+  motif: string | null = null
+): boolean {
   if (a.type === 'unanimite_contestee' || a.type === 'ecart_revote') return statut === 'ecarte';
   if (a.type === 'vote_posterieur') {
     if (!doc) return true;
@@ -55,7 +63,7 @@ export function resteATraiter(a: Alerte, statut: Statut | null, doc: string | nu
     );
   }
   if (a.type === 'senat_premier_vote' || a.type === 'senat_vote_posterieur') {
-    if (statut === 'ecarte') return false;
+    if (statut === 'ecarte' && !SANS_VOTE_AN.test(motif ?? '')) return false;
     const senat = doc
       ? (JSON.parse(doc) as { senat?: { scrutins: { id: string }[] } }).senat
       : null;

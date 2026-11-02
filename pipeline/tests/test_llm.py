@@ -258,6 +258,7 @@ def test_reste_a_traiter_comme_l_admin():
     assert r(a("unanimite_contestee"), "ecarte", "{}") and not r(a("unanimite_contestee"), "valide", "{}")
     assert r(a("senat_premier_vote"), "valide", "{}") and not r(a("senat_premier_vote"), "ecarte", "{}")
     assert not r(a("senat_vote_posterieur", "SN1"), "valide", json.dumps({"senat": {"scrutins": [{"id": "SN1"}]}}))
+    assert r(a("senat_premier_vote"), "ecarte", "{}", "Rejeté en séance sans vote sur l'ensemble (règle 9).")
 
 
 def test_alertes_deja_proposees_ou_traitees_sautees(tmp_path):
@@ -273,7 +274,7 @@ def test_alertes_deja_proposees_ou_traitees_sautees(tmp_path):
         def lire(self, sql):
             if "FROM propositions" in sql:
                 return [{"alerte_id": "inscrit:D1"}]
-            return [{"dossier_an": "D2", "statut": "brouillon", "doc": "{}"}]
+            return [{"dossier_an": "D2", "statut": "brouillon", "doc": "{}", "motif_ecart": None}]
 
     assert [a["id"] for a in alertes_a_proposer(tmp_path, D1(), {"inscrit"})] == ["inscrit:D3"]
 

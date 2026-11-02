@@ -246,9 +246,13 @@ def test_les_alertes_ne_font_pas_echouer_check(base, monkeypatch):
 
 def test_alertes_senat():
     qualif = {"textes": [{"dossier_an": "Q", "scrutins": [], "senat": {"scrutins": [{"id": "S1"}]}},
-                         {"dossier_an": "SB", "scrutins": []}], "ecartes": [{"dossier_an": "E", "motif": "règle 8"}]}
+                         {"dossier_an": "SB", "scrutins": []}], "ecartes": [{"dossier_an": "E", "motif": "règle 8"},
+              {"dossier_an": "R", "motif": "Retiré par son auteur sans vote sur l'ensemble (règle 9)."}]}
     s = lambda i, d, j, o="ensemble": {"id": i, "dossier_id": d, "date": j, "numero": int(i[1:]), "objet": o, "pour": 2, "contre": 1}
     scr = [s("S1", "Q", "2025-01-01"), s("S2", "Q", "2025-06-01"), s("S3", "N", "2025-01-02"), s("S4", "E", "2025-01-02"),
-           s("S5", "SB", "2025-01-03"), s("S6", "M", "2025-01-03", "motion_rejet"), s("S7", None, "2025-01-03")]
+           s("S5", "SB", "2025-01-03"), s("S6", "M", "2025-01-03", "motion_rejet"), s("S7", None, "2025-01-03"),
+           s("S8", "R", "2025-01-04")]
     out = {a["id"]: a for a in alertes.calculer([], [], [], qualif, scr)}
-    assert set(out) == {"senat_vote_posterieur:Q:S2", "senat_premier_vote:N:S3", "senat_premier_vote:SB:S5"}
+    # Écarté sur le fond : rien ; écarté faute de vote sur l'ensemble à l'AN : qualifiable au Sénat (règle 28).
+    assert set(out) == {"senat_vote_posterieur:Q:S2", "senat_premier_vote:N:S3", "senat_premier_vote:SB:S5",
+                        "senat_premier_vote:R:S8"}
