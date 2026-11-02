@@ -40,7 +40,7 @@ compte Cloudflare et du dépôt.
 - [→Passation] Accord sur l'usage du fournisseur LLM (voir le cycle Pré-qualification), et transfert de la clé API (claude, 2026-11-01)
 - [creuser] Quiz « qui vote comme vous ? » sur de vrais scrutins, comme leurs-votes.fr : à discuter à la passation, pour la campagne de 2027 (claude, 2026-10-29)
 
-### Pré-qualification automatique
+### Pré-qualification (cycle en cours, `ROADMAP.md`)
 
 Son vrai gain vient quand le projet tourne sans Claude Code. Les Actions appellent un LLM par API : les
 nouveaux textes et les nouvelles sources arrivent dans « À traiter » avec une
@@ -56,11 +56,13 @@ vient de lui ; un cas non prévu remonte à un humain, sans règle inventée.
 - [→Pré-qualification] « À traiter » : afficher la proposition, l'écart avec la version publiée, les extraits et les incertitudes. Seul ajout au front (user:moi et claude, 2026-10-30)
 - [→Pré-qualification] Contrôles sans LLM avant toute proposition : `editorial.valider`, décomptes, termes interdits, chaque extrait présent dans le document, URL qui répond. Un échec écarte la proposition et le dit (claude, 2026-10-30)
 - [→Pré-qualification] Exclusions de sources : prompt sans aucun nom, via la liste privée ; ce filtre ne repère pas un texte cosigné qui ne reprend pas les noms exclus, à contrôler à part (lire les signataires) (claude, 2026-10-30)
-- [→Pré-qualification] Clé API : secret GitHub de l'Action, workspace dédié, plafond de dépense ; un dépassement arrête les propositions, sans faire échouer la passe de données ; transfert à prévoir à la passation (claude, 2026-10-30)
+- [→Pré-qualification] Clé API : workspace dédié, plafond de dépense ; un dépassement arrête les propositions, sans faire échouer la passe de données ; transfert à prévoir à la passation (claude, 2026-10-30). Clé gérée depuis l'admin plutôt qu'en secret GitHub (user:moi, 2026-11-02)
 - [→Pré-qualification] Mettre à jour « Qui qualifie, et comment » sur la page Méthodologie quand les propositions automatiques tournent, et confirmer auprès des futur·es utilisateur·ices que l'usage de ce fournisseur est accepté (claude, 2026-10-30)
 - [→Pré-qualification] Étendre la veille des sources aux textes écartés faute de source : c'est là qu'une source nouvelle change la décision (user:moi et claude, 2026-11-01)
 - [→Pré-qualification] Proposer les termes de recherche d'un texte nouvellement qualifié, ajoutés aujourd'hui à la main dans le YAML, hors de l'admin (claude, 2026-11-01)
 - [→Pré-qualification] Relire `mots_cles.yaml` (brouillon), qui présélectionne les textes à suivre : motifs larges, sources de faux positifs (« eau », « soins », « violences », « justice »), dont chacun coûterait un appel et une relecture (claude, 2026-10-29)
+- [→Pré-qualification] Admin : interrupteur de l'usage du LLM, saisie d'une nouvelle clé, suivi de la consommation ; l'admin reste entièrement utilisable interrupteur coupé (user:moi, 2026-11-02)
+- [→Pré-qualification] Repenser « À traiter » avec les propositions du LLM, pour alléger le traitement hebdomadaire (user:moi, 2026-11-02)
 - [→Pré-qualification] Résumés « facile à lire et à comprendre » des textes qualifiés, générés hors ligne par LLM et relus avant publication : nouveau champ d'`editorial.json`, à sérialiser à l'identique dans le pipeline et l'admin (claude, 2026-10-30)
 
 ## À creuser
