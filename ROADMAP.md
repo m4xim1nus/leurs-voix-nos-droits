@@ -35,8 +35,8 @@ de côté, et combler deux manques de l'outil apparus en route. Pas de nouvelle 
 - Item 1 : alerte `lecture_posterieure` (lecture de l'AN close après le décisif sans vote public sur l'ensemble) ;
   `vote_posterieur` couvre aussi les textes qualifiés sans décisif à l'AN (audiovisuel public). Deux alertes à la mise en
   service, `a69-riipm-2025` et `travail-1er-mai-ppl-2025` (motions de rejet « tactiques »), brouillons prêts.
-- Item 2 : note interne (migration `0005_notes_internes.sql`), sur la fiche et dans « À traiter ». **À faire par Max** :
-  `npm run db:migrer:distant`, puis `npm run deploy`.
+- Item 2 : note interne (migration `0005_notes_internes.sql`), sur la fiche et dans « À traiter ». Migration et déploiement
+  faits par Max le 02/11/2026 (version `e1c94b0b`).
 - Items 3 et 4 : 18 brouillons chargés « à relire » dans l'admin le 02/11/2026 (six résumés de témoins, cinq fiches de fond,
   cinq écarts dont deux deviennent qualifiés, les deux fiches de l'alerte). En attente de l'ok de Max.
 - Item 5 : dix questions dans `docs/A_VALIDER.md`, chacune avec une recommandation. En attente de Max.
