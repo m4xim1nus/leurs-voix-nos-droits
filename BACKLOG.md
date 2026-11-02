@@ -20,9 +20,7 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 
 ## À trier
 
-- [ ] Résumés « facile à lire et à comprendre » des textes qualifiés, générés hors ligne par LLM et relus avant publication : nouveau champ d'`editorial.json`, à sérialiser à l'identique dans le pipeline et l'admin (claude, 2026-10-30 ; reporté du cycle Pré-qualification)
-- [ ] Rejuger `mots_cles.yaml` sur un mois de dépense réelle des propositions (vers le 02/12/2026) : motifs qui n'ont presque jamais donné de texte qualifié (`egalite` 0/7, `eau` 0/6, `polynesie` 0/5, `retraites?` 1/13, `outre mer` 2/16…), chacun coûtant une proposition (claude, 2026-11-02)
-- [ ] Propositions automatiques sur les alertes du Sénat, après quelques demandes réussies (décision de Max du 02/11/2026 : sur demande pour l'instant) (claude, 2026-11-02)
+- [ ] **À voir début décembre 2026.** Rejuger `mots_cles.yaml` sur un mois de dépense réelle des propositions : motifs qui n'ont presque jamais donné de texte qualifié (`egalite` 0/7, `eau` 0/6, `polynesie` 0/5, `retraites?` 1/13, `outre mer` 2/16…), chacun coûtant une proposition (claude, 2026-11-02)
 
 ## Cycles candidats
 
@@ -42,6 +40,10 @@ compte Cloudflare et du dépôt.
 - [→Passation] Accord sur l'usage du fournisseur LLM (cycle Pré-qualification, `CHANGELOG.md` 1.10.0), et transfert de la clé API : nouvelle clé saisie sur la page « LLM » de l'admin, nouveau secret `LLM_CHIFFREMENT` (claude, 2026-11-01)
 - [creuser] Quiz « qui vote comme vous ? » sur de vrais scrutins, comme leurs-votes.fr : à discuter à la passation, pour la campagne de 2027 (claude, 2026-10-29)
 
+### Facile à lire (cycle en cours, `ROADMAP.md`)
+
+- [→Facile à lire] Résumés « facile à lire et à comprendre » des textes qualifiés, générés hors ligne par LLM et relus avant publication : nouveau champ d'`editorial.json`, à sérialiser à l'identique dans le pipeline et l'admin (claude, 2026-10-30 ; reporté du cycle Pré-qualification)
+
 ## À creuser
 
 - [creuser] `/textes` : combiner un mot et les filtres (« pass sanitaire » en XVe). La case de l'en-tête suffit pour l'instant ; si le besoin apparaît, réutiliser le même moteur et les mêmes termes plutôt qu'une seconde recherche sur le titre (user:moi et claude, 2026-11-01)
@@ -51,6 +53,7 @@ compte Cloudflare et du dépôt.
 
 ## Refusé
 
+- [refusé] Propositions automatiques sur les alertes du Sénat : elles restent sur demande, depuis la carte d'un texte dans « À traiter » (décision de Max, 2026-11-02)
 - [refusé] Correspondance entre les groupes des deux chambres : jugement au cas par cas, contraire à la règle fixe et à la règle 28 (décision de Max, 2026-11-01)
 - [refusé] Interroger le catalogue de l'admin en langage naturel : peu d'utilisateurs, des filtres déjà là, et la même raison que l'assistant dans l'admin (user:moi et claude, 2026-11-01)
 - [refusé] Sénat : compter au Sénat un texte écarté à l'AN pour unanimité et disputé au Sénat (nationalisation d'EDF, douane, commission d'évaluation de l'aide, textile, chlordécone, devoir conjugal, accès à l'accompagnement, Territoires zéro chômeur) : un texte écarté l'est pour les deux chambres, règle 28 (décision de Max, 2026-10-31)
