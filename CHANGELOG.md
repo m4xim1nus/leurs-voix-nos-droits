@@ -3,6 +3,47 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Les tags `v*` du dépôt suivent ces versions.
 
+## [1.9.0] — 2026-11-02
+
+Cycle Suites de l'audit, et ce qui l'a précédé le même jour : les reliquats de l'audit de cohérence soldés, dix règles de
+méthode tranchées et appliquées, deux manques de l'outil comblés. Les scores changent sur une dizaine de textes. Au
+02/11/2026 : 199 textes qualifiés, 672 écartés, 3 fiches de suivi.
+
+### Ajouté
+
+- Alerte `lecture_posterieure` : lecture de l'AN close après le décisif d'un texte qualifié sans scrutin public sur l'ensemble
+  (main levée, motion de rejet). `vote_posterieur` couvre aussi les textes qualifiés sans décisif à l'AN (texte qualifié sur
+  le vote du Sénat).
+- Admin : une note interne par texte (D1 seule, jamais publiée), en haut de la fiche et dans « À traiter » (migration 0005).
+- Admin : « Publier » refuse de remettre l'ancienne version d'un texte modifié dans le dépôt hors de l'admin. La comparaison
+  est sautée quand le fichier du dépôt est celui de la dernière publication (migration 0006).
+- Qualifications : homicide routier (2025), Rist 2021 (sages-femmes), ZAN (2023), La Poste (2022, Sénat seul), directeurs
+  d'école (2021). Amendements clés nouveaux : PLFSS 2026 (article 26 bis), urgence agricole (article 5), justice criminelle
+  (article 3), quatre budgets au Sénat.
+- Présentation : PDF vectoriel au texte sélectionnable, refait par `docs/presentation/imprimer.py`.
+
+### Modifié
+
+- Méthode (règles 2, 4, 5, 7, 8, 10, 25 et étiquette `regime-exception`) : vigilance réservée à la propriété, l'ordre public
+  n'est plus signalé ; calendrier électoral hors grille ; ratification d'ordonnances lue sur le droit antérieur ; la décision du
+  Conseil constitutionnel sur le texte quitte les vigilances pour son champ (40 fiches) ; structures régionales d'un syndicat et
+  organisations professionnelles d'autres secteurs non admises ; statut d'une profession ; motion votée sans voix d'un côté non
+  affichée ; texte adopté à main levée à l'AN trié pour le Sénat ; texte du seul Sénat sans source écarté (7 textes) ; extension
+  du droit antiterroriste dans `regime-exception`. Aussi : conseils de l'ordre des barreaux admis, justice civile et commerciale
+  hors de `police-justice`.
+- Résumés des six fiches témoins, écrits sur le texte voté ; audit de forme appliqué à 218 fiches et motifs (formules
+  unifiées, règles citées, étiquettes motivées), sans effet sur les scores.
+- Termes de recherche : une clé d'écart devenue qualifiée n'est plus une erreur de `lvnd check`, mais un avertissement.
+- `lvnd sync-admin --simuler` refusé hors du sync incrémental du catalogue.
+- Passes de données à 4 h 17 (lundi) et 5 h 17 UTC, hors de l'heure pile que GitHub sautait.
+
+### Limites connues
+
+- Les qualifications de La Poste et des directeurs d'école reposent sur des sources syndicales seules, et celle de l'article 26 bis
+  du PLFSS 2026 sur un syndicat de médecins.
+- La page « Publier » reste proche de la limite de calcul d'un Worker gratuit : une erreur 1102 passagère est possible
+  (`docs/EXPLOITATION.md`).
+
 ## [1.8.0] — 2026-11-01
 
 Cycle Sénat, suite : le Sénat de 2017-2022, lu comme celui d'après. Les scores du Sénat changent, depuis 2022 aussi : ils comptent
