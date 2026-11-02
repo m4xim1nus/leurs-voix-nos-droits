@@ -76,7 +76,9 @@ appliquer une éventuelle migration (`npm run db:migrer:distant`) et déployer l
 - Item 6, en partie : mesure sur 5 textes (02/11/2026, Opus 5.5, 0,15 $) : 5 propositions conformes, 55 à 66 mots,
   15 mots au plus par phrase, les 5 phrases toujours remplies ; consigne resserrée (la remarque ne liste plus les
   omissions), nombres en lettres reconnus. Étape `lvnd resumer` ajoutée à l'Action `propositions.yml` (5 par passe).
-  **Reste** : décisions de Max (seuils, budget de la passe initiale), relecture, « Publier ».
+  Décisions de Max du 02/11/2026 : **6 phrases, 15 mots par phrase, 90 mots** ; passe initiale **dans Claude Code**,
+  sans l'API (`lvnd resumer --entrees`, puis `--importer` : mêmes contrôles, même table, origine « préparé dans Claude
+  Code ») ; l'Action garde l'étape `lvnd resumer` pour les textes à venir.
 - Item 7 : `docs/METHODO.md` (section « Résumé en mots simples »), `docs/QUALIFICATION.md`, `docs/CONCEPTION.md`,
   `docs/EXPLOITATION.md`, guide `/aide`, `CLAUDE.md`. **À faire par Max** : `npm run deploy` de l'admin (aucune
   migration), puis `git push`.

@@ -78,3 +78,36 @@ def test_sans_balise_en_echec(termes):
 def test_systeme_reprend_les_regles_d_ecriture():
     assert f"{editorial.SIMPLE_MOTS} mots au plus" in resumer.SYSTEME
     assert "{" not in resumer.SYSTEME
+
+
+class D1Importer:
+    def __init__(self, qualifs, faites=()):
+        self.qualifs, self.faites, self.ecrits = qualifs, list(faites), []
+
+    def lire(self, sql):
+        if "FROM propositions" in sql:
+            return [{"alerte_id": a} for a in self.faites]
+        return [{"dossier_an": q["dossier_an"], "statut": "valide", "doc": json.dumps(q, ensure_ascii=False)}
+                for q in self.qualifs]
+
+    def ecrire(self, sql):
+        self.ecrits.append(sql)
+
+
+def test_entrees_puis_importer(tmp_path, monkeypatch, termes):
+    d1 = D1Importer([FICHE, {**FICHE, "dossier_an": "DLR5L17N2", "id": "autre"}])
+    monkeypatch.setattr(resumer.llm, "D1", lambda cible, admin: d1)
+    e = resumer.entrees(d1)
+    assert [x["dossier_an"] for x in e] == ["DLR5L17N1", "DLR5L17N2"] and "Titre : Loi sur les caméras" in e[0]["fiche"]
+    recus = {
+        "DLR5L17N1": {"texte": "Ce texte met des caméras dans 12 villes.", "empreinte": e[0]["empreinte"]},
+        "DLR5L17N2": {"texte": "Une phrase.", "empreinte": "0" * 16},  # fiche changée depuis : sautée
+        "DLR5L17N9": {"texte": "Une phrase.", "empreinte": "x"},  # pas de qualification validée : sautée
+    }
+    f = tmp_path / "r.json"
+    f.write_text(json.dumps(recus))
+    monkeypatch.setattr(resumer.Noms, "depuis_export", classmethod(lambda cls, export: NOMS))
+    resumer.importer(f, tmp_path, tmp_path, "local", "résumé simple préparé dans Claude Code")
+    sql = "\n".join(d1.ecrits)
+    assert sql.count("simple:DLR5L17N1:") == 1 and "DLR5L17N2" not in sql and "claude-code" in sql
+    assert "préparé dans Claude Code" in sql and "'proposee'" in sql
