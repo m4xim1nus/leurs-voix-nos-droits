@@ -321,7 +321,7 @@ Comparer), Sénat, Méthode (Méthodologie et Données). Les adresses ne changen
 | Accueil | `/` | recherche (code postal, pays, nom), score global des groupes de la XVIIe, les onze droits, derniers textes qualifiés |
 | Droit | `/droits/<code>` | libellé, textes (principal ou secondaire, sens), scores des groupes par législature |
 | Textes | `/textes` | textes qualifiés (filtres : droit, sens, législature), textes écartés et leur motif |
-| Fiche texte | `/textes/<id>` | encadré « En mots simples » sous le résumé, s'il est à jour ; droits, sens, justification et sources ; vigilance ; Conseil constitutionnel ; scrutins et positions de groupe ; score de chaque groupe sur ce texte ; liens AN et Légifrance |
+| Fiche texte | `/textes/<id>` | encadré repliable « En mots simples » sous le résumé (fermé par défaut, un seul paragraphe), s'il est à jour ; droits, sens, justification et sources ; vigilance ; Conseil constitutionnel ; scrutins et positions de groupe ; score de chaque groupe sur ce texte ; liens AN et Légifrance |
 | Textes en cours | `/en-cours` | textes retenus encore en navette, rangés par échéance (inscrit à une date, attendu à l'AN, au Sénat, en CMP, suite pas encore connue) : ordre du jour, sens lu sur le texte voté, dernier vote public de l'AN par groupe, mention si ce vote n'est pas encore qualifié |
 | Fiche député | `/deputes/<slug>` | circonscription, groupes successifs, score global et par droit (un clic sur un droit filtre ses votes), participation, abstentions, votes sur chaque scrutin compté (les autres sont sur la fiche texte), textes adoptés sans opposition, « Lui écrire », carte partageable |
 | Circonscription | `/circonscriptions/<dép>-<num>` | député en cours, ou « siège vacant », et ses prédécesseurs depuis 2022 |

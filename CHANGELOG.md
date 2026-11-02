@@ -3,6 +3,18 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Les tags `v*` du dépôt suivent ces versions.
 
+## [1.11.1] — 2026-11-02
+
+Retouches de l'encadré « En mots simples » de la fiche d'un texte, à la demande de Max. Aucune donnée ni aucun score ne
+change.
+
+### Modifié
+
+- L'encadré est repliable, fermé par défaut.
+- Le résumé simple s'affiche en un seul paragraphe, sans retour à la ligne entre les phrases (il reste stocké une phrase
+  par ligne dans `editorial.json`).
+- La phrase de méthode sous l'encadré est retirée ; la page Méthodologie garde sa section « Les résumés en mots simples ».
+
 ## [1.11.0] — 2026-11-02
 
 Cycle Facile à lire : chaque texte qualifié porte un résumé « En mots simples », pour une personne qui lit difficilement
