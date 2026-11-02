@@ -54,6 +54,8 @@ export interface Qualification {
   legislature: number;
   titre: string;
   resume: string;
+  /** Résumé en mots simples, relu par un humain : absent quand vide (cycle Facile à lire). */
+  resume_simple?: ResumeSimple;
   droits: DroitQualifie[];
   etiquettes: string[];
   vigilance: Vigilance[];
@@ -64,6 +66,15 @@ export interface Qualification {
   senat?: BlocSenat;
   /** Clés de la recherche du site, jamais affichées : absent quand vide. */
   recherche?: Recherche;
+}
+
+/**
+ * Résumé en mots simples et empreinte de ce qu'il reformule au moment de sa relecture
+ * (`empreinteSimple`) : une empreinte qui ne correspond plus dit qu'il est à revoir.
+ */
+export interface ResumeSimple {
+  texte: string;
+  empreinte: string;
 }
 
 /** Termes courants et surnoms d'usage public d'un texte, pour la recherche du site. */

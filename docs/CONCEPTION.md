@@ -102,6 +102,16 @@ affichées, saisies sur la fiche de l'admin ou proposées par le LLM. Absent qua
 octet ne change pour un texte sans terme, et le format reste 1. Vérifié dans les deux sens sur
 `pipeline/tests/fixtures/editorial_suivis.json`.
 
+Un bloc `resume_simple` (`texte`, `empreinte`) suit `resume` dans un texte qualifié qui en a (cycle
+Facile à lire, 02/11/2026) : le résumé « en mots simples », une phrase par ligne, relu par un humain, et
+l'empreinte de ce qu'il reformule au moment de cette relecture (titre, résumé, codes des droits touchés,
+décision du Conseil constitutionnel ; FNV-1a sur 64 bits, le même calcul dans le pipeline, l'admin et le
+site). Une fiche qui change ensuite ne correspond plus à l'empreinte : le résumé simple est « à revoir »,
+`lvnd check` le signale, et le site ne l'affiche pas. Ni le sens ni les justifications n'entrent dans
+l'empreinte : le résumé simple n'en parle pas. Absent quand il est vide, jamais dans une fiche de suivi, et
+le format reste 1. Même contrôle croisé (octets, empreintes, messages des contrôles), sur
+`pipeline/tests/fixtures/editorial_simple.json`.
+
 Un bloc `senat` s'ajoute en dernier à un texte dès qu'un vote du Sénat y est retenu
 (règles 23 à 28) : `version` (`meme`, `autre`, `seul`), `scrutins` (rôles `decisif`, `ensemble`,
 `motion`), `droits`, `etiquettes`, `vigilance`, `sources` (propres à une version `autre`, vides

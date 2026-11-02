@@ -21,7 +21,7 @@ def test_temoins_convertis_et_valides():
     doc = editorial.depuis_temoins(referentiels.temoins())
     assert [t["id"] for t in doc["textes"]] == sorted(t["id"] for t in referentiels.temoins()["textes"])
     for t in doc["textes"]:
-        assert list(t) == [k for k in editorial.CLES_TEXTE if k not in ("senat", "recherche")]
+        assert list(t) == [k for k in editorial.CLES_TEXTE if k not in ("senat", "recherche", "resume_simple")]
         assert not editorial.valider(t)[0], t["id"]
     kb = next(t for t in doc["textes"] if t["id"] == "kasbarian-berge")
     assert kb["vigilance"][0]["sources"] == []  # chaîne simple → objet
@@ -359,3 +359,26 @@ def test_ajouter_refuse_une_difference_ou_une_erreur():
         editorial.ajouter(doc, [{"dossier_an": "DLR5L17N1", "legislature": 17, "titre": "Loi", "statut": "ecarte", "motif_ecart": "m"}])
     with pytest.raises(SystemExit):
         editorial.ajouter(editorial.document([], []), [_brouillon(droits=[])])
+
+
+FIXTURE_SIMPLE = Path(__file__).parent / "fixtures/editorial_simple.json"
+
+
+def test_resume_simple_a_l_octet_empreintes_et_controles():
+    """Même fixture que admin/src/lib/qualification.test.ts et site/src/lib/server/donnees.test.ts."""
+    f = json.loads(FIXTURE_SIMPLE.read_text())
+    assert editorial.serialiser(editorial.document([editorial.normaliser(t) for t in f["entrees"]], [])) == f["sortie"]
+    for x in f["empreintes"]:
+        assert editorial.empreinte_simple(editorial.normaliser(x["doc"])) == x["empreinte"]
+    for c in f["cas"]:
+        assert editorial.controler_simple(editorial.normaliser(c["doc"])) == (c["erreurs"], c["avertissements"]), c["nom"]
+
+
+def test_resume_simple_absent_quand_vide_et_hors_suivis():
+    assert "resume_simple" not in _texte(resume_simple={"texte": "  ", "empreinte": "x"})
+    t = _texte(resume_simple={"texte": "Une phrase.", "empreinte": "x"})
+    assert list(t)[:6] == ["id", "dossier_an", "legislature", "titre", "resume", "resume_simple"]
+    assert "resume_simple" not in editorial.suivi(t)
+    # l'empreinte ne dépend ni du sens, ni des justifications, ni de l'ordre des droits
+    autre = {**t, "droits": [{**d, "sens": "etend", "justification": "autre"} for d in reversed(t["droits"])]}
+    assert editorial.empreinte_simple(autre) == editorial.empreinte_simple(t)

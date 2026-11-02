@@ -1,0 +1,399 @@
+{
+ "entrees": [
+  {
+   "id": "a-simple",
+   "dossier_an": "DLR5L17N1",
+   "legislature": 17,
+   "titre": "Loi relative à l’accès aux droits",
+   "resume": "Le texte crée un « guichet » unique. Il modifie l'article L. 115-2 du code.",
+   "droits": [
+    {
+     "code": "vie-privee",
+     "role": "secondaire",
+     "sens": "restreint",
+     "sources": [
+      "s1"
+     ],
+     "justification": "x"
+    },
+    {
+     "code": "droits-sociaux",
+     "role": "principal",
+     "sens": "etend",
+     "sources": [
+      "s1"
+     ],
+     "justification": "y"
+    }
+   ],
+   "conseil_constitutionnel": "Conforme : aucune réserve.",
+   "sources": {
+    "s1": {
+     "auteur": "CNIL",
+     "titre": "Avis",
+     "date": "2024-01-01",
+     "url": "https://cnil.fr"
+    }
+   },
+   "scrutins": [
+    {
+     "id": "V1",
+     "role": "decisif",
+     "pour": "texte",
+     "objet": "x"
+    }
+   ],
+   "resume_simple": {
+    "empreinte": " ead2bfc28086a611 ",
+    "texte": "  Cette loi crée   un seul guichet.\r\n\r\n\tOn y fait ses démarches. \n"
+   }
+  },
+  {
+   "id": "b-vide",
+   "dossier_an": "DLR5L17N1",
+   "legislature": 17,
+   "titre": "Loi relative à l’accès aux droits",
+   "resume": "Le texte crée un « guichet » unique. Il modifie l'article L. 115-2 du code.",
+   "droits": [
+    {
+     "code": "vie-privee",
+     "role": "secondaire",
+     "sens": "restreint",
+     "sources": [
+      "s1"
+     ],
+     "justification": "x"
+    },
+    {
+     "code": "droits-sociaux",
+     "role": "principal",
+     "sens": "etend",
+     "sources": [
+      "s1"
+     ],
+     "justification": "y"
+    }
+   ],
+   "conseil_constitutionnel": "Conforme : aucune réserve.",
+   "sources": {
+    "s1": {
+     "auteur": "CNIL",
+     "titre": "Avis",
+     "date": "2024-01-01",
+     "url": "https://cnil.fr"
+    }
+   },
+   "scrutins": [
+    {
+     "id": "V1",
+     "role": "decisif",
+     "pour": "texte",
+     "objet": "x"
+    }
+   ],
+   "resume_simple": {
+    "texte": " \n ",
+    "empreinte": "ead2bfc28086a611"
+   }
+  }
+ ],
+ "sortie": "{\n  \"format\": 1,\n  \"grille\": 1,\n  \"textes\": [\n    {\n      \"id\": \"a-simple\",\n      \"dossier_an\": \"DLR5L17N1\",\n      \"legislature\": 17,\n      \"titre\": \"Loi relative à l’accès aux droits\",\n      \"resume\": \"Le texte crée un « guichet » unique. Il modifie l'article L. 115-2 du code.\",\n      \"resume_simple\": {\n        \"texte\": \"Cette loi crée un seul guichet.\\nOn y fait ses démarches.\",\n        \"empreinte\": \"ead2bfc28086a611\"\n      },\n      \"droits\": [\n        {\n          \"code\": \"vie-privee\",\n          \"role\": \"secondaire\",\n          \"sens\": \"restreint\",\n          \"sources\": [\n            \"s1\"\n          ],\n          \"justification\": \"x\"\n        },\n        {\n          \"code\": \"droits-sociaux\",\n          \"role\": \"principal\",\n          \"sens\": \"etend\",\n          \"sources\": [\n            \"s1\"\n          ],\n          \"justification\": \"y\"\n        }\n      ],\n      \"etiquettes\": [],\n      \"vigilance\": [],\n      \"conseil_constitutionnel\": \"Conforme : aucune réserve.\",\n      \"note\": \"\",\n      \"sources\": {\n        \"s1\": {\n          \"auteur\": \"CNIL\",\n          \"titre\": \"Avis\",\n          \"date\": \"2024-01-01\",\n          \"url\": \"https://cnil.fr\"\n        }\n      },\n      \"scrutins\": [\n        {\n          \"id\": \"V1\",\n          \"role\": \"decisif\",\n          \"pour\": \"texte\",\n          \"objet\": \"x\"\n        }\n      ]\n    },\n    {\n      \"id\": \"b-vide\",\n      \"dossier_an\": \"DLR5L17N1\",\n      \"legislature\": 17,\n      \"titre\": \"Loi relative à l’accès aux droits\",\n      \"resume\": \"Le texte crée un « guichet » unique. Il modifie l'article L. 115-2 du code.\",\n      \"droits\": [\n        {\n          \"code\": \"vie-privee\",\n          \"role\": \"secondaire\",\n          \"sens\": \"restreint\",\n          \"sources\": [\n            \"s1\"\n          ],\n          \"justification\": \"x\"\n        },\n        {\n          \"code\": \"droits-sociaux\",\n          \"role\": \"principal\",\n          \"sens\": \"etend\",\n          \"sources\": [\n            \"s1\"\n          ],\n          \"justification\": \"y\"\n        }\n      ],\n      \"etiquettes\": [],\n      \"vigilance\": [],\n      \"conseil_constitutionnel\": \"Conforme : aucune réserve.\",\n      \"note\": \"\",\n      \"sources\": {\n        \"s1\": {\n          \"auteur\": \"CNIL\",\n          \"titre\": \"Avis\",\n          \"date\": \"2024-01-01\",\n          \"url\": \"https://cnil.fr\"\n        }\n      },\n      \"scrutins\": [\n        {\n          \"id\": \"V1\",\n          \"role\": \"decisif\",\n          \"pour\": \"texte\",\n          \"objet\": \"x\"\n        }\n      ]\n    }\n  ],\n  \"ecartes\": []\n}\n",
+ "empreintes": [
+  {
+   "doc": {
+    "id": "a-simple",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi relative à l’accès aux droits",
+    "resume": "Le texte crée un « guichet » unique. Il modifie l'article L. 115-2 du code.",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "secondaire",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": "x"
+     },
+     {
+      "code": "droits-sociaux",
+      "role": "principal",
+      "sens": "etend",
+      "sources": [
+       "s1"
+      ],
+      "justification": "y"
+     }
+    ],
+    "conseil_constitutionnel": "Conforme : aucune réserve.",
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ]
+   },
+   "empreinte": "ead2bfc28086a611"
+  },
+  {
+   "doc": {
+    "id": "a-simple",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi « 49.3 » \\ \"x\"\n\t 😀",
+    "resume": "",
+    "droits": [],
+    "conseil_constitutionnel": "",
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ]
+   },
+   "empreinte": "88d747cf5903ea59"
+  }
+ ],
+ "cas": [
+  {
+   "nom": "à jour",
+   "doc": {
+    "id": "a-simple",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi relative à l’accès aux droits",
+    "resume": "Le texte crée un « guichet » unique. Il modifie l'article L. 115-2 du code.",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "secondaire",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": "x"
+     },
+     {
+      "code": "droits-sociaux",
+      "role": "principal",
+      "sens": "etend",
+      "sources": [
+       "s1"
+      ],
+      "justification": "y"
+     }
+    ],
+    "conseil_constitutionnel": "Conforme : aucune réserve.",
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "resume_simple": {
+     "empreinte": " ead2bfc28086a611 ",
+     "texte": "  Cette loi crée   un seul guichet.\r\n\r\n\tOn y fait ses démarches. \n"
+    }
+   },
+   "erreurs": [],
+   "avertissements": []
+  },
+  {
+   "nom": "sans empreinte",
+   "doc": {
+    "id": "a-simple",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi relative à l’accès aux droits",
+    "resume": "Le texte crée un « guichet » unique. Il modifie l'article L. 115-2 du code.",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "secondaire",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": "x"
+     },
+     {
+      "code": "droits-sociaux",
+      "role": "principal",
+      "sens": "etend",
+      "sources": [
+       "s1"
+      ],
+      "justification": "y"
+     }
+    ],
+    "conseil_constitutionnel": "Conforme : aucune réserve.",
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "resume_simple": {
+     "texte": "Une phrase."
+    }
+   },
+   "erreurs": [
+    "résumé simple sans empreinte : à relire"
+   ],
+   "avertissements": []
+  },
+  {
+   "nom": "fiche changée",
+   "doc": {
+    "id": "a-simple",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi relative à l’accès aux droits",
+    "resume": "Autre résumé.",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "secondaire",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": "x"
+     },
+     {
+      "code": "droits-sociaux",
+      "role": "principal",
+      "sens": "etend",
+      "sources": [
+       "s1"
+      ],
+      "justification": "y"
+     }
+    ],
+    "conseil_constitutionnel": "Conforme : aucune réserve.",
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "resume_simple": {
+     "texte": "Une phrase.",
+     "empreinte": "ead2bfc28086a611"
+    }
+   },
+   "erreurs": [],
+   "avertissements": [
+    "résumé simple à revoir : la fiche a changé depuis sa relecture"
+   ]
+  },
+  {
+   "nom": "trop long, sigles",
+   "doc": {
+    "id": "a-simple",
+    "dossier_an": "DLR5L17N1",
+    "legislature": 17,
+    "titre": "Loi relative à l’accès aux droits",
+    "resume": "Le texte crée un « guichet » unique. Il modifie l'article L. 115-2 du code.",
+    "droits": [
+     {
+      "code": "vie-privee",
+      "role": "secondaire",
+      "sens": "restreint",
+      "sources": [
+       "s1"
+      ],
+      "justification": "x"
+     },
+     {
+      "code": "droits-sociaux",
+      "role": "principal",
+      "sens": "etend",
+      "sources": [
+       "s1"
+      ],
+      "justification": "y"
+     }
+    ],
+    "conseil_constitutionnel": "Conforme : aucune réserve.",
+    "sources": {
+     "s1": {
+      "auteur": "CNIL",
+      "titre": "Avis",
+      "date": "2024-01-01",
+      "url": "https://cnil.fr"
+     }
+    },
+    "scrutins": [
+     {
+      "id": "V1",
+      "role": "decisif",
+      "pour": "texte",
+      "objet": "x"
+     }
+    ],
+    "resume_simple": {
+     "empreinte": "ead2bfc28086a611",
+     "texte": "La CNIL donne son avis sur la loi : elle trouve que le texte va trop loin pour la vie privée de tout le monde ici. Le RSA change. Deux. Trois ! Quatre ? Cinq…\nSix, l’État et la CNIL encore."
+    }
+   },
+   "erreurs": [],
+   "avertissements": [
+    "résumé simple : 7 phrases, 5 au plus",
+    "résumé simple : phrase 1 de 25 mots, 15 au plus",
+    "résumé simple : sigle à expliquer ou à éviter : CNIL, RSA"
+   ]
+  }
+ ]
+}

@@ -17,6 +17,7 @@
     LIBELLES_VERSION_SENAT
   } from '$lib/format';
   import {
+    empreinteSimple,
     normaliser,
     POUR,
     ROLES_SCRUTIN,
@@ -125,6 +126,7 @@
         : doc.droits,
       scrutins: aSuivre ? [] : doc.scrutins,
       senat: aSuivre ? undefined : senat,
+      resume_simple: aSuivre ? undefined : doc.resume_simple,
       sources: versSources(sources),
       recherche: { termes: liste(termes), surnoms: liste(surnoms) }
     })
@@ -152,6 +154,21 @@
     if (premier) premier = false;
     else modifie = true;
   });
+
+  // --- Résumé en mots simples (cycle Facile à lire) ------------------------------------------
+  // Le saisir ou le corriger, c'est le relire : son empreinte suit alors la fiche telle qu'elle est.
+  // Si la fiche change ensuite (titre, résumé, droits touchés, décision du Conseil), il est « à revoir »
+  // et le site ne l'affiche plus, jusqu'à ce qu'une personne le confirme ou le corrige.
+  function simpleSaisi(texte: string) {
+    doc.resume_simple = texte.trim() ? { texte, empreinte: empreinteSimple(complet) } : undefined;
+  }
+  const simpleARevoir = $derived(
+    Boolean(
+      complet.resume_simple &&
+      complet.resume_simple.empreinte &&
+      complet.resume_simple.empreinte !== empreinteSimple(complet)
+    )
+  );
 
   // --- Scrutins -------------------------------------------------------------------------------
 
@@ -401,6 +418,26 @@
         >Résumé (une ou deux phrases, ton factuel)
         <textarea bind:value={doc.resume} rows="2"></textarea>
       </label>
+      {#if !aSuivre}
+        <label class="champ"
+          >En mots simples (affiché sous le résumé ; une phrase par ligne, sans le sens, ni élu·e ni
+          groupe)
+          <textarea
+            value={doc.resume_simple?.texte ?? ''}
+            oninput={(e) => simpleSaisi(e.currentTarget.value)}
+            rows="4"></textarea>
+        </label>
+        {#if simpleARevoir}
+          <p class="a-revoir">
+            La fiche a changé depuis la relecture du résumé simple : le site ne l'affiche plus.
+            <button
+              type="button"
+              onclick={() => doc.resume_simple && simpleSaisi(doc.resume_simple.texte)}
+              >Le résumé simple est à jour</button
+            >
+          </p>
+        {/if}
+      {/if}
 
       <EditeurDroits
         bind:droits={doc.droits}
@@ -841,6 +878,12 @@
 {/if}
 
 <style>
+  .a-revoir {
+    background: var(--alerte-fond);
+    color: var(--alerte);
+    padding: 0.4rem 0.6rem;
+    border-radius: var(--rayon);
+  }
   .grand {
     flex: 1 1 22rem;
   }

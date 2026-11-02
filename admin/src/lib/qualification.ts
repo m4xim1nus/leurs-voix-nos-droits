@@ -10,6 +10,7 @@ import type {
   Grille,
   Qualification,
   Recherche,
+  ResumeSimple,
   ScrutinRetenu,
   Source,
   Statut,
@@ -39,6 +40,7 @@ const CLES_TEXTE = [
   'legislature',
   'titre',
   'resume',
+  'resume_simple',
   'droits',
   'etiquettes',
   'vigilance',
@@ -76,6 +78,10 @@ const CLES_SENAT = [
   'sources',
   'note'
 ] as const;
+// Règles d'écriture du résumé simple (docs/METHODO.md) : au-delà, un avertissement, jamais un refus.
+export const SIMPLE_MOTS = 80;
+export const SIMPLE_PHRASES = 5;
+export const SIMPLE_MOTS_PAR_PHRASE = 15;
 export const VERSIONS_SENAT = ['meme', 'autre', 'seul'] as const;
 export const ROLES_SENAT = ['decisif', 'ensemble', 'motion', 'amendement'] as const;
 const OBJETS_DECISIF_SENAT = ['ensemble', 'article_unique'];
@@ -142,6 +148,80 @@ export function rechercheOrdonnee(r: Recherche | undefined | null): Recherche | 
 }
 
 /**
+ * Bloc `resume_simple` : une phrase par ligne au plus, espaces en trop retirés ; undefined sans texte.
+ * Miroir de `editorial.resume_simple` du pipeline.
+ */
+export function resumeSimpleOrdonne(
+  r: Partial<ResumeSimple> | undefined | null
+): ResumeSimple | undefined {
+  const texte = String(r?.texte ?? '')
+    .split(/\r\n|\r|\n/)
+    .map((x) => x.replace(/[ \t]+/g, ' ').trim())
+    .filter(Boolean)
+    .join('\n');
+  if (!texte) return undefined;
+  return { texte, empreinte: String(r?.empreinte ?? '').trim() };
+}
+
+/**
+ * Empreinte de ce que le résumé simple reformule : titre, résumé, codes des droits touchés, décision du
+ * Conseil constitutionnel, d'une qualification normalisée. FNV-1a sur 64 bits, en hexadécimal, synchrone :
+ * le même calcul que `editorial.empreinte_simple` du pipeline et que le site.
+ */
+export function empreinteSimple(
+  t: Pick<Qualification, 'titre' | 'resume' | 'droits' | 'conseil_constitutionnel'>
+): string {
+  const base = [
+    t.titre ?? '',
+    t.resume ?? '',
+    (t.droits ?? []).map((d) => d.code).sort(parCle),
+    t.conseil_constitutionnel ?? ''
+  ];
+  let h = 0xcbf29ce484222325n;
+  for (const o of new TextEncoder().encode(JSON.stringify(base)))
+    h = ((h ^ BigInt(o)) * 0x100000001b3n) & 0xffffffffffffffffn;
+  return h.toString(16).padStart(16, '0');
+}
+
+const mots = (texte: string) => texte.split(/\s+/).filter((m) => /[\p{L}\p{N}]/u.test(m));
+
+/** Contrôles du résumé simple d'une qualification normalisée (mêmes messages que le pipeline). */
+export function controlerSimple(t: Qualification): { erreurs: string[]; avertissements: string[] } {
+  const r = t.resume_simple;
+  const err: string[] = [];
+  const avert: string[] = [];
+  if (!r) return { erreurs: err, avertissements: avert };
+  if (!r.empreinte) err.push('résumé simple sans empreinte : à relire');
+  else if (r.empreinte !== empreinteSimple(t))
+    avert.push('résumé simple à revoir : la fiche a changé depuis sa relecture');
+  const n = mots(r.texte).length;
+  if (n > SIMPLE_MOTS) avert.push(`résumé simple : ${n} mots, ${SIMPLE_MOTS} au plus`);
+  const phrases = r.texte.split(/(?<=[.!?…])\s+|\n/u).filter((p) => mots(p).length);
+  if (phrases.length > SIMPLE_PHRASES)
+    avert.push(`résumé simple : ${phrases.length} phrases, ${SIMPLE_PHRASES} au plus`);
+  phrases.forEach((p, i) => {
+    const m = mots(p).length;
+    if (m > SIMPLE_MOTS_PAR_PHRASE)
+      avert.push(`résumé simple : phrase ${i + 1} de ${m} mots, ${SIMPLE_MOTS_PAR_PHRASE} au plus`);
+  });
+  const sigles: string[] = [];
+  for (const brut of r.texte.split(/\s+/)) {
+    const m = brut.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, '');
+    if (
+      m.length >= 2 &&
+      /^\p{L}+$/u.test(m) &&
+      m === m.toUpperCase() &&
+      m !== m.toLowerCase() &&
+      !sigles.includes(m)
+    )
+      sigles.push(m);
+  }
+  if (sigles.length)
+    avert.push(`résumé simple : sigle à expliquer ou à éviter : ${sigles.join(', ')}`);
+  return { erreurs: err, avertissements: avert };
+}
+
+/**
  * Une qualification au format 1, clés dans l'ordre du fichier. `senat` n'apparaît que s'il n'est pas
  * vide : ajout compatible avec le format 1.
  */
@@ -154,6 +234,7 @@ export function normaliser(t: Partial<Qualification>): Qualification {
       legislature: Number(t.legislature),
       titre: t.titre,
       resume: espaces(t.resume),
+      resume_simple: resumeSimpleOrdonne(t.resume_simple),
       droits: droitsOrdonnes(t.droits),
       etiquettes: [...(t.etiquettes ?? [])],
       vigilance: vigilanceOrdonnee(t.vigilance),
@@ -522,7 +603,11 @@ export function valider(
     }
   }
   if (t.senat) validerSenat(t, grille, scrutinsSenat, err, avert);
-  return { erreurs: err, avertissements: avert };
+  const simple = controlerSimple(t);
+  return {
+    erreurs: [...err, ...simple.erreurs],
+    avertissements: [...avert, ...simple.avertissements]
+  };
 }
 
 /**
@@ -581,6 +666,16 @@ export function differences(avant: Qualification, apres: Qualification): string[
   const egal = (x: unknown, y: unknown) => JSON.stringify(x) === JSON.stringify(y);
   for (const k of ['titre', 'resume', 'conseil_constitutionnel', 'note'] as const)
     if (a[k] !== b[k]) out.push(`${k} modifié`);
+  if (a.resume_simple?.texte !== b.resume_simple?.texte)
+    out.push(
+      !a.resume_simple
+        ? 'résumé simple ajouté'
+        : !b.resume_simple
+          ? 'résumé simple retiré'
+          : 'résumé simple modifié'
+    );
+  else if (a.resume_simple?.empreinte !== b.resume_simple?.empreinte)
+    out.push('résumé simple revu');
   if (!egal(a.etiquettes, b.etiquettes))
     out.push(
       `étiquettes : ${a.etiquettes.join(', ') || 'aucune'} → ${b.etiquettes.join(', ') || 'aucune'}`

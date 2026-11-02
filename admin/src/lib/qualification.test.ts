@@ -2,12 +2,15 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import {
   compact,
+  controlerSimple,
   differences,
   documentEditorial,
   empreinte,
+  empreinteSimple,
   normaliser,
   serialiser,
   slug,
+  suivi,
   valider,
   validerSuivi
 } from './qualification';
@@ -86,6 +89,28 @@ describe('qualification', () => {
         expect(v.erreurs).toEqual(c.erreurs);
         expect(v.avertissements).toEqual(c.avertissements);
       });
+  });
+
+  describe('résumé simple', () => {
+    // Même fixture que pipeline/tests/test_editorial.py : mêmes octets, mêmes empreintes, mêmes messages.
+    const f = JSON.parse(
+      readFileSync(new URL('pipeline/tests/fixtures/editorial_simple.json', RACINE), 'utf8')
+    );
+    it("réécrit la fixture à l'octet près", () => {
+      expect(serialiser(documentEditorial(1, f.entrees, []))).toBe(f.sortie);
+    });
+    it('calcule les mêmes empreintes', () => {
+      for (const x of f.empreintes) expect(empreinteSimple(normaliser(x.doc))).toBe(x.empreinte);
+    });
+    for (const c of f.cas)
+      it(`contrôles identiques : ${c.nom}`, () => {
+        const v = controlerSimple(normaliser(c.doc));
+        expect(v.erreurs).toEqual(c.erreurs);
+        expect(v.avertissements).toEqual(c.avertissements);
+      });
+    it('n’entre pas dans une fiche de suivi', () => {
+      expect('resume_simple' in suivi(normaliser(f.entrees[0]))).toBe(false);
+    });
   });
 
   describe('fiches de suivi', () => {

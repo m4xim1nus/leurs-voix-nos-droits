@@ -14,6 +14,11 @@ sources, sans sens ni scrutin (texte qui n'a pas encore de vote qualifié).
 Le bloc `senat` d'une qualification porte le vote du Sénat (règles 23 à 28) : `version` dit sur quel
 texte il porte (`meme` : celui du décisif de l'AN ; `autre` : une autre version, avec ses droits et ses
 sources ; `seul` : pas de décisif à l'AN, les droits du texte valent). Il est absent quand il est vide.
+
+Le bloc `resume_simple` (cycle Facile à lire) porte le résumé « en mots simples » d'une qualification, relu par
+un humain, et l'empreinte de ce qu'il reformule (titre, résumé, droits touchés, décision du Conseil
+constitutionnel) au moment de sa relecture. Si la fiche change ensuite, l'empreinte ne correspond plus : le
+résumé simple est « à revoir » et le site ne l'affiche pas. Il est absent quand il est vide.
 """
 
 import json
@@ -32,7 +37,7 @@ ROLES_SCRUTIN = ("decisif", "ensemble", "motion", "article", "amendement", "cens
 POUR = ("texte", "contre-texte", "a-trancher")
 
 # Ordre des clés dans le fichier (le même dans l'admin).
-CLES_TEXTE = ("id", "dossier_an", "legislature", "titre", "resume", "droits", "etiquettes", "vigilance",
+CLES_TEXTE = ("id", "dossier_an", "legislature", "titre", "resume", "resume_simple", "droits", "etiquettes", "vigilance",
               "conseil_constitutionnel", "note", "sources", "scrutins", "senat", "recherche")
 CLES_DROIT = ("code", "role", "sens", "sources", "justification")
 CLES_SOURCE = ("auteur", "titre", "date", "url")
@@ -43,6 +48,11 @@ CLES_SUIVI = ("id", "dossier_an", "legislature", "titre", "resume", "droits", "n
 # Clés de la recherche du site (termes courants, surnoms d'usage public) : jamais affichées, n'entrent dans aucun score.
 CLES_RECHERCHE = ("termes", "surnoms")
 CLES_DROIT_SUIVI = ("code", "sources", "justification")
+CLES_SIMPLE = ("texte", "empreinte")
+# Règles d'écriture du résumé simple (docs/METHODO.md) : au-delà, un avertissement, jamais un refus.
+SIMPLE_MOTS = 80
+SIMPLE_PHRASES = 5
+SIMPLE_MOTS_PAR_PHRASE = 15
 CLES_SENAT = ("version", "scrutins", "droits", "etiquettes", "vigilance", "sources", "note")
 VERSIONS_SENAT = ("meme", "autre", "seul")
 ROLES_SENAT = ("decisif", "ensemble", "motion", "amendement")
@@ -75,6 +85,60 @@ def recherche(r: dict | None) -> dict:
     return {k: v for k, v in out.items() if v}
 
 
+def resume_simple(r: dict | None) -> dict | None:
+    """Bloc `resume_simple` : une phrase par ligne au plus, espaces en trop retirés ; None sans texte."""
+    lignes = (re.sub(r"[ \t]+", " ", x).strip() for x in re.split(r"\r\n|\r|\n", str((r or {}).get("texte") or "")))
+    texte = "\n".join(x for x in lignes if x)
+    if not texte:
+        return None
+    return {"texte": texte, "empreinte": str((r or {}).get("empreinte") or "").strip()}
+
+
+def empreinte_simple(t: dict) -> str:
+    """Empreinte de ce que le résumé simple reformule : titre, résumé, codes des droits touchés, décision du
+    Conseil constitutionnel, d'une qualification normalisée. FNV-1a sur 64 bits, en hexadécimal : le même calcul
+    dans l'admin et le site (`empreinteSimple`), sans fonction asynchrone."""
+    base = [t.get("titre") or "", t.get("resume") or "", sorted(d["code"] for d in t.get("droits") or []),
+            t.get("conseil_constitutionnel") or ""]
+    h = 0xcbf29ce484222325
+    for o in json.dumps(base, ensure_ascii=False, separators=(",", ":")).encode():
+        h = ((h ^ o) * 0x100000001b3) & 0xffffffffffffffff
+    return f"{h:016x}"
+
+
+def _mots(texte: str) -> list[str]:
+    return [m for m in texte.split() if any(c.isalnum() for c in m)]
+
+
+def controler_simple(t: dict) -> tuple[list[str], list[str]]:
+    """Contrôles du résumé simple d'une qualification normalisée (mêmes messages que l'admin)."""
+    r = t.get("resume_simple")
+    if not r:
+        return [], []
+    err, avert = [], []
+    if not r.get("empreinte"):
+        err.append("résumé simple sans empreinte : à relire")
+    elif r["empreinte"] != empreinte_simple(t):
+        avert.append("résumé simple à revoir : la fiche a changé depuis sa relecture")
+    texte = r["texte"]
+    if (n := len(_mots(texte))) > SIMPLE_MOTS:
+        avert.append(f"résumé simple : {n} mots, {SIMPLE_MOTS} au plus")
+    phrases = [p for p in re.split(r"(?<=[.!?…])\s+|\n", texte) if _mots(p)]
+    if len(phrases) > SIMPLE_PHRASES:
+        avert.append(f"résumé simple : {len(phrases)} phrases, {SIMPLE_PHRASES} au plus")
+    for i, p in enumerate(phrases, 1):
+        if (n := len(_mots(p))) > SIMPLE_MOTS_PAR_PHRASE:
+            avert.append(f"résumé simple : phrase {i} de {n} mots, {SIMPLE_MOTS_PAR_PHRASE} au plus")
+    sigles = []
+    for m in texte.split():
+        m = re.sub(r"^[\W_]+|[\W_]+$", "", m)
+        if len(m) >= 2 and m.isalpha() and m.isupper() and m not in sigles:
+            sigles.append(m)
+    if sigles:
+        avert.append(f"résumé simple : sigle à expliquer ou à éviter : {', '.join(sigles)}")
+    return err, avert
+
+
 def _senat(s: dict) -> dict:
     return _ordonner({
         "version": s.get("version"),
@@ -99,6 +163,7 @@ def normaliser(t: dict) -> dict:
         "legislature": int(t["legislature"]),
         "titre": t["titre"],
         "resume": (t.get("resume") or "").strip(),
+        "resume_simple": resume_simple(t.get("resume_simple")),
         "droits": _droits(t["droits"]),
         "etiquettes": list(t.get("etiquettes") or []),
         "vigilance": _vigilance(t.get("vigilance") or []),
@@ -108,6 +173,8 @@ def normaliser(t: dict) -> dict:
         "sources": _sources(t.get("sources") or {}),
         "scrutins": [_ordonner(s, CLES_SCRUTIN) for s in t["scrutins"]],
     }
+    if out["resume_simple"] is None:
+        del out["resume_simple"]
     senat = _senat(t.get("senat") or {})
     if senat["scrutins"] or senat["note"]:
         out["senat"] = senat
@@ -440,4 +507,5 @@ def valider(t: dict, scrutins_dossier: dict[str, dict] | None = None,
                 err.append(f"plusieurs amendements clés sur « {division} » dans la même lecture : {', '.join(ss)}")
     if t.get("senat"):
         _valider_senat(t, scrutins_senat, err, avert)
-    return err, avert
+    e, a = controler_simple(t)
+    return err + e, avert + a
