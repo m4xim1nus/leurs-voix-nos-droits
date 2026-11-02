@@ -4,7 +4,11 @@ Ce sont des **avertissements** : ils ne font jamais échouer `lvnd check`, car u
 pas bloquer la mise à jour des données. Ils sont affichés par `check` et par la file « À traiter » de
 l'admin, qui retire ceux que D1 a déjà traités (admin/src/lib/alertes.ts).
 
-- `vote_posterieur` : vote sur l'ensemble après le décisif d'un texte qualifié ;
+- `vote_posterieur` : vote sur l'ensemble après le décisif d'un texte qualifié (ou après le dernier de ses scrutins
+  retenus, s'il n'a ni décisif ni motion de censure à l'AN : texte qualifié sur le seul vote du Sénat) ;
+- `lecture_posterieure` : lecture de l'AN close après ce même repère sans scrutin public sur l'ensemble (main levée,
+  motion de rejet), sur un texte qualifié. L'alerte tombe quand la qualification retient le scrutin de la lecture, ou
+  quand sa note cite la date de la lecture (« 19/11/2026 ») ;
 - `unanimite_contestee` : texte écarté pour unanimité (règle 9) dont le décisif proposé a désormais
   des voix des deux côtés ;
 - `ecart_revote` : texte écarté pour un autre motif que l'unanimité (faute de source, hors grille…), revoté à l'AN sur
@@ -63,14 +67,31 @@ def calculer(textes: list[dict], scrutins: list[dict], points: list[dict], quali
         if s["dossier_id"] and (s["objet"] in ENSEMBLE or (s["objet"] == "suppression_article_unique" and s["sort"] == "adopte")):
             finals.setdefault(s["dossier_id"], []).append(s)
 
+    closes: dict[str, list[dict]] = {}
+    for l in lectures:
+        if l["chambre"] == "AN" and l["issue"]:
+            closes.setdefault(l["texte_id"], []).append(l)
+
     for d, t in qualifies.items():
+        ids = {s["id"] for s in t["scrutins"]}
         retenus = [scr[s["id"]] for s in t["scrutins"] if s["id"] in scr and s["role"] in ("decisif", "censure")]
-        if not retenus:
-            continue  # scrutin disparu du catalogue : signalé par le contrôle des qualifications
-        ref = max(retenus, key=_cle)
+        # sans décisif ni censure à l'AN (texte qualifié sur le vote du Sénat) : le dernier scrutin retenu, ou aucun repère
+        retenus = retenus or [scr[i] for i in ids if i in scr]
+        ref = max(retenus, key=_cle) if retenus else None
+        apres = f"après le décisif {_decompte(ref)}" if ref and ref["id"] in {s["id"] for s in t["scrutins"] if s["role"] == "decisif"} \
+            else f"après {_decompte(ref)}" if ref else "aucun scrutin de l'AN retenu"
         for s in finals.get(d, []):
-            if _cle(s) > _cle(ref):
-                ajouter("vote_posterieur", d, s["id"], s["date"], f"{_decompte(s)}, après le décisif {_decompte(ref)}")
+            if s["id"] not in ids and (ref is None or _cle(s) > _cle(ref)):
+                ajouter("vote_posterieur", d, s["id"], s["date"], f"{_decompte(s)}, {apres}")
+        vus = {s["id"] for s in finals.get(d, [])} | ids
+        for l in closes.get(d, []):
+            if (l["scrutin_id"] in vus or (ref is not None and l["date"] <= ref["date"])
+                    or "/".join(reversed(l["date"].split("-"))) in (t.get("note") or "")):
+                continue
+            s = scr.get(l["scrutin_id"])
+            vote = f"{s['objet']}, {_decompte(s)}" if s else f"sans scrutin public ({l['mode_adoption']})"
+            ajouter("lecture_posterieure", d, s["id"] if s else None, l["date"],
+                    f"{l['etape']} {l['issue']} le {l['date']}, {vote} ; {apres}", suffixe=l["etape"])
 
     for t in textes:
         d, s = t["id"], scr.get(t["decisif_propose"])
@@ -82,15 +103,11 @@ def calculer(textes: list[dict], scrutins: list[dict], points: list[dict], quali
         elif d not in qualifies and d not in ecartes:
             ajouter("premier_decisif", d, s["id"], s["date"], f"décisif proposé : {_decompte(s)}")
 
-    closes: dict[str, list[dict]] = {}
-    for l in lectures:
-        if l["chambre"] == "AN" and l["issue"] and not l["scrutin_id"]:
-            closes.setdefault(l["texte_id"], []).append(l)
     for d, e in ecartes.items():
         if SANS_OPPOSITION.search(e["motif"]):
             continue
         votes = [s for s in finals.get(d, []) if s["date"] > ECARTS_RELUS_LE]
-        sans_scrutin = [l for l in closes.get(d, []) if l["date"] > ECARTS_RELUS_LE]
+        sans_scrutin = [l for l in closes.get(d, []) if not l["scrutin_id"] and l["date"] > ECARTS_RELUS_LE]
         if votes:
             s = max(votes, key=_cle)
             if f"{s['pour']}-{s['contre']}" not in e["motif"]:

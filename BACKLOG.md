@@ -20,16 +20,20 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 
 ## À trier
 
-- [ ] Alerte manquante : un vote final **sans scrutin public** sur un texte déjà qualifié ne déclenche rien (`vote_posterieur` ne voit que les scrutins publics, `vote_sans_decisif` que les textes ni qualifiés ni écartés). Cas en vue : réforme de l'audiovisuel public (DLR5L16N47697), à l'arrêt depuis juillet 2025 (user:moi et claude, 2026-11-02)
-- [ ] Admin : une **note interne** par texte (D1 seule, jamais publiée), affichée dans « À traiter » et sur la fiche, pour les pense-bêtes éditoriaux qu'aucune alerte ne porte (fiche prête avant l'inscription, motif à actualiser au prochain passage). Remplace l'ancienne section « Textes à surveiller » du backlog (user:moi et claude, 2026-11-02)
-- [ ] Résumés des six fiches témoins (immigration, JO, Kasbarian-Bergé, narcotrafic, justice des mineurs, aide à mourir) : la réécriture proposée par l'audit de forme venait en partie de mémoire, écartée du chargement du 02/11/2026. À refaire sur le texte voté (claude, 2026-11-02)
-- [ ] Reliquat de l'audit de forme, qui touche au fond (`source/relecture-audit-forme.md`, « Laissé de côté ») : article 8 du système universel de retraite (amendement « pour mémoire », CFDT favorable au régime par points), articles 26 et 26 bis du PLFSS 2026, article 5 d'urgence agricole, date de référence d'une ratification d'ordonnances (règle 4), motif d'`asap-2020`, cinq motifs d'écart à rechercher (48392, 37436, 48739, 40764, 47215 ; pour Rist 2021, l'Ordre des sages-femmes écarté sur un critère que la règle 7 n'a pas), `regime-exception` sur le titre de séjour expérimental d'`immigration-2024` (claude, 2026-11-02)
-- [ ] Questions de règle relevées par l'audit de forme, sans recommandation : vigilance « ordre public » dans les textes de police, validation du Conseil en vigilance ou seulement dans le champ du Conseil, statut de l'Union nationale de l'apiculture française et d'une section régionale de la FSU, statut des textes du seul Sénat, alignement de la règle sur le libellé de `regime-exception` (claude, 2026-11-02)
-- [ ] Sources non relues faute d'accès : Générations Futures sur les plastiques dangereux (critique d'insuffisance d'après les fragments lus, écart maintenu), CFDT sur le PLFSS 2026 (403), loi n° 2026-651 au Journal officiel (403, T.A. du Sénat lu à la place). À lire dans un navigateur (claude, 2026-11-02)
+Rien à trier.
 
 ## Cycles candidats
 
 Un cycle à la fois, choisi et nommé au moment de l'ouvrir.
+
+### Suites de l'audit (cycle en cours, `ROADMAP.md`)
+
+- [→Suites de l'audit] Alerte manquante : un vote final **sans scrutin public** sur un texte déjà qualifié ne déclenche rien (`vote_posterieur` ne voit que les scrutins publics, `vote_sans_decisif` que les textes ni qualifiés ni écartés). Cas en vue : réforme de l'audiovisuel public (DLR5L16N47697), à l'arrêt depuis juillet 2025 (user:moi et claude, 2026-11-02)
+- [→Suites de l'audit] Admin : une **note interne** par texte (D1 seule, jamais publiée), affichée dans « À traiter » et sur la fiche, pour les pense-bêtes éditoriaux qu'aucune alerte ne porte (fiche prête avant l'inscription, motif à actualiser au prochain passage). Remplace l'ancienne section « Textes à surveiller » du backlog (user:moi et claude, 2026-11-02)
+- [→Suites de l'audit] Résumés des six fiches témoins (immigration, JO, Kasbarian-Bergé, narcotrafic, justice des mineurs, aide à mourir) : la réécriture proposée par l'audit de forme venait en partie de mémoire, écartée du chargement du 02/11/2026. À refaire sur le texte voté (claude, 2026-11-02)
+- [→Suites de l'audit] Reliquat de l'audit de forme, qui touche au fond (`source/relecture-audit-forme.md`, « Laissé de côté ») : article 8 du système universel de retraite (amendement « pour mémoire », CFDT favorable au régime par points), articles 26 et 26 bis du PLFSS 2026, article 5 d'urgence agricole, date de référence d'une ratification d'ordonnances (règle 4), motif d'`asap-2020`, cinq motifs d'écart à rechercher (48392, 37436, 48739, 40764, 47215 ; pour Rist 2021, l'Ordre des sages-femmes écarté sur un critère que la règle 7 n'a pas), `regime-exception` sur le titre de séjour expérimental d'`immigration-2024` (claude, 2026-11-02)
+- [→Suites de l'audit] Questions de règle relevées par l'audit de forme, sans recommandation : vigilance « ordre public » dans les textes de police, validation du Conseil en vigilance ou seulement dans le champ du Conseil, statut de l'Union nationale de l'apiculture française et d'une section régionale de la FSU, statut des textes du seul Sénat, alignement de la règle sur le libellé de `regime-exception` (claude, 2026-11-02)
+- [→Suites de l'audit] Sources non relues faute d'accès : Générations Futures sur les plastiques dangereux (critique d'insuffisance d'après les fragments lus, écart maintenu), CFDT sur le PLFSS 2026 (403), loi n° 2026-651 au Journal officiel (403, T.A. du Sénat lu à la place). À lire dans un navigateur (claude, 2026-11-02)
 
 ### Passation
 

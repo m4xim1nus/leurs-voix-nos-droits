@@ -255,6 +255,56 @@ export async function journal(db: D1Database, limite = 100) {
   return results;
 }
 
+export interface NoteInterne {
+  dossier_an: string;
+  texte: string;
+  modifie_par: string;
+  modifie_le: string;
+}
+
+/** Note interne d'un texte (D1 seule, jamais publiée), ou null. */
+export async function noteInterne(db: D1Database, id: string): Promise<NoteInterne | null> {
+  return db
+    .prepare('SELECT * FROM notes_internes WHERE dossier_an = ?')
+    .bind(id)
+    .first<NoteInterne>();
+}
+
+/** Toutes les notes internes, avec le titre du texte, les plus récentes d'abord. */
+export async function notesInternes(
+  db: D1Database
+): Promise<(NoteInterne & { titre: string | null })[]> {
+  const { results } = await db
+    .prepare(
+      `SELECT n.*, t.titre FROM notes_internes n LEFT JOIN textes t ON t.id = n.dossier_an
+       ORDER BY n.modifie_le DESC`
+    )
+    .all<NoteInterne & { titre: string | null }>();
+  return results;
+}
+
+/** Enregistre la note interne d'un texte ; une note vide la supprime. Renvoie la date, ou null. */
+export async function enregistrerNote(
+  db: D1Database,
+  id: string,
+  texte: string,
+  auteur: string
+): Promise<string | null> {
+  if (!texte.trim()) {
+    await db.prepare('DELETE FROM notes_internes WHERE dossier_an = ?').bind(id).run();
+    return null;
+  }
+  const le = new Date().toISOString().slice(0, 19) + '+00:00';
+  await db
+    .prepare(
+      `INSERT INTO notes_internes (dossier_an, texte, modifie_par, modifie_le) VALUES (?1, ?2, ?3, ?4)
+       ON CONFLICT (dossier_an) DO UPDATE SET texte = ?2, modifie_par = ?3, modifie_le = ?4`
+    )
+    .bind(id, texte.trim(), auteur, le)
+    .run();
+  return le;
+}
+
 export class ConflitEdition extends Error {}
 
 /**

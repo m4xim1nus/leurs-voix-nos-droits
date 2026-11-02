@@ -5,6 +5,7 @@ import type { Statut } from './types';
 
 export type TypeAlerte =
   | 'vote_posterieur'
+  | 'lecture_posterieure'
   | 'unanimite_contestee'
   | 'ecart_revote'
   | 'premier_decisif'
@@ -15,6 +16,7 @@ export type TypeAlerte =
 
 export const LIBELLES_ALERTE: Record<TypeAlerte, string> = {
   vote_posterieur: 'Vote sur l’ensemble après le décisif',
+  lecture_posterieure: 'Lecture close après le décisif, sans vote public sur l’ensemble',
   unanimite_contestee: 'Écarté pour unanimité, vote contesté',
   ecart_revote: 'Texte écarté, revoté à l’Assemblée',
   premier_decisif: 'Décisif d’un texte non traité',
@@ -41,6 +43,16 @@ export function resteATraiter(a: Alerte, statut: Statut | null, doc: string | nu
     if (!doc) return true;
     const scrutins = (JSON.parse(doc) as { scrutins?: { id: string }[] }).scrutins ?? [];
     return !scrutins.some((s) => s.id === a.scrutin_id);
+  }
+  if (a.type === 'lecture_posterieure') {
+    // Comme le pipeline : la qualification retient le scrutin de la lecture, ou sa note en cite la date.
+    if (!doc) return true;
+    const q = JSON.parse(doc) as { scrutins?: { id: string }[]; note?: string };
+    const jour = a.date.slice(0, 10).split('-').reverse().join('/');
+    return !(
+      (a.scrutin_id && (q.scrutins ?? []).some((s) => s.id === a.scrutin_id)) ||
+      (q.note ?? '').includes(jour)
+    );
   }
   if (a.type === 'senat_premier_vote' || a.type === 'senat_vote_posterieur') {
     if (statut === 'ecarte') return false;

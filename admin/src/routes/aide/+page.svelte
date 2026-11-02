@@ -90,7 +90,12 @@
       '<b>Un texte.</b> Un clic ouvre sa fiche.'
     ]
   })}
-  <p>Le plus souvent, on part de « À traiter » : ce qu’un nouveau vote demande de regarder.</p>
+  <p>
+    Le plus souvent, on part de « À traiter » : ce qu’un nouveau vote demande de regarder. En
+    dessous des alertes, les <b>notes internes</b> : un pense-bête saisi en haut de la fiche d’un texte
+    (« fiche prête, attendre l’inscription », « motif à actualiser au prochain passage »). Elles ne sont
+    jamais publiées ; on en retire une en la vidant.
+  </p>
   {@render capture({
     image: 'a-traiter',
     alt: 'Onglet À traiter : une liste d’alertes datées, avec le texte concerné.',
@@ -277,6 +282,12 @@
         <tr
           ><td>Vote sur l’ensemble après le décisif</td><td
             >Le nouveau vote devient le décisif : relire le sens sur le texte voté</td
+          ></tr
+        >
+        <tr
+          ><td>Lecture close après le décisif, sans vote public sur l’ensemble</td><td
+            >Relire la fiche : retenir la motion, ou dire dans la note ce qui s’est passé, avec sa
+            date (19/11/2026)</td
           ></tr
         >
         <tr

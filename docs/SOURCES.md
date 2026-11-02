@@ -374,7 +374,8 @@ jamais échouer le contrôle : un nouveau vote ne doit pas bloquer l'Action.
 
 | Type | Quand | Au 30/10/2026 |
 |---|---|---|
-| `vote_posterieur` | vote sur l'ensemble après le décisif (ou la motion de censure) retenu d'un texte qualifié | 0 |
+| `vote_posterieur` | vote sur l'ensemble après le décisif (ou la motion de censure) retenu d'un texte qualifié ; sans l'un ni l'autre (texte qualifié sur le vote du Sénat), après son dernier scrutin retenu, ou tout vote sur l'ensemble s'il n'en retient aucun à l'AN | 0 |
+| `lecture_posterieure` | lecture de l'AN close après ce même repère sans scrutin public sur l'ensemble (main levée, motion de rejet), sur un texte qualifié, tant que la qualification ne retient pas son scrutin et que sa note n'en cite pas la date | 2 (02/11/2026) |
 | `unanimite_contestee` | texte écarté pour unanimité dont le décisif proposé a des voix des deux côtés | 0 |
 | `ecart_revote` | texte écarté pour un autre motif, revoté à l'AN après le 01/11/2026, sans que son motif cite ce vote | 0 |
 | `premier_decisif` | décisif proposé sur un texte ni qualifié ni écarté | 0 |

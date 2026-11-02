@@ -34,6 +34,26 @@ describe('resteATraiter', () => {
     expect(resteATraiter(a, null, null)).toBe(true);
   });
 
+  it('lecture postérieure : traitée quand la qualification retient son scrutin ou cite sa date', () => {
+    const sans = alerte('lecture_posterieure');
+    expect(resteATraiter(sans, null, null)).toBe(true);
+    expect(resteATraiter(sans, 'valide', JSON.stringify({ note: 'Décisif : S1.' }))).toBe(true);
+    expect(
+      resteATraiter(
+        sans,
+        'a-relire',
+        JSON.stringify({ note: 'Adopté à main levée le 18/11/2026.' })
+      )
+    ).toBe(false);
+    const motion = alerte('lecture_posterieure', 'M');
+    expect(resteATraiter(motion, 'valide', JSON.stringify({ scrutins: [{ id: 'S1' }] }))).toBe(
+      true
+    );
+    expect(resteATraiter(motion, 'valide', JSON.stringify({ scrutins: [{ id: 'M' }] }))).toBe(
+      false
+    );
+  });
+
   it('écarté puis revoté : tant que le texte reste écarté', () => {
     const a = alerte('ecart_revote', 'S2');
     expect(resteATraiter(a, 'ecarte', '{}')).toBe(true);

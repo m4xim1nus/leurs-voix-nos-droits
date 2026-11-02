@@ -87,6 +87,7 @@ changent pas, ni la validation par Max.
    | Alerte | Ce qu'on fait |
    |---|---|
    | `vote_posterieur` | le nouveau vote devient le décisif (règle 9) : relire le sens sur le texte voté (règle 6) |
+   | `lecture_posterieure` | lecture de l'AN close après le décisif sans vote public sur l'ensemble (main levée, motion de rejet) : relire la fiche ; retenir la motion (rôle `motion`), ou écrire dans la note ce qui s'est passé, avec la date (« 19/11/2026 »), ce qui éteint l'alerte |
    | `unanimite_contestee` | revoir l'écart (règle 9) : qualifier, ou garder l'écart avec un motif à jour |
    | `ecart_revote` | texte écarté pour un autre motif que l'unanimité, revoté à l'AN (depuis le 01/11/2026) : relire l'écart, puis qualifier, ou garder l'écart avec un motif qui cite ce vote (son décompte « 120-45 », ou sa date « 19/11/2026 » sans scrutin public), ce qui éteint l'alerte |
    | `premier_decisif` | qualifier, ou écarter avec son motif |

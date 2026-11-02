@@ -19,22 +19,33 @@ export const load: PageServerLoad = async ({ params, platform }) => {
   const base = platform!.env.DB;
   const texte = await db.texte(base, params.id);
   if (!texte) error(404, `texte ${params.id} absent du catalogue`);
-  const [duDossier, censures, groupes, grille, qualif, revisions, toutes, senat, groupesSenat] =
-    await Promise.all([
-      db.scrutinsDuTexte(base, params.id),
-      // Motions de censure votées pendant l'examen du texte et dans les 4 mois qui suivent ses
-      // derniers votes : à retenir (rôle « censure ») s'il a été adopté par 49.3 sans vote final.
-      texte.premier_scrutin && texte.dernier_scrutin
-        ? db.censures(base, texte.premier_scrutin, plusJours(texte.dernier_scrutin, 120))
-        : Promise.resolve([]),
-      db.groupes(base),
-      db.grille(base),
-      db.qualification(base, params.id),
-      db.revisions(base, params.id),
-      db.qualifications(base),
-      db.scrutinsSenatDuTexte(base, params.id),
-      db.groupesSenat(base)
-    ]);
+  const [
+    duDossier,
+    censures,
+    groupes,
+    grille,
+    qualif,
+    revisions,
+    toutes,
+    senat,
+    groupesSenat,
+    note
+  ] = await Promise.all([
+    db.scrutinsDuTexte(base, params.id),
+    // Motions de censure votées pendant l'examen du texte et dans les 4 mois qui suivent ses
+    // derniers votes : à retenir (rôle « censure ») s'il a été adopté par 49.3 sans vote final.
+    texte.premier_scrutin && texte.dernier_scrutin
+      ? db.censures(base, texte.premier_scrutin, plusJours(texte.dernier_scrutin, 120))
+      : Promise.resolve([]),
+    db.groupes(base),
+    db.grille(base),
+    db.qualification(base, params.id),
+    db.revisions(base, params.id),
+    db.qualifications(base),
+    db.scrutinsSenatDuTexte(base, params.id),
+    db.groupesSenat(base),
+    db.noteInterne(base, params.id)
+  ]);
   // Sources des autres textes, pour les reprendre sans ressaisie (docs/CONCEPTION.md, choix C).
   const bibliotheque: { cle: string; texte: string; source: Source }[] = [];
   for (const q of toutes)
@@ -51,6 +62,7 @@ export const load: PageServerLoad = async ({ params, platform }) => {
   }
   return {
     texte,
+    note,
     publie,
     scrutins,
     senat,
@@ -74,6 +86,15 @@ export const load: PageServerLoad = async ({ params, platform }) => {
 };
 
 export const actions: Actions = {
+  // Note interne : à part de la qualification, sans révision ni publication.
+  note: async ({ request, params, platform, locals }) => {
+    const base = platform!.env.DB;
+    if (!(await db.texte(base, params.id)))
+      return fail(400, { erreurNote: 'texte absent du catalogue' });
+    const texte = String((await request.formData()).get('note') ?? '');
+    if (texte.length > 4000) return fail(400, { erreurNote: '4 000 caractères au plus' });
+    return { noteEnregistree: await db.enregistrerNote(base, params.id, texte, locals.email) };
+  },
   enregistrer: async ({ request, params, platform, locals }) => {
     const base = platform!.env.DB;
     const f = await request.formData();

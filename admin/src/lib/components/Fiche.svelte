@@ -53,6 +53,9 @@
   let attendu = $state(depart.modifie_le);
   let modifie = $state(false);
   let enCours = $state(false);
+  let note = $state(untrack(() => data.note?.texte ?? ''));
+  let noteModifiee = $state(false);
+  let noteEnCours = $state(false);
 
   const t = $derived(data.texte);
   const groupes = $derived(new Map<string, Groupe>(data.groupes.map((g) => [g.id, g])));
@@ -313,6 +316,43 @@
   {/if}
   {#if t.motifs}<span>mots-clés : « {t.motifs.replaceAll(';', ', ')} »</span>{/if}
 </div>
+
+<form
+  class="carte note-interne"
+  method="POST"
+  action="?/note"
+  use:enhance={() => {
+    noteEnCours = true;
+    return async ({ result, update }) => {
+      noteEnCours = false;
+      if (result.type === 'success') noteModifiee = false;
+      await update({ reset: false });
+    };
+  }}
+>
+  <label class="champ"
+    >Note interne (jamais publiée : pense-bête pour la prochaine relecture, visible dans « À traiter
+    »)
+    <textarea
+      name="note"
+      rows="2"
+      maxlength="4000"
+      bind:value={note}
+      oninput={() => (noteModifiee = true)}></textarea>
+  </label>
+  <div class="ligne">
+    <button type="submit" disabled={noteEnCours || !noteModifiee}
+      >{noteEnCours ? 'Enregistrement…' : 'Enregistrer la note'}</button
+    >
+    {#if noteModifiee}<span class="discret">note non enregistrée</span>
+    {:else if data.note}<span class="discret"
+        >{data.note.modifie_par}, {dateHeure(data.note.modifie_le)}</span
+      >{/if}
+  </div>
+  {#if form?.erreurNote}
+    <ul class="messages"><li class="erreur">Refusé : {form.erreurNote}</li></ul>
+  {/if}
+</form>
 
 <form
   method="POST"
@@ -777,6 +817,9 @@
 <style>
   .grand {
     flex: 1 1 22rem;
+  }
+  .note-interne textarea {
+    width: 100%;
   }
   .grand input {
     width: 100%;

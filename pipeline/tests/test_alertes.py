@@ -151,10 +151,42 @@ def test_vote_sans_decisif():
     assert types(alertes.calculer([texte()], [], [], suivi, lectures=mains))[0][0] == "vote_sans_decisif"
 
 
+def test_lecture_posterieure():
+    # Texte qualifié, adopté définitivement à main levée après son décisif : rien ne le voyait.
+    q = qualif([{**qualifie("D", ("S1", "decisif")), "note": "Scrutin décisif : S1."}])
+    avant = lecture(etape="AN1", issue="adopte", mode="SCRUTIN_ORDINAIRE", date="2026-01-01", scrutin="S1")
+    cmp_ = lecture(etape="CMP", issue="adopte", mode="MAIN_LEVEE", date="2026-11-19")
+    r = alertes.calculer([texte(decisif="S1")], [scrutin("S1")], [], q, lectures=[avant, cmp_])
+    assert types(r) == [("lecture_posterieure", "D", None)] and r[0]["id"] == "lecture_posterieure:D:CMP"
+    assert "MAIN_LEVEE" in r[0]["detail"] and "après le décisif S1" in r[0]["detail"]
+    # La note relue cite la date de la lecture : l'alerte tombe.
+    relu = qualif([{**qualifie("D", ("S1", "decisif")), "note": "Adopté à main levée le 19/11/2026 (règle 9)."}])
+    assert alertes.calculer([texte(decisif="S1")], [scrutin("S1")], [], relu, lectures=[avant, cmp_]) == []
+    # Lecture close par une motion de rejet après le décisif : vue aussi, avec son scrutin, tant qu'il n'est pas retenu.
+    motion = scrutin("M", objet="motion_rejet", date="2026-11-19", numero=2)
+    rejet = lecture(etape="AN2", issue="rejete", mode="MOTION_REJET", date="2026-11-19", scrutin="M")
+    r = alertes.calculer([texte(decisif="S1")], [scrutin("S1"), motion], [], q, lectures=[rejet])
+    assert types(r) == [("lecture_posterieure", "D", "M")]
+    retenue = qualif([qualifie("D", ("S1", "decisif"), ("M", "motion"))])
+    assert alertes.calculer([texte(decisif="S1")], [scrutin("S1"), motion], [], retenue, lectures=[rejet]) == []
+
+
+def test_vote_posterieur_sans_decisif_a_l_an():
+    # Texte qualifié sur le seul vote du Sénat, l'AN ayant voté une motion de rejet (audiovisuel public, DLR5L16N47697).
+    q = qualif([qualifie("D", ("M", "motion"))])
+    motion = scrutin("M", objet="motion_rejet", date="2025-03-01")
+    ensemble = scrutin("S", date="2026-12-01", numero=2)
+    r = alertes.calculer([texte(decisif="S")], [motion, ensemble], [], q)
+    assert types(r) == [("vote_posterieur", "D", "S")] and "après M du 2025-03-01" in r[0]["detail"]
+    # Aucun scrutin de l'AN retenu (Sénat seul) : tout vote de l'AN sur l'ensemble est nouveau.
+    r = alertes.calculer([texte(decisif="S")], [ensemble], [], qualif([qualifie("D")]))
+    assert types(r) == [("vote_posterieur", "D", "S")] and "aucun scrutin de l'AN retenu" in r[0]["detail"]
+
+
 def test_vote_sans_decisif_hors_champ():
     l = lecture(issue="adopte", mode="MAIN_LEVEE")
     calc = lambda t, q, ls: alertes.calculer([t], [], [], q, lectures=ls)
-    assert calc(texte(), qualif([qualifie("D")]), [l]) == []  # qualifié
+    assert types(calc(texte(), qualif([qualifie("D")]), [l])) == [("lecture_posterieure", "D", None)]  # qualifié : l'autre alerte
     assert calc(texte(), qualif(ecartes=[{"dossier_an": "D", "motif": "m"}]), [l]) == []  # écarté
     assert calc(texte(), qualif(), [lecture(motif="inactif", issue="adopte")]) == []  # à l'arrêt
     assert calc(texte(), qualif(), [lecture(chambre="SN")]) == []  # Sénat
