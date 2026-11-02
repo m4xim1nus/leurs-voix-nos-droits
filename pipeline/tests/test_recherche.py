@@ -1,47 +1,32 @@
 import csv
-import json
 
 from lvnd import editorial, recherche
 
-DOC = {"textes": [{"id": "t1"}, {"id": "t2"}], "ecartes": [{"dossier_an": "D1"}], "suivis": [{"id": "s1"}]}
+DOC = {"textes": [{"id": "t1", "dossier_an": "D1", "recherche": {"termes": ["49.3", "APL"], "surnoms": ["loi X"]}},
+                  {"id": "t2", "dossier_an": "D2"}],
+       "ecartes": [{"dossier_an": "D3", "recherche": {"termes": ["Y"]}}],
+       "suivis": [{"id": "s1", "dossier_an": "D4", "recherche": {"termes": ["a", "A"]}}]}
 
 
-def test_les_termes_sont_du_texte():
-    ref = {"textes": {"t1": {"termes": [49.3, "APL"], "surnoms": ["loi X"]}}, "ecartes": {"D1": {"termes": ["Y"]}}}
-    assert recherche.lignes_termes(ref) == [
+def test_les_termes_viennent_d_editorial():
+    assert recherche.lignes_termes(DOC) == [
         {"cle": "t1", "type": "terme", "terme": "49.3"},
         {"cle": "t1", "type": "terme", "terme": "APL"},
         {"cle": "t1", "type": "surnom", "terme": "loi X"},
-        {"cle": "D1", "type": "terme", "terme": "Y"},
+        {"cle": "s1", "type": "terme", "terme": "a"},
+        {"cle": "s1", "type": "terme", "terme": "A"},
+        {"cle": "D3", "type": "terme", "terme": "Y"},
     ]
 
 
-def test_terme_vide_ou_en_double_refuses_cle_inconnue_signalee():
-    ref = {"textes": {"t1": {"termes": ["a", "A"]}, "absent": {"termes": ["b"]}, "s1": {"termes": []}},
-           "ecartes": {"D2": {"termes": ["c"]}}}
-    err, a_deplacer, sans = recherche.controler_termes(DOC, ref)
-    assert any("s1 : terme vide" in e for e in err)
-    assert any("t1 : terme en double" in e for e in err)
-    assert not any("inconnu" in e for e in err)  # une publication ne bloque plus la passe (01/11/2026)
-    assert any(a.startswith("absent : inconnu") for a in a_deplacer)
-    assert any(a.startswith("D2 : inconnu") for a in a_deplacer)
+def test_doublon_refuse_texte_sans_terme_signale():
+    err, sans = recherche.controler_termes(DOC)
+    assert err == ["s1 : terme en double"]
     assert sans == ["t2"]
 
 
-def test_un_ecarte_devenu_qualifie_garde_ses_termes():
-    doc = {"textes": [{"id": "t1", "dossier_an": "D1"}], "ecartes": [], "suivis": []}
-    ref = {"textes": {}, "ecartes": {"D1": {"termes": ["x"]}}}
-    assert recherche.lignes_termes(ref, doc) == [{"cle": "t1", "type": "terme", "terme": "x"}]
-    assert recherche.lignes_termes(ref) == [{"cle": "D1", "type": "terme", "terme": "x"}]
-    err, a_deplacer, sans = recherche.controler_termes(doc, ref)
-    assert err == [] and sans == []
-    assert a_deplacer == ["D1 : qualifié ou suivi sous `t1`, ligne à déplacer dans `textes` (ses termes le suivent déjà)"]
-
-
-def test_le_referentiel_des_termes_est_coherent_avec_editorial():
-    # clés à déplacer et textes sans terme, qu'une publication de l'admin peut créer, sont signalés par `lvnd check`,
-    # sans rougir les tests
-    err, _, _ = recherche.controler_termes(editorial.charger())
+def test_les_termes_publies_sont_coherents():
+    err, _ = recherche.controler_termes(editorial.charger())
     assert err == []
 
 
@@ -76,36 +61,3 @@ def test_ecriture_des_csv(tmp_path):
     assert {"cle": "duplomb-2025", "type": "surnom", "terme": "loi Duplomb"} in termes
     assert {"cle": "kasbarian-berge", "type": "terme", "terme": "squat"} in termes
 
-
-def test_editorial_l_emporte_sur_le_yaml():
-    doc = {"textes": [{"id": "t1", "dossier_an": "D1", "recherche": {"termes": ["APL"]}},
-                      {"id": "t2", "dossier_an": "D2"}],
-           "ecartes": [{"dossier_an": "D3", "recherche": {"surnoms": ["loi X"]}}], "suivis": []}
-    ref = {"textes": {"t1": {"termes": ["ancien"]}, "t2": {"termes": ["gardé"]}}, "ecartes": {}}
-    lignes = {(l["cle"], l["type"], l["terme"]) for l in recherche.lignes_termes(ref, doc)}
-    assert lignes == {("t1", "terme", "APL"), ("t2", "terme", "gardé"), ("D3", "surnom", "loi X")}
-    err, a_deplacer, sans = recherche.controler_termes(doc, ref)
-    assert err == [] and sans == [] and a_deplacer == ["t1 : termes publiés dans editorial.json, ligne du YAML à retirer"]
-
-
-def test_reprise_du_yaml_dans_d1():
-    import sqlite3
-    from lvnd import sync_admin
-    publie = {"textes": [{"id": "t1", "dossier_an": "D1"}, {"id": "t2", "dossier_an": "D2"}], "ecartes": [], "suivis": []}
-    ref = {"textes": {"t1": {"termes": ["APL", 49.3]}, "t2": {"termes": ["X"]}, "inconnu": {"termes": ["Y"]}},
-           "ecartes": {"D3": {"surnoms": ["loi Z"]}}}
-    con = sqlite3.connect(":memory:")
-    con.executescript("create table qualifications (dossier_an, statut, doc, motif_ecart, modifie_par, modifie_le);"
-                      "create table revisions (dossier_an, statut, doc, motif_ecart, auteur, date, commentaire);")
-    con.executemany("insert into qualifications values (?, ?, ?, null, 'max', 'avant')", [
-        ("D1", "valide", '{"id":"t1"}'), ("D2", "a-relire", '{"id":"t2","recherche":{"termes":["déjà"]}}'),
-        ("D3", "ecarte", '{"id":""}')])
-    sql = sync_admin.recherche_vers_d1(ref, publie)
-    con.executescript("\n".join(sql))
-    con.executescript("\n".join(sql))  # relancer ne change rien
-    docs = dict(con.execute("select dossier_an, doc from qualifications"))
-    assert json.loads(docs["D1"])["recherche"] == {"termes": ["APL", "49.3"]}
-    assert json.loads(docs["D2"])["recherche"] == {"termes": ["déjà"]}  # jamais écrasé
-    assert json.loads(docs["D3"])["recherche"] == {"surnoms": ["loi Z"]}
-    assert con.execute("select count(*) from revisions").fetchone() == (2,)
-    assert dict(con.execute("select dossier_an, statut from qualifications"))["D1"] == "valide"

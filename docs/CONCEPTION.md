@@ -441,10 +441,9 @@ tourne dans le navigateur. Aucune requête ne dit ce que l'on cherche, pas même
   et surnoms des écartés. Le motif d'un écart s'affiche mais n'est pas cherché : ses formules se répètent (« règle 9 »).
 - **Hors index** : les 18 000 scrutins et les justifications, sources de bruit.
 - **Termes et surnoms** : bloc `recherche` de chaque entrée d'`editorial.json`, saisi sur la fiche de l'admin (décision de Max du
-  02/11/2026), exporté dans `data/export/termes_recherche.csv`. `pipeline/referentiels/termes_recherche.yaml`, l'ancien
-  référentiel tenu à la main, sert de repli pour un texte dont la version publiée n'a pas encore ce bloc (reprise dans D1 :
-  `lvnd sync-admin --remote --recherche`, puis « Publier »). Ils se cherchent et ne s'affichent jamais. Ni victime, ni personne mise en cause, ni
-  formule militante. `lvnd check` refuse un terme vide ou en double et les termes de la liste privée ; une clé dont le texte a changé de statut (qualifié puis écarté, ou l'inverse) est signalée sans bloquer, et la clé d'un écarté devenu qualifié suit d'elle-même.
+  02/11/2026), exporté dans `data/export/termes_recherche.csv`. L'ancien référentiel tenu à la main
+  (`termes_recherche.yaml`) y a été repris et publié le 02/11/2026, puis retiré. Ils se cherchent et ne s'affichent jamais. Ni victime, ni personne mise en cause, ni
+  formule militante. `lvnd check` refuse un terme en double et les termes de la liste privée, et signale sans bloquer un texte qualifié sans terme.
 - **Correspondance** : tous les mots saisis doivent se trouver, sans accents ni casse, au singulier ; un mot de trois lettres ou
   moins doit être entier (« APL » ne trouve pas « aplomb »), un mot plus long se complète. **Fautes de frappe** : en repli, seulement quand rien ne correspond, chaque mot est remplacé par ses voisins les plus proches (une faute jusqu'à 7 lettres, deux au-delà, aucune sous 4 lettres ; une inversion compte pour une faute), et la page dit que ces résultats sont approchés.
 - **Classement** : clé exacte, puis expression dans une clé ou le titre, puis mots dans les clés, le titre, les étiquettes, le

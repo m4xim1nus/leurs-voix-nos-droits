@@ -160,13 +160,11 @@ def _qualifications(con, controle, out) -> None:
 
 def _recherche(controle, out) -> None:
     """Termes de recherche et table des pays : clés connues, table complète, aucun terme de la liste privée."""
-    err, a_deplacer, sans = recherche.controler_termes(editorial.charger())
-    controle("termes de recherche : ni vides ni en double", not err, " ; ".join(err))
-    # une publication qui change le statut d'un texte ne doit pas bloquer la passe suivante (01/11/2026)
-    out += [f"AVERTISSEMENT termes de recherche : {a}" for a in a_deplacer]
+    err, sans = recherche.controler_termes(editorial.charger())
+    controle("termes de recherche : pas de doublon", not err, " ; ".join(err))
     controle("pays → circonscription : table complète, sans doublon", not (e := recherche.controler_pays()), " ; ".join(e))
     if liste_termes() is not None:
-        trouves = termes_interdits("\n".join(l["terme"] for l in recherche.lignes_termes(doc=editorial.charger())))
+        trouves = termes_interdits("\n".join(l["terme"] for l in recherche.lignes_termes()))
         controle("aucun terme interdit dans les termes de recherche", not trouves, f"{len(trouves)} terme(s) trouvé(s)")
         flux = (referentiels.DOSSIER / "sources_veille.yaml").read_text()
         controle("aucune source exclue dans les flux de la veille", not termes_interdits(flux), "sources_veille.yaml")

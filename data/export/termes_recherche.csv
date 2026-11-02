@@ -1099,21 +1099,6 @@ regime-transitoire-2020,terme,état d'urgence sanitaire
 regime-transitoire-2020,terme,couvre-feu
 regime-transitoire-2020,terme,rassemblements
 regime-transitoire-2020,terme,fichiers
-regulariser-travailleurs-sans-papiers-2026,terme,sans-papiers
-regulariser-travailleurs-sans-papiers-2026,terme,régularisation
-regulariser-travailleurs-sans-papiers-2026,terme,carte de séjour
-regulariser-travailleurs-sans-papiers-2026,terme,métiers en tension
-regulariser-travailleurs-sans-papiers-2026,terme,travailleurs étrangers
-relance-decentralisation-logement-2026,terme,SRU
-relance-decentralisation-logement-2026,terme,HLM
-relance-decentralisation-logement-2026,terme,DPE
-relance-decentralisation-logement-2026,terme,passoires thermiques
-relance-decentralisation-logement-2026,terme,logements sociaux
-relance-decentralisation-logement-2026,terme,attribution
-relance-decentralisation-logement-2026,terme,maires
-relance-decentralisation-logement-2026,terme,construction
-relance-decentralisation-logement-2026,terme,décentralisation
-relance-decentralisation-logement-2026,terme,rénovation
 renouvellement-titres-sejour-2025,terme,préfectures
 renouvellement-titres-sejour-2025,terme,carte de résident
 renouvellement-titres-sejour-2025,terme,titre de séjour
@@ -1417,6 +1402,21 @@ vsa-commerces-2026,terme,intelligence artificielle
 vsa-commerces-2026,terme,IA
 zan-2023,terme,ZAN
 zan-2023,terme,zéro artificialisation nette
+regulariser-travailleurs-sans-papiers-2026,terme,sans-papiers
+regulariser-travailleurs-sans-papiers-2026,terme,régularisation
+regulariser-travailleurs-sans-papiers-2026,terme,carte de séjour
+regulariser-travailleurs-sans-papiers-2026,terme,métiers en tension
+regulariser-travailleurs-sans-papiers-2026,terme,travailleurs étrangers
+relance-decentralisation-logement-2026,terme,SRU
+relance-decentralisation-logement-2026,terme,HLM
+relance-decentralisation-logement-2026,terme,DPE
+relance-decentralisation-logement-2026,terme,passoires thermiques
+relance-decentralisation-logement-2026,terme,logements sociaux
+relance-decentralisation-logement-2026,terme,attribution
+relance-decentralisation-logement-2026,terme,maires
+relance-decentralisation-logement-2026,terme,construction
+relance-decentralisation-logement-2026,terme,décentralisation
+relance-decentralisation-logement-2026,terme,rénovation
 DLR5L14N35468,terme,retraites agricoles
 DLR5L14N35468,terme,agriculteurs
 DLR5L14N35468,surnom,loi Chassaigne

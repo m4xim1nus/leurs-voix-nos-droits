@@ -13,6 +13,7 @@ import {
   demandes,
   ecarter,
   jugement,
+  trancher,
   propositionsOuvertes,
   RefusProposition,
   type DocPropose
@@ -187,5 +188,25 @@ describe('propositions', () => {
       ({ relecture: { points_attention: points } }) as unknown as Parameters<typeof casNonPrevu>[0];
     expect(casNonPrevu(p(['CAS NON PRÉVU : x']))).toBe(true);
     expect(casNonPrevu(p(['autre']))).toBe(false);
+  });
+
+  it('une question de méthode tranchée ne classe plus la carte en « question de méthode »', async () => {
+    const id = await proposer('premier_decisif:DLR5L17N7:V7', {
+      ...BROUILLON,
+      dossier_an: 'DLR5L17N7'
+    });
+    await db
+      .prepare(
+        `UPDATE propositions SET relecture = json_set(relecture, '$.points_attention', json('["CAS NON PRÉVU : x"]')) WHERE id = ?`
+      )
+      .bind(id)
+      .run();
+    const avant = (await propositionsOuvertes(db)).find((p) => p.id === id)!;
+    expect(casNonPrevu(avant)).toBe(true);
+    await trancher(db, id, 'max');
+    const apres = (await propositionsOuvertes(db)).find((p) => p.id === id)!;
+    expect(casNonPrevu(apres)).toBe(false);
+    expect(apres.relecture.methode_tranchee?.par).toBe('max');
+    expect(apres.relecture.points_attention).toEqual(['CAS NON PRÉVU : x']);
   });
 });

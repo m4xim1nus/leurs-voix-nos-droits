@@ -74,7 +74,6 @@ Un texte nouvellement qualifié se trouve déjà par son titre et son résumé. 
 (« APL », « loi Duplomb »), saisir ses termes et surnoms dans le cadre « Recherche du site » de sa fiche, dans l'admin ; la
 proposition du LLM en contient déjà. Ils partent avec « Publier ». `lvnd check` signale chaque texte qualifié qui n'en a pas
 (ligne `info`), sans bloquer. Ni victime, ni personne mise en cause, ni formule militante ; un surnom doit être d'usage public.
-`pipeline/referentiels/termes_recherche.yaml`, l'ancien référentiel, ne sert plus que de repli le temps de la reprise.
 
 ## Au fil de l'eau
 

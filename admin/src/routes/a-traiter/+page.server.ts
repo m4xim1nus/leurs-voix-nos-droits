@@ -11,6 +11,7 @@ import {
   jugement,
   propositionsOuvertes,
   RefusProposition,
+  trancher,
   type Demande,
   type Proposition
 } from '$lib/server/propositions';
@@ -192,6 +193,17 @@ export const actions: Actions = {
     try {
       await ecarter(platform!.env.DB, id, String(f.get('motif') ?? ''), locals.email);
       return { ok: 'Proposition écartée.' };
+    } catch (e) {
+      if (e instanceof RefusProposition) return fail(400, { erreur: e.message, id });
+      throw e;
+    }
+  },
+
+  trancher: async ({ request, platform, locals }) => {
+    const id = Number((await request.formData()).get('id'));
+    try {
+      await trancher(platform!.env.DB, id, locals.email);
+      return { ok: 'Question de méthode marquée comme tranchée.' };
     } catch (e) {
       if (e instanceof RefusProposition) return fail(400, { erreur: e.message, id });
       throw e;

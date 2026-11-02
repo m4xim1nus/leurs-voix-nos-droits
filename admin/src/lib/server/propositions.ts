@@ -21,6 +21,8 @@ export interface Relecture {
   documents_lus?: string[];
   /** Veille des sources : la publication qui a déclenché la proposition. */
   publication?: { auteur: string; titre: string; lien: string; date: string; raison?: string };
+  /** La question de méthode soulevée a été tranchée (docs/METHODO.md) : la carte quitte cette section. */
+  methode_tranchee?: { par: string; le: string };
 }
 
 /** Brouillon proposé : une entrée d'editorial.json, plus `statut` et `motif_ecart`. */
@@ -187,11 +189,24 @@ export function jugement(d: DocPropose | null): string {
   ].join(' · ');
 }
 
-/** Proposition qui soulève une question de méthode (« CAS NON PRÉVU »). */
+/** Proposition qui soulève une question de méthode (« CAS NON PRÉVU ») encore ouverte. */
 export function casNonPrevu(p: Proposition): boolean {
+  if (p.relecture.methode_tranchee) return false;
   return [...(p.relecture.points_attention ?? []), ...(p.relecture.controles?.points ?? [])].some(
     (x) => String(x).startsWith('CAS NON PRÉVU')
   );
+}
+
+/** Marque la question de méthode d'une proposition comme tranchée : elle reste lisible, la carte change de section. */
+export async function trancher(db: D1Database, id: number, auteur: string): Promise<void> {
+  const r = await db
+    .prepare(
+      `UPDATE propositions SET relecture = json_set(COALESCE(relecture, '{}'), '$.methode_tranchee', json(?))
+       WHERE id = ? AND statut IN ('proposee', 'echec')`
+    )
+    .bind(JSON.stringify({ par: auteur, le: new Date().toISOString().slice(0, 19) + '+00:00' }), id)
+    .run();
+  if (!r.meta.changes) throw new RefusProposition('proposition introuvable ou déjà traitée');
 }
 
 export interface Demande {

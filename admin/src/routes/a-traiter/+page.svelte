@@ -14,7 +14,7 @@
     },
     methode: {
       titre: 'Question de méthode',
-      aide: 'La proposition signale un cas que les règles ne prévoient pas : à trancher (docs/A_VALIDER.md) avant de valider.'
+      aide: 'La proposition signale un cas que les règles ne prévoient pas : à trancher (docs/A_VALIDER.md) avant de valider. Une fois la règle fixée, « Question tranchée » renvoie la carte dans sa section.'
     },
     main: {
       titre: 'À faire à la main',
@@ -143,7 +143,22 @@
         </details>
       {/if}
     {/if}
+    {#if p.relecture.methode_tranchee}
+      <p class="discret">
+        Question de méthode tranchée le {dateHeure(p.relecture.methode_tranchee.le)} par {p
+          .relecture.methode_tranchee.par} : relire la proposition à la lumière de la règle.
+      </p>
+    {/if}
     <div class="gestes">
+      {#if p.methode}
+        <form method="POST" action="?/trancher" use:enhance>
+          <input type="hidden" name="id" value={p.id} />
+          <button
+            title="La règle est fixée dans la méthode : la carte quitte « Question de méthode »"
+            >Question tranchée</button
+          >
+        </form>
+      {/if}
       {#if p.statut === 'proposee' && p.doc?.statut !== 'sans-source'}
         <form method="POST" action="?/charger" use:enhance>
           <input type="hidden" name="id" value={p.id} />
