@@ -141,10 +141,12 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
    comptées, chacune pour son droit (Nouvelle-Calédonie, 2024).
 5. **Points de vigilance.** Les critiques sourcées portant sur la mise en
    œuvre ou sur l'insuffisance des garanties s'affichent à côté du
-   jugement, sans le modifier (aide à mourir). Une décision du Conseil
-   constitutionnel (validation, réserve, censure) n'est pas un point de
-   vigilance : elle s'affiche dans son champ (règle 6), et la note dit, s'il
-   y a lieu, qu'une mesure censurée reste dans le texte qualifié.
+   jugement, sans le modifier (aide à mourir). La décision du Conseil
+   constitutionnel sur ce texte (validation, réserve, censure) n'est pas un
+   point de vigilance : elle s'affiche dans son champ (règle 6), et la note
+   dit, s'il y a lieu, qu'une mesure censurée reste dans le texte qualifié.
+   Une décision antérieure sur une mesure comparable reste une source sur la
+   mesure, citable en vigilance.
 6. **Objet qualifié.** On qualifie le texte soumis au scrutin décisif,
    puisque c'est le vote du député qui est mesuré. La décision du Conseil
    constitutionnel s'affiche à côté (« 32 articles censurés »).

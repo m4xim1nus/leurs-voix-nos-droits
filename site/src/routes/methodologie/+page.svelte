@@ -101,8 +101,9 @@
     </li>
     <li value="5" id="regle-5">
       <strong>Points de vigilance.</strong> Les critiques sourcées sur la mise en œuvre ou sur l’insuffisance
-      des garanties s’affichent à côté du jugement, sans le modifier. Une décision du Conseil constitutionnel
-      (validation, réserve, censure) n’en est pas un : elle s’affiche à part.
+      des garanties s’affichent à côté du jugement, sans le modifier. La décision du Conseil constitutionnel
+      sur ce texte (validation, réserve, censure) n’en est pas un : elle s’affiche à part. Une décision
+      antérieure sur une mesure comparable peut en revanche y figurer, comme source sur la mesure.
     </li>
     <li value="6" id="regle-6">
       <strong>Objet qualifié.</strong> On qualifie le texte soumis au vote décisif, puisque c’est ce vote
