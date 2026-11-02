@@ -80,3 +80,12 @@ clé ; poser `LLM_CHIFFREMENT` (Worker et dépôt) et `TERMES_INTERDITS` (dépô
   partagé avec le pipeline dans `pipeline/tests/fixtures/llm_vecteur.txt`), plafond mensuel (20 $ par défaut), modèle
   (Opus 5.5 par défaut, Sonnet 5.5 au choix), dépense du mois et journal des appels. Coupé par défaut. **À faire par
   Max** : `LLM_CHIFFREMENT` (Worker et dépôt, `admin/README.md`, étape 6), `npm run db:migrer:distant`, `npm run deploy`.
+  Fait le 02/11/2026 : clé saisie, interrupteur coupé.
+- Items 2 et 3 : `lvnd proposer DOSSIER…` (`lvnd/llm.py`, `proposer.py`, `controles.py`, `propositions.py`). Réglages et
+  clé lus dans D1, plafond vérifié avant chaque requête (réserve de 1 $), chaque requête journalisée. Prompt : méthode,
+  consigne, grille, témoins (≈ 80 000 caractères, en cache une heure), puis l'alerte, le dossier, ses scrutins et la
+  version publiée. Recherche web (12 recherches, 20 lectures au plus), effort `high`. Brouillons dans
+  `source/propositions/AAAA-MM-JJ/`, avec origine, coût et contrôles sous `relecture`. Contrôles : termes interdits
+  (refus de tout appel sans la liste, lue aussi depuis le secret `TERMES_INTERDITS`), signataires des publications
+  collectives, `editorial.valider`, décomptes, URL, **chaque extrait retrouvé dans son document**. `--prompt` écrit le
+  prompt sans appel. Pas encore essayé contre l'API : premier appel réel avec l'item 4.

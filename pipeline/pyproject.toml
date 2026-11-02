@@ -5,8 +5,11 @@ description = "Pipeline Leurs voix, nos droits : open data AN/Sénat + qualifica
 requires-python = ">=3.12"
 license = "MIT"
 dependencies = [
+    "anthropic>=2.3,<3",
+    "cryptography>=43",
     "httpx>=0.28",
     "polars>=1.0",
+    "pypdf>=5",
     "pyyaml>=6.0",
 ]
 

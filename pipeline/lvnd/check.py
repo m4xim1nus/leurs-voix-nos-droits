@@ -4,6 +4,7 @@ Un invariant ou un texte témoin en échec fait échouer `lvnd check`. Les ligne
 sans faire échouer, comme les lignes « AVERTISSEMENT » (`alertes.py`).
 """
 
+import os
 import re
 import sqlite3
 from pathlib import Path
@@ -96,11 +97,21 @@ def _temoins(con, controle, out) -> None:
 TERMES_INTERDITS = Path(__file__).resolve().parents[2] / "source/termes_interdits.txt"
 
 
+def liste_termes(chemin: Path = TERMES_INTERDITS) -> list[str] | None:
+    """Liste privée des termes interdits : `source/termes_interdits.txt` (non versionné), sinon la variable
+    d'environnement TERMES_INTERDITS (secret de l'Action, un terme par ligne). None si aucune des deux."""
+    if chemin.exists():
+        brut = chemin.read_text()
+    elif os.environ.get("TERMES_INTERDITS", "").strip():
+        brut = os.environ["TERMES_INTERDITS"]
+    else:
+        return None
+    return [t.strip() for t in brut.splitlines() if t.strip() and not t.startswith("#")]
+
+
 def termes_interdits(texte: str, chemin: Path = TERMES_INTERDITS) -> list[str]:
-    """Termes de la liste privée (source/, non versionné) présents dans `texte` (CLAUDE.md, règles dures)."""
-    if not chemin.exists():
-        return []
-    termes = [t.strip() for t in chemin.read_text().splitlines() if t.strip() and not t.startswith("#")]
+    """Termes de la liste privée présents dans `texte` (CLAUDE.md, règles dures). Sans liste : aucun."""
+    termes = liste_termes(chemin) or []
     return [t for t in termes if re.search(rf"(?<!\w){re.escape(t)}(?!\w)", texte, re.IGNORECASE)]
 
 

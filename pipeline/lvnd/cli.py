@@ -1,4 +1,4 @@
-"""Ligne de commande : lvnd download | archiver | build | check | editorial | scores | annuaire | sync-admin."""
+"""Ligne de commande : lvnd download | archiver | build | check | editorial | scores | annuaire | sync-admin | proposer."""
 
 import argparse
 import sys
@@ -67,6 +67,22 @@ def main(argv=None) -> int:
                    help="sync incrémental seul : affiche le nombre de lignes à écrire, sans rien écrire (refusé avec --brouillons, --valider, --complet ou --sql)")
     s.add_argument("--export", type=Path, default=EXPORT)
     s.add_argument("--sortie", type=Path, help="chemin du script SQL (défaut : admin/.wrangler/sync-admin.sql)")
+    pr = sub.add_parser("proposer", help="proposition de qualification par LLM pour des dossiers (brouillons YAML, "
+                                         "contrôlés ; ni validés ni publiés)")
+    pr.add_argument("dossiers", nargs="+", metavar="DOSSIER", help="dossier AN (DLR5L17N…)")
+    cible_p = pr.add_mutually_exclusive_group()
+    cible_p.add_argument("--local", dest="cible", action="store_const", const="local",
+                         help="réglages et journal dans la D1 locale (défaut : en ligne)")
+    cible_p.add_argument("--remote", dest="cible", action="store_const", const="remote")
+    pr.set_defaults(cible="remote")
+    pr.add_argument("--mode", choices=("complet", "ecart", "requalification", "suivi", "senat"),
+                    help="défaut : d'après la dernière alerte du dossier (en_cours_alertes.csv)")
+    pr.add_argument("--a-blanc", action="store_true",
+                    help="sans la version publiée ni l'alerte (mesure de l'accord, item 4) : mode complet")
+    pr.add_argument("--tache", default="proposition", help="libellé du journal des appels (défaut : proposition)")
+    pr.add_argument("--sortie", type=Path, help="dossier des brouillons (défaut : source/propositions/AAAA-MM-JJ)")
+    pr.add_argument("--prompt", action="store_true", help="écrit le prompt dans --sortie, sans aucun appel")
+    pr.add_argument("--export", type=Path, default=EXPORT)
     args = ap.parse_args(argv)
 
     if args.commande == "download":
@@ -132,6 +148,10 @@ def main(argv=None) -> int:
         from . import sync_admin
         sync_admin.sync(args.export, ADMIN, args.cible, args.editorial, args.sortie, args.brouillons, args.valider,
                         args.complet, args.simuler, args.remplacer, args.ecarter_publie)
+    elif args.commande == "proposer":
+        from . import propositions
+        return propositions.lancer(args.dossiers, args.export, ADMIN, args.cible, args.mode, args.a_blanc,
+                                   args.tache, args.sortie, args.prompt)
     return 0
 
 
