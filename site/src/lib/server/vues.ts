@@ -1,6 +1,6 @@
 // Ce que reçoit chaque page : des extraits de `donnees()`, sérialisables et sans calcul de score.
 
-import { membreAffiche } from '$lib/groupes';
+import { membreAffiche, ordreTexte } from '$lib/groupes';
 import { error } from '@sveltejs/kit';
 import { donnees, type Donnees } from './donnees';
 import type {
@@ -168,14 +168,14 @@ export function vueTexte(id: string) {
       const s = d.scoresGroupesTextes.get(l.id)?.get(id);
       return s ? [{ groupe: l, score: { ...s, n_textes: 1 } }] : [];
     })
-    .sort((a, b) => (b.score.score ?? -1) - (a.score.score ?? -1));
+    .sort(ordreTexte);
   // Chaque groupe du Sénat sous son sigle, sans correspondance avec ceux de l'Assemblée (règle 28).
   const groupesSenat = d.senat.groupes
     .flatMap((g) => {
       const s = d.senat.scoresGroupesTextes.get(g.id)?.get(id);
       return s ? [{ groupe: g, score: s }] : [];
     })
-    .sort((a, b) => (b.score.score ?? -1) - (a.score.score ?? -1));
+    .sort(ordreTexte);
   return { texte, groupes, groupesSenat, dateEtat: d.dateEtat };
 }
 

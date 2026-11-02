@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { abstentionniste } from '$lib/groupes';
   import Regle from '$lib/components/Regle.svelte';
   import Sources from '$lib/components/Sources.svelte';
   import Ventilations from '$lib/components/Ventilations.svelte';
@@ -270,7 +271,8 @@
         libelle: g.groupe.sigle,
         couleur: g.groupe.couleur,
         href: `/groupes/${g.groupe.slug}`,
-        score: g.score.score
+        score: g.score.score,
+        creux: g.score.score !== null && abstentionniste(g.score)
       }))}
     />
   </section>
@@ -366,7 +368,8 @@
           libelle: g.groupe.sigle,
           couleur: g.groupe.couleur,
           href: `/senat#groupe-${g.groupe.id}`,
-          score: g.score.score
+          score: g.score.score,
+          creux: g.score.score !== null && abstentionniste(g.score)
         }))}
       />
     {/if}

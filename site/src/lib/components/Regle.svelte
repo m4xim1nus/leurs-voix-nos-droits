@@ -16,6 +16,8 @@
     n_textes?: number;
     /** Ligne mise en avant (le député sur sa fiche). */
     avant?: boolean;
+    /** Groupe majoritairement abstentionniste : repère creux, score sur ses seuls votes exprimés. */
+    creux?: boolean;
   }
 
   let {
@@ -65,12 +67,18 @@
         <span class="grad" class:majeure={g % 50 === 0} style:left="{g}%"></span>
       {/each}
       {#if l.score !== null}
-        <span class="curseur" style:left="{l.score}%" style:--c={l.couleur ?? 'var(--encre)'}
+        <span
+          class="curseur"
+          class:creux={l.creux}
+          style:left="{l.score}%"
+          style:--c={l.couleur ?? 'var(--encre)'}
         ></span>
       {/if}
     </span>
     <span class="valeur">
       <span class="chiffre">{pourcent(l.score)}</span>
+      {#if l.creux}<span class="visuellement-cache">, groupe majoritairement abstentionniste</span
+        >{/if}
       {#if l.n_textes !== undefined}
         <span class="visuellement-cache">
           de votes favorables aux droits, sur {pluriel(l.n_textes, 'texte')}</span
@@ -97,7 +105,8 @@
   {#if legende}
     <p class="petit discret note">
       Part des votes favorables aux droits, pondérée texte par texte. Abstentions et absences hors
-      calcul.
+      calcul.{#if lignes.some((l) => l.creux)}{' '}Repère creux : groupe majoritairement
+        abstentionniste, dont le score ne porte que sur ses votes exprimés.{/if}
     </p>
   {/if}
 </div>
@@ -184,6 +193,10 @@
     background: var(--c);
     border: 1.5px solid var(--encre);
     border-radius: 1px;
+  }
+  /* Creux : vide, contour seul ; la couleur du groupe reste sur la pastille de son libellé. */
+  .curseur.creux {
+    background: var(--papier);
   }
   button.ligne {
     width: 100%;

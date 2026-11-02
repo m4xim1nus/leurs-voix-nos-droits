@@ -367,6 +367,10 @@ codes postaux, découpée par département.
 
 ### Affichage des scores
 
+- Sur la règle d'un texte (Assemblée et Sénat), un groupe **majoritairement abstentionniste** sur ses scrutins comptés
+  (abstentions supérieures à ses votes favorables et à ses votes défavorables, même règle que la position d'un groupe)
+  a un repère **creux** ; à score égal, il se range après les groupes qui ont voté. La légende le dit. Son score ne porte que sur ses
+  votes exprimés (v1.11.2, 02/11/2026).
 - Un score s'écrit « 37 % de votes favorables aux droits », jamais seul :
   toujours avec le nombre de textes (« sur 6 textes ») et, pour un
   député, sa participation (« a pris part à 18 des 24 scrutins

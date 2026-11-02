@@ -3,6 +3,17 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Les tags `v*` du dépôt suivent ces versions.
 
+## [1.11.2] — 2026-11-02
+
+Retouche de la règle « Comment votent les groupes » sur la fiche d'un texte, à la demande de Max. Aucune donnée ni aucun
+score ne change.
+
+### Modifié
+
+- Un groupe majoritairement abstentionniste sur les scrutins comptés du texte (même règle que la position d'un groupe) a
+  un repère creux. Le tri reste par score ; à score égal, il se range après les groupes qui ont voté. La légende l'explique ; un lecteur d'écran l'entend. Sur
+  le texte AESH, RN (79 abstentions, 1 voix contre), EPR et HOR ne se confondent plus avec DEM, qui a voté contre.
+
 ## [1.11.1] — 2026-11-02
 
 Retouches de l'encadré « En mots simples » de la fiche d'un texte, à la demande de Max. Aucune donnée ni aucun score ne
