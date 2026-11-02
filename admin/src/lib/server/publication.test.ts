@@ -9,7 +9,7 @@ import { normaliser } from '../qualification';
 import type { Grille, Qualification } from '../types';
 import { enregistrer, ConflitEdition } from './db';
 import { shaBlob, depuisBase64 } from './github';
-import { preparer, publier } from './publication';
+import { modifiesHorsAdmin, preparer, publier, type EtatTexte } from './publication';
 
 const RACINE = new URL('../../../../', import.meta.url);
 const GRILLE: Grille = {
@@ -409,6 +409,21 @@ describe('publication', () => {
       .run();
   });
 
+  it("refuse de remettre l'ancienne version d'un texte modifié dans le dépôt hors de l'admin", async () => {
+    const { etat, f } = faux();
+    await publier(db, GRILLE, CFG, 'a@x', f);
+    expect(etat.commits).toHaveLength(1);
+    // editorial.json corrigé à la main dans le dépôt (lvnd editorial --ajouter, commit) : D1 n'en sait rien
+    const fichier = JSON.parse(etat.contenu!);
+    fichier.textes[0].note = 'corrigée hors de l’admin';
+    etat.contenu = JSON.stringify(fichier, null, 1) + '\n';
+    etat.sha = await shaBlob(etat.contenu);
+    await expect(publier(db, GRILLE, CFG, 'a@x', f)).rejects.toThrow(
+      new RegExp(`modifié hors de l'admin \\(${fichier.textes[0].dossier_an}\\)`)
+    );
+    expect(etat.commits).toHaveLength(1);
+  });
+
   it('refuse une édition concurrente', async () => {
     await expect(
       enregistrer(
@@ -433,6 +448,29 @@ describe('publication', () => {
     const prep = await preparer(db, GRILLE);
     expect(prep.bloquant).toBe(true);
     await expect(publier(db, GRILLE, CFG, 'c@x', faux().f)).rejects.toThrow('erreurs bloquantes');
+  });
+
+  it('compare le dépôt texte par texte : un texte modifié dans D1 peut remplacer sa version du dépôt', () => {
+    const doc = (textes: object[], ecartes: object[] = []) =>
+      JSON.stringify({ format: 1, grille: 0, textes, ecartes, suivis: [] });
+    const etat = (dossier_an: string, changement: EtatTexte['changement']) =>
+      ({ dossier_an, changement }) as EtatTexte;
+    const a = { dossier_an: 'A', note: 'x' };
+    const b = { dossier_an: 'B', motif: 'ancien' };
+    const publie = doc([a], [b]);
+    expect(modifiesHorsAdmin(null, publie, [])).toEqual([]);
+    expect(modifiesHorsAdmin(publie, publie, [])).toEqual([]);
+    // motif changé dans le dépôt, pas dans D1 : la publication le remettrait
+    expect(modifiesHorsAdmin(doc([a], [{ ...b, motif: 'nouveau' }]), publie, [])).toEqual(['B']);
+    // changé dans D1 : c'est la version voulue
+    expect(
+      modifiesHorsAdmin(doc([a], [{ ...b, motif: 'nouveau' }]), publie, [etat('B', 'modifie')])
+    ).toEqual([]);
+    // texte ajouté au dépôt seul, et en-tête changé
+    expect(modifiesHorsAdmin(doc([a, { dossier_an: 'C' }], [b]), publie, [])).toEqual(['C']);
+    expect(modifiesHorsAdmin(publie.replace('"grille":0', '"grille":1'), publie, [])).toEqual([
+      'en-tête'
+    ]);
   });
 
   it("calcule le sha git d'un fichier (comparaison avec le dépôt sans le télécharger)", async () => {

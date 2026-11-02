@@ -169,6 +169,49 @@ export async function preparer(
   return { textes, bloquant, contenu, lignes };
 }
 
+/**
+ * Textes qu'une publication remettrait à une version antérieure : leur entrée dans le fichier du dépôt diffère de
+ * celle que l'admin écrirait, alors que D1 ne les a pas modifiés depuis la dernière publication. Le fichier a donc
+ * été changé hors de l'admin (`lvnd editorial --ajouter`, commit à la main) : publier effacerait ce changement en
+ * silence (motif de DLR5L15N41895, 01/11/2026). Clé : dossier de l'AN ; « en-tête » pour le format et la grille.
+ */
+export function modifiesHorsAdmin(
+  distant: string | null,
+  contenu: string,
+  textes: EtatTexte[]
+): string[] {
+  if (distant === null) return [];
+  const entrees = (s: string) => {
+    const {
+      textes: t = [],
+      ecartes = [],
+      suivis = [],
+      ...entete
+    } = JSON.parse(s) as Record<string, { dossier_an: string }[]>;
+    const m = new Map<string, string>([['en-tête', JSON.stringify(entete)]]);
+    for (const [section, l] of [
+      ['textes', t],
+      ['ecartes', ecartes],
+      ['suivis', suivis]
+    ] as const)
+      for (const e of l) m.set(e.dossier_an, `${section} ${JSON.stringify(e)}`);
+    return m;
+  };
+  const avant = entrees(distant);
+  const apres = entrees(contenu);
+  const changes = new Set(textes.filter((t) => t.changement).map((t) => t.dossier_an));
+  return [...new Set([...avant.keys(), ...apres.keys()])]
+    .filter((d) => avant.get(d) !== apres.get(d) && !changes.has(d))
+    .sort();
+}
+
+export function erreurHorsAdmin(dossiers: string[]): string {
+  return (
+    `editorial.json a été modifié hors de l'admin (${dossiers.join(', ')}) : publier remettrait ` +
+    "leur version précédente. Reporter d'abord ces modifications dans l'admin (docs/EXPLOITATION.md), puis publier."
+  );
+}
+
 export function message(textes: EtatTexte[]): string {
   const par = (c: EtatTexte['changement'], statut: Statut = 'valide') =>
     textes
@@ -217,6 +260,8 @@ export async function publier(
   const prep = await preparer(base, g, interdits);
   if (prep.bloquant) throw new Error('des textes à publier ont des erreurs bloquantes');
   const distant = await lireFichier(cfg, f);
+  const horsAdmin = modifiesHorsAdmin(distant.contenu, prep.contenu, prep.textes);
+  if (horsAdmin.length) throw new Error(erreurHorsAdmin(horsAdmin));
   const msg = message(prep.textes);
   let commit: Resultat['commit'] = null;
   if (distant.sha !== (await shaBlob(prep.contenu)))

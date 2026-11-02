@@ -83,6 +83,25 @@
     <p>Rien à publier.</p>
   {/if}
 
+  {#if data.horsAdmin.length}
+    <ul class="messages">
+      <li class="erreur">
+        <span class="mono">{data.chemin}</span> a été modifié dans le dépôt hors de l'admin pour
+        {#each data.horsAdmin as d, i (d)}{i ? ', ' : ''}{#if d === 'en-tête'}son en-tête{:else}<a
+              href="/textes/{d}">{d}</a
+            >{/if}{/each}. Publier remettrait leur version précédente : reporter d'abord ces
+        modifications dans l'admin, puis publier.
+      </li>
+    </ul>
+  {:else if data.lectureDepot}
+    <ul class="messages">
+      <li class="avertissement">
+        Fichier du dépôt illisible ({data.lectureDepot}) : la comparaison sera refaite au moment de
+        publier.
+      </li>
+    </ul>
+  {/if}
+
   {#if enErreur.length}
     <ul class="messages">
       <li class="erreur">

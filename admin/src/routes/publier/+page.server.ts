@@ -1,15 +1,33 @@
 import { fail } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 import * as db from '$lib/server/db';
-import { ConflitGitHub } from '$lib/server/github';
-import { message, preparer, publier } from '$lib/server/publication';
+import { ConflitGitHub, lireFichier } from '$lib/server/github';
+import { message, modifiesHorsAdmin, preparer, publier } from '$lib/server/publication';
 
 export const load: PageServerLoad = async ({ platform }) => {
   const env = platform!.env;
   const prep = await preparer(env.DB, await db.grille(env.DB), env.TERMES_INTERDITS);
+  // Fichier du dépôt modifié hors de l'admin : la publication le remettrait à l'ancienne version (refusée).
+  let horsAdmin: string[] = [];
+  let lectureDepot: string | null = null;
+  if (env.GITHUB_TOKEN) {
+    try {
+      const distant = await lireFichier({
+        jeton: env.GITHUB_TOKEN,
+        depot: env.GITHUB_REPO,
+        branche: env.GITHUB_BRANCH,
+        chemin: env.EDITORIAL_CHEMIN
+      });
+      horsAdmin = modifiesHorsAdmin(distant.contenu, prep.contenu, prep.textes);
+    } catch (e) {
+      lectureDepot = (e as Error).message;
+    }
+  }
   return {
     textes: prep.textes,
-    bloquant: prep.bloquant,
+    bloquant: prep.bloquant || horsAdmin.length > 0,
+    horsAdmin,
+    lectureDepot,
     message: message(prep.textes),
     taille: prep.contenu.length,
     configure: Boolean(env.GITHUB_TOKEN),
