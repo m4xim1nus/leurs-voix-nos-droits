@@ -37,7 +37,10 @@ de côté, et combler deux manques de l'outil apparus en route. Pas de nouvelle 
   service, `a69-riipm-2025` et `travail-1er-mai-ppl-2025` (motions de rejet « tactiques »), brouillons prêts.
 - Item 2 : note interne (migration `0005_notes_internes.sql`), sur la fiche et dans « À traiter ». Migration et déploiement
   faits par Max le 02/11/2026 (version `e1c94b0b`).
-- Items 3 et 4 : 18 brouillons chargés « à relire » dans l'admin le 02/11/2026 (six résumés de témoins, cinq fiches de fond,
-  cinq écarts dont deux deviennent qualifiés, les deux fiches de l'alerte). En attente de l'ok de Max.
-- Item 5 : dix questions dans `docs/A_VALIDER.md`, chacune avec une recommandation. En attente de Max.
+- Items 3 et 4 : 18 dossiers validés par Max et publiés le 02/11/2026 (six résumés de témoins, cinq fiches de fond, cinq
+  écarts dont deux deviennent qualifiés, les deux fiches de l'alerte).
+- Item 5 : dix questions tranchées par Max le 02/11/2026 (recommandations suivies), passées dans `docs/METHODO.md`. Leur
+  application : 60 dossiers chargés « à relire » le 02/11/2026 (décision du Conseil hors des vigilances, 40 ; ordre public,
+  ratification, calendrier électoral, textes du seul Sénat sans source, 13 ; statut d'une profession et La Poste, 7, dont
+  La Poste et les directeurs d'école qualifiés). En attente de l'ok de Max.
 - Item 6 : les trois sources, lues par Max dans un navigateur, confirment les fiches publiées. Rien à changer.
