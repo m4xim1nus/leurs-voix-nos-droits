@@ -33,13 +33,15 @@ POUR = ("texte", "contre-texte", "a-trancher")
 
 # Ordre des clés dans le fichier (le même dans l'admin).
 CLES_TEXTE = ("id", "dossier_an", "legislature", "titre", "resume", "droits", "etiquettes", "vigilance",
-              "conseil_constitutionnel", "note", "sources", "scrutins", "senat")
+              "conseil_constitutionnel", "note", "sources", "scrutins", "senat", "recherche")
 CLES_DROIT = ("code", "role", "sens", "sources", "justification")
 CLES_SOURCE = ("auteur", "titre", "date", "url")
 CLES_SCRUTIN = ("id", "role", "pour", "objet")
 CLES_VIGILANCE = ("texte", "sources")
-CLES_ECARTE = ("dossier_an", "legislature", "titre", "motif")
-CLES_SUIVI = ("id", "dossier_an", "legislature", "titre", "resume", "droits", "note", "sources")
+CLES_ECARTE = ("dossier_an", "legislature", "titre", "motif", "recherche")
+CLES_SUIVI = ("id", "dossier_an", "legislature", "titre", "resume", "droits", "note", "sources", "recherche")
+# Clés de la recherche du site (termes courants, surnoms d'usage public) : jamais affichées, n'entrent dans aucun score.
+CLES_RECHERCHE = ("termes", "surnoms")
 CLES_DROIT_SUIVI = ("code", "sources", "justification")
 CLES_SENAT = ("version", "scrutins", "droits", "etiquettes", "vigilance", "sources", "note")
 VERSIONS_SENAT = ("meme", "autre", "seul")
@@ -64,6 +66,13 @@ def _vigilance(vigilance: list) -> list[dict]:
 
 def _sources(sources: dict) -> dict:
     return {k: _ordonner({**s, "date": str(s.get("date") or "")}, CLES_SOURCE) for k, s in sorted(sources.items())}
+
+
+def recherche(r: dict | None) -> dict:
+    """Bloc `recherche` : listes sans vide ni espace en trop (YAML lit « 49.3 » en nombre : tout passe par str) ;
+    une liste vide disparaît, et le bloc entier s'il est vide."""
+    out = {k: [str(x).strip() for x in (r or {}).get(k) or [] if str(x).strip()] for k in CLES_RECHERCHE}
+    return {k: v for k, v in out.items() if v}
 
 
 def _senat(s: dict) -> dict:
@@ -102,13 +111,21 @@ def normaliser(t: dict) -> dict:
     senat = _senat(t.get("senat") or {})
     if senat["scrutins"] or senat["note"]:
         out["senat"] = senat
+    if r := recherche(t.get("recherche")):
+        out["recherche"] = r
     return _ordonner(out, CLES_TEXTE)
 
 
 def ecarte(e: dict) -> dict:
-    """Document minimal d'un texte écarté (statut `ecarte` dans l'admin)."""
+    """Document minimal d'un texte écarté (statut `ecarte` dans l'admin), ses termes de recherche compris."""
     return normaliser({"id": "", "dossier_an": e["dossier_an"], "legislature": e.get("legislature", 0),
-                       "titre": e["titre"], "droits": [], "scrutins": []})
+                       "titre": e["titre"], "droits": [], "scrutins": [], "recherche": e.get("recherche")})
+
+
+def entree_ecarte(e: dict) -> dict:
+    """Entrée d'`ecartes` : `recherche` n'apparaît que s'il n'est pas vide."""
+    r = recherche(e.get("recherche"))
+    return _ordonner({**e, "recherche": r} if r else {k: v for k, v in e.items() if k != "recherche"}, CLES_ECARTE)
 
 
 def suivi(t: dict) -> dict:
@@ -133,7 +150,7 @@ def document(textes: list[dict], ecartes: list[dict], suivis: list[dict] = ()) -
         "format": FORMAT,
         "grille": referentiels.droits()["version"],
         "textes": sorted(textes, key=lambda t: t["id"]),
-        "ecartes": sorted((_ordonner(e, CLES_ECARTE) for e in ecartes), key=lambda e: e["dossier_an"]),
+        "ecartes": sorted((entree_ecarte(e) for e in ecartes), key=lambda e: e["dossier_an"]),
     }
     if suivis:
         doc["suivis"] = sorted((suivi(s) for s in suivis), key=lambda s: s["id"])
@@ -159,7 +176,7 @@ def ajouter(doc: dict, brouillons: list[dict], infos: dict[str, dict] | None = N
         if b.get("statut") == "ecarte":
             if not b.get("motif_ecart"):
                 raise SystemExit(f"{d} : texte écarté sans motif")
-            cible, entree, err = ecartes, _ordonner({**b, "motif": b["motif_ecart"]}, CLES_ECARTE), []
+            cible, entree, err = ecartes, entree_ecarte({**b, "motif": b["motif_ecart"]}), []
         else:
             n = normaliser({**b, "droits": b.get("droits") or [], "scrutins": b.get("scrutins") or []})
             a_suivre = b.get("statut") == "a-suivre"

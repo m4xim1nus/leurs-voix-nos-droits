@@ -96,6 +96,12 @@ actuel, et le format reste 1 : un lecteur qui l'ignore lit le reste sans
 changement. Aucun score ne la lit. Pipeline et admin l'écrivent à l'identique,
 vérifié sur `pipeline/tests/fixtures/editorial_suivis.json`.
 
+Un bloc `recherche` (`termes`, `surnoms`) s'ajoute en dernier à un texte, une fiche de suivi ou un
+écarté qui en a (cycle Pré-qualification, 02/11/2026) : les clés de la recherche du site, jamais
+affichées, saisies sur la fiche de l'admin ou proposées par le LLM. Absent quand il est vide : aucun
+octet ne change pour un texte sans terme, et le format reste 1. Vérifié dans les deux sens sur
+`pipeline/tests/fixtures/editorial_suivis.json`.
+
 Un bloc `senat` s'ajoute en dernier à un texte dès qu'un vote du Sénat y est retenu
 (règles 23 à 28) : `version` (`meme`, `autre`, `seul`), `scrutins` (rôles `decisif`, `ensemble`,
 `motion`), `droits`, `etiquettes`, `vigilance`, `sources` (propres à une version `autre`, vides
@@ -434,8 +440,10 @@ tourne dans le navigateur. Aucune requête ne dit ce que l'on cherche, pas même
 - **Dans l'index** : élu·es, pays, titre, résumé, étiquettes, termes et surnoms des textes qualifiés et à suivre ; titre, termes
   et surnoms des écartés. Le motif d'un écart s'affiche mais n'est pas cherché : ses formules se répètent (« règle 9 »).
 - **Hors index** : les 18 000 scrutins et les justifications, sources de bruit.
-- **Termes et surnoms** : `pipeline/referentiels/termes_recherche.yaml`, exportés dans `data/export/termes_recherche.csv`, donc
-  hors d'`editorial.json`, de l'admin et de D1. Ils se cherchent et ne s'affichent jamais. Ni victime, ni personne mise en cause, ni
+- **Termes et surnoms** : bloc `recherche` de chaque entrée d'`editorial.json`, saisi sur la fiche de l'admin (décision de Max du
+  02/11/2026), exporté dans `data/export/termes_recherche.csv`. `pipeline/referentiels/termes_recherche.yaml`, l'ancien
+  référentiel tenu à la main, sert de repli pour un texte dont la version publiée n'a pas encore ce bloc (reprise dans D1 :
+  `lvnd sync-admin --remote --recherche`, puis « Publier »). Ils se cherchent et ne s'affichent jamais. Ni victime, ni personne mise en cause, ni
   formule militante. `lvnd check` refuse un terme vide ou en double et les termes de la liste privée ; une clé dont le texte a changé de statut (qualifié puis écarté, ou l'inverse) est signalée sans bloquer, et la clé d'un écarté devenu qualifié suit d'elle-même.
 - **Correspondance** : tous les mots saisis doivent se trouver, sans accents ni casse, au singulier ; un mot de trois lettres ou
   moins doit être entier (« APL » ne trouve pas « aplomb »), un mot plus long se complète. **Fautes de frappe** : en repli, seulement quand rien ne correspond, chaque mot est remplacé par ses voisins les plus proches (une faute jusqu'à 7 lettres, deux au-delà, aucune sous 4 lettres ; une inversion compte pour une faute), et la page dit que ces résultats sont approchés.

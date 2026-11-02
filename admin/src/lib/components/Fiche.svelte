@@ -54,6 +54,10 @@
   let modifie = $state(false);
   let enCours = $state(false);
   let note = $state(untrack(() => data.note?.texte ?? ''));
+  // Recherche du site (termes courants, surnoms d'usage public) : saisis séparés par « ; ».
+  let termes = $state((depart.doc.recherche?.termes ?? []).join(' ; '));
+  let surnoms = $state((depart.doc.recherche?.surnoms ?? []).join(' ; '));
+  const liste = (x: string) => x.split(';').map((m) => m.trim());
   let noteModifiee = $state(false);
   let noteEnCours = $state(false);
 
@@ -121,7 +125,8 @@
         : doc.droits,
       scrutins: aSuivre ? [] : doc.scrutins,
       senat: aSuivre ? undefined : senat,
-      sources: versSources(sources)
+      sources: versSources(sources),
+      recherche: { termes: liste(termes), surnoms: liste(surnoms) }
     })
   );
   const controle = $derived.by(() => {
@@ -725,6 +730,27 @@
       {/if}
     </section>
   {/if}
+
+  <section class="carte">
+    <h2>Recherche du site</h2>
+    <p class="discret">
+      Ce que les gens tapent et que le titre officiel ne dit pas : sigles, mots courants, surnoms
+      d'usage public de la loi (« loi Duplomb »). Jamais affichés, n'entrent dans aucun score. Ni
+      nom de victime ou de personne mise en cause, ni formule militante. Séparés par « ; ».
+    </p>
+    <div class="ligne">
+      <label class="champ grand"
+        >Termes <input
+          type="text"
+          bind:value={termes}
+          placeholder="APL ; aides au logement"
+        /></label
+      >
+      <label class="champ grand"
+        >Surnoms <input type="text" bind:value={surnoms} placeholder="loi Duplomb" /></label
+      >
+    </div>
+  </section>
 
   <section class="carte enregistrer">
     <ul class="messages" aria-live="polite">

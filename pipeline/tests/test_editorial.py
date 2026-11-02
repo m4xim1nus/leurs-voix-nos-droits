@@ -21,7 +21,7 @@ def test_temoins_convertis_et_valides():
     doc = editorial.depuis_temoins(referentiels.temoins())
     assert [t["id"] for t in doc["textes"]] == sorted(t["id"] for t in referentiels.temoins()["textes"])
     for t in doc["textes"]:
-        assert list(t) == [k for k in editorial.CLES_TEXTE if k != "senat"]
+        assert list(t) == [k for k in editorial.CLES_TEXTE if k not in ("senat", "recherche")]
         assert not editorial.valider(t)[0], t["id"]
     kb = next(t for t in doc["textes"] if t["id"] == "kasbarian-berge")
     assert kb["vigilance"][0]["sources"] == []  # chaîne simple → objet

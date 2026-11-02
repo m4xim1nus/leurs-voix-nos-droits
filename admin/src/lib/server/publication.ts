@@ -159,7 +159,8 @@ export async function preparer(
       dossier_an: l.doc.dossier_an,
       legislature: l.doc.legislature,
       titre: l.doc.titre,
-      motif: (l.motif_ecart ?? '').trim()
+      motif: (l.motif_ecart ?? '').trim(),
+      recherche: l.doc.recherche
     }));
   const contenu = serialiser(documentEditorial(g.version, docsValides, ecartes, docsSuivis));
   // Un terme interdit (CLAUDE.md, règles dures) bloque la publication : on signale le texte fautif.

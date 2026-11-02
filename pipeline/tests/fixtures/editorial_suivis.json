@@ -38,7 +38,13 @@
           "pour": "texte",
           "objet": "ensemble (10-5)"
         }
-      ]
+      ],
+      "recherche": {
+        "termes": [
+          "APL",
+          "49.3"
+        ]
+      }
     }
   ],
   "ecartes": [
@@ -46,7 +52,12 @@
       "dossier_an": "DLR5L17N2",
       "legislature": 17,
       "titre": "Résolution d'essai",
-      "motif": "Résolution (règle 8)."
+      "motif": "Résolution (règle 8).",
+      "recherche": {
+        "surnoms": [
+          "loi essai"
+        ]
+      }
     }
   ],
   "suivis": [
@@ -87,6 +98,14 @@
           "date": "2026-03-01",
           "url": "https://defenseurdesdroits.fr"
         }
+      },
+      "recherche": {
+        "termes": [
+          "CAF"
+        ],
+        "surnoms": [
+          "loi Untel"
+        ]
       }
     },
     {

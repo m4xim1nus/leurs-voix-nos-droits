@@ -62,6 +62,14 @@ export interface Qualification {
   sources: Record<string, Source>;
   scrutins: ScrutinRetenu[];
   senat?: BlocSenat;
+  /** Clés de la recherche du site, jamais affichées : absent quand vide. */
+  recherche?: Recherche;
+}
+
+/** Termes courants et surnoms d'usage public d'un texte, pour la recherche du site. */
+export interface Recherche {
+  termes?: string[];
+  surnoms?: string[];
 }
 
 export interface Ecarte {
@@ -69,6 +77,7 @@ export interface Ecarte {
   legislature: number;
   titre: string;
   motif: string;
+  recherche?: Recherche;
 }
 
 /** Une entrée de `suivis` : droits touchés et sources, sans sens ni scrutin. */
@@ -81,6 +90,7 @@ export interface Suivi {
   droits: { code: string; sources: string[]; justification: string }[];
   note: string;
   sources: Record<string, Source>;
+  recherche?: Recherche;
 }
 
 export interface Editorial {

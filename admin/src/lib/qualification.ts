@@ -9,6 +9,7 @@ import type {
   Editorial,
   Grille,
   Qualification,
+  Recherche,
   ScrutinRetenu,
   Source,
   Statut,
@@ -45,13 +46,15 @@ const CLES_TEXTE = [
   'note',
   'sources',
   'scrutins',
-  'senat'
+  'senat',
+  'recherche'
 ] as const;
 const CLES_DROIT = ['code', 'role', 'sens', 'sources', 'justification'] as const;
 const CLES_SOURCE = ['auteur', 'titre', 'date', 'url'] as const;
 const CLES_SCRUTIN = ['id', 'role', 'pour', 'objet'] as const;
 const CLES_VIGILANCE = ['texte', 'sources'] as const;
-const CLES_ECARTE = ['dossier_an', 'legislature', 'titre', 'motif'] as const;
+const CLES_ECARTE = ['dossier_an', 'legislature', 'titre', 'motif', 'recherche'] as const;
+const CLES_RECHERCHE = ['termes', 'surnoms'] as const;
 const CLES_SUIVI = [
   'id',
   'dossier_an',
@@ -60,7 +63,8 @@ const CLES_SUIVI = [
   'resume',
   'droits',
   'note',
-  'sources'
+  'sources',
+  'recherche'
 ] as const;
 const CLES_DROIT_SUIVI = ['code', 'sources', 'justification'] as const;
 const CLES_SENAT = [
@@ -125,6 +129,19 @@ function senatOrdonne(s: Partial<BlocSenat>): BlocSenat {
 }
 
 /**
+ * Bloc `recherche` : listes sans vide ni espace en trop ; une liste vide disparaît, et le bloc entier
+ * s'il est vide (undefined). Miroir de `editorial.recherche` du pipeline.
+ */
+export function rechercheOrdonnee(r: Recherche | undefined | null): Recherche | undefined {
+  const out: Record<string, string[]> = {};
+  for (const k of CLES_RECHERCHE) {
+    const l = (r?.[k] ?? []).map((x) => String(x).trim()).filter(Boolean);
+    if (l.length) out[k] = l;
+  }
+  return Object.keys(out).length ? (out as Recherche) : undefined;
+}
+
+/**
  * Une qualification au format 1, clés dans l'ordre du fichier. `senat` n'apparaît que s'il n'est pas
  * vide : ajout compatible avec le format 1.
  */
@@ -147,7 +164,8 @@ export function normaliser(t: Partial<Qualification>): Qualification {
       note: espaces(t.note),
       sources: sourcesOrdonnees(t.sources),
       scrutins: (t.scrutins ?? []).map((s) => ordonner<ScrutinRetenu>({ ...s }, CLES_SCRUTIN)),
-      senat: senat.scrutins.length || senat.note ? senat : undefined
+      senat: senat.scrutins.length || senat.note ? senat : undefined,
+      recherche: rechercheOrdonnee(t.recherche)
     },
     CLES_TEXTE
   );
@@ -158,12 +176,14 @@ export function ecarte(e: {
   dossier_an: string;
   legislature: number;
   titre: string;
+  recherche?: Recherche;
 }): Qualification {
   return normaliser({
     id: '',
     dossier_an: e.dossier_an,
     legislature: e.legislature,
-    titre: e.titre
+    titre: e.titre,
+    recherche: e.recherche
   });
 }
 
@@ -520,7 +540,9 @@ export function documentEditorial(
     grille,
     textes: textes.map((t) => normaliser(t)).sort((a, b) => parCle(a.id, b.id)),
     ecartes: ecartes
-      .map((e) => ordonner<Ecarte>({ ...e }, CLES_ECARTE))
+      .map((e) =>
+        ordonner<Ecarte>({ ...e, recherche: rechercheOrdonnee(e.recherche) }, CLES_ECARTE)
+      )
       .sort((a, b) => parCle(a.dossier_an, b.dossier_an))
   };
   if (suivis.length) doc.suivis = suivis.map(suivi).sort((a, b) => parCle(a.id, b.id));

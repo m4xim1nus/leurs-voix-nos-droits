@@ -205,6 +205,35 @@ def brouillons(dossier: Path) -> list[dict]:
 
 AUTEUR_VALIDATION = "claude, validé par Max"
 
+AUTEUR_RECHERCHE = "termes_recherche.yaml"
+COMMENTAIRE_RECHERCHE = "termes de recherche repris du référentiel (cycle Pré-qualification)"
+
+
+def recherche_vers_d1(ref: dict, publie: dict) -> list[str]:
+    """Reprise unique de referentiels/termes_recherche.yaml dans les documents de D1 (bloc `recherche`), sans toucher aux
+    statuts : la page « Publier » de l'admin montre ensuite chaque texte comme modifié, et la publication les écrit dans
+    editorial.json. Une qualification qui a déjà un bloc `recherche` n'est pas touchée ; relancer ne change rien."""
+    dossiers = {t["id"]: t["dossier_an"] for t in [*publie["textes"], *publie.get("suivis", [])]}
+    date = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    out = []
+    for bloc in ("textes", "ecartes"):
+        for cle, v in (ref.get(bloc) or {}).items():
+            d = dossiers.get(cle) if bloc == "textes" else cle
+            r = editorial.recherche(v)
+            if not d or not r:
+                continue
+            bloc_json = sql_valeur(json.dumps(r, ensure_ascii=False, separators=(",", ":")))
+            d_sql = sql_valeur(d)
+            out.append(f"UPDATE qualifications SET doc = json_set(doc, '$.recherche', json({bloc_json})), "
+                       f"modifie_par = {sql_valeur(AUTEUR_RECHERCHE)}, modifie_le = {sql_valeur(date)} "
+                       f"WHERE dossier_an = {d_sql} AND json_extract(doc, '$.recherche') IS NULL;")
+            out.append(f"INSERT INTO revisions (dossier_an, statut, doc, motif_ecart, auteur, date, commentaire) "
+                       f"SELECT dossier_an, statut, doc, motif_ecart, {sql_valeur(AUTEUR_RECHERCHE)}, {sql_valeur(date)}, "
+                       f"{sql_valeur(COMMENTAIRE_RECHERCHE)} FROM qualifications WHERE dossier_an = {d_sql} "
+                       f"AND modifie_par = {sql_valeur(AUTEUR_RECHERCHE)} AND NOT EXISTS (SELECT 1 FROM revisions "
+                       f"WHERE dossier_an = {d_sql} AND commentaire = {sql_valeur(COMMENTAIRE_RECHERCHE)});")
+    return out
+
 
 def _infos_senat(export: Path) -> dict[str, dict]:
     """Scrutins du Sénat pour `editorial.valider`, depuis data/export/."""
@@ -401,7 +430,8 @@ def script(export: Path, editorial_doc: dict | None = None, brouillons_lignes: l
 
 def sync(export: Path, admin: Path, cible: str, avec_editorial: bool, sortie: Path | None,
          dossier_brouillons: Path | None = None, valider: str | None = None, complet: bool = False,
-         simuler: bool = False, remplacer: str | None = None, ecarter_publie: bool = False) -> None:
+         simuler: bool = False, remplacer: str | None = None, ecarter_publie: bool = False,
+         recherche: bool = False) -> None:
     if simuler and (cible == "sql" or complet or dossier_brouillons is not None or valider is not None):
         # sinon ignoré en silence, et D1 était écrite quand même (01/11/2026)
         raise SystemExit("--simuler ne vaut que pour le sync incrémental du catalogue ; "
@@ -409,7 +439,10 @@ def sync(export: Path, admin: Path, cible: str, avec_editorial: bool, sortie: Pa
     doc = editorial.charger() if avec_editorial else None
     if remplacer is not None and (not dossier_brouillons or valider is not None):
         raise SystemExit("--remplacer s'utilise avec --brouillons DOSSIER, sans --valider")
-    if cible != "sql" and not complet and valider is None and dossier_brouillons is None:
+    if recherche:
+        sql = "\n".join(["-- Généré par `lvnd sync-admin --recherche` : ne pas éditer.",
+                         *recherche_vers_d1(referentiels.charger("termes_recherche"), editorial.charger())]) + "\n"
+    elif cible != "sql" and not complet and valider is None and dossier_brouillons is None:
         cat = catalogue(export)
         instructions, compte = difference(cat, lire_d1(admin, cible))
         for a in alertes(cat, [(q["dossier_an"], q["doc"]) for q in
