@@ -20,6 +20,10 @@
       titre: 'À faire à la main',
       aide: 'Un vote a eu lieu, sans proposition utilisable : LLM coupé, proposition écartée par les contrôles, ou alerte que le LLM ne traite pas d’office (Sénat). Une proposition peut se demander.'
     },
+    simple: {
+      titre: 'En mots simples',
+      aide: 'Résumés en mots simples proposés par le LLM pour des textes validés. Les relire à côté du résumé de la fiche : rien d’ajouté, ni sens, ni élu·e, ni groupe. « Valider » les ajoute à la qualification, qui garde son statut ; ils partent à la prochaine publication.'
+    },
     'a-venir': {
       titre: 'À venir',
       aide: 'Textes inscrits en séance : rien à qualifier avant le vote (« inscrit » ne veut pas dire voté). Une fiche de suivi peut se demander au LLM pour un texte qu’on veut suivre.'
@@ -32,7 +36,8 @@
     requalification: 'requalification',
     suivi: 'fiche de suivi',
     senat: 'vote du Sénat',
-    veille: 'veille des sources'
+    veille: 'veille des sources',
+    simple: 'en mots simples'
   };
   const usd = (x: number) =>
     `${x.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} $`;
@@ -90,6 +95,32 @@
         <ul class="discret">
           {#each p.relecture.controles.erreurs as e, i (i)}<li>{e}</li>{/each}
         </ul>
+      {/if}
+    {:else if p.simple}
+      {#if p.relecture.action}<p class="action">{p.relecture.action}</p>{/if}
+      <p class="discret">Résumé de la fiche : {p.simple.resume || '(aucun)'}</p>
+      {#if p.simple.actuel}<p class="discret">
+          Résumé simple actuel, remplacé à la validation : {p.simple.actuel}
+        </p>{/if}
+      {#if p.relecture.controles?.avertissements?.length}
+        <ul class="avertissements">
+          {#each p.relecture.controles.avertissements as x, i (i)}<li>{x}</li>{/each}
+        </ul>
+      {/if}
+      {#if p.simple.perime}
+        <p class="erreur-texte">
+          La fiche a changé depuis la proposition : l’écarter, une nouvelle viendra à la passe
+          suivante.
+        </p>
+      {:else}
+        <form method="POST" action="?/simple" use:enhance class="simple">
+          <input type="hidden" name="id" value={p.id} />
+          <label class="champ"
+            >Proposé (à corriger au besoin, une phrase par ligne)
+            <textarea name="texte" rows="5">{p.doc?.resume_simple?.texte ?? ''}</textarea>
+          </label>
+          <button class="principal">Valider ce résumé simple</button>
+        </form>
       {/if}
     {:else}
       {#if p.relecture.action}<p class="action">{p.relecture.action}</p>{/if}
@@ -159,7 +190,7 @@
           >
         </form>
       {/if}
-      {#if p.statut === 'proposee' && p.doc?.statut !== 'sans-source'}
+      {#if p.statut === 'proposee' && p.doc?.statut !== 'sans-source' && !p.simple}
         <form method="POST" action="?/charger" use:enhance>
           <input type="hidden" name="id" value={p.id} />
           <button class="principal">Charger « à relire »</button>
@@ -333,5 +364,14 @@
   .ecarter {
     display: flex;
     gap: 0.4rem;
+  }
+  .simple textarea {
+    width: 100%;
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+  .avertissements {
+    color: var(--alerte);
+    font-size: 0.9rem;
   }
 </style>

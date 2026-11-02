@@ -8,14 +8,17 @@ import {
   demander,
   demandes,
   ecarter,
+  empreinteProposee,
   jugement,
+  MODE_SIMPLE,
   propositionsOuvertes,
   RefusProposition,
   trancher,
+  validerSimple,
   type Demande,
   type Proposition
 } from '$lib/server/propositions';
-import { differences, normaliser } from '$lib/qualification';
+import { differences, empreinteSimple, normaliser } from '$lib/qualification';
 import type { Alerte } from '$lib/alertes';
 import type { LigneQualification, Qualification } from '$lib/types';
 
@@ -24,9 +27,10 @@ import type { LigneQualification, Qualification } from '$lib/types';
  * - `pret` : un vote a eu lieu, la proposition passe les contrôles sans question de méthode ;
  * - `methode` : la proposition signale un « CAS NON PRÉVU » ;
  * - `main` : un vote a eu lieu, sans proposition utilisable (LLM coupé, échec, Sénat non traité d'office) ;
+ * - `simple` : résumés en mots simples proposés pour des textes validés, sans alerte (cycle Facile à lire) ;
  * - `a-venir` : textes seulement inscrits en séance, rien à qualifier avant le vote.
  */
-export type Section = 'pret' | 'methode' | 'main' | 'a-venir';
+export type Section = 'pret' | 'methode' | 'main' | 'simple' | 'a-venir';
 
 export interface PropositionAffichee extends Proposition {
   jugement: string;
@@ -34,6 +38,8 @@ export interface PropositionAffichee extends Proposition {
   /** Requalification qui ne change ni statut, ni droit principal, ni sens, ni décisif. */
   mineure: boolean;
   methode: boolean;
+  /** Résumé simple : la fiche à comparer, et si elle a changé depuis la proposition. */
+  simple: { resume: string; actuel: string | null; perime: boolean } | null;
 }
 
 export interface Groupe {
@@ -79,11 +85,27 @@ function afficher(p: Proposition, actuelle: LigneQualification | undefined): Pro
     essentiel(actuelle.doc, actuelle.statut) ===
       essentiel(b, p.doc?.statut === 'ecarte' ? 'ecarte' : 'qualifie')
   );
-  return { ...p, jugement: jugement(p.doc), ecarts, mineure, methode: casNonPrevu(p) };
+  const simple =
+    p.mode === MODE_SIMPLE
+      ? {
+          resume: actuelle?.doc.resume ?? '',
+          actuel: actuelle?.doc.resume_simple?.texte ?? null,
+          perime: !actuelle || empreinteSimple(normaliser(actuelle.doc)) !== empreinteProposee(p)
+        }
+      : null;
+  return {
+    ...p,
+    jugement: jugement(p.doc),
+    ecarts: simple ? null : ecarts,
+    mineure: simple ? false : mineure,
+    methode: casNonPrevu(p),
+    simple
+  };
 }
 
 function section(g: Omit<Groupe, 'section'>): Section {
   if (g.alertes.length && g.alertes.every((a) => a.type === 'inscrit')) return 'a-venir';
+  if (!g.alertes.length && g.propositions.every((p) => p.mode === MODE_SIMPLE)) return 'simple';
   const utiles = g.propositions.filter((p) => p.statut === 'proposee');
   if (!utiles.length) return 'main';
   return utiles.some((p) => p.methode) ? 'methode' : 'pret';
@@ -127,8 +149,8 @@ export const load: PageServerLoad = async ({ platform }) => {
   // entre-temps, il sort de la file avec elle.
   for (const p of props) {
     let g = brouillons.get(p.dossier_an);
-    // Veille des sources : la proposition vient d'une publication, pas d'une alerte.
-    if (!g && p.alerte_id.startsWith('veille:')) {
+    // Veille des sources et résumés simples : la proposition ne vient pas d'une alerte.
+    if (!g && (p.alerte_id.startsWith('veille:') || p.mode === MODE_SIMPLE)) {
       g = {
         dossier: p.dossier_an,
         titre: actuelles.get(p.dossier_an)?.doc.titre || p.doc?.titre || p.dossier_an,
@@ -159,7 +181,7 @@ export const load: PageServerLoad = async ({ platform }) => {
     if (y.echeance) return 1;
     return y.recent.localeCompare(x.recent);
   };
-  const sections = (['pret', 'methode', 'main', 'a-venir'] as const).map((s) => ({
+  const sections = (['pret', 'methode', 'main', 'simple', 'a-venir'] as const).map((s) => ({
     cle: s,
     groupes: groupes.filter((g) => g.section === s).sort(ordre)
   }));
@@ -195,6 +217,19 @@ export const actions: Actions = {
       return { ok: 'Proposition écartée.' };
     } catch (e) {
       if (e instanceof RefusProposition) return fail(400, { erreur: e.message, id });
+      throw e;
+    }
+  },
+
+  simple: async ({ request, platform, locals }) => {
+    const f = await request.formData();
+    const id = Number(f.get('id'));
+    try {
+      await validerSimple(platform!.env.DB, id, String(f.get('texte') ?? ''), locals.email);
+      return { ok: 'Résumé simple validé : il partira à la prochaine publication.' };
+    } catch (e) {
+      if (e instanceof RefusProposition || e instanceof ConflitEdition)
+        return fail(400, { erreur: e.message, id });
       throw e;
     }
   },

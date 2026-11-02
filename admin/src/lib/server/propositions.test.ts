@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { getPlatformProxy } from 'wrangler';
-import { normaliser } from '../qualification';
+import { empreinteSimple, normaliser } from '../qualification';
 import { enregistrer, qualification, revisions } from './db';
 import {
   casNonPrevu,
@@ -16,6 +16,7 @@ import {
   trancher,
   propositionsOuvertes,
   RefusProposition,
+  validerSimple,
   type DocPropose
 } from './propositions';
 
@@ -67,15 +68,21 @@ const BROUILLON: DocPropose = {
   scrutins: [{ id: 'VTANR5L17V1', role: 'decisif', pour: 'texte', objet: 'ensemble (10-5)' }]
 };
 
-async function proposer(alerte: string, doc: DocPropose | null, statut = 'proposee') {
+async function proposer(
+  alerte: string,
+  doc: DocPropose | null,
+  statut = 'proposee',
+  mode = 'complet'
+) {
   await db
     .prepare(
       `INSERT INTO propositions (alerte_id, dossier_an, mode, date, modele, cout_usd, doc, relecture, statut)
-       VALUES (?, ?, 'complet', '2026-11-02T10:00:00Z', 'claude-opus-5-5', 1.2, ?, ?, ?)`
+       VALUES (?, ?, ?, '2026-11-02T10:00:00Z', 'claude-opus-5-5', 1.2, ?, ?, ?)`
     )
     .bind(
       alerte,
       doc?.dossier_an ?? 'DLR5L17N1',
+      mode,
       doc ? JSON.stringify(doc) : null,
       JSON.stringify({ origine: 'proposition LLM (essai)', extraits: ['cnil : « x »'] }),
       statut
@@ -208,5 +215,37 @@ describe('propositions', () => {
     expect(casNonPrevu(apres)).toBe(false);
     expect(apres.relecture.methode_tranchee?.par).toBe('max');
     expect(apres.relecture.points_attention).toEqual(['CAS NON PRÉVU : x']);
+  });
+
+  it('valide un résumé simple sans changer le statut, si la fiche n’a pas bougé', async () => {
+    const fiche = normaliser({ ...BROUILLON, dossier_an: 'DLR5L17N8' } as never);
+    await enregistrer(
+      db,
+      { doc: fiche, statut: 'valide', motif_ecart: null, commentaire: null },
+      'max',
+      null
+    );
+    const e = empreinteSimple(fiche);
+    const doc = { dossier_an: 'DLR5L17N8', resume_simple: { texte: 'Une phrase.', empreinte: e } };
+    const id = await proposer(`simple:DLR5L17N8:${e}`, doc as DocPropose, 'proposee', 'simple');
+    expect(jugement(doc as DocPropose)).toBe('résumé en mots simples');
+    await expect(charger(db, id, 'max')).rejects.toThrow(/depuis sa carte/);
+    await validerSimple(db, id, ' Une phrase\n\ncorrigée. ', 'max');
+    const q = await qualification(db, 'DLR5L17N8');
+    expect(q?.statut).toBe('valide');
+    expect(q?.doc.resume_simple).toEqual({ texte: 'Une phrase\ncorrigée.', empreinte: e });
+    expect((await revisions(db, 'DLR5L17N8'))[0].commentaire).toMatch(
+      /résumé simple validé après correction \(proposition LLM n° \d+\)/
+    );
+    await expect(validerSimple(db, id, 'x', 'max')).rejects.toThrow(/déjà traitée/);
+
+    // la fiche change : une proposition faite sur l'ancienne n'entre pas
+    const id2 = await proposer(
+      `simple:DLR5L17N8:${'0'.repeat(16)}`,
+      doc as DocPropose,
+      'proposee',
+      'simple'
+    );
+    await expect(validerSimple(db, id2, 'Une phrase.', 'max')).rejects.toThrow(/a changé/);
   });
 });

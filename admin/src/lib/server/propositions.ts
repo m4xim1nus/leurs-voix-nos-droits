@@ -2,7 +2,7 @@
 // par un humain. Une proposition ne touche jamais une qualification tant qu'on ne la charge pas ; chargée,
 // la qualification passe « à relire », et la version publiée reste en ligne jusqu'à sa validation.
 
-import { normaliser } from '../qualification';
+import { empreinteSimple, normaliser, resumeSimpleOrdonne } from '../qualification';
 import type { Qualification, Statut } from '../types';
 import { enregistrer, qualification } from './db';
 
@@ -98,6 +98,8 @@ export function aCharger(
 ): { doc: Qualification; motif_ecart: string | null } {
   const d = p.doc;
   if (!d) throw new RefusProposition('proposition sans brouillon');
+  if (p.mode === MODE_SIMPLE)
+    throw new RefusProposition('résumé en mots simples : le valider depuis sa carte');
   if (d.statut === 'sans-source')
     throw new RefusProposition('aucune source trouvée : rien à charger, écarter la proposition');
   // Bloc du Sénat seul : il complète la qualification existante sans toucher au reste.
@@ -146,6 +148,55 @@ export async function charger(db: D1Database, id: number, auteur: string): Promi
   return p.dossier_an;
 }
 
+/** Mode des propositions de résumé en mots simples (`lvnd resumer`, cycle Facile à lire). */
+export const MODE_SIMPLE = 'simple';
+
+/** Empreinte de la fiche sur laquelle porte une proposition de résumé simple (fin de `simple:DOSSIER:EMPREINTE`). */
+export const empreinteProposee = (p: Pick<Proposition, 'alerte_id'>) =>
+  p.alerte_id.split(':').at(-1) ?? '';
+
+/**
+ * Valide un résumé simple proposé, tel quel ou corrigé (`texte`) : il entre dans la qualification avec
+ * l'empreinte de la fiche actuelle, sans changer son statut (un texte validé le reste, et « Publier » le
+ * reprend). Refusé si la fiche a changé depuis la proposition : le LLM n'a pas lu la fiche actuelle.
+ */
+export async function validerSimple(
+  db: D1Database,
+  id: number,
+  texte: string,
+  auteur: string
+): Promise<string> {
+  const p = await une(db, id);
+  if (p.mode !== MODE_SIMPLE) throw new RefusProposition('pas une proposition de résumé simple');
+  if (p.statut !== 'proposee')
+    throw new RefusProposition(`proposition ${p.statut === 'echec' ? 'en échec' : 'déjà traitée'}`);
+  const ligne = await qualification(db, p.dossier_an);
+  if (!ligne || ligne.statut === 'ecarte' || ligne.statut === 'a-suivre')
+    throw new RefusProposition('aucune qualification à compléter');
+  const actuelle = normaliser(ligne.doc);
+  const empreinte = empreinteSimple(actuelle);
+  if (empreinte !== empreinteProposee(p))
+    throw new RefusProposition(
+      'la fiche a changé depuis la proposition : écarter celle-ci, une nouvelle viendra à la passe suivante'
+    );
+  const simple = resumeSimpleOrdonne({ texte, empreinte });
+  if (!simple) throw new RefusProposition('résumé simple vide');
+  const corrige = simple.texte !== resumeSimpleOrdonne(p.doc?.resume_simple)?.texte;
+  await enregistrer(
+    db,
+    {
+      doc: normaliser({ ...actuelle, resume_simple: simple }),
+      statut: ligne.statut,
+      motif_ecart: ligne.motif_ecart,
+      commentaire: `résumé simple validé${corrige ? ' après correction' : ''} (proposition LLM n° ${p.id})`
+    },
+    auteur,
+    ligne.modifie_le
+  );
+  await marquer(db, id, 'chargee', null, auteur);
+  return p.dossier_an;
+}
+
 export async function ecarter(
   db: D1Database,
   id: number,
@@ -178,6 +229,7 @@ export function jugement(d: DocPropose | null): string {
   if (!d) return 'aucun brouillon';
   if (d.statut === 'sans-source') return 'aucune source admise trouvée';
   if (d.statut === 'ecarte') return `écarter : ${d.motif_ecart ?? 'sans motif'}`;
+  if (!d.titre && d.resume_simple) return 'résumé en mots simples';
   if (!d.titre) return 'vote du Sénat';
   const p = (d.droits ?? []).find((x) => x.role === 'principal');
   const decisif = (d.scrutins ?? []).find((s) => s.role === 'decisif');
