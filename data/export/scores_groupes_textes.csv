@@ -691,6 +691,7 @@ PO800484,rist-2023,14,0,0,0,100.0
 PO800484,sren-2024,13,52,1,1,13.3
 PO800484,tests-discriminations-2023,12,0,0,1,100.0
 PO800484,valletoux-2023,19,0,0,1,100.0
+PO800484,zan-2023,0,31,0,0,0.0
 PO800490,abrogation-obligation-vaccinale-2023,52,0,0,0,100.0
 PO800490,accueils-physiques-ppl-2023,72,0,0,0,100.0
 PO800490,assurance-chomage-2022,48,0,0,0,100.0
@@ -732,6 +733,7 @@ PO800490,rist-2023,21,0,0,0,100.0
 PO800490,sren-2024,63,0,0,0,100.0
 PO800490,tests-discriminations-2023,0,24,0,0,0.0
 PO800490,valletoux-2023,0,21,0,0,0.0
+PO800490,zan-2023,22,12,0,1,64.7
 PO800502,abrogation-obligation-vaccinale-2023,18,0,0,0,100.0
 PO800502,accueils-physiques-ppl-2023,6,0,0,0,100.0
 PO800502,assurance-chomage-2022,4,0,0,0,100.0
@@ -772,6 +774,7 @@ PO800502,rist-2023,0,0,2,0,
 PO800502,sren-2024,6,0,0,0,100.0
 PO800502,tests-discriminations-2023,0,4,0,0,0.0
 PO800502,valletoux-2023,0,3,0,0,0.0
+PO800502,zan-2023,1,5,0,0,16.7
 PO800508,abrogation-obligation-vaccinale-2023,11,0,0,0,100.0
 PO800508,accueils-physiques-ppl-2023,2,0,1,0,100.0
 PO800508,assurance-chomage-2022,0,26,1,0,0.0
@@ -812,6 +815,7 @@ PO800508,rist-2023,9,1,3,0,90.0
 PO800508,sren-2024,19,14,2,0,42.2
 PO800508,tests-discriminations-2023,0,13,0,0,0.0
 PO800508,valletoux-2023,13,0,0,0,100.0
+PO800508,zan-2023,0,17,2,0,0.0
 PO800514,abrogation-obligation-vaccinale-2023,0,11,0,0,0.0
 PO800514,accueils-physiques-ppl-2023,0,3,0,1,0.0
 PO800514,assurance-chomage-2022,0,25,0,0,0.0
@@ -853,6 +857,7 @@ PO800514,rist-2023,17,0,0,0,100.0
 PO800514,sren-2024,1,27,1,0,2.3
 PO800514,tests-discriminations-2023,5,0,0,0,100.0
 PO800514,valletoux-2023,17,0,2,0,100.0
+PO800514,zan-2023,0,17,0,0,0.0
 PO800520,abrogation-obligation-vaccinale-2023,44,0,0,0,100.0
 PO800520,accueils-physiques-ppl-2023,21,0,0,0,100.0
 PO800520,assurance-chomage-2022,55,0,0,0,100.0
@@ -894,6 +899,7 @@ PO800520,rist-2023,43,0,0,1,100.0
 PO800520,sren-2024,122,0,0,0,100.0
 PO800520,tests-discriminations-2023,0,31,0,0,0.0
 PO800520,valletoux-2023,40,0,0,0,100.0
+PO800520,zan-2023,0,33,0,1,0.0
 PO800526,abrogation-obligation-vaccinale-2023,9,0,2,0,100.0
 PO800526,accueils-physiques-ppl-2023,7,0,0,0,100.0
 PO800526,assurance-chomage-2022,12,0,0,0,100.0
@@ -935,6 +941,7 @@ PO800526,rist-2023,3,0,0,0,100.0
 PO800526,sren-2024,15,0,0,0,100.0
 PO800526,tests-discriminations-2023,2,2,0,0,50.0
 PO800526,valletoux-2023,0,0,13,0,
+PO800526,zan-2023,9,0,0,0,100.0
 PO800532,abrogation-obligation-vaccinale-2023,7,0,0,0,100.0
 PO800532,accueils-physiques-ppl-2023,2,0,0,0,100.0
 PO800532,assurance-chomage-2022,4,1,3,0,80.0
@@ -975,6 +982,7 @@ PO800532,rist-2023,4,0,1,0,100.0
 PO800532,sren-2024,0,7,0,0,0.0
 PO800532,tests-discriminations-2023,7,0,0,0,100.0
 PO800532,valletoux-2023,5,0,3,0,100.0
+PO800532,zan-2023,0,13,1,0,0.0
 PO800538,abrogation-obligation-vaccinale-2023,0,100,0,0,0.0
 PO800538,accueils-physiques-ppl-2023,1,2,35,0,33.3
 PO800538,assurance-chomage-2022,0,119,0,0,0.0
@@ -1016,6 +1024,7 @@ PO800538,rist-2023,103,0,0,0,100.0
 PO800538,sren-2024,2,175,2,0,0.8
 PO800538,tests-discriminations-2023,76,0,0,0,100.0
 PO800538,valletoux-2023,70,0,0,0,100.0
+PO800538,zan-2023,1,104,1,0,1.0
 PO830170,abrogation-obligation-vaccinale-2023,15,1,0,0,93.8
 PO830170,accueils-physiques-ppl-2023,11,0,0,0,100.0
 PO830170,assurance-chomage-2022,17,0,0,1,100.0
@@ -1057,6 +1066,7 @@ PO830170,rist-2023,10,0,0,0,100.0
 PO830170,sren-2024,7,1,0,1,93.3
 PO830170,tests-discriminations-2023,0,7,0,0,0.0
 PO830170,valletoux-2023,0,0,8,0,
+PO830170,zan-2023,0,2,3,0,0.0
 PO840056,aide-a-mourir,3,7,0,0,30.0
 PO840056,antisemitisme-enseignement-superieur,5,0,0,0,100.0
 PO840056,cadmium-engrais-2026,1,0,0,0,100.0
@@ -1073,7 +1083,7 @@ PO840056,execution-provisoire-ineligibilite-ppl-2025,1,3,0,0,25.0
 PO840056,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PO840056,fraudes-sociales-fiscales-2026,1,6,0,0,14.3
 PO840056,jo-2030,0,12,0,0,0.0
-PO840056,justice-criminelle-2026,1,8,1,0,5.9
+PO840056,justice-criminelle-2026,1,6,1,0,6.7
 PO840056,justice-mineurs,7,5,1,0,43.3
 PO840056,loi-orientation-agricole-2025,0,9,0,0,0.0
 PO840056,meubles-tourisme-2024,2,0,0,0,100.0
@@ -1119,7 +1129,7 @@ PO845401,financement-audiovisuel-public-lo-2024,0,0,52,0,
 PO845401,fraudes-sociales-fiscales-2026,1,152,0,1,0.2
 PO845401,hydrocarbures-outre-mer-2026,0,38,0,0,0.0
 PO845401,jo-2030,1,214,0,0,0.2
-PO845401,justice-criminelle-2026,0,164,1,0,0.0
+PO845401,justice-criminelle-2026,0,152,1,0,0.0
 PO845401,justice-mineurs,0,238,0,0,0.0
 PO845401,loi-orientation-agricole-2025,0,121,0,0,0.0
 PO845401,meubles-tourisme-2024,1,51,0,0,1.9
@@ -1175,7 +1185,7 @@ PO845407,financement-audiovisuel-public-lo-2024,28,0,0,1,100.0
 PO845407,fraudes-sociales-fiscales-2026,0,133,0,8,0.0
 PO845407,hydrocarbures-outre-mer-2026,15,2,0,1,88.2
 PO845407,jo-2030,0,153,0,5,0.0
-PO845407,justice-criminelle-2026,0,213,2,6,0.0
+PO845407,justice-criminelle-2026,0,212,1,6,0.0
 PO845407,justice-mineurs,37,210,4,5,8.2
 PO845407,loi-orientation-agricole-2025,0,91,0,1,0.0
 PO845407,meubles-tourisme-2024,38,0,0,1,100.0
@@ -1231,7 +1241,7 @@ PO845413,financement-audiovisuel-public-lo-2024,0,0,11,0,
 PO845413,fraudes-sociales-fiscales-2026,102,0,0,0,100.0
 PO845413,hydrocarbures-outre-mer-2026,29,1,0,0,96.7
 PO845413,jo-2030,123,0,0,0,100.0
-PO845413,justice-criminelle-2026,169,0,0,0,100.0
+PO845413,justice-criminelle-2026,153,0,0,0,100.0
 PO845413,justice-mineurs,139,0,0,1,100.0
 PO845413,loi-orientation-agricole-2025,68,0,0,0,100.0
 PO845413,meubles-tourisme-2024,24,0,0,0,100.0
@@ -1287,7 +1297,7 @@ PO845419,financement-audiovisuel-public-lo-2024,24,0,0,0,100.0
 PO845419,fraudes-sociales-fiscales-2026,83,4,3,0,98.6
 PO845419,hydrocarbures-outre-mer-2026,10,1,1,0,90.9
 PO845419,jo-2030,34,56,17,0,18.4
-PO845419,justice-criminelle-2026,100,0,0,0,100.0
+PO845419,justice-criminelle-2026,98,0,0,0,100.0
 PO845419,justice-mineurs,96,1,0,0,99.6
 PO845419,loi-orientation-agricole-2025,48,1,0,0,98.0
 PO845419,meubles-tourisme-2024,37,0,0,0,100.0
@@ -1343,7 +1353,7 @@ PO845425,financement-audiovisuel-public-lo-2024,17,0,0,0,100.0
 PO845425,fraudes-sociales-fiscales-2026,0,70,0,2,0.0
 PO845425,hydrocarbures-outre-mer-2026,0,2,0,0,0.0
 PO845425,jo-2030,0,70,0,0,0.0
-PO845425,justice-criminelle-2026,0,54,0,0,0.0
+PO845425,justice-criminelle-2026,0,47,0,0,0.0
 PO845425,justice-mineurs,2,55,0,0,1.0
 PO845425,loi-orientation-agricole-2025,0,44,0,0,0.0
 PO845425,meubles-tourisme-2024,18,0,0,0,100.0
@@ -1399,7 +1409,7 @@ PO845439,financement-audiovisuel-public-lo-2024,14,0,0,0,100.0
 PO845439,fraudes-sociales-fiscales-2026,50,0,0,0,100.0
 PO845439,hydrocarbures-outre-mer-2026,17,0,0,0,100.0
 PO845439,jo-2030,49,0,0,0,100.0
-PO845439,justice-criminelle-2026,67,2,9,0,99.0
+PO845439,justice-criminelle-2026,76,2,3,0,99.1
 PO845439,justice-mineurs,81,1,0,1,99.5
 PO845439,loi-orientation-agricole-2025,32,0,0,0,100.0
 PO845439,meubles-tourisme-2024,16,0,0,1,100.0
@@ -1455,7 +1465,7 @@ PO845454,financement-audiovisuel-public-lo-2024,16,0,0,0,100.0
 PO845454,fraudes-sociales-fiscales-2026,0,35,0,0,0.0
 PO845454,hydrocarbures-outre-mer-2026,3,2,0,0,60.0
 PO845454,jo-2030,0,52,2,0,0.0
-PO845454,justice-criminelle-2026,0,94,1,1,0.0
+PO845454,justice-criminelle-2026,0,82,1,0,0.0
 PO845454,justice-mineurs,2,50,2,0,1.4
 PO845454,loi-orientation-agricole-2025,0,34,0,0,0.0
 PO845454,meubles-tourisme-2024,5,0,0,0,100.0
@@ -1511,7 +1521,7 @@ PO845470,financement-audiovisuel-public-lo-2024,12,0,0,0,100.0
 PO845470,fraudes-sociales-fiscales-2026,0,42,0,0,0.0
 PO845470,hydrocarbures-outre-mer-2026,0,5,0,0,0.0
 PO845470,jo-2030,0,43,4,2,0.0
-PO845470,justice-criminelle-2026,0,70,0,1,0.0
+PO845470,justice-criminelle-2026,0,76,0,1,0.0
 PO845470,justice-mineurs,6,49,0,0,4.0
 PO845470,loi-orientation-agricole-2025,0,33,0,0,0.0
 PO845470,meubles-tourisme-2024,17,0,0,0,100.0
@@ -1566,7 +1576,7 @@ PO845485,execution-provisoire-ineligibilite-ppl-2025,0,4,1,0,0.0
 PO845485,financement-audiovisuel-public-lo-2024,3,0,0,0,100.0
 PO845485,fraudes-sociales-fiscales-2026,7,10,4,0,41.2
 PO845485,jo-2030,1,24,3,0,1.6
-PO845485,justice-criminelle-2026,0,24,0,0,0.0
+PO845485,justice-criminelle-2026,0,20,0,0,0.0
 PO845485,justice-mineurs,9,16,3,0,31.8
 PO845485,loi-orientation-agricole-2025,0,20,2,0,0.0
 PO845485,meubles-tourisme-2024,5,0,0,0,100.0

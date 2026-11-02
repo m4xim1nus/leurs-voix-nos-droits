@@ -798,6 +798,7 @@ PA2449,transformation-fonction-publique-2019,0,1,0,0,0.0
 PA2449,urgence-covid-2020,0,1,0,0,0.0
 PA2449,valletoux-2023,1,0,0,0,100.0
 PA2449,vigilance-sanitaire-2021,0,2,0,0,0.0
+PA2449,zan-2023,0,1,0,0,0.0
 PA2492,anti-casseurs-2019,0,1,0,0,0.0
 PA2492,bioethique-2021,0,1,0,0,0.0
 PA2492,code-justice-mineurs-2021,0,1,0,0,0.0
@@ -923,6 +924,7 @@ PA266788,protection-donnees-2018,1,0,0,0,100.0
 PA266788,silt-2017,0,1,0,0,0.0
 PA266788,urgence-covid-2020,0,1,0,0,0.0
 PA266788,valletoux-2023,1,0,0,0,100.0
+PA266788,zan-2023,0,1,0,0,0.0
 PA266793,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA266793,agec-2020,1,0,0,0,100.0
 PA266793,aide-a-mourir,0,1,0,0,0.0
@@ -1091,6 +1093,7 @@ PA266797,terrorisme-renseignement-2021,0,1,0,0,0.0
 PA266797,urgence-agricole-2026,0,1,0,0,0.0
 PA266797,urgence-covid-2020,0,1,0,0,0.0
 PA266797,vigilance-sanitaire-2021,2,0,0,0,100.0
+PA266797,zan-2023,0,1,0,0,0.0
 PA266808,aide-a-mourir,0,1,0,0,0.0
 PA266808,anti-casseurs-2019,0,1,0,0,0.0
 PA266808,assurance-chomage-2022,0,1,0,0,0.0
@@ -1119,7 +1122,7 @@ PA266808,industrie-verte-2023,0,1,0,0,0.0
 PA266808,ivg-constitution-2024,0,0,1,0,
 PA266808,jo-2024,0,1,0,0,0.0
 PA266808,jo-2030,0,4,0,0,0.0
-PA266808,justice-criminelle-2026,0,3,0,0,0.0
+PA266808,justice-criminelle-2026,0,2,0,0,0.0
 PA266808,justice-mineurs,0,1,0,0,0.0
 PA266808,kasbarian-berge,0,1,0,0,0.0
 PA266808,langues-regionales-2021,1,0,0,0,100.0
@@ -1161,6 +1164,7 @@ PA266808,urgence-agricole-2026,0,2,0,0,0.0
 PA266808,urgence-covid-2020,0,1,0,0,0.0
 PA266808,vigilance-sanitaire-2021,1,0,0,0,100.0
 PA266808,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA266808,zan-2023,0,1,0,0,0.0
 PA267042,aide-a-mourir,1,0,0,0,100.0
 PA267042,anti-casseurs-2019,0,1,1,0,0.0
 PA267042,bioethique-2021,1,0,0,0,100.0
@@ -1619,6 +1623,7 @@ PA267336,silt-2017,0,1,0,0,0.0
 PA267336,sren-2024,0,1,0,0,0.0
 PA267336,tests-discriminations-2023,1,0,0,0,100.0
 PA267336,urgence-covid-2020,0,1,0,0,0.0
+PA267336,zan-2023,0,2,0,0,0.0
 PA267337,bioethique-2021,1,0,0,0,100.0
 PA267337,climat-resilience-2021,1,0,0,0,100.0
 PA267337,code-justice-mineurs-2021,0,1,0,0,0.0
@@ -1940,6 +1945,7 @@ PA267766,silt-2017,0,1,0,0,0.0
 PA267766,sortie-crise-sanitaire-2021,1,0,0,0,100.0
 PA267766,sren-2024,0,1,0,0,0.0
 PA267766,urgence-covid-2020,0,1,0,0,0.0
+PA267766,zan-2023,0,1,0,0,0.0
 PA267780,aide-a-mourir,1,0,0,0,100.0
 PA267780,anti-casseurs-2019,0,1,0,0,0.0
 PA267780,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -1973,7 +1979,7 @@ PA267780,habilitation-ordonnances-travail-2017,0,1,0,0,0.0
 PA267780,immigration-asile-2018,0,1,0,0,0.0
 PA267780,inscription-office-nc-ppl-2020,1,0,0,0,100.0
 PA267780,jo-2030,0,3,0,0,0.0
-PA267780,justice-criminelle-2026,0,1,0,0,0.0
+PA267780,justice-criminelle-2026,0,2,0,0,0.0
 PA267780,justice-mineurs,0,2,0,0,0.0
 PA267780,justice-proximite-2021,0,1,0,0,0.0
 PA267780,langues-regionales-2021,1,0,0,0,100.0
@@ -2239,7 +2245,7 @@ PA2940,duplomb-2025,1,0,0,0,100.0
 PA2940,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA2940,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
 PA2940,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
-PA2940,justice-criminelle-2026,2,0,2,0,100.0
+PA2940,justice-criminelle-2026,3,0,1,0,100.0
 PA2940,justice-mineurs,4,0,0,0,100.0
 PA2940,loi-orientation-agricole-2025,1,0,0,0,100.0
 PA2940,mineurs-isoles-sans-abrisme-2025,1,0,0,0,100.0
@@ -2550,6 +2556,7 @@ PA330240,sortie-crise-sanitaire-2021,0,0,1,0,
 PA330240,surete-transports-2025,0,1,0,0,0.0
 PA330240,urgence-agricole-2026,0,1,0,0,0.0
 PA330240,urgence-covid-2020,0,1,0,0,0.0
+PA330240,zan-2023,0,1,0,0,0.0
 PA330357,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 PA330357,derives-sectaires-2024,0,1,0,0,0.0
 PA330357,fin-hydrocarbures-2017,0,1,0,0,0.0
@@ -2677,6 +2684,7 @@ PA330909,transformation-fonction-publique-2019,1,0,0,0,100.0
 PA330909,urgence-agricole-2026,0,3,0,0,0.0
 PA330909,urgence-covid-2020,0,1,0,0,0.0
 PA330909,vigilance-sanitaire-2021,1,0,0,0,100.0
+PA330909,zan-2023,0,1,0,0,0.0
 PA331567,agec-2020,1,0,0,0,100.0
 PA331567,asap-2020,0,3,0,0,0.0
 PA331567,consultation-nc-2018,1,0,0,0,100.0
@@ -2865,7 +2873,7 @@ PA332228,inscription-office-nc-ppl-2020,1,0,0,0,100.0
 PA332228,ivg-constitution-2024,1,0,0,0,100.0
 PA332228,jo-2024,0,1,0,0,0.0
 PA332228,jo-2030,0,1,1,0,0.0
-PA332228,justice-criminelle-2026,0,1,0,0,0.0
+PA332228,justice-criminelle-2026,0,2,0,0,0.0
 PA332228,justice-mineurs,0,1,0,0,0.0
 PA332228,kasbarian-berge,0,1,0,0,0.0
 PA332228,langues-regionales-2021,1,0,0,0,100.0
@@ -2921,6 +2929,7 @@ PA332228,urgence-covid-2020,0,1,0,0,0.0
 PA332228,valletoux-2023,0,0,1,0,
 PA332228,vigilance-sanitaire-2021,2,0,0,0,100.0
 PA332228,violences-educatives-2019,1,0,0,0,100.0
+PA332228,zan-2023,0,1,0,0,0.0
 PA332523,agec-2020,1,0,0,0,100.0
 PA332523,aide-a-mourir,0,1,0,0,0.0
 PA332523,anti-casseurs-2019,0,2,0,0,0.0
@@ -2949,7 +2958,6 @@ PA332523,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
 PA332523,ivg-constitution-2024,0,1,0,0,0.0
 PA332523,jo-2024,0,1,0,0,0.0
 PA332523,jo-2030,0,1,0,0,0.0
-PA332523,justice-criminelle-2026,0,1,0,0,0.0
 PA332523,justice-mineurs,0,1,0,0,0.0
 PA332523,kasbarian-berge,0,1,0,0,0.0
 PA332523,lfr-2022-08,0,1,0,0,0.0
@@ -2988,6 +2996,7 @@ PA332523,sortie-eus-2020,1,0,0,0,100.0
 PA332523,urgence-agricole-2026,0,2,0,0,0.0
 PA332523,urgence-covid-2020,0,1,0,0,0.0
 PA332523,vigilance-sanitaire-2021,1,0,0,0,100.0
+PA332523,zan-2023,0,1,0,0,0.0
 PA332614,agec-2020,1,0,0,0,100.0
 PA332614,anti-casseurs-2019,1,0,0,0,100.0
 PA332614,asap-2020,1,0,0,0,100.0
@@ -3225,6 +3234,7 @@ PA334116,protection-donnees-2018,1,0,0,0,100.0
 PA334116,securite-globale-2021,0,5,0,0,0.0
 PA334116,silt-2017,0,1,0,0,0.0
 PA334116,urgence-covid-2020,0,1,0,0,0.0
+PA334116,zan-2023,0,2,0,0,0.0
 PA334149,agec-2020,1,0,0,0,100.0
 PA334149,anti-casseurs-2019,0,1,0,0,0.0
 PA334149,consultation-nc-2018,1,0,0,0,100.0
@@ -3960,7 +3970,7 @@ PA342240,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
 PA342240,ivg-constitution-2024,1,0,0,0,100.0
 PA342240,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA342240,jo-2030,0,3,0,0,0.0
-PA342240,justice-criminelle-2026,0,3,0,0,0.0
+PA342240,justice-criminelle-2026,0,2,0,0,0.0
 PA342240,justice-mineurs,0,3,0,0,0.0
 PA342240,kasbarian-berge,0,1,0,0,0.0
 PA342240,langues-regionales-2021,1,0,0,0,100.0
@@ -4141,6 +4151,7 @@ PA342415,urgence-agricole-2026,1,0,0,0,100.0
 PA342415,urgence-covid-2020,0,0,1,0,
 PA342415,valletoux-2023,0,0,1,0,
 PA342415,vigilance-sanitaire-2021,2,0,0,0,100.0
+PA342415,zan-2023,0,0,1,0,
 PA342601,anti-casseurs-2019,0,1,0,0,0.0
 PA342601,bioethique-2021,0,1,0,0,0.0
 PA342601,climat-resilience-2021,0,0,1,0,
@@ -4328,6 +4339,7 @@ PA345722,urgence-covid-2020,0,1,0,0,0.0
 PA345722,valletoux-2023,1,0,0,0,100.0
 PA345722,vigilance-sanitaire-2021,2,0,0,0,100.0
 PA345722,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA345722,zan-2023,0,1,0,0,0.0
 PA346054,agec-2020,1,0,0,0,100.0
 PA346054,anti-casseurs-2019,0,1,0,0,0.0
 PA346054,asap-2020,2,0,0,0,100.0
@@ -4804,6 +4816,7 @@ PA605069,sortie-crise-sanitaire-2021,2,0,0,0,100.0
 PA605069,tests-discriminations-2023,1,0,0,0,100.0
 PA605069,transformation-fonction-publique-2019,1,0,0,0,100.0
 PA605069,urgence-covid-2020,0,0,1,0,
+PA605069,zan-2023,0,1,0,0,0.0
 PA605084,bioethique-2021,1,0,0,0,100.0
 PA605084,climat-resilience-2021,1,0,0,0,100.0
 PA605084,code-justice-mineurs-2021,0,1,0,0,0.0
@@ -4918,6 +4931,7 @@ PA605694,surete-transports-2025,0,1,0,0,0.0
 PA605694,terrorisme-renseignement-2021,0,1,0,0,0.0
 PA605694,urgence-covid-2020,0,1,0,0,0.0
 PA605694,vigilance-sanitaire-2021,2,0,0,0,100.0
+PA605694,zan-2023,0,1,0,0,0.0
 PA605745,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA605745,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA605745,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -4993,7 +5007,7 @@ PA605782,industrie-verte-2023,0,1,0,0,0.0
 PA605782,ivg-constitution-2024,1,0,0,0,100.0
 PA605782,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA605782,jo-2024,0,1,0,0,0.0
-PA605782,justice-criminelle-2026,0,3,0,0,0.0
+PA605782,justice-criminelle-2026,0,4,0,0,0.0
 PA605782,kasbarian-berge,0,1,0,0,0.0
 PA605782,lfr-2022-08,0,2,0,0,0.0
 PA605782,lopj-2023,0,1,0,0,0.0
@@ -5019,6 +5033,7 @@ PA605782,rist-2023,1,0,0,0,100.0
 PA605782,simplification-vie-economique-2026,0,1,0,0,0.0
 PA605782,sren-2024,0,1,0,0,0.0
 PA605782,urgence-agricole-2026,0,2,0,0,0.0
+PA605782,zan-2023,0,1,0,0,0.0
 PA605963,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA605963,accueils-physiques-ppl-2023,0,0,1,0,
 PA605963,additifs-nitres-2022,1,0,0,0,100.0
@@ -5125,6 +5140,7 @@ PA605991,transformation-fonction-publique-2019,0,0,1,0,
 PA605991,urgence-covid-2020,0,1,0,0,0.0
 PA605991,valletoux-2023,1,0,0,0,100.0
 PA605991,vigilance-sanitaire-2021,0,0,0,1,
+PA605991,zan-2023,0,1,0,0,0.0
 PA606098,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA606098,agec-2020,1,0,0,0,100.0
 PA606098,anti-casseurs-2019,0,1,0,0,0.0
@@ -5175,6 +5191,7 @@ PA606098,simplification-vie-economique-2026,0,1,0,0,0.0
 PA606098,transformation-fonction-publique-2019,2,0,0,0,100.0
 PA606098,urgence-covid-2020,0,1,0,0,0.0
 PA606098,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA606098,zan-2023,0,1,0,0,0.0
 PA606171,agec-2020,0,0,0,1,
 PA606171,anti-casseurs-2019,0,0,0,2,
 PA606171,asap-2020,0,0,0,3,
@@ -5304,7 +5321,7 @@ PA606507,industrie-verte-2023,0,1,0,0,0.0
 PA606507,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
 PA606507,ivg-constitution-2024,1,0,0,0,100.0
 PA606507,jo-2030,0,4,0,0,0.0
-PA606507,justice-criminelle-2026,0,6,0,0,0.0
+PA606507,justice-criminelle-2026,0,5,0,0,0.0
 PA606507,justice-mineurs,1,4,0,0,12.5
 PA606507,kasbarian-berge,0,1,0,0,0.0
 PA606507,lfr-2022-08,0,2,0,0,0.0
@@ -5349,6 +5366,7 @@ PA606507,urgence-covid-2020,0,1,0,0,0.0
 PA606507,vigilance-sanitaire-2021,0,2,0,0,0.0
 PA606507,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA606507,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA606507,zan-2023,0,1,0,0,0.0
 PA606545,aide-a-mourir,1,0,0,0,100.0
 PA606545,cadmium-engrais-2026,1,0,0,0,100.0
 PA606545,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
@@ -5357,7 +5375,7 @@ PA606545,duplomb-2025,1,0,0,0,100.0
 PA606545,execution-peines-ferme-2025,1,0,0,0,100.0
 PA606545,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
 PA606545,jo-2030,1,0,0,0,100.0
-PA606545,justice-criminelle-2026,5,0,0,0,100.0
+PA606545,justice-criminelle-2026,4,0,0,0,100.0
 PA606545,justice-mineurs,1,0,0,0,100.0
 PA606545,loi-orientation-agricole-2025,1,0,0,0,100.0
 PA606545,mineurs-isoles-sans-abrisme-2025,1,0,0,0,100.0
@@ -5388,7 +5406,7 @@ PA606573,chomage-ruptures-conventionnelles-2026,0,0,1,0,
 PA606573,duplomb-2025,1,0,0,0,100.0
 PA606573,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
 PA606573,jo-2030,0,1,0,0,0.0
-PA606573,justice-criminelle-2026,2,0,0,0,100.0
+PA606573,justice-criminelle-2026,1,0,0,0,100.0
 PA606573,mineurs-isoles-sans-abrisme-2025,1,0,0,0,100.0
 PA606573,mineurs-reseaux-sociaux-2026,0,0,1,0,
 PA606573,montagne-vivante-2026,0,1,0,0,0.0
@@ -5439,6 +5457,7 @@ PA606639,reforme-adoption-2022,1,0,0,0,100.0
 PA606639,silt-2017,0,1,0,0,0.0
 PA606639,urgence-covid-2020,0,1,0,0,0.0
 PA606639,vigilance-sanitaire-2021,0,1,0,0,0.0
+PA606639,zan-2023,0,1,0,0,0.0
 PA606675,anti-casseurs-2019,0,1,0,0,0.0
 PA606675,consultation-nc-2018,1,0,0,0,100.0
 PA606675,egalim-2018,1,0,0,0,100.0
@@ -5691,7 +5710,7 @@ PA607395,industrie-verte-2023,0,1,0,0,0.0
 PA607395,ivg-constitution-2024,1,0,0,0,100.0
 PA607395,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA607395,jo-2030,0,1,0,0,0.0
-PA607395,justice-criminelle-2026,0,1,0,0,0.0
+PA607395,justice-criminelle-2026,0,2,0,0,0.0
 PA607395,justice-mineurs,0,0,1,0,
 PA607395,kasbarian-berge,0,3,0,0,0.0
 PA607395,lanceurs-alerte-2022,1,0,0,0,100.0
@@ -5884,7 +5903,7 @@ PA607619,ivg-constitution-2024,1,0,0,0,100.0
 PA607619,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA607619,jo-2024,0,0,1,0,
 PA607619,jo-2030,1,0,2,0,100.0
-PA607619,justice-criminelle-2026,0,3,0,0,0.0
+PA607619,justice-criminelle-2026,0,2,0,0,0.0
 PA607619,justice-mineurs,1,0,0,0,100.0
 PA607619,kasbarian-berge,0,1,0,0,0.0
 PA607619,langues-regionales-2021,1,0,0,0,100.0
@@ -5932,6 +5951,7 @@ PA607619,urgence-covid-2020,0,1,0,0,0.0
 PA607619,vigilance-sanitaire-2021,2,0,0,0,100.0
 PA607619,violences-educatives-2019,0,0,1,0,
 PA607619,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA607619,zan-2023,0,0,1,0,
 PA607846,ratios-soignants-2025,0,0,0,1,
 PA608011,agec-2020,1,0,0,0,100.0
 PA608011,anti-casseurs-2019,2,0,0,0,100.0
@@ -6013,6 +6033,7 @@ PA608016,transformation-fonction-publique-2019,1,1,0,0,33.3
 PA608016,urgence-covid-2020,0,1,0,0,0.0
 PA608016,valletoux-2023,1,0,0,0,100.0
 PA608016,vigilance-sanitaire-2021,1,0,0,0,100.0
+PA608016,zan-2023,0,1,0,0,0.0
 PA608083,agec-2020,1,0,0,0,100.0
 PA608083,anti-casseurs-2019,0,1,0,0,0.0
 PA608083,asile-europeen-2018,0,1,0,0,0.0
@@ -6822,7 +6843,7 @@ PA610968,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA610968,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
 PA610968,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA610968,jo-2030,4,0,0,0,100.0
-PA610968,justice-criminelle-2026,3,1,0,0,75.0
+PA610968,justice-criminelle-2026,4,1,0,0,80.0
 PA610968,justice-mineurs,5,0,0,0,100.0
 PA610968,loi-orientation-agricole-2025,1,0,0,0,100.0
 PA610968,mineurs-isoles-sans-abrisme-2025,1,0,0,0,100.0
@@ -6944,6 +6965,7 @@ PA642695,transformation-fonction-publique-2019,0,2,0,0,0.0
 PA642695,urgence-agricole-2026,1,0,0,0,100.0
 PA642695,urgence-covid-2020,0,1,0,0,0.0
 PA642695,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA642695,zan-2023,0,1,0,0,0.0
 PA642724,anti-casseurs-2019,0,1,0,0,0.0
 PA642724,bioethique-2021,1,0,0,0,100.0
 PA642724,climat-resilience-2021,1,0,0,0,100.0
@@ -7167,6 +7189,7 @@ PA642847,urgence-agricole-2026,0,2,0,0,0.0
 PA642847,urgence-covid-2020,0,1,0,0,0.0
 PA642847,valletoux-2023,1,0,0,0,100.0
 PA642847,vigilance-sanitaire-2021,2,0,0,0,100.0
+PA642847,zan-2023,0,1,0,0,0.0
 PA642868,agec-2020,1,0,0,0,100.0
 PA642868,anti-casseurs-2019,0,1,0,0,0.0
 PA642868,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -7283,7 +7306,7 @@ PA642935,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA642935,gestion-crise-sanitaire-2021,0,1,0,0,0.0
 PA642935,immigration-asile-2018,2,0,0,0,100.0
 PA642935,inscription-office-nc-ppl-2020,1,0,0,0,100.0
-PA642935,justice-criminelle-2026,0,1,1,0,0.0
+PA642935,justice-criminelle-2026,0,1,0,0,0.0
 PA642935,justice-mineurs,0,1,0,0,0.0
 PA642935,justice-proximite-2021,0,1,0,0,0.0
 PA642935,langues-regionales-2021,1,0,0,0,100.0
@@ -7368,6 +7391,7 @@ PA642988,sren-2024,1,0,0,0,100.0
 PA642988,surete-transports-2025,0,1,0,0,0.0
 PA642988,urgence-agricole-2026,0,2,0,0,0.0
 PA642988,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA642988,zan-2023,0,1,0,0,0.0
 PA643004,bioethique-2021,0,1,0,0,0.0
 PA643004,climat-resilience-2021,0,0,1,0,
 PA643004,code-justice-mineurs-2021,0,1,0,0,0.0
@@ -7578,6 +7602,7 @@ PA643134,sren-2024,1,0,0,0,100.0
 PA643134,terrorisme-renseignement-2021,0,1,0,0,0.0
 PA643134,urgence-covid-2020,0,1,0,0,0.0
 PA643134,vigilance-sanitaire-2021,2,0,0,0,100.0
+PA643134,zan-2023,0,0,1,0,
 PA643143,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA643143,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 PA643143,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
@@ -7701,6 +7726,7 @@ PA643157,tests-discriminations-2023,0,1,0,0,0.0
 PA643157,urgence-agricole-2026,1,0,0,0,100.0
 PA643157,vigilance-sanitaire-2021,2,0,0,0,100.0
 PA643157,vote-correspondance-detenus-2025,1,0,0,0,100.0
+PA643157,zan-2023,0,1,0,0,0.0
 PA643175,agec-2020,1,0,0,0,100.0
 PA643175,aide-a-mourir,1,0,0,0,100.0
 PA643175,anti-casseurs-2019,1,0,1,0,100.0
@@ -7748,7 +7774,7 @@ PA643175,ingerences-etrangeres-2024,0,1,0,0,0.0
 PA643175,ivg-constitution-2024,1,0,0,0,100.0
 PA643175,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA643175,jld-mayotte-2019,0,1,0,0,0.0
-PA643175,justice-criminelle-2026,1,1,0,0,50.0
+PA643175,justice-criminelle-2026,1,0,0,0,100.0
 PA643175,justice-mineurs,4,0,0,0,100.0
 PA643175,kasbarian-berge,0,1,0,0,0.0
 PA643175,lfr-2022-08,0,1,0,0,0.0
@@ -7881,7 +7907,7 @@ PA643192,ineligibilite-violences-aggravees-2023,0,0,1,0,
 PA643192,ivg-constitution-2024,1,0,0,0,100.0
 PA643192,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA643192,jo-2030,2,1,1,0,66.7
-PA643192,justice-criminelle-2026,3,0,0,0,100.0
+PA643192,justice-criminelle-2026,2,0,0,0,100.0
 PA643192,justice-mineurs,2,0,0,0,100.0
 PA643192,kasbarian-berge,1,0,0,0,100.0
 PA643192,langues-regionales-2021,1,0,0,0,100.0
@@ -8312,7 +8338,7 @@ PA712014,inscription-office-nc-ppl-2020,1,0,0,0,100.0
 PA712014,ivg-constitution-2024,1,0,0,0,100.0
 PA712014,jo-2024,0,1,0,0,0.0
 PA712014,jo-2030,0,1,0,0,0.0
-PA712014,justice-criminelle-2026,0,3,0,0,0.0
+PA712014,justice-criminelle-2026,0,2,0,0,0.0
 PA712014,justice-mineurs,0,3,0,0,0.0
 PA712014,justice-proximite-2021,0,1,0,0,0.0
 PA712014,kasbarian-berge,0,1,0,0,0.0
@@ -8553,7 +8579,7 @@ PA717379,jeunes-majeurs-2019,1,0,0,0,100.0
 PA717379,jld-mayotte-2019,0,1,0,0,0.0
 PA717379,jo-2024,0,2,0,0,0.0
 PA717379,jo-2030,0,1,0,0,0.0
-PA717379,justice-criminelle-2026,0,5,0,0,0.0
+PA717379,justice-criminelle-2026,0,6,0,0,0.0
 PA717379,justice-mineurs,0,2,0,0,0.0
 PA717379,kasbarian-berge,0,4,0,0,0.0
 PA717379,lfr-2022-08,0,2,0,0,0.0
@@ -8612,6 +8638,7 @@ PA717379,urgence-agricole-2026,0,0,1,0,
 PA717379,urgence-covid-2020,0,1,0,0,0.0
 PA717379,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA717379,vsa-commerces-2026,0,1,0,0,0.0
+PA717379,zan-2023,0,1,0,0,0.0
 PA718674,aide-a-mourir,1,0,0,0,100.0
 PA718674,anti-casseurs-2019,0,1,0,0,0.0
 PA718674,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -8645,7 +8672,7 @@ PA718674,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
 PA718674,ivg-constitution-2024,1,0,0,0,100.0
 PA718674,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA718674,jo-2030,0,4,0,0,0.0
-PA718674,justice-criminelle-2026,0,3,0,0,0.0
+PA718674,justice-criminelle-2026,0,2,0,0,0.0
 PA718674,justice-mineurs,0,1,0,0,0.0
 PA718674,kasbarian-berge,0,1,0,0,0.0
 PA718674,lfr-2022-08,0,2,0,0,0.0
@@ -9400,6 +9427,7 @@ PA718850,urgence-agricole-2026,0,2,0,0,0.0
 PA718850,urgence-covid-2020,0,1,0,0,0.0
 PA718850,vigilance-sanitaire-2021,2,0,0,0,100.0
 PA718850,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA718850,zan-2023,0,1,0,0,0.0
 PA718860,agec-2020,0,1,0,0,0.0
 PA718860,anti-casseurs-2019,2,0,0,0,100.0
 PA718860,asile-europeen-2018,1,0,0,0,100.0
@@ -9944,6 +9972,7 @@ PA718962,sortie-eus-2020,0,1,0,0,0.0
 PA718962,transformation-fonction-publique-2019,0,2,0,0,0.0
 PA718962,urgence-covid-2020,0,1,0,0,0.0
 PA718962,vigilance-sanitaire-2021,0,2,0,0,0.0
+PA718962,zan-2023,0,2,0,0,0.0
 PA718978,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA718978,agec-2020,1,0,0,0,100.0
 PA718978,anti-casseurs-2019,0,1,0,0,0.0
@@ -10086,6 +10115,7 @@ PA719006,sren-2024,0,1,0,0,0.0
 PA719006,tests-discriminations-2023,1,0,0,0,100.0
 PA719006,urgence-covid-2020,0,1,0,0,0.0
 PA719006,valletoux-2023,1,0,0,0,100.0
+PA719006,zan-2023,0,2,0,0,0.0
 PA719020,bioethique-2021,0,1,0,0,0.0
 PA719020,climat-resilience-2021,0,0,1,0,
 PA719020,code-justice-mineurs-2021,0,1,0,0,0.0
@@ -10143,7 +10173,7 @@ PA719024,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA719024,jeunes-majeurs-2019,1,0,0,0,100.0
 PA719024,jo-2024,0,1,0,0,0.0
 PA719024,jo-2030,0,2,0,0,0.0
-PA719024,justice-criminelle-2026,0,2,0,1,0.0
+PA719024,justice-criminelle-2026,0,2,0,0,0.0
 PA719024,justice-mineurs,0,1,0,0,0.0
 PA719024,kasbarian-berge,0,2,0,0,0.0
 PA719024,lfr-2022-08,0,1,0,0,0.0
@@ -10194,6 +10224,7 @@ PA719024,urgence-agricole-2026,0,1,1,0,0.0
 PA719024,urgence-covid-2020,0,1,0,0,0.0
 PA719024,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA719024,valletoux-2023,1,0,0,0,100.0
+PA719024,zan-2023,0,1,0,0,0.0
 PA719032,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA719032,agec-2020,1,0,0,0,100.0
 PA719032,aide-a-mourir,1,0,0,0,100.0
@@ -10295,6 +10326,7 @@ PA719032,urgence-covid-2020,0,1,0,0,0.0
 PA719032,valletoux-2023,1,0,0,0,100.0
 PA719032,vigilance-sanitaire-2021,0,2,0,0,0.0
 PA719032,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA719032,zan-2023,0,1,0,0,0.0
 PA719044,additifs-nitres-2022,1,0,0,0,100.0
 PA719044,agec-2020,1,0,0,0,100.0
 PA719044,anti-casseurs-2019,0,1,0,0,0.0
@@ -10413,6 +10445,7 @@ PA719052,urgence-agricole-2026,0,2,0,0,0.0
 PA719052,urgence-covid-2020,0,1,0,0,0.0
 PA719052,valletoux-2023,1,0,0,0,100.0
 PA719052,vsa-commerces-2026,0,1,0,0,0.0
+PA719052,zan-2023,0,1,0,0,0.0
 PA719060,additifs-nitres-2022,1,0,0,0,100.0
 PA719060,agec-2020,1,0,0,0,100.0
 PA719060,anti-casseurs-2019,0,1,0,0,0.0
@@ -10560,6 +10593,7 @@ PA719080,transformation-fonction-publique-2019,0,2,0,0,0.0
 PA719080,urgence-agricole-2026,0,2,0,0,0.0
 PA719080,urgence-covid-2020,0,1,0,0,0.0
 PA719080,valletoux-2023,1,0,0,0,100.0
+PA719080,zan-2023,0,2,0,0,0.0
 PA719092,additifs-nitres-2022,1,0,0,0,100.0
 PA719092,agec-2020,1,0,0,0,100.0
 PA719092,anti-casseurs-2019,0,0,1,0,
@@ -10703,6 +10737,7 @@ PA719108,silt-2017,0,2,0,0,0.0
 PA719108,sren-2024,0,2,0,0,0.0
 PA719108,tests-discriminations-2023,1,0,0,0,100.0
 PA719108,urgence-covid-2020,0,1,0,0,0.0
+PA719108,zan-2023,0,1,0,0,0.0
 PA719118,additifs-nitres-2022,1,0,0,0,100.0
 PA719118,agec-2020,1,0,0,0,100.0
 PA719118,aide-a-mourir,1,0,0,0,100.0
@@ -10795,6 +10830,7 @@ PA719118,urgence-covid-2020,0,1,0,0,0.0
 PA719118,vigilance-sanitaire-2021,0,1,0,0,0.0
 PA719118,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA719118,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA719118,zan-2023,0,0,1,0,
 PA719130,anti-casseurs-2019,0,1,0,0,0.0
 PA719130,asap-2020,0,3,0,0,0.0
 PA719130,avenir-professionnel-2018,0,1,0,0,0.0
@@ -10901,6 +10937,7 @@ PA719138,urgence-agricole-2026,1,0,0,0,100.0
 PA719138,urgence-covid-2020,0,1,0,0,0.0
 PA719138,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA719138,vigilance-sanitaire-2021,1,0,0,0,100.0
+PA719138,zan-2023,0,1,0,0,0.0
 PA719146,anti-casseurs-2019,2,0,0,0,100.0
 PA719146,asap-2020,2,0,0,0,100.0
 PA719146,climat-resilience-2021,0,0,1,0,
@@ -10941,6 +10978,7 @@ PA719146,tests-discriminations-2023,1,0,0,0,100.0
 PA719146,urgence-covid-2020,0,1,0,0,0.0
 PA719146,vigilance-sanitaire-2021,1,0,0,0,100.0
 PA719146,violences-educatives-2019,1,0,0,0,100.0
+PA719146,zan-2023,0,2,0,0,0.0
 PA719154,anti-casseurs-2019,0,2,0,0,0.0
 PA719154,assurance-chomage-2022,0,1,0,0,0.0
 PA719154,bien-vieillir-2024,1,0,0,0,100.0
@@ -11223,6 +11261,7 @@ PA719202,secret-affaires-2018,0,1,0,0,0.0
 PA719202,silt-2017,0,2,0,0,0.0
 PA719202,transformation-fonction-publique-2019,0,2,0,0,0.0
 PA719202,urgence-covid-2020,0,1,0,0,0.0
+PA719202,zan-2023,0,1,0,0,0.0
 PA719210,additifs-nitres-2022,1,0,0,0,100.0
 PA719210,anti-casseurs-2019,0,0,1,0,
 PA719210,avenir-professionnel-2018,0,1,0,0,0.0
@@ -11575,7 +11614,7 @@ PA719286,habilitation-ordonnances-travail-2017,0,0,1,0,
 PA719286,immigration-2024,0,0,1,0,
 PA719286,ivg-constitution-2024,1,0,0,0,100.0
 PA719286,jo-2030,0,1,0,0,0.0
-PA719286,justice-criminelle-2026,0,3,0,0,0.0
+PA719286,justice-criminelle-2026,0,2,0,0,0.0
 PA719286,justice-mineurs,1,0,0,0,100.0
 PA719286,kasbarian-berge,0,1,0,0,0.0
 PA719286,langues-regionales-2021,1,0,0,0,100.0
@@ -11609,6 +11648,7 @@ PA719286,surete-transports-2025,0,0,1,0,
 PA719286,urgence-agricole-2026,1,0,0,0,100.0
 PA719286,urgence-covid-2020,0,1,0,0,0.0
 PA719286,vigilance-sanitaire-2021,1,0,0,0,100.0
+PA719286,zan-2023,0,1,0,0,0.0
 PA719294,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA719294,accueils-physiques-ppl-2023,0,0,1,0,
 PA719294,agec-2020,1,0,0,0,100.0
@@ -11800,6 +11840,7 @@ PA719318,sren-2024,1,0,0,0,100.0
 PA719318,urgence-covid-2020,0,1,0,0,0.0
 PA719318,valletoux-2023,1,0,0,0,100.0
 PA719318,vigilance-sanitaire-2021,2,0,0,0,100.0
+PA719318,zan-2023,0,1,0,0,0.0
 PA719326,anti-casseurs-2019,0,1,0,0,0.0
 PA719326,asap-2020,0,2,0,0,0.0
 PA719326,avenir-professionnel-2018,0,1,0,0,0.0
@@ -11968,6 +12009,7 @@ PA719338,urgence-covid-2020,0,1,0,0,0.0
 PA719338,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA719338,valletoux-2023,1,0,0,0,100.0
 PA719338,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA719338,zan-2023,0,2,0,0,0.0
 PA719350,agec-2020,1,0,0,0,100.0
 PA719350,anti-casseurs-2019,0,1,0,0,0.0
 PA719350,bioethique-2021,0,0,1,0,
@@ -12073,7 +12115,7 @@ PA719372,ivg-constitution-2024,1,0,0,0,100.0
 PA719372,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA719372,jo-2024,0,1,0,0,0.0
 PA719372,jo-2030,0,1,0,0,0.0
-PA719372,justice-criminelle-2026,0,3,0,0,0.0
+PA719372,justice-criminelle-2026,0,4,0,0,0.0
 PA719372,justice-mineurs,1,4,0,0,12.5
 PA719372,kasbarian-berge,0,4,0,0,0.0
 PA719372,lfr-2022-08,0,2,0,0,0.0
@@ -12132,6 +12174,7 @@ PA719372,valletoux-2023,1,0,0,0,100.0
 PA719372,vigilance-sanitaire-2021,0,2,0,0,0.0
 PA719372,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA719372,vsa-commerces-2026,0,1,0,0,0.0
+PA719372,zan-2023,0,1,0,0,0.0
 PA719376,bien-vieillir-2024,1,0,0,0,100.0
 PA719376,constitutionnaliser-securite-sociale-2024,0,1,0,0,0.0
 PA719376,corps-electoral-nc-degel-2024,1,0,0,0,100.0
@@ -12179,6 +12222,7 @@ PA719382,sortie-crise-sanitaire-2021,0,1,0,0,0.0
 PA719382,sren-2024,0,3,0,0,0.0
 PA719382,tests-discriminations-2023,1,0,0,0,100.0
 PA719382,valletoux-2023,1,0,0,0,100.0
+PA719382,zan-2023,0,2,0,0,0.0
 PA719388,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA719388,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA719388,agec-2020,1,0,0,0,100.0
@@ -12794,6 +12838,7 @@ PA719472,urgence-covid-2020,0,1,0,0,0.0
 PA719472,valletoux-2023,1,0,0,0,100.0
 PA719472,vigilance-sanitaire-2021,0,2,0,0,0.0
 PA719472,vsa-commerces-2026,0,1,0,0,0.0
+PA719472,zan-2023,0,1,0,0,0.0
 PA719480,code-justice-mineurs-2021,0,1,0,0,0.0
 PA719480,constitution-environnement-2021,1,0,0,0,100.0
 PA719480,consultation-nc-2018,1,0,0,0,100.0
@@ -12964,7 +13009,7 @@ PA719512,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA719512,jld-mayotte-2019,0,1,0,0,0.0
 PA719512,jo-2024,0,1,0,0,0.0
 PA719512,jo-2030,0,3,0,0,0.0
-PA719512,justice-criminelle-2026,0,2,0,0,0.0
+PA719512,justice-criminelle-2026,0,1,0,0,0.0
 PA719512,justice-mineurs,0,2,0,0,0.0
 PA719512,justice-proximite-2021,0,1,0,0,0.0
 PA719512,kasbarian-berge,0,2,0,0,0.0
@@ -13178,7 +13223,7 @@ PA719550,ivg-constitution-2024,1,0,0,0,100.0
 PA719550,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA719550,jo-2024,0,2,0,0,0.0
 PA719550,jo-2030,0,4,0,0,0.0
-PA719550,justice-criminelle-2026,0,3,0,0,0.0
+PA719550,justice-criminelle-2026,0,4,0,0,0.0
 PA719550,justice-mineurs,0,2,0,0,0.0
 PA719550,justice-proximite-2021,0,1,0,0,0.0
 PA719550,kasbarian-berge,0,1,0,0,0.0
@@ -13236,6 +13281,7 @@ PA719550,vigilance-sanitaire-2021,0,2,0,0,0.0
 PA719550,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA719550,vote-correspondance-detenus-2025,0,1,0,0,0.0
 PA719550,vsa-commerces-2026,0,1,0,0,0.0
+PA719550,zan-2023,0,2,0,0,0.0
 PA719558,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA719558,additifs-nitres-2022,1,0,0,0,100.0
 PA719558,agec-2020,1,0,0,0,100.0
@@ -13284,7 +13330,7 @@ PA719558,ivg-constitution-2024,1,0,0,0,100.0
 PA719558,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA719558,jo-2024,0,2,0,0,0.0
 PA719558,jo-2030,0,1,0,0,0.0
-PA719558,justice-criminelle-2026,0,2,0,0,0.0
+PA719558,justice-criminelle-2026,0,1,0,0,0.0
 PA719558,justice-proximite-2021,0,1,0,0,0.0
 PA719558,kasbarian-berge,0,0,1,0,
 PA719558,langues-regionales-2021,1,0,0,0,100.0
@@ -13685,7 +13731,7 @@ PA719632,ivg-constitution-2024,1,0,0,0,100.0
 PA719632,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA719632,jo-2024,0,1,0,0,0.0
 PA719632,jo-2030,0,1,0,0,0.0
-PA719632,justice-criminelle-2026,0,3,0,0,0.0
+PA719632,justice-criminelle-2026,0,2,0,0,0.0
 PA719632,justice-mineurs,0,1,0,0,0.0
 PA719632,kasbarian-berge,0,1,0,0,0.0
 PA719632,lfr-2022-08,0,1,0,0,0.0
@@ -13729,6 +13775,7 @@ PA719632,urgence-agricole-2026,1,0,0,0,100.0
 PA719632,urgence-covid-2020,0,1,0,0,0.0
 PA719632,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA719632,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA719632,zan-2023,0,1,0,0,0.0
 PA719640,additifs-nitres-2022,1,0,0,0,100.0
 PA719640,agec-2020,1,0,0,0,100.0
 PA719640,aide-a-mourir,0,1,0,0,0.0
@@ -13835,6 +13882,7 @@ PA719640,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA719640,violences-educatives-2019,1,0,0,0,100.0
 PA719640,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA719640,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA719640,zan-2023,0,1,0,0,0.0
 PA719652,anti-casseurs-2019,0,1,0,0,0.0
 PA719652,asile-europeen-2018,0,1,0,0,0.0
 PA719652,bioethique-2021,1,0,0,0,100.0
@@ -13936,6 +13984,7 @@ PA719664,tests-discriminations-2023,1,0,0,0,100.0
 PA719664,transformation-fonction-publique-2019,0,1,0,0,0.0
 PA719664,urgence-covid-2020,0,1,0,0,0.0
 PA719664,valletoux-2023,1,0,0,0,100.0
+PA719664,zan-2023,0,2,0,0,0.0
 PA719668,anti-casseurs-2019,0,1,0,0,0.0
 PA719668,code-justice-mineurs-2021,0,1,0,0,0.0
 PA719668,consultation-nc-2018,1,0,0,0,100.0
@@ -14183,6 +14232,7 @@ PA719718,sortie-crise-sanitaire-2021,0,1,0,0,0.0
 PA719718,sren-2024,0,1,0,0,0.0
 PA719718,urgence-covid-2020,0,1,0,0,0.0
 PA719718,vigilance-sanitaire-2021,0,1,0,0,0.0
+PA719718,zan-2023,0,1,0,0,0.0
 PA719728,anti-casseurs-2019,0,1,0,0,0.0
 PA719728,asap-2020,0,1,0,0,0.0
 PA719728,bioethique-2021,1,0,0,0,100.0
@@ -14368,7 +14418,7 @@ PA719756,ivg-constitution-2024,1,0,0,0,100.0
 PA719756,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA719756,jeunes-majeurs-2019,1,0,0,0,100.0
 PA719756,jo-2024,0,1,0,0,0.0
-PA719756,justice-criminelle-2026,0,2,0,0,0.0
+PA719756,justice-criminelle-2026,0,1,0,0,0.0
 PA719756,justice-mineurs,0,1,0,0,0.0
 PA719756,kasbarian-berge,0,1,0,0,0.0
 PA719756,langues-regionales-2021,1,0,0,0,100.0
@@ -14432,6 +14482,7 @@ PA719756,urgence-covid-2020,0,1,0,0,0.0
 PA719756,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA719756,vigilance-sanitaire-2021,0,1,0,0,0.0
 PA719756,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA719756,zan-2023,0,1,0,0,0.0
 PA719770,agec-2020,1,0,0,0,100.0
 PA719770,anti-casseurs-2019,0,1,0,0,0.0
 PA719770,code-justice-mineurs-2021,0,1,0,0,0.0
@@ -14486,7 +14537,7 @@ PA719778,immigration-2024,0,1,0,0,0.0
 PA719778,immigration-asile-2018,0,1,0,0,0.0
 PA719778,industrie-verte-2023,0,1,0,0,0.0
 PA719778,ivg-constitution-2024,1,0,0,0,100.0
-PA719778,justice-criminelle-2026,0,3,0,0,0.0
+PA719778,justice-criminelle-2026,0,2,0,0,0.0
 PA719778,justice-mineurs,0,1,0,0,0.0
 PA719778,kasbarian-berge,0,1,0,0,0.0
 PA719778,lfr-2022-08,0,2,0,0,0.0
@@ -14602,7 +14653,7 @@ PA719798,inscription-office-nc-ppl-2020,0,1,0,0,0.0
 PA719798,ivg-constitution-2024,1,0,0,0,100.0
 PA719798,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA719798,jo-2030,0,1,0,0,0.0
-PA719798,justice-criminelle-2026,0,2,0,0,0.0
+PA719798,justice-criminelle-2026,0,1,0,0,0.0
 PA719798,justice-mineurs,1,4,0,0,12.5
 PA719798,justice-proximite-2021,0,1,0,0,0.0
 PA719798,kasbarian-berge,0,1,0,0,0.0
@@ -14756,6 +14807,7 @@ PA719814,tests-discriminations-2023,1,0,0,0,100.0
 PA719814,urgence-covid-2020,0,1,0,0,0.0
 PA719814,valletoux-2023,1,0,0,0,100.0
 PA719814,vigilance-sanitaire-2021,0,1,0,0,0.0
+PA719814,zan-2023,0,1,0,0,0.0
 PA719822,accueils-physiques-ppl-2023,0,1,0,0,0.0
 PA719822,additifs-nitres-2022,1,0,0,0,100.0
 PA719822,aide-a-mourir,0,1,0,0,0.0
@@ -14791,7 +14843,7 @@ PA719822,ivg-constitution-2024,1,0,0,0,100.0
 PA719822,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA719822,jo-2024,0,1,0,0,0.0
 PA719822,jo-2030,0,1,1,0,0.0
-PA719822,justice-criminelle-2026,0,2,0,0,0.0
+PA719822,justice-criminelle-2026,0,1,0,0,0.0
 PA719822,justice-mineurs,0,1,0,0,0.0
 PA719822,kasbarian-berge,0,1,0,0,0.0
 PA719822,langues-regionales-2021,0,0,1,0,
@@ -14838,6 +14890,7 @@ PA719822,urgence-agricole-2026,0,0,1,0,
 PA719822,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA719822,valletoux-2023,1,0,0,0,100.0
 PA719822,vigilance-sanitaire-2021,0,1,0,0,0.0
+PA719822,zan-2023,0,1,0,0,0.0
 PA719830,additifs-nitres-2022,1,0,0,0,100.0
 PA719830,agec-2020,1,0,0,0,100.0
 PA719830,anti-casseurs-2019,0,2,0,0,0.0
@@ -15040,6 +15093,7 @@ PA719866,transformation-fonction-publique-2019,0,1,0,0,0.0
 PA719866,urgence-covid-2020,0,1,0,0,0.0
 PA719866,valletoux-2023,1,0,0,0,100.0
 PA719866,vigilance-sanitaire-2021,0,1,0,0,0.0
+PA719866,zan-2023,0,1,0,0,0.0
 PA719874,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA719874,additifs-nitres-2022,1,0,0,0,100.0
 PA719874,agec-2020,1,0,0,0,100.0
@@ -15148,6 +15202,7 @@ PA719882,securite-globale-2021,0,2,0,0,0.0
 PA719882,silt-2017,0,1,0,0,0.0
 PA719882,sortie-crise-sanitaire-2021,0,1,0,0,0.0
 PA719882,urgence-covid-2020,0,1,0,0,0.0
+PA719882,zan-2023,0,2,0,0,0.0
 PA719890,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA719890,agec-2020,1,0,0,0,100.0
 PA719890,aide-a-mourir,0,1,0,0,0.0
@@ -15242,6 +15297,7 @@ PA719890,urgence-covid-2020,0,1,0,0,0.0
 PA719890,vigilance-sanitaire-2021,0,2,0,0,0.0
 PA719890,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA719890,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA719890,zan-2023,0,1,0,0,0.0
 PA719910,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA719910,anti-casseurs-2019,0,1,0,0,0.0
 PA719910,assurance-chomage-2022,0,1,0,0,0.0
@@ -15270,6 +15326,7 @@ PA719910,programmation-justice-2019,0,1,0,0,0.0
 PA719910,sren-2024,0,3,0,0,0.0
 PA719910,tests-discriminations-2023,1,0,0,0,100.0
 PA719910,valletoux-2023,1,0,0,0,100.0
+PA719910,zan-2023,0,1,0,0,0.0
 PA719914,accueils-physiques-ppl-2023,0,1,0,0,0.0
 PA719914,aide-a-mourir,1,0,0,0,100.0
 PA719914,bien-vieillir-2024,1,0,0,0,100.0
@@ -15285,7 +15342,7 @@ PA719914,immigration-2024,0,1,0,0,0.0
 PA719914,industrie-verte-2023,0,1,0,0,0.0
 PA719914,ivg-constitution-2024,1,0,0,0,100.0
 PA719914,jo-2030,0,1,0,0,0.0
-PA719914,justice-criminelle-2026,0,3,0,0,0.0
+PA719914,justice-criminelle-2026,0,2,0,0,0.0
 PA719914,justice-mineurs,0,1,0,0,0.0
 PA719914,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA719914,lopj-2023,0,1,0,0,0.0
@@ -15420,6 +15477,7 @@ PA719922,surete-transports-2025,0,1,0,0,0.0
 PA719922,urgence-agricole-2026,0,1,0,0,0.0
 PA719922,urgence-covid-2020,0,1,0,0,0.0
 PA719922,valletoux-2023,1,0,0,0,100.0
+PA719922,zan-2023,0,2,0,0,0.0
 PA719930,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA719930,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA719930,aide-a-mourir,1,0,0,0,100.0
@@ -15525,7 +15583,7 @@ PA719938,fin-hydrocarbures-2017,1,0,0,0,100.0
 PA719938,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA719938,habilitation-ordonnances-travail-2017,0,1,0,0,0.0
 PA719938,jo-2030,0,1,0,0,0.0
-PA719938,justice-criminelle-2026,0,4,0,0,0.0
+PA719938,justice-criminelle-2026,0,3,0,0,0.0
 PA719938,justice-mineurs,0,2,0,0,0.0
 PA719938,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA719938,mineurs-isoles-sans-abrisme-2025,0,1,0,0,0.0
@@ -15689,7 +15747,6 @@ PA719968,immigration-2024,0,1,0,0,0.0
 PA719968,ingerences-etrangeres-2024,0,1,0,0,0.0
 PA719968,ivg-constitution-2024,1,0,0,0,100.0
 PA719968,jo-2030,0,1,0,0,0.0
-PA719968,justice-criminelle-2026,0,1,0,0,0.0
 PA719968,justice-mineurs,0,1,0,0,0.0
 PA719968,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA719968,meubles-tourisme-2024,1,0,0,0,100.0
@@ -16146,6 +16203,7 @@ PA720038,urgence-agricole-2026,1,0,0,0,100.0
 PA720038,urgence-covid-2020,0,1,0,0,0.0
 PA720038,valletoux-2023,1,0,0,0,100.0
 PA720038,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA720038,zan-2023,0,1,0,0,0.0
 PA720046,anti-casseurs-2019,0,1,0,0,0.0
 PA720046,avenir-professionnel-2018,0,1,0,0,0.0
 PA720046,bioethique-2021,1,0,0,0,100.0
@@ -16210,6 +16268,7 @@ PA720054,rist-2023,1,0,0,0,100.0
 PA720054,silt-2017,0,1,0,0,0.0
 PA720054,sren-2024,0,1,0,0,0.0
 PA720054,urgence-covid-2020,0,1,0,0,0.0
+PA720054,zan-2023,0,1,0,0,0.0
 PA720066,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA720066,anti-casseurs-2019,0,1,0,0,0.0
 PA720066,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -16351,6 +16410,7 @@ PA720092,immigration-2024,0,1,0,0,0.0
 PA720092,ivg-constitution-2024,1,0,0,0,100.0
 PA720092,jo-2024,0,1,0,0,0.0
 PA720092,jo-2030,0,1,0,0,0.0
+PA720092,justice-criminelle-2026,0,1,0,0,0.0
 PA720092,justice-mineurs,0,1,0,0,0.0
 PA720092,kasbarian-berge,0,1,0,0,0.0
 PA720092,lfr-2022-08,0,1,0,0,0.0
@@ -16578,7 +16638,7 @@ PA720138,industrie-verte-2023,0,1,0,0,0.0
 PA720138,jld-mayotte-2019,0,1,0,0,0.0
 PA720138,jo-2024,0,1,0,0,0.0
 PA720138,jo-2030,0,1,0,0,0.0
-PA720138,justice-criminelle-2026,0,4,0,0,0.0
+PA720138,justice-criminelle-2026,0,5,0,0,0.0
 PA720138,justice-mineurs,1,3,0,0,14.3
 PA720138,kasbarian-berge,0,2,0,0,0.0
 PA720138,langues-regionales-2021,0,0,0,1,
@@ -16626,6 +16686,7 @@ PA720138,transformation-fonction-publique-2019,0,1,0,0,0.0
 PA720138,urgence-agricole-2026,0,2,0,0,0.0
 PA720138,urgence-covid-2020,0,1,0,0,0.0
 PA720138,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA720138,zan-2023,0,1,0,0,0.0
 PA720146,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA720146,agec-2020,1,0,0,0,100.0
 PA720146,aide-a-mourir,1,0,0,0,100.0
@@ -16828,6 +16889,7 @@ PA720154,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA720154,valletoux-2023,1,0,0,0,100.0
 PA720154,violences-educatives-2019,1,0,0,0,100.0
 PA720154,vsa-commerces-2026,0,1,0,0,0.0
+PA720154,zan-2023,0,1,0,0,0.0
 PA720162,additifs-nitres-2022,1,0,0,0,100.0
 PA720162,anti-casseurs-2019,0,1,0,0,0.0
 PA720162,asap-2020,0,1,0,0,0.0
@@ -16939,6 +17001,7 @@ PA720174,partage-valeur-2023,1,0,0,0,100.0
 PA720174,plein-emploi-2023,0,1,0,0,0.0
 PA720174,plui-bas-chablais-2023,0,1,0,0,0.0
 PA720174,tests-discriminations-2023,1,0,0,0,100.0
+PA720174,zan-2023,0,1,0,0,0.0
 PA720178,agec-2020,1,0,0,0,100.0
 PA720178,bioethique-2021,1,0,0,0,100.0
 PA720178,climat-resilience-2021,1,0,0,0,100.0
@@ -17005,7 +17068,7 @@ PA720190,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
 PA720190,ivg-constitution-2024,1,0,0,0,100.0
 PA720190,jo-2024,0,2,0,0,0.0
 PA720190,jo-2030,0,4,0,0,0.0
-PA720190,justice-criminelle-2026,0,4,0,0,0.0
+PA720190,justice-criminelle-2026,0,5,0,0,0.0
 PA720190,justice-mineurs,0,1,0,0,0.0
 PA720190,kasbarian-berge,0,1,0,0,0.0
 PA720190,lfr-2022-08,0,1,0,0,0.0
@@ -17048,6 +17111,7 @@ PA720190,urgence-covid-2020,0,1,0,0,0.0
 PA720190,valletoux-2023,1,0,0,0,100.0
 PA720190,violences-educatives-2019,1,0,0,0,100.0
 PA720190,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA720190,zan-2023,0,1,0,0,0.0
 PA720198,consultation-nc-2018,1,0,0,0,100.0
 PA720198,fin-hydrocarbures-2017,1,0,0,0,100.0
 PA720198,habilitation-ordonnances-travail-2017,0,1,0,0,0.0
@@ -17312,6 +17376,7 @@ PA720230,urgence-covid-2020,0,1,0,0,0.0
 PA720230,valletoux-2023,1,0,0,0,100.0
 PA720230,vigilance-sanitaire-2021,0,1,0,0,0.0
 PA720230,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA720230,zan-2023,0,1,0,0,0.0
 PA720242,anti-casseurs-2019,0,1,0,0,0.0
 PA720242,consultation-nc-2018,1,0,0,0,100.0
 PA720242,contenus-haineux-2020,0,1,0,0,0.0
@@ -17386,7 +17451,7 @@ PA720256,ingerences-etrangeres-2024,0,1,0,0,0.0
 PA720256,ivg-constitution-2024,1,0,0,0,100.0
 PA720256,jo-2024,0,1,0,0,0.0
 PA720256,jo-2030,0,4,0,0,0.0
-PA720256,justice-criminelle-2026,0,2,0,0,0.0
+PA720256,justice-criminelle-2026,0,1,0,0,0.0
 PA720256,justice-mineurs,0,1,0,0,0.0
 PA720256,kasbarian-berge,0,1,0,0,0.0
 PA720256,langues-regionales-2021,1,0,0,0,100.0
@@ -17564,6 +17629,7 @@ PA720286,sren-2024,2,0,0,0,100.0
 PA720286,terrorisme-renseignement-2021,1,0,0,0,100.0
 PA720286,urgence-covid-2020,1,0,0,0,100.0
 PA720286,vigilance-sanitaire-2021,2,0,0,0,100.0
+PA720286,zan-2023,0,0,0,1,
 PA720298,anti-casseurs-2019,1,0,1,0,100.0
 PA720298,asap-2020,3,0,0,0,100.0
 PA720298,bioethique-2021,1,0,0,0,100.0
@@ -17942,6 +18008,7 @@ PA720354,terrorisme-renseignement-2021,0,1,0,0,0.0
 PA720354,urgence-agricole-2026,0,1,0,0,0.0
 PA720354,urgence-covid-2020,0,1,0,0,0.0
 PA720354,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA720354,zan-2023,0,1,0,0,0.0
 PA720362,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA720362,additifs-nitres-2022,1,0,0,0,100.0
 PA720362,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -18043,6 +18110,7 @@ PA720362,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA720362,vigilance-sanitaire-2021,0,2,0,0,0.0
 PA720362,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA720362,vsa-commerces-2026,1,0,0,0,100.0
+PA720362,zan-2023,0,1,0,0,0.0
 PA720370,agec-2020,1,0,0,0,100.0
 PA720370,aide-a-mourir,1,0,0,0,100.0
 PA720370,anti-casseurs-2019,0,1,0,0,0.0
@@ -18084,7 +18152,7 @@ PA720370,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
 PA720370,ingerences-etrangeres-2024,0,1,0,0,0.0
 PA720370,ivg-constitution-2024,1,0,0,0,100.0
 PA720370,jo-2030,0,1,0,0,0.0
-PA720370,justice-criminelle-2026,0,2,0,0,0.0
+PA720370,justice-criminelle-2026,0,1,0,0,0.0
 PA720370,justice-mineurs,0,0,1,0,
 PA720370,kasbarian-berge,0,0,1,0,
 PA720370,lanceurs-alerte-2022,1,0,0,0,100.0
@@ -18256,6 +18324,7 @@ PA720390,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
 PA720390,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
 PA720390,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA720390,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
+PA720390,justice-criminelle-2026,0,1,0,0,0.0
 PA720390,montagne-vivante-2026,0,1,0,0,0.0
 PA720390,presomption-legitime-defense,0,1,0,0,0.0
 PA720390,protection-enfants-2026,1,0,0,0,100.0
@@ -18393,6 +18462,7 @@ PA720414,urgence-covid-2020,0,1,0,0,0.0
 PA720414,valletoux-2023,1,0,0,0,100.0
 PA720414,vigilance-sanitaire-2021,0,2,0,0,0.0
 PA720414,violences-educatives-2019,1,0,0,0,100.0
+PA720414,zan-2023,0,1,0,0,0.0
 PA720422,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA720422,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA720422,agec-2020,0,1,0,0,0.0
@@ -18497,7 +18567,7 @@ PA720430,ivg-constitution-2024,1,0,0,0,100.0
 PA720430,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA720430,jo-2024,2,0,0,0,100.0
 PA720430,jo-2030,2,0,0,0,100.0
-PA720430,justice-criminelle-2026,4,0,0,0,100.0
+PA720430,justice-criminelle-2026,3,0,0,0,100.0
 PA720430,justice-mineurs,5,0,0,0,100.0
 PA720430,justice-proximite-2021,1,0,0,0,100.0
 PA720430,kasbarian-berge,1,0,0,0,100.0
@@ -18560,6 +18630,7 @@ PA720430,urgence-agricole-2026,1,0,0,0,100.0
 PA720430,urgence-covid-2020,1,0,0,0,100.0
 PA720430,violences-sexuelles-sexistes-2025,0,1,0,0,0.0
 PA720430,vote-correspondance-detenus-2025,1,0,0,0,100.0
+PA720430,zan-2023,1,0,0,0,100.0
 PA720438,anti-casseurs-2019,0,1,0,0,0.0
 PA720438,bioethique-2021,1,0,0,0,100.0
 PA720438,code-justice-mineurs-2021,0,1,0,0,0.0
@@ -18667,6 +18738,7 @@ PA720446,tests-discriminations-2023,1,0,0,0,100.0
 PA720446,urgence-agricole-2026,0,0,1,0,
 PA720446,urgence-covid-2020,0,1,0,0,0.0
 PA720446,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA720446,zan-2023,0,1,0,0,0.0
 PA720454,bioethique-2021,1,0,0,0,100.0
 PA720454,code-justice-mineurs-2021,0,1,0,0,0.0
 PA720454,confiance-justice-2021,0,2,0,0,0.0
@@ -18813,7 +18885,7 @@ PA720480,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
 PA720480,ivg-constitution-2024,1,0,0,0,100.0
 PA720480,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA720480,jeunes-majeurs-2019,1,0,0,0,100.0
-PA720480,justice-criminelle-2026,0,4,0,0,0.0
+PA720480,justice-criminelle-2026,0,3,0,0,0.0
 PA720480,langues-regionales-2021,1,0,0,0,100.0
 PA720480,lfr-2022-08,0,1,0,0,0.0
 PA720480,lopmi-2023,0,1,0,0,0.0
@@ -19124,6 +19196,7 @@ PA720552,urgence-covid-2020,0,1,0,0,0.0
 PA720552,valletoux-2023,1,0,0,0,100.0
 PA720552,vigilance-sanitaire-2021,0,2,0,0,0.0
 PA720552,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA720552,zan-2023,0,1,0,0,0.0
 PA720560,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA720560,accueils-physiques-ppl-2023,0,1,0,0,0.0
 PA720560,aide-a-mourir,1,0,0,0,100.0
@@ -19337,6 +19410,7 @@ PA720586,silt-2017,1,0,0,0,100.0
 PA720586,sortie-crise-sanitaire-2021,1,0,0,0,100.0
 PA720586,urgence-covid-2020,0,1,0,0,0.0
 PA720586,vigilance-sanitaire-2021,2,0,0,0,100.0
+PA720586,zan-2023,0,1,0,0,0.0
 PA720590,agec-2020,1,0,0,0,100.0
 PA720590,anti-casseurs-2019,0,1,0,0,0.0
 PA720590,asap-2020,0,1,0,0,0.0
@@ -19605,6 +19679,7 @@ PA720630,tests-discriminations-2023,0,1,0,0,0.0
 PA720630,transformation-fonction-publique-2019,1,0,0,0,100.0
 PA720630,urgence-covid-2020,0,1,0,0,0.0
 PA720630,vigilance-sanitaire-2021,2,0,0,0,100.0
+PA720630,zan-2023,0,1,0,0,0.0
 PA720644,agec-2020,1,0,0,0,100.0
 PA720644,anti-casseurs-2019,0,1,0,0,0.0
 PA720644,bioethique-2021,0,1,0,0,0.0
@@ -19772,6 +19847,7 @@ PA720668,simplification-vie-economique-2026,0,1,0,0,0.0
 PA720668,surete-transports-2025,0,1,0,0,0.0
 PA720668,tests-discriminations-2023,0,1,0,0,0.0
 PA720668,urgence-agricole-2026,0,2,0,0,0.0
+PA720668,zan-2023,0,1,0,0,0.0
 PA720672,bioethique-2021,0,1,0,0,0.0
 PA720672,climat-resilience-2021,0,0,1,0,
 PA720672,code-justice-mineurs-2021,0,1,0,0,0.0
@@ -19919,6 +19995,7 @@ PA720696,tests-discriminations-2023,1,0,0,0,100.0
 PA720696,urgence-covid-2020,0,1,0,0,0.0
 PA720696,valletoux-2023,1,0,0,0,100.0
 PA720696,vigilance-sanitaire-2021,1,0,0,0,100.0
+PA720696,zan-2023,0,1,0,0,0.0
 PA720704,anti-casseurs-2019,0,2,0,0,0.0
 PA720704,asile-europeen-2018,0,1,0,0,0.0
 PA720704,assurance-chomage-2022,0,1,0,0,0.0
@@ -19999,7 +20076,7 @@ PA720720,ingerences-etrangeres-2024,0,1,0,0,0.0
 PA720720,ivg-constitution-2024,1,0,0,0,100.0
 PA720720,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA720720,jo-2030,0,1,0,0,0.0
-PA720720,justice-criminelle-2026,0,2,0,0,0.0
+PA720720,justice-criminelle-2026,0,1,0,0,0.0
 PA720720,justice-mineurs,0,1,0,0,0.0
 PA720720,lanceurs-alerte-2022,1,0,0,0,100.0
 PA720720,langues-regionales-2021,1,0,0,0,100.0
@@ -20081,7 +20158,7 @@ PA720728,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
 PA720728,ingerences-etrangeres-2024,0,1,0,0,0.0
 PA720728,ivg-constitution-2024,1,0,0,0,100.0
 PA720728,jo-2030,0,2,0,0,0.0
-PA720728,justice-criminelle-2026,0,3,0,0,0.0
+PA720728,justice-criminelle-2026,0,2,0,0,0.0
 PA720728,justice-mineurs,0,2,0,0,0.0
 PA720728,justice-proximite-2021,0,1,0,0,0.0
 PA720728,kasbarian-berge,0,1,0,0,0.0
@@ -20137,6 +20214,7 @@ PA720728,urgence-agricole-2026,0,1,0,0,0.0
 PA720728,urgence-covid-2020,0,1,0,0,0.0
 PA720728,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA720728,vigilance-sanitaire-2021,0,2,0,0,0.0
+PA720728,zan-2023,0,1,0,0,0.0
 PA720738,agec-2020,1,0,0,0,100.0
 PA720738,anti-casseurs-2019,0,1,0,0,0.0
 PA720738,asap-2020,0,1,0,0,0.0
@@ -20396,6 +20474,7 @@ PA720772,sortie-crise-sanitaire-2021,0,2,0,0,0.0
 PA720772,sren-2024,0,1,0,0,0.0
 PA720772,transformation-fonction-publique-2019,0,1,0,0,0.0
 PA720772,urgence-covid-2020,0,1,0,0,0.0
+PA720772,zan-2023,0,1,0,0,0.0
 PA720780,agec-2020,1,0,0,0,100.0
 PA720780,anti-casseurs-2019,0,1,0,0,0.0
 PA720780,asap-2020,0,2,0,0,0.0
@@ -20710,6 +20789,7 @@ PA720838,sren-2024,1,0,0,0,100.0
 PA720838,surete-transports-2025,1,0,0,0,100.0
 PA720838,urgence-agricole-2026,1,0,0,0,100.0
 PA720838,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA720838,zan-2023,0,1,0,0,0.0
 PA720846,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA720846,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA720846,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -21022,7 +21102,7 @@ PA720892,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA720892,jeunes-majeurs-2019,0,1,0,0,0.0
 PA720892,jo-2024,1,0,0,0,100.0
 PA720892,jo-2030,1,0,0,0,100.0
-PA720892,justice-criminelle-2026,2,0,0,0,100.0
+PA720892,justice-criminelle-2026,1,0,0,0,100.0
 PA720892,justice-mineurs,3,0,0,0,100.0
 PA720892,kasbarian-berge,1,0,0,0,100.0
 PA720892,langues-regionales-2021,0,1,0,0,0.0
@@ -21824,6 +21904,7 @@ PA721024,transformation-fonction-publique-2019,0,1,0,0,0.0
 PA721024,urgence-agricole-2026,0,0,1,0,
 PA721024,urgence-covid-2020,0,1,0,0,0.0
 PA721024,vigilance-sanitaire-2021,0,2,0,0,0.0
+PA721024,zan-2023,0,1,0,0,0.0
 PA721036,anti-casseurs-2019,0,1,0,0,0.0
 PA721036,code-justice-mineurs-2021,0,1,0,0,0.0
 PA721036,constitution-environnement-2021,1,0,0,0,100.0
@@ -22038,6 +22119,7 @@ PA721094,silt-2017,0,1,0,0,0.0
 PA721094,sren-2024,0,2,0,0,0.0
 PA721094,urgence-covid-2020,0,1,0,0,0.0
 PA721094,valletoux-2023,1,0,0,0,100.0
+PA721094,zan-2023,0,1,0,0,0.0
 PA721110,allocations-familiales-premier-enfant-2025,1,0,0,0,100.0
 PA721110,anti-casseurs-2019,0,0,1,0,
 PA721110,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
@@ -22477,6 +22559,7 @@ PA721182,sortie-crise-sanitaire-2021,0,2,0,0,0.0
 PA721182,sren-2024,0,1,0,0,0.0
 PA721182,urgence-agricole-2026,0,2,0,0,0.0
 PA721182,urgence-covid-2020,0,1,0,0,0.0
+PA721182,zan-2023,0,2,0,0,0.0
 PA721194,agec-2020,0,0,1,0,
 PA721194,anti-casseurs-2019,2,0,0,0,100.0
 PA721194,avenir-professionnel-2018,0,1,0,0,0.0
@@ -22801,7 +22884,7 @@ PA721234,ivg-constitution-2024,1,0,0,0,100.0
 PA721234,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA721234,jo-2024,0,1,0,0,0.0
 PA721234,jo-2030,0,1,0,0,0.0
-PA721234,justice-criminelle-2026,0,1,0,0,0.0
+PA721234,justice-criminelle-2026,0,2,0,0,0.0
 PA721234,justice-mineurs,0,1,0,0,0.0
 PA721234,kasbarian-berge,0,2,2,0,0.0
 PA721234,langues-regionales-2021,1,0,0,0,100.0
@@ -23389,7 +23472,7 @@ PA721336,immigration-asile-2018,0,2,0,0,0.0
 PA721336,industrie-verte-2023,0,1,0,0,0.0
 PA721336,ivg-constitution-2024,0,0,1,0,
 PA721336,jo-2030,0,3,0,0,0.0
-PA721336,justice-criminelle-2026,0,3,0,0,0.0
+PA721336,justice-criminelle-2026,0,2,0,0,0.0
 PA721336,justice-mineurs,0,1,0,0,0.0
 PA721336,justice-proximite-2021,0,1,0,0,0.0
 PA721336,kasbarian-berge,0,0,1,0,
@@ -23431,6 +23514,7 @@ PA721336,surete-transports-2025,0,1,0,0,0.0
 PA721336,transformation-fonction-publique-2019,0,0,1,0,
 PA721336,urgence-agricole-2026,0,1,0,0,0.0
 PA721336,urgence-covid-2020,0,1,0,0,0.0
+PA721336,zan-2023,0,1,0,0,0.0
 PA721344,anti-casseurs-2019,0,1,0,0,0.0
 PA721344,asap-2020,0,1,0,0,0.0
 PA721344,code-justice-mineurs-2021,0,1,0,0,0.0
@@ -23743,7 +23827,7 @@ PA721426,ivg-constitution-2024,1,0,0,0,100.0
 PA721426,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA721426,jo-2024,0,1,0,0,0.0
 PA721426,jo-2030,0,4,0,0,0.0
-PA721426,justice-criminelle-2026,0,2,0,0,0.0
+PA721426,justice-criminelle-2026,0,1,0,0,0.0
 PA721426,justice-mineurs,1,3,0,0,14.3
 PA721426,justice-proximite-2021,0,1,0,0,0.0
 PA721426,kasbarian-berge,0,2,0,0,0.0
@@ -23791,6 +23875,7 @@ PA721426,urgence-agricole-2026,0,0,1,0,
 PA721426,urgence-covid-2020,0,1,0,0,0.0
 PA721426,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA721426,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA721426,zan-2023,0,1,0,0,0.0
 PA721434,anti-casseurs-2019,0,1,0,0,0.0
 PA721434,bioethique-2021,1,0,0,0,100.0
 PA721434,climat-resilience-2021,1,0,0,0,100.0
@@ -24039,6 +24124,7 @@ PA721466,silt-2017,0,1,0,0,0.0
 PA721466,sortie-eus-2020,0,1,0,0,0.0
 PA721466,transformation-fonction-publique-2019,0,1,0,0,0.0
 PA721466,urgence-covid-2020,0,1,0,0,0.0
+PA721466,zan-2023,0,1,0,0,0.0
 PA721474,aide-a-mourir,1,0,0,0,100.0
 PA721474,anti-casseurs-2019,0,1,0,0,0.0
 PA721474,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -24142,6 +24228,7 @@ PA721482,nucleaire-acceleration-2023,0,1,0,0,0.0
 PA721482,plein-emploi-2023,0,1,0,0,0.0
 PA721482,pouvoir-achat-2022,1,0,0,0,100.0
 PA721482,rist-2023,1,0,0,0,100.0
+PA721482,zan-2023,0,1,0,0,0.0
 PA721486,aide-a-mourir,0,0,1,0,
 PA721486,anti-casseurs-2019,0,0,2,0,
 PA721486,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -24181,7 +24268,7 @@ PA721486,ivg-constitution-2024,1,0,0,0,100.0
 PA721486,jld-mayotte-2019,0,0,1,0,
 PA721486,jo-2024,0,1,0,0,0.0
 PA721486,jo-2030,0,1,0,0,0.0
-PA721486,justice-criminelle-2026,0,4,0,0,0.0
+PA721486,justice-criminelle-2026,0,3,0,0,0.0
 PA721486,justice-mineurs,0,1,0,0,0.0
 PA721486,kasbarian-berge,0,1,0,0,0.0
 PA721486,lfr-2022-08,0,1,0,0,0.0
@@ -24225,6 +24312,7 @@ PA721486,transformation-fonction-publique-2019,1,0,0,0,100.0
 PA721486,urgence-agricole-2026,0,1,0,0,0.0
 PA721486,urgence-covid-2020,0,1,0,0,0.0
 PA721486,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA721486,zan-2023,0,1,0,0,0.0
 PA721498,anti-casseurs-2019,0,1,0,0,0.0
 PA721498,asap-2020,0,1,0,0,0.0
 PA721498,bioethique-2021,1,0,0,0,100.0
@@ -24446,6 +24534,7 @@ PA721530,sortie-crise-sanitaire-2021,0,2,0,0,0.0
 PA721530,urgence-covid-2020,0,1,0,0,0.0
 PA721530,valletoux-2023,1,0,0,0,100.0
 PA721530,vigilance-sanitaire-2021,0,1,0,0,0.0
+PA721530,zan-2023,0,2,0,0,0.0
 PA721538,additifs-nitres-2022,1,0,0,0,100.0
 PA721538,asap-2020,0,1,0,0,0.0
 PA721538,bioethique-2021,1,0,0,0,100.0
@@ -24666,6 +24755,7 @@ PA721584,urgence-covid-2020,0,1,0,0,0.0
 PA721584,valletoux-2023,1,0,0,0,100.0
 PA721584,vigilance-sanitaire-2021,0,1,0,0,0.0
 PA721584,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA721584,zan-2023,0,1,0,0,0.0
 PA721600,agec-2020,1,0,0,0,100.0
 PA721600,anti-casseurs-2019,0,0,2,0,
 PA721600,asap-2020,0,1,0,0,0.0
@@ -24877,7 +24967,7 @@ PA721632,ingerences-etrangeres-2024,0,1,0,0,0.0
 PA721632,inscription-office-nc-ppl-2020,1,0,0,0,100.0
 PA721632,ivg-constitution-2024,1,0,0,0,100.0
 PA721632,ivg-constitution-ppl-2022,1,0,0,0,100.0
-PA721632,justice-criminelle-2026,0,2,0,0,0.0
+PA721632,justice-criminelle-2026,0,3,0,0,0.0
 PA721632,justice-proximite-2021,0,1,0,0,0.0
 PA721632,kasbarian-berge,0,4,0,0,0.0
 PA721632,langues-regionales-2021,1,0,0,0,100.0
@@ -24917,6 +25007,7 @@ PA721632,transformation-fonction-publique-2019,0,1,0,0,0.0
 PA721632,urgence-agricole-2026,0,2,0,0,0.0
 PA721632,urgence-covid-2020,0,1,0,0,0.0
 PA721632,vigilance-sanitaire-2021,0,1,0,0,0.0
+PA721632,zan-2023,0,1,0,0,0.0
 PA721636,agec-2020,1,0,0,0,100.0
 PA721636,anti-casseurs-2019,0,1,0,0,0.0
 PA721636,bioethique-2021,0,1,0,0,0.0
@@ -25228,6 +25319,7 @@ PA721710,tests-discriminations-2023,1,0,0,0,100.0
 PA721710,transformation-fonction-publique-2019,0,1,0,0,0.0
 PA721710,urgence-covid-2020,0,1,0,0,0.0
 PA721710,vigilance-sanitaire-2021,0,1,0,0,0.0
+PA721710,zan-2023,0,2,0,0,0.0
 PA721718,anti-casseurs-2019,0,1,0,0,0.0
 PA721718,bioethique-2021,1,0,0,0,100.0
 PA721718,code-justice-mineurs-2021,0,1,0,0,0.0
@@ -25282,6 +25374,7 @@ PA721722,plui-bas-chablais-2023,0,1,0,0,0.0
 PA721722,pouvoir-achat-2022,1,0,0,0,100.0
 PA721722,sren-2024,0,1,0,0,0.0
 PA721722,valletoux-2023,1,0,0,0,100.0
+PA721722,zan-2023,0,1,0,0,0.0
 PA721726,agec-2020,1,0,0,0,100.0
 PA721726,anti-casseurs-2019,0,2,0,0,0.0
 PA721726,asap-2020,0,2,0,0,0.0
@@ -25490,6 +25583,7 @@ PA721750,vigilance-sanitaire-2021,0,1,0,0,0.0
 PA721750,violences-educatives-2019,1,0,0,0,100.0
 PA721750,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA721750,vsa-commerces-2026,0,1,0,0,0.0
+PA721750,zan-2023,0,1,0,0,0.0
 PA721760,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA721760,additifs-nitres-2022,1,0,0,0,100.0
 PA721760,bioethique-2021,1,0,0,0,100.0
@@ -25526,6 +25620,7 @@ PA721760,sortie-crise-sanitaire-2021,0,2,0,0,0.0
 PA721760,sren-2024,0,1,0,0,0.0
 PA721760,terrorisme-renseignement-2021,0,1,0,0,0.0
 PA721760,vigilance-sanitaire-2021,0,2,0,0,0.0
+PA721760,zan-2023,0,1,0,0,0.0
 PA721764,aide-a-mourir,0,1,0,0,0.0
 PA721764,anti-casseurs-2019,0,1,0,0,0.0
 PA721764,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -25547,7 +25642,7 @@ PA721764,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA721764,immigration-asile-2018,0,1,0,0,0.0
 PA721764,inscription-office-nc-ppl-2020,0,1,0,0,0.0
 PA721764,jo-2030,0,1,0,0,0.0
-PA721764,justice-criminelle-2026,0,4,0,0,0.0
+PA721764,justice-criminelle-2026,0,5,0,0,0.0
 PA721764,justice-mineurs,0,2,0,0,0.0
 PA721764,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA721764,manipulation-information-2018,0,1,0,0,0.0
@@ -25892,6 +25987,7 @@ PA721828,rist-2023,1,0,0,0,100.0
 PA721828,sren-2024,0,1,0,0,0.0
 PA721828,tests-discriminations-2023,1,0,0,0,100.0
 PA721828,valletoux-2023,1,0,0,0,100.0
+PA721828,zan-2023,0,1,0,0,0.0
 PA721832,asap-2020,1,0,0,0,100.0
 PA721832,bioethique-2021,0,1,0,0,0.0
 PA721832,code-justice-mineurs-2021,0,1,0,0,0.0
@@ -26090,7 +26186,7 @@ PA721852,immigration-2024,0,1,0,0,0.0
 PA721852,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA721852,jo-2024,0,1,0,0,0.0
 PA721852,jo-2030,0,1,0,0,0.0
-PA721852,justice-criminelle-2026,0,3,0,0,0.0
+PA721852,justice-criminelle-2026,0,2,0,0,0.0
 PA721852,justice-mineurs,1,3,0,0,14.3
 PA721852,kasbarian-berge,0,1,0,0,0.0
 PA721852,lfr-2022-08,0,2,0,0,0.0
@@ -26525,7 +26621,7 @@ PA721916,ingerences-etrangeres-2024,0,1,0,0,0.0
 PA721916,ivg-constitution-2024,1,0,0,0,100.0
 PA721916,jo-2024,0,1,0,0,0.0
 PA721916,jo-2030,0,2,0,0,0.0
-PA721916,justice-criminelle-2026,0,1,0,0,0.0
+PA721916,justice-criminelle-2026,0,2,0,0,0.0
 PA721916,justice-mineurs,0,1,0,0,0.0
 PA721916,justice-proximite-2021,0,1,0,0,0.0
 PA721916,kasbarian-berge,0,1,0,0,0.0
@@ -26670,7 +26766,7 @@ PA721932,ivg-constitution-ppl-2022,0,1,0,0,0.0
 PA721932,jld-mayotte-2019,0,1,0,0,0.0
 PA721932,jo-2024,0,1,0,0,0.0
 PA721932,jo-2030,0,1,0,0,0.0
-PA721932,justice-criminelle-2026,0,3,0,0,0.0
+PA721932,justice-criminelle-2026,0,2,0,0,0.0
 PA721932,justice-mineurs,0,2,0,0,0.0
 PA721932,kasbarian-berge,0,2,0,0,0.0
 PA721932,lanceurs-alerte-2022,1,0,0,0,100.0
@@ -26983,6 +27079,7 @@ PA721984,inscription-office-nc-ppl-2020,0,1,0,0,0.0
 PA721984,ivg-constitution-2024,1,0,0,0,100.0
 PA721984,jo-2024,0,2,0,0,0.0
 PA721984,jo-2030,0,1,0,0,0.0
+PA721984,justice-criminelle-2026,0,1,0,0,0.0
 PA721984,justice-mineurs,0,1,0,0,0.0
 PA721984,lanceurs-alerte-2022,1,0,0,0,100.0
 PA721984,lfr-2022-08,0,1,0,0,0.0
@@ -27306,6 +27403,7 @@ PA722038,transformation-fonction-publique-2019,0,1,0,0,0.0
 PA722038,urgence-covid-2020,0,1,0,0,0.0
 PA722038,valletoux-2023,1,0,0,0,100.0
 PA722038,vigilance-sanitaire-2021,0,2,0,0,0.0
+PA722038,zan-2023,0,1,0,0,0.0
 PA722046,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA722046,anti-casseurs-2019,0,2,0,0,0.0
 PA722046,assurance-chomage-2022,0,1,0,0,0.0
@@ -27650,7 +27748,7 @@ PA722102,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
 PA722102,ivg-constitution-2024,1,0,0,0,100.0
 PA722102,jo-2024,0,2,0,0,0.0
 PA722102,jo-2030,0,1,0,0,0.0
-PA722102,justice-criminelle-2026,0,4,0,0,0.0
+PA722102,justice-criminelle-2026,0,5,0,0,0.0
 PA722102,justice-mineurs,0,1,0,0,0.0
 PA722102,kasbarian-berge,0,1,0,0,0.0
 PA722102,langues-regionales-2021,0,1,0,0,0.0
@@ -27706,6 +27804,7 @@ PA722102,urgence-agricole-2026,0,1,0,0,0.0
 PA722102,urgence-covid-2020,0,1,0,0,0.0
 PA722102,valletoux-2023,1,0,0,0,100.0
 PA722102,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA722102,zan-2023,0,1,0,0,0.0
 PA722110,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA722110,agec-2020,0,0,1,0,
 PA722110,anti-casseurs-2019,2,0,0,0,100.0
@@ -27838,7 +27937,7 @@ PA722134,immigration-2024,0,1,0,0,0.0
 PA722134,immigration-asile-2018,0,1,0,0,0.0
 PA722134,ivg-constitution-2024,1,0,0,0,100.0
 PA722134,jo-2030,0,4,0,0,0.0
-PA722134,justice-criminelle-2026,0,3,0,0,0.0
+PA722134,justice-criminelle-2026,0,2,0,0,0.0
 PA722134,justice-mineurs,1,4,0,0,12.5
 PA722134,lfr-2022-08,0,2,0,0,0.0
 PA722134,loi-orientation-agricole-2025,0,1,0,0,0.0
@@ -28094,7 +28193,7 @@ PA722162,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
 PA722162,ivg-constitution-2024,1,0,0,0,100.0
 PA722162,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA722162,jo-2030,0,2,0,0,0.0
-PA722162,justice-criminelle-2026,0,3,0,0,0.0
+PA722162,justice-criminelle-2026,0,2,0,0,0.0
 PA722162,justice-mineurs,0,1,0,0,0.0
 PA722162,kasbarian-berge,0,1,0,0,0.0
 PA722162,langues-regionales-2021,0,1,0,0,0.0
@@ -28332,6 +28431,7 @@ PA722202,sortie-crise-sanitaire-2021,1,0,0,0,100.0
 PA722202,terrorisme-renseignement-2021,1,0,0,0,100.0
 PA722202,transformation-fonction-publique-2019,1,0,0,0,100.0
 PA722202,urgence-covid-2020,1,0,0,0,100.0
+PA722202,zan-2023,0,2,0,0,0.0
 PA722218,bioethique-2021,1,0,0,0,100.0
 PA722218,climat-resilience-2021,1,0,0,0,100.0
 PA722218,code-justice-mineurs-2021,0,1,0,0,0.0
@@ -28763,6 +28863,7 @@ PA722308,protection-enfants-2022,1,0,0,0,100.0
 PA722308,securite-globale-2021,0,2,0,0,0.0
 PA722308,terrorisme-renseignement-2021,0,1,0,0,0.0
 PA722308,vigilance-sanitaire-2021,2,0,0,0,100.0
+PA722308,zan-2023,0,1,0,0,0.0
 PA722312,agec-2020,1,0,0,0,100.0
 PA722312,anti-casseurs-2019,0,0,1,0,
 PA722312,asap-2020,0,1,0,0,0.0
@@ -28867,7 +28968,7 @@ PA722336,ivg-constitution-2024,1,0,0,0,100.0
 PA722336,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA722336,jo-2024,0,1,0,0,0.0
 PA722336,jo-2030,0,1,0,0,0.0
-PA722336,justice-criminelle-2026,0,2,0,0,0.0
+PA722336,justice-criminelle-2026,0,3,0,0,0.0
 PA722336,justice-mineurs,0,1,0,0,0.0
 PA722336,kasbarian-berge,0,2,0,0,0.0
 PA722336,langues-regionales-2021,1,0,0,0,100.0
@@ -28924,6 +29025,7 @@ PA722336,urgence-covid-2020,0,1,0,0,0.0
 PA722336,valletoux-2023,1,0,0,0,100.0
 PA722336,vigilance-sanitaire-2021,0,2,0,0,0.0
 PA722336,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA722336,zan-2023,0,1,0,0,0.0
 PA722344,agec-2020,1,0,0,0,100.0
 PA722344,anti-casseurs-2019,0,1,1,0,0.0
 PA722344,asap-2020,1,0,0,0,100.0
@@ -29176,7 +29278,7 @@ PA722374,ingerences-etrangeres-2024,0,1,0,0,0.0
 PA722374,ivg-constitution-ppl-2022,0,0,1,0,
 PA722374,jo-2024,0,1,0,0,0.0
 PA722374,jo-2030,0,2,0,0,0.0
-PA722374,justice-criminelle-2026,0,3,0,0,0.0
+PA722374,justice-criminelle-2026,0,2,0,0,0.0
 PA722374,justice-mineurs,0,2,0,0,0.0
 PA722374,kasbarian-berge,0,1,0,0,0.0
 PA722374,langues-regionales-2021,0,1,0,0,0.0
@@ -29227,6 +29329,7 @@ PA722374,urgence-agricole-2026,1,1,0,0,75.0
 PA722374,urgence-covid-2020,0,1,0,0,0.0
 PA722374,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA722374,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA722374,zan-2023,0,1,0,0,0.0
 PA722382,aide-a-mourir,0,0,1,0,
 PA722382,anti-casseurs-2019,0,1,0,0,0.0
 PA722382,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -29607,6 +29710,7 @@ PA757225,retention-attentats-2026,0,1,0,0,0.0
 PA757225,simplification-vie-economique-2026,0,1,0,0,0.0
 PA757225,sren-2024,0,1,0,0,0.0
 PA757225,surete-transports-2025,0,1,0,0,0.0
+PA757225,zan-2023,0,1,0,0,0.0
 PA759192,anti-casseurs-2019,0,1,0,0,0.0
 PA759192,asap-2020,0,0,1,0,
 PA759192,code-justice-mineurs-2021,0,1,0,0,0.0
@@ -30126,6 +30230,7 @@ PA791824,simplification-vie-economique-2026,2,0,0,0,100.0
 PA791824,surete-transports-2025,1,0,0,0,100.0
 PA791824,urgence-agricole-2026,3,0,0,0,100.0
 PA791824,vote-correspondance-detenus-2025,1,0,0,0,100.0
+PA791824,zan-2023,1,0,0,0,100.0
 PA793094,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793094,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA793094,aide-a-mourir,0,1,0,0,0.0
@@ -30185,6 +30290,7 @@ PA793094,sren-2024,1,1,0,0,33.3
 PA793094,surete-transports-2025,0,1,0,0,0.0
 PA793094,urgence-agricole-2026,0,1,0,0,0.0
 PA793094,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA793094,zan-2023,0,0,1,0,
 PA793102,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA793102,aide-a-mourir,0,1,0,0,0.0
 PA793102,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -30269,6 +30375,7 @@ PA793110,plein-emploi-2023,1,0,0,0,100.0
 PA793110,plui-bas-chablais-2023,1,0,0,0,100.0
 PA793110,pouvoir-achat-2022,0,1,0,0,0.0
 PA793110,sren-2024,1,0,0,0,100.0
+PA793110,zan-2023,1,0,0,0,100.0
 PA793122,aide-a-mourir,0,1,0,0,0.0
 PA793122,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA793122,assurance-chomage-2022,0,1,0,0,0.0
@@ -30297,7 +30404,7 @@ PA793122,ivg-constitution-2024,1,0,0,0,100.0
 PA793122,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA793122,jo-2024,0,1,0,0,0.0
 PA793122,jo-2030,0,1,0,0,0.0
-PA793122,justice-criminelle-2026,0,3,0,0,0.0
+PA793122,justice-criminelle-2026,0,2,0,0,0.0
 PA793122,justice-mineurs,0,1,0,0,0.0
 PA793122,kasbarian-berge,0,3,0,0,0.0
 PA793122,lfr-2022-08,0,2,0,0,0.0
@@ -30329,6 +30436,7 @@ PA793122,surete-transports-2025,0,1,0,0,0.0
 PA793122,tests-discriminations-2023,1,0,0,0,100.0
 PA793122,urgence-agricole-2026,0,1,1,0,0.0
 PA793122,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA793122,zan-2023,0,2,0,0,0.0
 PA793134,aide-a-mourir,0,1,0,0,0.0
 PA793134,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA793134,bien-vieillir-2024,1,0,0,0,100.0
@@ -30350,7 +30458,7 @@ PA793134,ivg-constitution-2024,1,0,0,0,100.0
 PA793134,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA793134,jo-2024,0,1,0,0,0.0
 PA793134,jo-2030,0,4,0,0,0.0
-PA793134,justice-criminelle-2026,0,2,0,0,0.0
+PA793134,justice-criminelle-2026,0,1,0,0,0.0
 PA793134,justice-mineurs,0,1,0,0,0.0
 PA793134,kasbarian-berge,0,1,0,0,0.0
 PA793134,lfr-2022-08,0,0,1,0,
@@ -30455,6 +30563,7 @@ PA793146,surete-transports-2025,0,2,0,0,0.0
 PA793146,urgence-agricole-2026,0,2,0,0,0.0
 PA793146,valletoux-2023,1,0,0,0,100.0
 PA793146,violences-sexuelles-sexistes-2025,0,0,1,0,
+PA793146,zan-2023,0,1,0,0,0.0
 PA793158,aide-a-mourir,0,1,0,0,0.0
 PA793158,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA793158,cadmium-engrais-2026,0,1,0,0,0.0
@@ -30564,6 +30673,7 @@ PA793166,surete-transports-2025,0,1,0,0,0.0
 PA793166,tests-discriminations-2023,0,1,0,0,0.0
 PA793166,urgence-agricole-2026,0,3,0,0,0.0
 PA793166,valletoux-2023,1,0,0,0,100.0
+PA793166,zan-2023,0,1,0,0,0.0
 PA793174,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793174,aide-a-mourir,0,0,1,0,
 PA793174,allocations-familiales-premier-enfant-2025,1,0,0,0,100.0
@@ -30612,6 +30722,7 @@ PA793174,tests-discriminations-2023,0,1,0,0,0.0
 PA793174,urgence-agricole-2026,1,0,0,0,100.0
 PA793174,valletoux-2023,0,1,0,0,0.0
 PA793174,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA793174,zan-2023,0,1,0,0,0.0
 PA793182,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793182,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA793182,aide-a-mourir,0,1,0,0,0.0
@@ -30697,6 +30808,7 @@ PA793190,rist-2023,1,0,0,0,100.0
 PA793190,sren-2024,0,1,0,0,0.0
 PA793190,tests-discriminations-2023,1,0,0,0,100.0
 PA793190,valletoux-2023,1,0,0,0,100.0
+PA793190,zan-2023,0,2,0,0,0.0
 PA793194,aide-a-mourir,1,0,0,0,100.0
 PA793194,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA793194,assurance-chomage-2022,0,1,0,0,0.0
@@ -30744,6 +30856,7 @@ PA793194,sren-2024,0,1,0,0,0.0
 PA793194,surete-transports-2025,0,1,0,0,0.0
 PA793194,urgence-agricole-2026,0,2,0,0,0.0
 PA793194,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA793194,zan-2023,0,1,0,0,0.0
 PA793210,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA793210,assurance-chomage-2022,1,0,0,0,100.0
 PA793210,bien-vieillir-2024,0,0,1,0,
@@ -30786,6 +30899,7 @@ PA793210,surete-transports-2025,0,1,0,0,0.0
 PA793210,tests-discriminations-2023,1,0,0,0,100.0
 PA793210,valletoux-2023,0,0,1,0,
 PA793210,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA793210,zan-2023,0,1,0,0,0.0
 PA793214,aide-a-mourir,1,0,0,0,100.0
 PA793214,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
 PA793214,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
@@ -30863,6 +30977,7 @@ PA793218,sren-2024,1,0,0,0,100.0
 PA793218,surete-transports-2025,0,2,0,0,0.0
 PA793218,urgence-agricole-2026,0,4,0,0,0.0
 PA793218,violences-sexuelles-sexistes-2025,0,0,1,0,
+PA793218,zan-2023,0,1,0,0,0.0
 PA793230,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793230,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA793230,aide-a-mourir,0,1,0,0,0.0
@@ -31055,7 +31170,7 @@ PA793254,ingerences-etrangeres-2024,0,1,0,0,0.0
 PA793254,ivg-constitution-ppl-2022,0,1,0,0,0.0
 PA793254,jo-2024,0,1,0,0,0.0
 PA793254,jo-2030,0,4,0,0,0.0
-PA793254,justice-criminelle-2026,0,2,0,0,0.0
+PA793254,justice-criminelle-2026,0,1,0,0,0.0
 PA793254,justice-mineurs,0,2,0,0,0.0
 PA793254,kasbarian-berge,0,1,0,0,0.0
 PA793254,lfr-2022-08,0,0,1,0,
@@ -31095,6 +31210,7 @@ PA793254,sren-2024,3,0,0,0,100.0
 PA793254,surete-transports-2025,0,1,0,0,0.0
 PA793254,urgence-agricole-2026,0,3,0,0,0.0
 PA793254,valletoux-2023,1,0,0,0,100.0
+PA793254,zan-2023,0,1,0,0,0.0
 PA793262,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA793262,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA793262,aide-a-mourir,1,0,0,0,100.0
@@ -31191,7 +31307,7 @@ PA793270,ivg-constitution-2024,1,0,0,0,100.0
 PA793270,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA793270,jo-2024,0,2,0,0,0.0
 PA793270,jo-2030,0,3,0,0,0.0
-PA793270,justice-criminelle-2026,0,1,0,0,0.0
+PA793270,justice-criminelle-2026,0,2,0,0,0.0
 PA793270,justice-mineurs,1,4,0,0,12.5
 PA793270,kasbarian-berge,0,1,0,0,0.0
 PA793270,lfr-2022-08,0,1,0,0,0.0
@@ -31232,6 +31348,7 @@ PA793270,valletoux-2023,1,0,0,0,100.0
 PA793270,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA793270,vote-correspondance-detenus-2025,0,1,0,0,0.0
 PA793270,vsa-commerces-2026,0,1,0,0,0.0
+PA793270,zan-2023,0,1,0,0,0.0
 PA793278,assurance-chomage-2022,0,1,0,0,0.0
 PA793278,contenus-terroristes-2022,0,1,0,0,0.0
 PA793278,fin-regimes-exception-covid-2022,0,1,0,0,0.0
@@ -31309,6 +31426,7 @@ PA793290,sren-2024,2,0,0,0,100.0
 PA793290,surete-transports-2025,0,1,0,0,0.0
 PA793290,urgence-agricole-2026,0,2,0,0,0.0
 PA793290,valletoux-2023,1,0,0,0,100.0
+PA793290,zan-2023,0,1,0,0,0.0
 PA793298,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA793298,aide-a-mourir,0,1,0,0,0.0
 PA793298,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -31648,6 +31766,7 @@ PA793362,surete-transports-2025,0,1,0,0,0.0
 PA793362,tests-discriminations-2023,0,1,0,0,0.0
 PA793362,urgence-agricole-2026,0,3,0,0,0.0
 PA793362,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA793362,zan-2023,0,1,0,0,0.0
 PA793374,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793374,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA793374,aide-a-mourir,0,1,0,0,0.0
@@ -31778,7 +31897,7 @@ PA793394,ineligibilite-violences-aggravees-2023,0,0,1,0,
 PA793394,ivg-constitution-2024,1,0,0,0,100.0
 PA793394,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA793394,jo-2030,2,0,1,0,100.0
-PA793394,justice-criminelle-2026,4,0,0,0,100.0
+PA793394,justice-criminelle-2026,3,0,0,0,100.0
 PA793394,justice-mineurs,2,0,0,0,100.0
 PA793394,kasbarian-berge,1,0,0,0,100.0
 PA793394,lfr-2022-08,1,0,0,0,100.0
@@ -31874,6 +31993,7 @@ PA793398,simplification-vie-economique-2026,0,1,0,0,0.0
 PA793398,surete-transports-2025,0,1,0,0,0.0
 PA793398,urgence-agricole-2026,0,0,1,0,
 PA793398,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
+PA793398,zan-2023,0,1,0,0,0.0
 PA793416,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA793416,assurance-chomage-2022,0,1,0,0,0.0
 PA793416,cdi-employabilite-2024,0,1,0,0,0.0
@@ -31916,6 +32036,7 @@ PA793416,surete-transports-2025,0,1,0,0,0.0
 PA793416,tests-discriminations-2023,1,0,0,0,100.0
 PA793416,valletoux-2023,1,0,0,0,100.0
 PA793416,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA793416,zan-2023,0,1,0,0,0.0
 PA793432,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793432,aide-a-mourir,0,1,0,0,0.0
 PA793432,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -31990,7 +32111,7 @@ PA793444,immigration-2024,1,0,0,0,100.0
 PA793444,ivg-constitution-2024,1,0,0,0,100.0
 PA793444,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA793444,jo-2030,1,0,0,0,100.0
-PA793444,justice-criminelle-2026,2,0,0,0,100.0
+PA793444,justice-criminelle-2026,1,0,0,0,100.0
 PA793444,justice-mineurs,4,0,0,0,100.0
 PA793444,kasbarian-berge,1,0,0,0,100.0
 PA793444,lfr-2022-08,2,0,0,0,100.0
@@ -32173,6 +32294,7 @@ PA793476,plui-bas-chablais-2023,0,1,0,0,0.0
 PA793476,pouvoir-achat-2022,1,0,0,0,100.0
 PA793476,rist-2023,1,0,0,0,100.0
 PA793476,sren-2024,0,1,0,0,0.0
+PA793476,zan-2023,0,1,0,0,0.0
 PA793500,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA793500,assurance-chomage-2022,0,1,0,0,0.0
 PA793500,bien-vieillir-2024,1,0,0,0,100.0
@@ -32216,7 +32338,6 @@ PA793508,ivg-constitution-2024,0,1,0,0,0.0
 PA793508,ivg-constitution-ppl-2022,0,0,1,0,
 PA793508,jo-2024,0,1,0,0,0.0
 PA793508,jo-2030,0,1,0,0,0.0
-PA793508,justice-criminelle-2026,0,1,0,0,0.0
 PA793508,justice-mineurs,0,1,0,0,0.0
 PA793508,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA793508,lopj-2023,0,1,0,0,0.0
@@ -32300,6 +32421,7 @@ PA793520,sren-2024,0,1,0,0,0.0
 PA793520,surete-transports-2025,0,1,0,0,0.0
 PA793520,urgence-agricole-2026,0,0,1,0,
 PA793520,valletoux-2023,1,0,0,0,100.0
+PA793520,zan-2023,0,1,0,0,0.0
 PA793528,assurance-chomage-2022,0,1,0,0,0.0
 PA793528,bien-vieillir-2024,1,0,0,0,100.0
 PA793528,bouclier-loyer-2023,1,0,0,0,100.0
@@ -32325,6 +32447,7 @@ PA793528,plui-bas-chablais-2023,0,1,0,0,0.0
 PA793528,rist-2023,1,0,0,0,100.0
 PA793528,tests-discriminations-2023,1,0,0,0,100.0
 PA793528,valletoux-2023,1,0,0,0,100.0
+PA793528,zan-2023,0,1,0,0,0.0
 PA793532,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793532,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA793532,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -32453,7 +32576,7 @@ PA793556,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
 PA793556,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
 PA793556,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA793556,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
-PA793556,justice-criminelle-2026,0,4,0,0,0.0
+PA793556,justice-criminelle-2026,0,3,0,0,0.0
 PA793556,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 PA793556,montagne-vivante-2026,0,1,0,0,0.0
 PA793556,presomption-legitime-defense,1,0,0,0,100.0
@@ -32555,6 +32678,7 @@ PA793588,pouvoir-achat-2022,1,0,0,0,100.0
 PA793588,rist-2023,1,0,0,0,100.0
 PA793588,tests-discriminations-2023,1,0,0,0,100.0
 PA793588,valletoux-2023,1,0,0,0,100.0
+PA793588,zan-2023,0,1,0,0,0.0
 PA793592,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA793592,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA793592,aide-a-mourir,0,1,0,0,0.0
@@ -32581,7 +32705,7 @@ PA793592,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
 PA793592,ivg-constitution-2024,1,0,0,0,100.0
 PA793592,ivg-constitution-ppl-2022,0,1,0,0,0.0
 PA793592,jo-2030,0,1,0,0,0.0
-PA793592,justice-criminelle-2026,0,2,0,0,0.0
+PA793592,justice-criminelle-2026,0,1,0,0,0.0
 PA793592,justice-mineurs,0,3,0,0,0.0
 PA793592,kasbarian-berge,0,1,0,0,0.0
 PA793592,lfr-2022-08,0,0,1,0,
@@ -32633,7 +32757,6 @@ PA793608,ingerences-etrangeres-2024,0,1,0,0,0.0
 PA793608,ivg-constitution-2024,1,0,0,0,100.0
 PA793608,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA793608,jo-2030,0,3,0,0,0.0
-PA793608,justice-criminelle-2026,0,1,0,0,0.0
 PA793608,justice-mineurs,0,1,0,0,0.0
 PA793608,kasbarian-berge,0,1,0,0,0.0
 PA793608,loi-orientation-agricole-2025,0,2,0,0,0.0
@@ -32698,7 +32821,7 @@ PA793616,ivg-constitution-2024,1,0,0,0,100.0
 PA793616,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA793616,jo-2024,0,1,0,0,0.0
 PA793616,jo-2030,0,1,0,0,0.0
-PA793616,justice-criminelle-2026,0,4,0,0,0.0
+PA793616,justice-criminelle-2026,0,3,0,0,0.0
 PA793616,justice-mineurs,0,4,0,0,0.0
 PA793616,kasbarian-berge,0,2,0,0,0.0
 PA793616,lfr-2022-08,0,1,1,0,0.0
@@ -32737,6 +32860,7 @@ PA793616,surete-transports-2025,0,2,0,0,0.0
 PA793616,urgence-agricole-2026,0,3,0,0,0.0
 PA793616,valletoux-2023,1,0,0,0,100.0
 PA793616,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA793616,zan-2023,0,1,0,0,0.0
 PA793624,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793624,aide-a-mourir,0,0,1,0,
 PA793624,allocations-familiales-premier-enfant-2025,1,0,0,0,100.0
@@ -32990,6 +33114,7 @@ PA793664,sren-2024,1,0,0,0,100.0
 PA793664,surete-transports-2025,1,0,0,0,100.0
 PA793664,urgence-agricole-2026,4,0,0,0,100.0
 PA793664,valletoux-2023,0,0,1,0,
+PA793664,zan-2023,2,0,0,0,100.0
 PA793672,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793672,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA793672,aide-a-mourir,0,1,0,0,0.0
@@ -33095,6 +33220,7 @@ PA793680,pouvoir-achat-2022,0,1,0,0,0.0
 PA793680,rist-2023,1,0,0,0,100.0
 PA793680,sren-2024,1,0,0,0,100.0
 PA793680,tests-discriminations-2023,0,1,0,0,0.0
+PA793680,zan-2023,1,1,0,0,50.0
 PA793688,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793688,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA793688,assurance-chomage-2022,1,0,0,0,100.0
@@ -33120,6 +33246,7 @@ PA793688,partage-valeur-2023,0,1,0,0,0.0
 PA793688,plein-emploi-2023,1,0,0,0,100.0
 PA793688,pouvoir-achat-2022,0,1,0,0,0.0
 PA793688,sren-2024,1,0,0,0,100.0
+PA793688,zan-2023,0,1,0,0,0.0
 PA793696,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA793696,aide-a-mourir,0,1,0,0,0.0
 PA793696,allocations-familiales-premier-enfant-2025,1,0,0,0,100.0
@@ -33275,7 +33402,7 @@ PA793716,ivg-constitution-2024,1,0,0,0,100.0
 PA793716,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA793716,jo-2024,0,2,0,0,0.0
 PA793716,jo-2030,0,3,0,0,0.0
-PA793716,justice-criminelle-2026,0,4,0,0,0.0
+PA793716,justice-criminelle-2026,0,3,0,0,0.0
 PA793716,justice-mineurs,0,2,0,0,0.0
 PA793716,kasbarian-berge,0,3,0,0,0.0
 PA793716,lfr-2022-08,0,1,0,0,0.0
@@ -33312,6 +33439,7 @@ PA793716,tests-discriminations-2023,1,0,0,0,100.0
 PA793716,urgence-agricole-2026,0,1,0,0,0.0
 PA793716,valletoux-2023,1,0,0,0,100.0
 PA793716,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA793716,zan-2023,0,1,0,0,0.0
 PA793724,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793724,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA793724,cdi-employabilite-2024,1,0,0,0,100.0
@@ -33458,6 +33586,7 @@ PA793744,tests-discriminations-2023,0,1,0,0,0.0
 PA793744,urgence-agricole-2026,3,0,0,0,100.0
 PA793744,vote-correspondance-detenus-2025,1,0,0,0,100.0
 PA793744,vsa-commerces-2026,1,0,0,0,100.0
+PA793744,zan-2023,1,0,0,0,100.0
 PA793756,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA793756,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA793756,aide-a-mourir,1,0,0,0,100.0
@@ -33638,6 +33767,7 @@ PA793792,lpm-2023,0,1,0,0,0.0
 PA793792,navigation-aerienne-greve-2023,0,1,0,0,0.0
 PA793792,plein-emploi-2023,0,2,0,0,0.0
 PA793792,sren-2024,0,1,0,0,0.0
+PA793792,zan-2023,0,1,0,0,0.0
 PA793796,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793796,aide-a-mourir,1,0,0,0,100.0
 PA793796,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -33696,6 +33826,7 @@ PA793796,tests-discriminations-2023,1,0,0,0,100.0
 PA793796,urgence-agricole-2026,0,3,1,0,0.0
 PA793796,valletoux-2023,0,0,1,0,
 PA793796,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA793796,zan-2023,0,1,0,0,0.0
 PA793816,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793816,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA793816,aide-a-mourir,1,0,0,0,100.0
@@ -33778,7 +33909,7 @@ PA793832,ivg-constitution-2024,1,0,0,0,100.0
 PA793832,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA793832,jo-2024,0,2,0,0,0.0
 PA793832,jo-2030,0,3,0,0,0.0
-PA793832,justice-criminelle-2026,0,4,0,0,0.0
+PA793832,justice-criminelle-2026,0,5,0,0,0.0
 PA793832,justice-mineurs,0,1,0,0,0.0
 PA793832,kasbarian-berge,0,4,0,0,0.0
 PA793832,lfr-2022-08,0,1,1,0,0.0
@@ -33860,6 +33991,7 @@ PA793844,sren-2024,1,0,0,0,100.0
 PA793844,surete-transports-2025,0,2,0,0,0.0
 PA793844,valletoux-2023,1,0,0,0,100.0
 PA793844,violences-sexuelles-sexistes-2025,0,0,1,0,
+PA793844,zan-2023,0,1,0,0,0.0
 PA793852,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA793852,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA793852,aide-a-mourir,0,1,0,0,0.0
@@ -33933,6 +34065,7 @@ PA793860,rist-2023,1,0,0,0,100.0
 PA793860,sren-2024,1,1,0,0,50.0
 PA793860,tests-discriminations-2023,1,0,0,0,100.0
 PA793860,valletoux-2023,1,0,0,0,100.0
+PA793860,zan-2023,0,1,0,0,0.0
 PA793872,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793872,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA793872,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -34007,6 +34140,7 @@ PA793876,pouvoir-achat-2022,1,0,0,0,100.0
 PA793876,rist-2023,1,0,0,0,100.0
 PA793876,sren-2024,0,2,0,0,0.0
 PA793876,valletoux-2023,1,0,0,0,100.0
+PA793876,zan-2023,0,1,0,0,0.0
 PA793884,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793884,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA793884,assurance-chomage-2022,1,0,0,0,100.0
@@ -34122,6 +34256,7 @@ PA793904,sren-2024,3,0,0,0,100.0
 PA793904,surete-transports-2025,0,1,0,0,0.0
 PA793904,violences-sexuelles-sexistes-2025,0,0,1,0,
 PA793904,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA793904,zan-2023,0,1,0,0,0.0
 PA793912,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA793912,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA793912,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -34149,7 +34284,7 @@ PA793912,industrie-verte-2023,1,0,0,0,100.0
 PA793912,ivg-constitution-2024,1,0,0,0,100.0
 PA793912,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA793912,jo-2030,3,0,0,0,100.0
-PA793912,justice-criminelle-2026,2,0,0,0,100.0
+PA793912,justice-criminelle-2026,1,0,0,0,100.0
 PA793912,justice-mineurs,4,0,0,0,100.0
 PA793912,kasbarian-berge,4,0,0,0,100.0
 PA793912,lfr-2022-08,1,0,0,0,100.0
@@ -34194,6 +34329,7 @@ PA793912,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA793912,valletoux-2023,0,1,0,0,0.0
 PA793912,violences-sexuelles-sexistes-2025,0,1,0,0,0.0
 PA793912,vote-correspondance-detenus-2025,1,0,0,0,100.0
+PA793912,zan-2023,0,1,0,0,0.0
 PA793924,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA793924,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 PA793924,protection-enfants-2026,1,0,0,0,100.0
@@ -34227,7 +34363,7 @@ PA793928,ivg-constitution-2024,1,0,0,0,100.0
 PA793928,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA793928,jo-2024,0,2,0,0,0.0
 PA793928,jo-2030,0,4,0,0,0.0
-PA793928,justice-criminelle-2026,0,5,0,0,0.0
+PA793928,justice-criminelle-2026,0,4,0,0,0.0
 PA793928,justice-mineurs,0,4,0,0,0.0
 PA793928,kasbarian-berge,0,4,0,0,0.0
 PA793928,lfr-2022-08,0,1,1,0,0.0
@@ -34267,6 +34403,7 @@ PA793928,vaisselle-plastique-cantines-2026,0,1,0,0,0.0
 PA793928,valletoux-2023,1,0,0,0,100.0
 PA793928,violences-sexuelles-sexistes-2025,0,0,1,0,
 PA793928,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA793928,zan-2023,0,1,0,0,0.0
 PA793940,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA793940,assurance-chomage-2022,0,1,0,0,0.0
 PA793940,bouclier-loyer-2023,1,0,0,0,100.0
@@ -34298,6 +34435,7 @@ PA793940,simplification-vie-economique-2026,0,0,1,0,
 PA793940,surete-transports-2025,0,1,0,0,0.0
 PA793940,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA793940,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA793940,zan-2023,0,1,0,0,0.0
 PA793944,aide-a-mourir,0,0,1,0,
 PA793944,bien-vieillir-2024,1,0,0,0,100.0
 PA793944,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
@@ -34470,7 +34608,7 @@ PA793992,industrie-verte-2023,0,1,0,0,0.0
 PA793992,ivg-constitution-2024,1,0,0,0,100.0
 PA793992,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA793992,jo-2024,0,1,0,0,0.0
-PA793992,justice-criminelle-2026,0,2,0,0,0.0
+PA793992,justice-criminelle-2026,0,1,0,0,0.0
 PA793992,justice-mineurs,0,1,0,0,0.0
 PA793992,kasbarian-berge,0,1,0,0,0.0
 PA793992,lfr-2022-08,0,1,0,0,0.0
@@ -34500,6 +34638,7 @@ PA793992,simplification-vie-economique-2026,0,1,0,0,0.0
 PA793992,sren-2024,0,1,0,0,0.0
 PA793992,surete-transports-2025,0,1,0,0,0.0
 PA793992,urgence-agricole-2026,0,1,0,0,0.0
+PA793992,zan-2023,0,1,0,0,0.0
 PA794004,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA794004,assurance-chomage-2022,0,1,0,0,0.0
 PA794004,energies-renouvelables-2023,0,1,0,0,0.0
@@ -34522,6 +34661,7 @@ PA794004,rist-2023,1,0,0,0,100.0
 PA794004,sren-2024,0,1,0,0,0.0
 PA794004,tests-discriminations-2023,1,0,0,0,100.0
 PA794004,valletoux-2023,1,0,0,0,100.0
+PA794004,zan-2023,0,1,0,0,0.0
 PA794008,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA794008,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA794008,allocations-familiales-premier-enfant-2025,1,0,0,0,100.0
@@ -34655,6 +34795,7 @@ PA794022,urgence-agricole-2026,3,0,0,0,100.0
 PA794022,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA794022,valletoux-2023,0,0,1,0,
 PA794022,violences-sexuelles-sexistes-2025,0,0,1,0,
+PA794022,zan-2023,1,0,0,0,100.0
 PA794030,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA794030,aide-a-mourir,1,0,0,0,100.0
 PA794030,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
@@ -34703,6 +34844,7 @@ PA794030,simplification-vie-economique-2026,0,1,0,0,0.0
 PA794030,sren-2024,1,0,0,0,100.0
 PA794030,tests-discriminations-2023,0,1,0,0,0.0
 PA794030,urgence-agricole-2026,0,1,0,0,0.0
+PA794030,zan-2023,0,1,0,0,0.0
 PA794038,aide-a-mourir,0,1,0,0,0.0
 PA794038,bien-vieillir-2024,0,0,1,0,
 PA794038,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
@@ -34737,6 +34879,7 @@ PA794038,simplification-vie-economique-2026,0,1,0,0,0.0
 PA794038,sren-2024,1,0,0,0,100.0
 PA794038,urgence-agricole-2026,0,1,0,0,0.0
 PA794038,valletoux-2023,1,0,0,0,100.0
+PA794038,zan-2023,0,1,0,0,0.0
 PA794042,delit-sejour-irregulier-ppl-2025,0,1,0,0,0.0
 PA794042,duplomb-2025,0,1,0,0,0.0
 PA794042,justice-mineurs,0,1,0,0,0.0
@@ -34813,6 +34956,7 @@ PA794066,moratoire-megabassines-ppl-2023,1,0,0,0,100.0
 PA794066,nucleaire-acceleration-2023,1,0,0,0,100.0
 PA794066,pouvoir-achat-2022,0,1,0,0,0.0
 PA794066,sren-2024,1,0,0,0,100.0
+PA794066,zan-2023,0,1,0,0,0.0
 PA794082,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA794082,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA794082,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -34841,7 +34985,7 @@ PA794082,immigration-2024,1,0,0,0,100.0
 PA794082,industrie-verte-2023,1,0,0,0,100.0
 PA794082,ivg-constitution-2024,1,0,0,0,100.0
 PA794082,jo-2030,3,0,0,0,100.0
-PA794082,justice-criminelle-2026,3,0,0,0,100.0
+PA794082,justice-criminelle-2026,2,0,0,0,100.0
 PA794082,justice-mineurs,5,0,0,0,100.0
 PA794082,kasbarian-berge,1,0,0,0,100.0
 PA794082,lfr-2022-08,1,0,0,0,100.0
@@ -34882,6 +35026,7 @@ PA794082,surete-transports-2025,1,0,0,0,100.0
 PA794082,tests-discriminations-2023,0,1,0,0,0.0
 PA794082,urgence-agricole-2026,4,0,0,0,100.0
 PA794082,valletoux-2023,0,1,0,0,0.0
+PA794082,zan-2023,1,1,0,0,50.0
 PA794094,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA794094,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA794094,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -34907,7 +35052,7 @@ PA794094,industrie-verte-2023,0,0,1,0,
 PA794094,ivg-constitution-2024,1,0,0,0,100.0
 PA794094,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA794094,jo-2024,0,0,1,0,
-PA794094,justice-criminelle-2026,1,0,0,0,100.0
+PA794094,justice-criminelle-2026,2,0,0,0,100.0
 PA794094,justice-mineurs,1,0,0,0,100.0
 PA794094,kasbarian-berge,1,0,0,0,100.0
 PA794094,lfr-2022-08,1,0,0,0,100.0
@@ -35011,6 +35156,7 @@ PA794106,sren-2024,1,0,0,0,100.0
 PA794106,urgence-agricole-2026,2,0,0,0,100.0
 PA794106,violences-sexuelles-sexistes-2025,0,1,0,0,0.0
 PA794106,vsa-commerces-2026,1,0,0,0,100.0
+PA794106,zan-2023,1,0,0,0,100.0
 PA794114,accueils-physiques-ppl-2023,0,1,0,0,0.0
 PA794114,aide-a-mourir,0,1,0,0,0.0
 PA794114,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -35057,6 +35203,7 @@ PA794114,retention-2025,0,0,1,0,
 PA794114,ripost-2026,0,2,0,0,0.0
 PA794114,sren-2024,0,1,0,0,0.0
 PA794114,urgence-agricole-2026,1,0,0,0,100.0
+PA794114,zan-2023,0,1,0,0,0.0
 PA794118,aide-a-mourir,0,1,0,0,0.0
 PA794118,allocations-familiales-premier-enfant-2025,1,0,0,0,100.0
 PA794118,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -35154,6 +35301,7 @@ PA794130,simplification-vie-economique-2026,2,0,0,0,100.0
 PA794130,sren-2024,1,0,0,0,100.0
 PA794130,urgence-agricole-2026,1,0,0,0,100.0
 PA794130,violences-sexuelles-sexistes-2025,0,1,0,0,0.0
+PA794130,zan-2023,1,0,0,0,100.0
 PA794138,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA794138,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA794138,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -35235,6 +35383,7 @@ PA794138,urgence-agricole-2026,2,0,0,0,100.0
 PA794138,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA794138,valletoux-2023,0,1,0,0,0.0
 PA794138,violences-sexuelles-sexistes-2025,0,1,0,0,0.0
+PA794138,zan-2023,0,1,0,0,0.0
 PA794146,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA794146,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA794146,aide-a-mourir,1,0,0,0,100.0
@@ -35316,7 +35465,7 @@ PA794154,ivg-constitution-2024,1,0,0,0,100.0
 PA794154,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA794154,jo-2024,2,0,0,0,100.0
 PA794154,jo-2030,4,0,0,0,100.0
-PA794154,justice-criminelle-2026,3,0,1,0,100.0
+PA794154,justice-criminelle-2026,4,0,0,0,100.0
 PA794154,justice-mineurs,3,0,0,0,100.0
 PA794154,kasbarian-berge,1,0,0,0,100.0
 PA794154,lfr-2022-08,1,0,0,0,100.0
@@ -35357,6 +35506,7 @@ PA794154,surete-transports-2025,1,1,0,0,50.0
 PA794154,urgence-agricole-2026,3,0,0,0,100.0
 PA794154,valletoux-2023,0,0,1,0,
 PA794154,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA794154,zan-2023,1,0,0,0,100.0
 PA794166,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA794166,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA794166,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -35412,6 +35562,7 @@ PA794166,simplification-vie-economique-2026,1,1,0,0,80.0
 PA794166,surete-transports-2025,1,0,0,0,100.0
 PA794166,tests-discriminations-2023,0,1,0,0,0.0
 PA794166,urgence-agricole-2026,2,0,0,0,100.0
+PA794166,zan-2023,1,0,0,0,100.0
 PA794178,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA794178,assurance-chomage-2022,0,1,0,0,0.0
 PA794178,bien-vieillir-2024,0,0,1,0,
@@ -35527,6 +35678,7 @@ PA794198,urgence-agricole-2026,0,1,0,0,0.0
 PA794198,violences-sexuelles-sexistes-2025,0,0,1,0,
 PA794198,vote-correspondance-detenus-2025,0,1,0,0,0.0
 PA794198,vsa-commerces-2026,0,1,0,0,0.0
+PA794198,zan-2023,0,1,0,0,0.0
 PA794206,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA794206,aide-a-mourir,1,0,0,0,100.0
 PA794206,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -35558,7 +35710,7 @@ PA794206,ivg-constitution-2024,1,0,0,0,100.0
 PA794206,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA794206,jo-2024,0,1,0,0,0.0
 PA794206,jo-2030,0,4,0,0,0.0
-PA794206,justice-criminelle-2026,0,5,0,0,0.0
+PA794206,justice-criminelle-2026,0,6,0,0,0.0
 PA794206,justice-mineurs,1,4,0,0,12.5
 PA794206,kasbarian-berge,0,2,0,0,0.0
 PA794206,lfr-2022-08,0,2,0,0,0.0
@@ -35602,6 +35754,7 @@ PA794206,valletoux-2023,1,0,0,0,100.0
 PA794206,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA794206,vote-correspondance-detenus-2025,0,1,0,0,0.0
 PA794206,vsa-commerces-2026,0,1,0,0,0.0
+PA794206,zan-2023,0,1,0,0,0.0
 PA794214,accueils-physiques-ppl-2023,0,0,1,0,
 PA794214,assurance-chomage-2022,0,1,0,0,0.0
 PA794214,bien-vieillir-2024,1,0,0,0,100.0
@@ -35633,6 +35786,7 @@ PA794214,rist-2023,1,0,0,0,100.0
 PA794214,sren-2024,0,2,0,0,0.0
 PA794214,tests-discriminations-2023,1,0,0,0,100.0
 PA794214,valletoux-2023,1,0,0,0,100.0
+PA794214,zan-2023,0,1,0,0,0.0
 PA794222,assurance-chomage-2022,1,0,0,0,100.0
 PA794222,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 PA794222,derives-sectaires-2024,1,0,0,0,100.0
@@ -35653,6 +35807,7 @@ PA794222,nucleaire-acceleration-2023,0,1,0,0,0.0
 PA794222,pouvoir-achat-2022,1,0,0,0,100.0
 PA794222,rist-2023,1,0,0,0,100.0
 PA794222,sren-2024,1,0,0,0,100.0
+PA794222,zan-2023,0,1,0,0,0.0
 PA794234,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA794234,aide-a-mourir,0,1,0,0,0.0
 PA794234,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -35679,7 +35834,7 @@ PA794234,ivg-constitution-2024,1,0,0,0,100.0
 PA794234,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA794234,jo-2024,0,2,0,0,0.0
 PA794234,jo-2030,0,1,0,0,0.0
-PA794234,justice-criminelle-2026,0,2,0,0,0.0
+PA794234,justice-criminelle-2026,0,1,0,0,0.0
 PA794234,justice-mineurs,0,1,0,0,0.0
 PA794234,kasbarian-berge,0,1,0,0,0.0
 PA794234,lfr-2022-08,0,1,0,0,0.0
@@ -35715,6 +35870,7 @@ PA794234,tests-discriminations-2023,1,0,0,0,100.0
 PA794234,urgence-agricole-2026,0,2,0,0,0.0
 PA794234,valletoux-2023,1,0,0,0,100.0
 PA794234,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA794234,zan-2023,0,1,0,0,0.0
 PA794262,aide-a-mourir,0,1,0,0,0.0
 PA794262,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
 PA794262,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
@@ -35816,6 +35972,7 @@ PA794278,simplification-vie-economique-2026,0,1,0,0,0.0
 PA794278,surete-transports-2025,0,1,0,0,0.0
 PA794278,urgence-agricole-2026,0,1,0,0,0.0
 PA794278,valletoux-2023,1,0,0,0,100.0
+PA794278,zan-2023,0,1,0,0,0.0
 PA794286,fin-regimes-exception-covid-2022,1,0,0,0,100.0
 PA794286,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA794286,lfr-2022-08,0,1,1,0,0.0
@@ -35848,6 +36005,7 @@ PA794314,plein-emploi-2023,2,0,0,0,100.0
 PA794314,pouvoir-achat-2022,1,0,0,0,100.0
 PA794314,sren-2024,1,0,0,0,100.0
 PA794314,valletoux-2023,1,0,0,0,100.0
+PA794314,zan-2023,0,1,0,0,0.0
 PA794322,aide-a-mourir,1,0,0,0,100.0
 PA794322,assurance-chomage-2022,1,0,0,0,100.0
 PA794322,bien-vieillir-2024,1,0,0,0,100.0
@@ -35938,7 +36096,7 @@ PA794330,ivg-constitution-2024,1,0,0,0,100.0
 PA794330,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA794330,jo-2024,0,1,0,0,0.0
 PA794330,jo-2030,0,3,0,0,0.0
-PA794330,justice-criminelle-2026,0,6,0,0,0.0
+PA794330,justice-criminelle-2026,0,5,0,0,0.0
 PA794330,justice-mineurs,0,1,0,0,0.0
 PA794330,kasbarian-berge,0,4,0,0,0.0
 PA794330,lfr-2022-08,0,2,0,0,0.0
@@ -35985,6 +36143,7 @@ PA794330,valletoux-2023,1,0,0,0,100.0
 PA794330,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA794330,vote-correspondance-detenus-2025,0,1,0,0,0.0
 PA794330,vsa-commerces-2026,0,1,0,0,0.0
+PA794330,zan-2023,0,1,0,0,0.0
 PA794354,aide-a-mourir,0,1,0,0,0.0
 PA794354,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA794354,bouclier-loyer-2023,0,0,0,1,
@@ -36030,6 +36189,7 @@ PA794354,simplification-vie-economique-2026,0,1,0,0,0.0
 PA794354,sren-2024,1,0,0,0,100.0
 PA794354,urgence-agricole-2026,0,3,0,0,0.0
 PA794354,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA794354,zan-2023,0,0,0,1,
 PA794386,assurance-chomage-2022,0,1,0,0,0.0
 PA794386,bien-vieillir-2024,1,0,0,0,100.0
 PA794386,contenus-terroristes-2022,0,1,0,0,0.0
@@ -36054,6 +36214,7 @@ PA794386,pouvoir-achat-2022,1,0,0,0,100.0
 PA794386,sren-2024,0,1,0,0,0.0
 PA794386,tests-discriminations-2023,1,0,0,0,100.0
 PA794386,valletoux-2023,1,0,0,0,100.0
+PA794386,zan-2023,0,1,0,0,0.0
 PA794402,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA794402,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA794402,assurance-chomage-2022,1,0,0,0,100.0
@@ -36079,6 +36240,7 @@ PA794402,partage-valeur-2023,0,1,0,0,0.0
 PA794402,plein-emploi-2023,1,0,0,0,100.0
 PA794402,plui-bas-chablais-2023,1,0,0,0,100.0
 PA794402,pouvoir-achat-2022,0,1,0,0,0.0
+PA794402,zan-2023,1,0,0,0,100.0
 PA794410,contenus-terroristes-2022,0,1,0,0,0.0
 PA794410,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 PA794410,derives-sectaires-2024,2,0,0,0,100.0
@@ -36151,6 +36313,7 @@ PA794418,surete-transports-2025,0,1,0,0,0.0
 PA794418,urgence-agricole-2026,0,3,0,0,0.0
 PA794418,valletoux-2023,1,0,0,0,100.0
 PA794418,violences-sexuelles-sexistes-2025,0,0,1,0,
+PA794418,zan-2023,0,1,0,0,0.0
 PA794426,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA794426,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA794426,assurance-chomage-2022,0,1,0,0,0.0
@@ -36202,13 +36365,14 @@ PA794426,tests-discriminations-2023,1,0,0,0,100.0
 PA794426,valletoux-2023,1,0,0,0,100.0
 PA794426,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA794426,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA794426,zan-2023,0,1,0,0,0.0
 PA794430,aide-a-mourir,0,1,0,0,0.0
 PA794430,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
 PA794430,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
 PA794430,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA794430,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA794430,jo-2030,0,2,0,0,0.0
-PA794430,justice-criminelle-2026,0,2,0,0,0.0
+PA794430,justice-criminelle-2026,0,3,0,0,0.0
 PA794430,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 PA794430,montagne-vivante-2026,0,1,0,0,0.0
 PA794430,plfss-2026,0,2,0,0,0.0
@@ -36295,6 +36459,7 @@ PA794434,tests-discriminations-2023,0,1,0,0,0.0
 PA794434,urgence-agricole-2026,0,3,0,0,0.0
 PA794434,valletoux-2023,1,0,0,0,100.0
 PA794434,vsa-commerces-2026,0,1,0,0,0.0
+PA794434,zan-2023,0,2,0,0,0.0
 PA794442,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA794442,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA794442,aide-a-mourir,0,1,0,0,0.0
@@ -36322,7 +36487,6 @@ PA794442,ivg-constitution-2024,0,1,0,0,0.0
 PA794442,ivg-constitution-ppl-2022,0,1,0,0,0.0
 PA794442,jo-2024,0,2,0,0,0.0
 PA794442,jo-2030,0,1,0,0,0.0
-PA794442,justice-criminelle-2026,0,1,0,0,0.0
 PA794442,justice-mineurs,0,4,0,0,0.0
 PA794442,kasbarian-berge,0,2,0,0,0.0
 PA794442,lfr-2022-08,0,0,1,0,
@@ -36378,6 +36542,7 @@ PA794450,plui-bas-chablais-2023,0,1,0,0,0.0
 PA794450,pouvoir-achat-2022,1,0,0,0,100.0
 PA794450,rist-2023,1,0,0,0,100.0
 PA794450,valletoux-2023,1,0,0,0,100.0
+PA794450,zan-2023,0,1,0,0,0.0
 PA794458,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA794458,assurance-chomage-2022,1,0,0,0,100.0
 PA794458,bien-vieillir-2024,0,1,0,0,0.0
@@ -36491,6 +36656,7 @@ PA794470,surete-transports-2025,0,1,0,0,0.0
 PA794470,urgence-agricole-2026,0,1,0,0,0.0
 PA794470,valletoux-2023,1,0,0,0,100.0
 PA794470,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA794470,zan-2023,0,1,0,0,0.0
 PA794478,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA794478,antisemitisme-enseignement-superieur,0,1,0,0,0.0
 PA794478,bien-vieillir-2024,0,1,0,0,0.0
@@ -36590,7 +36756,7 @@ PA794494,immigration-2024,1,0,0,0,100.0
 PA794494,ivg-constitution-2024,1,0,0,0,100.0
 PA794494,jo-2024,1,0,1,0,100.0
 PA794494,jo-2030,0,1,0,0,0.0
-PA794494,justice-criminelle-2026,2,0,0,0,100.0
+PA794494,justice-criminelle-2026,1,0,0,0,100.0
 PA794494,justice-mineurs,1,0,0,0,100.0
 PA794494,kasbarian-berge,1,0,0,0,100.0
 PA794494,loi-orientation-agricole-2025,1,0,0,0,100.0
@@ -36618,6 +36784,7 @@ PA794494,rist-2023,1,0,0,0,100.0
 PA794494,simplification-vie-economique-2026,1,0,0,0,100.0
 PA794494,surete-transports-2025,1,0,0,0,100.0
 PA794494,urgence-agricole-2026,1,0,0,0,100.0
+PA794494,zan-2023,0,0,1,0,
 PA794502,aide-a-mourir,0,1,0,0,0.0
 PA794502,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA794502,assurance-chomage-2022,1,0,0,0,100.0
@@ -36642,7 +36809,7 @@ PA794502,ingerences-etrangeres-2024,0,1,0,0,0.0
 PA794502,ivg-constitution-2024,1,0,0,0,100.0
 PA794502,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA794502,jo-2030,0,1,0,0,0.0
-PA794502,justice-criminelle-2026,0,2,0,0,0.0
+PA794502,justice-criminelle-2026,0,1,0,0,0.0
 PA794502,justice-mineurs,0,2,0,0,0.0
 PA794502,kasbarian-berge,0,3,0,0,0.0
 PA794502,lfr-2022-08,0,1,1,0,0.0
@@ -36708,6 +36875,7 @@ PA794510,pouvoir-achat-2022,1,0,0,0,100.0
 PA794510,rist-2023,1,0,0,0,100.0
 PA794510,tests-discriminations-2023,1,0,0,0,100.0
 PA794510,valletoux-2023,1,0,0,0,100.0
+PA794510,zan-2023,0,1,0,0,0.0
 PA794518,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA794518,aide-a-mourir,1,0,0,0,100.0
 PA794518,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
@@ -36716,7 +36884,7 @@ PA794518,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA794518,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA794518,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA794518,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
-PA794518,justice-criminelle-2026,0,4,0,0,0.0
+PA794518,justice-criminelle-2026,0,5,0,0,0.0
 PA794518,meubles-tourisme-2024,1,0,0,0,100.0
 PA794518,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 PA794518,montagne-vivante-2026,0,1,0,0,0.0
@@ -36911,6 +37079,7 @@ PA794562,simplification-urbanisme-2025,0,1,1,0,0.0
 PA794562,simplification-vie-economique-2026,0,2,0,0,0.0
 PA794562,sren-2024,2,0,0,0,100.0
 PA794562,urgence-agricole-2026,0,2,0,0,0.0
+PA794562,zan-2023,0,2,0,0,0.0
 PA794570,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA794570,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA794570,aide-a-mourir,1,0,0,0,100.0
@@ -37101,6 +37270,7 @@ PA794590,simplification-vie-economique-2026,0,1,0,0,0.0
 PA794590,sren-2024,1,0,0,0,100.0
 PA794590,surete-transports-2025,0,1,0,0,0.0
 PA794590,urgence-agricole-2026,0,2,0,0,0.0
+PA794590,zan-2023,0,1,0,0,0.0
 PA794598,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA794598,aide-a-mourir,0,1,0,0,0.0
 PA794598,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -37184,6 +37354,7 @@ PA794626,pouvoir-achat-2022,1,0,0,0,100.0
 PA794626,sren-2024,0,1,0,0,0.0
 PA794626,tests-discriminations-2023,1,0,0,0,100.0
 PA794626,valletoux-2023,0,0,1,0,
+PA794626,zan-2023,0,1,0,0,0.0
 PA794638,assurance-chomage-2022,1,0,0,0,100.0
 PA794638,bien-vieillir-2024,1,0,0,0,100.0
 PA794638,bouclier-loyer-2023,1,0,0,0,100.0
@@ -37289,6 +37460,7 @@ PA794658,tests-discriminations-2023,1,0,0,0,100.0
 PA794658,urgence-agricole-2026,0,1,0,0,0.0
 PA794658,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA794658,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA794658,zan-2023,0,1,0,0,0.0
 PA794670,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA794670,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA794670,aide-a-mourir,0,1,0,0,0.0
@@ -37413,6 +37585,7 @@ PA794678,tests-discriminations-2023,0,1,0,0,0.0
 PA794678,urgence-agricole-2026,0,3,0,0,0.0
 PA794678,valletoux-2023,1,0,0,0,100.0
 PA794678,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA794678,zan-2023,0,1,0,0,0.0
 PA794686,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA794686,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA794686,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -37435,7 +37608,7 @@ PA794686,ivg-constitution-2024,1,0,0,0,100.0
 PA794686,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA794686,jo-2024,1,0,0,0,100.0
 PA794686,jo-2030,1,0,0,0,100.0
-PA794686,justice-criminelle-2026,2,0,0,0,100.0
+PA794686,justice-criminelle-2026,1,0,0,0,100.0
 PA794686,justice-mineurs,5,0,0,0,100.0
 PA794686,kasbarian-berge,1,0,0,0,100.0
 PA794686,lfr-2022-08,2,0,0,0,100.0
@@ -37498,7 +37671,7 @@ PA794702,ivg-constitution-2024,1,0,0,0,100.0
 PA794702,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA794702,jo-2024,0,1,0,0,0.0
 PA794702,jo-2030,0,1,0,0,0.0
-PA794702,justice-criminelle-2026,0,3,0,0,0.0
+PA794702,justice-criminelle-2026,0,2,0,0,0.0
 PA794702,justice-mineurs,0,1,0,0,0.0
 PA794702,kasbarian-berge,0,3,0,0,0.0
 PA794702,lfr-2022-08,0,2,0,0,0.0
@@ -37533,6 +37706,7 @@ PA794702,surete-transports-2025,0,1,0,0,0.0
 PA794702,urgence-agricole-2026,0,1,1,0,0.0
 PA794702,valletoux-2023,1,0,0,0,100.0
 PA794702,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA794702,zan-2023,0,1,0,0,0.0
 PA794710,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA794710,aide-a-mourir,1,0,0,0,100.0
 PA794710,allocations-familiales-premier-enfant-2025,1,0,0,0,100.0
@@ -37582,7 +37756,6 @@ PA794718,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA794718,immigration-2024,0,1,0,0,0.0
 PA794718,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA794718,jo-2030,0,3,0,0,0.0
-PA794718,justice-criminelle-2026,0,1,0,0,0.0
 PA794718,justice-mineurs,0,1,0,0,0.0
 PA794718,kasbarian-berge,0,3,0,0,0.0
 PA794718,lfr-2022-08,0,0,1,0,
@@ -37607,6 +37780,7 @@ PA794718,sren-2024,1,0,0,0,100.0
 PA794718,surete-transports-2025,0,1,0,0,0.0
 PA794718,urgence-agricole-2026,0,2,0,0,0.0
 PA794718,violences-sexuelles-sexistes-2025,0,0,1,0,
+PA794718,zan-2023,0,2,0,0,0.0
 PA794734,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA794734,aide-a-mourir,0,1,0,0,0.0
 PA794734,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -37826,7 +38000,7 @@ PA794778,ivg-constitution-2024,1,0,0,0,100.0
 PA794778,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA794778,jo-2024,2,0,0,0,100.0
 PA794778,jo-2030,4,0,0,0,100.0
-PA794778,justice-criminelle-2026,3,0,0,0,100.0
+PA794778,justice-criminelle-2026,4,0,0,0,100.0
 PA794778,justice-mineurs,2,0,0,0,100.0
 PA794778,kasbarian-berge,2,0,0,0,100.0
 PA794778,lfr-2022-08,1,0,0,0,100.0
@@ -37868,6 +38042,7 @@ PA794778,urgence-agricole-2026,2,0,0,0,100.0
 PA794778,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA794778,valletoux-2023,0,0,1,0,
 PA794778,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA794778,zan-2023,2,0,0,0,100.0
 PA794786,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA794786,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA794786,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -37905,7 +38080,7 @@ PA794786,ivg-constitution-2024,1,0,0,0,100.0
 PA794786,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA794786,jo-2024,2,0,0,0,100.0
 PA794786,jo-2030,4,0,0,0,100.0
-PA794786,justice-criminelle-2026,4,0,0,0,100.0
+PA794786,justice-criminelle-2026,3,0,0,0,100.0
 PA794786,justice-mineurs,2,0,0,0,100.0
 PA794786,kasbarian-berge,4,0,0,0,100.0
 PA794786,lfr-2022-08,2,0,0,0,100.0
@@ -37948,6 +38123,7 @@ PA794786,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA794786,valletoux-2023,0,1,0,0,0.0
 PA794786,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA794786,vote-correspondance-detenus-2025,1,0,0,0,100.0
+PA794786,zan-2023,1,1,0,0,50.0
 PA794798,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA794798,aide-a-mourir,1,0,0,0,100.0
 PA794798,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -37971,7 +38147,7 @@ PA794798,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA794798,industrie-verte-2023,0,1,0,0,0.0
 PA794798,ivg-constitution-2024,1,0,0,0,100.0
 PA794798,ivg-constitution-ppl-2022,1,0,0,0,100.0
-PA794798,justice-criminelle-2026,0,4,0,0,0.0
+PA794798,justice-criminelle-2026,0,5,0,0,0.0
 PA794798,justice-mineurs,0,1,0,0,0.0
 PA794798,kasbarian-berge,0,3,0,0,0.0
 PA794798,lfr-2022-08,0,1,0,0,0.0
@@ -38005,6 +38181,7 @@ PA794798,sren-2024,0,1,0,0,0.0
 PA794798,surete-transports-2025,0,1,0,0,0.0
 PA794798,urgence-agricole-2026,0,2,0,0,0.0
 PA794798,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
+PA794798,zan-2023,0,2,0,0,0.0
 PA794802,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA794802,aide-a-mourir,0,1,0,0,0.0
 PA794802,allocations-familiales-premier-enfant-2025,0,1,0,0,0.0
@@ -38039,7 +38216,7 @@ PA794802,ivg-constitution-2024,1,0,0,0,100.0
 PA794802,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA794802,jo-2024,0,1,0,0,0.0
 PA794802,jo-2030,0,1,0,0,0.0
-PA794802,justice-criminelle-2026,0,3,0,0,0.0
+PA794802,justice-criminelle-2026,0,2,0,0,0.0
 PA794802,justice-mineurs,0,1,0,0,0.0
 PA794802,kasbarian-berge,0,2,0,0,0.0
 PA794802,lfr-2022-08,0,2,0,0,0.0
@@ -38084,6 +38261,7 @@ PA794802,valletoux-2023,1,0,0,0,100.0
 PA794802,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA794802,vote-correspondance-detenus-2025,0,1,0,0,0.0
 PA794802,vsa-commerces-2026,0,1,0,0,0.0
+PA794802,zan-2023,0,1,0,0,0.0
 PA794810,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA794810,accueils-physiques-ppl-2023,0,1,0,0,0.0
 PA794810,aesh-corps-fonctionnaires-2026,0,1,0,0,0.0
@@ -38116,7 +38294,7 @@ PA794810,ingerences-etrangeres-2024,0,1,0,0,0.0
 PA794810,ivg-constitution-2024,1,0,0,0,100.0
 PA794810,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA794810,jo-2030,0,1,0,0,0.0
-PA794810,justice-criminelle-2026,0,2,0,0,0.0
+PA794810,justice-criminelle-2026,0,1,0,0,0.0
 PA794810,justice-mineurs,0,1,0,0,0.0
 PA794810,kasbarian-berge,0,1,0,0,0.0
 PA794810,lfr-2022-08,0,2,0,0,0.0
@@ -38150,6 +38328,7 @@ PA794810,tests-discriminations-2023,1,0,0,0,100.0
 PA794810,urgence-agricole-2026,0,1,0,0,0.0
 PA794810,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA794810,valletoux-2023,1,0,0,0,100.0
+PA794810,zan-2023,0,2,0,0,0.0
 PA794818,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA794818,assurance-chomage-2022,0,1,0,0,0.0
 PA794818,cdi-employabilite-2024,0,1,0,0,0.0
@@ -38245,7 +38424,7 @@ PA794838,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA794838,immigration-2024,0,1,0,0,0.0
 PA794838,ivg-constitution-2024,1,0,0,0,100.0
 PA794838,jo-2030,0,1,0,0,0.0
-PA794838,justice-criminelle-2026,0,1,0,0,0.0
+PA794838,justice-criminelle-2026,0,2,0,0,0.0
 PA794838,justice-mineurs,0,1,0,0,0.0
 PA794838,kasbarian-berge,0,1,0,0,0.0
 PA794838,lfr-2022-08,0,1,0,0,0.0
@@ -38389,7 +38568,7 @@ PA794870,ivg-constitution-2024,1,0,0,0,100.0
 PA794870,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA794870,jo-2024,1,0,0,0,100.0
 PA794870,jo-2030,1,0,0,0,100.0
-PA794870,justice-criminelle-2026,2,0,0,0,100.0
+PA794870,justice-criminelle-2026,1,0,0,0,100.0
 PA794870,justice-mineurs,1,0,0,0,100.0
 PA794870,kasbarian-berge,1,0,0,0,100.0
 PA794870,lfr-2022-08,2,0,0,0,100.0
@@ -38427,6 +38606,7 @@ PA794870,urgence-agricole-2026,2,0,1,0,100.0
 PA794870,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA794870,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA794870,vote-correspondance-detenus-2025,1,0,0,0,100.0
+PA794870,zan-2023,1,0,0,0,100.0
 PA794878,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA794878,bien-vieillir-2024,1,0,0,0,100.0
 PA794878,bouclier-loyer-2023,1,0,0,0,100.0
@@ -38460,6 +38640,7 @@ PA794878,plein-emploi-2023,0,1,0,0,0.0
 PA794878,pouvoir-achat-2022,1,0,0,0,100.0
 PA794878,sren-2024,0,2,0,0,0.0
 PA794878,tests-discriminations-2023,1,0,0,0,100.0
+PA794878,zan-2023,0,2,0,0,0.0
 PA794886,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA794886,aide-a-mourir,0,1,0,0,0.0
 PA794886,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -38687,6 +38868,7 @@ PA794930,nucleaire-acceleration-2023,0,1,0,0,0.0
 PA794930,pouvoir-achat-2022,1,0,0,0,100.0
 PA794930,rist-2023,1,0,0,0,100.0
 PA794930,valletoux-2023,1,0,0,0,100.0
+PA794930,zan-2023,0,1,0,0,0.0
 PA794938,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA794938,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA794938,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -38750,6 +38932,7 @@ PA794938,surete-transports-2025,1,0,0,0,100.0
 PA794938,tests-discriminations-2023,0,1,0,0,0.0
 PA794938,urgence-agricole-2026,1,0,0,0,100.0
 PA794938,vote-correspondance-detenus-2025,1,0,0,0,100.0
+PA794938,zan-2023,1,0,0,0,100.0
 PA794946,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA794946,aide-a-mourir,0,1,0,0,0.0
 PA794946,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -38875,6 +39058,7 @@ PA794954,simplification-vie-economique-2026,0,4,0,0,0.0
 PA794954,surete-transports-2025,0,2,0,0,0.0
 PA794954,urgence-agricole-2026,0,4,0,0,0.0
 PA794954,violences-sexuelles-sexistes-2025,0,0,1,0,
+PA794954,zan-2023,0,1,0,0,0.0
 PA794974,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA794974,assurance-chomage-2022,0,1,0,0,0.0
 PA794974,bien-vieillir-2024,1,0,0,0,100.0
@@ -38956,6 +39140,7 @@ PA794982,surete-transports-2025,0,1,0,0,0.0
 PA794982,urgence-agricole-2026,0,1,0,0,0.0
 PA794982,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA794982,vsa-commerces-2026,0,1,0,0,0.0
+PA794982,zan-2023,0,1,0,0,0.0
 PA794994,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA794994,aide-a-mourir,0,1,0,0,0.0
 PA794994,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -39064,6 +39249,7 @@ PA795010,sren-2024,1,0,0,0,100.0
 PA795010,urgence-agricole-2026,1,0,0,0,100.0
 PA795010,valletoux-2023,0,0,1,0,
 PA795010,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA795010,zan-2023,1,0,0,0,100.0
 PA795026,aide-a-mourir,0,1,0,0,0.0
 PA795026,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA795026,assurance-chomage-2022,0,1,0,0,0.0
@@ -39090,7 +39276,7 @@ PA795026,ivg-constitution-2024,1,0,0,0,100.0
 PA795026,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA795026,jo-2024,0,2,0,0,0.0
 PA795026,jo-2030,0,2,1,0,0.0
-PA795026,justice-criminelle-2026,0,2,0,0,0.0
+PA795026,justice-criminelle-2026,0,3,0,0,0.0
 PA795026,justice-mineurs,0,1,0,0,0.0
 PA795026,kasbarian-berge,0,2,0,0,0.0
 PA795026,lfr-2022-08,0,1,0,0,0.0
@@ -39148,7 +39334,7 @@ PA795046,ingerences-etrangeres-2024,0,1,0,0,0.0
 PA795046,ivg-constitution-2024,1,0,0,0,100.0
 PA795046,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA795046,jo-2024,0,1,0,0,0.0
-PA795046,justice-criminelle-2026,0,5,0,0,0.0
+PA795046,justice-criminelle-2026,0,4,0,0,0.0
 PA795046,justice-mineurs,1,2,0,0,33.3
 PA795046,kasbarian-berge,0,3,0,0,0.0
 PA795046,lfr-2022-08,1,1,0,0,50.0
@@ -39263,6 +39449,7 @@ PA795068,rist-2023,1,0,0,0,100.0
 PA795068,sren-2024,0,2,0,0,0.0
 PA795068,tests-discriminations-2023,1,0,0,0,100.0
 PA795068,valletoux-2023,1,0,0,0,100.0
+PA795068,zan-2023,0,1,0,0,0.0
 PA795076,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA795076,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA795076,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -39390,7 +39577,7 @@ PA795100,ivg-constitution-2024,1,0,0,0,100.0
 PA795100,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA795100,jo-2024,0,2,0,0,0.0
 PA795100,jo-2030,0,3,0,0,0.0
-PA795100,justice-criminelle-2026,0,6,0,0,0.0
+PA795100,justice-criminelle-2026,0,5,0,0,0.0
 PA795100,justice-mineurs,1,4,0,0,12.5
 PA795100,kasbarian-berge,0,3,0,0,0.0
 PA795100,lfr-2022-08,1,1,0,0,50.0
@@ -39432,6 +39619,7 @@ PA795100,surete-transports-2025,0,1,0,0,0.0
 PA795100,urgence-agricole-2026,0,4,0,0,0.0
 PA795100,valletoux-2023,1,0,0,0,100.0
 PA795100,vsa-commerces-2026,0,0,1,0,
+PA795100,zan-2023,0,2,0,0,0.0
 PA795108,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA795108,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA795108,aide-a-mourir,1,0,0,0,100.0
@@ -39453,7 +39641,7 @@ PA795108,ivg-constitution-2024,1,0,0,0,100.0
 PA795108,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA795108,jo-2024,1,0,0,0,100.0
 PA795108,jo-2030,4,0,0,0,100.0
-PA795108,justice-criminelle-2026,3,0,0,0,100.0
+PA795108,justice-criminelle-2026,2,0,0,0,100.0
 PA795108,justice-mineurs,5,0,0,0,100.0
 PA795108,kasbarian-berge,1,0,0,0,100.0
 PA795108,lfr-2022-08,1,0,0,0,100.0
@@ -39537,6 +39725,7 @@ PA795120,simplification-urbanisme-2025,0,0,0,1,
 PA795120,sren-2024,0,1,0,0,0.0
 PA795120,surete-transports-2025,0,1,0,0,0.0
 PA795120,tests-discriminations-2023,1,0,0,0,100.0
+PA795120,zan-2023,0,2,0,0,0.0
 PA795124,aide-a-mourir,0,1,0,0,0.0
 PA795124,bien-vieillir-2024,1,0,0,0,100.0
 PA795124,corps-electoral-nc-degel-2024,1,0,0,0,100.0
@@ -39587,7 +39776,7 @@ PA795136,ivg-constitution-2024,1,0,0,0,100.0
 PA795136,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA795136,jo-2024,2,0,0,0,100.0
 PA795136,jo-2030,4,0,0,0,100.0
-PA795136,justice-criminelle-2026,3,0,0,0,100.0
+PA795136,justice-criminelle-2026,2,0,0,0,100.0
 PA795136,justice-mineurs,5,0,0,0,100.0
 PA795136,kasbarian-berge,2,0,0,0,100.0
 PA795136,lfr-2022-08,2,0,0,0,100.0
@@ -39657,6 +39846,7 @@ PA795144,simplification-vie-economique-2026,0,0,1,0,
 PA795144,sren-2024,0,1,0,0,0.0
 PA795144,surete-transports-2025,0,1,0,0,0.0
 PA795144,tests-discriminations-2023,1,0,0,0,100.0
+PA795144,zan-2023,0,1,0,0,0.0
 PA795156,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA795156,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA795156,aide-a-mourir,1,0,0,0,100.0
@@ -39772,6 +39962,7 @@ PA795164,rist-2023,1,0,0,0,100.0
 PA795164,simplification-vie-economique-2026,1,0,0,0,100.0
 PA795164,tests-discriminations-2023,0,1,0,0,0.0
 PA795164,urgence-agricole-2026,3,0,0,0,100.0
+PA795164,zan-2023,0,1,0,0,0.0
 PA795176,aide-a-mourir,1,0,0,0,100.0
 PA795176,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA795176,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
@@ -39816,6 +40007,7 @@ PA795176,simplification-vie-economique-2026,0,1,0,0,0.0
 PA795176,sren-2024,0,1,0,0,0.0
 PA795176,surete-transports-2025,0,1,0,0,0.0
 PA795176,vsa-commerces-2026,0,1,0,0,0.0
+PA795176,zan-2023,0,2,0,0,0.0
 PA795184,cdi-employabilite-2024,1,0,0,0,100.0
 PA795184,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 PA795184,fin-regimes-exception-covid-2022,1,0,0,0,100.0
@@ -39915,6 +40107,7 @@ PA795216,nucleaire-acceleration-2023,0,1,0,0,0.0
 PA795216,pouvoir-achat-2022,1,0,0,0,100.0
 PA795216,sren-2024,0,2,0,0,0.0
 PA795216,valletoux-2023,1,0,0,0,100.0
+PA795216,zan-2023,1,1,0,0,50.0
 PA795228,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA795228,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA795228,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -39990,6 +40183,7 @@ PA795228,urgence-agricole-2026,2,0,0,0,100.0
 PA795228,valletoux-2023,0,1,0,0,0.0
 PA795228,vote-correspondance-detenus-2025,1,0,0,0,100.0
 PA795228,vsa-commerces-2026,1,0,0,0,100.0
+PA795228,zan-2023,1,1,0,0,50.0
 PA795240,aide-a-mourir,0,1,0,0,0.0
 PA795240,allocations-familiales-premier-enfant-2025,1,0,0,0,100.0
 PA795240,antisemitisme-enseignement-superieur,0,1,0,0,0.0
@@ -40068,6 +40262,7 @@ PA795244,simplification-vie-economique-2026,0,0,1,0,
 PA795244,surete-transports-2025,0,1,0,0,0.0
 PA795244,urgence-agricole-2026,0,2,1,0,0.0
 PA795244,valletoux-2023,1,0,0,0,100.0
+PA795244,zan-2023,0,1,0,0,0.0
 PA795258,aesh-corps-fonctionnaires-2026,0,1,0,0,0.0
 PA795258,assurance-chomage-2022,0,1,0,0,0.0
 PA795258,cdi-employabilite-2024,0,1,0,0,0.0
@@ -40129,6 +40324,7 @@ PA795266,lopmi-2023,0,1,0,0,0.0
 PA795266,nucleaire-acceleration-2023,0,1,0,0,0.0
 PA795266,sren-2024,0,2,0,0,0.0
 PA795266,valletoux-2023,1,0,0,0,100.0
+PA795266,zan-2023,0,1,0,0,0.0
 PA795270,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA795270,accueils-physiques-ppl-2023,0,1,0,0,0.0
 PA795270,aide-a-mourir,0,1,0,0,0.0
@@ -40155,7 +40351,7 @@ PA795270,ivg-constitution-2024,1,0,0,0,100.0
 PA795270,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA795270,jo-2024,0,2,0,0,0.0
 PA795270,jo-2030,0,2,0,2,0.0
-PA795270,justice-criminelle-2026,0,0,0,1,
+PA795270,justice-criminelle-2026,0,1,0,1,0.0
 PA795270,justice-mineurs,0,3,0,0,0.0
 PA795270,kasbarian-berge,0,4,0,0,0.0
 PA795270,lfr-2022-08,0,1,0,0,0.0
@@ -40191,6 +40387,7 @@ PA795270,simplification-vie-economique-2026,0,0,0,1,
 PA795270,surete-transports-2025,0,2,0,0,0.0
 PA795270,urgence-agricole-2026,0,1,0,0,0.0
 PA795270,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA795270,zan-2023,0,1,0,0,0.0
 PA795278,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA795278,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA795278,assurance-chomage-2022,0,1,0,0,0.0
@@ -40243,6 +40440,7 @@ PA795278,simplification-vie-economique-2026,0,1,0,0,0.0
 PA795278,surete-transports-2025,0,2,0,0,0.0
 PA795278,valletoux-2023,1,0,0,0,100.0
 PA795278,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA795278,zan-2023,0,1,0,0,0.0
 PA795298,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA795298,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA795298,antisemitisme-enseignement-superieur,0,1,0,0,0.0
@@ -40266,7 +40464,7 @@ PA795298,ineligibilite-violences-aggravees-2023,1,0,0,0,100.0
 PA795298,ivg-constitution-2024,1,0,0,0,100.0
 PA795298,jo-2024,1,0,0,0,100.0
 PA795298,jo-2030,1,0,0,0,100.0
-PA795298,justice-criminelle-2026,5,0,0,0,100.0
+PA795298,justice-criminelle-2026,4,0,0,0,100.0
 PA795298,justice-mineurs,1,0,0,0,100.0
 PA795298,kasbarian-berge,1,0,0,0,100.0
 PA795298,lfr-2022-08,2,0,0,0,100.0
@@ -40327,7 +40525,7 @@ PA795310,ivg-constitution-2024,1,0,0,0,100.0
 PA795310,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA795310,jo-2024,1,0,0,0,100.0
 PA795310,jo-2030,1,0,0,0,100.0
-PA795310,justice-criminelle-2026,3,0,0,0,100.0
+PA795310,justice-criminelle-2026,4,0,0,0,100.0
 PA795310,justice-mineurs,3,0,0,1,100.0
 PA795310,kasbarian-berge,1,0,0,0,100.0
 PA795310,lfr-2022-08,1,0,0,0,100.0
@@ -40391,7 +40589,7 @@ PA795318,industrie-verte-2023,1,0,0,0,100.0
 PA795318,ivg-constitution-2024,1,0,0,0,100.0
 PA795318,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA795318,jo-2030,1,0,0,0,100.0
-PA795318,justice-criminelle-2026,2,0,0,0,100.0
+PA795318,justice-criminelle-2026,1,0,0,0,100.0
 PA795318,justice-mineurs,1,0,0,0,100.0
 PA795318,kasbarian-berge,1,0,0,0,100.0
 PA795318,lfr-2022-08,1,0,0,0,100.0
@@ -40453,6 +40651,7 @@ PA795326,ripost-2026,0,2,0,0,0.0
 PA795326,rist-2023,1,0,0,0,100.0
 PA795326,simplification-vie-economique-2026,0,0,1,0,
 PA795326,urgence-agricole-2026,1,0,0,0,100.0
+PA795326,zan-2023,0,1,0,0,0.0
 PA795330,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA795330,assurance-chomage-2022,0,1,0,0,0.0
 PA795330,corps-electoral-nc-degel-2024,1,0,0,0,100.0
@@ -40488,6 +40687,7 @@ PA795330,salaries-experimentes-2025,0,0,0,1,
 PA795330,simplification-urbanisme-2025,0,0,0,1,
 PA795330,sren-2024,0,1,0,0,0.0
 PA795330,valletoux-2023,1,0,0,0,100.0
+PA795330,zan-2023,0,1,0,0,0.0
 PA795334,aide-a-mourir,1,0,0,0,100.0
 PA795334,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
 PA795334,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
@@ -40609,6 +40809,7 @@ PA795362,simplification-vie-economique-2026,3,0,0,0,100.0
 PA795362,sren-2024,1,0,0,0,100.0
 PA795362,surete-transports-2025,0,1,0,0,0.0
 PA795362,urgence-agricole-2026,3,0,0,0,100.0
+PA795362,zan-2023,1,0,0,0,100.0
 PA795374,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA795374,accueils-physiques-ppl-2023,0,1,0,0,0.0
 PA795374,aesh-corps-fonctionnaires-2026,0,1,0,0,0.0
@@ -40638,7 +40839,7 @@ PA795374,ivg-constitution-2024,1,0,0,0,100.0
 PA795374,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA795374,jo-2024,0,1,0,0,0.0
 PA795374,jo-2030,0,2,0,0,0.0
-PA795374,justice-criminelle-2026,0,3,0,0,0.0
+PA795374,justice-criminelle-2026,0,4,0,0,0.0
 PA795374,justice-mineurs,0,1,0,0,0.0
 PA795374,kasbarian-berge,0,2,0,0,0.0
 PA795374,lfr-2022-08,1,1,0,0,50.0
@@ -40669,6 +40870,7 @@ PA795374,sren-2024,0,1,0,0,0.0
 PA795374,surete-transports-2025,0,1,0,0,0.0
 PA795374,tests-discriminations-2023,1,0,0,0,100.0
 PA795374,urgence-agricole-2026,1,2,0,0,60.0
+PA795374,zan-2023,0,1,0,0,0.0
 PA795386,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA795386,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA795386,assurance-chomage-2022,0,1,0,0,0.0
@@ -40723,7 +40925,7 @@ PA795390,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
 PA795390,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA795390,fraudes-sociales-fiscales-2026,0,2,0,0,0.0
 PA795390,jo-2030,0,1,0,0,0.0
-PA795390,justice-criminelle-2026,0,3,0,0,0.0
+PA795390,justice-criminelle-2026,0,4,0,0,0.0
 PA795390,mineurs-isoles-sans-abrisme-2025,0,1,0,0,0.0
 PA795390,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 PA795390,montagne-vivante-2026,0,1,0,0,0.0
@@ -40746,7 +40948,7 @@ PA795402,delit-sejour-irregulier-ppl-2025,1,0,0,0,100.0
 PA795402,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA795402,fraudes-sociales-fiscales-2026,0,2,0,0,0.0
 PA795402,jo-2030,0,4,0,0,0.0
-PA795402,justice-criminelle-2026,0,2,0,0,0.0
+PA795402,justice-criminelle-2026,0,3,0,0,0.0
 PA795402,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 PA795402,montagne-vivante-2026,0,1,0,0,0.0
 PA795402,parcours-soins-violences-sexuelles-2026,0,0,1,0,
@@ -40775,6 +40977,7 @@ PA795406,plein-emploi-2023,0,1,0,0,0.0
 PA795406,plui-bas-chablais-2023,0,1,0,0,0.0
 PA795406,pouvoir-achat-2022,1,0,0,0,100.0
 PA795406,sren-2024,1,0,0,0,100.0
+PA795406,zan-2023,0,1,0,0,0.0
 PA795410,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA795410,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA795410,aesh-corps-fonctionnaires-2026,0,0,1,0,
@@ -40946,6 +41149,7 @@ PA795430,simplification-vie-economique-2026,1,0,0,0,100.0
 PA795430,surete-transports-2025,1,0,0,0,100.0
 PA795430,urgence-agricole-2026,1,1,0,0,75.0
 PA795430,valletoux-2023,0,0,1,0,
+PA795430,zan-2023,0,1,1,0,0.0
 PA795438,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA795438,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA795438,bien-vieillir-2024,0,1,0,0,0.0
@@ -40981,7 +41185,7 @@ PA795454,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
 PA795454,immigration-2024,1,0,0,0,100.0
 PA795454,industrie-verte-2023,1,0,0,0,100.0
 PA795454,ivg-constitution-2024,1,0,0,0,100.0
-PA795454,justice-criminelle-2026,1,0,0,0,100.0
+PA795454,justice-criminelle-2026,2,0,0,0,100.0
 PA795454,justice-mineurs,5,0,0,0,100.0
 PA795454,lfr-2022-08,2,0,0,0,100.0
 PA795454,loi-orientation-agricole-2025,2,0,0,0,100.0
@@ -41077,6 +41281,7 @@ PA795466,surete-transports-2025,1,0,0,0,100.0
 PA795466,urgence-agricole-2026,2,0,0,0,100.0
 PA795466,valletoux-2023,0,1,0,0,0.0
 PA795466,vote-correspondance-detenus-2025,1,0,0,0,100.0
+PA795466,zan-2023,1,0,0,0,100.0
 PA795482,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA795482,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA795482,aide-a-mourir,1,0,0,0,100.0
@@ -41102,7 +41307,7 @@ PA795482,ivg-constitution-2024,1,0,0,0,100.0
 PA795482,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA795482,jo-2024,1,0,0,0,100.0
 PA795482,jo-2030,1,0,0,0,100.0
-PA795482,justice-criminelle-2026,2,0,0,0,100.0
+PA795482,justice-criminelle-2026,1,0,0,0,100.0
 PA795482,justice-mineurs,1,0,0,0,100.0
 PA795482,kasbarian-berge,1,0,0,0,100.0
 PA795482,lfr-2022-08,2,0,0,0,100.0
@@ -41135,6 +41340,7 @@ PA795482,simplification-vie-economique-2026,4,1,0,0,87.5
 PA795482,surete-transports-2025,1,0,0,0,100.0
 PA795482,tests-discriminations-2023,0,1,0,0,0.0
 PA795482,urgence-agricole-2026,4,0,0,0,100.0
+PA795482,zan-2023,1,0,0,0,100.0
 PA795508,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA795508,assurance-chomage-2022,0,1,0,0,0.0
 PA795508,bien-vieillir-2024,1,0,0,0,100.0
@@ -41162,6 +41368,7 @@ PA795508,pouvoir-achat-2022,1,0,0,0,100.0
 PA795508,rist-2023,1,0,0,0,100.0
 PA795508,sren-2024,0,1,0,0,0.0
 PA795508,valletoux-2023,1,0,0,0,100.0
+PA795508,zan-2023,0,1,0,0,0.0
 PA795516,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA795516,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA795516,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -41294,6 +41501,7 @@ PA795528,surete-transports-2025,0,1,0,0,0.0
 PA795528,tests-discriminations-2023,1,0,0,0,100.0
 PA795528,urgence-agricole-2026,0,2,0,0,0.0
 PA795528,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
+PA795528,zan-2023,0,2,0,0,0.0
 PA795540,aide-a-mourir,0,1,0,0,0.0
 PA795540,assurance-chomage-2022,1,0,0,0,100.0
 PA795540,bien-vieillir-2024,1,0,0,0,100.0
@@ -41336,6 +41544,7 @@ PA795540,sren-2024,1,0,0,0,100.0
 PA795540,surete-transports-2025,0,1,0,0,0.0
 PA795540,tests-discriminations-2023,0,1,0,0,0.0
 PA795540,urgence-agricole-2026,0,1,0,0,0.0
+PA795540,zan-2023,0,1,0,0,0.0
 PA795552,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA795552,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA795552,aide-a-mourir,0,1,0,0,0.0
@@ -41438,7 +41647,7 @@ PA795588,ivg-constitution-2024,1,0,0,0,100.0
 PA795588,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA795588,jo-2024,1,0,0,0,100.0
 PA795588,jo-2030,1,0,0,0,100.0
-PA795588,justice-criminelle-2026,4,0,0,0,100.0
+PA795588,justice-criminelle-2026,5,0,0,0,100.0
 PA795588,justice-mineurs,1,0,0,0,100.0
 PA795588,kasbarian-berge,1,0,0,0,100.0
 PA795588,lfr-2022-08,2,0,0,0,100.0
@@ -41529,6 +41738,7 @@ PA795596,simplification-vie-economique-2026,1,0,0,0,100.0
 PA795596,sren-2024,1,0,0,0,100.0
 PA795596,surete-transports-2025,1,0,0,0,100.0
 PA795596,urgence-agricole-2026,2,0,0,0,100.0
+PA795596,zan-2023,0,1,0,0,0.0
 PA795604,assurance-chomage-2022,0,1,0,0,0.0
 PA795604,cdi-employabilite-2024,0,1,0,0,0.0
 PA795604,corps-electoral-nc-degel-2024,1,0,0,0,100.0
@@ -41551,6 +41761,7 @@ PA795604,plein-emploi-2023,0,2,0,0,0.0
 PA795604,pouvoir-achat-2022,1,0,0,0,100.0
 PA795604,sren-2024,0,2,0,0,0.0
 PA795604,valletoux-2023,1,0,0,0,100.0
+PA795604,zan-2023,0,1,0,0,0.0
 PA795616,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA795616,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA795616,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -41610,6 +41821,7 @@ PA795616,simplification-vie-economique-2026,1,0,0,0,100.0
 PA795616,sren-2024,1,0,0,0,100.0
 PA795616,tests-discriminations-2023,0,1,0,0,0.0
 PA795616,urgence-agricole-2026,1,0,0,0,100.0
+PA795616,zan-2023,1,0,0,0,100.0
 PA795636,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA795636,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA795636,aide-a-mourir,1,0,0,0,100.0
@@ -41664,6 +41876,7 @@ PA795636,sren-2024,1,0,0,0,100.0
 PA795636,surete-transports-2025,1,0,0,0,100.0
 PA795636,urgence-agricole-2026,1,0,0,0,100.0
 PA795636,vote-correspondance-detenus-2025,1,0,0,0,100.0
+PA795636,zan-2023,1,0,0,0,100.0
 PA795644,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA795644,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA795644,assurance-chomage-2022,1,0,0,0,100.0
@@ -41859,6 +42072,7 @@ PA795672,surete-transports-2025,1,0,0,0,100.0
 PA795672,urgence-agricole-2026,2,0,0,0,100.0
 PA795672,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA795672,valletoux-2023,0,1,0,0,0.0
+PA795672,zan-2023,1,1,0,0,50.0
 PA795688,accueils-physiques-ppl-2023,0,0,1,0,
 PA795688,bien-vieillir-2024,1,0,0,0,100.0
 PA795688,cdi-employabilite-2024,0,1,0,0,0.0
@@ -41898,6 +42112,7 @@ PA795692,partage-valeur-2023,0,1,0,0,0.0
 PA795692,plui-bas-chablais-2023,1,0,0,0,100.0
 PA795692,pouvoir-achat-2022,0,1,0,0,0.0
 PA795692,tests-discriminations-2023,0,1,0,0,0.0
+PA795692,zan-2023,1,1,0,0,50.0
 PA795708,constitutionnaliser-securite-sociale-2024,0,1,0,0,0.0
 PA795708,corps-electoral-nc-degel-2024,1,0,0,0,100.0
 PA795708,ddadue-2024,0,1,0,0,0.0
@@ -41942,6 +42157,7 @@ PA795722,ripost-2026,0,1,0,0,0.0
 PA795722,simplification-vie-economique-2026,0,1,0,0,0.0
 PA795722,surete-transports-2025,0,1,0,0,0.0
 PA795722,urgence-agricole-2026,0,1,0,0,0.0
+PA795722,zan-2023,0,1,0,0,0.0
 PA795730,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA795730,aide-a-mourir,1,0,0,0,100.0
 PA795730,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -42000,6 +42216,7 @@ PA795730,surete-transports-2025,0,1,0,0,0.0
 PA795730,tests-discriminations-2023,1,0,0,0,100.0
 PA795730,urgence-agricole-2026,1,0,0,0,100.0
 PA795730,valletoux-2023,1,0,0,0,100.0
+PA795730,zan-2023,0,2,0,0,0.0
 PA795746,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA795746,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA795746,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -42272,7 +42489,7 @@ PA795808,ivg-constitution-2024,1,0,0,0,100.0
 PA795808,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA795808,jo-2024,1,0,0,0,100.0
 PA795808,jo-2030,1,0,0,0,100.0
-PA795808,justice-criminelle-2026,3,0,1,0,100.0
+PA795808,justice-criminelle-2026,4,0,0,0,100.0
 PA795808,justice-mineurs,1,0,0,0,100.0
 PA795808,kasbarian-berge,1,0,0,0,100.0
 PA795808,lfr-2022-08,1,0,0,0,100.0
@@ -42354,6 +42571,7 @@ PA795820,surete-transports-2025,1,0,0,0,100.0
 PA795820,urgence-agricole-2026,1,0,0,0,100.0
 PA795820,vaisselle-plastique-cantines-2026,1,0,0,0,100.0
 PA795820,valletoux-2023,0,1,0,0,0.0
+PA795820,zan-2023,1,1,0,0,50.0
 PA795828,corps-electoral-nc-degel-2024,0,1,0,0,0.0
 PA795828,ecriture-inclusive-ppl-2023,1,0,0,0,100.0
 PA795828,energies-renouvelables-2023,0,1,0,0,0.0
@@ -42393,6 +42611,7 @@ PA795836,pouvoir-achat-2022,1,0,0,0,100.0
 PA795836,sren-2024,2,0,0,0,100.0
 PA795836,tests-discriminations-2023,0,1,0,0,0.0
 PA795836,valletoux-2023,1,0,0,0,100.0
+PA795836,zan-2023,0,1,0,0,0.0
 PA795844,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA795844,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA795844,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -42422,7 +42641,7 @@ PA795844,industrie-verte-2023,1,0,0,0,100.0
 PA795844,ivg-constitution-2024,1,0,0,0,100.0
 PA795844,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA795844,jo-2030,1,0,0,0,100.0
-PA795844,justice-criminelle-2026,3,0,0,0,100.0
+PA795844,justice-criminelle-2026,2,0,0,0,100.0
 PA795844,justice-mineurs,2,0,0,0,100.0
 PA795844,kasbarian-berge,1,0,0,0,100.0
 PA795844,lfr-2022-08,1,0,0,0,100.0
@@ -42531,6 +42750,7 @@ PA795864,surete-transports-2025,0,1,0,0,0.0
 PA795864,urgence-agricole-2026,1,0,0,0,100.0
 PA795864,valletoux-2023,1,0,0,0,100.0
 PA795864,vsa-commerces-2026,0,1,0,0,0.0
+PA795864,zan-2023,0,2,0,0,0.0
 PA795868,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA795868,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA795868,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -42693,7 +42913,7 @@ PA795900,ingerences-etrangeres-2024,0,1,0,0,0.0
 PA795900,ivg-constitution-ppl-2022,0,1,0,0,0.0
 PA795900,jo-2024,0,1,0,0,0.0
 PA795900,jo-2030,0,4,0,0,0.0
-PA795900,justice-criminelle-2026,0,4,0,0,0.0
+PA795900,justice-criminelle-2026,0,5,0,0,0.0
 PA795900,justice-mineurs,0,2,0,0,0.0
 PA795900,kasbarian-berge,0,4,0,0,0.0
 PA795900,lfr-2022-08,0,1,1,0,0.0
@@ -42758,7 +42978,7 @@ PA795908,ineligibilite-violences-aggravees-2023,0,1,0,0,0.0
 PA795908,ivg-constitution-2024,1,0,0,0,100.0
 PA795908,jo-2024,0,1,0,0,0.0
 PA795908,jo-2030,0,4,0,0,0.0
-PA795908,justice-criminelle-2026,0,3,0,0,0.0
+PA795908,justice-criminelle-2026,0,2,0,0,0.0
 PA795908,justice-mineurs,0,2,0,0,0.0
 PA795908,kasbarian-berge,0,1,0,0,0.0
 PA795908,lfr-2022-08,0,1,0,0,0.0
@@ -42836,6 +43056,7 @@ PA795912,ripost-2026,0,1,0,0,0.0
 PA795912,simplification-vie-economique-2026,0,1,0,0,0.0
 PA795912,sren-2024,2,0,0,0,100.0
 PA795912,urgence-agricole-2026,0,1,0,0,0.0
+PA795912,zan-2023,0,1,0,0,0.0
 PA795920,aide-a-mourir,0,0,1,0,
 PA795920,allocations-familiales-premier-enfant-2025,0,0,1,0,
 PA795920,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -42885,6 +43106,7 @@ PA795920,urgence-agricole-2026,0,0,1,0,
 PA795920,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA795920,vote-correspondance-detenus-2025,0,1,0,0,0.0
 PA795920,vsa-commerces-2026,0,1,0,0,0.0
+PA795920,zan-2023,0,1,0,0,0.0
 PA795926,accueils-physiques-ppl-2023,0,1,0,0,0.0
 PA795926,assurance-chomage-2022,0,1,0,0,0.0
 PA795926,bien-vieillir-2024,1,0,0,0,100.0
@@ -42916,6 +43138,7 @@ PA795926,plui-bas-chablais-2023,0,1,0,0,0.0
 PA795926,pouvoir-achat-2022,1,0,0,0,100.0
 PA795926,rist-2023,1,0,0,0,100.0
 PA795926,sren-2024,0,2,0,0,0.0
+PA795926,zan-2023,0,1,0,0,0.0
 PA795934,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA795934,assurance-chomage-2022,0,1,0,0,0.0
 PA795934,bien-vieillir-2024,1,0,0,0,100.0
@@ -43191,6 +43414,7 @@ PA795974,urgence-agricole-2026,0,3,0,0,0.0
 PA795974,vaisselle-plastique-cantines-2026,0,1,0,0,0.0
 PA795974,valletoux-2023,1,0,0,0,100.0
 PA795974,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA795974,zan-2023,0,2,0,0,0.0
 PA795982,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA795982,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA795982,aide-a-mourir,1,0,0,0,100.0
@@ -43221,7 +43445,7 @@ PA795982,ivg-constitution-2024,1,0,0,0,100.0
 PA795982,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA795982,jo-2024,2,0,0,0,100.0
 PA795982,jo-2030,1,0,0,0,100.0
-PA795982,justice-criminelle-2026,2,0,0,0,100.0
+PA795982,justice-criminelle-2026,1,0,0,0,100.0
 PA795982,justice-mineurs,4,0,0,0,100.0
 PA795982,kasbarian-berge,2,0,0,0,100.0
 PA795982,lfr-2022-08,2,0,0,0,100.0
@@ -43263,6 +43487,7 @@ PA795982,surete-transports-2025,2,0,0,0,100.0
 PA795982,urgence-agricole-2026,2,0,0,0,100.0
 PA795982,valletoux-2023,0,1,0,0,0.0
 PA795982,vsa-commerces-2026,1,0,0,0,100.0
+PA795982,zan-2023,1,0,0,0,100.0
 PA795990,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA795990,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA795990,assurance-chomage-2022,0,1,0,0,0.0
@@ -43299,6 +43524,7 @@ PA795990,simplification-urbanisme-2025,0,0,0,1,
 PA795990,sren-2024,0,2,0,0,0.0
 PA795990,surete-transports-2025,0,1,0,0,0.0
 PA795990,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
+PA795990,zan-2023,0,1,0,0,0.0
 PA795998,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA795998,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
 PA795998,aide-a-mourir,1,0,0,0,100.0
@@ -43618,6 +43844,7 @@ PA796042,urgence-agricole-2026,0,1,0,0,0.0
 PA796042,valletoux-2023,1,0,0,0,100.0
 PA796042,violences-sexuelles-sexistes-2025,0,0,1,0,
 PA796042,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA796042,zan-2023,0,1,0,0,0.0
 PA796050,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA796050,aide-a-mourir,0,1,0,0,0.0
 PA796050,antisemitisme-enseignement-superieur,1,0,0,0,100.0
@@ -43647,7 +43874,7 @@ PA796050,ivg-constitution-2024,1,0,0,0,100.0
 PA796050,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA796050,jo-2024,0,1,0,0,0.0
 PA796050,jo-2030,0,1,0,0,0.0
-PA796050,justice-criminelle-2026,0,4,0,0,0.0
+PA796050,justice-criminelle-2026,0,3,0,0,0.0
 PA796050,justice-mineurs,0,1,0,0,0.0
 PA796050,kasbarian-berge,0,2,0,0,0.0
 PA796050,lfr-2022-08,0,0,1,0,
@@ -43680,6 +43907,7 @@ PA796050,sren-2024,1,0,0,0,100.0
 PA796050,surete-transports-2025,0,2,0,0,0.0
 PA796050,urgence-agricole-2026,0,2,0,0,0.0
 PA796050,vote-correspondance-detenus-2025,0,1,0,0,0.0
+PA796050,zan-2023,0,1,0,0,0.0
 PA796062,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA796062,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA796062,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -43707,7 +43935,7 @@ PA796062,ivg-constitution-2024,1,0,0,0,100.0
 PA796062,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA796062,jo-2024,2,0,0,0,100.0
 PA796062,jo-2030,1,0,0,0,100.0
-PA796062,justice-criminelle-2026,2,0,0,0,100.0
+PA796062,justice-criminelle-2026,1,0,0,0,100.0
 PA796062,justice-mineurs,1,0,0,0,100.0
 PA796062,kasbarian-berge,1,0,0,0,100.0
 PA796062,lfr-2022-08,2,0,0,0,100.0
@@ -43740,6 +43968,7 @@ PA796062,sren-2024,2,0,0,0,100.0
 PA796062,surete-transports-2025,2,0,0,0,100.0
 PA796062,urgence-agricole-2026,2,0,0,0,100.0
 PA796062,valletoux-2023,0,1,0,0,0.0
+PA796062,zan-2023,1,0,0,0,100.0
 PA796070,abrogation-obligation-vaccinale-2023,1,0,0,0,100.0
 PA796070,accueils-physiques-ppl-2023,1,0,0,0,100.0
 PA796070,aesh-corps-fonctionnaires-2026,1,0,0,0,100.0
@@ -43760,7 +43989,7 @@ PA796070,immigration-2024,1,0,0,0,100.0
 PA796070,ivg-constitution-2024,1,0,0,0,100.0
 PA796070,ivg-constitution-ppl-2022,1,0,0,0,100.0
 PA796070,jo-2030,1,0,0,0,100.0
-PA796070,justice-criminelle-2026,2,0,0,0,100.0
+PA796070,justice-criminelle-2026,3,0,0,0,100.0
 PA796070,justice-mineurs,1,0,0,0,100.0
 PA796070,kasbarian-berge,1,0,0,0,100.0
 PA796070,lfr-2022-08,1,0,0,0,100.0
@@ -44067,6 +44296,7 @@ PA805166,valletoux-2023,1,0,0,0,100.0
 PA805166,violences-sexuelles-sexistes-2025,1,0,0,0,100.0
 PA805166,vote-correspondance-detenus-2025,0,1,0,0,0.0
 PA805166,vsa-commerces-2026,0,0,1,0,
+PA805166,zan-2023,0,1,0,0,0.0
 PA817203,abrogation-obligation-vaccinale-2023,0,1,0,0,0.0
 PA817203,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA817203,aide-a-mourir,0,1,0,0,0.0
@@ -44138,7 +44368,7 @@ PA817211,industrie-verte-2023,1,0,0,0,100.0
 PA817211,ivg-constitution-2024,1,0,0,0,100.0
 PA817211,jo-2024,1,0,0,0,100.0
 PA817211,jo-2030,4,0,0,0,100.0
-PA817211,justice-criminelle-2026,2,0,0,0,100.0
+PA817211,justice-criminelle-2026,1,0,0,0,100.0
 PA817211,justice-mineurs,1,0,0,0,100.0
 PA817211,kasbarian-berge,4,0,0,0,100.0
 PA817211,loi-orientation-agricole-2025,1,0,0,0,100.0
@@ -44174,6 +44404,7 @@ PA817211,urgence-agricole-2026,2,0,0,0,100.0
 PA817211,valletoux-2023,0,1,0,0,0.0
 PA817211,violences-sexuelles-sexistes-2025,0,1,0,0,0.0
 PA817211,vote-correspondance-detenus-2025,1,0,0,0,100.0
+PA817211,zan-2023,1,0,0,0,100.0
 PA822617,aide-a-mourir,1,0,0,0,100.0
 PA822617,antisemitisme-enseignement-superieur,1,0,0,0,100.0
 PA822617,chomage-ruptures-conventionnelles-2026,0,0,1,0,
@@ -44299,7 +44530,7 @@ PA840107,aide-a-mourir,0,1,0,0,0.0
 PA840107,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
 PA840107,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
 PA840107,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
-PA840107,justice-criminelle-2026,0,3,0,0,0.0
+PA840107,justice-criminelle-2026,0,2,0,0,0.0
 PA840107,mineurs-reseaux-sociaux-2026,0,0,1,0,
 PA840107,parcours-soins-violences-sexuelles-2026,0,0,1,0,
 PA840107,presomption-legitime-defense,0,1,0,0,0.0
@@ -44487,7 +44718,7 @@ PA840235,definition-viol-2025,1,0,0,0,100.0
 PA840235,duplomb-2025,0,1,0,0,0.0
 PA840235,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA840235,jo-2030,0,1,0,0,0.0
-PA840235,justice-criminelle-2026,0,2,0,0,0.0
+PA840235,justice-criminelle-2026,0,1,0,0,0.0
 PA840235,justice-mineurs,0,2,0,0,0.0
 PA840235,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA840235,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
@@ -44514,7 +44745,7 @@ PA840657,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA840657,financement-audiovisuel-public-lo-2024,0,1,0,0,0.0
 PA840657,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA840657,jo-2030,0,3,0,0,0.0
-PA840657,justice-criminelle-2026,0,2,0,0,0.0
+PA840657,justice-criminelle-2026,0,1,0,0,0.0
 PA840657,justice-mineurs,0,2,0,0,0.0
 PA840657,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA840657,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
@@ -44707,7 +44938,6 @@ PA840745,aesh-corps-fonctionnaires-2026,0,0,1,0,
 PA840745,aide-a-mourir,0,1,0,0,0.0
 PA840745,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
 PA840745,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
-PA840745,justice-criminelle-2026,0,1,0,0,0.0
 PA840745,montagne-vivante-2026,0,1,0,0,0.0
 PA840745,parcours-soins-violences-sexuelles-2026,0,0,1,0,
 PA840745,presomption-legitime-defense,0,1,0,0,0.0
@@ -44727,7 +44957,6 @@ PA840757,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA840757,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA840757,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA840757,jo-2030,0,1,0,0,0.0
-PA840757,justice-criminelle-2026,0,1,0,0,0.0
 PA840757,justice-mineurs,0,1,0,0,0.0
 PA840757,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA840757,meubles-tourisme-2024,0,1,0,0,0.0
@@ -44974,7 +45203,7 @@ PA840817,duplomb-2025,0,1,0,0,0.0
 PA840817,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA840817,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA840817,jo-2030,0,4,0,0,0.0
-PA840817,justice-criminelle-2026,0,2,0,0,0.0
+PA840817,justice-criminelle-2026,0,1,0,0,0.0
 PA840817,justice-mineurs,0,2,0,0,0.0
 PA840817,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA840817,meubles-tourisme-2024,1,0,0,0,100.0
@@ -45051,7 +45280,7 @@ PA840837,duplomb-2025,0,1,0,0,0.0
 PA840837,execution-peines-ferme-2025,0,1,0,0,0.0
 PA840837,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA840837,jo-2030,0,4,0,0,0.0
-PA840837,justice-criminelle-2026,0,2,0,0,0.0
+PA840837,justice-criminelle-2026,0,1,0,0,0.0
 PA840837,justice-mineurs,0,4,0,0,0.0
 PA840837,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA840837,mineurs-isoles-sans-abrisme-2025,0,1,0,0,0.0
@@ -45094,6 +45323,7 @@ PA840857,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA840857,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA840857,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA840857,jo-2030,0,1,0,0,0.0
+PA840857,justice-criminelle-2026,0,1,0,0,0.0
 PA840857,justice-mineurs,0,1,0,0,0.0
 PA840857,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA840857,montagne-vivante-2026,0,1,0,0,0.0
@@ -45292,7 +45522,7 @@ PA840947,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA840947,duplomb-2025,1,0,0,0,100.0
 PA840947,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA840947,fraudes-sociales-fiscales-2026,2,0,0,0,100.0
-PA840947,justice-criminelle-2026,2,0,0,0,100.0
+PA840947,justice-criminelle-2026,3,0,0,0,100.0
 PA840947,justice-mineurs,1,0,0,0,100.0
 PA840947,loi-orientation-agricole-2025,1,0,0,0,100.0
 PA840947,mineurs-isoles-sans-abrisme-2025,1,0,0,0,100.0
@@ -45331,7 +45561,7 @@ PA840955,delit-sejour-irregulier-ppl-2025,1,0,0,0,100.0
 PA840955,duplomb-2025,1,0,0,0,100.0
 PA840955,fraudes-sociales-fiscales-2026,4,0,0,0,100.0
 PA840955,jo-2030,1,0,0,0,100.0
-PA840955,justice-criminelle-2026,2,0,0,0,100.0
+PA840955,justice-criminelle-2026,3,0,0,0,100.0
 PA840955,justice-mineurs,5,0,0,0,100.0
 PA840955,loi-orientation-agricole-2025,1,0,0,0,100.0
 PA840955,meubles-tourisme-2024,1,0,0,0,100.0
@@ -45375,7 +45605,7 @@ PA840967,duplomb-2025,0,1,0,0,0.0
 PA840967,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA840967,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA840967,jo-2030,0,3,0,0,0.0
-PA840967,justice-criminelle-2026,0,4,0,0,0.0
+PA840967,justice-criminelle-2026,0,5,0,0,0.0
 PA840967,justice-mineurs,0,2,0,0,0.0
 PA840967,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA840967,montagne-vivante-2026,0,1,0,0,0.0
@@ -45407,7 +45637,7 @@ PA840979,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA840979,duplomb-2025,0,1,0,0,0.0
 PA840979,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA840979,jo-2030,0,2,0,0,0.0
-PA840979,justice-criminelle-2026,0,3,0,0,0.0
+PA840979,justice-criminelle-2026,0,2,0,0,0.0
 PA840979,justice-mineurs,0,1,0,0,0.0
 PA840979,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA840979,meubles-tourisme-2024,1,0,0,0,100.0
@@ -45597,7 +45827,7 @@ PA841059,chomage-ruptures-conventionnelles-2026,0,1,0,0,0.0
 PA841059,corps-electoral-nc-natifs-2026,1,0,0,0,100.0
 PA841059,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA841059,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
-PA841059,justice-criminelle-2026,0,2,0,0,0.0
+PA841059,justice-criminelle-2026,0,3,0,0,0.0
 PA841059,montagne-vivante-2026,0,1,0,0,0.0
 PA841059,parcours-soins-violences-sexuelles-2026,0,0,1,0,
 PA841059,presomption-legitime-defense,0,1,0,0,0.0
@@ -45731,7 +45961,7 @@ PA841107,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA841107,fraudes-sociales-fiscales-2026,3,0,1,0,100.0
 PA841107,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA841107,jo-2030,2,1,1,0,40.0
-PA841107,justice-criminelle-2026,6,0,0,0,100.0
+PA841107,justice-criminelle-2026,5,0,0,0,100.0
 PA841107,justice-mineurs,3,0,0,0,100.0
 PA841107,loi-orientation-agricole-2025,1,0,0,0,100.0
 PA841107,meubles-tourisme-2024,1,0,0,0,100.0
@@ -45810,7 +46040,7 @@ PA841139,duplomb-2025,0,1,0,0,0.0
 PA841139,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841139,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA841139,jo-2030,0,1,0,0,0.0
-PA841139,justice-criminelle-2026,0,4,0,0,0.0
+PA841139,justice-criminelle-2026,0,3,0,0,0.0
 PA841139,justice-mineurs,0,1,0,0,0.0
 PA841139,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA841139,montagne-vivante-2026,0,1,0,0,0.0
@@ -45933,7 +46163,6 @@ PA841199,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841199,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA841199,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA841199,jo-2030,0,1,0,0,0.0
-PA841199,justice-criminelle-2026,0,1,0,0,0.0
 PA841199,justice-mineurs,0,1,0,0,0.0
 PA841199,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA841199,meubles-tourisme-2024,0,1,0,0,0.0
@@ -46031,7 +46260,7 @@ PA841223,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA841223,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA841223,fraudes-sociales-fiscales-2026,3,0,0,0,100.0
 PA841223,jo-2030,1,0,0,0,100.0
-PA841223,justice-criminelle-2026,2,0,1,0,100.0
+PA841223,justice-criminelle-2026,2,0,0,0,100.0
 PA841223,justice-mineurs,5,0,0,0,100.0
 PA841223,loi-orientation-agricole-2025,1,0,0,0,100.0
 PA841223,meubles-tourisme-2024,1,0,0,0,100.0
@@ -46282,7 +46511,7 @@ PA841351,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA841351,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA841351,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
 PA841351,jo-2030,1,0,0,0,100.0
-PA841351,justice-criminelle-2026,3,1,0,0,75.0
+PA841351,justice-criminelle-2026,4,1,0,0,80.0
 PA841351,justice-mineurs,2,1,0,0,83.3
 PA841351,meubles-tourisme-2024,1,0,0,0,100.0
 PA841351,mineurs-reseaux-sociaux-2026,1,0,0,0,100.0
@@ -46433,7 +46662,7 @@ PA841395,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841395,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA841395,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA841395,jo-2030,0,1,0,0,0.0
-PA841395,justice-criminelle-2026,0,1,0,0,0.0
+PA841395,justice-criminelle-2026,0,2,0,0,0.0
 PA841395,justice-mineurs,0,1,0,0,0.0
 PA841395,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA841395,mineurs-reseaux-sociaux-2026,0,0,1,0,
@@ -46531,7 +46760,7 @@ PA841439,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841439,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA841439,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA841439,jo-2030,0,4,0,0,0.0
-PA841439,justice-criminelle-2026,0,2,0,0,0.0
+PA841439,justice-criminelle-2026,0,1,0,0,0.0
 PA841439,justice-mineurs,0,1,0,0,0.0
 PA841439,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA841439,meubles-tourisme-2024,0,1,0,0,0.0
@@ -46807,7 +47036,7 @@ PA841515,corps-electoral-nc-natifs-2026,0,1,0,0,0.0
 PA841515,delit-sejour-irregulier-ppl-2025,1,0,0,0,100.0
 PA841515,duplomb-2025,1,0,0,0,100.0
 PA841515,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
-PA841515,justice-criminelle-2026,3,0,0,0,100.0
+PA841515,justice-criminelle-2026,2,0,0,0,100.0
 PA841515,justice-mineurs,1,0,0,0,100.0
 PA841515,loi-orientation-agricole-2025,1,0,0,0,100.0
 PA841515,meubles-tourisme-2024,1,0,0,0,100.0
@@ -46922,7 +47151,7 @@ PA841563,financement-audiovisuel-public-lo-2024,0,0,1,0,
 PA841563,fraudes-sociales-fiscales-2026,0,5,0,0,0.0
 PA841563,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA841563,jo-2030,0,4,0,0,0.0
-PA841563,justice-criminelle-2026,0,3,0,0,0.0
+PA841563,justice-criminelle-2026,0,4,0,0,0.0
 PA841563,justice-mineurs,0,5,0,0,0.0
 PA841563,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA841563,meubles-tourisme-2024,0,1,0,0,0.0
@@ -47239,7 +47468,7 @@ PA841657,deserts-medicaux-garot,1,0,0,0,100.0
 PA841657,duplomb-2025,1,0,0,0,100.0
 PA841657,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
 PA841657,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
-PA841657,justice-criminelle-2026,2,0,0,0,100.0
+PA841657,justice-criminelle-2026,1,0,0,0,100.0
 PA841657,justice-mineurs,1,0,0,0,100.0
 PA841657,loi-orientation-agricole-2025,1,0,0,0,100.0
 PA841657,meubles-tourisme-2024,1,0,0,0,100.0
@@ -47416,7 +47645,7 @@ PA841713,duplomb-2025,1,0,0,0,100.0
 PA841713,financement-audiovisuel-public-lo-2024,1,0,0,0,100.0
 PA841713,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
 PA841713,jo-2030,1,0,0,0,100.0
-PA841713,justice-criminelle-2026,3,0,1,0,100.0
+PA841713,justice-criminelle-2026,4,0,0,0,100.0
 PA841713,justice-mineurs,1,0,0,0,100.0
 PA841713,loi-orientation-agricole-2025,1,0,0,0,100.0
 PA841713,meubles-tourisme-2024,1,0,0,0,100.0
@@ -47742,7 +47971,7 @@ PA841825,execution-peines-ferme-2025,0,2,0,0,0.0
 PA841825,execution-provisoire-ineligibilite-ppl-2025,1,0,0,0,100.0
 PA841825,fraudes-sociales-fiscales-2026,0,2,0,0,0.0
 PA841825,jo-2030,0,3,0,0,0.0
-PA841825,justice-criminelle-2026,0,2,0,0,0.0
+PA841825,justice-criminelle-2026,0,1,0,0,0.0
 PA841825,justice-mineurs,0,1,0,0,0.0
 PA841825,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA841825,meubles-tourisme-2024,0,1,0,0,0.0
@@ -47817,7 +48046,7 @@ PA841845,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA841845,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
 PA841845,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA841845,jo-2030,1,0,0,0,100.0
-PA841845,justice-criminelle-2026,3,0,0,0,100.0
+PA841845,justice-criminelle-2026,2,0,0,0,100.0
 PA841845,justice-mineurs,3,0,0,0,100.0
 PA841845,loi-orientation-agricole-2025,1,0,0,0,100.0
 PA841845,mineurs-isoles-sans-abrisme-2025,1,0,0,0,100.0
@@ -48002,6 +48231,7 @@ PA841919,deserts-medicaux-garot,1,0,0,0,100.0
 PA841919,duplomb-2025,1,0,0,0,100.0
 PA841919,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
 PA841919,jo-2030,0,1,0,0,0.0
+PA841919,justice-criminelle-2026,1,0,0,0,100.0
 PA841919,justice-mineurs,1,0,0,0,100.0
 PA841919,mineurs-isoles-sans-abrisme-2025,1,0,0,0,100.0
 PA841919,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
@@ -48275,7 +48505,7 @@ PA842013,execution-peines-ferme-2025,2,0,0,0,100.0
 PA842013,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA842013,fraudes-sociales-fiscales-2026,4,0,0,0,100.0
 PA842013,jo-2030,4,0,0,0,100.0
-PA842013,justice-criminelle-2026,2,0,2,0,100.0
+PA842013,justice-criminelle-2026,3,0,1,0,100.0
 PA842013,justice-mineurs,1,0,0,0,100.0
 PA842013,loi-orientation-agricole-2025,1,0,0,0,100.0
 PA842013,mineurs-isoles-sans-abrisme-2025,1,0,0,0,100.0
@@ -48556,7 +48786,7 @@ PA842105,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA842105,fraudes-sociales-fiscales-2026,1,0,0,0,100.0
 PA842105,hydrocarbures-outre-mer-2026,1,0,0,0,100.0
 PA842105,jo-2030,1,0,0,0,100.0
-PA842105,justice-criminelle-2026,2,0,0,0,100.0
+PA842105,justice-criminelle-2026,3,0,0,0,100.0
 PA842105,justice-mineurs,1,0,0,0,100.0
 PA842105,loi-orientation-agricole-2025,1,0,0,0,100.0
 PA842105,meubles-tourisme-2024,1,0,0,0,100.0
@@ -48668,7 +48898,7 @@ PA842141,duplomb-2025,0,1,0,0,0.0
 PA842141,execution-peines-ferme-2025,1,1,0,0,50.0
 PA842141,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA842141,jo-2030,0,1,0,0,0.0
-PA842141,justice-criminelle-2026,0,4,0,0,0.0
+PA842141,justice-criminelle-2026,0,3,0,0,0.0
 PA842141,justice-mineurs,1,4,0,0,12.5
 PA842141,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 PA842141,montagne-vivante-2026,0,1,0,0,0.0
@@ -49080,7 +49310,7 @@ PA842311,duplomb-2025,0,0,1,0,
 PA842311,execution-provisoire-ineligibilite-ppl-2025,0,1,0,0,0.0
 PA842311,fraudes-sociales-fiscales-2026,0,1,0,0,0.0
 PA842311,jo-2030,0,1,0,0,0.0
-PA842311,justice-criminelle-2026,0,4,0,0,0.0
+PA842311,justice-criminelle-2026,0,5,0,0,0.0
 PA842311,justice-mineurs,1,4,0,0,12.5
 PA842311,loi-orientation-agricole-2025,0,1,0,0,0.0
 PA842311,meubles-tourisme-2024,1,0,0,0,100.0
@@ -49158,7 +49388,7 @@ PA870009,droit-visite-lieux-privation-liberte-2026,1,0,0,0,100.0
 PA870009,fraudes-sociales-fiscales-2026,0,3,0,0,0.0
 PA870009,hydrocarbures-outre-mer-2026,0,1,0,0,0.0
 PA870009,jo-2030,0,3,0,0,0.0
-PA870009,justice-criminelle-2026,0,3,0,0,0.0
+PA870009,justice-criminelle-2026,0,2,0,0,0.0
 PA870009,mineurs-reseaux-sociaux-2026,0,1,0,0,0.0
 PA870009,montagne-vivante-2026,0,1,0,0,0.0
 PA870009,parcours-soins-violences-sexuelles-2026,0,0,1,0,

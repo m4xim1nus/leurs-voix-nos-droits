@@ -243,12 +243,12 @@ jo-2030,VTANR5L17V4800,amendement,global,principal,restreint,0.16666666666666666
 justice-criminelle-2026,VTANR5L17V8042,decisif,police-justice,principal,restreint,0.5,contre
 justice-criminelle-2026,VTANR5L17V8042,decisif,vie-privee,secondaire,restreint,0.5,contre
 justice-criminelle-2026,VTANR5L17V8042,decisif,global,principal,restreint,0.5,contre
-justice-criminelle-2026,VTANR5L17V7896,amendement,police-justice,principal,restreint,0.1,pour
-justice-criminelle-2026,VTANR5L17V7896,amendement,vie-privee,secondaire,restreint,0.1,pour
-justice-criminelle-2026,VTANR5L17V7896,amendement,global,principal,restreint,0.1,pour
 justice-criminelle-2026,VTANR5L17V7903,amendement,police-justice,principal,restreint,0.1,pour
 justice-criminelle-2026,VTANR5L17V7903,amendement,vie-privee,secondaire,restreint,0.1,pour
 justice-criminelle-2026,VTANR5L17V7903,amendement,global,principal,restreint,0.1,pour
+justice-criminelle-2026,VTANR5L17V7922,amendement,police-justice,principal,restreint,0.1,pour
+justice-criminelle-2026,VTANR5L17V7922,amendement,vie-privee,secondaire,restreint,0.1,pour
+justice-criminelle-2026,VTANR5L17V7922,amendement,global,principal,restreint,0.1,pour
 justice-criminelle-2026,VTANR5L17V7946,amendement,police-justice,principal,restreint,0.1,pour
 justice-criminelle-2026,VTANR5L17V7946,amendement,vie-privee,secondaire,restreint,0.1,pour
 justice-criminelle-2026,VTANR5L17V7946,amendement,global,principal,restreint,0.1,pour
@@ -895,3 +895,7 @@ vote-correspondance-detenus-2025,VTANR5L17V2244,decisif,police-justice,secondair
 vote-correspondance-detenus-2025,VTANR5L17V2244,decisif,global,principal,restreint,1.0,contre
 vsa-commerces-2026,VTANR5L17V5427,decisif,vie-privee,principal,restreint,1.0,contre
 vsa-commerces-2026,VTANR5L17V5427,decisif,global,principal,restreint,1.0,contre
+zan-2023,VTANR5L16V2257,decisif,environnement,principal,restreint,0.5,contre
+zan-2023,VTANR5L16V2257,decisif,global,principal,restreint,0.5,contre
+zan-2023,VTANR5L16V1962,amendement,environnement,principal,restreint,0.5,pour
+zan-2023,VTANR5L16V1962,amendement,global,principal,restreint,0.5,pour

@@ -216,6 +216,7 @@ textes:
   violences-sexuelles-sexistes-2025: {termes: [contrôle coercitif, emprise, violences conjugales, féminicides, violences faites aux femmes, prescription, MeToo]}
   vote-correspondance-detenus-2025: {termes: [prison, prisonniers, détenus, élections municipales, droit de vote en prison, vote des détenus, prisons, municipales]}
   vsa-commerces-2026: {termes: [VSA, vidéosurveillance algorithmique, supermarchés, caméras, vols à l'étalage, reconnaissance, magasins, intelligence artificielle, IA]}
+  zan-2023: {termes: [ZAN, zéro artificialisation nette]}
 
 ecartes:
   DLR5L14N35468: {termes: [retraites agricoles, agriculteurs], surnoms: [loi Chassaigne]}
@@ -270,7 +271,6 @@ ecartes:
   DLR5L16N46750: {termes: [Egalim, négociations commerciales, grande distribution], surnoms: [Egalim 3]}
   DLR5L16N46778: {termes: [Ehpad, foyers, ASE, aide sociale à l'enfance, centres d'hébergement, mineurs isolés, contrôle parlementaire, enfants placés, droit de visite]}
   DLR5L16N46858: {termes: [CROUS, repas à 1 euro, étudiants, précarité étudiante]}
-  DLR5L16N46880: {termes: [ZAN, zéro artificialisation nette]}
   DLR5L16N46921: {termes: [EDF, tarif réglementé, nationalisation]}
   DLR5L16N47035: {termes: [majorité numérique, réseaux sociaux, moins de 15 ans, TikTok, haine en ligne], surnoms: [loi Marcangeli]}
   DLR5L16N47074: {termes: [influenceurs, influenceuses, publicité en ligne, dropshipping]}
