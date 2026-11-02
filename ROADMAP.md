@@ -37,3 +37,7 @@ de côté, et combler deux manques de l'outil apparus en route. Pas de nouvelle 
   service, `a69-riipm-2025` et `travail-1er-mai-ppl-2025` (motions de rejet « tactiques »), brouillons prêts.
 - Item 2 : note interne (migration `0005_notes_internes.sql`), sur la fiche et dans « À traiter ». **À faire par Max** :
   `npm run db:migrer:distant`, puis `npm run deploy`.
+- Items 3 et 4 : 18 brouillons chargés « à relire » dans l'admin le 02/11/2026 (six résumés de témoins, cinq fiches de fond,
+  cinq écarts dont deux deviennent qualifiés, les deux fiches de l'alerte). En attente de l'ok de Max.
+- Item 5 : dix questions dans `docs/A_VALIDER.md`, chacune avec une recommandation. En attente de Max.
+- Item 6 : les trois sources, lues par Max dans un navigateur, confirment les fiches publiées. Rien à changer.
