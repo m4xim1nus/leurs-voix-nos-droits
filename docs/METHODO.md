@@ -40,6 +40,8 @@ l'échéance d'un régime restrictif et le droit lu à la seule date du vote (r�
 lois successives d'une même crise (règle 18), le détail par législature sur la fiche d'un·e député·e (règle 19). Le 01/11/2026, après l'audit de cohérence : le choix du droit
 principal et le décompte des sources (règle 4), le droit `discriminations` et la mesure d'un autre droit (règle 4), la mesure absente
 du texte décisif, le droit secondaire, les sources partagées et la réserve du Conseil constitutionnel (règle 11). Le 01/11/2026, pour le Sénat de 2017-2022 : deux périodes et des amendements clés (règle 26).
+Le 02/11/2026 : les conseils de l'ordre des barreaux parmi les sources (règle 7), et la justice civile et commerciale hors de
+`police-justice` (règle 2).
 
 ## Grille des droits
 
@@ -68,7 +70,10 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
    correspondance). Le **mode de scrutin** et le **régime des mandats**
    (cumul, incompatibilités) relèvent de l'organisation des pouvoirs
    publics : ils n'entrent pas dans la grille (Paris, Lyon et Marseille,
-   2025). Le
+   2025). L'**accès à la justice civile et commerciale** (frais de
+   procédure, contribution pour la justice économique, droit de timbre)
+   n'entre pas dans `police-justice`, qui vise la justice pénale (LOPJ
+   2023). Le
    **choix d'une source d'énergie** (nucléaire, renouvelables) n'est pas
    un droit de la grille : le droit `environnement` se juge sur les
    garanties des personnes (information, participation du public,
@@ -144,8 +149,9 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
    - ONG ;
    - pour la santé, ordres professionnels et sociétés savantes ;
    - organisations professionnelles et syndicales du droit, de la santé et
-     de l'enseignement (Conseil national des barreaux, Syndicat des avocats
-     de France, Syndicat de la magistrature…) ;
+     de l'enseignement (Conseil national des barreaux, conseils de l'ordre
+     des barreaux, Syndicat des avocats de France, Syndicat de la
+     magistrature…) ;
    - organisations syndicales représentatives de salariés (CGT, CFDT, FO,
      CFE-CGC, CFTC, UNSA, FSU, Solidaires), y compris leurs fédérations
      professionnelles et les syndicats nationaux de branche qui leur sont
