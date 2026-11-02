@@ -160,6 +160,7 @@ def test_proposition_reprend_les_pauses_et_lit_le_yaml(export, termes):
     # La reprise renvoie le tour en pause tel quel, après la tâche ; le système est mis en cache.
     assert client.recus[1]["messages"][-1] == {"role": "assistant", "content": pause.content}
     assert client.recus[0]["system"][0]["cache_control"]["ttl"] == "1h"
+    assert all(o["blocked_domains"] == ["technoperchoir.fr"] for o in client.recus[0]["tools"])
     assert "VTANR5L17V1" in client.recus[0]["messages"][0]["content"]
 
     infos_an = {"VTANR5L17V1": {"dossier_id": "DLR5L17N1", "etape": "AN1", "division": None, "objet": "ensemble",

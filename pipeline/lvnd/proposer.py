@@ -195,9 +195,13 @@ def message_tache(export: Path, dossier: str, mode: str, alerte: dict | None, ve
 
 # Appel ----------------------------------------------------------------------------------------
 
+# Le site public et l'admin du projet affichent les qualifications : jamais une source, et leur lecture
+# fausserait la mesure de l'accord (item 4).
+DOMAINES_BLOQUES = ["technoperchoir.fr"]
 OUTILS = [
-    {"type": "web_search_20260209", "name": "web_search", "max_uses": 12},
-    {"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 20, "max_content_tokens": 60_000},
+    {"type": "web_search_20260209", "name": "web_search", "max_uses": 12, "blocked_domains": DOMAINES_BLOQUES},
+    {"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 20, "max_content_tokens": 60_000,
+     "blocked_domains": DOMAINES_BLOQUES},
 ]
 MAX_REPRISES = 8  # reprises d'un tour mis en pause par le serveur (pause_turn)
 
