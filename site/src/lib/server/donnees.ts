@@ -8,6 +8,7 @@ import { resolve } from 'node:path';
 import { csvParse } from 'd3-dsv';
 import { DROITS } from '$lib/droits';
 import { slug, typo } from '$lib/format';
+import { phrasesSimples } from './simple';
 import { baseSenat, dernierVoteEnsemble, voteSenat, type BaseSenat, type BlocSenat } from './senat';
 import type {
   Appartenance,
@@ -333,7 +334,10 @@ function charger(): Donnees {
   );
 
   const ORDRE = ['decisif', 'amendement', 'censure', 'ensemble', 'article', 'motion'];
-  type Entree = Omit<Texte, 'senat'> & { senat?: BlocSenat };
+  type Entree = Omit<Texte, 'senat' | 'resume_simple'> & {
+    senat?: BlocSenat;
+    resume_simple?: { texte: string; empreinte: string };
+  };
   const construits: Texte[] = editorial.textes.map((t: Entree) => {
     const cat = catalogue.get(t.dossier_an);
     const retenus: ScrutinRetenu[] = t.scrutins.map((r) => {
@@ -385,6 +389,8 @@ function charger(): Donnees {
       ...t,
       titre: typo(t.titre),
       resume: typo(t.resume),
+      // Affiché seulement s'il correspond encore à la fiche (empreinte), une phrase par ligne.
+      resume_simple: phrasesSimples(t)?.map(typo) ?? null,
       droits: t.droits.map((d) => ({ ...d, justification: typo(d.justification) })),
       vigilance: t.vigilance.map((v) => ({ ...v, texte: typo(v.texte) })),
       conseil_constitutionnel: typo(t.conseil_constitutionnel),

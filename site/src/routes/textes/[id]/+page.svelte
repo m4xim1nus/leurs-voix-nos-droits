@@ -160,6 +160,17 @@
   </p>
 {/if}
 {#if t.resume}<p class="chapo">{t.resume}</p>{/if}
+{#if t.resume_simple}
+  <section class="simple" aria-labelledby="mots-simples" lang="fr">
+    <h2 id="mots-simples">En mots simples</h2>
+    {#each t.resume_simple as phrase, i (i)}<p>{phrase}</p>{/each}
+    <p class="petit discret">
+      Ce résumé redit la fiche avec des mots simples. Il ne dit pas si le texte est bon ou mauvais
+      pour les droits : c’est écrit plus bas, avec les sources.
+      <a href="/methodologie#mots-simples">Comment ce résumé est écrit</a>.
+    </p>
+  </section>
+{/if}
 
 <section>
   <h2>Ce que fait le texte</h2>
@@ -414,6 +425,25 @@
 </section>
 
 <style>
+  .simple {
+    max-width: 60ch;
+    margin: 1.5rem 0 2rem;
+    padding: 1rem 1.25rem;
+    background: var(--plan);
+    border-left: 4px solid var(--encre);
+  }
+  .simple h2 {
+    font-size: 1.15rem;
+    margin: 0 0 0.6rem;
+  }
+  .simple p:not(.petit) {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0 0 0.35rem;
+  }
+  .simple .petit {
+    margin-top: 0.8rem;
+  }
   .titre {
     font-size: clamp(2rem, 5.5vw, 3.4rem);
     max-width: 24ch;

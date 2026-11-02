@@ -180,6 +180,25 @@
   </p>
 </section>
 
+<section id="mots-simples">
+  <h2>Les résumés en mots simples</h2>
+  <p>
+    Une fiche peut porter un résumé « En mots simples », pour les personnes qui lisent difficilement
+    le français ou qui ne connaissent pas le travail des parlementaires. Il suit les règles
+    européennes du « facile à lire et à comprendre » (FALC) : 5 phrases au plus, 15 mots au plus par
+    phrase, une idée par phrase, des mots de tous les jours, aucun sigle. Il n’en porte pas le logo
+    : ce label demande une relecture par des personnes en situation de handicap intellectuel, que ce
+    projet n’a pas organisée.
+  </p>
+  <p>
+    Il est préparé par le même assistant, à partir de la fiche seule : titre, résumé, droits
+    touchés, décision du Conseil constitutionnel. <strong>Il n’ajoute rien</strong> à la fiche, ne dit
+    pas si le texte étend ou restreint un droit (le jugement et ses sources sont donnés à côté) et ne
+    nomme ni élu·e ni groupe. Une personne le relit et le valide avant publication. Si la fiche change
+    ensuite, il n’est plus affiché tant qu’il n’a pas été relu.
+  </p>
+</section>
+
 <section id="scrutins">
   <h2>Les scrutins retenus</h2>
   <ol class="regles">

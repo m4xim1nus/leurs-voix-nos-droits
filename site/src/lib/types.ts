@@ -185,6 +185,8 @@ export interface Texte {
   legislature: number;
   titre: string;
   resume: string;
+  /** Résumé en mots simples, une phrase par élément ; null s'il n'y en a pas ou s'il est à revoir. */
+  resume_simple: string[] | null;
   droits: DroitTouche[];
   principal: DroitTouche;
   etiquettes: string[];
