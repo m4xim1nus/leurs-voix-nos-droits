@@ -382,7 +382,8 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
     de source admise, il n'y a pas de fiche. La fiche décrit le texte dans son
     dernier état connu à sa date (texte déposé, ou texte adopté par la dernière
     chambre qui l'a voté), et dit cette date : une mesure supprimée par un scrutin
-    public avant cette date n'y figure pas. Après le vote, le texte est qualifié ou
+    public avant cette date n'y figure pas. Une fiche de suivi ne porte aucun vote, de
+    l'Assemblée ni du Sénat : le vote du Sénat s'ajoute quand le texte est qualifié. Après le vote, le texte est qualifié ou
     écarté selon les règles communes, et sa fiche disparaît. La page des textes en
     cours n'affiche que ces textes suivis et les textes qualifiés encore en navette.
 
@@ -396,7 +397,10 @@ ci-dessous remplacent, pour le Sénat, les règles 9 à 11 et 15 à 19.
     sens est établi (règle 24). Sinon, il est affiché et non compté. Les autres lectures et les
     parties d'une loi de finances sont affichées, pas comptées. Les **motions** aussi, question
     préalable comprise, même quand elle met fin à l'examen du texte. Les crédits d'une mission ne sont pas retenus, ni les amendements, hors amendements clés (règle 26). Quand le dernier vote sur l'ensemble n'est pas public, le dernier scrutin public
-    reste décisif, avec la mention « dernier vote public, sur le texte du JJ/MM/AAAA ».
+    reste décisif, avec la mention « dernier vote public, sur le texte du JJ/MM/AAAA ». Sur un
+    texte qui n'est pas qualifié à l'Assemblée (suivi ou non traité), un vote du Sénat sans voix
+    d'un côté ne demande rien : comme à l'Assemblée (règle 9), il ne départage personne, et le texte
+    attend le vote de l'Assemblée.
 24. **Chaque vote se lit sur le texte voté.** Si le Sénat a voté le même texte que le scrutin
     décisif de l'Assemblée (conclusions de la commission mixte paritaire, adoption sans
     modification par l'une des chambres), le sens est repris. S'il a voté une autre version,

@@ -22,7 +22,8 @@ l'admin, qui retire ceux que D1 a déjà traités (admin/src/lib/alertes.ts).
 - `inscrit` : texte ni qualifié, ni écarté, ni suivi, inscrit à l'ordre du jour d'une séance. Inscrit ne
   veut pas dire voté ;
 - `senat_premier_vote` : vote du Sénat en scrutin public sur l'ensemble d'un texte ni écarté (sauf faute de vote
-  sur l'ensemble à l'AN, règle 28) ni lu pour le Sénat (une fiche de suivi n'y change rien, comme pour `premier_decisif`) ;
+  sur l'ensemble à l'AN, règle 28) ni lu pour le Sénat ; sur un texte non qualifié à l'AN, seulement s'il a des voix
+  des deux côtés (règle 23) (une fiche de suivi n'y change rien, comme pour `premier_decisif`) ;
 - `senat_vote_posterieur` : vote du Sénat sur l'ensemble après ceux que retient une qualification (règle 25).
 """
 
@@ -150,6 +151,9 @@ def calculer(textes: list[dict], scrutins: list[dict], points: list[dict], quali
             continue
         dernier = max(votes, key=_cle)
         retenus = [senat_scr[s["id"]] for s in (qualifies.get(d, {}).get("senat") or {}).get("scrutins", []) if s["id"] in senat_scr]
+        # Texte non qualifié à l'AN : un vote sans voix d'un côté ne demande rien (règle 23), il attend l'Assemblée.
+        if d not in qualifies and not (dernier["pour"] and dernier["contre"]):
+            continue
         if not retenus:
             ajouter("senat_premier_vote", d, dernier["id"], dernier["date"], f"vote du Sénat sur l'ensemble : {_decompte(dernier)}")
         elif _cle(dernier) > _cle(max(retenus, key=_cle)):

@@ -256,3 +256,13 @@ def test_alertes_senat():
     # Écarté sur le fond : rien ; écarté faute de vote sur l'ensemble à l'AN : qualifiable au Sénat (règle 28).
     assert set(out) == {"senat_vote_posterieur:Q:S2", "senat_premier_vote:N:S3", "senat_premier_vote:SB:S5",
                         "senat_premier_vote:R:S8"}
+
+
+def test_senat_sans_voix_contre_sur_un_texte_non_qualifie():
+    """Règle 23 : sur un texte non qualifié à l'AN (suivi ou non traité), un vote sans voix d'un côté ne demande rien."""
+    qualif = {"textes": [{"dossier_an": "Q", "scrutins": []}], "ecartes": [],
+              "suivis": [{"dossier_an": "S", "id": "s"}]}
+    u = lambda i, d: {"id": i, "dossier_id": d, "date": "2026-10-20", "numero": int(i[1:]), "objet": "ensemble",
+                      "pour": 340, "contre": 0}
+    out = {a["id"] for a in alertes.calculer([], [], [], qualif, [u("S1", "S"), u("S2", "N"), u("S3", "Q")])}
+    assert out == {"senat_premier_vote:Q:S3"}

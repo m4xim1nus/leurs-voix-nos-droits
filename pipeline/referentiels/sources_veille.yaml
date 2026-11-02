@@ -13,10 +13,10 @@
 #   recherche des propositions la trouve encore, au cas par cas. Les décisions du Conseil constitutionnel viennent de
 #   l'open data.
 #
-# Flux sondés le 02/11/2026 ; celui de l'Inter-LGBT, mal formé ce jour-là, n'est pas repris. Statut : brouillon, à
-# valider par Max.
+# Flux sondés le 02/11/2026 ; celui de l'Inter-LGBT, mal formé ce jour-là, n'est pas repris. Liste validée par Max le
+# 02/11/2026.
 
-statut: brouillon
+statut: valide
 
 flux:
   # Autorités et instances indépendantes

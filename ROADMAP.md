@@ -105,11 +105,14 @@ clé ; poser `LLM_CHIFFREMENT` (Worker et dépôt) et `TERMES_INTERDITS` (dépô
   jour mineure » ; question de méthode ; à faire à la main ; à venir) ; une phrase « action proposée » écrite par le
   LLM dans le même appel. Pas d'appel de classement.
 - Item 8 : termes de recherche dans `editorial.json` (bloc `recherche`, décision de Max), saisis sur la fiche de l'admin et
-  proposés par le LLM ; le YAML ne sert plus que de repli. **Reprise à faire** : déployer l'admin, puis
-  `lvnd sync-admin --remote --recherche` et « Publier » (environ 200 textes modifiés d'un coup), puis retirer le YAML.
+  proposés par le LLM ; le YAML ne sert plus que de repli. Reprise dans D1 faite le 02/11/2026 (201 textes et fiches de
+  suivi, 97 écartés, statuts inchangés). **Reste** : « Publier » (Max), puis retirer le YAML.
 - Item 7 : veille « à l'envers » (décision de Max) : `lvnd veille`, flux de 36 sources admises
-  (`referentiels/sources_veille.yaml`, brouillon **à valider par Max**), lus sans LLM ; un appel de rapprochement
+  (`referentiels/sources_veille.yaml`, liste validée par Max le 02/11/2026), lus sans LLM ; un appel de rapprochement
   (0,24 $ à l'essai du 02/11/2026 : 115 publications, 4 correspondances pertinentes) ; une proposition par correspondance,
-  3 au plus. Action `veille.yml` le lundi ; elle ne tourne qu'une fois la liste validée.
+  3 au plus. Action `veille.yml` le lundi.
+- Essai du mode Sénat (0,87 $) : techniquement juste ; un 4e cas non prévu tranché par Max (règles 22 et 23 : une fiche
+  de suivi ne porte aucun vote ; un vote du Sénat sans voix d'un côté sur un texte non qualifié à l'AN ne déclenche pas
+  d'alerte). Le Sénat reste sur demande seulement (décision de Max).
 - Item 10 : « Qui qualifie, et comment » (page Méthodologie du site), guide `/aide` de l'admin, `docs/QUALIFICATION.md`,
   `docs/EXPLOITATION.md`. Reste : refaire la capture d'écran d'« À traiter » du guide.
