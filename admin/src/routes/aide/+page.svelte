@@ -116,11 +116,13 @@
   </p>
   {@render capture({
     image: 'a-traiter',
-    alt: 'Onglet À traiter : une liste d’alertes datées, avec le texte concerné.',
+    alt: 'Onglet À traiter : les compteurs des quatre sections, puis une carte par texte, avec la proposition du LLM.',
     legende: [
-      '<b>Le type d’alerte.</b> Voir <a href="#alertes">ce que chacune demande</a>.',
-      '<b>Le texte.</b> Un clic ouvre sa fiche.',
-      '<b>Le détail.</b> Le scrutin, son décompte, ou la date d’inscription.'
+      '<b>Les quatre sections.</b> Un clic sur un compteur y mène : prêt à relire, question de méthode, à faire à la main, à venir.',
+      '<b>Prêt à relire.</b> Un vote a eu lieu et la proposition du LLM passe les contrôles. Les mises à jour mineures viennent en tête.',
+      '<b>La phrase d’action.</b> Ce que le LLM propose de faire, et ce qu’il faut vérifier d’abord. En dessous : le jugement, puis les sources et leurs extraits, les points d’attention, les incertitudes (un clic les déplie).',
+      '<b>Les gestes.</b> « Charger « à relire » » ouvre la fiche avec la proposition ; « Écarter la proposition » la retire (un motif court aide à mesurer sa qualité). « Question tranchée » apparaît sur une question de méthode réglée.',
+      '<b>À venir.</b> Textes seulement inscrits : rien à faire avant le vote. « Demander une fiche de suivi au LLM » pour un texte qu’on veut suivre.'
     ]
   })}
 </section>

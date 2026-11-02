@@ -23,8 +23,6 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] Résumés « facile à lire et à comprendre » des textes qualifiés, générés hors ligne par LLM et relus avant publication : nouveau champ d'`editorial.json`, à sérialiser à l'identique dans le pipeline et l'admin (claude, 2026-10-30 ; reporté du cycle Pré-qualification)
 - [ ] Rejuger `mots_cles.yaml` sur un mois de dépense réelle des propositions (vers le 02/12/2026) : motifs qui n'ont presque jamais donné de texte qualifié (`egalite` 0/7, `eau` 0/6, `polynesie` 0/5, `retraites?` 1/13, `outre mer` 2/16…), chacun coûtant une proposition (claude, 2026-11-02)
 - [ ] Propositions automatiques sur les alertes du Sénat, après quelques demandes réussies (décision de Max du 02/11/2026 : sur demande pour l'instant) (claude, 2026-11-02)
-- [→Finitions] Page « Publier » : erreur 1102 (limite de calcul du Worker) en publiant 300 textes, après avoir tout écrit ; empreintes et comparaisons à alléger (user:moi, 2026-11-02)
-- [→Finitions] Guide `/aide` : refaire la capture d'écran d'« À traiter » (quatre sections, propositions) (claude, 2026-11-02)
 
 ## Cycles candidats
 

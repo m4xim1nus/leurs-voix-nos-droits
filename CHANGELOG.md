@@ -3,6 +3,22 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Les tags `v*` du dépôt suivent ces versions.
 
+## [1.10.1] — 2026-11-02
+
+Mini-cycle Finitions de la pré-qualification : deux restes du cycle précédent. Aucune donnée ni aucun score ne change.
+
+### Modifié
+
+- Admin, « Publier » : seuls les textes changés depuis la dernière publication sont contrôlés (règles, scrutins, termes
+  interdits), chaque texte n'est sérialisé et empreint qu'une fois, et le fichier complet n'est construit que quand il sert.
+  Sur une base locale de 823 qualifications, la préparation passe de 300 à 360 ms à 80 à 100 ms. Les textes inchangés
+  restent contrôlés chaque jour par `lvnd check`. La page affiche le nombre de textes du fichier au lieu de sa taille.
+- Guide `/aide` : capture et légende d'« À traiter » refaites (quatre sections, proposition du LLM, gestes).
+
+### Limites connues
+
+- Une erreur 1102 passagère reste possible juste après un déploiement de l'admin (démarrage du Worker).
+
 ## [1.10.0] — 2026-11-02
 
 Cycle Pré-qualification : un LLM (Claude Opus 5.5, par l'API d'Anthropic) prépare des propositions de qualification, que
