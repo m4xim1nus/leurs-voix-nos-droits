@@ -35,6 +35,8 @@ def test_controles(termes):
     assert resumer.controler("Le texte est accepté avec 3 conditions.", trois, NOMS)["avertissements"] == []
     composes = {**FICHE, "resume": "Garde à vue de vingt-quatre heures dès la septième semaine, de dix à dix-huit."}
     assert resumer.controler("24 heures, 7e semaine, 18.", composes, NOMS)["avertissements"] == []
+    milliers = {**FICHE, "resume": "Pour mille accouchements, et 30\u00a0000 euros."}
+    assert resumer.controler("Pour 1 000 accouchements, 30 000 euros.", milliers, NOMS)["avertissements"] == []
 
 
 def test_a_resumer_saute_les_textes_a_jour_ou_deja_proposes():

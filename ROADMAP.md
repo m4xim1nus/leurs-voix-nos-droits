@@ -79,6 +79,12 @@ appliquer une éventuelle migration (`npm run db:migrer:distant`) et déployer l
   Décisions de Max du 02/11/2026 : **6 phrases, 15 mots par phrase, 90 mots** ; passe initiale **dans Claude Code**,
   sans l'API (`lvnd resumer --entrees`, puis `--importer` : mêmes contrôles, même table, origine « préparé dans Claude
   Code ») ; l'Action garde l'étape `lvnd resumer` pour les textes à venir.
+- Passe initiale faite le 02/11/2026 dans Claude Code (4 sous-agents, consigne de `lvnd resumer`) : 194 résumés, tous
+  conformes aux contrôles (72 mots et 6 phrases en moyenne), versés dans D1 ; avec les 5 de la mesure, **199 propositions
+  dans « En mots simples »**. Contrôle des nombres complété (nombres composés et ordinaux en lettres, « 1 000 »).
+  **Reste, à faire par Max** : `npm run deploy` de l'admin (aucune migration) et `git push` ; relecture et validation des
+  199 dans « À traiter » ; « Publier ». Points à regarder à la relecture : les termes expliqués sans définition dans la
+  fiche (signalés en remarque), et les phrases « Ce texte veut… » qui reprennent le but affiché par le titre.
 - Item 7 : `docs/METHODO.md` (section « Résumé en mots simples »), `docs/QUALIFICATION.md`, `docs/CONCEPTION.md`,
   `docs/EXPLOITATION.md`, guide `/aide`, `CLAUDE.md`. **À faire par Max** : `npm run deploy` de l'admin (aucune
   migration), puis `git push`.

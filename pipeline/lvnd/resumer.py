@@ -135,7 +135,8 @@ def _en_lettres(mot: str) -> int | None:
 
 
 def _nombres(texte: str, lettres: bool = False) -> set[str]:
-    out = set(re.findall(r"\d+", texte))
+    # « 1 000 », « 30 000 » : un seul nombre, quel que soit l'espace des milliers
+    out = {re.sub(r"\D", "", n) for n in re.findall(r"\d+(?:[ \u00a0\u202f]\d{3})*", texte)}
     if lettres:
         out |= {str(n) for m in re.findall(r"[\w-]+", texte.lower()) if (n := _en_lettres(m)) is not None}
     return out
