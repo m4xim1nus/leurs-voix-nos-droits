@@ -20,24 +20,12 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 
 ## À trier
 
-- [ ] Premier essai de `/aide` avec le contributeur qui a déjà accès à l'admin, et corrections qu'il fait remonter (user:moi, 2026-11-01)
-- [ ] Écarts de forme de l'audit non traités (`source/audit-coherence/`) : mention « aucune critique trouvée » absente de plusieurs notes, `regime-exception` sur les textes à mesure temporaire non centrale, vigilances de sens opposé, formules des motifs, résumés des fiches témoins (claude, 2026-11-01)
-- [ ] ZAN 2023 et plastiques dangereux : lire à la main les pages de FNE et de Générations Futures, refusées à la lecture automatique. Une critique sur le texte voté rouvre l'écart (claude, 2026-11-01)
-- [ ] Une publication peut remettre un ancien motif quand `editorial.json` a été commité sans passer par D1 (DLR5L15N41895, 01/11/2026). Comparer D1 et le fichier dans `lvnd check`, ou au moment de publier (claude, 2026-11-01)
-- [ ] justice-criminelle-2026 : d'après une lecture du texte de la CMP (T.A. 160) et du rapport n° 868, le « plaider-coupable » criminel n'y est plus, alors que le résumé le décrit et que VTANR5L17V7896 compte comme amendement clé (règle 11). Vérifier, puis requalifier : les scores publiés de l'Assemblée sont touchés (claude, 2026-11-01)
-- [ ] LOPJ 2023, SN2022-297 : les conseils de l'ordre de Paris, Lyon et Marseille contestent une « atteinte au droit d'accès à un juge », sans droit de la grille pour la justice commerciale. Statut de ces conseils au regard de la règle 7, à trancher (claude, 2026-11-01)
-- [ ] LOM 2019 : la note publiée dit « faute de source admise lue » sur le contrôle automatisé, alors que l'avis n° 395539 du Conseil d'État en parle (risques d'atteinte, mais dispositif admis). Corriger la note (claude, 2026-11-01)
-- [ ] Amendements clés des budgets au Sénat : 52 candidats non lus (claude, 2026-11-01)
-- [ ] Présentation : PDF au texte sélectionnable, et chiffres à relire à chaque évolution de la méthode (claude, 2026-11-01)
-
-## Textes à surveiller
-
-Ce que les alertes de `lvnd check` et d'« À traiter » ne signalent pas. Le reste se traite à l'alerte, un texte à la fois (« Au fil de l'eau » de `docs/QUALIFICATION.md`).
-
-- [ ] Territoires zéro chômeur (DLR5L17N51962, écarté à 96-0) : commission le 10/11, 2e lecture inscrite le 19/11/2026 ; alerte seulement si le vote n'est plus unanime. Règle 7 : un comité national de la CGT (privés d'emploi) vaut-il fédération ? Aucune source récente lue, à trancher si une position paraît (claude, 2026-10-30)
-- [ ] Réforme de l'audiovisuel public (DLR5L16N47697) : à l'arrêt depuis juillet 2025, déjà qualifiée. `vote_posterieur` signale un vote final en scrutin public ; seul un vote sans scrutin public passerait inaperçu (user:moi, 2026-10-29)
-- [ ] Fiche de suivi prête dans `source/brouillons-suivi-attente/`, à charger dès l'inscription : ingérences étrangères (DLR5L17N54703). L'alerte `inscrit` se déclenchera, mais ne sait pas qu'une fiche est prête (claude, 2026-10-30)
-- [ ] AGRASC (DLR5L17N53159, écarté au lot 6, faute de source) : CMP convoquée le 29/10/2026 ; si l'AN vote ses conclusions, ce vote devient le décisif, revoir l'écart. L'alerte `ecart_revote` le signale désormais. Au prochain passage, actualiser le motif, qui ne cite pas les articles 5 et 5 bis A (décision de Max, 30/10/2026) (claude, 2026-10-29)
+- [ ] Alerte manquante : un vote final **sans scrutin public** sur un texte déjà qualifié ne déclenche rien (`vote_posterieur` ne voit que les scrutins publics, `vote_sans_decisif` que les textes ni qualifiés ni écartés). Cas en vue : réforme de l'audiovisuel public (DLR5L16N47697), à l'arrêt depuis juillet 2025 (user:moi et claude, 2026-11-02)
+- [ ] Admin : une **note interne** par texte (D1 seule, jamais publiée), affichée dans « À traiter » et sur la fiche, pour les pense-bêtes éditoriaux qu'aucune alerte ne porte (fiche prête avant l'inscription, motif à actualiser au prochain passage). Remplace l'ancienne section « Textes à surveiller » du backlog (user:moi et claude, 2026-11-02)
+- [ ] Résumés des six fiches témoins (immigration, JO, Kasbarian-Bergé, narcotrafic, justice des mineurs, aide à mourir) : la réécriture proposée par l'audit de forme venait en partie de mémoire, écartée du chargement du 02/11/2026. À refaire sur le texte voté (claude, 2026-11-02)
+- [ ] Reliquat de l'audit de forme, qui touche au fond (`source/relecture-audit-forme.md`, « Laissé de côté ») : article 8 du système universel de retraite (amendement « pour mémoire », CFDT favorable au régime par points), articles 26 et 26 bis du PLFSS 2026, article 5 d'urgence agricole, date de référence d'une ratification d'ordonnances (règle 4), motif d'`asap-2020`, cinq motifs d'écart à rechercher (48392, 37436, 48739, 40764, 47215 ; pour Rist 2021, l'Ordre des sages-femmes écarté sur un critère que la règle 7 n'a pas), `regime-exception` sur le titre de séjour expérimental d'`immigration-2024` (claude, 2026-11-02)
+- [ ] Questions de règle relevées par l'audit de forme, sans recommandation : vigilance « ordre public » dans les textes de police, validation du Conseil en vigilance ou seulement dans le champ du Conseil, statut de l'Union nationale de l'apiculture française et d'une section régionale de la FSU, statut des textes du seul Sénat, alignement de la règle sur le libellé de `regime-exception` (claude, 2026-11-02)
+- [ ] Sources non relues faute d'accès : Générations Futures sur les plastiques dangereux (critique d'insuffisance d'après les fragments lus, écart maintenu), CFDT sur le PLFSS 2026 (403), loi n° 2026-651 au Journal officiel (403, T.A. du Sénat lu à la place). À lire dans un navigateur (claude, 2026-11-02)
 
 ## Cycles candidats
 
@@ -50,6 +38,7 @@ compte Cloudflare et du dépôt.
 
 - [creuser] Le nom « Leurs voix, nos droits » fait écho à « Leurs votes » (Bon Pote) : filiation assumée ou risque de confusion, à trancher à la passation ; recherche INPI faite par Max le 01/11/2026, sans résultat (claude, 2026-10-29)
 - [creuser] Règle 7 : admettre les syndicats nationaux membres de Solidaires, qui y tiennent lieu de fédérations (SNJ) ? Retiré de la loi organique sur l'audiovisuel public au lot 6, à trancher à la passation (claude, 2026-10-29)
+- [creuser] Règle 7 : un comité national de la CGT (privés d'emploi) vaut-il fédération ? Question ouverte sur Territoires zéro chômeur (DLR5L17N51962, écarté à l'unanimité, 2e lecture inscrite le 19/11/2026), à trancher avec la précédente, à la passation (claude, 2026-10-30)
 - [→Passation] Réécrire pour le public les notes de méthode et les motifs d'écart des qualifications, qui citent les règles par leur numéro (181 notes et 512 motifs au 01/11/2026). Le site les replie déjà sous « Comment ce texte a été qualifié », numéros liés à la méthodologie. Bon candidat à un traitement par LLM, relu (user:moi, 2026-10-29)
 - [→Passation] Rôles d'édition dans l'admin (rédacteur, valideur) : utile dès qu'il y a plusieurs personnes (un contributeur a accès à l'admin depuis le 29/10/2026) (claude, 2026-10-29)
 - [→Passation] Revoir l'exclusion de sources posée le 29/10/2026 (`CLAUDE.md`, règles dures) : la lever ou la garder, et ce que cela change pour les qualifications (claude, 2026-11-01)
