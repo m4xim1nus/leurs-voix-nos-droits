@@ -55,18 +55,19 @@
     <li value="2" id="regle-2">
       <strong>Périmètre.</strong> La grille suit les droits des personnes face à la puissance publique
       et aux plus forts. La propriété et l’ordre public sont des objectifs que la loi concilie avec ces
-      droits : ils n’entrent pas dans la grille. Quand un texte les étend, c’est signalé en point de vigilance.
-      L’accès aux soins entre dans le droit à la santé (installation des médecins, accès direct aux professionnels).
+      droits : ils n’entrent pas dans la grille. Quand un texte étend la protection de la propriété, c’est
+      signalé en point de vigilance ; l’ordre public, objet de tout texte de police, ne l’est pas. L’accès
+      aux soins entre dans le droit à la santé (installation des médecins, accès direct aux professionnels).
       La formation professionnelle entre dans les droits au travail et à la protection sociale. L’accès
       à la justice civile et commerciale (frais de procédure, droit de timbre) n’entre pas dans les garanties
       face à la police et à la justice, qui visent la justice pénale. Le choix d’une source d’énergie
       (nucléaire, renouvelables) n’est pas un droit de la grille : le droit à un environnement sain se
       juge sur les garanties des personnes (information, participation du public, protection des milieux).
       Les droits civiques couvrent qui peut voter et être élu, et les conditions d’exercice du vote (inscription,
-      procuration, vote par correspondance) ; le mode de scrutin et le régime des mandats (cumul, incompatibilités)
-      relèvent de l’organisation des pouvoirs publics et n’entrent pas dans la grille. L’inégalité de
-      revenu n’entre pas dans le droit à l’égalité et à la non-discrimination : un argument de ce type
-      s’affiche en point de vigilance.
+      procuration, vote par correspondance) ; le mode de scrutin, le calendrier électoral et le régime
+      des mandats (cumul, incompatibilités) relèvent de l’organisation des pouvoirs publics et n’entrent
+      pas dans la grille. L’inégalité de revenu n’entre pas dans le droit à l’égalité et à la non-discrimination
+      : un argument de ce type s’affiche en point de vigilance.
     </li>
     <li value="3" id="regle-3">
       <strong>Recouvrements.</strong> Justice des mineurs : droits de l’enfant en principal, police et
@@ -84,22 +85,24 @@
       avait abrogée, même assortie de la garantie qu’il exigeait. Le droit applicable comprend son échéance
       légale : prolonger un dispositif protecteur avant son extinction étend le droit, et prolonger un
       régime restrictif, ou en inscrire les pouvoirs dans le droit commun, le restreint, même si le texte
-      allège ce régime. Une évolution postérieure au vote n’entre pas dans le jugement. Dans un texte
-      dont les mesures vont en sens opposés pour un même droit, ce droit prend le sens des mesures que
-      les sources mettent en cause ou défendent le plus souvent, chaque organisation comptant une fois,
-      et la mesure de sens opposé s’affiche en point de vigilance. Le droit principal est celui de la
-      mesure la plus citée ainsi ; à égalité, celui de l’objet du texte. Une mesure qui touche un autre
-      droit reçoit ce droit en secondaire, si une source admise se prononce sur elle. Quand une source
-      admise voit dans une mesure une discrimination, le texte reçoit le droit à l’égalité et à la non-discrimination
-      en secondaire ; un simple risque s’affiche en vigilance. Une mesure sur le corps électoral se lit,
-      pour les droits civiques, sur le droit de vote des personnes qu’elle ajoute à la liste ou en retire
-      ; quand une source y voit une atteinte aux droits d’un peuple autochtone, le texte reçoit aussi
-      le droit à l’égalité et à la non-discrimination, au sens « restreint ». Les deux lectures sont alors
-      comptées.
+      allège ce régime. Une évolution postérieure au vote n’entre pas dans le jugement. Une loi de ratification
+      d’ordonnances se lit par rapport au droit antérieur aux ordonnances, même déjà en vigueur : c’est
+      le seul vote du Parlement sur leurs mesures. Dans un texte dont les mesures vont en sens opposés
+      pour un même droit, ce droit prend le sens des mesures que les sources mettent en cause ou défendent
+      le plus souvent, chaque organisation comptant une fois, et la mesure de sens opposé s’affiche en
+      point de vigilance. Le droit principal est celui de la mesure la plus citée ainsi ; à égalité, celui
+      de l’objet du texte. Une mesure qui touche un autre droit reçoit ce droit en secondaire, si une
+      source admise se prononce sur elle. Quand une source admise voit dans une mesure une discrimination,
+      le texte reçoit le droit à l’égalité et à la non-discrimination en secondaire ; un simple risque
+      s’affiche en vigilance. Une mesure sur le corps électoral se lit, pour les droits civiques, sur
+      le droit de vote des personnes qu’elle ajoute à la liste ou en retire ; quand une source y voit
+      une atteinte aux droits d’un peuple autochtone, le texte reçoit aussi le droit à l’égalité et à
+      la non-discrimination, au sens « restreint ». Les deux lectures sont alors comptées.
     </li>
     <li value="5" id="regle-5">
       <strong>Points de vigilance.</strong> Les critiques sourcées sur la mise en œuvre ou sur l’insuffisance
-      des garanties s’affichent à côté du jugement, sans le modifier.
+      des garanties s’affichent à côté du jugement, sans le modifier. Une décision du Conseil constitutionnel
+      (validation, réserve, censure) n’en est pas un : elle s’affiche à part.
     </li>
     <li value="6" id="regle-6">
       <strong>Objet qualifié.</strong> On qualifie le texte soumis au vote décisif, puisque c’est ce vote
@@ -114,14 +117,16 @@
       professionnelles et syndicales du droit, de la santé et de l’enseignement (Conseil national des
       barreaux, conseils de l’ordre des barreaux, syndicats d’avocats et de magistrats…) ; organisations
       syndicales représentatives de salariés, leurs fédérations professionnelles, leurs syndicats nationaux
-      de branche et leurs unions confédérales de retraités ; avis du Conseil d’État sur un projet ou une
-      proposition de loi. L’UNAF est admise, avec la mention de son statut institutionnel. Une association
-      qui porte elle-même un dispositif est admise pour en décrire un risque, avec la mention qu’elle
-      est partie prenante. Les rapports parlementaires et les positions du Gouvernement ou des groupes
-      ne sont pas des sources : ils sont parties au débat. La Cour des comptes non plus : elle évalue
-      la dépense publique, pas les droits. Une source peut porter sur la mesure plutôt que sur le texte,
-      même si elle lui est antérieure. Quand un texte étend un droit contesté, au moins une source critique
-      figure en vigilance. Si aucune source admise ne le conteste, la qualification le dit.
+      de branche et leurs unions confédérales de retraités, pas leurs structures d’entreprise, régionales
+      ou départementales ; avis du Conseil d’État sur un projet ou une proposition de loi. L’Union nationale
+      des associations familiales (UNAF) est admise, avec la mention de son statut institutionnel ; les
+      organisations professionnelles d’autres secteurs ne le sont pas. Une association qui porte elle-même
+      un dispositif est admise pour en décrire un risque, avec la mention qu’elle est partie prenante.
+      Les rapports parlementaires et les positions du Gouvernement ou des groupes ne sont pas des sources :
+      ils sont parties au débat. La Cour des comptes non plus : elle évalue la dépense publique, pas les
+      droits. Une source peut porter sur la mesure plutôt que sur le texte, même si elle lui est antérieure.
+      Quand un texte étend un droit contesté, au moins une source critique figure en vigilance. Si aucune
+      source admise ne le conteste, la qualification le dit.
     </li>
     <li value="8" id="regle-8">
       <strong>Textes purement organisationnels.</strong> Ils ne sont pas qualifiés, pas plus que les
@@ -133,7 +138,8 @@
       l’année, ne le sont pas non plus ; les lois de finances initiales et rectificatives se
       qualifient comme les autres textes, et sont écartées faute de source admise sur une de leurs
       mesures. Une réforme de structure n’est pas purement organisationnelle si une source admise la
-      met en cause au nom d’un droit de la grille. Les textes examinés puis écartés sont
+      met en cause au nom d’un droit de la grille, ni le statut d’une profession quand le droit au
+      travail est en jeu. Les textes examinés puis écartés sont
       <a href="/textes">publiés avec leur motif</a>.
     </li>
   </ol>
@@ -187,8 +193,9 @@
       raisons tactiques. Sur la loi immigration, la motion de rejet a été adoptée avec les voix de groupes
       qui ont ensuite voté le texte. La compter comme une opposition au texte les créditerait d’un vote
       favorable aux droits. Une motion déposée et adoptée par les soutiens du texte, pour l’envoyer directement
-      en commission mixte paritaire, s’affiche dans ce sens : la voter, c’est soutenir le texte. Les motions
-      de renvoi en commission ne sont pas affichées ; une motion référendaire s’affiche comme une motion
+      en commission mixte paritaire, s’affiche dans ce sens : la voter, c’est soutenir le texte. Une motion
+      votée sans aucune voix d’un côté n’est pas affichée : elle ne départage personne. Les motions de
+      renvoi en commission ne sont pas affichées ; une motion référendaire s’affiche comme une motion
       de rejet.
     </li>
     <li value="11" id="regle-11">
@@ -337,15 +344,16 @@
     <li value="25" id="regle-25">
       <strong>Texte voté au seul Sénat.</strong> Il est trié, puis qualifié s’il entre dans la grille
       (règles 2 et 8). Il ne compte que dans les scores du Sénat, avec la mention « pas de vote sur l’ensemble
-      à l’Assemblée », qui vaut aussi pour un texte que l’Assemblée a rejeté par une motion ou à main
-      levée. Un texte attendu à l’Assemblée est qualifié dès le vote du Sénat, sans attendre son inscription,
-      avec la mention « texte encore en navette, attendu à l’Assemblée ». Un texte à l’arrêt affiche son
-      état (règle 20), sans cette mention. Il ne compte dans les scores de l’Assemblée qu’après un vote
-      de l’Assemblée. Chaque chambre garde alors son décisif, chacun lu sur son texte. Comme à la règle
-      21, un nouveau vote du Sénat sur l’ensemble est relu sur le texte voté. Jusque-là, l’ancien décisif
-      reste compté et le nouveau vote porte la mention « pas encore qualifié ». Un décisif du Sénat sur
-      un texte encore en navette porte la mention « vote de 1re lecture au Sénat, texte encore en navette »
-      (la lecture est celle du scrutin).
+      à l’Assemblée », qui vaut aussi pour un texte que l’Assemblée a rejeté par une motion, ou rejeté
+      ou adopté à main levée. Sans source admise qui établisse son sens au Sénat, il est écarté, avec
+      ce motif et le décompte du Sénat. Un texte attendu à l’Assemblée est qualifié dès le vote du Sénat,
+      sans attendre son inscription, avec la mention « texte encore en navette, attendu à l’Assemblée ».
+      Un texte à l’arrêt affiche son état (règle 20), sans cette mention. Il ne compte dans les scores
+      de l’Assemblée qu’après un vote de l’Assemblée. Chaque chambre garde alors son décisif, chacun lu
+      sur son texte. Comme à la règle 21, un nouveau vote du Sénat sur l’ensemble est relu sur le texte
+      voté. Jusque-là, l’ancien décisif reste compté et le nouveau vote porte la mention « pas encore
+      qualifié ». Un décisif du Sénat sur un texte encore en navette porte la mention « vote de 1re lecture
+      au Sénat, texte encore en navette » (la lecture est celle du scrutin).
     </li>
     <li value="26" id="regle-26">
       <strong>Scores du Sénat.</strong> Chaque texte pèse 1, partagé entre son décisif et ses

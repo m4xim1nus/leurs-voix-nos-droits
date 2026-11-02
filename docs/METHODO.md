@@ -41,7 +41,11 @@ lois successives d'une même crise (règle 18), le détail par législature sur 
 principal et le décompte des sources (règle 4), le droit `discriminations` et la mesure d'un autre droit (règle 4), la mesure absente
 du texte décisif, le droit secondaire, les sources partagées et la réserve du Conseil constitutionnel (règle 11). Le 01/11/2026, pour le Sénat de 2017-2022 : deux périodes et des amendements clés (règle 26).
 Le 02/11/2026 : les conseils de l'ordre des barreaux parmi les sources (règle 7), et la justice civile et commerciale hors de
-`police-justice` (règle 2).
+`police-justice` (règle 2). Le même jour, pour les suites de l'audit : la vigilance réservée à la propriété et le calendrier
+électoral (règle 2), la ratification d'ordonnances (règle 4), la décision du Conseil hors des vigilances (règle 5), les
+structures régionales et les organisations professionnelles d'autres secteurs (règle 7), le statut d'une profession
+(règle 8), la motion votée sans voix d'un côté (règle 10), l'adoption à main levée et le texte du seul Sénat sans source
+(règle 25), l'extension du droit antiterroriste dans `regime-exception`.
 
 ## Grille des droits
 
@@ -50,7 +54,7 @@ Grille v1 : `pipeline/referentiels/droits.yaml`. Douze droits et deux
 la v0 les **droits civiques et politiques** (`citoyennete` : droit de vote,
 élections, citoyenneté), d'abord hors grille (corps électoral de
 Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libellé
-à tout dispositif temporaire ou expérimental, y compris protecteur, si le texte voté le reste ; un texte qui le pérennise ne la reçoit pas. L'étiquette `outre-mer` va au texte qui proroge ou déclare un régime sur un territoire d'outre-mer désigné, ou qui y porte une mesure propre ; une simple adaptation de la loi à ce territoire ne suffit pas. `libertes` comprend la liberté de circulation (état d'urgence sanitaire, 2020-2022).
+à tout dispositif temporaire ou expérimental, y compris protecteur, si le texte voté le reste ; un texte qui le pérennise ne la reçoit pas. Elle s'applique aussi à toute extension à d'autres infractions d'un pouvoir ou d'une durée réservés au terrorisme. L'étiquette `outre-mer` va au texte qui proroge ou déclare un régime sur un territoire d'outre-mer désigné, ou qui y porte une mesure propre ; une simple adaptation de la loi à ce territoire ne suffit pas. `libertes` comprend la liberté de circulation (état d'urgence sanitaire, 2020-2022).
 
 1. **Point de vue.** Le sens se lit toujours du point de vue des droits des
    personnes concernées, jamais des prérogatives de l'État. Un texte qui
@@ -59,8 +63,9 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
 2. **Périmètre.** La grille suit les droits des personnes face à la
    puissance publique et aux plus forts. La propriété et l'ordre public
    sont des objectifs que le législateur concilie avec ces droits : ils
-   n'entrent pas dans la grille. Quand un texte les étend (Kasbarian-Bergé,
-   pour la propriété), on le signale en point de vigilance. L'**accès aux
+   n'entrent pas dans la grille. Quand un texte étend la protection de la
+   propriété (Kasbarian-Bergé), on le signale en point de vigilance. L'ordre
+   public, objet de tout texte de police, n'est pas signalé. L'**accès aux
    soins** entre dans `sante` (régulation de l'installation des médecins,
    accès direct aux professionnels). Le financement de la recherche n'y
    entre pas. Les droits civiques et politiques (droit de vote, corps
@@ -70,7 +75,7 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
    correspondance). Le **mode de scrutin** et le **régime des mandats**
    (cumul, incompatibilités) relèvent de l'organisation des pouvoirs
    publics : ils n'entrent pas dans la grille (Paris, Lyon et Marseille,
-   2025). L'**accès à la justice civile et commerciale** (frais de
+   2025), pas plus que le **calendrier électoral** (date ou report d'une élection). L'**accès à la justice civile et commerciale** (frais de
    procédure, contribution pour la justice économique, droit de timbre)
    n'entre pas dans `police-justice`, qui vise la justice pénale (LOPJ
    2023). Le
@@ -113,7 +118,10 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
    lutte contre le terrorisme, 2017 ; prorogations de l'état d'urgence sanitaire).
    Seul compte le droit de la date du vote : une évolution postérieure n'entre pas
    dans le jugement, hors la décision du Conseil constitutionnel sur ce texte, qui
-   s'affiche à côté (règle 6).
+   s'affiche à côté (règle 6). Une **loi de ratification d'ordonnances** se lit par
+   rapport au droit antérieur aux ordonnances, même si elles sont en vigueur au jour du
+   vote : c'est le seul vote du Parlement sur leurs mesures, la loi d'habilitation n'en
+   fixant que le cadre (ordonnances travail, 2018).
    Dans un **texte composite** dont les mesures vont en sens opposés pour
    un même droit, le sens de ce droit est celui des mesures que les sources
    admises citent le plus souvent. La mesure de sens opposé s'affiche en
@@ -133,7 +141,10 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
    comptées, chacune pour son droit (Nouvelle-Calédonie, 2024).
 5. **Points de vigilance.** Les critiques sourcées portant sur la mise en
    œuvre ou sur l'insuffisance des garanties s'affichent à côté du
-   jugement, sans le modifier (aide à mourir).
+   jugement, sans le modifier (aide à mourir). Une décision du Conseil
+   constitutionnel (validation, réserve, censure) n'est pas un point de
+   vigilance : elle s'affiche dans son champ (règle 6), et la note dit, s'il
+   y a lieu, qu'une mesure censurée reste dans le texte qualifié.
 6. **Objet qualifié.** On qualifie le texte soumis au scrutin décisif,
    puisque c'est le vote du député qui est mesuré. La décision du Conseil
    constitutionnel s'affiche à côté (« 32 articles censurés »).
@@ -157,10 +168,14 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
      professionnelles et les syndicats nationaux de branche qui leur sont
      affiliés (SNJ-CGT, SNME-CFDT), qui parlent en leur nom dans une branche
      ou une fonction publique, et leurs unions confédérales de retraités
-     (UCR-CGT) ; pas les syndicats ou sections d'entreprise ;
+     (UCR-CGT) ; pas les syndicats ou sections d'entreprise, ni les
+     structures régionales ou départementales ;
    - avis du Conseil d'État sur un projet ou une proposition de loi.
 
-   L'UNAF est admise, avec la mention de son statut institutionnel. Une
+   L'UNAF (Union nationale des associations familiales) est admise, avec la
+   mention de son statut institutionnel. Les organisations professionnelles
+   d'autres secteurs ne le sont pas (Union nationale de l'apiculture française,
+   syndicat agricole), sauf comme cosignataires d'un texte d'ONG. Une
    association qui porte elle-même un dispositif est admise pour en décrire
    un risque, avec la mention qu'elle est partie prenante (Territoires zéro
    chômeur de longue durée).
@@ -198,7 +213,9 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
    source admise sur une de leurs mesures, elles sont écartées.
    Une **réforme de structure** n'est pas purement organisationnelle si une
    source admise la met en cause au nom d'un droit de la grille (société-mère
-   de l'audiovisuel public et indépendance de l'information).
+   de l'audiovisuel public et indépendance de l'information). De même, le
+   **statut d'une profession** n'est pas purement organisationnel quand le
+   droit au travail est en jeu : faute de source, l'écart relève de la règle 7.
 
 ## Scrutins retenus
 
@@ -240,7 +257,10 @@ Nouvelle-Calédonie). L'étiquette `regime-exception` s'applique par son libell�
     opposition au texte les créditerait d'un vote favorable aux droits.
     Une motion déposée et adoptée par les soutiens du texte, pour
     l'envoyer directement en CMP (Duplomb), s'affiche dans ce sens :
-    voter pour, c'est soutenir le texte.
+    voter pour, c'est soutenir le texte. Une motion adoptée ou rejetée
+    **sans aucune voix d'un côté** n'est pas affichée : comme un décisif
+    unanime (règle 9), elle ne départage personne. La note dit le rejet et
+    sa date (A69, 2025).
 11. **Amendements clés** : seuls entrent en compte les amendements de
     suppression ou de rétablissement d'un article qui porte une mesure
     citée par une source. Max fixe le sens de chacun, d'après le contenu de
@@ -376,7 +396,10 @@ ci-dessous remplacent, pour le Sénat, les règles 9 à 11 et 15 à 19.
 25. **Texte voté au seul Sénat.** Il est trié, puis qualifié s'il entre dans la grille (règles 2
     et 8). Il ne compte que dans les scores du Sénat, avec la mention « pas de vote sur
     l'ensemble à l'Assemblée », qui vaut aussi pour un texte que l'Assemblée a rejeté par une
-    motion ou à main levée. Un texte attendu à l'Assemblée est qualifié dès le vote du Sénat,
+    motion, ou rejeté ou adopté à main levée : aucun vote nominatif n'y départage les député·es.
+    Sans source admise qui établisse son sens au Sénat, il est écarté, avec ce motif (règle 7) et
+    le décompte du Sénat ; le vote « affiché et non compté » de la règle 24 ne vaut que pour un
+    texte qualifié à l'Assemblée. Un texte attendu à l'Assemblée est qualifié dès le vote du Sénat,
     sans attendre son inscription, avec la mention « texte encore en navette, attendu à
     l'Assemblée ». Un texte à l'arrêt affiche son état (règle 20), sans cette mention. Il ne compte dans les scores de l'Assemblée qu'après un vote de
     l'Assemblée. Chaque chambre garde alors son décisif, chacun lu sur son texte. Comme à la
