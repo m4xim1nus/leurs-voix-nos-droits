@@ -58,4 +58,7 @@ appliquer une éventuelle migration (`npm run db:migrer:distant`) et déployer l
 
 ### Fait dans ce cycle
 
-Rien pour l'instant.
+- Item 1, décisions de Max du 02/11/2026 (recommandations suivies) : intitulé « En mots simples », sans le sigle FALC
+  (la page Méthodologie dira qu'il suit ces règles sans en porter le logo) ; le résumé simple dit ce que fait le texte et
+  quels droits il touche, **pas le sens**, qui reste dans l'étiquette du site ; périmètre : les textes qualifiés seuls.
+  Reste : les règles d'écriture et la longueur (5 phrases, 80 mots par défaut), à fixer à la mesure de l'item 6.
