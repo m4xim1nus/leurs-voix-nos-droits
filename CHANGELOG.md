@@ -3,6 +3,43 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Les tags `v*` du dépôt suivent ces versions.
 
+## [1.11.0] — 2026-11-02
+
+Cycle Facile à lire : chaque texte qualifié porte un résumé « En mots simples », pour une personne qui lit difficilement
+le français ou ne connaît pas le travail des parlementaires. Préparé par un LLM, relu et validé avant publication. Aucun
+score ne change. Au 02/11/2026 : 199 textes qualifiés, tous avec leur résumé simple.
+
+### Ajouté
+
+- **Bloc `resume_simple`** d'`editorial.json` (`texte`, une phrase par ligne, et `empreinte`), après `resume`, absent quand
+  vide, jamais dans une fiche de suivi ; le format reste 1. L'empreinte (FNV-1a 64 bits sur titre, résumé, droits touchés
+  et décision du Conseil constitutionnel) est la même dans le pipeline, l'admin et le site : une fiche qui change ensuite
+  rend le résumé simple « à revoir », et le site ne l'affiche plus.
+- **Règles d'écriture** (`docs/METHODO.md`, décisions de Max) : intitulé « En mots simples », règles du FALC suivies sans
+  en porter le logo ; ce que fait le texte et quels droits il touche, sans le sens, sans jugement, sans nom d'élu·e ni de
+  groupe ; 6 phrases, 15 mots par phrase, 90 mots au plus (avertissements de l'admin et de `lvnd check` au-delà).
+- **`lvnd resumer`** : un appel par texte validé, sans recherche web, avec contrôles sans LLM (termes interdits, noms
+  d'élu·es et de groupes des deux chambres ; longueur, sigles, nombres absents de la fiche). Étape de l'Action
+  `propositions.yml`, 5 par passe, pour les textes à venir. `--entrees`, `--importer` et `--valider` pour un traitement en
+  lot hors de l'API.
+- **Admin** : champ « En mots simples » sur la fiche (le saisir vaut relecture, bandeau « à revoir » quand la fiche a
+  changé) ; section « En mots simples » d'« À traiter », avec « Valider ce résumé simple » (le texte garde son statut).
+- **Site** : encadré « En mots simples » sous le résumé de la fiche d'un texte ; section « Les résumés en mots simples »
+  de la page Méthodologie.
+
+### Passe initiale
+
+- Mesure sur 5 textes par l'API (Opus 5.5, 0,15 $), puis 194 résumés écrits dans Claude Code, sur décision de Max,
+  avec la même consigne et les mêmes contrôles ; 18 corrigés à la relecture (buts affichés par le titre reformulés en
+  « Ce texte porte sur… »). Les 199 validés et publiés le 02/11/2026.
+
+### Limites connues
+
+- Pas de relecture par des personnes concernées : le résumé simple n'est pas « FALC » au sens du label.
+- Le résumé simple explique parfois un mot que la fiche ne définit pas (rétention de sûreté, garde à vue…) : c'est permis
+  par la consigne, et relu, mais ce n'est pas sourcé.
+- La D1 locale garde des résumés simples d'essai jusqu'à sa prochaine resynchronisation.
+
 ## [1.10.1] — 2026-11-02
 
 Mini-cycle Finitions de la pré-qualification : deux restes du cycle précédent. Aucune donnée ni aucun score ne change.

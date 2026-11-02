@@ -21,6 +21,8 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 ## À trier
 
 - [ ] **À voir début décembre 2026.** Rejuger `mots_cles.yaml` sur un mois de dépense réelle des propositions : motifs qui n'ont presque jamais donné de texte qualifié (`egalite` 0/7, `eau` 0/6, `polynesie` 0/5, `retraites?` 1/13, `outre mer` 2/16…), chacun coûtant une proposition (claude, 2026-11-02)
+- [ ] Script versionné des captures du guide `/aide` (Playwright, pastilles numérotées) : celle d'« À traiter » a été refaite à la main deux fois le 02/11/2026 (claude, 2026-11-02)
+- [creuser] Résumé en mots simples des fiches de suivi et du vote du Sénat, hors périmètre du cycle Facile à lire (décision de Max du 02/11/2026) (claude, 2026-11-02)
 
 ## Cycles candidats
 
@@ -35,14 +37,11 @@ compte Cloudflare et du dépôt.
 - [creuser] Règle 7 : admettre les syndicats nationaux membres de Solidaires, qui y tiennent lieu de fédérations (SNJ) ? Retiré de la loi organique sur l'audiovisuel public au lot 6, à trancher à la passation (claude, 2026-10-29)
 - [creuser] Règle 7 : un comité national de la CGT (privés d'emploi) vaut-il fédération ? Question ouverte sur Territoires zéro chômeur (DLR5L17N51962, écarté à l'unanimité, 2e lecture inscrite le 19/11/2026), à trancher avec la précédente, à la passation (claude, 2026-10-30)
 - [→Passation] Réécrire pour le public les notes de méthode et les motifs d'écart des qualifications, qui citent les règles par leur numéro (181 notes et 512 motifs au 01/11/2026). Le site les replie déjà sous « Comment ce texte a été qualifié », numéros liés à la méthodologie. Bon candidat à un traitement par LLM, relu (user:moi, 2026-10-29)
+- [→Passation] Faire relire les résumés « En mots simples » par des personnes concernées, condition du label FALC (cycle Facile à lire, `CHANGELOG.md` 1.11.0) (claude, 2026-11-02)
 - [→Passation] Rôles d'édition dans l'admin (rédacteur, valideur) : utile dès qu'il y a plusieurs personnes (un contributeur a accès à l'admin depuis le 29/10/2026) (claude, 2026-10-29)
 - [→Passation] Revoir l'exclusion de sources posée le 29/10/2026 (`CLAUDE.md`, règles dures) : la lever ou la garder, et ce que cela change pour les qualifications (claude, 2026-11-01)
 - [→Passation] Accord sur l'usage du fournisseur LLM (cycle Pré-qualification, `CHANGELOG.md` 1.10.0), et transfert de la clé API : nouvelle clé saisie sur la page « LLM » de l'admin, nouveau secret `LLM_CHIFFREMENT` (claude, 2026-11-01)
 - [creuser] Quiz « qui vote comme vous ? » sur de vrais scrutins, comme leurs-votes.fr : à discuter à la passation, pour la campagne de 2027 (claude, 2026-10-29)
-
-### Facile à lire (cycle en cours, `ROADMAP.md`)
-
-- [→Facile à lire] Résumés « facile à lire et à comprendre » des textes qualifiés, générés hors ligne par LLM et relus avant publication : nouveau champ d'`editorial.json`, à sérialiser à l'identique dans le pipeline et l'admin (claude, 2026-10-30 ; reporté du cycle Pré-qualification)
 
 ## À creuser
 
