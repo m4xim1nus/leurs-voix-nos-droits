@@ -146,6 +146,19 @@ def maintenant() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
+def bloquante(ex: Exception) -> str | None:
+    """Erreur d'API qui vaudra pour tous les appels suivants : on arrête la passe au lieu de les tenter."""
+    statut = getattr(ex, "status_code", None)
+    message = str(ex).lower()
+    if "credit balance" in message:
+        return "crédit du compte Anthropic épuisé (Plans & Billing de la console)"
+    if statut == 401:
+        return "clé refusée par l'API (401) : la remplacer dans l'admin"
+    if statut == 403:
+        return "clé sans droit d'accès (403)"
+    return None
+
+
 @dataclass
 class Session:
     """Appels d'une tâche : vérifie le plafond avant chaque requête, journalise chacune après.
@@ -192,6 +205,8 @@ class Session:
                 message = flux.get_final_message()
         except Exception as ex:
             self._journal(dossier, None, "erreur", f"{type(ex).__name__} : {str(ex)[:300]}")
+            if bloquante(ex):
+                raise Indisponible(bloquante(ex)) from None
             raise
         resultat = {"end_turn": "ok", "pause_turn": "pause", "refusal": "refus",
                     "max_tokens": "tronque"}.get(message.stop_reason, message.stop_reason or "?")

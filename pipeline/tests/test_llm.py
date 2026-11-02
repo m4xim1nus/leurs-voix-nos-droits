@@ -276,3 +276,19 @@ def test_alertes_deja_proposees_ou_traitees_sautees(tmp_path):
             return [{"dossier_an": "D2", "statut": "brouillon", "doc": "{}"}]
 
     assert [a["id"] for a in alertes_a_proposer(tmp_path, D1(), {"inscrit"})] == ["inscrit:D3"]
+
+
+def test_credit_epuise_arrete_la_passe():
+    class Refus(Exception):
+        status_code = 400
+
+    class Client(FauxClient):
+        def stream(self, **kw):
+            raise Refus("Your credit balance is too low to access the Anthropic API.")
+
+    d1 = FausseD1(EN_SERVICE)
+    s = llm.Session(d1, "essai", client=Client([]), secret="s")
+    with pytest.raises(llm.Indisponible, match="crédit"):
+        s.appeler("D", max_tokens=10, messages=[])
+    assert "'erreur'" in d1.ecrits[0]
+    assert llm.bloquante(Refus("autre chose")) is None
