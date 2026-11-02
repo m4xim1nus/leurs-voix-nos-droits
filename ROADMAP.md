@@ -76,4 +76,7 @@ clé ; poser `LLM_CHIFFREMENT` (Worker et dépôt) et `TERMES_INTERDITS` (dépô
 
 ### Fait dans ce cycle
 
-Rien encore.
+- Item 1 : page « LLM » de l'admin (migration `0007_llm.sql`) : interrupteur, clé testée puis chiffrée (AES-GCM, vecteur
+  partagé avec le pipeline dans `pipeline/tests/fixtures/llm_vecteur.txt`), plafond mensuel (20 $ par défaut), modèle
+  (Opus 5.5 par défaut, Sonnet 5.5 au choix), dépense du mois et journal des appels. Coupé par défaut. **À faire par
+  Max** : `LLM_CHIFFREMENT` (Worker et dépôt, `admin/README.md`, étape 6), `npm run db:migrer:distant`, `npm run deploy`.

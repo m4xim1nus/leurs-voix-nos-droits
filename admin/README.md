@@ -70,6 +70,17 @@ Le compte Cloudflare doit être celui de la zone `technoperchoir.fr`.
 
 5. Déploiement : `npm run deploy`.
 
+6. LLM (facultatif, page « LLM » de l'admin) : un secret qui chiffre la clé d'API dans D1, à poser
+   à l'identique dans le Worker et dans les secrets du dépôt GitHub (l'Action des propositions le
+   lit pour déchiffrer la clé) :
+   ```bash
+   openssl rand -base64 32                 # une valeur, gardée hors du dépôt
+   npx wrangler secret put LLM_CHIFFREMENT
+   gh secret set LLM_CHIFFREMENT
+   ```
+   Sans lui, l'admin fonctionne, mais refuse de saisir une clé. Changer la valeur rend la clé
+   enregistrée illisible : la ressaisir. En local, ajouter `LLM_CHIFFREMENT="local"` à `.dev.vars`.
+
 ## Mettre à jour le catalogue en ligne
 
 ```bash

@@ -11,6 +11,8 @@ declare global {
         GITHUB_TOKEN?: string;
         /** Termes jamais publiés, un par ligne (secret ; CLAUDE.md, règles dures). */
         TERMES_INTERDITS?: string;
+        /** Chiffre la clé d'API du LLM dans D1 ; même valeur dans les secrets du dépôt (lib/server/llm.ts). */
+        LLM_CHIFFREMENT?: string;
         GITHUB_REPO: string;
         GITHUB_BRANCH: string;
         EDITORIAL_CHEMIN: string;

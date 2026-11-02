@@ -11,6 +11,7 @@
     { href: '/apercu', libelle: 'Aperçu des scores' },
     { href: '/publier', libelle: 'Publier' },
     { href: '/journal', libelle: 'Journal' },
+    { href: '/llm', libelle: 'LLM' },
     { href: '/aide', libelle: 'Aide' }
   ];
   const actif = (href: string) =>
