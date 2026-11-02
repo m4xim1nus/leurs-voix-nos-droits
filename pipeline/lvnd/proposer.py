@@ -199,11 +199,12 @@ def message_tache(export: Path, dossier: str, mode: str, alerte: dict | None, ve
 # fausserait la mesure de l'accord (item 4).
 DOMAINES_BLOQUES = ["technoperchoir.fr"]
 OUTILS = [
-    {"type": "web_search_20260209", "name": "web_search", "max_uses": 8, "blocked_domains": DOMAINES_BLOQUES},
+    {"type": "web_search_20260209", "name": "web_search", "max_uses": 20, "blocked_domains": DOMAINES_BLOQUES},
     {"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 12, "max_content_tokens": 30_000,
      "blocked_domains": DOMAINES_BLOQUES},
 ]
 EFFORT = "medium"  # 2,56 $ par texte à « high » (mesure du 02/11/2026), décision de Max : resserrer
+# Recherches (0,01 $ l'une) : 8 coupaient la recherche (mesure du 02/11/2026) ; le coût vient des pages lues.
 MAX_REPRISES = 8  # reprises d'un tour mis en pause par le serveur (pause_turn)
 
 

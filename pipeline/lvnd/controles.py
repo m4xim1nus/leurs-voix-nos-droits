@@ -202,7 +202,8 @@ def controler(doc: dict, yaml_brut: str, dossier: str, infos_an: dict, infos_sen
         cle, citation = m[1], m[2]
         src = sources.get(cle)
         if src is None:
-            r.erreurs.append(f"extrait de {cle} : source non définie")
+            # Un écart n'a pas de sources : il peut citer le dossier de l'AN ou le compte rendu, sans les déclarer.
+            (r.avertissements if statut == "ecarte" else r.erreurs).append(f"extrait de {cle} : source non définie")
             continue
         texte = normes.get(src.get("url") or "")
         if texte is None:

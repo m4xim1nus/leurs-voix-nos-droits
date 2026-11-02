@@ -292,3 +292,10 @@ def test_credit_epuise_arrete_la_passe():
         s.appeler("D", max_tokens=10, messages=[])
     assert "'erreur'" in d1.ecrits[0]
     assert llm.bloquante(Refus("autre chose")) is None
+
+
+def test_un_ecart_peut_citer_une_source_non_declaree(termes):
+    ecart = ("id: ''\ndossier_an: DLR5L17N1\nlegislature: 17\ntitre: T\nstatut: ecarte\nmotif_ecart: Retiré.\n"
+             "relecture:\n  extraits: ['dossier-an : « retiré par son auteur »']\n")
+    r = _controler(ecart)
+    assert r.erreurs == [] and any("non définie" in a for a in r.avertissements)
