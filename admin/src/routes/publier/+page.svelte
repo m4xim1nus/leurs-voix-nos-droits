@@ -130,7 +130,9 @@
         >Secret GITHUB_TOKEN absent : publication impossible (admin/README.md).</span
       >
     {/if}
-    <span class="discret">editorial.json : {(data.taille / 1024).toFixed(0)} Ko</span>
+    <span class="discret"
+      >editorial.json : {data.nTextes} textes qualifiés, {data.nEcartes} écartés</span
+    >
   </form>
 </section>
 

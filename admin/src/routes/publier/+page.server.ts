@@ -23,7 +23,7 @@ export const load: PageServerLoad = async ({ platform }) => {
         branche: env.GITHUB_BRANCH,
         chemin: env.EDITORIAL_CHEMIN
       });
-      horsAdmin = await dossiersHorsAdmin(env.DB, distant, prep.contenu, prep.textes);
+      horsAdmin = await dossiersHorsAdmin(env.DB, distant, () => prep.contenu, prep.textes);
     } catch (e) {
       lectureDepot = (e as Error).message;
     }
@@ -34,7 +34,8 @@ export const load: PageServerLoad = async ({ platform }) => {
     horsAdmin,
     lectureDepot,
     message: message(prep.textes),
-    taille: prep.contenu.length,
+    nTextes: prep.nTextes,
+    nEcartes: prep.nEcartes,
     configure: Boolean(env.GITHUB_TOKEN),
     depot: env.GITHUB_REPO,
     branche: env.GITHUB_BRANCH,

@@ -39,8 +39,13 @@ export interface EtatTexte {
 export interface Preparation {
   textes: EtatTexte[];
   bloquant: boolean;
-  contenu: string;
+  /** Le fichier complet (environ 1,7 Mo), construit seulement à la première lecture : la page n'en a pas toujours besoin. */
+  readonly contenu: string;
   lignes: LigneQualification[];
+  /** Empreinte actuelle de chaque texte publiable, calculée une fois (dossier → empreinte). */
+  empreintes: Map<string, string>;
+  nTextes: number;
+  nEcartes: number;
 }
 
 const PUBLIABLES = new Set(['valide', 'ecarte', 'a-suivre']);
@@ -66,16 +71,23 @@ export async function versionPubliee(
   return null;
 }
 
-/** Termes de la liste privée (secret TERMES_INTERDITS, un par ligne) présents dans `texte`. */
-export function termesInterdits(texte: string, liste: string | undefined): string[] {
-  const termes = (liste ?? '')
+/** Expressions de la liste privée (secret TERMES_INTERDITS, un terme par ligne), compilées une fois. */
+export function compilerTermes(liste: string | undefined): [string, RegExp][] {
+  const echapper = (t: string) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return (liste ?? '')
     .split('\n')
     .map((t) => t.trim())
-    .filter((t) => t && !t.startsWith('#'));
-  const echapper = (t: string) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  return termes.filter((t) =>
-    new RegExp(`(?<![\\p{L}\\p{N}_])${echapper(t)}(?![\\p{L}\\p{N}_])`, 'iu').test(texte)
-  );
+    .filter((t) => t && !t.startsWith('#'))
+    .map((t) => [t, new RegExp(`(?<![\\p{L}\\p{N}_])${echapper(t)}(?![\\p{L}\\p{N}_])`, 'iu')]);
+}
+
+/** Termes de la liste privée présents dans `texte` (liste brute, ou déjà compilée). */
+export function termesInterdits(
+  texte: string,
+  liste: string | undefined | [string, RegExp][]
+): string[] {
+  const termes = Array.isArray(liste) ? liste : compilerTermes(liste);
+  return termes.filter(([, r]) => r.test(texte)).map(([t]) => t);
 }
 
 export async function preparer(
@@ -102,34 +114,51 @@ export async function preparer(
   const docsSuivis = [...lignes, ...conserves]
     .filter((l) => l.statut === 'a-suivre')
     .map((l) => l.doc);
+  // Une seule sérialisation et une seule empreinte par texte publiable (limite de calcul du Worker, 02/11/2026).
+  const compacts = new Map<string, string>();
+  const empreintes = new Map<string, string>();
+  const changements = new Map<string, EtatTexte['changement']>();
+  for (const l of lignes) {
+    if (!PUBLIABLES.has(l.statut)) continue;
+    const c = compact(l.doc);
+    const e = await empreinte(c, l.statut, l.motif_ecart);
+    compacts.set(l.dossier_an, c);
+    empreintes.set(l.dossier_an, e);
+    changements.set(
+      l.dossier_an,
+      !l.publie_empreinte ? 'nouveau' : l.publie_empreinte !== e ? 'modifie' : null
+    );
+  }
+  // Seuls les textes changés depuis la dernière publication sont contrôlés ici : les autres l'ont été en
+  // leur temps, et `lvnd check` revoit chaque jour tout le fichier publié (catalogue compris).
+  const aControler = valides.filter((l) => changements.get(l.dossier_an));
   const infos = db.infos(
     await db.scrutins(
       base,
-      valides.flatMap((l) => l.doc.scrutins.map((s) => s.id))
+      aControler.flatMap((l) => l.doc.scrutins.map((s) => s.id))
     )
   );
   const infosSenat = db.infosSenat(
     await db.scrutinsSenat(
       base,
-      valides.flatMap((l) => (l.doc.senat?.scrutins ?? []).map((s) => s.id))
+      aControler.flatMap((l) => (l.doc.senat?.scrutins ?? []).map((s) => s.id))
     )
   );
   const ids = new Map<string, number>();
   for (const d of [...docsValides, ...docsSuivis]) ids.set(d.id, (ids.get(d.id) ?? 0) + 1);
+  const termes = compilerTermes(interdits);
 
   const textes: EtatTexte[] = [];
   for (const l of lignes) {
     const publiable = PUBLIABLES.has(l.statut);
-    const e = await empreinte(compact(l.doc), l.statut, l.motif_ecart);
-    let changement: EtatTexte['changement'] = null;
-    if (publiable && !l.publie_empreinte) changement = 'nouveau';
-    else if (publiable && l.publie_empreinte !== e) changement = 'modifie';
-    const v =
-      l.statut === 'valide'
+    const changement = changements.get(l.dossier_an) ?? null;
+    const v = !changement
+      ? { erreurs: [] as string[], avertissements: [] as string[] }
+      : l.statut === 'valide'
         ? valider(l.doc, g, infos, infosSenat)
         : l.statut === 'a-suivre'
           ? validerSuivi(l.doc, g)
-          : { erreurs: [], avertissements: [] };
+          : { erreurs: [] as string[], avertissements: [] as string[] };
     if ((l.statut === 'valide' || l.statut === 'a-suivre') && (ids.get(l.doc.id) ?? 0) > 1)
       v.erreurs.push(`identifiant ${l.doc.id} utilisé par plusieurs textes`);
     if (l.statut === 'ecarte' && !(l.motif_ecart ?? '').trim()) v.erreurs.push('motif manquant');
@@ -162,18 +191,30 @@ export async function preparer(
       motif: (l.motif_ecart ?? '').trim(),
       recherche: l.doc.recherche
     }));
-  const contenu = serialiser(documentEditorial(g.version, docsValides, ecartes, docsSuivis));
-  // Un terme interdit (CLAUDE.md, règles dures) bloque la publication : on signale le texte fautif.
+  // Un terme interdit (CLAUDE.md, règles dures) bloque la publication : on signale le texte fautif. Un texte
+  // inchangé (ou une version publiée conservée) a été contrôlé à sa publication.
+  const parDossier = new Map(lignes.map((l) => [l.dossier_an, l]));
   for (const t of textes) {
-    const l = lignes.find((x) => x.dossier_an === t.dossier_an)!;
-    const q = PUBLIABLES.has(t.statut) ? l : enLigne.get(t.dossier_an);
-    if (!q) continue;
-    const trouves = termesInterdits(compact(q.doc) + (q.motif_ecart ?? ''), interdits);
+    if (!t.changement) continue;
+    const l = parDossier.get(t.dossier_an)!;
+    const trouves = termesInterdits(compacts.get(t.dossier_an)! + (l.motif_ecart ?? ''), termes);
     if (trouves.length)
       t.erreurs.push(`terme interdit dans la qualification : ${trouves.join(', ')}`);
   }
   const bloquant = textes.some((t) => (PUBLIABLES.has(t.statut) || t.en_ligne) && t.erreurs.length);
-  return { textes, bloquant, contenu, lignes };
+  let contenu: string | null = null;
+  return {
+    textes,
+    bloquant,
+    get contenu() {
+      contenu ??= serialiser(documentEditorial(g.version, docsValides, ecartes, docsSuivis));
+      return contenu;
+    },
+    lignes,
+    empreintes,
+    nTextes: docsValides.length,
+    nEcartes: ecartes.length
+  };
 }
 
 /**
@@ -219,7 +260,7 @@ export function modifiesHorsAdmin(
 export async function horsAdmin(
   base: D1Database,
   distant: FichierDistant,
-  contenu: string,
+  contenu: string | (() => string),
   textes: EtatTexte[]
 ): Promise<string[]> {
   if (distant.contenu === null) return [];
@@ -227,7 +268,11 @@ export async function horsAdmin(
     .prepare('SELECT fichier_sha FROM publications ORDER BY id DESC LIMIT 1')
     .first<{ fichier_sha: string | null }>();
   if (distant.sha && distant.sha === derniere?.fichier_sha) return [];
-  return modifiesHorsAdmin(distant.contenu, contenu, textes);
+  return modifiesHorsAdmin(
+    distant.contenu,
+    typeof contenu === 'string' ? contenu : contenu(),
+    textes
+  );
 }
 
 export function erreurHorsAdmin(dossiers: string[]): string {
@@ -285,7 +330,7 @@ export async function publier(
   const prep = await preparer(base, g, interdits);
   if (prep.bloquant) throw new Error('des textes à publier ont des erreurs bloquantes');
   const distant = await lireFichier(cfg, f);
-  const dossiers = await horsAdmin(base, distant, prep.contenu, prep.textes);
+  const dossiers = await horsAdmin(base, distant, () => prep.contenu, prep.textes);
   if (dossiers.length) throw new Error(erreurHorsAdmin(dossiers));
   const msg = message(prep.textes);
   let commit: Resultat['commit'] = null;
@@ -293,23 +338,22 @@ export async function publier(
   if (distant.sha !== fichierSha)
     commit = await ecrireFichier(cfg, prep.contenu, distant.sha, msg, f);
 
-  // Empreintes de ce qui vient d'être publié (les documents lus, pas ceux d'une édition parallèle).
-  const maj = await Promise.all(
-    prep.lignes.map(async (l) => {
-      // Texte en cours de requalification : sa version publiée n'a pas bougé, son empreinte non plus.
-      const e = PUBLIABLES.has(l.statut)
-        ? await empreinte(compact(l.doc), l.statut, l.motif_ecart)
-        : l.publie_empreinte;
-      return base
+  // Empreintes de ce qui vient d'être publié (les documents lus, pas ceux d'une édition parallèle). Un texte
+  // inchangé garde la sienne ; un texte en requalification aussi : sa version publiée n'a pas bougé.
+  const maj = prep.lignes
+    .filter((l) => {
+      const e = prep.empreintes.get(l.dossier_an);
+      return e !== undefined && e !== l.publie_empreinte;
+    })
+    .map((l) =>
+      base
         .prepare(
           'UPDATE qualifications SET publie_empreinte = ? WHERE dossier_an = ? AND modifie_le = ?'
         )
-        .bind(e, l.dossier_an, l.modifie_le);
-    })
-  );
-  const fichier = JSON.parse(prep.contenu) as { textes: unknown[]; ecartes: unknown[] };
-  const n = fichier.textes.length;
-  const nEcartes = fichier.ecartes.length;
+        .bind(prep.empreintes.get(l.dossier_an)!, l.dossier_an, l.modifie_le)
+    );
+  const n = prep.nTextes;
+  const nEcartes = prep.nEcartes;
   const le = new Date().toISOString().slice(0, 19) + '+00:00';
   await base.batch([
     ...maj,
