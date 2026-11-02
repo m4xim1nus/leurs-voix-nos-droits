@@ -33,6 +33,8 @@ def test_controles(termes):
     # un nombre écrit en lettres dans la fiche peut passer en chiffres
     trois = {**FICHE, "conseil_constitutionnel": "Aucune censure, trois réserves."}
     assert resumer.controler("Le texte est accepté avec 3 conditions.", trois, NOMS)["avertissements"] == []
+    composes = {**FICHE, "resume": "Garde à vue de vingt-quatre heures dès la septième semaine, de dix à dix-huit."}
+    assert resumer.controler("24 heures, 7e semaine, 18.", composes, NOMS)["avertissements"] == []
 
 
 def test_a_resumer_saute_les_textes_a_jour_ou_deja_proposes():

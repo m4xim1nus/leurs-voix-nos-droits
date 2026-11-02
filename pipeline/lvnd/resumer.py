@@ -118,10 +118,26 @@ NOMBRES_EN_LETTRES |= {"une": "1", "vingt": "20", "trente": "30", "quarante": "4
                        "soixante": "60", "cent": "100", "mille": "1000"}
 
 
+def _en_lettres(mot: str) -> int | None:
+    """« trois » → 3, « vingt-quatre » → 24, « dix-huit » → 18, « septième » → 7 ; None sinon."""
+    total = 0
+    for partie in mot.replace("-et-", "-").split("-"):
+        if partie.endswith("ième"):
+            partie = {"cinqu": "cinq", "neuv": "neuf", "un": "un"}.get(partie[:-4], partie[:-4])
+            partie = partie if partie in NOMBRES_EN_LETTRES else partie + "e"
+        if partie == "premier" or partie == "première":
+            partie = "un"
+        if partie not in NOMBRES_EN_LETTRES:
+            return None
+        n = int(NOMBRES_EN_LETTRES[partie])
+        total = total * n if partie == "vingt" and total in (4,) else total + n
+    return total
+
+
 def _nombres(texte: str, lettres: bool = False) -> set[str]:
     out = set(re.findall(r"\d+", texte))
     if lettres:
-        out |= {NOMBRES_EN_LETTRES[m] for m in re.findall(r"\w+", texte.lower()) if m in NOMBRES_EN_LETTRES}
+        out |= {str(n) for m in re.findall(r"[\w-]+", texte.lower()) if (n := _en_lettres(m)) is not None}
     return out
 
 
