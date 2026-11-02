@@ -149,8 +149,10 @@ def _qualifications(con, controle, out) -> None:
 
 def _recherche(controle, out) -> None:
     """Termes de recherche et table des pays : clés connues, table complète, aucun terme de la liste privée."""
-    err, sans = recherche.controler_termes(editorial.charger())
-    controle("termes de recherche : clés connues, ni vides ni en double", not err, " ; ".join(err))
+    err, a_deplacer, sans = recherche.controler_termes(editorial.charger())
+    controle("termes de recherche : ni vides ni en double", not err, " ; ".join(err))
+    # une publication qui change le statut d'un texte ne doit pas bloquer la passe suivante (01/11/2026)
+    out += [f"AVERTISSEMENT termes de recherche : {a}" for a in a_deplacer]
     controle("pays → circonscription : table complète, sans doublon", not (e := recherche.controler_pays()), " ; ".join(e))
     if TERMES_INTERDITS.exists():
         trouves = termes_interdits("\n".join(l["terme"] for l in recherche.lignes_termes()))

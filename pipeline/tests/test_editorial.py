@@ -110,6 +110,15 @@ def test_complement_ne_touche_que_le_senat(tmp_path, monkeypatch):
         sync_admin.validations(tmp_path, "validé")
 
 
+@pytest.mark.parametrize("options", [{"dossier_brouillons": Path("b")}, {"dossier_brouillons": Path("b"), "valider": "v"},
+                                     {"complet": True}, {"cible": "sql"}])
+def test_simuler_refuse_hors_incremental(options):
+    # avec --brouillons, --simuler était ignoré et D1 écrite quand même
+    kw = {"cible": "local", **options}
+    with pytest.raises(SystemExit, match="--simuler ne vaut que"):
+        sync_admin.sync(Path("export"), Path("admin"), kw.pop("cible"), False, None, simuler=True, **kw)
+
+
 def test_ecarte_sans_senat(tmp_path, monkeypatch):
     monkeypatch.setattr(editorial, "charger", lambda: {"textes": [], "ecartes": []})
     (tmp_path / "e.yaml").write_text(yaml.safe_dump({"id": "", "dossier_an": "DLR5L17N2", "legislature": 17, "titre": "Loi",

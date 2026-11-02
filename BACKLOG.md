@@ -20,19 +20,15 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 
 ## À trier
 
-- [ ] Passe du 02/11/2026 vérifiée (relancée à la main, 6 min 40, sync et garde-fous OK) : supprimer les branches `xve`, `worktree-textes-en-cours`, `relecture-xve`, `recherche`, `prise-en-main` et `senat-suite`, fusionnées dans `main`, et les worktrees `.claude/worktrees/xve` et `textes-en-cours`. Seules les deux premières sont encore sur GitHub, où un push lance un build d'aperçu Cloudflare (claude, 2026-11-01)
 - [ ] Premier essai de `/aide` avec le contributeur qui a déjà accès à l'admin, et corrections qu'il fait remonter (user:moi, 2026-11-01)
 - [ ] Écarts de forme de l'audit non traités (`source/audit-coherence/`) : mention « aucune critique trouvée » absente de plusieurs notes, `regime-exception` sur les textes à mesure temporaire non centrale, vigilances de sens opposé, formules des motifs, résumés des fiches témoins (claude, 2026-11-01)
 - [ ] ZAN 2023 et plastiques dangereux : lire à la main les pages de FNE et de Générations Futures, refusées à la lecture automatique. Une critique sur le texte voté rouvre l'écart (claude, 2026-11-01)
 - [ ] Une publication peut remettre un ancien motif quand `editorial.json` a été commité sans passer par D1 (DLR5L15N41895, 01/11/2026). Comparer D1 et le fichier dans `lvnd check`, ou au moment de publier (claude, 2026-11-01)
-- [ ] Une publication qui change le statut d'un texte cité dans `termes_recherche.yaml` fait échouer les tests et `lvnd check`, donc bloque la passe de données suivante (01/11/2026, corrigé à la main). Rendre ce contrôle non bloquant, ou faire suivre les clés (claude, 2026-11-01)
-- [ ] `sync-admin --brouillons --simuler` écrit quand même dans D1 : refuser la combinaison (claude, 2026-11-01)
 - [ ] justice-criminelle-2026 : d'après une lecture du texte de la CMP (T.A. 160) et du rapport n° 868, le « plaider-coupable » criminel n'y est plus, alors que le résumé le décrit et que VTANR5L17V7896 compte comme amendement clé (règle 11). Vérifier, puis requalifier : les scores publiés de l'Assemblée sont touchés (claude, 2026-11-01)
 - [ ] LOPJ 2023, SN2022-297 : les conseils de l'ordre de Paris, Lyon et Marseille contestent une « atteinte au droit d'accès à un juge », sans droit de la grille pour la justice commerciale. Statut de ces conseils au regard de la règle 7, à trancher (claude, 2026-11-01)
 - [ ] LOM 2019 : la note publiée dit « faute de source admise lue » sur le contrôle automatisé, alors que l'avis n° 395539 du Conseil d'État en parle (risques d'atteinte, mais dispositif admis). Corriger la note (claude, 2026-11-01)
 - [ ] Amendements clés des budgets au Sénat : 52 candidats non lus (claude, 2026-11-01)
 - [ ] Présentation : PDF au texte sélectionnable, et chiffres à relire à chaque évolution de la méthode (claude, 2026-11-01)
-- [ ] La passe quotidienne programmée du 02/11/2026 (5 h UTC) n'a pas été déclenchée par GitHub : aucune exécution créée, alors que l'hebdomadaire était fini à 4 h 52. GitHub perd des déclenchements aux heures pile ; décaler les deux `cron` hors de l'heure pile (par ex. `17 4 * * 1` et `17 5 * * *`), et `docs/EXPLOITATION.md` avec (claude, 2026-11-02)
 
 ## Textes à surveiller
 

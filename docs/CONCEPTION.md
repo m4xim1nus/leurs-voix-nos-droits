@@ -436,7 +436,7 @@ tourne dans le navigateur. Aucune requête ne dit ce que l'on cherche, pas même
 - **Hors index** : les 18 000 scrutins et les justifications, sources de bruit.
 - **Termes et surnoms** : `pipeline/referentiels/termes_recherche.yaml`, exportés dans `data/export/termes_recherche.csv`, donc
   hors d'`editorial.json`, de l'admin et de D1. Ils se cherchent et ne s'affichent jamais. Ni victime, ni personne mise en cause, ni
-  formule militante. `lvnd check` refuse une clé inconnue et les termes de la liste privée.
+  formule militante. `lvnd check` refuse un terme vide ou en double et les termes de la liste privée ; une clé dont le texte a changé de statut (qualifié puis écarté, ou l'inverse) est signalée sans bloquer, et la clé d'un écarté devenu qualifié suit d'elle-même.
 - **Correspondance** : tous les mots saisis doivent se trouver, sans accents ni casse, au singulier ; un mot de trois lettres ou
   moins doit être entier (« APL » ne trouve pas « aplomb »), un mot plus long se complète. **Fautes de frappe** : en repli, seulement quand rien ne correspond, chaque mot est remplacé par ses voisins les plus proches (une faute jusqu'à 7 lettres, deux au-delà, aucune sous 4 lettres ; une inversion compte pour une faute), et la page dit que ces résultats sont approchés.
 - **Classement** : clé exacte, puis expression dans une clé ou le titre, puis mots dans les clés, le titre, les étiquettes, le
@@ -570,7 +570,7 @@ proposée, codée dans `lvnd scores` :
 **M. Mise à jour des données AN** ✅ M1 (validé par Max le 29/10/2026)
 
 - M1 (**retenu**) : Action GitHub hebdomadaire
-  (`.github/workflows/donnees.yml`, lundi 4 h UTC, ou à la main) :
+  (`.github/workflows/donnees.yml`, lundi 4 h 17 UTC, ou à la main) :
   `lvnd download` (archives en cache d'une semaine à l'autre, partielles
   comprises), `lvnd build`, `lvnd check`, commit de `data/export/` si tout
   passe (le site se redéploie), puis `lvnd sync-admin --remote`, devenu

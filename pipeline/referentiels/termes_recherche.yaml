@@ -8,8 +8,9 @@
 # - ni nom de victime ou de personne mise en cause, ni marque sans lien direct avec le texte ;
 # - `textes` : clés = `id` d'une qualification ou d'une fiche de suivi ; `ecartes` : clés = dossier de l'AN.
 #
-# Un texte absent reste trouvable par son titre et son résumé. `lvnd check` refuse une clé inconnue et les termes de la
-# liste privée (source/termes_interdits.txt), et signale les textes qualifiés sans terme.
+# Un texte absent reste trouvable par son titre et son résumé. `lvnd check` refuse les termes de la liste privée
+# (source/termes_interdits.txt) ; il signale sans bloquer les textes qualifiés sans terme et les clés dont le texte a changé
+# de statut (la clé d'un écarté devenu qualifié suit d'elle-même ; celle d'un qualifié devenu écarté est à déplacer).
 
 textes:
   a69-riipm-2025: {termes: [A69, autoroute Toulouse-Castres, A680, espèces protégées]}

@@ -15,21 +15,33 @@ def test_les_termes_sont_du_texte():
     ]
 
 
-def test_cle_inconnue_terme_vide_ou_en_double_refuses():
+def test_terme_vide_ou_en_double_refuses_cle_inconnue_signalee():
     ref = {"textes": {"t1": {"termes": ["a", "A"]}, "absent": {"termes": ["b"]}, "s1": {"termes": []}},
            "ecartes": {"D2": {"termes": ["c"]}}}
-    err, sans = recherche.controler_termes(DOC, ref)
-    assert any("absent : inconnu" in e for e in err)
-    assert any("D2 : inconnu" in e for e in err)
+    err, a_deplacer, sans = recherche.controler_termes(DOC, ref)
     assert any("s1 : terme vide" in e for e in err)
     assert any("t1 : terme en double" in e for e in err)
+    assert not any("inconnu" in e for e in err)  # une publication ne bloque plus la passe (01/11/2026)
+    assert any(a.startswith("absent : inconnu") for a in a_deplacer)
+    assert any(a.startswith("D2 : inconnu") for a in a_deplacer)
     assert sans == ["t2"]
 
 
+def test_un_ecarte_devenu_qualifie_garde_ses_termes():
+    doc = {"textes": [{"id": "t1", "dossier_an": "D1"}], "ecartes": [], "suivis": []}
+    ref = {"textes": {}, "ecartes": {"D1": {"termes": ["x"]}}}
+    assert recherche.lignes_termes(ref, doc) == [{"cle": "t1", "type": "terme", "terme": "x"}]
+    assert recherche.lignes_termes(ref) == [{"cle": "D1", "type": "terme", "terme": "x"}]
+    err, a_deplacer, sans = recherche.controler_termes(doc, ref)
+    assert err == [] and sans == []
+    assert a_deplacer == ["D1 : qualifié ou suivi sous `t1`, ligne à déplacer dans `textes` (ses termes le suivent déjà)"]
+
+
 def test_le_referentiel_des_termes_est_coherent_avec_editorial():
-    err, sans = recherche.controler_termes(editorial.charger())
+    # clés à déplacer et textes sans terme, qu'une publication de l'admin peut créer, sont signalés par `lvnd check`,
+    # sans rougir les tests
+    err, _, _ = recherche.controler_termes(editorial.charger())
     assert err == []
-    assert sans == []
 
 
 def test_table_des_pays_complete():

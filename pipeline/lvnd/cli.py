@@ -64,7 +64,7 @@ def main(argv=None) -> int:
     s.add_argument("--complet", action="store_true",
                    help="efface et réécrit tout le catalogue (≈ 80 000 lignes écrites) au lieu des seules différences")
     s.add_argument("--simuler", action="store_true",
-                   help="sync incrémental : affiche le nombre de lignes à écrire, sans rien écrire")
+                   help="sync incrémental seul : affiche le nombre de lignes à écrire, sans rien écrire (refusé avec --brouillons, --valider, --complet ou --sql)")
     s.add_argument("--export", type=Path, default=EXPORT)
     s.add_argument("--sortie", type=Path, help="chemin du script SQL (défaut : admin/.wrangler/sync-admin.sql)")
     args = ap.parse_args(argv)

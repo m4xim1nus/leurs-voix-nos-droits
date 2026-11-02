@@ -9,7 +9,7 @@ name: Données AN (quotidien)
 
 on:
   schedule:
-    - cron: '0 5 * * *' # chaque jour, 5 h UTC
+    - cron: '17 5 * * *' # chaque jour, 5 h 17 UTC : hors de l'heure pile, où GitHub perd des déclenchements (02/11/2026)
   workflow_dispatch:
 
 concurrency:
