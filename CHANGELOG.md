@@ -3,6 +3,55 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/).
 Les tags `v*` du dépôt suivent ces versions.
 
+## [1.10.0] — 2026-11-02
+
+Cycle Pré-qualification : un LLM (Claude Opus 5.5, par l'API d'Anthropic) prépare des propositions de qualification, que
+l'admin montre et qu'une personne charge, corrige, valide et publie. Le LLM propose, il ne valide ni ne publie jamais. Le
+projet peut tourner sans Claude Code. Aucun score ne change. Au 02/11/2026 : 199 textes qualifiés, 672 écartés, 3 fiches de
+suivi.
+
+### Ajouté
+
+- **Admin, page « LLM »** : interrupteur (coupé par défaut), clé d'API testée puis chiffrée dans D1 (secret
+  `LLM_CHIFFREMENT`), plafond mensuel en dollars, modèle, dépense du mois et journal des appels (migration 0007). Coupé, sans
+  clé ou au plafond, l'admin fonctionne comme avant.
+- **`lvnd proposer`** : une proposition par dossier, à partir de la méthode, de la consigne aux agents, de la grille et des
+  témoins, avec recherche web (site du projet exclu). Contrôles sans LLM avant toute proposition : termes interdits (refus de
+  tout appel sans la liste), signataires des publications collectives, règles de `editorial.valider`, décomptes, adresses, et
+  **chaque extrait retrouvé mot pour mot dans son document**. Plafond vérifié avant chaque requête ; crédit épuisé ou clé
+  refusée arrêtent la passe.
+- **Action `propositions.yml`**, après chaque passe de données : une proposition par nouvelle alerte de l'Assemblée (5 au
+  plus), jamais recalculée, écrite dans D1 (migration 0008). Alertes « inscrit » et du Sénat : sur demande, depuis l'admin
+  (migration 0009).
+- **Veille des sources « à l'envers »** (`lvnd veille`, Action `veille.yml`, le lundi) : flux de 36 sources admises
+  (`referentiels/sources_veille.yaml`), lus sans LLM ; un appel rapproche les publications des textes publiés ; une
+  proposition par correspondance (3 au plus).
+- **« À traiter » repensé** : une carte par texte, en quatre sections fixes (prêt à relire, avec « mise à jour mineure » ;
+  question de méthode ; à faire à la main ; à venir). Sur chaque proposition : la phrase d'action du LLM, le jugement, l'écart
+  avec la fiche, les sources et leurs extraits, les points d'attention ; gestes « Charger à relire », « Écarter », « Question
+  tranchée », « Demander une proposition ».
+- **Termes de recherche dans `editorial.json`** (bloc `recherche`, absent quand vide) : saisis sur la fiche de l'admin,
+  proposés par le LLM. L'ancien `termes_recherche.yaml` y a été repris, publié et retiré.
+- Mesure à blanc sur 5 textes avant la mise en service (rapport privé) : 3 accords sur 5 sur le droit principal, le sens et
+  le décisif, les 2 désaccords signalés comme incertains ; environ 0,7 $ par proposition.
+
+### Modifié
+
+- Méthode : médico-social admis comme santé (règle 7) ; fiche de suivi sur le dernier état connu du texte, sans aucun vote
+  (règle 22) ; un vote du Sénat sans voix d'un côté sur un texte non qualifié à l'Assemblée ne demande rien (règle 23) ; loi
+  de finances rejetée par une partie (règle 25) ; un écart faute de vote sur l'ensemble à l'Assemblée reste qualifiable au
+  Sénat (règle 28).
+- Page Méthodologie du site : « Qui qualifie, et comment » dit la préparation automatique et ses contrôles.
+
+### Limites connues
+
+- La recherche de sources du LLM s'épuise vite là où elles sont rares : une proposition d'écart « faute de source » est à
+  revérifier.
+- La veille ne voit que les sources de sa liste, et leurs flux peuvent changer d'adresse.
+- La page « Publier » a dépassé la limite de calcul du Worker gratuit (erreur 1102) en publiant 300 textes d'un coup, après
+  avoir tout écrit.
+- La capture d'écran d'« À traiter » du guide `/aide` date d'avant le cycle.
+
 ## [1.9.0] — 2026-11-02
 
 Cycle Suites de l'audit, et ce qui l'a précédé le même jour : les reliquats de l'audit de cohérence soldés, dix règles de
