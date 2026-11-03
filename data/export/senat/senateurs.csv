@@ -285,7 +285,7 @@ id,civ,prenom,nom,etat,type_appartenance,circonscription,departement,courriel
 14225N,M.,Claude,Raynal,ancien,,Haute-Garonne,31,c.raynal@senat.fr
 14227Q,M.,Jean-Louis,Tourenne,ancien,,Ille-et-Vilaine,35,jl.tourenne@senat.fr
 14229S,Mme,Sylvie,Robert,actif,,Ille-et-Vilaine,35,s.robert@senat.fr
-14231L,Mme,Françoise,Gatel,actif,,Ille-et-Vilaine,35,
+14231L,Mme,Françoise,Gatel,ancien,,Ille-et-Vilaine,35,
 14235Q,Mme,Christine,Prunaud,ancien,,Côtes-d'Armor,22,c.prunaud@senat.fr
 14237S,M.,Cyril,Pellevat,actif,,Haute-Savoie,74,c.pellevat@senat.fr
 14239U,M.,Michel,Amiel,ancien,,Bouches-du-Rhône,13,m.amiel@senat.fr
@@ -635,7 +635,7 @@ id,civ,prenom,nom,etat,type_appartenance,circonscription,departement,courriel
 21418N,M.,Jean-Baptiste,Olivier,ancien,,Paris,75,jb.olivier@senat.fr
 21419P,Mme,Mireille,Conte Jaubert,ancien,,Gironde,33,m.conte-jaubert@senat.fr
 21420G,M.,Maurice,Perrion,ancien,,Loire-Atlantique,44,m.perrion@senat.fr
-21421H,Mme,Anne-Sophie,Patru,ancien,,Ille-et-Vilaine,35,as.patru@senat.fr
+21421H,Mme,Anne-Sophie,Patru,actif,,Ille-et-Vilaine,35,as.patru@senat.fr
 21422J,Mme,Salama,Ramia,ancien,,Mayotte,976,s.ramia@senat.fr
 21423K,M.,Éric,Dumoulin,ancien,Apparenté,Yvelines,78,e.dumoulin@senat.fr
 21424L,Mme,Brigitte,Hybert,ancien,,Vendée,85,b.hybert@senat.fr

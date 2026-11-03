@@ -623,7 +623,7 @@ senateur_id,debut,fin,motif_debut,motif_fin
 14229S,2026-10-01,,Renouvellement 2,En Cours
 14231L,2014-10-01,2020-09-30,Election,Fin de mandat
 14231L,2020-10-01,2024-10-21,Renouvellement,De droit (membre du Gouvernement)
-14231L,2026-10-01,,Réélection,En Cours
+14231L,2026-10-01,2026-11-01,Réélection,De droit (membre du Gouvernement)
 14235Q,2014-10-01,2020-09-30,Election,Ne se représente pas
 14237S,2014-10-01,2020-09-30,Election,Fin de mandat
 14237S,2020-10-01,2026-09-30,Renouvellement,Fin de mandat
@@ -1157,6 +1157,7 @@ senateur_id,debut,fin,motif_debut,motif_fin
 21419P,2024-10-22,2025-11-05,Remplace,Reprise mandat d'ancien membre du Gvt
 21420G,2024-10-22,2025-01-23,Remplace,Reprise mandat d'ancien membre du Gvt
 21421H,2024-10-22,2026-09-30,Remplace,Non réélu
+21421H,2026-11-02,,Remplace,En Cours
 21422J,2024-10-22,2025-11-05,Remplace,Reprise mandat d'ancien membre du Gvt
 21423K,2024-10-22,2025-10-09,Remplace,Reprise mandat d'ancien membre du Gvt
 21424L,2024-10-22,2025-11-12,Remplace,Reprise mandat d'ancien membre du Gvt
