@@ -66,6 +66,9 @@ export function etapes(t: Qualification, grille: Grille, statut: Statut, motif: 
             ? `Choisir le droit dans ${sansCode} lignes`
             : 'Choisir le droit dans la liste'
       });
+    const codes = droits.map((d) => d.code).filter((c) => libelles.has(c));
+    for (const c of new Set(codes.filter((c, i) => codes.indexOf(c) !== i)))
+      pointsDroits.push({ ok: false, texte: `Retirer le droit en double « ${nom(c)} »` });
     if (!suivi && droits.length) {
       const n = droits.filter((d) => d.role === 'principal').length;
       pointsDroits.push({
@@ -90,7 +93,9 @@ export function etapes(t: Qualification, grille: Grille, statut: Statut, motif: 
     const manque = [
       !(s.url ?? '').startsWith('http') && 'le lien',
       !s.auteur && 'l’auteur',
-      !s.titre && 'le titre'
+      !s.titre && 'le titre',
+      // Même format que `controlerSources` (qualification.ts).
+      !/^\d{4}(-\d{2}(-\d{2})?)?$/.test(String(s.date ?? '')) && 'la date au format AAAA-MM-JJ'
     ].filter(Boolean);
     if (manque.length)
       pointsSources.push({ ok: false, texte: `Source « ${cle} » : ajouter ${manque.join(', ')}` });

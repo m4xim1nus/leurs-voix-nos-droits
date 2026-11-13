@@ -837,7 +837,8 @@
       <div class="avant" aria-live="polite">
         <strong>{statut === 'ecarte' ? 'Avant d’enregistrer' : 'Avant de valider'} :</strong>
         <ul>
-          {#each restants as p (p.texte)}
+          <!-- Clé par position : deux points peuvent avoir le même texte (deux droits à choisir). -->
+          {#each restants as p, i (i)}
             <li><a href="#{p.ancre}">☐ {p.texte}</a></li>
           {/each}
           {#if autres}

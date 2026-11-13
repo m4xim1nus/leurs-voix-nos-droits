@@ -60,6 +60,39 @@ describe('étapes de la fiche', () => {
     });
   });
 
+  it('signale le droit en double et la date de source mal formée', () => {
+    const t = vide();
+    const d = { role: 'secondaire' as const, sens: 'etend' as const, justification: '' };
+    t.droits = [
+      { ...d, code: 'libertes', role: 'principal', sources: ['a'] },
+      { ...d, code: 'libertes', sources: ['a'] }
+    ];
+    t.sources = { a: { auteur: 'CNCDH', titre: 'Avis', date: '12/03/2026', url: 'https://x' } };
+    const e = etapes(t, GRILLE, 'brouillon', '');
+    expect(e[1].points).toContainEqual({
+      ok: false,
+      texte: 'Retirer le droit en double « Libertés publiques »'
+    });
+    expect(e[2].points).toContainEqual({
+      ok: false,
+      texte: 'Source « a » : ajouter la date au format AAAA-MM-JJ'
+    });
+  });
+
+  it('deux droits encore vides donnent deux points de même texte (clé par position)', () => {
+    const t = vide();
+    const d = { role: 'secondaire' as const, sens: 'etend' as const, justification: '' };
+    t.droits = [
+      { ...d, code: '', sources: [] },
+      { ...d, code: '', sources: [] }
+    ];
+    const textes = etapes(t, GRILLE, 'brouillon', '')[2].points.map((p) => p.texte);
+    expect(textes).toEqual([
+      'Citer une source pour « droit à choisir »',
+      'Citer une source pour « droit à choisir »'
+    ]);
+  });
+
   it('fiche de suivi : pas d’étape de vote ; écarté : le motif seul', () => {
     expect(etapes(vide(), GRILLE, 'a-suivre', '')).toHaveLength(3);
     const e = etapes(vide(), GRILLE, 'ecarte', '');
