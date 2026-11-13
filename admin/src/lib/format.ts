@@ -11,7 +11,7 @@ export const LIBELLES_STATUT: Record<Statut, string> = {
 };
 
 export const LIBELLES_ROLE: Record<string, string> = {
-  decisif: 'décisif',
+  decisif: 'décisif : le vote qui compte',
   ensemble: 'ensemble (autre lecture)',
   motion: 'motion',
   article: 'article',
@@ -32,10 +32,34 @@ export const LIBELLES_VERSION_SENAT: Record<string, string> = {
 };
 
 export const LIBELLES_POUR: Record<string, string> = {
-  texte: 'voter pour = dans le sens du texte',
-  'contre-texte': 'voter pour = contre le texte',
-  'a-trancher': 'sens à trancher'
+  texte: 'voter « pour », c’est soutenir le texte',
+  'contre-texte': 'voter « pour », c’est s’opposer au texte',
+  'a-trancher': 'sens à trancher (vote non compté)'
 };
+
+/** Nature d'un scrutin, en clair (colonne `objet` du catalogue AN et Sénat). */
+export const LIBELLES_OBJET: Record<string, string> = {
+  ensemble: 'vote sur l’ensemble du texte',
+  article_unique: 'vote sur l’article unique',
+  suppression_article_unique: 'suppression de l’article unique',
+  article: 'vote sur un article',
+  amendement: 'amendement',
+  partie: 'vote sur une partie du texte',
+  motion_rejet: 'motion de rejet',
+  motion_renvoi: 'motion de renvoi en commission',
+  motion_censure: 'motion de censure',
+  motion_autre: 'motion',
+  question_prealable: 'question préalable',
+  resolution: 'résolution',
+  declaration: 'déclaration du Gouvernement',
+  autre: 'autre vote'
+};
+
+export const libelleObjet = (o: string | null | undefined): string =>
+  o ? (LIBELLES_OBJET[o] ?? o.replaceAll('_', ' ')) : '';
+
+/** Début d'un libellé de la grille, avant le deux-points : « Libertés publiques ». */
+export const libelleCourt = (l: string): string => l.split(' : ')[0].trim();
 
 export const LIBELLES_ETAPE: Record<string, string> = {
   AN1: '1re lecture',

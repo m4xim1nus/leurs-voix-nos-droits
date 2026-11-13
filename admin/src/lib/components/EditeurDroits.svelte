@@ -19,6 +19,7 @@
   // Droits touchés, étiquettes, sources et vigilance : les mêmes formulaires pour la qualification
   // d'un texte et pour une version propre au Sénat (règle 24). Avec `suivi`, ni rôle ni sens (règle 22).
   import type { DroitQualifie, Grille, Vigilance } from '$lib/types';
+  import { libelleCourt } from '$lib/format';
 
   let {
     droits = $bindable(),
@@ -27,7 +28,8 @@
     sources = $bindable(),
     grille,
     bibliotheque,
-    suivi = false
+    suivi = false,
+    ancre = ''
   }: {
     droits: DroitQualifie[];
     etiquettes: string[];
@@ -36,7 +38,13 @@
     grille: Grille;
     bibliotheque: { cle: string; texte: string; source: Source }[];
     suivi?: boolean;
+    /** Préfixe des ancres des titres (étapes de la fiche) ; vide : pas d'ancre. */
+    ancre?: string;
   } = $props();
+
+  // Une source se montre par son auteur et son année, plus parlants que sa clé.
+  const nomSource = (s: LigneSource) =>
+    s.auteur.trim() ? `${s.auteur.trim()}${s.date ? `, ${s.date.slice(0, 4)}` : ''}` : s.cle;
 
   function ajouterDroit() {
     droits.push({
@@ -85,42 +93,44 @@
   let choixBibliotheque = $state('');
 </script>
 
-<h3>Droits touchés</h3>
+<h3 id={ancre ? `${ancre}-droits` : undefined}>Droits touchés</h3>
 <p class="discret">
-  {#if !suivi}Un droit principal ; le sens se lit du point de vue des droits des personnes (règle
-    1).{/if} Une justification courte et au moins une source par droit.
+  {#if !suivi}Le <strong>droit principal</strong> est celui dont le texte parle surtout : un seul
+    par texte. Les autres sont secondaires. Pour chacun, dites si le texte
+    <strong>étend</strong> ou <strong>restreint</strong> ce droit pour les personnes (règle 1).{/if}
+  Chaque droit a une justification courte et au moins une source.
 </p>
 {#each droits as d, i (i)}
   <div class="droit">
     <div class="ligne">
       <select bind:value={d.code} aria-label="Droit">
-        <option value="" disabled>droit…</option>
+        <option value="" disabled>choisir un droit…</option>
         {#each grille.droits as g (g.code)}
-          <option value={g.code} title={g.libelle}>{g.code}</option>
+          <option value={g.code} title={g.libelle}>{libelleCourt(g.libelle)}</option>
         {/each}
       </select>
       {#if !suivi}
         <select bind:value={d.role} aria-label="Rôle">
-          <option value="principal">principal</option>
-          <option value="secondaire">secondaire</option>
+          <option value="principal">droit principal</option>
+          <option value="secondaire">droit secondaire</option>
         </select>
         <select bind:value={d.sens} aria-label="Sens" class={d.sens}>
-          <option value="restreint">restreint</option>
-          <option value="etend">étend</option>
+          <option value="restreint">le texte restreint ce droit</option>
+          <option value="etend">le texte étend ce droit</option>
         </select>
       {/if}
-      <span class="discret">sources :</span>
+      <span class="discret">appuyé sur :</span>
       {#each sources.filter((s) => s.cle) as s (s.cle)}
-        <label class="ligne petite">
+        <label class="ligne petite" title={s.cle}>
           <input
             type="checkbox"
             checked={d.sources.includes(s.cle)}
             onchange={() => basculer(d.sources, s.cle)}
           />
-          {s.cle}
+          {nomSource(s)}
         </label>
       {:else}
-        <span class="discret">(définir les sources plus bas)</span>
+        <span class="discret">(ajoutez d'abord une source, plus bas)</span>
       {/each}
       <button type="button" class="lien" onclick={() => droits.splice(i, 1)}>retirer</button>
     </div>
@@ -128,7 +138,7 @@
     ></textarea>
   </div>
 {/each}
-<button type="button" onclick={ajouterDroit}>+ droit</button>
+<button type="button" onclick={ajouterDroit}>+ ajouter un droit touché</button>
 
 {#if !suivi}
   <h3>Étiquettes</h3>
@@ -140,20 +150,22 @@
           checked={etiquettes.includes(e.code)}
           onchange={() => basculer(etiquettes, e.code)}
         />
-        {e.code}
+        {libelleCourt(e.libelle)}
       </label>
     {/each}
   </div>
 {/if}
 
-<h3>Sources</h3>
+<h3 id={ancre ? `${ancre}-sources` : undefined}>Sources</h3>
 <p class="discret">
   Avis de la CNCDH, du Défenseur des droits, de la CNIL, décision du Conseil constitutionnel,
-  analyse d'ONG… (règle 7). La clé sert à les citer.
+  analyse d'ONG… (règle 7). Chaque source a un auteur, un titre et un lien. La clé est un nom court
+  et unique qui sert à la citer.
 </p>
 <table class="sources">
   <thead>
-    <tr><th>Clé</th><th>Auteur</th><th>Titre</th><th>Date</th><th>URL</th><th></th></tr>
+    <tr><th>Clé (nom court)</th><th>Auteur</th><th>Titre</th><th>Date</th><th>Lien</th><th></th></tr
+    >
   </thead>
   <tbody>
     {#each sources as s, i (i)}
@@ -217,15 +229,15 @@
     <div class="droit">
       <textarea bind:value={v.texte} rows="2"></textarea>
       <div class="ligne">
-        <span class="discret">sources :</span>
+        <span class="discret">appuyé sur :</span>
         {#each sources.filter((s) => s.cle) as s (s.cle)}
-          <label class="ligne petite">
+          <label class="ligne petite" title={s.cle}>
             <input
               type="checkbox"
               checked={v.sources.includes(s.cle)}
               onchange={() => basculer(v.sources, s.cle)}
             />
-            {s.cle}
+            {nomSource(s)}
           </label>
         {/each}
         <button type="button" class="lien" onclick={() => vigilance.splice(i, 1)}>retirer</button>
