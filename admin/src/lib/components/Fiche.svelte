@@ -505,7 +505,7 @@
 
   {#if statut !== 'ecarte' && !aSuivre}
     <section class="carte">
-      <h2 id={ANCRES.scrutins}>Scrutins : le vote qui compte</h2>
+      <h2 id={ANCRES.scrutins}>Scrutins : les votes retenus</h2>
       <p class="discret">
         Retenez le <strong>vote décisif</strong> : le dernier vote de l'Assemblée sur l'ensemble du
         texte (règle 9). Vous pouvez y ajouter des <strong>amendements clés</strong>, un seul par

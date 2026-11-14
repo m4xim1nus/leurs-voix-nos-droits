@@ -104,7 +104,8 @@ export function etapes(t: Qualification, grille: Grille, statut: Statut, motif: 
 
   if (suivi) return [texte, droitsEtape, sourcesEtape];
 
-  // 4. Le vote qui compte
+  // 4. Les votes retenus. Un sens « à trancher » avertit sans bloquer (`valider`) : il reste dans
+  // les « À vérifier » de la fiche, pas dans cette liste.
   const scrutins = t.scrutins ?? [];
   const nDecisifs = scrutins.filter((s) => s.role === 'decisif').length;
   const censure = scrutins.some((s) => s.role === 'censure');
@@ -121,16 +122,10 @@ export function etapes(t: Qualification, grille: Grille, statut: Statut, motif: 
           texte:
             nDecisifs > 1
               ? `Garder un seul vote décisif (${nDecisifs} aujourd’hui)`
-              : 'Choisir le vote qui compte : le dernier vote de l’Assemblée sur l’ensemble du texte'
+              : 'Retenir le vote décisif : le vote final de l’Assemblée sur l’ensemble du texte'
         }
       ];
-  const n = scrutins.filter((s) => s.pour === 'a-trancher').length;
-  if (n)
-    pointsVote.push({
-      ok: false,
-      texte: `Fixer le sens de ${n > 1 ? `${n} votes retenus` : 'un vote retenu'} (sinon il ne compte pas)`
-    });
-  const vote: Etape = { ancre: ANCRES.scrutins, titre: 'Le vote qui compte', points: pointsVote };
+  const vote: Etape = { ancre: ANCRES.scrutins, titre: 'Les votes retenus', points: pointsVote };
 
   return [texte, droitsEtape, sourcesEtape, vote];
 }

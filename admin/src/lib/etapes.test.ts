@@ -29,7 +29,7 @@ describe('étapes de la fiche', () => {
       'Le texte',
       'Droits touchés',
       'Sources',
-      'Le vote qui compte'
+      'Les votes retenus'
     ]);
     expect(aFaire(e[0])).toBe(0);
     expect(e[1].points[0]).toEqual({ ok: false, texte: 'Ajouter au moins un droit touché' });
@@ -91,6 +91,23 @@ describe('étapes de la fiche', () => {
       'Citer une source pour « droit à choisir »',
       'Citer une source pour « droit à choisir »'
     ]);
+  });
+
+  it('un sens à trancher avertit sans entrer dans la liste (frontière de `valider`)', () => {
+    const t = vide();
+    t.scrutins = [
+      { id: 'V1', role: 'decisif', pour: 'texte', objet: '' },
+      { id: 'V2', role: 'amendement', pour: 'a-trancher', objet: '' }
+    ];
+    expect(etapes(t, GRILLE, 'brouillon', '')[3].points).toEqual([
+      {
+        ok: true,
+        texte: 'Retenir le vote décisif : le vote final de l’Assemblée sur l’ensemble du texte'
+      }
+    ]);
+    const v = valider(t, GRILLE);
+    expect(v.avertissements.some((a) => a.includes('sens à trancher'))).toBe(true);
+    expect(v.erreurs.some((e) => e.includes('trancher'))).toBe(false);
   });
 
   it('fiche de suivi : pas d’étape de vote ; écarté : le motif seul', () => {

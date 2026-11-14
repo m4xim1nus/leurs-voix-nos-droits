@@ -11,7 +11,7 @@ export const LIBELLES_STATUT: Record<Statut, string> = {
 };
 
 export const LIBELLES_ROLE: Record<string, string> = {
-  decisif: 'décisif : le vote qui compte',
+  decisif: 'décisif : vote final sur l’ensemble du texte',
   ensemble: 'ensemble (autre lecture)',
   motion: 'motion',
   article: 'article',

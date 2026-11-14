@@ -42,9 +42,15 @@
     ancre?: string;
   } = $props();
 
-  // Une source se montre par son auteur et son année, plus parlants que sa clé.
-  const nomSource = (s: LigneSource) =>
+  // Une source se montre par son auteur et son année, plus parlants que sa clé ; la clé s'y ajoute
+  // en discret quand deux sources du texte ont le même auteur et la même année.
+  const auteurAnnee = (s: LigneSource) =>
     s.auteur.trim() ? `${s.auteur.trim()}${s.date ? `, ${s.date.slice(0, 4)}` : ''}` : s.cle;
+  const ambigus = $derived.by(() => {
+    const vus = new Map<string, number>();
+    for (const s of sources) if (s.cle) vus.set(auteurAnnee(s), (vus.get(auteurAnnee(s)) ?? 0) + 1);
+    return new Set([...vus].filter(([, n]) => n > 1).map(([nom]) => nom));
+  });
 
   function ajouterDroit() {
     droits.push({
@@ -127,7 +133,8 @@
             checked={d.sources.includes(s.cle)}
             onchange={() => basculer(d.sources, s.cle)}
           />
-          {nomSource(s)}
+          {auteurAnnee(s)}{#if ambigus.has(auteurAnnee(s)) && auteurAnnee(s) !== s.cle}
+            <span class="discret mono">({s.cle})</span>{/if}
         </label>
       {:else}
         <span class="discret">(ajoutez d'abord une source, plus bas)</span>
@@ -237,7 +244,8 @@
               checked={v.sources.includes(s.cle)}
               onchange={() => basculer(v.sources, s.cle)}
             />
-            {nomSource(s)}
+            {auteurAnnee(s)}{#if ambigus.has(auteurAnnee(s)) && auteurAnnee(s) !== s.cle}
+              <span class="discret mono">({s.cle})</span>{/if}
           </label>
         {/each}
         <button type="button" class="lien" onclick={() => vigilance.splice(i, 1)}>retirer</button>
