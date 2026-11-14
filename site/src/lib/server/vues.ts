@@ -115,10 +115,11 @@ export function vueAccueil() {
       16: scoresGroupes(d, 16, 'global'),
       15: scoresGroupes(d, 15, 'global')
     },
-    droits: d.droits.map((dr) => ({
-      ...dr,
-      n_textes: d.textes.filter((t) => t.droits.some((x) => x.code === dr.code)).length
-    })),
+    droits: d.droits.map((dr) => {
+      const sens = d.textes.flatMap((t) => t.droits.filter((x) => x.code === dr.code));
+      const restreint = sens.filter((x) => x.sens === 'restreint').length;
+      return { ...dr, n_textes: sens.length, restreint, etend: sens.length - restreint };
+    }),
     derniers: d.textes.slice(0, 6).map(enListe),
     enCours: {
       total: d.enCoursTous.length,
