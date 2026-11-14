@@ -498,7 +498,14 @@ function validerSenat(
   }
 }
 
-/** Erreurs bloquantes et avertissements d'une qualification (docs/CONCEPTION.md, contrôles). */
+/**
+ * Erreurs bloquantes et avertissements d'une qualification (docs/CONCEPTION.md, contrôles).
+ *
+ * Ce qui bloque et ce qui avertit est une décision de méthode validée par Max, partagée avec
+ * `lvnd check` : par exemple, un sens `a-trancher` avertit sans bloquer, car le scrutin reste
+ * affiché sans compter. Ne déplacer un contrôle d'une liste à l'autre, ici comme dans ce qui
+ * guide la saisie, qu'après son accord, et mettre la doc à jour en même temps.
+ */
 export function valider(
   t: Qualification,
   grille: Grille,

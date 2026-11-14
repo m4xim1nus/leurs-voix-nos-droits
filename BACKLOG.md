@@ -23,6 +23,7 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] **À voir début décembre 2026.** Rejuger `mots_cles.yaml` sur un mois de dépense réelle des propositions : motifs qui n'ont presque jamais donné de texte qualifié (`egalite` 0/7, `eau` 0/6, `polynesie` 0/5, `retraites?` 1/13, `outre mer` 2/16…), chacun coûtant une proposition (claude, 2026-11-02)
 - [ ] Script versionné des captures du guide `/aide` (Playwright, pastilles numérotées) : celle d'« À traiter » a été refaite à la main deux fois le 02/11/2026 (claude, 2026-11-02)
 - [creuser] Résumé en mots simples des fiches de suivi et du vote du Sénat, hors périmètre du cycle Facile à lire (décision de Max du 02/11/2026) (claude, 2026-11-02)
+- [ ] Refaire les captures du guide `/aide` (droits, enregistrer, scrutins) après la fiche de qualification guidée, PR n° 1 ; à faire avec le script ci-dessus s'il existe d'ici là (revue de la PR n° 1, 2026-11-13)
 
 ## Cycles candidats
 
