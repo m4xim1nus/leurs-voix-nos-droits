@@ -11,7 +11,6 @@
     legislature,
     majuscule,
     mentionNavette,
-    minuscule,
     POSITION,
     ROLE,
     sensDuPour
@@ -70,6 +69,49 @@
       .replace(/règles? (\d{1,2})((?:(?:,| et) \d{1,2})*)/g, (tout: string) =>
         tout.replace(/\d{1,2}/g, (n) => `<a href="/methodologie#regle-${n}">${n}</a>`)
       );
+
+  // Le verdict en tête : le droit principal d'abord, puis les secondaires, dans l'ordre de la fiche.
+  const verdict = $derived([
+    ...t.droits.filter((d) => d.role === 'principal'),
+    ...t.droits.filter((d) => d.role !== 'principal')
+  ]);
+
+  /**
+   * Le résultat en une ligne : le décompte du vote décisif, puis où en est le texte. Le décompte
+   * n'est écrit que si voter pour, c'est soutenir le texte ; sinon, la formule de l'en-tête.
+   */
+  const resultat = $derived.by(() => {
+    const s: ScrutinRetenu | ScrutinSenat | undefined = t.seul
+      ? vs?.scrutins.find((x) => x.role === 'decisif')
+      : t.scrutins.find((x) => x.role === 'decisif');
+    const ou = t.seul ? 'au Sénat' : 'à l’Assemblée';
+    const vote = t.sans_vote
+      ? 'Adopté par le 49.3, sans vote final de l’Assemblée'
+      : s?.pour === 'texte'
+        ? s.sort === 'adopte'
+          ? `Adopté ${ou} par ${entier(s.decompte.pour)}\u00a0voix contre ${entier(s.decompte.contre)}`
+          : `Rejeté ${ou} par ${entier(s.decompte.contre)}\u00a0voix contre ${entier(s.decompte.pour)}`
+        : t.seul
+          ? `Vote du Sénat le ${date(t.date)}`
+          : `Vote décisif le ${date(t.date)}`;
+    const etat = t.loi ? 'Loi promulguée' : etatTexte(t.etat);
+    // « Rejeté à l'Assemblée par… · Rejeté » : l'état ne répète pas le vote.
+    if (!etat || (etat === 'Rejeté' && s?.sort === 'rejete' && s.pour === 'texte')) return vote;
+    return `${vote}\u00a0· ${etat}${t.loi ? '' : ` (état au ${date(data.dateEtat)})`}`;
+  });
+  // Ce que l'état n'a pas dit : l'inscription en séance, la dernière lecture conclue.
+  const suiteEtat = $derived(
+    t.loi || !t.etat
+      ? ''
+      : [
+          t.etat.seance_inscrite ? `Inscrit en séance le ${date(t.etat.seance_inscrite)}.` : '',
+          t.etat.date_derniere_lecture && t.etat.date_derniere_lecture > t.date
+            ? `Dernière lecture conclue le ${date(t.etat.date_derniere_lecture)}.`
+            : ''
+        ]
+          .filter(Boolean)
+          .join(' ')
+  );
 
   const pourquoi = (s: ScrutinRetenu) =>
     s.role === 'censure'
@@ -152,24 +194,51 @@
   {#if t.url_an}<a href={t.url_an} rel="external">Dossier à l’Assemblée</a>.{/if}
   {#if t.url_loi}<a href={t.url_loi} rel="external">Texte sur Légifrance</a>.{/if}
 </p>
-{#if t.etat && etatTexte(t.etat) && !t.loi}
-  <p class="etat">
-    État au {date(data.dateEtat)} : <strong>{minuscule(etatTexte(t.etat))}</strong>.
-    {#if t.etat.seance_inscrite}Inscrit en séance le {date(t.etat.seance_inscrite)}.{/if}
-    {#if t.etat.date_derniere_lecture && t.etat.date_derniere_lecture > t.date}Dernière lecture
-      conclue le {date(t.etat.date_derniere_lecture)}.{/if}
-  </p>
-{/if}
+<div class="verdict">
+  <h2 class="visuellement-cache">En bref</h2>
+  <ul class="bandes">
+    {#each verdict as d (d.code)}
+      <li class={[d.sens, d.role === 'principal' && 'principal']}>
+        <a href="#droit-{d.code}">
+          <span class="sens" aria-hidden="true"
+            >{d.sens === 'etend' ? '▲ Étend' : '▼ Restreint'}</span
+          >
+          <span class="nom">{court(d.code)}</span>
+          <span class="visuellement-cache"
+            >Le texte {phrase(d.code, d.sens)}, droit {d.role === 'principal'
+              ? 'principal'
+              : 'secondaire'}. Justification et sources plus bas.</span
+          >
+        </a>
+      </li>
+    {:else}
+      <li class="affiche principal">
+        <a href="#ce-que-fait">
+          <span class="sens">Vote affiché</span>
+          <span class="nom">non compté</span>
+        </a>
+      </li>
+    {/each}
+  </ul>
+  {#if verdict.length}
+    <p class="petit discret">
+      Chaque droit renvoie à sa justification et à ses sources, dans
+      <a href="#ce-que-fait">Ce que fait le texte</a>.
+    </p>
+  {/if}
+  <p class="resultat">{resultat}.</p>
+  {#if suiteEtat}<p class="petit discret">{suiteEtat}</p>{/if}
+  {#if t.resume_simple}
+    <div class="simple" lang="fr">
+      <p class="etiquette">En mots simples</p>
+      <p>{t.resume_simple.join(' ')}</p>
+    </div>
+  {/if}
+</div>
 {#if t.resume}<p class="chapo">{t.resume}</p>{/if}
-{#if t.resume_simple}
-  <details class="simple" lang="fr">
-    <summary>En mots simples</summary>
-    <p>{t.resume_simple.join(' ')}</p>
-  </details>
-{/if}
 
 <section>
-  <h2>Ce que fait le texte</h2>
+  <h2 id="ce-que-fait">Ce que fait le texte</h2>
   {#if enNavette && !t.sans_vote && t.principal}
     <p class="petit">Sur le texte voté le {date(t.date)}.</p>
   {/if}
@@ -180,7 +249,7 @@
     </p>
   {/if}
   {#each t.droits as d (d.code)}
-    <div class="droit">
+    <div class="droit" id="droit-{d.code}">
       <p class="petit discret">
         <a href="/droits/{d.code}">{court(d.code)}</a>, droit {d.role === 'principal'
           ? 'principal'
@@ -423,31 +492,106 @@
 </section>
 
 <style>
+  /* Le verdict en tête, dans la langue visuelle des cartes (TexteCarte) : une bande par droit. */
+  .verdict {
+    margin: 1.25rem 0 2rem;
+  }
+  .bandes {
+    list-style: none;
+    max-width: 42rem;
+    margin: 0 0 0.5rem;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .bandes li {
+    max-width: none;
+    margin: 0;
+  }
+  .bandes li.principal {
+    flex: 1 0 100%;
+  }
+  .bandes a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.2rem 0.6rem;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0.45rem 0.8rem;
+    border-radius: 8px;
+    background: var(--ardoise);
+    color: var(--papier);
+    text-decoration: none;
+  }
+  .etend a {
+    background: var(--favorable);
+  }
+  .restreint a {
+    background: var(--defavorable);
+  }
+  .bandes a:hover .nom {
+    text-decoration: underline;
+  }
+  .principal a {
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+  }
+  .bandes .sens {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .bandes .nom {
+    font-family: var(--titre);
+    font-size: 1rem;
+    font-weight: 800;
+    font-stretch: 75%;
+    line-height: 1.15;
+  }
+  .principal .sens {
+    font-size: 0.9rem;
+  }
+  .principal .nom {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  .resultat {
+    margin: 0.9rem 0 0.25rem;
+    font-weight: 650;
+  }
   .simple {
     max-width: 60ch;
-    margin: 1.5rem 0 2rem;
+    margin: 1rem 0 0;
     padding: 0.75rem 1.25rem;
     background: var(--plan);
     border-left: 4px solid var(--encre);
   }
-  .simple summary {
-    cursor: pointer;
+  .simple .etiquette {
+    margin: 0;
     font-family: var(--titre);
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 700;
   }
   .simple p {
     font-size: 1.2rem;
     line-height: 1.6;
-    margin: 0.6rem 0 0.25rem;
+    margin: 0.35rem 0 0.25rem;
+  }
+  /* Arrivée depuis une bande du verdict : le droit visé se repère. */
+  .droit,
+  #ce-que-fait {
+    scroll-margin-top: 1rem;
+  }
+  .droit:target {
+    border-left-color: var(--encre);
+    background: var(--plan);
   }
   .titre {
     font-size: clamp(2rem, 5.5vw, 3.4rem);
     max-width: 24ch;
     margin-bottom: 0.75rem;
-  }
-  .etat {
-    max-width: 60ch;
   }
   .mention {
     font-weight: 600;
