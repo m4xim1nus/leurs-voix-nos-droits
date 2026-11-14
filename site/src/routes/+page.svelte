@@ -1,7 +1,7 @@
 <script lang="ts">
   import Recherche from '$lib/components/Recherche.svelte';
   import Regle from '$lib/components/Regle.svelte';
-  import TexteLigne from '$lib/components/TexteLigne.svelte';
+  import TexteCarte from '$lib/components/TexteCarte.svelte';
   import { enLettres, pluriel } from '$lib/format';
   import { NOM } from '$lib/site';
 
@@ -83,9 +83,11 @@
 
 <section>
   <h2>Derniers textes qualifiés</h2>
-  {#each data.derniers as t (t.id)}
-    <TexteLigne texte={t} />
-  {/each}
+  <ul class="cartes">
+    {#each data.derniers as t (t.id)}
+      <li><TexteCarte texte={t} /></li>
+    {/each}
+  </ul>
   <p><a href="/textes">Tous les textes</a></p>
 </section>
 
@@ -144,5 +146,20 @@
   }
   .droits a:hover .court {
     text-decoration: underline;
+  }
+  .cartes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 28rem), 1fr));
+    gap: 0.75rem;
+  }
+  .cartes li {
+    display: flex;
+    max-width: none;
+  }
+  .cartes li > :global(a) {
+    flex: 1;
   }
 </style>

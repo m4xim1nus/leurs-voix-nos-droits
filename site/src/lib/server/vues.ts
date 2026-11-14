@@ -56,7 +56,7 @@ export type TexteListe = Omit<TexteCourt, 'principal'> & {
   simple?: string | null;
 };
 
-const enListe = (t: Texte): TexteListe => ({
+export const enListe = (t: Texte): TexteListe => ({
   ...court(t),
   principal: t.principal ? court(t).principal : null,
   simple: t.resume_simple?.[0] ?? null
@@ -119,7 +119,7 @@ export function vueAccueil() {
       ...dr,
       n_textes: d.textes.filter((t) => t.droits.some((x) => x.code === dr.code)).length
     })),
-    derniers: d.textes.slice(0, 6).map(court),
+    derniers: d.textes.slice(0, 6).map(enListe),
     enCours: {
       total: d.enCoursTous.length,
       inscrits: d.enCoursTous.filter((t) => t.echeance === 'inscrit').length
@@ -367,7 +367,7 @@ export function vueGroupe(slug: string) {
     }),
     textes: d.textes.flatMap((t) => {
       const s = d.scoresGroupesTextes.get(groupe.id)?.get(t.id);
-      return s ? [{ texte: court(t), score: s }] : [];
+      return s ? [{ texte: { ...court(t), simple: t.resume_simple?.[0] ?? null }, score: s }] : [];
     }),
     membres,
     unanimes: d.unanimes.flatMap((u) => {

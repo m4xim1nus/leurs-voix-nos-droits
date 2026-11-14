@@ -1,6 +1,6 @@
 <script lang="ts">
   import Regle from '$lib/components/Regle.svelte';
-  import TexteLigne from '$lib/components/TexteLigne.svelte';
+  import TexteCarte from '$lib/components/TexteCarte.svelte';
   import { court, scoreSousAngle, sousAngle } from '$lib/droits';
   import {
     date,
@@ -80,13 +80,15 @@
       <a href="/droits/{filtre}">{court(filtre)} : tous les groupes</a>
     </p>
   {/if}
-  <ul class="textes">
+  <ul class="cartes">
     {#each textes as t (t.texte.id)}
       <li>
-        <span class="chiffre score">{pourcent(t.score)}</span><TexteLigne
-          texte={t.texte}
-          droit={filtre}
-        />
+        <TexteCarte texte={t.texte} droit={filtre}>
+          {#snippet pied()}
+            {g.sigle} : <strong class="chiffre">{pourcent(t.score)}</strong> de votes favorables aux droits
+            sur ce texte
+          {/snippet}
+        </TexteCarte>
       </li>
     {/each}
   </ul>
@@ -165,18 +167,20 @@
     line-height: 0.9;
     margin: 1.5rem 0 0.25rem;
   }
-  .textes {
+  .cartes {
     list-style: none;
     padding: 0;
-  }
-  .textes li {
+    margin: 0;
     display: grid;
-    grid-template-columns: 4rem 1fr;
-    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 28rem), 1fr));
+    gap: 0.75rem;
+  }
+  .cartes li {
+    display: flex;
     max-width: none;
   }
-  .score {
-    font-size: 1.5rem;
+  .cartes li > :global(a) {
+    flex: 1;
   }
   .filtre {
     display: flex;

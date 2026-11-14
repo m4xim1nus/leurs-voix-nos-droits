@@ -1,14 +1,20 @@
 <!--
-  Un texte qualifié en carte, pour la page des textes : le droit et son sens d'abord, en bande de
+  Un texte qualifié en carte, dans les listes de textes : le droit et son sens d'abord, en bande de
   couleur ; puis le titre officiel, la phrase en mots simples dessous, la date du vote et où en est
-  le texte. Sous l'angle du droit `droit` quand la liste est filtrée sur un droit, comme TexteLigne.
+  le texte. Sous l'angle du droit `droit` quand la liste est filtrée sur un droit.
+  `pied` ajoute une ligne en bas de la carte (par exemple le vote d'un groupe sur ce texte).
 -->
 <script lang="ts">
   import { court, phrase, sousAngle } from '$lib/droits';
   import { date, etatEnListe, legislature } from '$lib/format';
   import type { TexteListe } from '$lib/server/vues';
+  import type { Snippet } from 'svelte';
 
-  let { texte, droit = null }: { texte: TexteListe; droit?: string | null } = $props();
+  let {
+    texte,
+    droit = null,
+    pied
+  }: { texte: TexteListe; droit?: string | null; pied?: Snippet } = $props();
   const vu = $derived(
     texte.principal ? sousAngle({ ...texte, principal: texte.principal }, droit) : null
   );
@@ -41,6 +47,7 @@
       >{quand}{#if etat}&nbsp;· <span class="etat">{etat}</span>{/if}</span
     >
     {#if aussi.length}<span class="aussi">Touche aussi : {aussi.join(', ')}</span>{/if}
+    {#if pied}<span class="pied">{@render pied()}</span>{/if}
   </span>
 </a>
 
@@ -113,6 +120,12 @@
     font-size: 0.85rem;
     line-height: 1.4;
     color: var(--ardoise);
+  }
+  .pied {
+    margin-top: 0.15rem;
+    padding-top: 0.45rem;
+    border-top: 1px solid var(--filet);
+    font-size: 0.9rem;
   }
   .etat {
     font-weight: 600;
