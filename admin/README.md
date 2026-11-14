@@ -68,7 +68,7 @@ Le compte Cloudflare doit être celui de la zone `technoperchoir.fr`.
    Sans ces deux valeurs, l'admin en ligne refuse toute requête : elle
    vérifie elle-même le jeton d'Access.
 
-5. Déploiement : `npm run deploy`.
+5. Premier déploiement : `npm run deploy`. Ensuite, voir « Déploiement ».
 
 6. LLM (facultatif, page « LLM » de l'admin) : un secret qui chiffre la clé d'API dans D1, à poser
    à l'identique dans le Worker et dans les secrets du dépôt GitHub (l'Action des propositions le
@@ -93,3 +93,42 @@ Le sync est incrémental : il lit D1, puis n'écrit que les lignes
 ajoutées, modifiées ou disparues (quelques centaines par semaine). Un sync
 `--complet` écrit environ 80 000 lignes, index compris, près de la limite
 gratuite de D1 (100 000 par jour) : à réserver à une reconstruction.
+
+## Déploiement
+
+L'admin se déploie à la main, jamais depuis une Action : aucun secret de
+déploiement n'est dans GitHub. Le titulaire du compte Cloudflare déploie
+après `npx wrangler login`. Un co-mainteneur le fait avec un jeton d'API
+personnel, sans accès au compte :
+
+1. Le titulaire crée le jeton (Cloudflare, My Profile, API Tokens, Create
+   Custom Token), au nom de la personne, avec une expiration :
+   - Account (le seul compte de `technoperchoir.fr`) : « Workers Scripts :
+     Edit » et « D1 : Edit » ;
+   - Zone `technoperchoir.fr` : « Workers Routes : Edit » (domaine du
+     Worker).
+
+   Il le transmet par un canal chiffré, jamais par courriel ni dans le
+   dépôt, et le révoque au départ de la personne.
+2. Le co-mainteneur le pose dans `admin/.env`, ignoré par git :
+   ```bash
+   CLOUDFLARE_API_TOKEN=…
+   CLOUDFLARE_ACCOUNT_ID=…   # l'identifiant du compte, donné avec le jeton
+   ```
+
+Déployer, depuis `main` à jour, sans modification locale, après la fusion
+de la PR :
+
+```bash
+git switch main && git pull && git status   # rien à commiter
+cd admin && npm ci
+set -a && . ./.env && set +a                 # inutile après wrangler login
+npm run db:migrer:distant                    # migrations d'abord : le code peut lire une table neuve
+npm run deploy
+```
+
+Les secrets du Worker (`GITHUB_TOKEN`, `LLM_CHIFFREMENT`) ne sont pas
+nécessaires : `wrangler deploy` garde ceux qui sont en place. Le jeton
+donne la main sur tous les Workers et toutes les bases D1 du compte :
+c'est la limite des jetons Cloudflare, qui ne se restreignent pas à un
+seul Worker.

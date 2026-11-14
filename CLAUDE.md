@@ -141,9 +141,34 @@ livré.
 3. Remplacer le contenu de `ROADMAP.md` par le cycle suivant, choisi par
    Max parmi les cycles candidats, détaillé depuis ses items `[→Nom]`.
 
-On travaille sur `main`. En début de session : `git pull`, car l'admin
-commite sur `main` à chaque publication. On commite en nommant les
+En début de session : `git pull` sur `main`, car l'admin y commite à
+chaque publication et l'Action des données chaque jour. On travaille sur
+une branche (section « Contributions »). On commite en nommant les
 fichiers (`git add <chemins>`, jamais `git add -A`).
+
+## Contributions
+
+Le dépôt a deux mainteneurs, à égalité : chacun peut fusionner une PR.
+
+- **Circuit** : une branche du dépôt (pas de fork), une PR vers `main`.
+  Hors urgence, l'auteur des derniers changements demande la revue de
+  l'autre, et fusionne après son approbation, tests au vert. En urgence,
+  ou si l'autre n'est pas disponible, on fusionne seul en le disant dans
+  la PR ; l'autre relit après coup.
+- **Directs sur `main`**, sans PR : les commits de données de l'Action et
+  les publications de l'admin.
+- **Suivi** : une PR hors cycle est bienvenue, sans ouvrir de cycle.
+  `ROADMAP.md` et `CHANGELOG.md` suivent les cycles, que Max ouvre et
+  ferme ; une PR n'y touche pas. Une idée en passant va en fin de « À
+  trier » dans `BACKLOG.md`.
+- **Choix sensibles** (grille, règles de calcul, sens d'un scrutin,
+  frontière erreur / avertissement des contrôles) : une question dans la
+  PR, pas un changement. Max tranche (« Règles dures »).
+- **Admin** : une PR fusionnée qui touche `admin/` n'est en ligne qu'après
+  un déploiement à la main, par la personne qui fusionne
+  (`admin/README.md`, « Déploiement »).
+- Un texte de PR ou de revue rédigé par Claude le dit en première ligne
+  (« rédigée par Claude pour …, relue par … »).
 
 ## Commandes
 
