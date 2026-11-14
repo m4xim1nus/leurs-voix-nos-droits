@@ -7,8 +7,16 @@
 
   let { data, children } = $props();
 
-  // Cinq rubriques ; celles qui regroupent deux pages ont des sous-onglets, sans menu déroulant.
-  const MENU = [
+  // Cinq rubriques ; celles qui regroupent plusieurs pages ont des sous-onglets, sans menu déroulant.
+  // Assemblée et Sénat ont la même organisation (groupes, élu·es, comparer), chacune son calcul.
+  // `aussi` : autres adresses rangées sous l'onglet ; `exact` : l'onglet ne couvre que son adresse.
+  interface Onglet {
+    href: string;
+    libelle: string;
+    aussi?: string[];
+    exact?: boolean;
+  }
+  const MENU: { href: string; libelle: string; sous: Onglet[] }[] = [
     { href: '/droits', libelle: 'Droits', sous: [] },
     {
       href: '/textes',
@@ -20,9 +28,10 @@
     },
     {
       href: '/groupes',
-      libelle: 'Groupes',
+      libelle: 'Assemblée',
       sous: [
         { href: '/groupes', libelle: 'Groupes' },
+        { href: '/circonscriptions', libelle: 'Député·es', aussi: ['/deputes'] },
         { href: '/comparer', libelle: 'Comparer' }
       ]
     },
@@ -30,7 +39,8 @@
       href: '/senat',
       libelle: 'Sénat',
       sous: [
-        { href: '/senat', libelle: 'Groupes et sénateur·ices' },
+        { href: '/senat', libelle: 'Groupes', exact: true },
+        { href: '/senat/senateurs', libelle: 'Sénateur·ices', aussi: ['/senat'] },
         { href: '/senat/comparer', libelle: 'Comparer' }
       ]
     },
@@ -45,9 +55,23 @@
   ];
   const dans = (href: string) =>
     page.url.pathname === href || page.url.pathname.startsWith(`${href}/`);
+  // Longueur de l'adresse la plus précise d'un onglet qui couvre la page (0 : aucune).
+  const portee = (o: Onglet) =>
+    o.exact
+      ? page.url.pathname === o.href
+        ? o.href.length
+        : 0
+      : Math.max(0, ...[o.href, ...(o.aussi ?? [])].filter(dans).map((h) => h.length));
   const rubrique = $derived(
-    MENU.find((m) => dans(m.href) || m.sous.some((s) => dans(s.href))) ?? null
+    MENU.find((m) => dans(m.href) || m.sous.some((s) => portee(s) > 0)) ?? null
   );
+  // L'onglet courant : celui qui couvre la page au plus près (une fiche sénateur·ice va sous
+  // « Sénateur·ices », la page de comparaison sous « Comparer »).
+  const onglet = $derived.by(() => {
+    if (!rubrique) return null;
+    const scores = rubrique.sous.map((s) => [s, portee(s)] as const).filter(([, n]) => n > 0);
+    return scores.sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
+  });
 </script>
 
 <a class="evitement" href="#contenu">Aller au contenu</a>
@@ -75,7 +99,7 @@
     <nav class="sous" aria-label={rubrique.libelle}>
       <ul>
         {#each rubrique.sous as s (s.href)}
-          <li><a href={s.href} aria-current={dans(s.href) ? 'page' : undefined}>{s.libelle}</a></li>
+          <li><a href={s.href} aria-current={s === onglet ? 'page' : undefined}>{s.libelle}</a></li>
         {/each}
       </ul>
     </nav>
