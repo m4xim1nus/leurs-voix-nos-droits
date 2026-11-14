@@ -115,7 +115,7 @@
 </p>
 
 <form class="recherche" role="search" onsubmit={(e) => e.preventDefault()}>
-  <label for="recherche-textes">Quelle loi cherchez-vous ?</label>
+  <label for="recherche-textes">Quelle loi cherchez-vous ?</label>
   <div class="case">
     <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"
       ><circle cx="10.5" cy="10.5" r="6.5" /><path d="M15.5 15.5 21 21" /></svg
@@ -126,7 +126,7 @@
       bind:value={saisie}
       autocomplete="off"
       spellcheck="false"
-      placeholder="Un sujet, un mot du titre : drones, logement, pesticides…"
+      placeholder="Drones, logement, pesticides…"
     />
   </div>
 </form>
@@ -215,7 +215,7 @@
 {#if data.ecartes.length}
   <h2>Textes examinés et écartés</h2>
   <p>
-    Ces textes ont été examinés, mais pas qualifiés : textes organisationnels, résolutions,
+    Ces textes ont été examinés, mais pas qualifiés : textes organisationnels, résolutions,
     conventions internationales, vote décisif sans opposition, ou droit hors de la grille. Le motif
     est donné pour chacun.
   </p>

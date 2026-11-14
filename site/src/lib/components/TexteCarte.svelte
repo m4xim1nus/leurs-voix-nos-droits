@@ -1,6 +1,6 @@
 <!--
   Un texte qualifié en carte, pour la page des textes : le droit et son sens d'abord, en bande de
-  couleur ; puis la phrase en mots simples (le titre officiel dessous), la date du vote et où en est
+  couleur ; puis le titre officiel, la phrase en mots simples dessous, la date du vote et où en est
   le texte. Sous l'angle du droit `droit` quand la liste est filtrée sur un droit, comme TexteLigne.
 -->
 <script lang="ts">
@@ -35,12 +35,12 @@
     {/if}
   </span>
   <span class="corps">
-    <span class="titre">{texte.simple ?? texte.titre}</span>
-    {#if texte.simple}<span class="officiel">{texte.titre}</span>{/if}
+    <span class="titre">{texte.titre}</span>
+    {#if texte.simple}<span class="simple">{texte.simple}</span>{/if}
     <span class="meta"
       >{quand}{#if etat}&nbsp;· <span class="etat">{etat}</span>{/if}</span
     >
-    {#if aussi.length}<span class="aussi">Touche aussi : {aussi.join(', ')}</span>{/if}
+    {#if aussi.length}<span class="aussi">Touche aussi : {aussi.join(', ')}</span>{/if}
   </span>
 </a>
 
@@ -105,7 +105,9 @@
   .carte:hover .titre {
     text-decoration: underline;
   }
-  .officiel,
+  .simple {
+    line-height: 1.4;
+  }
   .meta,
   .aussi {
     font-size: 0.85rem;
