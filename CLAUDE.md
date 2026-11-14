@@ -164,9 +164,8 @@ Le dépôt a deux mainteneurs, à égalité : chacun peut fusionner une PR.
 - **Choix sensibles** (grille, règles de calcul, sens d'un scrutin,
   frontière erreur / avertissement des contrôles) : une question dans la
   PR, pas un changement. Max tranche (« Règles dures »).
-- **Admin** : une PR fusionnée qui touche `admin/` n'est en ligne qu'après
-  un déploiement à la main, par la personne qui fusionne
-  (`admin/README.md`, « Déploiement »).
+- **Admin** : une PR fusionnée qui touche `admin/` part en ligne seule,
+  une fois les tests passés (`admin/README.md`, « Déploiement »).
 - Un texte de PR ou de revue rédigé par Claude le dit en première ligne
   (« rédigée par Claude pour …, relue par … »).
 

@@ -1,5 +1,7 @@
 # Tests à chaque push et PR (repris de quifaitlaloi), puis build complet du site public
-# (build.sh, comme Cloudflare Pages). L'admin se déploie à la main (admin/README.md).
+# (build.sh, comme Cloudflare Pages). Si tout passe sur main, l'admin se redéploie quand admin/ a
+# changé, ou à la demande (« Run workflow », case « Déployer l'admin ») : migrations D1, puis
+# `wrangler deploy`, avec le secret CLOUDFLARE_DEPLOY_TOKEN (admin/README.md, « Déploiement »).
 
 name: Tests
 
@@ -9,6 +11,11 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      admin:
+        description: Déployer l'admin même si admin/ n'a pas changé
+        type: boolean
+        default: false
 
 jobs:
   tests:
@@ -59,3 +66,59 @@ jobs:
 
       - name: Build du site (comme Cloudflare Pages)
         run: bash build.sh
+
+  admin:
+    name: Déploiement de l'admin
+    needs: tests
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: admin-deploiement
+      cancel-in-progress: false
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_DEPLOY_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      # Push : seulement si admin/ (ou ce qui le construit) a changé depuis le push précédent. Les
+      # commits de données et les publications de l'admin ne la redéploient donc pas.
+      - name: L'admin a-t-elle changé ?
+        id: changement
+        env:
+          AVANT: ${{ github.event.before }}
+          FORCER: ${{ inputs.admin }}
+          EVENEMENT: ${{ github.event_name }}
+        run: |
+          if [ "$EVENEMENT" = "workflow_dispatch" ]; then
+            deployer="$FORCER"
+          elif ! git cat-file -e "${AVANT:-0}^{commit}" 2>/dev/null \
+               || ! git diff --quiet "$AVANT" HEAD -- admin/ .node-version .github/workflows/tests.yml; then
+            deployer=true
+          fi
+          if [ "$deployer" != "true" ]; then
+            echo "Rien de neuf dans admin/ : pas de déploiement."
+          elif [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::warning::Secret CLOUDFLARE_DEPLOY_TOKEN absent : admin non déployée."
+          else
+            echo "deployer=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-node@v5
+        if: steps.changement.outputs.deployer == 'true'
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: admin/package-lock.json
+
+      # Migrations d'abord : le nouveau code peut lire une table neuve. Puis le Worker.
+      - name: Migrations D1 et déploiement
+        if: steps.changement.outputs.deployer == 'true'
+        working-directory: admin
+        run: |
+          npm ci --no-audit --no-fund
+          npm run db:migrer:distant
+          npm run deploy

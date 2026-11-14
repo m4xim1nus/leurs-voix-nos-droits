@@ -96,39 +96,35 @@ gratuite de D1 (100 000 par jour) : à réserver à une reconstruction.
 
 ## Déploiement
 
-L'admin se déploie à la main, jamais depuis une Action : aucun secret de
-déploiement n'est dans GitHub. Le titulaire du compte Cloudflare déploie
-après `npx wrangler login`. Un co-mainteneur le fait avec un jeton d'API
-personnel, sans accès au compte :
+Après la mise en service, l'admin se redéploie seule. Sur `main`, l'Action
+« Tests » (`.github/workflows/tests.yml`, job « Déploiement de l'admin »)
+applique les migrations D1, puis lance `wrangler deploy`, quand `admin/`
+a changé et que tous les tests passent. Une PR fusionnée qui touche
+`admin/` est donc en ligne quelques minutes après. Les commits de données
+et les publications de l'admin ne la redéploient pas. Pour redéployer
+sans changement : Actions, « Tests », « Run workflow », case « Déployer
+l'admin ».
 
-1. Le titulaire crée le jeton (Cloudflare, My Profile, API Tokens, Create
-   Custom Token), au nom de la personne, avec une expiration :
-   - Account (le seul compte de `technoperchoir.fr`) : « Workers Scripts :
-     Edit » et « D1 : Edit » ;
-   - Zone `technoperchoir.fr` : « Workers Routes : Edit » (domaine du
-     Worker).
+Le jeton est le secret `CLOUDFLARE_DEPLOY_TOKEN` du dépôt, dédié au
+déploiement (`CLOUDFLARE_API_TOKEN` reste celui du sync de D1). Sans lui,
+le job est sauté avec un avertissement. Le titulaire du compte le crée
+(Cloudflare, My Profile, API Tokens, Create Custom Token), avec une
+expiration :
 
-   Il le transmet par un canal chiffré, jamais par courriel ni dans le
-   dépôt, et le révoque au départ de la personne.
-2. Le co-mainteneur le pose dans `admin/.env`, ignoré par git :
-   ```bash
-   CLOUDFLARE_API_TOKEN=…
-   CLOUDFLARE_ACCOUNT_ID=…   # l'identifiant du compte, donné avec le jeton
-   ```
+- Account (le seul compte de `technoperchoir.fr`) : « Workers Scripts :
+  Edit » et « D1 : Edit » ;
+- Zone `technoperchoir.fr` : « Workers Routes : Edit » (domaine du
+  Worker).
 
-Déployer, depuis `main` à jour, sans modification locale, après la fusion
-de la PR :
+Puis `gh secret set CLOUDFLARE_DEPLOY_TOKEN`. Le jeton donne la main sur
+tous les Workers et toutes les bases D1 du compte, pas sur le reste (DNS,
+Pages, Access). Un jeton Cloudflare ne se restreint pas à un seul Worker.
+Comme tout secret du dépôt, il est lisible par qui peut pousser sur le
+dépôt (un workflow suffit) : le droit d'écriture se donne en confiance.
 
-```bash
-git switch main && git pull && git status   # rien à commiter
-cd admin && npm ci
-set -a && . ./.env && set +a                 # inutile après wrangler login
-npm run db:migrer:distant                    # migrations d'abord : le code peut lire une table neuve
-npm run deploy
-```
+Les secrets du Worker (`GITHUB_TOKEN`, `LLM_CHIFFREMENT`) ne passent pas
+par l'Action : `wrangler deploy` garde ceux qui sont en place.
 
-Les secrets du Worker (`GITHUB_TOKEN`, `LLM_CHIFFREMENT`) ne sont pas
-nécessaires : `wrangler deploy` garde ceux qui sont en place. Le jeton
-donne la main sur tous les Workers et toutes les bases D1 du compte :
-c'est la limite des jetons Cloudflare, qui ne se restreignent pas à un
-seul Worker.
+À la main, depuis `main` à jour et un poste connecté au compte
+(`npx wrangler login`) : `npm run db:migrer:distant`, puis
+`npm run deploy`.
