@@ -24,6 +24,11 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] Script versionné des captures du guide `/aide` (Playwright, pastilles numérotées) : celle d'« À traiter » a été refaite à la main deux fois le 02/11/2026 (claude, 2026-11-02)
 - [creuser] Résumé en mots simples des fiches de suivi et du vote du Sénat, hors périmètre du cycle Facile à lire (décision de Max du 02/11/2026) (claude, 2026-11-02)
 - [ ] Refaire les captures du guide `/aide` (droits, enregistrer, scrutins) après la fiche de qualification guidée, PR n° 1 ; à faire avec le script ci-dessus s'il existe d'ici là (revue de la PR n° 1, 2026-11-13)
+- [ ] Fiche : des boutons d'action (« Enregistrer le brouillon », « Envoyer à relire », « Valider », « Écarter ») à la place de la liste des statuts, et une ligne qui rappelle que « validé » n'est pas encore « publié » (gh#1, 2026-11-14)
+- [ ] Fiche : clé de source proposée d'office depuis l'auteur et la date (`anses-2026-03`), et ajout d'une source depuis la ligne du droit qui la cite (gh#1, 2026-11-14)
+- [ ] Fiche : aperçu de ce que le site affichera pour ce texte (sens, droit, source), à côté du formulaire (gh#1, 2026-11-14)
+- [ ] « À traiter » : une phrase et une action principale par carte, sections vides masquées, texte d'introduction replié (gh#1, 2026-11-14)
+- [ ] « Textes » : vues toutes prêtes (à qualifier, à relire, validés non publiés), les autres filtres repliés (gh#1, 2026-11-14)
 
 ## Cycles candidats
 

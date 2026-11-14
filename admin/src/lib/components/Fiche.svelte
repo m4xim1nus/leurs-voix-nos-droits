@@ -9,6 +9,7 @@
     date,
     dateHeure,
     legislature,
+    libelleObjet,
     LIBELLES_ETAPE,
     LIBELLES_POUR,
     LIBELLES_ROLE,
@@ -27,6 +28,7 @@
     validerSuivi,
     VERSIONS_SENAT
   } from '$lib/qualification';
+  import { aFaire, ANCRES, etapes } from '$lib/etapes';
   import { favorable, qualifSenat, scoresGroupes, scrutinsComptes } from '$lib/scores';
   import type {
     BlocSenat,
@@ -144,6 +146,15 @@
       v.erreurs.push(`identifiant ${complet.id} déjà pris par un autre texte`);
     return v;
   });
+
+  // Étapes et liste « Avant de valider » : un guide en clair ; les contrôles restent la référence.
+  const listeEtapes = $derived(etapes(complet, data.grille, statut, motif));
+  const restants = $derived(
+    listeEtapes.flatMap((e) => e.points.filter((p) => !p.ok).map((p) => ({ ...p, ancre: e.ancre })))
+  );
+  // Erreurs que la liste ne couvre pas (contrôles plus fins) : on les signale, sans les cacher.
+  const autres = $derived(restants.length ? 0 : controle.erreurs.length);
+  let detail = $state(false);
 
   // Toute modification marque la fiche comme non enregistrée.
   let premier = true;
@@ -395,9 +406,37 @@
   <input type="hidden" name="doc" value={JSON.stringify(complet)} />
   <input type="hidden" name="attendu" value={attendu} />
 
+  <nav class="carte etapes" aria-label="Étapes de la qualification">
+    <ol>
+      {#each listeEtapes as e, i (e.ancre)}
+        {@const n = aFaire(e)}
+        <li class:fait={n === 0}>
+          <a href="#{e.ancre}">
+            <span class="numero">{n === 0 ? '✓' : i + 1}</span>
+            <span>
+              <strong>{e.titre}</strong>
+              <span class="discret"
+                >{n === 0 ? 'fait' : n > 1 ? `${n} points à faire` : '1 point à faire'}</span
+              >
+            </span>
+          </a>
+        </li>
+      {/each}
+      <li class:fait={controle.erreurs.length === 0}>
+        <a href="#etape-valider">
+          <span class="numero">{controle.erreurs.length === 0 ? '✓' : listeEtapes.length + 1}</span>
+          <span>
+            <strong>{statut === 'ecarte' ? 'Enregistrer' : 'Valider'}</strong>
+            <span class="discret">{controle.erreurs.length === 0 ? 'prêt' : 'pas encore'}</span>
+          </span>
+        </a>
+      </li>
+    </ol>
+  </nav>
+
   {#if statut !== 'ecarte'}
     <section class="carte">
-      <h2>{aSuivre ? 'Fiche de suivi' : 'Qualification'}</h2>
+      <h2 id={ANCRES.texte}>{aSuivre ? 'Fiche de suivi' : 'Qualification'}</h2>
       {#if aSuivre}
         <p class="discret">
           Avant le vote : les droits touchés et leurs sources publiques, sans sens ni score, et
@@ -447,6 +486,7 @@
         grille={data.grille}
         bibliotheque={data.bibliotheque}
         suivi={aSuivre}
+        ancre="etape"
       />
 
       {#if !aSuivre}
@@ -465,12 +505,13 @@
 
   {#if statut !== 'ecarte' && !aSuivre}
     <section class="carte">
-      <h2>Scrutins</h2>
+      <h2 id={ANCRES.scrutins}>Scrutins : les votes retenus</h2>
       <p class="discret">
-        Comptés : le décisif (dernier vote de l'AN sur l'ensemble, règle 9) et les amendements clés
-        au sens fixé (règle 11), un seul par article et par lecture. Motions et autres lectures :
-        affichées, pas comptées. En vert, les groupes dont la position est favorable aux droits sur
-        ce scrutin.
+        Retenez le <strong>vote décisif</strong> : le dernier vote de l'Assemblée sur l'ensemble du
+        texte (règle 9). Vous pouvez y ajouter des <strong>amendements clés</strong>, un seul par
+        article et par lecture, dont vous fixez le sens (règle 11). Les motions et les autres
+        lectures s'affichent sur le site sans compter dans le score. En vert : les groupes dont le
+        vote va dans le sens des droits.
       </p>
       {#if !doc.scrutins.some((s) => s.role === 'decisif') && t.decisif_propose && parId.has(t.decisif_propose)}
         <p>
@@ -547,7 +588,9 @@
                   >{/if}
               </td>
               <td>
-                <span class="discret">{s.objet}{s.type_vote === 'SPS' ? ', solennel' : ''} :</span>
+                <span class="discret"
+                  >{libelleObjet(s.objet)}{s.type_vote === 'SPS' ? ', vote solennel' : ''} :</span
+                >
                 {s.titre}
                 {#if s.amendement_division}
                   <div class="discret">
@@ -679,7 +722,7 @@
                   <div class="discret">{s.lecture ?? ''}</div>
                 </td>
                 <td>
-                  <span class="discret">{s.objet} :</span>
+                  <span class="discret">{libelleObjet(s.objet)} :</span>
                   {s.titre}
                   {#if s.note}<div class="discret">{s.note}</div>{/if}
                   <Positions positions={s.positions} groupes={groupesSenatPos} favorable={null} />
@@ -789,10 +832,49 @@
     </div>
   </section>
 
-  <section class="carte enregistrer">
+  <section class="carte enregistrer" id="etape-valider">
+    {#if restants.length || autres}
+      <div class="avant" aria-live="polite">
+        <strong>{statut === 'ecarte' ? 'Avant d’enregistrer' : 'Avant de valider'} :</strong>
+        <ul>
+          <!-- Clé par position : deux points peuvent avoir le même texte (deux droits à choisir). -->
+          {#each restants as p, i (i)}
+            <li><a href="#{p.ancre}">☐ {p.texte}</a></li>
+          {/each}
+          {#if autres}
+            <li>
+              <button type="button" class="lien" onclick={() => (detail = true)}
+                >☐ {autres > 1 ? `${autres} autres points à corriger` : '1 autre point à corriger'} :
+                voir le détail</button
+              >
+            </li>
+          {/if}
+        </ul>
+      </div>
+    {:else if controle.erreurs.length === 0 && statut !== 'ecarte'}
+      <p class="pret">✓ Tout est en ordre : la fiche peut passer à « validé ».</p>
+    {/if}
+    {#if controle.erreurs.length}
+      <details bind:open={detail}>
+        <summary class="discret">
+          Détail technique des contrôles ({controle.erreurs.length} bloquant{controle.erreurs
+            .length > 1
+            ? 's'
+            : ''})
+        </summary>
+        <ul class="messages">
+          {#each controle.erreurs as e (e)}<li class="erreur">{e}</li>{/each}
+        </ul>
+      </details>
+    {/if}
+    {#if controle.avertissements.length}
+      <ul class="messages">
+        {#each controle.avertissements as a (a)}<li class="avertissement">
+            À vérifier : {a}
+          </li>{/each}
+      </ul>
+    {/if}
     <ul class="messages" aria-live="polite">
-      {#each controle.erreurs as e (e)}<li class="erreur">{e}</li>{/each}
-      {#each controle.avertissements as a (a)}<li class="avertissement">{a}</li>{/each}
       {#if form?.erreurs}
         {#each form.erreurs as e (e)}<li class="erreur">Refusé : {e}</li>{/each}
       {:else if form?.ok && !modifie}
@@ -807,7 +889,7 @@
         </select>
       </label>
       {#if statut === 'ecarte'}
-        <label class="champ grand"
+        <label class="champ grand" id={ANCRES.ecart}
           >Motif (public : pourquoi ce texte n'est pas qualifié)
           <input type="text" name="motif_ecart" bind:value={motif} />
         </label>
@@ -820,7 +902,7 @@
         class="principal"
         disabled={enCours || ((statut === 'valide' || aSuivre) && controle.erreurs.length > 0)}
         title={(statut === 'valide' || aSuivre) && controle.erreurs.length
-          ? 'Corriger les erreurs pour valider'
+          ? 'Terminez la liste « Avant de valider » pour valider'
           : ''}
       >
         {enCours ? 'Enregistrement…' : 'Enregistrer'}
@@ -917,6 +999,58 @@
   }
   tr.retenu {
     background: var(--surface-2);
+  }
+  .etapes ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .etapes a {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+  .etapes a > span:last-child {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  .etapes .numero {
+    display: inline-grid;
+    place-items: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    border: 2px solid var(--bord);
+    font-weight: 600;
+  }
+  .etapes li.fait .numero {
+    background: var(--etend);
+    border-color: var(--etend);
+    color: var(--surface);
+  }
+  .avant ul {
+    list-style: none;
+    margin: 0.3rem 0 0.5rem;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 1.2rem;
+  }
+  .avant a {
+    color: var(--alerte);
+  }
+  .pret {
+    color: var(--etend);
+    margin: 0 0 0.5rem;
+  }
+  :target {
+    scroll-margin-top: 1rem;
   }
   .enregistrer {
     position: sticky;
