@@ -1,7 +1,8 @@
 <script lang="ts">
   import Regle from '$lib/components/Regle.svelte';
+  import VoteCarte, { type TexteVote } from '$lib/components/VoteCarte.svelte';
   import { courrielProchainVote } from '$lib/courriel';
-  import { court, phrase, scoreSousAngle, sousAngle } from '$lib/droits';
+  import { court, scoreSousAngle, sousAngle } from '$lib/droits';
   import {
     circonscription,
     date,
@@ -9,33 +10,21 @@
     etatTexte,
     inscription,
     legislature,
-    mentionNavette,
     minuscule,
+    normaliser,
     pluriel,
     POSITION,
     POSITION_GROUPE,
     pourcent,
     voteDeLecture
   } from '$lib/format';
-  import type { VoteDepute } from '$lib/server/vues';
   import { NOM, URL_SITE } from '$lib/site';
-  import type { EtatTexte } from '$lib/types';
+  import { bilanTexte } from '$lib/votes-depute';
 
   let { data } = $props();
   const d = $derived(data.depute);
   const nom = $derived(`${d.prenom} ${d.nom}`);
   const elle = $derived(d.civ === 'Mme');
-
-  /** `inverse` : texte vu sous l'angle d'un droit de sens contraire à son droit principal. */
-  function lecture(v: VoteDepute, inverse: boolean): { texte: string; classe: string } {
-    const s = v.scrutin;
-    if (!s.compte) return { texte: 'non compté', classe: 'discret' };
-    if (v.position === 'pour' || v.position === 'contre')
-      return (v.position === s.favorable) !== inverse
-        ? { texte: 'favorable aux droits', classe: 'favorable' }
-        : { texte: 'défavorable aux droits', classe: 'defavorable' };
-    return { texte: 'hors calcul', classe: 'discret' };
-  }
 
   const mailto = $derived(
     d.courriel
@@ -64,15 +53,87 @@
     return `mailto:${d.courriel}?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corps)}`;
   };
 
-  // Un clic sur un droit de la règle ne garde que ses textes, vus sous l'angle de ce droit.
+  // Prochains votes : les trois premiers, le reste sur demande.
+  const PROCHAINS = 3;
+  let tousProchains = $state(false);
+  const prochains = $derived(tousProchains ? data.prochains : data.prochains.slice(0, PROCHAINS));
+  const prochainsCaches = $derived(data.prochains.length - prochains.length);
+
+  // Choix éditorial à valider (question à Max) : par défaut, la liste ne montre que les textes où
+  // l'élu·e a voté pour ou contre ; absences, abstentions et non-votes sont regroupés en une ligne,
+  // avec un bouton qui les affiche. `false` revient à la liste complète.
+  const REGROUPER_HORS_CALCUL = true;
+
+  // Un clic sur une tuile de droit ne garde que ses textes, vus sous l'angle de ce droit.
   let filtre = $state<string | null>(null);
-  const textes = $derived(
-    data.textes.flatMap((t) => {
+  type Vue = '' | 'favorable' | 'defavorable' | 'hors';
+  let vue = $state<Vue>('');
+  let saisie = $state('');
+  const q = $derived(normaliser(saisie));
+
+  const parDroit = $derived(
+    data.textes.flatMap((t): TexteVote[] => {
       if (filtre && !t.texte.droits.some((x) => x.code === filtre)) return [];
       const vu = sousAngle(t.texte, filtre);
-      return [{ ...t, vu, score: scoreSousAngle(t.score?.score ?? null, vu.inverse) }];
+      return [
+        {
+          ...t,
+          vu,
+          score: scoreSousAngle(t.score?.score ?? null, vu.inverse),
+          bilan: bilanTexte(t.votes, vu.inverse)
+        }
+      ];
     })
   );
+  // Regroupés seulement s'il reste un texte où l'élu·e a voté pour ou contre, et hors recherche.
+  const regrouper = $derived(
+    REGROUPER_HORS_CALCUL && !q && parDroit.some((t) => t.bilan !== 'hors')
+  );
+  // Un texte où l'élu·e a voté dans les deux sens figure sous « pour » comme sous « contre ».
+  const dans = (t: TexteVote, v: Vue) =>
+    v === 'favorable'
+      ? t.bilan === 'favorable' || t.bilan === 'partage'
+      : v === 'defavorable'
+        ? t.bilan === 'defavorable' || t.bilan === 'partage'
+        : v === 'hors'
+          ? t.bilan === 'hors'
+          : !regrouper || t.bilan !== 'hors';
+  const trouves = $derived(
+    q ? parDroit.filter((t) => normaliser(t.texte.titre).includes(q)) : parDroit
+  );
+  const compte = (v: Vue) => trouves.filter((t) => dans(t, v)).length;
+  const textes = $derived(trouves.filter((t) => dans(t, vue)));
+  const hors = $derived(compte('hors'));
+  const regroupes = $derived(regrouper && vue === '' && hors > 0);
+
+  const aux = $derived(filtre ? 'à ce droit' : 'aux droits');
+  const titreResultats = $derived.by(() => {
+    const n = textes.length;
+    const avec = (quoi: string) =>
+      pluriel(n, `texte ${quoi}`, `textes ${quoi}`, `Aucun texte ${quoi}`);
+    const libelle =
+      vue === 'favorable'
+        ? avec(`avec un vote favorable ${aux}`)
+        : vue === 'defavorable'
+          ? avec(`avec un vote défavorable ${aux}`)
+          : vue === 'hors'
+            ? avec('sans vote pour ou contre')
+            : regrouper
+              ? avec(`où ${elle ? 'elle' : 'il'} a voté pour ou contre`)
+              : pluriel(n, 'texte', 'textes', 'Aucun texte');
+    return [libelle, filtre && court(filtre), q && `« ${saisie.trim()} »`]
+      .filter(Boolean)
+      .join(' · ');
+  });
+  // L'abstention n'est pas une absence : la ligne qui les regroupe dit combien de textes en ont une.
+  const abstenus = $derived(
+    trouves.filter((t) => t.bilan === 'hors' && t.votes.some((v) => v.position === 'abstention'))
+      .length
+  );
+  const ligneHors = $derived(
+    `${elle ? 'Absente' : 'Absent'}, abstention ou ${elle ? 'non-votante' : 'non-votant'} sur ${pluriel(hors, 'texte')}${abstenus ? ` (dont ${abstenus} avec une abstention)` : ''}, hors calcul.`
+  );
+  const choisirVue = (v: Vue) => (vue = vue === v ? '' : v);
 </script>
 
 <svelte:head>
@@ -87,25 +148,6 @@
   <meta property="og:image" content="{URL_SITE}/cartes/deputes/{d.slug}.png" />
   <meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
-
-{#snippet vote(v: VoteDepute, inverse: boolean, etat: EtatTexte | null)}
-  {@const l = lecture(v, inverse)}
-  {@const mention = mentionNavette(etat, v.scrutin.etape)}
-  <li>
-    <span class="objet"
-      ><a href={v.scrutin.url} rel="external">{v.scrutin.objet}</a>
-      <span class="petit discret">{date(v.scrutin.date)}{mention ? `, ${mention}` : ''}</span></span
-    >
-    <span class="position"
-      >{v.position === 'absent' ? (elle ? 'Absente' : 'Absent') : POSITION[v.position]}</span
-    >
-    <span class="lecture {l.classe}">{l.texte}</span>
-    <span class="groupe petit">
-      {#if v.groupe}<span class="sigle" style:--c={v.groupe.couleur}>{v.groupe.sigle}</span
-        >{#if v.ventilation}&nbsp;: {POSITION_GROUPE[v.ventilation.position]}{/if}{/if}
-    </span>
-  </li>
-{/snippet}
 
 {#if data.lignee}
   <p class="discret"><a href="/groupes/{data.lignee.slug}">{data.lignee.nom}</a></p>
@@ -225,7 +267,7 @@
       la lecture précédente. Un texte inscrit à l’ordre du jour n’est pas forcément examiné à cette
       date, ni voté.
     </p>
-    {#each data.prochains as p (p.id)}
+    {#each prochains as p (p.id)}
       {@const m = mailtoProchain(p)}
       <article class="texte">
         <h3><a href={p.href}>{p.titre}</a></h3>
@@ -258,25 +300,52 @@
         {#if m}<p class="petit"><a href={m}>Lui écrire sur ce texte</a></p>{/if}
       </article>
     {/each}
+    {#if prochainsCaches}
+      <p>
+        <button type="button" class="lien" onclick={() => (tousProchains = true)}
+          >{prochainsCaches === 1
+            ? 'Voir l’autre texte'
+            : `Voir les ${prochainsCaches} autres`}</button
+        >
+      </p>
+    {/if}
   </section>
 {/if}
 
 {#if data.droits.length}
   <section>
     <h2>Droit par droit</h2>
-    <p class="petit discret">Choisissez un droit pour n’afficher que ses textes.</p>
-    <Regle
-      legende={false}
-      choisie={filtre}
-      onchoisir={(c) => (filtre = filtre === c ? null : c)}
-      lignes={data.droits.map((x) => ({
-        cle: x.droit.code,
-        libelle: x.droit.court,
-        href: `/droits/${x.droit.code}`,
-        score: x.score.score,
-        n_textes: x.score.n_textes
-      }))}
-    />
+    <p class="petit discret">
+      Part de ses votes favorables à chaque droit. Choisissez un droit pour n’afficher que ses
+      textes.
+    </p>
+    <ul class="tuiles">
+      {#each data.droits as x (x.droit.code)}
+        {@const s = x.score.score}
+        <li>
+          <button
+            type="button"
+            class="tuile"
+            aria-pressed={filtre === x.droit.code}
+            onclick={() => (filtre = filtre === x.droit.code ? null : x.droit.code)}
+          >
+            <span class="nom">{x.droit.court}</span>
+            <span class="barre" aria-hidden="true"
+              >{#if s !== null}<span class="e" style:width="{s}%"></span><span
+                  class="r"
+                  style:width="{100 - s}%"
+                ></span>{/if}</span
+            >
+            <span class="compte"
+              ><span class="chiffre">{pourcent(s)}</span><span class="visuellement-cache">
+                de votes favorables à ce droit,</span
+              >
+              <span class="discret">sur {pluriel(x.score.n_textes, 'texte')}</span></span
+            >
+          </button>
+        </li>
+      {/each}
+    </ul>
   </section>
 {/if}
 
@@ -284,41 +353,64 @@
   <section>
     <h2>Ses votes, texte par texte</h2>
     <p>
-      Pour chaque texte qualifié, son vote sur les scrutins comptés et ce qu’il signifie pour les
-      droits. Absent, non-votant ou abstentionniste : son vote n’entre pas dans le score. Les
-      motions et les autres lectures sont sur la fiche de chaque texte.
+      Pour chaque texte qualifié, ce que son vote sur les scrutins comptés signifie pour les droits.
+      Absent, non-votant ou abstentionniste : son vote n’entre pas dans le score. Les motions et les
+      autres lectures sont sur la fiche de chaque texte.
     </p>
-    {#if filtre}
-      <p class="filtre" role="status">
-        <span
-          >{pluriel(textes.length, 'texte touche', 'textes touchent')} à
-          <strong>{court(filtre)}</strong>, avec la lecture de chaque vote pour ce droit.</span
+    <div class="outils">
+      <div class="puces" role="group" aria-label="Filtrer ses votes">
+        <button
+          type="button"
+          class="favorable"
+          aria-pressed={vue === 'favorable'}
+          onclick={() => choisirVue('favorable')}
+          >▲ Pour les droits <span class="n">{compte('favorable')}</span></button
         >
-        <button type="button" onclick={() => (filtre = null)}>Tous les textes</button>
+        <button
+          type="button"
+          class="defavorable"
+          aria-pressed={vue === 'defavorable'}
+          onclick={() => choisirVue('defavorable')}
+          >▼ Contre les droits <span class="n">{compte('defavorable')}</span></button
+        >
+        <button type="button" aria-pressed={vue === 'hors'} onclick={() => choisirVue('hors')}
+          >Absences et abstentions <span class="n">{hors}</span></button
+        >
+      </div>
+      <form class="cherche" role="search" onsubmit={(e) => e.preventDefault()}>
+        <label for="cherche-textes" class="visuellement-cache">Chercher parmi ses textes</label>
+        <input
+          id="cherche-textes"
+          type="search"
+          bind:value={saisie}
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Chercher un texte…"
+        />
+      </form>
+    </div>
+    {#if filtre}
+      <p class="filtre">
+        <span
+          >Textes qui touchent à <strong>{court(filtre)}</strong>, avec la lecture de chaque vote
+          pour ce droit.</span
+        >
+        <button type="button" onclick={() => (filtre = null)}>Tous les droits</button>
         <a href="/droits/{filtre}">{court(filtre)} : tous les groupes</a>
       </p>
     {/if}
-    {#each textes as t (t.texte.id)}
-      <article class="texte">
-        <h3><a href="/textes/{t.texte.id}">{t.texte.titre}</a></h3>
-        <p class="petit">
-          {#if etatTexte(t.texte.etat)}{etatTexte(t.texte.etat)}.{/if}
-          Le texte {phrase(t.vu.code, t.vu.sens)}.
-          {#if t.score !== null}Sur ce texte : <strong>{pourcent(t.score)}</strong> de votes
-            favorables {filtre ? 'à ce droit' : 'aux droits'}.{/if}
-        </p>
-        <ul class="votes">
-          {#each t.votes as v (v.scrutin.id)}{@render vote(v, t.vu.inverse, t.texte.etat)}{/each}
-        </ul>
-        {#if t.autres}
-          <p class="petit discret">
-            <a href="/textes/{t.texte.id}#autres-scrutins"
-              >{pluriel(t.autres, 'autre scrutin', 'autres scrutins')} sur ce texte</a
-            >, affichés sans être comptés.
-          </p>
-        {/if}
-      </article>
-    {/each}
+    <h3 class="resultats" aria-live="polite">{titreResultats}</h3>
+    {#if regroupes}
+      <p class="regroupes">
+        <span>{ligneHors}</span>
+        <button type="button" class="lien" onclick={() => (vue = 'hors')}>Les afficher</button>
+      </p>
+    {/if}
+    <ul class="cartes">
+      {#each textes as t (t.texte.id)}
+        <li><VoteCarte {t} {elle} surDroit={Boolean(filtre)} /></li>
+      {/each}
+    </ul>
   </section>
 {/if}
 
@@ -437,27 +529,6 @@
   .texte h3 a:hover {
     text-decoration: underline;
   }
-  .votes {
-    list-style: none;
-    padding: 0;
-    margin: 0.5rem 0;
-  }
-  .votes li {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 7rem 11rem 11rem;
-    gap: 0.2rem 1rem;
-    align-items: baseline;
-    max-width: none;
-    padding: 0.55rem 0;
-    border-bottom: 1px solid var(--filet);
-  }
-  .position {
-    font-weight: 700;
-  }
-  .lecture.favorable,
-  .lecture.defavorable {
-    font-weight: 650;
-  }
   .filtre {
     display: flex;
     flex-wrap: wrap;
@@ -485,13 +556,171 @@
   .unanimes li {
     margin-bottom: 0.35rem;
   }
-  @media (max-width: 46rem) {
-    .votes li {
-      grid-template-columns: auto 1fr;
+  .lien {
+    font: inherit;
+    font-weight: 650;
+    background: none;
+    border: 0;
+    padding: 0;
+    color: var(--lien);
+    text-decoration: underline;
+    cursor: pointer;
+    min-height: 2.75rem;
+  }
+
+  /* Droit par droit : une tuile par droit, comme sur la page des textes. */
+  .tuiles {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100% / 2 - 0.3rem, 12rem), 1fr));
+    gap: 0.6rem;
+  }
+  .tuiles li {
+    max-width: none;
+  }
+  .tuile {
+    width: 100%;
+    height: 100%;
+    font: inherit;
+    text-align: left;
+    color: var(--encre);
+    background: var(--papier);
+    border: 1px solid var(--filet);
+    border-radius: 10px;
+    padding: 0.8rem 0.9rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .tuile:hover {
+    border-color: var(--encre);
+  }
+  .tuile[aria-pressed='true'] {
+    border: 2px solid var(--encre);
+    background: var(--plan);
+  }
+  .tuile .nom {
+    font-weight: 700;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+  .barre {
+    display: flex;
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: var(--filet);
+    margin-top: auto;
+  }
+  .barre .e {
+    background: var(--favorable);
+  }
+  .barre .r {
+    background: var(--defavorable);
+  }
+  .compte {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 0.5rem;
+    font-size: 0.9rem;
+  }
+  .compte .chiffre {
+    font-size: 1.4rem;
+  }
+
+  /* Ses votes : filtres, recherche, cartes. */
+  .outils {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.5rem;
+    margin: 1.25rem 0 1rem;
+  }
+  .puces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .puces button {
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 650;
+    min-height: 2.75rem;
+    padding: 0 0.9rem;
+    border: 2px solid var(--encre);
+    border-radius: 999px;
+    background: var(--papier);
+    color: var(--encre);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .puces .n {
+    font-weight: 400;
+    margin-left: 0.2rem;
+  }
+  .puces button[aria-pressed='true'] {
+    background: var(--ardoise);
+    border-color: var(--ardoise);
+    color: var(--papier);
+  }
+  .puces button.favorable[aria-pressed='true'] {
+    background: var(--favorable);
+    border-color: var(--favorable);
+  }
+  .puces button.defavorable[aria-pressed='true'] {
+    background: var(--defavorable);
+    border-color: var(--defavorable);
+  }
+  .cherche {
+    flex: 1 1 14rem;
+    max-width: 24rem;
+  }
+  .cherche input {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 2.75rem;
+    padding: 0 1rem;
+    font: inherit;
+    color: var(--encre);
+    background: var(--papier);
+    border: 2px solid var(--encre);
+    border-radius: 999px;
+  }
+  .resultats {
+    margin: 1.5rem 0 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--filet);
+  }
+  .regroupes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 1rem;
+    margin: 0 0 1rem;
+    max-width: none;
+    color: var(--ardoise);
+  }
+  .cartes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+  .cartes li {
+    max-width: none;
+  }
+  @media (max-width: 30rem) {
+    .puces {
+      gap: 0.4rem;
     }
-    .objet,
-    .groupe {
-      grid-column: 1 / -1;
+    .puces button {
+      font-size: 0.85rem;
+      padding: 0 0.65rem;
     }
   }
 </style>
