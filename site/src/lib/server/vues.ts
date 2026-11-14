@@ -52,11 +52,14 @@ export const court = (t: Texte): TexteCourt => ({
 /** Un texte dans la liste de tous les textes : un vote du seul Sénat peut être affiché sans jugement. */
 export type TexteListe = Omit<TexteCourt, 'principal'> & {
   principal: TexteCourt['principal'] | null;
+  /** Première phrase du résumé en mots simples, s'il est à jour (sinon `null`). */
+  simple?: string | null;
 };
 
 const enListe = (t: Texte): TexteListe => ({
   ...court(t),
-  principal: t.principal ? court(t).principal : null
+  principal: t.principal ? court(t).principal : null,
+  simple: t.resume_simple?.[0] ?? null
 });
 
 export interface ScoreGroupe {
