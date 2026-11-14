@@ -313,22 +313,27 @@ vie privée », avec la source à côté, jamais « texte liberticide ».
 
 ### Pages
 
-L'en-tête a cinq rubriques, en liens simples : Droits, Textes (sous-onglets Textes qualifiés et En cours), Groupes (Groupes et
-Comparer), Sénat, Méthode (Méthodologie et Données). Les adresses ne changent pas.
+L'en-tête a cinq rubriques, en liens simples : Droits, Textes (sous-onglets Textes qualifiés et En cours),
+Assemblée (Groupes, Député·es, Comparer), Sénat (Groupes, Sénateur·ices, Comparer), Méthode
+(Méthodologie et Données). Assemblée et Sénat ont la même organisation, chacune son calcul ; Droits
+et Textes couvrent les deux chambres. Les adresses ne changent pas (Député·es mène à
+`/circonscriptions`, et une fiche de député·e est rangée sous cet onglet) ; seule
+`/senat/senateurs` s'ajoute.
 
 | Page | Adresse | Contenu |
 |---|---|---|
-| Accueil | `/` | recherche (code postal, pays, nom), score global des groupes de la XVIIe, les onze droits, derniers textes qualifiés |
+| Accueil | `/` | recherche (code postal, pays, nom ; un code postal donne le ou la député·e et les sénateur·ices du département), groupes d'une chambre à la fois (Assemblée : XVIIe ; Sénat : période en cours), jamais sur une même règle, les droits, derniers textes qualifiés |
 | Droit | `/droits/<code>` | libellé, textes (principal ou secondaire, sens), scores des groupes par législature |
 | Textes | `/textes` | textes qualifiés (filtres : droit, sens, législature), textes écartés et leur motif |
 | Fiche texte | `/textes/<id>` | encadré repliable « En mots simples » sous le résumé (fermé par défaut, un seul paragraphe), s'il est à jour ; droits, sens, justification et sources ; vigilance ; Conseil constitutionnel ; scrutins et positions de groupe ; score de chaque groupe sur ce texte ; liens AN et Légifrance |
 | Textes en cours | `/en-cours` | textes retenus encore en navette, rangés par échéance (inscrit à une date, attendu à l'AN, au Sénat, en CMP, suite pas encore connue) : ordre du jour, sens lu sur le texte voté, dernier vote public de l'AN par groupe, mention si ce vote n'est pas encore qualifié |
 | Fiche député | `/deputes/<slug>` | circonscription, groupes successifs, score global et par droit (un clic sur un droit filtre ses votes), participation, abstentions, votes sur chaque scrutin compté (les autres sont sur la fiche texte), textes adoptés sans opposition, « Lui écrire », carte partageable |
 | Circonscription | `/circonscriptions/<dép>-<num>` | député en cours, ou « siège vacant », et ses prédécesseurs depuis 2022 |
-| Groupes | `/groupes` | par législature : tableau groupe × droit, effectifs |
+| Groupes | `/groupes` | Assemblée : une législature et un droit à la fois, groupes classés ; tableau groupe × droit replié dessous |
 | Fiche groupe | `/groupes/<sigle>-<législature>` | score global, par droit et par texte (un clic sur un droit filtre ses textes), textes adoptés sans opposition, membres et leur score (dans NI, seulement celles et ceux qui y sont, ou qui y ont voté) |
 | Comparer | `/comparer?a=…&b=…` | deux députés, deux groupes, ou un député et son groupe : score, droit par droit, textes où ils s'écartent le plus ; deux règles par ligne (le premier en haut, curseur plein ; le second en bas, curseur creux), bandeau fixe qui les rappelle au défilement |
-| Sénat | `/senat` | les groupes d'abord, droit par droit et par période (depuis juin 2022, 2017-2022) ; le vote de groupe expliqué ; sénateur·ices en poste par département (code postal ou nom : case de l'en-tête) |
+| Sénat | `/senat` | les groupes, comme `/groupes` : une période et un droit à la fois, groupes classés, tableau complet replié dessous (les ancres `#groupe-…` l'ouvrent) ; le vote de groupe expliqué |
+| Sénateur·ices | `/senat/senateurs` | sénateur·ices en poste par département (les anciens liens `/senat#dep-…` y mènent) |
 | Comparer au Sénat | `/senat/comparer` | deux sénateur·ices, deux groupes, ou un·e sénateur·ice et un groupe sur la période de ce groupe ; jamais avec l'Assemblée (règle 28) |
 | Fiche sénateur·ice | `/senat/<slug>` | département, groupes successifs, score « d'après les votes enregistrés à son nom », score par période, écarts au groupe, carte partageable (`/cartes/senateurs/`, `/cartes/portrait/senateurs/`), votes comptés, « Lui écrire » ; **aucun taux de participation** (règle 27) |
 | Recherche | `/recherche?q=…` | tous les résultats d'une recherche : élu·es, code postal (député·es et sénateur·ices du département), pays, textes qualifiés, textes écartés et leur motif |

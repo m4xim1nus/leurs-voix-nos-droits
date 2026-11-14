@@ -36,11 +36,13 @@
 
 <svelte:head><title>Les groupes, {NOM}</title></svelte:head>
 
+<p class="surtitre">Assemblée nationale</p>
 <h1>Les groupes, droit par droit</h1>
 <p class="chapo">
   Part des votes favorables aux droits de chaque groupe, sur chaque droit. Un vote compte pour le
   groupe où siégeait l’élu·e ce jour-là ; un groupe qui a changé de nom est réuni sous son nom le
-  plus récent.
+  plus récent. Le calcul est propre à l’Assemblée : ces scores ne se comparent pas à ceux du
+  <a href="/senat">Sénat</a>.
 </p>
 
 <div class="choix">

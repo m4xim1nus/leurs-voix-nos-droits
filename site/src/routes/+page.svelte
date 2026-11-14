@@ -17,6 +17,18 @@
       score: g.score.score,
       n_textes: g.score.n_textes
     }));
+  // Les deux chambres, une à la fois : leurs scores ne se comparent pas (règle 28).
+  let chambre = $state<'an' | 'senat'>('an');
+  const lignesSenat = $derived(
+    (data.senat?.groupes ?? []).map((g) => ({
+      cle: g.id,
+      libelle: g.sigle,
+      couleur: g.couleur,
+      href: '/senat',
+      score: g.score,
+      n_textes: g.n_textes
+    }))
+  );
 </script>
 
 <svelte:head>
@@ -28,11 +40,11 @@
 </svelte:head>
 
 <section class="ouverture">
-  <h1>Comment votre député·e vote sur vos droits</h1>
+  <h1>Comment vos élu·es votent sur vos droits</h1>
   <p class="chapo">
-    Chaque texte de loi retenu est qualifié à la main, sources à l’appui : quels droits il touche,
+    Chaque texte de loi retenu est qualifié à la main, sources à l’appui : quels droits il touche,
     et s’il les étend ou les restreint. Ses scrutins sont ensuite croisés avec le vote de chaque
-    député·e depuis 2017.
+    député·e et de chaque sénateur·ice depuis 2017, chaque chambre à part.
   </p>
   <div class="cherche">
     <Recherche grand />
@@ -49,23 +61,51 @@
 {/if}
 
 <section>
-  <h2>Les groupes de l’Assemblée</h2>
-  <p>
-    Part des votes favorables aux droits sur les textes qualifiés de la législature, au sens du
-    droit principal de chaque texte. Législature en cours (XVIIe, depuis juillet 2024).
-  </p>
-  <Regle comptes lignes={lignes(17)} />
-  <details>
-    <summary>XVIe législature (2022-2024)</summary>
-    <Regle comptes lignes={lignes(16)} legende={false} />
-  </details>
-  {#if lignes(15).length}
+  <div class="entete-groupes">
+    <h2>Les groupes</h2>
+    {#if data.senat}
+      <div class="chambres" role="group" aria-label="Chambre">
+        <button type="button" aria-pressed={chambre === 'an'} onclick={() => (chambre = 'an')}
+          >Assemblée nationale</button
+        >
+        <button type="button" aria-pressed={chambre === 'senat'} onclick={() => (chambre = 'senat')}
+          >Sénat</button
+        >
+      </div>
+    {/if}
+  </div>
+  {#if chambre === 'senat' && data.senat}
+    <p>
+      Part des votes favorables aux droits des groupes du Sénat, {data.senat.libelle} :
+      {pluriel(data.senat.n_textes, 'vote décisif compté', 'votes décisifs comptés')}. Un vote
+      enregistré au nom d’un·e sénateur·ice n’est pas une présence.
+    </p>
+    <p class="petit discret">
+      Chaque chambre a son propre calcul : les scores ne se comparent pas d’une chambre à l’autre.
+    </p>
+    <Regle comptes lignes={lignesSenat} />
+    <p><a href="/senat">Les groupes du Sénat, droit par droit</a></p>
+  {:else}
+    <p>
+      Part des votes favorables aux droits sur les textes qualifiés de la législature, au sens du
+      droit principal de chaque texte. Législature en cours (XVIIe, depuis juillet 2024).
+    </p>
+    <p class="petit discret">
+      Chaque chambre a son propre calcul : les scores ne se comparent pas d’une chambre à l’autre.
+    </p>
+    <Regle comptes lignes={lignes(17)} />
     <details>
-      <summary>XVe législature (2017-2022)</summary>
-      <Regle comptes lignes={lignes(15)} legende={false} />
+      <summary>XVIe législature (2022-2024)</summary>
+      <Regle comptes lignes={lignes(16)} legende={false} />
     </details>
+    {#if lignes(15).length}
+      <details>
+        <summary>XVe législature (2017-2022)</summary>
+        <Regle comptes lignes={lignes(15)} legende={false} />
+      </details>
+    {/if}
+    <p><a href="/groupes">Les groupes de l’Assemblée, droit par droit</a></p>
   {/if}
-  <p><a href="/groupes">Les groupes droit par droit</a></p>
 </section>
 
 <section>
@@ -123,5 +163,35 @@
   }
   .cartes li > :global(a) {
     flex: 1;
+  }
+  .entete-groupes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+  .chambres {
+    display: inline-flex;
+    gap: 3px;
+    padding: 3px;
+    border: 2px solid var(--encre);
+    border-radius: 999px;
+  }
+  .chambres button {
+    font: inherit;
+    font-weight: 700;
+    min-height: 2.75rem;
+    padding: 0 clamp(0.7rem, 3vw, 1.1rem);
+    white-space: nowrap;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--encre);
+    cursor: pointer;
+  }
+  .chambres button[aria-pressed='true'] {
+    background: var(--encre);
+    color: var(--papier);
   }
 </style>
