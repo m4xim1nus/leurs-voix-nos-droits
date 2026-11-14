@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { enLettres, pluriel } from '$lib/format';
+  import TuilesDroits from '$lib/components/TuilesDroits.svelte';
+  import { enLettres } from '$lib/format';
   import { NOM } from '$lib/site';
 
   let { data } = $props();
@@ -14,17 +15,11 @@
   il le restreint.
 </p>
 
-<ul class="liste">
-  {#each data.droits as d (d.code)}
-    <li>
-      <h2><a href="/droits/{d.code}">{d.court}</a></h2>
-      <p>
-        {d.libelle}.
-        <span class="discret">{pluriel(d.n_textes, 'texte qualifié', 'textes qualifiés')}.</span>
-      </p>
-    </li>
-  {/each}
-</ul>
+<p class="legende">
+  <span class="defavorable">▼ textes qui restreignent le droit</span>
+  <span class="favorable">▲ textes qui l’étendent</span>
+</p>
+<TuilesDroits droits={data.droits} libelles />
 
 <p class="discret">
   Deux étiquettes transversales complètent la grille : outre-mer, et régimes d’exception (états
@@ -33,18 +28,11 @@
 </p>
 
 <style>
-  .liste {
-    list-style: none;
-    padding: 0;
-  }
-  .liste h2 {
-    font-size: 1.6rem;
-    margin: 1.5rem 0 0.25rem;
-  }
-  .liste h2 a {
-    text-decoration: none;
-  }
-  .liste h2 a:hover {
-    text-decoration: underline;
+  .legende {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.25rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
   }
 </style>

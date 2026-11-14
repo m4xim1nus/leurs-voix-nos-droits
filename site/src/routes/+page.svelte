@@ -2,6 +2,7 @@
   import Recherche from '$lib/components/Recherche.svelte';
   import Regle from '$lib/components/Regle.svelte';
   import TexteCarte from '$lib/components/TexteCarte.svelte';
+  import TuilesDroits from '$lib/components/TuilesDroits.svelte';
   import { enLettres, pluriel } from '$lib/format';
   import { NOM } from '$lib/site';
 
@@ -69,16 +70,7 @@
 
 <section>
   <h2>{enLettres(data.droits.length)} droits</h2>
-  <ul class="droits">
-    {#each data.droits as d (d.code)}
-      <li>
-        <a href="/droits/{d.code}">
-          <span class="court">{d.court}</span>
-          <span class="discret petit">{pluriel(d.n_textes, 'texte')}</span>
-        </a>
-      </li>
-    {/each}
-  </ul>
+  <TuilesDroits droits={data.droits} />
 </section>
 
 <section>
@@ -116,36 +108,6 @@
   details summary {
     cursor: pointer;
     font-weight: 650;
-  }
-  .droits {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-    gap: 0 2rem;
-    border-top: 1px solid var(--filet);
-  }
-  .droits li {
-    max-width: none;
-    border-bottom: 1px solid var(--filet);
-  }
-  .droits a {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-    padding: 0.7rem 0.25rem;
-    text-decoration: none;
-  }
-  .droits .court {
-    font-family: var(--titre);
-    font-stretch: 78%;
-    font-weight: 750;
-    font-size: 1.3rem;
-  }
-  .droits a:hover .court {
-    text-decoration: underline;
   }
   .cartes {
     list-style: none;
