@@ -20,7 +20,8 @@ Données de vote : open data officiel de l'Assemblée nationale
 
 ## Contribuer
 
-Prérequis : Python 3.12 avec [uv](https://docs.astral.sh/uv/), Node 22.
+Prérequis : Python 3.12 avec [uv](https://docs.astral.sh/uv/), Node 22
+(`.node-version` ; Node 23 est refusé à l'installation).
 La conduite du projet (règles, arborescence, commandes) est dans
 [`CLAUDE.md`](CLAUDE.md), la méthode dans [`docs/METHODO.md`](docs/METHODO.md).
 
