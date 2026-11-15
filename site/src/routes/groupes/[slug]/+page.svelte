@@ -18,8 +18,12 @@
   const actuels = $derived(data.membres.filter((m) => m.dans_le_groupe));
   const anciens = $derived(data.membres.filter((m) => !m.dans_le_groupe));
 
-  // Un clic sur un droit de la règle ne garde que ses textes, vus sous l'angle de ce droit.
-  let filtre = $state<string | null>(null);
+  // Un clic sur un droit de la règle ne garde que ses textes, vus sous l'angle de ce droit. Le
+  // filtre retombe quand on passe d'un groupe à un autre : SvelteKit garde la page montée.
+  let filtre = $derived.by((): string | null => {
+    void g.id;
+    return null;
+  });
   const textes = $derived(
     data.textes.flatMap((t) => {
       if (filtre && !t.texte.droits.some((x) => x.code === filtre)) return [];
