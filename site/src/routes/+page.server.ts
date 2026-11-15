@@ -8,6 +8,7 @@ export const load = () => {
   return {
     ...vueAccueil(),
     senat: p && {
+      id: p.id,
       libelle: p.court,
       n_textes: p.n_textes,
       groupes: p.groupes.map((g) => ({

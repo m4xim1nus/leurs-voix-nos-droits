@@ -41,7 +41,7 @@
 <p class="chapo">
   Part des votes favorables aux droits de chaque groupe, sur chaque droit. Un vote compte pour le
   groupe où siégeait l’élu·e ce jour-là ; un groupe qui a changé de nom est réuni sous son nom le
-  plus récent. Le calcul est propre à l’Assemblée : ces scores ne se comparent pas à ceux du
+  plus récent. Le calcul est propre à l’Assemblée : ces scores ne se comparent pas à ceux du
   <a href="/senat">Sénat</a>.
 </p>
 

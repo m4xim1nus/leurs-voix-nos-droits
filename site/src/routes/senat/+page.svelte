@@ -125,7 +125,7 @@
 
 {#if data.periodes.length}
   <details class="complet" bind:open={complet}>
-    <summary>Le tableau complet : tous les groupes, tous les droits</summary>
+    <summary>Le tableau complet : tous les groupes, tous les droits</summary>
     {#each data.periodes as per (per.id)}
       {@const presents = data.droits.filter((d) =>
         per.groupes.some((g) => g.droits[d.code] !== null)

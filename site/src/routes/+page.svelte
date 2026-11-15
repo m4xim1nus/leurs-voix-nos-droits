@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { ancreGroupe } from '$lib/comparer';
   import Recherche from '$lib/components/Recherche.svelte';
   import Regle from '$lib/components/Regle.svelte';
   import TexteCarte from '$lib/components/TexteCarte.svelte';
@@ -24,7 +25,7 @@
       cle: g.id,
       libelle: g.sigle,
       couleur: g.couleur,
-      href: '/senat',
+      href: `/senat#${ancreGroupe(g.id, data.senat!.id)}`,
       score: g.score,
       n_textes: g.n_textes
     }))
@@ -76,12 +77,12 @@
   </div>
   {#if chambre === 'senat' && data.senat}
     <p>
-      Part des votes favorables aux droits des groupes du Sénat, {data.senat.libelle} :
+      Part des votes favorables aux droits des groupes du Sénat, {data.senat.libelle} :
       {pluriel(data.senat.n_textes, 'vote décisif compté', 'votes décisifs comptés')}. Un vote
       enregistré au nom d’un·e sénateur·ice n’est pas une présence.
     </p>
     <p class="petit discret">
-      Chaque chambre a son propre calcul : les scores ne se comparent pas d’une chambre à l’autre.
+      Chaque chambre a son propre calcul : les scores ne se comparent pas d’une chambre à l’autre.
     </p>
     <Regle comptes lignes={lignesSenat} />
     <p><a href="/senat">Les groupes du Sénat, droit par droit</a></p>
@@ -91,7 +92,7 @@
       droit principal de chaque texte. Législature en cours (XVIIe, depuis juillet 2024).
     </p>
     <p class="petit discret">
-      Chaque chambre a son propre calcul : les scores ne se comparent pas d’une chambre à l’autre.
+      Chaque chambre a son propre calcul : les scores ne se comparent pas d’une chambre à l’autre.
     </p>
     <Regle comptes lignes={lignes(17)} />
     <details>

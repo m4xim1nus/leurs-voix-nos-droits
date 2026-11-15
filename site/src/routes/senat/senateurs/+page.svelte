@@ -16,10 +16,11 @@
 <p class="surtitre">Sénat</p>
 <h1>Sénateur·ices en poste, par département</h1>
 <p class="chapo">
-  Score d’après les votes enregistrés au nom de chacun·e. Un vote enregistré n’est pas une présence
-  : aucune fiche n’affiche de taux de participation (<a href="/methodologie#regle-27">règle 27</a>).
-  Pour trouver les vôtres, tapez votre code postal ou leur nom dans la case de recherche, en haut de
-  la page.
+  Score d’après les votes enregistrés au nom de chacun·e. Un vote enregistré n’est pas une
+  présence : aucune fiche n’affiche de taux de participation (<a href="/methodologie#regle-27"
+    >règle 27</a
+  >). Pour trouver les vôtres, tapez votre code postal ou leur nom dans la case de recherche, en
+  haut de la page.
 </p>
 <nav class="sommaire" aria-label="Départements">
   {#each data.departements as dep (dep.code)}<a href="#dep-{dep.code}">{dep.code}</a>{/each}

@@ -9,7 +9,8 @@
 
   // Cinq rubriques ; celles qui regroupent plusieurs pages ont des sous-onglets, sans menu déroulant.
   // Assemblée et Sénat ont la même organisation (groupes, élu·es, comparer), chacune son calcul.
-  // `aussi` : autres adresses rangées sous l'onglet ; `exact` : l'onglet ne couvre que son adresse.
+  // `aussi` : les pages sous ces adresses (des fiches) sont rangées sous l'onglet, pas l'adresse
+  // elle-même ; `exact` : l'onglet ne couvre que son adresse.
   interface Onglet {
     href: string;
     libelle: string;
@@ -61,7 +62,13 @@
       ? page.url.pathname === o.href
         ? o.href.length
         : 0
-      : Math.max(0, ...[o.href, ...(o.aussi ?? [])].filter(dans).map((h) => h.length));
+      : Math.max(
+          0,
+          ...[o.href].filter(dans).map((h) => h.length),
+          ...(o.aussi ?? [])
+            .filter((h) => page.url.pathname.startsWith(`${h}/`))
+            .map((h) => h.length)
+        );
   const rubrique = $derived(
     MENU.find((m) => dans(m.href) || m.sous.some((s) => portee(s) > 0)) ?? null
   );
