@@ -11,13 +11,23 @@
   // Combien de textes restreignent ce droit, combien l'étendent ; le sélecteur ne garde qu'un sens.
   const restreint = $derived(data.textes.filter((t) => t.droit.sens === 'restreint').length);
   const etend = $derived(data.textes.length - restreint);
-  let sens = $state<'' | Sens>('');
+  // Remis à « tous » quand on passe d'un droit à un autre : SvelteKit garde la page montée, et un
+  // $derived réassignable repart de sa valeur dès que sa dépendance change.
+  let sens = $derived.by((): '' | Sens => {
+    void data.droit.code;
+    return '';
+  });
   const textes = $derived(data.textes.filter((t) => !sens || t.droit.sens === sens));
   const titreListe = $derived(
     sens === 'restreint'
-      ? pluriel(textes.length, 'texte le restreint', 'textes le restreignent')
+      ? pluriel(
+          textes.length,
+          'texte le restreint',
+          'textes le restreignent',
+          'aucun texte ne le restreint'
+        )
       : sens === 'etend'
-        ? pluriel(textes.length, 'texte l’étend', 'textes l’étendent')
+        ? pluriel(textes.length, 'texte l’étend', 'textes l’étendent', 'aucun texte ne l’étend')
         : pluriel(textes.length, 'texte', 'textes')
   );
 

@@ -29,6 +29,10 @@ début de chaque cycle. Règles de tenue : `CLAUDE.md`, section « Suivi ».
 - [ ] Fiche : aperçu de ce que le site affichera pour ce texte (sens, droit, source), à côté du formulaire (gh#1, 2026-11-14)
 - [ ] « À traiter » : une phrase et une action principale par carte, sections vides masquées, texte d'introduction replié (gh#1, 2026-11-14)
 - [ ] « Textes » : vues toutes prêtes (à qualifier, à relire, validés non publiés), les autres filtres repliés (gh#1, 2026-11-14)
+- [ ] **Choix sensible, à trancher par Max.** Fiche texte, ligne du résultat quand le décisif est la suppression de l'article unique valant rejet (6 textes, dont `ecriture-inclusive-ppl-2023`) : elle dit « Vote décisif le … ». Proposition : « Article unique supprimé par X voix contre Y, ce qui vaut rejet », sans lire les voix pour la suppression comme des voix contre le texte (gh#7, 2026-11-15)
+- [ ] **Choix sensible, à trancher par Max.** « Score sur N textes » (député·e, groupe, tuiles par droit) : `n_textes` compte aussi les textes où l'élu n'a fait que s'abstenir, qui ne pèsent rien dans le score (règle 16). Joël Aviragnet : 62 textes, dont 11 d'abstention seule. Écrire le nombre de textes qui pèsent, ou préciser l'écart (gh#8, 2026-11-15)
+- [ ] Sénat : couleur des groupes. `senat/groupes.csv` n'en a pas, et la règle du Sénat est toute grise sur l'accueil, à côté de celle, colorée, de l'Assemblée (gh#9, 2026-11-15)
+- [ ] Assemblée › Député·es : une vraie liste des député·es par département, symétrique de `/senat/senateurs`, au lieu de `/circonscriptions` et ses seuls numéros (gh#9, 2026-11-15)
 
 ## Cycles candidats
 
