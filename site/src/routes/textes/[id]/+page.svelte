@@ -46,9 +46,6 @@
             : 'vote';
     return `${vote} au Sénat, texte encore en navette`;
   });
-  const attenduAN = $derived(
-    t.seul && t.etat?.etat === 'en_navette' && t.etat.attente_chambre === 'AN'
-  );
   const ROLE_SENAT: Record<ScrutinSenat['role'], string> = {
     decisif: 'Vote décisif du Sénat',
     amendement: 'Amendement clé, compté',
@@ -183,11 +180,11 @@
 <h1 class="titre">{t.titre}</h1>
 <p class="discret">
   {#if t.seul}
+    <!-- L'état (« attendu à l'Assemblée ») et le 49.3 sont dits par la ligne du résultat, dessous. -->
     Pas de vote sur l’ensemble à l’Assemblée. Vote du Sénat le {date(t.date)}.
-    {#if attenduAN}Texte encore en navette, attendu à l’Assemblée.{/if}
   {:else}
     {legislature(t.legislature)} législature. {t.sans_vote
-      ? 'Adopté par le 49.3, sans vote final de l’Assemblée.'
+      ? ''
       : `Vote décisif le ${date(t.date)}${mentionDecisif ? ` (${mentionDecisif})` : ''}.`}
   {/if}
   {#if t.loi}{`Loi n° ${t.loi}${t.date_loi ? ` du ${date(t.date_loi)}` : ''}.`}{/if}
