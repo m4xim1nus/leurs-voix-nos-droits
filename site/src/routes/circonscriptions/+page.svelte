@@ -13,8 +13,9 @@
   {#each data.departements as d (d.nom)}
     <dt id={d.circos[0].id.startsWith('099') ? 'etranger' : undefined}>{d.nom}</dt>
     <dd>
-      {#each d.circos as c, i (c.id)}{#if i},
-        {/if}<a href="/circonscriptions/{c.id}">{c.num}</a>{/each}
+      <!-- L'espace après la virgule est dans une chaîne : en fin de bloc {#if}, Svelte l'ôterait. -->
+      {#each d.circos as c, i (c.id)}{i ? ', ' : ''}<a href="/circonscriptions/{c.id}">{c.num}</a
+        >{/each}
     </dd>
   {/each}
 </dl>
@@ -22,7 +23,7 @@
 <style>
   dl {
     display: grid;
-    grid-template-columns: minmax(8rem, 16rem) 1fr;
+    grid-template-columns: minmax(8rem, 16rem) minmax(0, 1fr);
     gap: 0.3rem 1rem;
   }
   dt {
@@ -30,5 +31,15 @@
   }
   dd {
     margin: 0;
+  }
+  /* Sur téléphone, le département au-dessus de ses circonscriptions, qui gardent toute la largeur. */
+  @media (max-width: 30rem) {
+    dl {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0;
+    }
+    dd {
+      margin-bottom: 0.6rem;
+    }
   }
 </style>

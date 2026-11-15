@@ -154,12 +154,16 @@
     font-size: 0.8em;
     font-weight: 400;
   }
-  /* Sur téléphone, le libellé passe à la ligne plutôt que d'être tronqué. */
+  /* Sur téléphone, le libellé passe à la ligne plutôt que d'être tronqué, entre deux mots : la
+     colonne s'élargit pour qu'un mot long (« Indépendants », « Républicains ») tienne entier. */
   @media (max-width: 40rem) {
+    .regle {
+      --nom: clamp(6rem, 38%, 16rem);
+    }
     .nom,
     .nom :global(.sigle) {
       white-space: normal;
-      overflow-wrap: anywhere;
+      overflow-wrap: break-word;
       hyphens: auto;
     }
   }

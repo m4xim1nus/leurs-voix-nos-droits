@@ -7,7 +7,7 @@
 -->
 <script lang="ts">
   import { chargerMoteur, chercherCodePostal, type CircoTrouvee } from '$lib/charge-recherche';
-  import { normaliser } from '$lib/format';
+  import { normaliser, pluriel } from '$lib/format';
   import { estCodePostal } from '$lib/recherche';
   import type { EntreeIndex, PaysIndex } from '$lib/types';
 
@@ -19,7 +19,7 @@
     | { type: 'attente' }
     | { type: 'erreur'; message: string }
     | { type: 'noms'; liste: EntreeIndex[]; pays: PaysIndex[]; approche: boolean }
-    | { type: 'cp'; cp: string; circos: CircoTrouvee[] }
+    | { type: 'cp'; cp: string; circos: CircoTrouvee[]; senateurs: EntreeIndex[] }
   >({ type: 'vide' });
 
   async function chercher() {
@@ -79,8 +79,7 @@
     chercher();
   }}
 >
-  <label for="recherche-{grand ? 'accueil' : 'page'}"
-    >Code postal, pays ou nom de votre député·e</label
+  <label for="recherche-{grand ? 'accueil' : 'page'}">Code postal, pays ou nom de votre élu·e</label
   >
   <div class="champ">
     <input
@@ -132,6 +131,7 @@
       {/each}
     </ul>
   {:else if resultat.type === 'cp'}
+    {#if resultat.senateurs.length}<p class="chambre">À l’Assemblée nationale</p>{/if}
     {#if resultat.circos.length > 1}
       <p>
         Le code postal {resultat.cp} couvre {resultat.circos.length} circonscriptions. Votre député·e
@@ -159,6 +159,16 @@
         </li>
       {/each}
     </ul>
+    {#if resultat.senateurs.length}
+      <p class="chambre">
+        Au Sénat, {pluriel(resultat.senateurs.length, 'sénateur·ice', 'sénateur·ices')} de votre département
+      </p>
+      <ul>
+        {#each resultat.senateurs as e (e.slug)}
+          <li>{@render carte(e)}</li>
+        {/each}
+      </ul>
+    {/if}
   {/if}
 </div>
 <noscript
@@ -242,5 +252,9 @@
   }
   .resultats > p {
     margin-top: 1rem;
+  }
+  .chambre {
+    margin: 1rem 0 0.25rem;
+    font-weight: 650;
   }
 </style>
