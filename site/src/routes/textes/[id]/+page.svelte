@@ -68,6 +68,8 @@
       );
 
   // Le verdict en tête : le droit principal d'abord, puis les secondaires, dans l'ordre de la fiche.
+  // Seul le principal écrit son sens en toutes lettres ; les secondaires n'ont que la flèche (et la
+  // phrase des lecteurs d'écran), pour tenir à deux ou trois par ligne sur téléphone.
   const verdict = $derived([
     ...t.droits.filter((d) => d.role === 'principal'),
     ...t.droits.filter((d) => d.role !== 'principal')
@@ -198,7 +200,13 @@
       <li class={[d.sens, d.role === 'principal' && 'principal']}>
         <a href="#droit-{d.code}">
           <span class="sens" aria-hidden="true"
-            >{d.sens === 'etend' ? '▲ Étend' : '▼ Restreint'}</span
+            >{d.role === 'principal'
+              ? d.sens === 'etend'
+                ? '▲ Étend'
+                : '▼ Restreint'
+              : d.sens === 'etend'
+                ? '▲'
+                : '▼'}</span
           >
           <span class="nom">{court(d.code)}</span>
           <span class="visuellement-cache"
