@@ -55,7 +55,10 @@
 
   // Prochains votes : les trois premiers, le reste sur demande.
   const PROCHAINS = 3;
-  let tousProchains = $state(false);
+  let tousProchains = $derived.by(() => {
+    void d.id;
+    return false;
+  });
   const prochains = $derived(tousProchains ? data.prochains : data.prochains.slice(0, PROCHAINS));
   const prochainsCaches = $derived(data.prochains.length - prochains.length);
 
@@ -65,10 +68,21 @@
   const REGROUPER_HORS_CALCUL = true;
 
   // Un clic sur une tuile de droit ne garde que ses textes, vus sous l'angle de ce droit.
-  let filtre = $state<string | null>(null);
+  // Filtres et recherche repartent de zéro d'une fiche à l'autre : SvelteKit garde la page montée
+  // quand on passe d'un·e député·e à un·e autre (recherche de l'en-tête, retour arrière).
+  let filtre = $derived.by((): string | null => {
+    void d.id;
+    return null;
+  });
   type Vue = '' | 'favorable' | 'defavorable' | 'hors';
-  let vue = $state<Vue>('');
-  let saisie = $state('');
+  let vue = $derived.by((): Vue => {
+    void d.id;
+    return '';
+  });
+  let saisie = $derived.by(() => {
+    void d.id;
+    return '';
+  });
   const q = $derived(normaliser(saisie));
 
   const parDroit = $derived(
