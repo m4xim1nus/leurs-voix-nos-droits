@@ -1,26 +1,26 @@
 {
- "genere_le": "2026-11-14T12:10:20+00:00",
+ "genere_le": "2026-11-16T13:34:08+00:00",
  "sources": {
   "an_scrutins_17": {
    "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/loi/scrutins/Scrutins.json.zip",
-   "last_modified": "Sat, 14 Nov 2026 05:26:32 GMT",
+   "last_modified": "Mon, 16 Nov 2026 11:26:52 GMT",
    "taille": 30518412,
-   "sha256": "87644f2cd4f7ac9f9dcdedff52699878362ca2ad5d5496e9df48fb4d527edef3",
-   "telecharge_le": "2026-11-14T12:08:42+00:00"
+   "sha256": "118632d1862398e85003be00312c59f39a741fa5e1bfa4bebe1ee611f7d6d492",
+   "telecharge_le": "2026-11-16T12:46:30+00:00"
   },
   "an_dossiers_17": {
    "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/loi/dossiers_legislatifs/Dossiers_Legislatifs.json.zip",
-   "last_modified": "Sat, 14 Nov 2026 09:16:46 GMT",
-   "taille": 11259062,
-   "sha256": "3373c73c4ce26f1e3d46afb0b28d369815318d95eca5e1bf50d30534c21ac5f3",
-   "telecharge_le": "2026-11-14T12:08:42+00:00"
+   "last_modified": "Mon, 16 Nov 2026 09:16:47 GMT",
+   "taille": 11259082,
+   "sha256": "7dd1256c128374ecf186c004258f0b6eea521e7a92a9284020f7ecb3d34fc3ba",
+   "telecharge_le": "2026-11-16T12:46:31+00:00"
   },
   "an_amendements_17": {
    "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/loi/amendements_div_legis/Amendements.json.zip",
-   "last_modified": "Mon, 09 Nov 2026 07:22:59 GMT",
-   "taille": 355377620,
-   "sha256": "d6cf18a539ef79977305f85d043b16dc3f773af1a2c01754b8a5e93c136ba602",
-   "telecharge_le": "2026-11-09T12:53:30+00:00"
+   "last_modified": "Mon, 16 Nov 2026 09:24:13 GMT",
+   "taille": 363977682,
+   "sha256": "07ce0cdbc3d1292ffa9387104f10877ee887cfae04a8c5ec5491f34129eb382a",
+   "telecharge_le": "2026-11-16T12:50:41+00:00"
   },
   "an_scrutins_16": {
    "url": "https://data.assemblee-nationale.fr/static/openData/repository/16/loi/scrutins/Scrutins.json.zip",
@@ -46,45 +46,45 @@
   },
   "an_amo": {
    "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/amo/tous_acteurs_mandats_organes_xi_legislature/AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip",
-   "last_modified": "Mon, 09 Nov 2026 01:34:28 GMT",
-   "taille": 13728766,
-   "sha256": "27cbe677f6bcd0d92c1bc36756f3a4bd1a3287b18ac0f9f6c113c5968e360ede",
-   "telecharge_le": "2026-11-09T13:36:48+00:00"
+   "last_modified": "Mon, 16 Nov 2026 01:34:47 GMT",
+   "taille": 13737126,
+   "sha256": "57e780b032eed7e5cd4a329d0f101ec12d24cf3e1c27fcf7a0fb2c688d42525a",
+   "telecharge_le": "2026-11-16T13:32:47+00:00"
   },
   "an_agenda_17": {
    "url": "https://data.assemblee-nationale.fr/static/openData/repository/17/vp/reunions/Agenda.json.zip",
-   "last_modified": "Sat, 14 Nov 2026 05:40:56 GMT",
-   "taille": 8762887,
-   "sha256": "aea1ebd648a5f2f4a1ed4b5a011a3fb0a79495071f1b0af4145be7ab42328be2",
-   "telecharge_le": "2026-11-14T12:08:59+00:00"
+   "last_modified": "Mon, 16 Nov 2026 05:40:55 GMT",
+   "taille": 8762861,
+   "sha256": "8069a4637594f5c928b61f5c1d299ab96fefe6b33b480fe20b396d074fa791d8",
+   "telecharge_le": "2026-11-16T13:32:48+00:00"
   },
   "senat_dosleg": {
    "url": "https://data.senat.fr/data/dosleg/dosleg.zip",
-   "last_modified": "Sat, 14 Nov 2026 02:53:24 GMT",
-   "taille": 16218382,
-   "sha256": "f407349a18ad6cc8ef64f0062346d8d15a9f212c6ced2323a1dc14fe283f0496",
-   "telecharge_le": "2026-11-14T12:09:12+00:00"
+   "last_modified": "Mon, 16 Nov 2026 02:58:05 GMT",
+   "taille": 16218460,
+   "sha256": "84d0fdbcbf5650fff75aff33f987ec109c9967c8d9df8502acd68b8648859ee8",
+   "telecharge_le": "2026-11-16T13:33:00+00:00"
   },
   "senat_senateurs": {
    "url": "https://data.senat.fr/data/senateurs/ODSEN_GENERAL.csv",
-   "last_modified": "Sat, 14 Nov 2026 03:15:20 GMT",
+   "last_modified": "Mon, 16 Nov 2026 03:21:05 GMT",
    "taille": 443302,
    "sha256": "365ec05e8c8a60147e6af4e5ffcc4dff133351af50968cd6f611bba585f24b0c",
-   "telecharge_le": "2026-11-14T12:09:13+00:00"
+   "telecharge_le": "2026-11-16T13:33:01+00:00"
   },
   "senat_groupes": {
    "url": "https://data.senat.fr/data/senateurs/ODSEN_HISTOGROUPES.csv",
-   "last_modified": "Sat, 14 Nov 2026 03:15:20 GMT",
+   "last_modified": "Mon, 16 Nov 2026 03:21:05 GMT",
    "taille": 567638,
    "sha256": "3536d433c802a3859226e66724a9e5f9afa9f597eb8c8bde3ef49075ea7624e7",
-   "telecharge_le": "2026-11-14T12:09:13+00:00"
+   "telecharge_le": "2026-11-16T13:33:01+00:00"
   },
   "senat_mandats": {
    "url": "https://data.senat.fr/data/senateurs/ODSEN_ELUSEN.csv",
-   "last_modified": "Sat, 14 Nov 2026 03:15:20 GMT",
+   "last_modified": "Mon, 16 Nov 2026 03:21:05 GMT",
    "taille": 513351,
    "sha256": "b4e397c67f98abe13613c3f5d175a1779c04c4edfcf9e0afd58a03d9dd85866c",
-   "telecharge_le": "2026-11-14T12:09:14+00:00"
+   "telecharge_le": "2026-11-16T13:33:02+00:00"
   },
   "an_scrutins_15": {
    "url": "https://data.assemblee-nationale.fr/static/openData/repository/15/loi/scrutins/Scrutins_XV.json.zip",
@@ -120,11 +120,11 @@
   "textes": 1096,
   "scrutins": 18417,
   "positions_groupes": 204298,
-  "amendements": 19691,
+  "amendements": 19753,
   "groupes": 43,
-  "deputes": 1205,
-  "mandats": 2004,
-  "appartenances": 4416,
+  "deputes": 1206,
+  "mandats": 2005,
+  "appartenances": 4417,
   "mises_au_point": 7912,
   "scores_scrutins": 914,
   "scores_deputes": 14593,
@@ -428,7 +428,7 @@
   }
  },
  "en_cours": {
-  "date_reference": "2026-11-14",
+  "date_reference": "2026-11-16",
   "inactivite_mois": 12,
   "debut": "2024-07-18"
  }

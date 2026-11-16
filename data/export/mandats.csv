@@ -827,9 +827,9 @@ PM723010,PA720590,15,Pas-de-Calais,62,8,2017-06-18,2022-06-21,élections génér
 PM723012,PA720598,15,Pas-de-Calais,62,9,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM723014,PA720606,15,Pas-de-Calais,62,10,2017-06-18,2021-04-21,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
 PM782592,PA720610,15,Pas-de-Calais,62,10,2017-06-18,2022-06-21,"remplacement d'un député ayant démissionné pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral",Fin de législature
-PM840315,PA720614,17,Pas-de-Calais,62,11,2024-06-30,,élections générales,
 PM797055,PA720614,16,Pas-de-Calais,62,11,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM723016,PA720614,15,Pas-de-Calais,62,11,2017-06-18,2022-06-21,élections générales,Fin de législature
+PM840315,PA720614,17,Pas-de-Calais,62,11,2024-06-30,,élections générales,
 PM723018,PA720622,15,Oise,60,6,2017-06-18,2022-06-21,élections générales,Fin de législature
 PM797094,PA720630,16,Oise,60,7,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM723020,PA720630,15,Oise,60,7,2017-06-18,2022-06-21,élections générales,Fin de législature
@@ -1798,7 +1798,8 @@ PM840390,PA796026,17,Var,83,5,2024-06-30,,élections générales,
 PM797817,PA796034,16,Var,83,6,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM840393,PA796034,17,Var,83,6,2024-06-30,2026-09-30,élections générales,Élection au Sénat
 PM797820,PA796042,16,Var,83,7,2022-06-19,2024-06-09,élections générales,Fin de législature
-PM843428,PA796042,17,Var,83,7,2024-07-07,,élections générales,
+PM843428,PA796042,17,Var,83,7,2024-07-07,2026-11-09,élections générales,"Démission pour cause d’incompatibilité prévue aux articles LO 137, LO 137-1, LO 141 ou LO 141-1 du code électoral"
+PM888570,PA796046,17,Var,83,7,2024-07-07,,"élection partielle, remplacement d'un député élu au Sénat",
 PM840411,PA796050,17,Var,83,8,2024-06-30,,élections générales,
 PM797823,PA796050,16,Var,83,8,2022-06-19,2024-06-09,élections générales,Fin de législature
 PM843668,PA796062,17,Seine-Saint-Denis,93,3,2024-07-07,,élections générales,
