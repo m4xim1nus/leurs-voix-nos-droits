@@ -33,6 +33,8 @@
     'en_cours_lectures.csv': 'lectures votées de ces textes : issue, scrutin de l’AN, mode de vote',
     'en_cours_evenements.csv': 'procédure accélérée, 49.3, CMP, saisine du Conseil constitutionnel',
     'en_cours_etats.csv': 'où en est chaque texte du catalogue',
+    'etapes.csv':
+      'grandes étapes du parcours de chaque texte (dépôt, lectures, CMP, Conseil constitutionnel, promulgation) et son origine',
     'en_cours_agenda.csv': 'ordre du jour de l’AN : points de séance et de commission à venir',
     'en_cours_alertes.csv': 'nouveaux votes et inscriptions à traiter pour la qualification',
     'termes_recherche.csv':

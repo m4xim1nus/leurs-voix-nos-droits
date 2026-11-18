@@ -317,6 +317,16 @@ le catalogue :
 | `en_cours_lectures.csv` | leurs lectures votées : issue, scrutin décisif à l'AN, mode |
 | `en_cours_evenements.csv` | procédure accélérée, 49.3, CMP, saisine du Conseil constitutionnel… |
 | `en_cours_etats.csv` | un état par texte du catalogue, y compris la XVIe |
+| `etapes.csv` | les grandes étapes de chaque texte du catalogue (frise de sa fiche) et son origine |
+
+`etapes.csv` (`lvnd/frise.py`) liste, par texte, les actes datés du dossier AN : dépôt,
+lectures votées, CMP (une ligne : accord ou désaccord), décision du Conseil
+constitutionnel, promulgation. La ligne du dépôt porte l'origine : `gouvernement` pour un
+projet de loi ; `parlementaire` pour une proposition, avec le premier signataire
+(`auteur_id`), son groupe politique à la date du dépôt (`auteur_groupe`, vide pour un
+texte déposé au Sénat : l'annuaire de l'AN ne couvre pas les sénateurs) et le nombre de
+cosignataires. Aucune étape n'est déduite : l'issue d'un texte non promulgué se lit dans
+`en_cours_etats.csv`.
 
 `etat` vaut : `loi` ; `adopte` (pas encore promulgué) ; `en_navette`, avec
 `attente` et `attente_chambre` ; `avant_vote` (aucune lecture conclue en

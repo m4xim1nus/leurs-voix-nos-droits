@@ -180,7 +180,13 @@ export function vueTexte(id: string) {
       return s ? [{ groupe: g, score: s }] : [];
     })
     .sort(ordreTexte);
-  return { texte, groupes, groupesSenat, dateEtat: d.dateEtat };
+  return {
+    texte,
+    groupes,
+    groupesSenat,
+    dateEtat: d.dateEtat,
+    parcours: d.parcours.get(texte.dossier_an) ?? null
+  };
 }
 
 // --- Députés ----------------------------------------------------------------------------------

@@ -1,9 +1,11 @@
 <script lang="ts">
   import { abstentionniste } from '$lib/groupes';
+  import Frise from '$lib/components/Frise.svelte';
   import Regle from '$lib/components/Regle.svelte';
   import Sources from '$lib/components/Sources.svelte';
   import Ventilations from '$lib/components/Ventilations.svelte';
   import { court, ETIQUETTES, phrase } from '$lib/droits';
+  import { pointsFrise } from '$lib/frise';
   import {
     date,
     entier,
@@ -23,6 +25,14 @@
   const comptes = $derived(t.scrutins.filter((s) => s.compte));
   const affiches = $derived(t.scrutins.filter((s) => !s.compte));
   const src = (ids: string[]) => ids.map((i) => t.sources[i]).filter(Boolean);
+  const frise = $derived(
+    pointsFrise(data.parcours, t.etat, {
+      numero: t.loi,
+      dateLoi: t.date_loi,
+      ccUrl: t.cc_url,
+      ccNumero: t.cc_decision
+    })
+  );
   const enNavette = $derived(t.etat?.etat === 'en_navette');
   const mentionDecisif = $derived(
     mentionNavette(t.etat, t.scrutins.find((s) => s.role === 'decisif')?.etape ?? null)
@@ -241,6 +251,8 @@
   {/if}
 </div>
 {#if t.resume}<p class="chapo">{t.resume}</p>{/if}
+
+<Frise points={frise} />
 
 <section>
   <h2 id="ce-que-fait">Ce que fait le texte</h2>

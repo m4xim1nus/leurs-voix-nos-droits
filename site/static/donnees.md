@@ -145,6 +145,11 @@ Ces fichiers n'entrent dans aucun score (règle 20).
 - `id`, `etat` : loi, adopte (pas encore promulgué), en_navette, a_l_arret, rejete, retire, hors_navette (résolution, engagement de responsabilité), avant_vote
 - `attente`, `attente_chambre`, `date_derniere_lecture`, `issue_derniere_lecture`, `date_derniere_activite`, `seance_inscrite`
 
+### `etapes.csv`
+
+- `texte_id`, `ordre`, `etape` (depot, lecture, cmp, cc, promulgation), `chambre` (AN, SN), `lecture` (premiere, deuxieme, troisieme, nouvelle, definitive), `date`, `issue` (lecture : adopte, rejete ; CMP : accord, desaccord, convoquee), `detail` (décision du Conseil constitutionnel : son sens ; promulgation : numéro de la loi) : les grandes étapes de chaque texte, pour la frise de sa fiche
+- `origine` (gouvernement, parlementaire), `auteur_id`, `auteur_groupe`, `cosignataires` : renseignés sur la ligne du dépôt seulement. Pour une proposition, premier·e signataire et son groupe politique à la date du dépôt (vide pour un texte déposé au Sénat)
+
 ### `en_cours_agenda.csv`
 
 - `point_id`, `dossier_id`, `date`, `heure`, `instance` (seance, commission), `organe_id`, `organe`, `etat`, `type_point`, `objet`, `procedure`
