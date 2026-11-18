@@ -88,9 +88,18 @@
     {#each textes as t (t.texte.id)}
       <li>
         <TexteCarte texte={t.texte} droit={filtre}>
-          {#snippet pied()}
-            {g.sigle} : <strong class="chiffre">{pourcent(t.score)}</strong> de votes favorables aux droits
-            sur ce texte
+          {#snippet score()}
+            <span class="visuellement-cache"
+              >{g.sigle} : {pourcent(t.score)} de votes favorables aux droits sur ce texte.</span
+            >
+            <span class="mesure" aria-hidden="true">
+              <span class="valeur chiffre">{pourcent(t.score)}</span>
+              <span class="jauge" style:--c={g.couleur}
+                ><span class="rempli" style:width="{Math.min(100, Math.max(0, t.score ?? 0))}%"
+                ></span></span
+              >
+              <span class="legende">de votes favorables aux droits</span>
+            </span>
           {/snippet}
         </TexteCarte>
       </li>
@@ -185,6 +194,50 @@
   }
   .cartes li > :global(a) {
     flex: 1;
+  }
+  .mesure {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .valeur {
+    font-family: var(--titre);
+    font-size: 2.25rem;
+    font-weight: 800;
+    font-stretch: 75%;
+    line-height: 1;
+  }
+  .jauge {
+    display: block;
+    height: 0.5rem;
+    border-radius: 3px;
+    background: var(--filet);
+    overflow: hidden;
+  }
+  .rempli {
+    display: block;
+    height: 100%;
+    background: var(--c);
+  }
+  .legende {
+    font-size: 0.78rem;
+    line-height: 1.25;
+    color: var(--ardoise);
+  }
+  @media (max-width: 30rem) {
+    .mesure {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 0.2rem 0.75rem;
+    }
+    .jauge {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .legende {
+      grid-column: 1 / -1;
+    }
   }
   .filtre {
     display: flex;

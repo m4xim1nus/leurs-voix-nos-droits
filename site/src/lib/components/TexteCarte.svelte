@@ -2,7 +2,9 @@
   Un texte qualifié en carte, dans les listes de textes : le droit et son sens d'abord, en bande de
   couleur ; puis le titre officiel, la phrase en mots simples dessous, la date du vote et où en est
   le texte. Sous l'angle du droit `droit` quand la liste est filtrée sur un droit.
-  `pied` ajoute une ligne en bas de la carte (par exemple le vote d'un groupe sur ce texte).
+  `pied` ajoute une ligne en bas de la carte. `score` ajoute un encart de mesure bien visible, à
+  droite de la carte (en bandeau sous le corps sur téléphone), par exemple le score d'un groupe sur
+  ce texte : l'appelant y met un chiffre en grand, une jauge et un libellé.
 -->
 <script lang="ts">
   import { court, phrase, sousAngle } from '$lib/droits';
@@ -13,8 +15,9 @@
   let {
     texte,
     droit = null,
-    pied
-  }: { texte: TexteListe; droit?: string | null; pied?: Snippet } = $props();
+    pied,
+    score
+  }: { texte: TexteListe; droit?: string | null; pied?: Snippet; score?: Snippet } = $props();
   const vu = $derived(
     texte.principal ? sousAngle({ ...texte, principal: texte.principal }, droit) : null
   );
@@ -49,6 +52,7 @@
     {#if aussi.length}<span class="aussi">Touche aussi : {aussi.join(', ')}</span>{/if}
     {#if pied}<span class="pied">{@render pied()}</span>{/if}
   </span>
+  {#if score}<span class="score">{@render score()}</span>{/if}
 </a>
 
 <style>
@@ -127,6 +131,16 @@
     border-top: 1px solid var(--filet);
     font-size: 0.9rem;
   }
+  .score {
+    flex: 0 0 8.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.85rem 1rem;
+    border-left: 1px solid var(--filet);
+    background: var(--plan);
+  }
   .etat {
     font-weight: 600;
     color: var(--encre);
@@ -142,6 +156,12 @@
       align-items: baseline;
       gap: 0.5rem;
       padding: 0.5rem 0.9rem;
+    }
+    .score {
+      flex: none;
+      border-left: 0;
+      border-top: 1px solid var(--filet);
+      padding: 0.6rem 0.9rem;
     }
   }
 </style>
