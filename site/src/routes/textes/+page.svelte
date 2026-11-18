@@ -5,8 +5,16 @@
   import TexteCarte from '$lib/components/TexteCarte.svelte';
   import { chargerMoteur } from '$lib/charge-recherche';
   import { sousAngle } from '$lib/droits';
-  import { etatTexte, legislature, normaliser, pluriel } from '$lib/format';
+  import {
+    GROUPES_ETAT,
+    etatTexte,
+    groupeEtat,
+    legislature,
+    normaliser,
+    pluriel
+  } from '$lib/format';
   import { NOM } from '$lib/site';
+  import type { GroupeEtat } from '$lib/format';
   import type { Sens } from '$lib/types';
 
   let { data } = $props();
@@ -16,6 +24,7 @@
   let sens = $state<'' | Sens>('');
   let leg = $state('');
   let chambre = $state('');
+  let etat = $state<'' | GroupeEtat>('');
 
   // Sens d'un texte sous l'angle du droit choisi (ou de son droit principal) : celui que montre sa carte.
   const sensVu = (t: (typeof data.textes)[number], code: string | null) =>
@@ -78,19 +87,25 @@
         (!droit || t.droits.some((d) => d.code === droit)) &&
         (!sens || sensVu(t, droit || null) === sens) &&
         (!leg || (!t.seul && String(t.legislature) === leg)) &&
-        (!chambre || (chambre === 'senat') === t.seul)
+        (!chambre || (chambre === 'senat') === t.seul) &&
+        (!etat || groupeEtat(t.etat) === etat)
     );
     return rangs ? liste.sort((a, b) => rangs!.get(a.id)! - rangs!.get(b.id)!) : liste;
   });
 
   const nomDroit = $derived(data.droits.find((d) => d.code === droit)?.court ?? '');
-  const filtre = $derived(Boolean(q || droit || sens || leg || chambre));
-  const autresFiltres = $derived(Boolean(leg || chambre));
+  const filtre = $derived(Boolean(q || droit || sens || leg || chambre || etat));
+  const autresFiltres = $derived(Boolean(leg || chambre || etat));
   const titreResultats = $derived(
     attente
       ? 'Recherche…'
       : filtre
-        ? [pluriel(textes.length, 'texte', 'textes', 'Aucun texte'), nomDroit, q && `« ${q} »`]
+        ? [
+            pluriel(textes.length, 'texte', 'textes', 'Aucun texte'),
+            nomDroit,
+            etat && GROUPES_ETAT[etat],
+            q && `« ${q} »`
+          ]
             .filter(Boolean)
             .join(' · ')
         : 'Du plus récent au plus ancien'
@@ -102,6 +117,7 @@
     sens = '';
     leg = '';
     chambre = '';
+    etat = '';
   }
 </script>
 
@@ -193,6 +209,15 @@
           <option value="">Tous</option>
           <option value="an">À l’Assemblée</option>
           <option value="senat">Au seul Sénat</option>
+        </select>
+      </label>
+      <label>
+        État
+        <select bind:value={etat}>
+          <option value="">Tous</option>
+          {#each Object.entries(GROUPES_ETAT) as [code, nom] (code)}<option value={code}
+              >{nom}</option
+            >{/each}
         </select>
       </label>
     </div>

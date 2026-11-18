@@ -3,6 +3,7 @@ import {
   date,
   etatEnListe,
   etatTexte,
+  groupeEtat,
   inscription,
   listeDates,
   mentionNavette,
@@ -109,5 +110,31 @@ describe('typo', () => {
       'Censure : article 7 ; « VSA » validée ? Oui !'
     );
     expect(typo('https://x.fr/a:b')).toBe('https://x.fr/a:b');
+  });
+});
+
+describe('groupeEtat', () => {
+  const g = (e: string) => groupeEtat({ etat: e } as unknown as EtatTexte);
+
+  it('range en « loi » une loi promulguée et un texte adopté', () => {
+    expect(g('loi')).toBe('loi');
+    expect(g('adopte')).toBe('loi');
+  });
+
+  it('range en « en cours » un texte en navette ou pas encore voté', () => {
+    expect(g('en_navette')).toBe('en_cours');
+    expect(g('avant_vote')).toBe('en_cours');
+  });
+
+  it('range en « n’a pas abouti » un texte rejeté, retiré, caduc, fusionné ou à l’arrêt', () => {
+    for (const e of ['rejete', 'retire', 'caduc', 'fusionne', 'a_l_arret'])
+      expect(g(e)).toBe('mort');
+  });
+
+  it('ne range nulle part un texte sans état, hors navette ou d’un état inconnu', () => {
+    expect(groupeEtat(null)).toBeNull();
+    expect(groupeEtat(undefined)).toBeNull();
+    expect(g('hors_navette')).toBeNull();
+    expect(g('inconnu')).toBeNull();
   });
 });

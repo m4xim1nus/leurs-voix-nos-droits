@@ -108,6 +108,41 @@ export function etatTexte(e: EtatTexte | null): string {
   }
 }
 
+/** Les trois états du filtre de /textes ; `''` quand il n'est pas posé. */
+export type GroupeEtat = 'loi' | 'en_cours' | 'mort';
+
+/** Libellés publics des groupes d'états (le filtre et le titre des résultats). */
+export const GROUPES_ETAT: Record<GroupeEtat, string> = {
+  loi: 'Loi (promulguée ou adoptée)',
+  en_cours: 'En cours d’examen',
+  mort: 'N’a pas abouti'
+};
+
+/**
+ * Regroupe l'état d'un texte en trois : loi (`loi`, `adopte`), en cours (`en_navette`,
+ * `avant_vote`), n'a pas abouti (`rejete`, `retire`, `caduc`, `fusionne`, `a_l_arret`).
+ * Null sans état ou pour `hors_navette` (résolution, motion : aucune lecture) ou un état inconnu :
+ * le texte n'est alors dans aucun groupe.
+ */
+export function groupeEtat(e: EtatTexte | null | undefined): GroupeEtat | null {
+  switch (e?.etat) {
+    case 'loi':
+    case 'adopte':
+      return 'loi';
+    case 'en_navette':
+    case 'avant_vote':
+      return 'en_cours';
+    case 'rejete':
+    case 'retire':
+    case 'caduc':
+    case 'fusionne':
+    case 'a_l_arret':
+      return 'mort';
+    default:
+      return null;
+  }
+}
+
 const LECTURE: Record<string, string> = {
   AN1: 'de 1re lecture',
   AN2: 'de 2e lecture',
