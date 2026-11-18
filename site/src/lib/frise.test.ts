@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { phraseOrigine, pointsFrise, resumeFrise } from './frise';
+import { phraseOrigine, pointsFrise, resumeFrise, type VoteDecisif } from './frise';
 import type { EtapeParcours, EtatTexte, OrigineTexte, Parcours } from './types';
 
 const SANS_LOI = { numero: null, dateLoi: null, ccUrl: null, ccNumero: null };
@@ -189,5 +189,76 @@ describe('pointsFrise', () => {
       '2 étapes. Dernière étape : 1re lecture à l’Assemblée nationale, le 1er février 2023.'
     );
     expect(resumeFrise([])).toBe('');
+  });
+
+  describe('vote décisif', () => {
+    const vote = (v: Partial<VoteDecisif>): VoteDecisif => ({
+      chambre: 'AN',
+      date: '2023-02-01',
+      etape: 'AN1',
+      texte: 'adopté par 300\u00a0voix contre 200',
+      ...v
+    });
+    const etapes = [
+      etape({}),
+      etape({ chambre: 'SN', date: '2023-03-01' }),
+      etape({ etape: 'cmp', chambre: null, lecture: null, issue: 'accord', date: '2023-04-01' }),
+      etape({ lecture: 'definitive', date: '2023-04-20' })
+    ];
+
+    it('son décompte va sur la lecture de même date', () => {
+      const pts = pointsFrise({ origine: gouv, etapes }, null, SANS_LOI, { vote: vote({}) });
+      expect(pts.filter((p) => p.decompte).map((p) => p.titre)).toEqual([
+        '1re lecture à l’Assemblée nationale'
+      ]);
+    });
+
+    it('le texte de la CMP va sur la CMP', () => {
+      const pts = pointsFrise({ origine: gouv, etapes }, null, SANS_LOI, {
+        vote: vote({ etape: 'CMP', date: '2023-04-10' })
+      });
+      const cmp = pts.find((p) => p.decompte);
+      expect(cmp?.titre).toBe('Commission mixte paritaire');
+      expect(cmp?.decompte).toBe('adopté par 300\u00a0voix contre 200, le 10 avril 2023');
+    });
+
+    it('à défaut de date, la lecture du même rang', () => {
+      const pts = pointsFrise({ origine: gouv, etapes }, null, SANS_LOI, {
+        vote: vote({ etape: 'ANLDEF', date: '2023-04-21' })
+      });
+      expect(pts.find((p) => p.decompte)?.titre).toBe('Lecture définitive à l’Assemblée nationale');
+    });
+
+    it('sans étape, un point « Vote décisif » à sa date, avant l’issue', () => {
+      const pts = pointsFrise(
+        { origine: gouv, etapes: [] },
+        etat({ etat: 'en_navette', attente: 'lecture', attente_chambre: 'SN' }),
+        SANS_LOI,
+        { vote: vote({ date: '2023-02-01' }) }
+      );
+      expect(pts.map((p) => p.titre)).toEqual([
+        'Dépôt',
+        'Vote décisif à l’Assemblée nationale',
+        'En cours d’examen'
+      ]);
+      expect(pts[1].resultat).toBe('Adopté par 300\u00a0voix contre 200');
+    });
+  });
+
+  it('un texte en cours dit sa séance inscrite et la date de l’état', () => {
+    const pts = pointsFrise(
+      { origine: gouv, etapes: [] },
+      etat({
+        etat: 'en_navette',
+        attente: 'lecture',
+        attente_chambre: 'SN',
+        seance_inscrite: '2026-12-01'
+      }),
+      SANS_LOI,
+      { dateEtat: '2026-11-18' }
+    );
+    expect(pts.at(-1)?.precision).toBe(
+      'Inscrit en séance le 1er décembre 2026. État au 18 novembre 2026.'
+    );
   });
 });

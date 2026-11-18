@@ -26,6 +26,7 @@
                 >{/if}
             </p>
             {#if p.resultat}<p class="resultat-etape">{p.resultat}</p>{/if}
+            {#if p.decompte}<p class="decompte">Vote décisif : {p.decompte}</p>{/if}
             {#if p.date}<p class="petit discret">
                 <time datetime={p.date}>{date(p.date)}</time>
               </p>{/if}
@@ -127,6 +128,10 @@
   }
   .resultat-etape {
     font-weight: 650;
+  }
+  .decompte {
+    margin-top: 0.15rem;
+    font-variant-numeric: tabular-nums;
   }
   .bloque .resultat-etape,
   .bloque .titre-etape {
