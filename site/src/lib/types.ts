@@ -30,6 +30,36 @@ export interface EtatTexte {
   seance_inscrite: string | null;
 }
 
+/** Une grande étape du parcours d'un texte : `etapes.csv`, des actes datés de l'open data. */
+export interface EtapeParcours {
+  etape: 'depot' | 'lecture' | 'cmp' | 'cc' | 'promulgation';
+  chambre: 'AN' | 'SN' | null;
+  /** `premiere`, `deuxieme`, `troisieme`, `nouvelle` ou `definitive` (lectures seulement). */
+  lecture: string | null;
+  date: string;
+  /** Lecture : `adopte` ou `rejete`. CMP : `accord`, `desaccord` ou `convoquee`. */
+  issue: string | null;
+  /** Conseil constitutionnel : sens de la décision. Promulgation : numéro de la loi. */
+  detail: string | null;
+}
+
+/** Qui a déposé le texte : le gouvernement, ou un·e parlementaire et son groupe au dépôt. */
+export interface OrigineTexte {
+  type: 'gouvernement' | 'parlementaire';
+  /** Premier·e signataire, quand l'annuaire des député·es le connaît. */
+  auteur: { nom: string; slug: string } | null;
+  groupe: GroupeCourt | null;
+  cosignataires: number | null;
+  chambre: 'AN' | 'SN' | null;
+  date: string;
+}
+
+export interface Parcours {
+  origine: OrigineTexte | null;
+  /** Hors dépôt, dans l'ordre chronologique. */
+  etapes: EtapeParcours[];
+}
+
 export interface Droit {
   code: string;
   libelle: string;

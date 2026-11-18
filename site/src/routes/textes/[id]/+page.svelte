@@ -1,13 +1,14 @@
 <script lang="ts">
   import { abstentionniste } from '$lib/groupes';
+  import Frise from '$lib/components/Frise.svelte';
   import Regle from '$lib/components/Regle.svelte';
   import Sources from '$lib/components/Sources.svelte';
   import Ventilations from '$lib/components/Ventilations.svelte';
   import { court, ETIQUETTES, phrase } from '$lib/droits';
+  import { pointsFrise, type VoteDecisif } from '$lib/frise';
   import {
     date,
     entier,
-    etatTexte,
     legislature,
     majuscule,
     mentionNavette,
@@ -76,40 +77,38 @@
   ]);
 
   /**
-   * Le résultat en une ligne : le décompte du vote décisif, puis où en est le texte. Le décompte
-   * n'est écrit que si voter pour, c'est soutenir le texte ; sinon, la formule de l'en-tête.
+   * Le décompte du vote décisif, porté par son étape dans la frise. Il n'est écrit que si voter pour,
+   * c'est soutenir le texte ; sinon, l'en-tête donne la date du vote décisif.
    */
-  const resultat = $derived.by(() => {
+  const voteDecisif = $derived.by((): VoteDecisif | null => {
     const s: ScrutinRetenu | ScrutinSenat | undefined = t.seul
       ? vs?.scrutins.find((x) => x.role === 'decisif')
       : t.scrutins.find((x) => x.role === 'decisif');
-    const ou = t.seul ? 'au Sénat' : 'à l’Assemblée';
-    const vote = t.sans_vote
-      ? 'Adopté par le 49.3, sans vote final de l’Assemblée'
-      : s?.pour === 'texte'
-        ? s.sort === 'adopte'
-          ? `Adopté ${ou} par ${entier(s.decompte.pour)}\u00a0voix contre ${entier(s.decompte.contre)}`
-          : `Rejeté ${ou} par ${entier(s.decompte.contre)}\u00a0voix contre ${entier(s.decompte.pour)}`
-        : t.seul
-          ? `Vote du Sénat le ${date(t.date)}`
-          : `Vote décisif le ${date(t.date)}`;
-    const etat = t.loi ? 'Loi promulguée' : etatTexte(t.etat);
-    // « Rejeté à l'Assemblée par… · Rejeté » : l'état ne répète pas le vote.
-    if (!etat || (etat === 'Rejeté' && s?.sort === 'rejete' && s.pour === 'texte')) return vote;
-    return `${vote}\u00a0· ${etat}${t.loi ? '' : ` (état au ${date(data.dateEtat)})`}`;
+    if (t.sans_vote || !s || s.pour !== 'texte') return null;
+    const texte =
+      s.sort === 'adopte'
+        ? `adopté par ${entier(s.decompte.pour)}\u00a0voix contre ${entier(s.decompte.contre)}`
+        : `rejeté par ${entier(s.decompte.contre)}\u00a0voix contre ${entier(s.decompte.pour)}`;
+    return {
+      chambre: t.seul ? 'SN' : 'AN',
+      date: s.date,
+      etape: 'etape' in s ? s.etape : null,
+      texte
+    };
   });
-  // Ce que l'état n'a pas dit : l'inscription en séance, la dernière lecture conclue.
-  const suiteEtat = $derived(
-    t.loi || !t.etat
-      ? ''
-      : [
-          t.etat.seance_inscrite ? `Inscrit en séance le ${date(t.etat.seance_inscrite)}.` : '',
-          t.etat.date_derniere_lecture && t.etat.date_derniere_lecture > t.date
-            ? `Dernière lecture conclue le ${date(t.etat.date_derniere_lecture)}.`
-            : ''
-        ]
-          .filter(Boolean)
-          .join(' ')
+
+  const frise = $derived(
+    pointsFrise(
+      data.parcours,
+      t.etat,
+      {
+        numero: t.loi,
+        dateLoi: t.date_loi,
+        ccUrl: t.cc_url,
+        ccNumero: t.cc_decision
+      },
+      { vote: voteDecisif, dateEtat: t.loi ? null : data.dateEtat }
+    )
   );
 
   const pourquoi = (s: ScrutinRetenu) =>
@@ -182,11 +181,11 @@
 <h1 class="titre">{t.titre}</h1>
 <p class="discret">
   {#if t.seul}
-    <!-- L'état (« attendu à l'Assemblée ») et le 49.3 sont dits par la ligne du résultat, dessous. -->
+    <!-- Le décompte du vote et l'état (« attendu à l'Assemblée ») sont dits par la frise, dessous. -->
     Pas de vote sur l’ensemble à l’Assemblée. Vote du Sénat le {date(t.date)}.
   {:else}
     {legislature(t.legislature)} législature. {t.sans_vote
-      ? ''
+      ? 'Adopté par le 49.3, sans vote final de l’Assemblée.'
       : `Vote décisif le ${date(t.date)}${mentionDecisif ? ` (${mentionDecisif})` : ''}.`}
   {/if}
   {#if t.loi}{`Loi n° ${t.loi}${t.date_loi ? ` du ${date(t.date_loi)}` : ''}.`}{/if}
@@ -231,8 +230,6 @@
       <a href="#ce-que-fait">Ce que fait le texte</a>.
     </p>
   {/if}
-  <p class="resultat">{resultat}.</p>
-  {#if suiteEtat}<p class="petit discret">{suiteEtat}</p>{/if}
   {#if t.resume_simple}
     <div class="simple" lang="fr">
       <p class="etiquette">En mots simples</p>
@@ -241,6 +238,8 @@
   {/if}
 </div>
 {#if t.resume}<p class="chapo">{t.resume}</p>{/if}
+
+<Frise points={frise} />
 
 <section>
   <h2 id="ce-que-fait">Ce que fait le texte</h2>
@@ -561,10 +560,6 @@
   }
   .principal .nom {
     font-size: clamp(1.5rem, 5vw, 2rem);
-  }
-  .resultat {
-    margin: 0.9rem 0 0.25rem;
-    font-weight: 650;
   }
   .simple {
     max-width: 60ch;

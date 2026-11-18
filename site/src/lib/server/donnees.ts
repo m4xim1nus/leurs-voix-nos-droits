@@ -16,11 +16,13 @@ import type {
   Droit,
   Echeance,
   Ecarte,
+  EtapeParcours,
   EtatTexte,
   GroupeCourt,
   Lignee,
   Mandat,
   Participation,
+  Parcours,
   Position,
   PositionGroupe,
   Score,
@@ -78,6 +80,8 @@ export interface Donnees {
   groupe: Map<string, GroupeCourt>;
   deputes: Depute[];
   deputeParId: Map<string, Depute>;
+  /** Grandes étapes de chaque dossier (`etapes.csv`) ; absent d'un dossier que le fichier ne couvre pas. */
+  parcours: Map<string, Parcours>;
   scoresDeputes: Map<string, Map<string, Score>>;
   scoresGroupes: Map<string, Map<string, Score>>;
   scoresDeputesTextes: Map<string, Map<string, Score>>;
@@ -207,6 +211,40 @@ function etats(): Map<string, EtatTexte> {
   );
 }
 
+/** Grandes étapes par dossier. Un export sans `etapes.csv` donne une table vide : pas de frise, rien d'autre. */
+function parcoursDossiers(groupe: Map<string, GroupeCourt>, deputes: Map<string, Depute>) {
+  const out = new Map<string, Parcours>();
+  if (!existsSync(resolve(EXPORT, 'etapes.csv'))) return out;
+  for (const r of exp('etapes')) {
+    const p = out.get(r.texte_id!) ?? { origine: null, etapes: [] };
+    out.set(r.texte_id!, p);
+    const chambre = r.chambre === 'AN' || r.chambre === 'SN' ? r.chambre : null;
+    if (r.etape === 'depot') {
+      const type = r.origine;
+      if (type !== 'gouvernement' && type !== 'parlementaire') continue;
+      const dep = r.auteur_id ? deputes.get(r.auteur_id) : undefined;
+      p.origine = {
+        type,
+        auteur: dep ? { nom: `${dep.prenom} ${dep.nom}`, slug: dep.slug } : null,
+        groupe: (r.auteur_groupe && groupe.get(r.auteur_groupe)) || null,
+        cosignataires: num(r.cosignataires),
+        chambre,
+        date: r.date!
+      };
+    } else {
+      p.etapes.push({
+        etape: r.etape as EtapeParcours['etape'],
+        chambre,
+        lecture: txt(r.lecture),
+        date: r.date!,
+        issue: txt(r.issue),
+        detail: txt(r.detail)
+      });
+    }
+  }
+  return out;
+}
+
 /** Une entrée de `suivis` dans editorial.json. */
 interface SuiviEditorial {
   id: string;
@@ -265,6 +303,7 @@ function charger(): Donnees {
   const deputeParId = new Map(deps.map((d) => [d.id, d]));
   const catalogue = new Map(exp('textes').map((t) => [t.id!, t]));
   const etat = etats();
+  const parcours = parcoursDossiers(groupe, deputeParId);
   const senat = baseSenat();
   const lectures = exp('en_cours_lectures');
   const lecturesSenat = new Set(
@@ -614,6 +653,7 @@ function charger(): Donnees {
 
   return {
     genereLe: meta.genere_le,
+    parcours,
     dateEtat: meta.en_cours.date_reference,
     droits,
     textes,

@@ -9,7 +9,7 @@ from pathlib import Path
 
 import polars as pl
 
-from . import agenda, alertes, amendements, an, candidats, editorial, encours, parcours, positions, recherche, referentiels, scores, senat, textes
+from . import agenda, alertes, amendements, an, candidats, editorial, encours, frise, parcours, positions, recherche, referentiels, scores, senat, textes
 from .sources import lire_manifeste, racine
 from .texte import norm
 
@@ -187,6 +187,7 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
     candidats.annoter(cat, titres)
     ids = {t["id"] for t in cat}
     etats = [e for e in etats if e["id"] in ids]
+    frises = [r for c in classes if c["uid"] in ids for r in frise.etapes(c, raw)]
     _log(f"   {len(cat)} textes, dont {sum(not t['n_scrutins'] for t in cat)} sans scrutin public à l'AN et "
          f"{sum(bool(t['droits_candidats'] or t['etiquettes_candidates']) for t in cat)} candidats par mots-clés")
 
@@ -224,6 +225,8 @@ def build(raw: Path, sqlite: Path, export: Path) -> None:
         "en_cours_lectures": _df(lect_ec),
         "en_cours_evenements": _df(evt_ec),
         "en_cours_etats": _df(etats),
+        # grandes étapes du parcours de chaque texte, pour la frise de sa fiche (lvnd/frise.py)
+        "etapes": _df(frises, frise.COLONNES),
         "en_cours_agenda": _df(points, agenda.COLONNES),
         "en_cours_alertes": _df(alertes.calculer(cat, scr, points, qualif, dfs_senat["scrutins"].to_dicts(),
                                                  [{**l, "motif_ecart": motifs_ec[l["texte_id"]]} for l in lect_ec]),
