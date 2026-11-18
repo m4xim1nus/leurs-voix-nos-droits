@@ -150,12 +150,14 @@
       >
     </div>
   </div>
-  <ul class="tuiles">
+  <ul class="tuiles" data-sens={sens}>
     {#each tuiles as d (d.code)}
+      {@const retenu = sens === 'restreint' ? d.r : sens === 'etend' ? d.e : d.total}
       <li>
         <button
           type="button"
           class="tuile"
+          class:vide={sens !== '' && retenu === 0}
           aria-pressed={droit === d.code}
           onclick={() => (droit = droit === d.code ? '' : d.code)}
         >
@@ -169,8 +171,27 @@
           <span class="compte" aria-hidden="true"
             ><span class="defavorable">▼ {d.r}</span><span class="favorable">▲ {d.e}</span></span
           ><span class="visuellement-cache"
-            >{pluriel(d.r, 'texte restreint', 'textes restreignent', 'aucun texte ne restreint')} ce droit,
-            {pluriel(d.e, 'texte l’étend', 'textes l’étendent', 'aucun ne l’étend')}.</span
+            >{#if sens === 'restreint'}{pluriel(
+                d.r,
+                'texte restreint',
+                'textes restreignent',
+                'aucun texte ne restreint'
+              )} ce droit.{:else if sens === 'etend'}{pluriel(
+                d.e,
+                'texte étend',
+                'textes étendent',
+                'aucun texte n’étend'
+              )} ce droit.{:else}{pluriel(
+                d.r,
+                'texte restreint',
+                'textes restreignent',
+                'aucun texte ne restreint'
+              )} ce droit, {pluriel(
+                d.e,
+                'texte l’étend',
+                'textes l’étendent',
+                'aucun ne l’étend'
+              )}.{/if}</span
           >
         </button>
       </li>
@@ -386,6 +407,26 @@
     gap: 1rem;
     font-size: 0.95rem;
     font-weight: 700;
+  }
+  /* Sens retenu : la part de l'autre sens passe au gris (barre et compte), sans changer les largeurs ;
+     le sens retenu reste lisible par le bouton pressé et par les symboles ▼ / ▲ du compte. */
+  .tuiles[data-sens='restreint'] .barre .e,
+  .tuiles[data-sens='etend'] .barre .r {
+    background: var(--ecarte);
+  }
+  .tuiles[data-sens='restreint'] .favorable,
+  .tuiles[data-sens='etend'] .defavorable {
+    color: var(--ardoise);
+    font-weight: 400;
+  }
+  /* Aucun texte dans le sens retenu : tuile atténuée, mais toujours cliquable. */
+  .tuile.vide {
+    border-style: dashed;
+  }
+  .tuile.vide .nom,
+  .tuile.vide .barre,
+  .tuile.vide .compte {
+    opacity: 0.6;
   }
   .plus {
     margin-top: 1rem;

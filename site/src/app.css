@@ -39,6 +39,7 @@
   --defavorable: #b0325f;
   --defavorable-pale: #f6dde6;
   --abstention: #9ea3ab;
+  --ecarte: #c9ccd3;
 
   --titre: 'Archivo', 'Arial Narrow', sans-serif;
   --texte: 'Archivo', system-ui, sans-serif;
@@ -61,6 +62,7 @@
     --defavorable: #e0779e;
     --defavorable-pale: #43202e;
     --abstention: #7c828c;
+    --ecarte: #464b55;
   }
 }
 

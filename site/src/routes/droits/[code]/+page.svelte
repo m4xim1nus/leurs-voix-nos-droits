@@ -58,7 +58,7 @@
 {#if !data.textes.length}
   <p>Aucun texte qualifié ne touche encore ce droit.</p>
 {:else}
-  <div class="bilan">
+  <div class="bilan" data-sens={sens}>
     <a class="defavorable" href="#textes" onclick={() => (sens = 'restreint')}
       ><span class="nombre">▼ {restreint}</span>
       {pluriel(
@@ -152,6 +152,12 @@
   }
   .bilan a:hover {
     text-decoration: underline;
+  }
+  /* Sens retenu par le sélecteur : l'autre bloc passe au gris. */
+  .bilan[data-sens='restreint'] a.favorable,
+  .bilan[data-sens='etend'] a.defavorable {
+    color: var(--ardoise);
+    border-color: var(--filet);
   }
   .bilan .nombre {
     font-family: var(--titre);
