@@ -211,7 +211,8 @@
     display: block;
     height: 0.5rem;
     border-radius: 3px;
-    background: var(--filet);
+    background: var(--papier);
+    box-shadow: inset 0 0 0 1px var(--ardoise);
     overflow: hidden;
   }
   .rempli {
