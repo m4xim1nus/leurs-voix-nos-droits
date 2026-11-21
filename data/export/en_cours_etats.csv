@@ -789,7 +789,7 @@ DLR5L17N50975,hors_navette,,,,,2024-12-04,
 DLR5L17N51002,loi,,,2025-06-19,adopte,,
 DLR5L17N51014,a_l_arret,,,2025-04-03,adopte,2025-04-04,
 DLR5L17N51017,a_l_arret,,,2025-04-03,adopte,2025-04-04,
-DLR5L17N51037,en_navette,lecture,SN,2026-07-07,adopte,2026-11-20,2026-11-20
+DLR5L17N51037,en_navette,transmis,AN,2026-11-20,adopte,2026-11-20,
 DLR5L17N51039,loi,,,2025-04-08,adopte,,
 DLR5L17N51051,hors_navette,,,,,2025-06-10,
 DLR5L17N51052,loi,,,2025-06-04,adopte,,
@@ -1029,8 +1029,6 @@ DLR5L17N54144,en_navette,lecture,SN,2026-05-28,adopte,2026-05-29,
 DLR5L17N54148,en_navette,lecture,SN,2026-06-03,adopte,2026-10-14,
 DLR5L17N54152,en_navette,lecture,AN,2026-10-13,adopte,2026-10-13,
 DLR5L17N54164,en_navette,lecture,AN,2026-06-24,adopte,2026-06-25,
-DLR5L17N54168,en_navette,lecture,AN,2026-06-24,adopte,2026-11-20,2026-11-20
-DLR5L17N54169,en_navette,lecture,AN,2026-06-24,adopte,2026-11-20,2026-11-20
 DLR5L17N54196,en_navette,transmis,AN,2026-06-22,adopte,2026-06-22,
 DLR5L17N54218,en_navette,lecture,AN,2026-10-26,rejete,2026-10-28,
 DLR5L17N54227,en_navette,lecture,SN,2026-06-01,adopte,2026-06-02,
@@ -1051,10 +1049,10 @@ DLR5L17N54525,en_navette,lecture,AN,2026-10-13,adopte,2026-10-14,
 DLR5L17N54557,avant_vote,,,,,2026-10-08,
 DLR5L17N54567,en_navette,lecture,AN,2026-10-19,adopte,2026-10-28,2026-12-09
 DLR5L17N54606,en_navette,lecture,AN,2026-10-14,adopte,2026-10-15,
-DLR5L17N54608,en_navette,lecture,AN,2026-07-08,adopte,2026-11-20,2026-11-20
+DLR5L17N54608,en_navette,lecture,AN,2026-07-08,adopte,2026-11-20,
 DLR5L17N54613,hors_navette,,,,,2026-07-06,
 DLR5L17N54628,en_navette,lecture,AN,2026-11-05,adopte,2026-11-05,
-DLR5L17N54629,en_navette,lecture,SN,2026-11-04,rejete,2026-11-20,2026-11-20
+DLR5L17N54629,en_navette,lecture,SN,2026-11-04,rejete,2026-11-20,2026-11-23
 DLR5L17N54703,en_navette,lecture,AN,2026-10-20,adopte,2026-11-16,2026-12-08
 DLR5L17N54724,avant_vote,,,,,2026-11-10,2026-11-30
 DLR5L17N54762,en_navette,lecture,AN,2026-10-27,adopte,2026-10-27,2026-12-07
@@ -1073,7 +1071,7 @@ DLR5L17N54910,hors_navette,,,,,2026-10-14,
 DLR5L17N54916,hors_navette,,,,,2026-10-08,
 DLR5L17N54923,en_navette,lecture,AN,2026-10-27,adopte,2026-10-28,2026-12-07
 DLR5L17N54925,en_navette,lecture,AN,2026-10-27,adopte,2026-10-28,
-DLR5L17N54951,en_navette,transmis,AN,2026-11-18,adopte,2026-11-18,
+DLR5L17N54951,en_navette,cmp,CMP,2026-11-18,adopte,2026-11-20,
 DLR5L17N54988,avant_vote,,,,,2026-11-18,2026-12-10
 DLR5L17N55023,hors_navette,,,,,2026-10-29,
 DLR5L17N55033,hors_navette,,,,,2026-10-08,2026-11-26
@@ -1096,4 +1094,4 @@ DLR5L17N55151,avant_vote,,,,,2026-11-18,2026-12-10
 DLR5L17N55184,avant_vote,,,,,2026-11-18,2026-12-10
 DLR5L17N55186,avant_vote,,,,,2026-11-18,2026-12-10
 DLR5L17N55191,avant_vote,,,,,2026-11-18,2026-12-10
-DLR5L17N55223,en_navette,cmp,CMP,2026-11-18,adopte,2026-11-19,
+DLR5L17N55223,en_navette,cmp,CMP,2026-11-18,adopte,2026-11-20,
